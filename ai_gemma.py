@@ -2095,14 +2095,14 @@ def import_gemma_transformers_dependencies() -> tuple[Any, Any, Any]:
 
     try:
         import torch
-        from transformers import AutoModelForCausalLM, AutoProcessor
+        from transformers import AutoModelForCausalLM, AutoTokenizer
     except ImportError as error:
         raise RuntimeError(
             "Gemma transformers backend could not import the required model classes. "
             "Run `pip install -U transformers torch accelerate safetensors huggingface_hub` first."
         ) from error
 
-    return torch, AutoModelForCausalLM, AutoProcessor
+    return torch, AutoModelForCausalLM, AutoTokenizer
 
 
 def preflight_gemma_transformers() -> None:
@@ -2238,16 +2238,16 @@ def load_gemma_transformers_model(model: str, args: argparse.Namespace) -> dict[
     if cache_key in _GEMMA_TRANSFORMERS_CACHE:
         return _GEMMA_TRANSFORMERS_CACHE[cache_key]
 
-    torch, AutoModelForCausalLM, AutoProcessor = import_gemma_transformers_dependencies()
+    torch, AutoModelForCausalLM, AutoTokenizer = import_gemma_transformers_dependencies()
 
     token_kwargs = gemma_hf_token_kwargs()
     print(f"  Gemma/Transformers model loading started: {model}", flush=True)
 
     try:
-        processor = AutoProcessor.from_pretrained(model, **token_kwargs)
+        tokenizer = AutoTokenizer.from_pretrained(model, **token_kwargs)
     except Exception as error:
         raise RuntimeError(
-            f"Failed to load Gemma processor: {model}. "
+            f"Failed to load Gemma tokenizer: {model}. "
             "Check Hugging Face model access and HF_TOKEN/huggingface-cli login state. "
             f"Cause: {error}"
         ) from error
@@ -2283,7 +2283,7 @@ def load_gemma_transformers_model(model: str, args: argparse.Namespace) -> dict[
 
     bundle = {
         "torch": torch,
-        "processor": processor,
+        "tokenizer": tokenizer,
         "model": loaded_model,
     }
     _GEMMA_TRANSFORMERS_CACHE[cache_key] = bundle
@@ -2298,7 +2298,7 @@ def generate_gemma_once_transformers(
 ) -> dict[str, Any]:
     bundle = load_gemma_transformers_model(model=model, args=args)
     torch = bundle["torch"]
-    processor = bundle["processor"]
+    tokenizer = bundle["tokenizer"]
     loaded_model = bundle["model"]
 
     messages = [
@@ -2313,7 +2313,7 @@ def generate_gemma_once_transformers(
     ]
 
     try:
-        inputs = processor.apply_chat_template(
+        inputs = tokenizer.apply_chat_template(
             messages,
             add_generation_prompt=True,
             tokenize=True,
@@ -2341,7 +2341,6 @@ def generate_gemma_once_transformers(
     else:
         generation_kwargs["do_sample"] = False
 
-    tokenizer = getattr(processor, "tokenizer", processor)
     pad_token_id = getattr(tokenizer, "pad_token_id", None)
     eos_token_id = getattr(tokenizer, "eos_token_id", None)
     if pad_token_id is not None:
@@ -2357,9 +2356,9 @@ def generate_gemma_once_transformers(
 
     generated_ids = outputs[0][input_length:] if input_length else outputs[0]
     try:
-        text = processor.decode(generated_ids, skip_special_tokens=True)
+        text = tokenizer.decode(generated_ids, skip_special_tokens=True)
     except TypeError:
-        text = processor.decode(generated_ids)
+        text = tokenizer.decode(generated_ids)
 
     return {"response": text}
 
