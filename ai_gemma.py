@@ -31,12 +31,15 @@ SUPPORTED_PROVIDERS = ("gemini", "openai", "claude", "gemma")
 DEFAULT_ALL_PROVIDERS = ("gemini", "openai", "claude")
 ALL_PROVIDERS_VALUE = "all"
 DEFAULT_PROVIDER = os.getenv("AI_PROVIDER", ALL_PROVIDERS_VALUE).strip().lower() or ALL_PROVIDERS_VALUE
+DEFAULT_GEMMA_HF_MODEL = "google/gemma-4-31B-it"
+DEFAULT_GEMMA_OLLAMA_MODEL = "gemma4:31b"
+DEFAULT_GEMMA_BACKEND = os.getenv("GEMMA_BACKEND", "transformers").strip().lower() or "transformers"
 
 DEFAULT_MODEL_BY_PROVIDER = {
     "gemini": os.getenv("GEMINI_MODEL", os.getenv("AI_MODEL", "gemini-3.1-pro-preview")),
     "openai": os.getenv("OPENAI_MODEL", os.getenv("AI_MODEL", "gpt-5.5")),
     "claude": os.getenv("CLAUDE_MODEL", os.getenv("AI_MODEL", "claude-opus-4-8")),
-    "gemma": os.getenv("GEMMA_MODEL", os.getenv("OLLAMA_MODEL", os.getenv("AI_MODEL", "gemma4:31b"))),
+    "gemma": os.getenv("GEMMA_MODEL", os.getenv("OLLAMA_MODEL", os.getenv("AI_MODEL", DEFAULT_GEMMA_HF_MODEL))),
 }
 
 DEFAULT_FALLBACK_MODELS_BY_PROVIDER = {
@@ -71,6 +74,8 @@ DEFAULT_GEMMA_TEXT_MIN_CHUNK_CHARS = int(os.getenv("GEMMA_TEXT_MIN_CHUNK_CHARS",
 DEFAULT_GEMMA_KEEP_ALIVE = os.getenv("GEMMA_KEEP_ALIVE", os.getenv("OLLAMA_KEEP_ALIVE", "5m"))
 DEFAULT_GEMMA_THINK = os.getenv("GEMMA_THINK", os.getenv("OLLAMA_THINK", "")).strip()
 DEFAULT_GEMMA_CONTEXT_WINDOW = int(os.getenv("GEMMA_CONTEXT_WINDOW", os.getenv("OLLAMA_CONTEXT_WINDOW", "32768")))
+DEFAULT_GEMMA_DEVICE_MAP = os.getenv("GEMMA_DEVICE_MAP", "auto").strip() or "auto"
+DEFAULT_GEMMA_TORCH_DTYPE = os.getenv("GEMMA_TORCH_DTYPE", os.getenv("GEMMA_DTYPE", "auto")).strip() or "auto"
 
 TOC_SCHEMA: dict[str, Any] = {
     "type": "object",
@@ -1886,7 +1891,107 @@ def generate_toc_from_pdf_claude(pdf_path: Path, args: argparse.Namespace, promp
     raise RuntimeError("시도할 Claude 모델이 없습니다.")
 
 
-# ----------------------------- Gemma / Ollama -----------------------------
+# ----------------------------- Gemma -----------------------------
+
+_GEMMA_TRANSFORMERS_CACHE: dict[tuple[str, str, str], dict[str, Any]] = {}
+
+
+def normalize_gemma_backend(backend: str | None) -> str:
+    backend = clean_text(backend).lower() or DEFAULT_GEMMA_BACKEND
+    aliases = {
+        "hf": "transformers",
+        "huggingface": "transformers",
+        "hugging-face": "transformers",
+        "local": "transformers",
+        "torch": "transformers",
+        "api": "ollama",
+    }
+    backend = aliases.get(backend, backend)
+    if backend not in {"transformers", "ollama"}:
+        raise ValueError("--gemma-backend는 transformers 또는 ollama만 가능합니다.")
+    return backend
+
+
+def normalize_gemma_hf_model(model: str) -> str:
+    model = clean_text(model)
+    if model.startswith("models/"):
+        model = model.split("/", 1)[1]
+
+    lower = model.lower()
+    aliases = {
+        "latest": DEFAULT_GEMMA_HF_MODEL,
+        "highest": DEFAULT_GEMMA_HF_MODEL,
+        "max": DEFAULT_GEMMA_HF_MODEL,
+        "31b": DEFAULT_GEMMA_HF_MODEL,
+        "gemma4:31b": DEFAULT_GEMMA_HF_MODEL,
+        "gemma-4-31b-it": DEFAULT_GEMMA_HF_MODEL,
+        "12b": "google/gemma-4-12B-it",
+        "gemma4:12b": "google/gemma-4-12B-it",
+        "gemma-4-12b-it": "google/gemma-4-12B-it",
+        "26b": "google/gemma-4-26B-A4B-it",
+        "gemma4:26b": "google/gemma-4-26B-A4B-it",
+        "gemma-4-26b-a4b-it": "google/gemma-4-26B-A4B-it",
+        "e4b": "google/gemma-4-E4B-it",
+        "gemma4:e4b": "google/gemma-4-E4B-it",
+        "gemma-4-e4b-it": "google/gemma-4-E4B-it",
+        "e2b": "google/gemma-4-E2B-it",
+        "gemma4:e2b": "google/gemma-4-E2B-it",
+        "gemma-4-e2b-it": "google/gemma-4-E2B-it",
+        "27b": "google/gemma-3-27b-it",
+        "gemma3:27b": "google/gemma-3-27b-it",
+        "gemma-3-27b-it": "google/gemma-3-27b-it",
+    }
+    if lower in aliases:
+        return aliases[lower]
+
+    if lower.startswith("google/"):
+        return model
+
+    if lower.startswith("gemma-"):
+        return f"google/{model}"
+
+    return model
+
+
+def normalize_gemma_ollama_model(model: str) -> str:
+    model = clean_text(model)
+    if model.startswith("models/"):
+        model = model.split("/", 1)[1]
+
+    lower = model.lower()
+    if lower in {"latest", "highest", "max"}:
+        return DEFAULT_GEMMA_OLLAMA_MODEL
+
+    if lower in {"e2b", "e4b", "12b", "26b", "31b"}:
+        return f"gemma4:{lower}"
+    if lower == "27b":
+        return "gemma3:27b"
+
+    if lower.startswith("google/"):
+        lower = lower.split("/", 1)[1]
+
+    if lower.startswith("gemma-4-"):
+        if "31b" in lower:
+            return "gemma4:31b"
+        if "26b" in lower:
+            return "gemma4:26b"
+        if "12b" in lower:
+            return "gemma4:12b"
+        if "e4b" in lower:
+            return "gemma4:e4b"
+        if "e2b" in lower:
+            return "gemma4:e2b"
+
+    if lower.startswith("gemma-3-27b"):
+        return "gemma3:27b"
+
+    return model
+
+
+def normalize_gemma_model_for_backend(model: str, backend: str) -> str:
+    if backend == "ollama":
+        return normalize_gemma_ollama_model(model)
+    return normalize_gemma_hf_model(model)
 
 def normalize_ollama_base_url(base_url: str | None) -> str:
     base_url = clean_text(base_url) or DEFAULT_OLLAMA_BASE_URL
@@ -1964,6 +2069,45 @@ def ensure_ollama_model_available(model: str, args: argparse.Namespace) -> None:
     )
 
 
+def preflight_gemma_transformers() -> None:
+    missing: list[str] = []
+    for module_name in ("torch", "transformers", "accelerate"):
+        try:
+            __import__(module_name)
+        except ImportError:
+            missing.append(module_name)
+
+    if missing:
+        raise RuntimeError(
+            "Gemma transformers 백엔드에 필요한 패키지가 없습니다: "
+            + ", ".join(missing)
+            + ". 먼저 `pip install -U transformers torch accelerate safetensors huggingface_hub`를 실행하세요."
+        )
+
+
+def preflight_gemma_provider(args: argparse.Namespace) -> None:
+    provider_args = build_provider_args(args, "gemma")
+    backend = normalize_gemma_backend(getattr(provider_args, "gemma_backend", None))
+
+    if backend == "transformers":
+        preflight_gemma_transformers()
+        return
+
+    models = parse_model_list(provider_args.model, provider_args.ai_fallback_models)
+    last_error: Exception | None = None
+
+    for model in models:
+        model = normalize_gemma_model_for_backend(model, backend)
+        try:
+            ensure_ollama_model_available(model=model, args=provider_args)
+            return
+        except Exception as error:
+            last_error = error
+
+    if last_error:
+        raise last_error
+
+
 def ollama_api_post(
     base_url: str,
     path: str,
@@ -1997,6 +2141,209 @@ def ollama_api_post(
         raise RuntimeError("Ollama API 응답은 JSON object여야 합니다.")
 
     return parsed
+
+
+def gemma_hf_token_kwargs() -> dict[str, str]:
+    token = (
+        os.getenv("HF_TOKEN")
+        or os.getenv("HUGGINGFACE_TOKEN")
+        or os.getenv("HUGGING_FACE_HUB_TOKEN")
+    )
+    return {"token": token} if token else {}
+
+
+def torch_dtype_from_text(torch_module: Any, dtype_text: str) -> Any:
+    dtype_text = clean_text(dtype_text).lower()
+    if not dtype_text:
+        return None
+    if dtype_text == "auto":
+        return "auto"
+
+    aliases = {
+        "bf16": "bfloat16",
+        "bfloat16": "bfloat16",
+        "fp16": "float16",
+        "float16": "float16",
+        "half": "float16",
+        "fp32": "float32",
+        "float32": "float32",
+    }
+    torch_dtype_name = aliases.get(dtype_text, dtype_text)
+    return getattr(torch_module, torch_dtype_name, dtype_text)
+
+
+def first_transformers_device(model: Any) -> Any:
+    device = getattr(model, "device", None)
+    if device is not None and str(device) != "meta":
+        return device
+
+    parameters = getattr(model, "parameters", None)
+    if callable(parameters):
+        for parameter in parameters():
+            parameter_device = getattr(parameter, "device", None)
+            if parameter_device is not None and str(parameter_device) != "meta":
+                return parameter_device
+
+    return None
+
+
+def move_transformers_inputs_to_device(inputs: Any, device: Any) -> Any:
+    if device is None:
+        return inputs
+
+    to_method = getattr(inputs, "to", None)
+    if callable(to_method):
+        return to_method(device)
+
+    if isinstance(inputs, dict):
+        moved: dict[str, Any] = {}
+        for key, value in inputs.items():
+            value_to = getattr(value, "to", None)
+            moved[key] = value_to(device) if callable(value_to) else value
+        return moved
+
+    return inputs
+
+
+def load_gemma_transformers_model(model: str, args: argparse.Namespace) -> dict[str, Any]:
+    device_map = clean_text(getattr(args, "gemma_device_map", DEFAULT_GEMMA_DEVICE_MAP)) or "auto"
+    dtype_text = clean_text(getattr(args, "gemma_torch_dtype", DEFAULT_GEMMA_TORCH_DTYPE)) or "auto"
+    cache_key = (model, device_map, dtype_text)
+
+    if cache_key in _GEMMA_TRANSFORMERS_CACHE:
+        return _GEMMA_TRANSFORMERS_CACHE[cache_key]
+
+    try:
+        import torch
+        from transformers import AutoModelForCausalLM, AutoProcessor
+    except ImportError as error:
+        raise RuntimeError(
+            "Gemma transformers 백엔드를 쓰려면 "
+            "`pip install -U transformers torch accelerate safetensors huggingface_hub`가 필요합니다."
+        ) from error
+
+    token_kwargs = gemma_hf_token_kwargs()
+    print(f"  Gemma/Transformers 모델 로드 시작: {model}", flush=True)
+
+    try:
+        processor = AutoProcessor.from_pretrained(model, **token_kwargs)
+    except Exception as error:
+        raise RuntimeError(
+            f"Gemma processor 로드 실패: {model}. "
+            "Hugging Face 모델 접근 권한과 HF_TOKEN/huggingface-cli login 상태를 확인하세요. "
+            f"원인: {error}"
+        ) from error
+
+    load_kwargs: dict[str, Any] = dict(token_kwargs)
+    if device_map:
+        load_kwargs["device_map"] = device_map
+
+    dtype_value = torch_dtype_from_text(torch, dtype_text)
+    if dtype_value is not None:
+        load_kwargs["dtype"] = dtype_value
+
+    try:
+        loaded_model = AutoModelForCausalLM.from_pretrained(model, **load_kwargs)
+    except TypeError as error:
+        if "dtype" not in str(error):
+            raise
+        fallback_kwargs = dict(load_kwargs)
+        dtype_value = fallback_kwargs.pop("dtype", None)
+        if dtype_value is not None:
+            fallback_kwargs["torch_dtype"] = dtype_value
+        loaded_model = AutoModelForCausalLM.from_pretrained(model, **fallback_kwargs)
+    except Exception as error:
+        raise RuntimeError(
+            f"Gemma transformers 모델 로드 실패: {model}. "
+            "transformers 버전, Hugging Face 권한, GPU/CPU 메모리를 확인하세요. "
+            f"원인: {error}"
+        ) from error
+
+    eval_method = getattr(loaded_model, "eval", None)
+    if callable(eval_method):
+        eval_method()
+
+    bundle = {
+        "torch": torch,
+        "processor": processor,
+        "model": loaded_model,
+    }
+    _GEMMA_TRANSFORMERS_CACHE[cache_key] = bundle
+    print(f"  Gemma/Transformers 모델 로드 완료: {model}", flush=True)
+    return bundle
+
+
+def generate_gemma_once_transformers(
+    model: str,
+    prompt: str,
+    args: argparse.Namespace,
+) -> dict[str, Any]:
+    bundle = load_gemma_transformers_model(model=model, args=args)
+    torch = bundle["torch"]
+    processor = bundle["processor"]
+    loaded_model = bundle["model"]
+
+    messages = [
+        {
+            "role": "system",
+            "content": (
+                "너는 PDF 교재/강의자료의 목차를 만드는 전문가다. "
+                "반드시 유효한 JSON 객체 하나만 출력한다. 마크다운과 설명은 출력하지 않는다."
+            ),
+        },
+        {"role": "user", "content": prompt},
+    ]
+
+    try:
+        inputs = processor.apply_chat_template(
+            messages,
+            add_generation_prompt=True,
+            tokenize=True,
+            return_dict=True,
+            return_tensors="pt",
+        )
+    except Exception as error:
+        raise RuntimeError(f"Gemma transformers 입력 생성 실패: {error}") from error
+
+    device = first_transformers_device(loaded_model)
+    inputs = move_transformers_inputs_to_device(inputs, device)
+
+    input_ids = inputs.get("input_ids") if isinstance(inputs, dict) else getattr(inputs, "input_ids", None)
+    input_length = int(input_ids.shape[-1]) if input_ids is not None else 0
+
+    max_new_tokens = int(args.max_output_tokens or DEFAULT_MAX_OUTPUT_TOKENS_BY_PROVIDER["gemma"])
+    generation_kwargs: dict[str, Any] = {
+        "max_new_tokens": max(1, max_new_tokens),
+    }
+
+    temperature = float(args.temperature)
+    if temperature > 0:
+        generation_kwargs["do_sample"] = True
+        generation_kwargs["temperature"] = temperature
+    else:
+        generation_kwargs["do_sample"] = False
+
+    tokenizer = getattr(processor, "tokenizer", processor)
+    pad_token_id = getattr(tokenizer, "pad_token_id", None)
+    eos_token_id = getattr(tokenizer, "eos_token_id", None)
+    if pad_token_id is not None:
+        generation_kwargs["pad_token_id"] = pad_token_id
+    if eos_token_id is not None:
+        generation_kwargs["eos_token_id"] = eos_token_id
+
+    try:
+        with torch.inference_mode():
+            outputs = loaded_model.generate(**inputs, **generation_kwargs)
+    except Exception as error:
+        raise RuntimeError(f"Gemma transformers 생성 실패: {error}") from error
+
+    generated_ids = outputs[0][input_length:] if input_length else outputs[0]
+    try:
+        text = processor.decode(generated_ids, skip_special_tokens=True)
+    except TypeError:
+        text = processor.decode(generated_ids)
+
+    return {"response": text}
 
 
 def build_gemma_payloads(
@@ -2054,6 +2401,14 @@ def generate_gemma_once(
     prompt: str,
     args: argparse.Namespace,
 ):
+    backend = normalize_gemma_backend(getattr(args, "gemma_backend", None))
+    if backend == "transformers":
+        return generate_gemma_once_transformers(
+            model=model,
+            prompt=prompt,
+            args=args,
+        )
+
     payloads = build_gemma_payloads(
         model=model,
         prompt=prompt,
@@ -2375,17 +2730,20 @@ def generate_toc_from_pdf_gemma_text(
 
 
 def generate_toc_from_pdf_gemma(pdf_path: Path, args: argparse.Namespace, prompt: str) -> tuple[dict[str, Any], str, str]:
+    backend = normalize_gemma_backend(getattr(args, "gemma_backend", None))
     models = parse_model_list(args.model, args.ai_fallback_models)
     last_error: Exception | None = None
 
     for index, model in enumerate(models):
-        model = normalize_model_for_provider("gemma", model)
+        model = normalize_gemma_model_for_backend(model, backend)
         if index > 0:
             print(f"Gemma fallback 모델 시도: {model}", file=sys.stderr, flush=True)
 
         try:
-            print(f"  Gemma/Ollama 사용: {normalize_ollama_base_url(args.ollama_base_url)} / {model}", flush=True)
-            ensure_ollama_model_available(model=model, args=args)
+            if backend == "ollama":
+                print(f"  Gemma/Ollama 사용: {normalize_ollama_base_url(args.ollama_base_url)} / {model}", flush=True)
+            else:
+                print(f"  Gemma/Transformers 사용: {model}", flush=True)
             return generate_toc_from_pdf_gemma_text(
                 model=model,
                 pdf_path=pdf_path,
@@ -2597,6 +2955,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="사용할 AI provider. 생략하거나 all이면 gemini, openai, claude를 동시에 실행합니다. Gemma는 --provider gemma로 선택합니다.",
     )
     parser.add_argument(
+        "--gemma",
+        action="store_true",
+        help="Gemma provider를 사용하는 단축 옵션. --provider gemma와 같습니다.",
+    )
+    parser.add_argument(
         "--model",
         default=None,
         help="모델명. 생략하면 provider별 env 또는 기본값을 사용합니다.",
@@ -2653,15 +3016,30 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="Claude 청크 실패 시 더 작게 쪼갤 때의 최소 청크 글자 수",
     )
     parser.add_argument(
+        "--gemma-backend",
+        default=DEFAULT_GEMMA_BACKEND,
+        help="Gemma 실행 방식. transformers는 Hugging Face/torch로 직접 실행하고, ollama는 Ollama API를 사용합니다.",
+    )
+    parser.add_argument(
         "--ollama-base-url",
         default=DEFAULT_OLLAMA_BASE_URL,
-        help="Gemma provider에서 사용할 Ollama API 주소",
+        help="--gemma-backend ollama에서 사용할 Ollama API 주소",
     )
     parser.add_argument(
         "--ollama-request-timeout",
         type=int,
         default=DEFAULT_OLLAMA_REQUEST_TIMEOUT,
-        help="Gemma provider의 Ollama 요청 제한 시간(초)",
+        help="--gemma-backend ollama의 Ollama 요청 제한 시간(초)",
+    )
+    parser.add_argument(
+        "--gemma-device-map",
+        default=DEFAULT_GEMMA_DEVICE_MAP,
+        help="--gemma-backend transformers에서 사용할 transformers device_map 값",
+    )
+    parser.add_argument(
+        "--gemma-torch-dtype",
+        default=DEFAULT_GEMMA_TORCH_DTYPE,
+        help="--gemma-backend transformers에서 사용할 dtype. 예: auto, bfloat16, float16",
     )
     parser.add_argument(
         "--gemma-text-single-max-chars",
@@ -2711,10 +3089,22 @@ def main() -> int:
     parser = build_arg_parser()
     args = parser.parse_args()
 
+    if args.gemma:
+        provider_text = clean_text(args.provider).lower()
+        if provider_text and provider_text not in {"gemma", "ollama", "local"}:
+            parser.error("--gemma는 --provider gemma와만 함께 사용할 수 있습니다.")
+        args.provider = "gemma"
+
     try:
         providers = resolve_providers(args.provider)
     except ValueError as error:
         parser.error(str(error))
+
+    if "gemma" in providers:
+        try:
+            args.gemma_backend = normalize_gemma_backend(args.gemma_backend)
+        except ValueError as error:
+            parser.error(str(error))
 
     if len(providers) > 1 and args.model is not None:
         parser.error("--model은 --provider로 단일 provider를 선택했을 때만 사용할 수 있습니다.")
@@ -2730,6 +3120,13 @@ def main() -> int:
     if not pdf_files:
         print("처리할 PDF 파일이 없습니다.", flush=True)
         return 0
+
+    if "gemma" in providers:
+        try:
+            preflight_gemma_provider(args)
+        except Exception as error:
+            print(f"Gemma 사전 확인 실패: {error}", file=sys.stderr, flush=True)
+            return 1
 
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)
 
