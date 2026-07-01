@@ -2119,6 +2119,15 @@ def preflight_gemma_transformers(models: Iterable[str] | None = None) -> None:
     try:
         from transformers import Gemma4Config  # noqa: F401
     except Exception as error:
+        error_text = message_of(error)
+        if "torchvision::nms" in error_text or "torchvision" in error_text:
+            raise RuntimeError(
+                "Gemma 4 config import failed because torchvision is installed but incompatible "
+                "with the current torch build. This script does not need torchvision for text-only "
+                "Gemma inference. Run `python -m pip uninstall -y torchvision`, or reinstall a "
+                "torchvision wheel that matches your torch/CUDA build."
+            ) from error
+
         raise RuntimeError(
             "Your installed transformers package does not support Gemma 4 yet "
             "(Gemma4Config is unavailable or broken). "
