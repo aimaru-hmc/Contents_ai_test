@@ -70,7 +70,7 @@ DEFAULT_OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 DEFAULT_OLLAMA_REQUEST_TIMEOUT = int(os.getenv("OLLAMA_REQUEST_TIMEOUT", "600"))
 DEFAULT_GEMMA_TEXT_SINGLE_MAX_CHARS = int(os.getenv("GEMMA_TEXT_SINGLE_MAX_CHARS", os.getenv("OLLAMA_TEXT_SINGLE_MAX_CHARS", "220000")))
 DEFAULT_GEMMA_TEXT_CHUNK_CHARS = int(os.getenv("GEMMA_TEXT_CHUNK_CHARS", os.getenv("OLLAMA_TEXT_CHUNK_CHARS", "220000")))
-DEFAULT_GEMMA_TEXT_MIN_CHUNK_CHARS = int(os.getenv("GEMMA_TEXT_MIN_CHUNK_CHARS", os.getenv("OLLAMA_TEXT_MIN_CHUNK_CHARS", "50000")))
+DEFAULT_GEMMA_TEXT_MIN_CHUNK_CHARS = int(os.getenv("GEMMA_TEXT_MIN_CHUNK_CHARS", os.getenv("OLLAMA_TEXT_MIN_CHUNK_CHARS", "10000")))
 DEFAULT_GEMMA_KEEP_ALIVE = os.getenv("GEMMA_KEEP_ALIVE", os.getenv("OLLAMA_KEEP_ALIVE", "5m"))
 DEFAULT_GEMMA_THINK = os.getenv("GEMMA_THINK", os.getenv("OLLAMA_THINK", "")).strip()
 DEFAULT_GEMMA_CONTEXT_WINDOW = int(os.getenv("GEMMA_CONTEXT_WINDOW", os.getenv("OLLAMA_CONTEXT_WINDOW", "32768")))
@@ -320,6 +320,26 @@ def get_api_key(provider: str) -> str:
 
 def message_of(error: Exception) -> str:
     return f"{type(error).__name__}: {error}"
+
+
+def is_cuda_out_of_memory_error(error: Exception) -> bool:
+    message = message_of(error).upper()
+    return "CUDA OUT OF MEMORY" in message or "OUTOFMEMORYERROR" in message
+
+
+def empty_torch_cuda_cache() -> None:
+    try:
+        import torch
+    except Exception:
+        return
+
+    cuda = getattr(torch, "cuda", None)
+    if cuda is None:
+        return
+
+    empty_cache = getattr(cuda, "empty_cache", None)
+    if callable(empty_cache):
+        empty_cache()
 
 
 def is_retryable_error(error: Exception) -> bool:
@@ -2654,6 +2674,9 @@ def process_gemma_text_chunk(
             "toc": partial_toc,
         }]
     except Exception as error:
+        if is_cuda_out_of_memory_error(error):
+            empty_torch_cuda_cache()
+
         if is_configuration_error(error):
             raw_parts.append({
                 "chunk": chunk["index"],
@@ -2718,14 +2741,24 @@ def generate_toc_from_pdf_gemma_text(
         full_text = "\n\n".join(f"[PAGE {page_number}]\n{text}" for page_number, text in pages)
         text_prompt = build_gemma_text_prompt(prompt, pdf_path.name, full_text)
         print(f"  Gemma text TOC generation started: {model}", flush=True)
-        parsed, raw_text = request_gemma_json_text(
-            model=model,
-            prompt_text=text_prompt,
-            args=args,
-            label=f"Gemma text({model})",
-        )
-        print(f"  Gemma text TOC generation completed: {model}", flush=True)
-        return validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth), raw_text, model
+        try:
+            parsed, raw_text = request_gemma_json_text(
+                model=model,
+                prompt_text=text_prompt,
+                args=args,
+                label=f"Gemma text({model})",
+            )
+            print(f"  Gemma text TOC generation completed: {model}", flush=True)
+            return validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth), raw_text, model
+        except Exception as error:
+            if not is_cuda_out_of_memory_error(error):
+                raise
+            empty_torch_cuda_cache()
+            print(
+                f"  Gemma single text generation ran out of CUDA memory; falling back to chunks: {error}",
+                file=sys.stderr,
+                flush=True,
+            )
 
     chunks = chunk_pdf_text_pages(pages, max_chars=chunk_chars)
     print(f"  Gemma text chunk processing started: {len(chunks)} chunks", flush=True)
