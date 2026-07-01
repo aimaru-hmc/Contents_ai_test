@@ -2105,24 +2105,45 @@ def import_gemma_transformers_dependencies() -> tuple[Any, Any, Any]:
     return torch, AutoModelForCausalLM, AutoTokenizer
 
 
-def preflight_gemma_transformers() -> None:
+def gemma_model_needs_gemma4_config(model: str) -> bool:
+    model = clean_text(model).lower()
+    return "gemma-4" in model or "gemma4" in model
+
+
+def preflight_gemma_transformers(models: Iterable[str] | None = None) -> None:
     import_gemma_transformers_dependencies()
+
+    if not models or not any(gemma_model_needs_gemma4_config(model) for model in models):
+        return
+
+    try:
+        from transformers import Gemma4Config  # noqa: F401
+    except Exception as error:
+        raise RuntimeError(
+            "Your installed transformers package does not support Gemma 4 yet "
+            "(Gemma4Config is unavailable or broken). "
+            "Install the latest Transformers source build with: "
+            "`python -m pip install --upgrade --force-reinstall "
+            "git+https://github.com/huggingface/transformers.git`"
+        ) from error
 
 
 def preflight_gemma_provider(args: argparse.Namespace) -> None:
     provider_args = build_provider_args(args, "gemma")
     backend = normalize_gemma_backend(getattr(provider_args, "gemma_backend", None))
     preflight_pdf_text_extraction()
+    models = [
+        normalize_gemma_model_for_backend(model, backend)
+        for model in parse_model_list(provider_args.model, provider_args.ai_fallback_models)
+    ]
 
     if backend == "transformers":
-        preflight_gemma_transformers()
+        preflight_gemma_transformers(models=models)
         return
 
-    models = parse_model_list(provider_args.model, provider_args.ai_fallback_models)
     last_error: Exception | None = None
 
     for model in models:
-        model = normalize_gemma_model_for_backend(model, backend)
         try:
             ensure_ollama_model_available(model=model, args=provider_args)
             return
