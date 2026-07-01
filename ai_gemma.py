@@ -2078,7 +2078,7 @@ def preflight_pdf_text_extraction() -> None:
 
 def preflight_gemma_transformers() -> None:
     missing: list[str] = []
-    for module_name in ("torch", "transformers", "accelerate"):
+    for module_name in ("torch", "transformers", "accelerate", "safetensors", "huggingface_hub"):
         try:
             __import__(module_name)
         except ImportError:
@@ -2614,6 +2614,15 @@ def process_gemma_text_chunk(
             "toc": partial_toc,
         }]
     except Exception as error:
+        if is_configuration_error(error):
+            raw_parts.append({
+                "chunk": chunk["index"],
+                "start_page": chunk["start_page"],
+                "end_page": chunk["end_page"],
+                "error": message_of(error),
+            })
+            raise
+
         min_chunk_chars = max(5000, int(getattr(args, "gemma_text_min_chunk_chars", DEFAULT_GEMMA_TEXT_MIN_CHUNK_CHARS)))
         if len(str(chunk.get("text") or "")) <= min_chunk_chars or depth >= 4:
             raw_parts.append({
