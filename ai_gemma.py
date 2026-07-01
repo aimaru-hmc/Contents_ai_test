@@ -100,16 +100,16 @@ TOC_SCHEMA: dict[str, Any] = {
 }
 
 DEFAULT_USER_PROMPT = """
-PDF 전체를 읽고 학습용 목차를 작성해줘.
+Read the full PDF and create a study-oriented table of contents.
 
-목차 작성 기준:
-- 표지, 머리말, 차례/목차 페이지, 찾아보기/색인, 참고문헌, 쪽번호, 반복 머리말/꼬리말은 제외한다.
-- 본문에 실제로 존재하는 장/절/소제목만 사용한다.
-- 제목을 새로 지어내지 않는다.
-- 원문에 번호가 있으면 번호를 그대로 보존한다. 원문에 번호가 없으면 임의로 번호를 붙이지 않는다.
-- page는 PDF 뷰어 기준 실제 페이지 순서로 계산한다. 첫 페이지는 1이다.
-- level은 큰 단원일수록 1에 가깝게, 하위 단원일수록 숫자를 크게 쓴다.
-- 가능한 한 누락 없이 작성하되, 본문 문장이나 문제 문항은 목차에 넣지 않는다.
+TOC rules:
+- Exclude covers, prefaces, existing TOC pages, indexes, references, page numbers, and repeated headers/footers.
+- Use only chapter, section, and subsection titles that actually appear in the body.
+- Do not invent new titles.
+- Preserve original numbering when it exists. Do not add numbering when the source has none.
+- Calculate page as the actual PDF viewer page order. The first page is 1.
+- Use lower level numbers for larger sections and higher level numbers for subsections.
+- Include as much as possible, but do not include body sentences or individual question items as TOC entries.
 """.strip()
 
 RETRYABLE_ERROR_MARKERS = (
@@ -181,7 +181,7 @@ def normalize_provider(provider: str | None) -> str:
     }
     provider = aliases.get(provider, provider)
     if provider not in SUPPORTED_PROVIDERS:
-        raise ValueError(f"지원하지 않는 provider입니다: {provider} / 가능: {', '.join(SUPPORTED_PROVIDERS)}")
+        raise ValueError(f"Unsupported provider: {provider} / available: {', '.join(SUPPORTED_PROVIDERS)}")
     return provider
 
 
@@ -209,7 +209,7 @@ def resolve_providers(provider_option: str | None) -> list[str]:
             providers.append(provider)
 
     if not providers:
-        raise ValueError("실행할 provider가 없습니다.")
+        raise ValueError("No providers to run.")
 
     return providers
 
@@ -227,7 +227,7 @@ def default_max_output_tokens_for(provider: str) -> int:
 
 
 def normalize_model_for_provider(provider: str, model: str) -> str:
-    """사용자가 축약형으로 넣은 모델명을 provider별 실제 API 모델명에 가깝게 보정합니다."""
+    """Normalize user shorthand model names to provider-specific API model names."""
     model = clean_text(model)
 
     if provider == "gemini" and model:
@@ -276,31 +276,32 @@ def load_prompt(args: argparse.Namespace) -> str:
 
 def build_prompt(user_prompt: str, max_depth: int) -> str:
     return f"""
-너는 PDF 교재/강의자료의 목차를 만드는 전문가다.
-첨부된 PDF 파일만 근거로 목차를 작성한다.
+You are an expert at creating tables of contents for PDF textbooks and lecture materials.
+Create the table of contents using only the attached PDF.
 
-[사용자 프롬프트]
+[User Prompt]
 {user_prompt.strip()}
 
-[출력 형식]
-반드시 아래 JSON 객체 하나만 출력한다. 설명, 마크다운, 코드블록은 출력하지 않는다.
+[Output Format]
+Output exactly one JSON object in the format below. Do not output explanations, Markdown, or code fences.
 
 {{
-  "title": "문서 제목",
+  "title": "Document title",
   "chapters": [
-    {{"level": 1, "chapter": "큰 단원 제목", "page": 1}},
-    {{"level": 2, "chapter": "하위 단원 제목", "page": 3}}
+    {{"level": 1, "chapter": "Major section title", "page": 1}},
+    {{"level": 2, "chapter": "Subsection title", "page": 3}}
   ]
 }}
 
-[필수 규칙]
-- title은 PDF에서 확인되는 문서 제목으로 작성한다. 불명확하면 파일명에 가까운 제목을 사용한다.
-- chapters는 PDF에 등장하는 순서대로 정렬한다.
-- level은 1부터 {max_depth}까지만 사용한다.
-- page는 정수이며, PDF 뷰어 기준 첫 페이지를 1로 세는 실제 페이지 순서다.
-- 원문 제목의 번호는 보존하되, 없는 번호를 새로 만들지 않는다.
-- 목차에 넣기 애매한 본문 문장, 예제, 문제, 표/그림 캡션, 참고문헌 항목은 제외한다.
-- JSON 외 텍스트는 절대 출력하지 않는다.
+[Required Rules]
+- Use the document title found in the PDF. If unclear, use a title close to the file name.
+- Sort chapters in the order they appear in the PDF.
+- Use only levels from 1 to {max_depth}.
+- page must be an integer and must use actual PDF viewer page order, where the first page is 1.
+- Preserve original title numbering, but do not invent missing numbering.
+- Preserve original chapter/section titles exactly, including Korean text when the source title is Korean.
+- Exclude body sentences, examples, questions, table/figure captions, and references that are not suitable TOC entries.
+- Never output any text outside the JSON object.
 """.strip()
 
 
@@ -313,7 +314,7 @@ def get_api_key(provider: str) -> str:
     env_name = env_name_by_provider[provider]
     api_key = os.getenv(env_name)
     if not api_key:
-        raise RuntimeError(f"{env_name} 환경 변수가 필요합니다. .env 파일에 {env_name}=... 형식으로 넣어주세요.")
+        raise RuntimeError(f"{env_name} is required. Add {env_name}=... to your .env file.")
     return api_key
 
 
@@ -371,8 +372,8 @@ def with_retry(
             delay = min(base_delay * (2 ** (attempt - 1)), 60.0)
             delay += random.uniform(0, min(1.0, base_delay))
             print(
-                f"{label} 일시 오류, 재시도 {attempt}/{max_retries - 1} "
-                f"({delay:.1f}초 후): {error}",
+                f"{label} temporary error, retry {attempt}/{max_retries - 1} "
+                f"(after {delay:.1f}s): {error}",
                 file=sys.stderr,
                 flush=True,
             )
@@ -381,7 +382,7 @@ def with_retry(
     if last_error:
         raise last_error
 
-    raise RuntimeError(f"{label} 실패")
+    raise RuntimeError(f"{label} failed")
 
 
 def parse_model_list(primary_model: str, fallback_models: str | Iterable[str] | None) -> list[str]:
@@ -616,7 +617,7 @@ def repair_json_text(text: str) -> str:
 def parse_json_response_text(text: str, provider: str) -> dict[str, Any]:
     text = strip_json_fence(text)
     if not text:
-        raise ValueError(f"{provider} 응답이 비어 있습니다.")
+        raise ValueError(f"{provider} response is empty.")
 
     candidates: list[str] = [text]
     extracted = extract_json_object_text(text)
@@ -640,10 +641,10 @@ def parse_json_response_text(text: str, provider: str) -> dict[str, Any]:
     else:
         if last_error:
             raise last_error
-        raise ValueError(f"{provider} 응답에서 JSON 객체를 찾지 못했습니다.")
+        raise ValueError(f"Could not find a JSON object in the {provider} response.")
 
     if not isinstance(data, dict):
-        raise ValueError(f"{provider} 응답 JSON의 최상위 값은 object여야 합니다.")
+        raise ValueError(f"The top-level JSON value in the {provider} response must be an object.")
 
     return data
 
@@ -759,7 +760,7 @@ def import_gemini():
         from google import genai
         from google.genai import types
     except ImportError as error:
-        raise RuntimeError("Gemini API를 쓰려면 `pip install google-genai`가 필요합니다.") from error
+        raise RuntimeError("Gemini API requires `pip install google-genai`.") from error
 
     return genai, types
 
@@ -788,14 +789,14 @@ def upload_pdf_to_gemini(client, pdf_path: Path, retries: int, base_delay: float
             except TypeError:
                 return client.files.upload(file=str(upload_path))
 
-    print("  Gemini PDF 업로드 시작...", flush=True)
+    print("  Gemini PDF upload started...", flush=True)
     uploaded = with_retry(
-        label=f"Gemini PDF 업로드({pdf_path.name})",
+        label=f"Gemini PDF upload({pdf_path.name})",
         func=do_upload,
         max_retries=retries,
         base_delay=base_delay,
     )
-    print("  Gemini PDF 업로드 완료", flush=True)
+    print("  Gemini PDF upload completed", flush=True)
     return uploaded
 
 
@@ -825,14 +826,14 @@ def wait_for_gemini_file_ready(client, uploaded_file: Any, timeout_seconds: int)
             return current
 
         if "FAILED" in state:
-            raise RuntimeError(f"Gemini 파일 처리 실패: {state}")
+            raise RuntimeError(f"Gemini file processing failed: {state}")
 
         if time.time() - started > timeout_seconds:
             raise TimeoutError(
-                f"Gemini 파일 처리가 {timeout_seconds}초 안에 끝나지 않았습니다. 마지막 상태: {state}"
+                f"Gemini file processing did not finish within {timeout_seconds}s. Last state: {state}"
             )
 
-        print(f"  Gemini 파일 처리 중: {state}", file=sys.stderr, flush=True)
+        print(f"  Gemini file processing: {state}", file=sys.stderr, flush=True)
         time.sleep(5)
         current = client.files.get(name=current.name)
 
@@ -931,7 +932,7 @@ def generate_gemini_once(
     if last_error:
         raise last_error
 
-    raise RuntimeError("Gemini 응답 생성 실패")
+    raise RuntimeError("Gemini response generation failed")
 
 
 def generate_toc_from_pdf_gemini(pdf_path: Path, args: argparse.Namespace, prompt: str) -> tuple[dict[str, Any], str, str]:
@@ -957,7 +958,7 @@ def generate_toc_from_pdf_gemini(pdf_path: Path, args: argparse.Namespace, promp
             model = normalize_model_for_provider("gemini", model)
 
             if index > 0:
-                print(f"Gemini fallback 모델 시도: {model}", file=sys.stderr, flush=True)
+                print(f"Trying Gemini fallback model: {model}", file=sys.stderr, flush=True)
 
             parse_retry_prompt = prompt
 
@@ -965,21 +966,21 @@ def generate_toc_from_pdf_gemini(pdf_path: Path, args: argparse.Namespace, promp
                 try:
                     if parse_attempt > 1:
                         print(
-                            f"  Gemini JSON 파싱 실패 후 재생성 시도 {parse_attempt}/{args.ai_retries}: {model}",
+                            f"  Retrying Gemini generation after JSON parse failure {parse_attempt}/{args.ai_retries}: {model}",
                             file=sys.stderr,
                             flush=True,
                         )
                         parse_retry_prompt = (
                             prompt
-                            + "\n\n[중요 재시도 지시]\n"
-                            + "이전 응답은 JSON 문법 오류로 파싱에 실패했습니다. "
-                            + "이번 응답은 반드시 Python json.loads()로 바로 파싱 가능한 유효한 JSON 객체 하나만 출력하세요. "
-                            + "쉼표를 절대 누락하지 말고, 마크다운/설명/코드블록을 출력하지 마세요."
+                            + "\n\n[Important Retry Instruction]\n"
+                            + "The previous response failed JSON parsing due to invalid JSON syntax. "
+                            + "This time, output exactly one valid JSON object that Python json.loads() can parse directly. "
+                            + "Do not omit commas. Do not output Markdown, explanations, or code fences."
                         )
 
-                    print(f"  Gemini 목차 생성 요청 시작: {model}", flush=True)
+                    print(f"  Gemini TOC generation started: {model}", flush=True)
                     response = with_retry(
-                        label=f"Gemini 생성({model})",
+                        label=f"Gemini generation({model})",
                         func=lambda model=model, parse_retry_prompt=parse_retry_prompt: generate_gemini_once(
                             client=client,
                             model=model,
@@ -994,7 +995,7 @@ def generate_toc_from_pdf_gemini(pdf_path: Path, args: argparse.Namespace, promp
                         max_retries=args.ai_retries,
                         base_delay=args.ai_retry_base_delay,
                     )
-                    print(f"  Gemini 목차 생성 완료: {model}", flush=True)
+                    print(f"  Gemini TOC generation completed: {model}", flush=True)
 
                     raw_text = extract_gemini_text(response)
                     try:
@@ -1009,7 +1010,7 @@ def generate_toc_from_pdf_gemini(pdf_path: Path, args: argparse.Namespace, promp
                             )
                             raw_file.parent.mkdir(parents=True, exist_ok=True)
                             raw_file.write_text(raw_text, encoding="utf-8")
-                            print(f"원본 응답 저장: {raw_file}", flush=True)
+                            print(f"Raw response saved: {raw_file}", flush=True)
 
                         if parse_attempt >= max(1, int(args.ai_retries)):
                             raise
@@ -1023,24 +1024,24 @@ def generate_toc_from_pdf_gemini(pdf_path: Path, args: argparse.Namespace, promp
                     if is_configuration_error(error):
                         raise
 
-                    # 파싱 실패는 같은 모델로 재생성하고, API/모델 실패는 다음 fallback 모델로 넘깁니다.
+                    # Retry parse failures with the same model, then move API/model failures to the next fallback model.
                     if isinstance(error, json.JSONDecodeError) and parse_attempt < max(1, int(args.ai_retries)):
                         continue
 
-                    print(f"Gemini 모델 실패: {model} / {error}", file=sys.stderr, flush=True)
+                    print(f"Gemini model failed: {model} / {error}", file=sys.stderr, flush=True)
                     break
 
         if last_error:
             raise last_error
-        raise RuntimeError("시도할 Gemini 모델이 없습니다.")
+        raise RuntimeError("No Gemini models to try.")
 
     finally:
         if args.delete_uploaded_file:
             try:
                 client.files.delete(name=uploaded_file.name)
-                print("Gemini 업로드 파일 삭제 완료", file=sys.stderr, flush=True)
+                print("Gemini uploaded file deleted", file=sys.stderr, flush=True)
             except Exception as error:
-                print(f"Gemini 업로드 파일 삭제 실패: {error}", file=sys.stderr, flush=True)
+                print(f"Failed to delete Gemini uploaded file: {error}", file=sys.stderr, flush=True)
 
 
 # ----------------------------- OpenAI -----------------------------
@@ -1049,7 +1050,7 @@ def create_openai_client(api_key: str):
     try:
         from openai import OpenAI
     except ImportError as error:
-        raise RuntimeError("OpenAI API를 쓰려면 `pip install openai`가 필요합니다.") from error
+        raise RuntimeError("OpenAI API requires `pip install openai`.") from error
     return OpenAI(api_key=api_key)
 
 
@@ -1075,9 +1076,9 @@ def build_openai_response_payload(
         "store": False,
     }
 
-    # 일부 OpenAI reasoning 모델(gpt-5 계열 등)은 temperature 파라미터를 지원하지 않습니다.
-    # 따라서 OpenAI는 기본적으로 temperature를 보내지 않습니다.
-    # 필요하면 프롬프트/스키마로 출력 안정성을 제어합니다.
+    # Some OpenAI reasoning models, including some gpt-5-family models, do not support temperature.
+    # OpenAI requests therefore omit temperature by default.
+    # Use prompts/schema constraints to control output stability when needed.
 
     if max_output_tokens:
         base["max_output_tokens"] = int(max_output_tokens)
@@ -1134,7 +1135,7 @@ def generate_openai_once(
 
     if last_error:
         raise last_error
-    raise RuntimeError("OpenAI 응답 생성 실패")
+    raise RuntimeError("OpenAI response generation failed")
 
 
 def generate_toc_from_pdf_openai(pdf_path: Path, args: argparse.Namespace, prompt: str) -> tuple[dict[str, Any], str, str]:
@@ -1150,7 +1151,7 @@ def generate_toc_from_pdf_openai(pdf_path: Path, args: argparse.Namespace, promp
     safe_name = make_ascii_upload_name(pdf_path)
 
     try:
-        print("  OpenAI PDF 업로드 시작...", flush=True)
+        print("  OpenAI PDF upload started...", flush=True)
         with tempfile.TemporaryDirectory(prefix="openai_pdf_upload_") as temp_dir:
             upload_path = Path(temp_dir) / safe_name
             shutil.copy2(pdf_path, upload_path)
@@ -1160,16 +1161,16 @@ def generate_toc_from_pdf_openai(pdf_path: Path, args: argparse.Namespace, promp
                     return client.files.create(file=file_obj, purpose="user_data")
 
             uploaded_file = with_retry(
-                label=f"OpenAI PDF 업로드({pdf_path.name})",
+                label=f"OpenAI PDF upload({pdf_path.name})",
                 func=do_upload,
                 max_retries=args.ai_retries,
                 base_delay=args.ai_retry_base_delay,
             )
-        print("  OpenAI PDF 업로드 완료", flush=True)
+        print("  OpenAI PDF upload completed", flush=True)
 
         for index, model in enumerate(models):
             if index > 0:
-                print(f"OpenAI fallback 모델 시도: {model}", file=sys.stderr, flush=True)
+                print(f"Trying OpenAI fallback model: {model}", file=sys.stderr, flush=True)
 
             parse_retry_prompt = prompt
 
@@ -1177,22 +1178,22 @@ def generate_toc_from_pdf_openai(pdf_path: Path, args: argparse.Namespace, promp
                 try:
                     if parse_attempt > 1:
                         print(
-                            f"  OpenAI JSON 파싱 실패 후 재생성 시도 {parse_attempt}/{args.ai_retries}: {model}",
+                            f"  Retrying OpenAI generation after JSON parse failure {parse_attempt}/{args.ai_retries}: {model}",
                             file=sys.stderr,
                             flush=True,
                         )
                         parse_retry_prompt = (
                             prompt
-                            + "\n\n[중요 재시도 지시]\n"
-                            + "이전 응답은 JSON 문법 오류로 파싱에 실패했습니다. "
-                            + "이번 응답은 반드시 Python json.loads()로 바로 파싱 가능한 유효한 JSON 객체 하나만 출력하세요. "
-                            + "배열 항목 사이 쉼표를 절대 누락하지 말고, 출력이 길어도 JSON 객체를 끝까지 닫으세요. "
-                            + "마크다운/설명/코드블록은 출력하지 마세요."
+                            + "\n\n[Important Retry Instruction]\n"
+                            + "The previous response failed JSON parsing due to invalid JSON syntax. "
+                            + "This time, output exactly one valid JSON object that Python json.loads() can parse directly. "
+                            + "Do not omit commas between array items, and close the JSON object completely even if the output is long. "
+                            + "Do not output Markdown, explanations, or code fences."
                         )
 
-                    print(f"  OpenAI 목차 생성 요청 시작: {model}", flush=True)
+                    print(f"  OpenAI TOC generation started: {model}", flush=True)
                     response = with_retry(
-                        label=f"OpenAI 생성({model})",
+                        label=f"OpenAI generation({model})",
                         func=lambda model=model, parse_retry_prompt=parse_retry_prompt: generate_openai_once(
                             client=client,
                             model=model,
@@ -1205,7 +1206,7 @@ def generate_toc_from_pdf_openai(pdf_path: Path, args: argparse.Namespace, promp
                         max_retries=args.ai_retries,
                         base_delay=args.ai_retry_base_delay,
                     )
-                    print(f"  OpenAI 목차 생성 완료: {model}", flush=True)
+                    print(f"  OpenAI TOC generation completed: {model}", flush=True)
 
                     raw_text = str(getattr(response, "output_text", "") or "")
                     try:
@@ -1220,7 +1221,7 @@ def generate_toc_from_pdf_openai(pdf_path: Path, args: argparse.Namespace, promp
                             )
                             raw_file.parent.mkdir(parents=True, exist_ok=True)
                             raw_file.write_text(raw_text, encoding="utf-8")
-                            print(f"원본 응답 저장: {raw_file}", flush=True)
+                            print(f"Raw response saved: {raw_file}", flush=True)
 
                         if parse_attempt >= max(1, int(args.ai_retries)):
                             raise
@@ -1240,20 +1241,20 @@ def generate_toc_from_pdf_openai(pdf_path: Path, args: argparse.Namespace, promp
                     ):
                         continue
 
-                    print(f"OpenAI 모델 실패: {model} / {error}", file=sys.stderr, flush=True)
+                    print(f"OpenAI model failed: {model} / {error}", file=sys.stderr, flush=True)
                     break
 
         if last_error:
             raise last_error
-        raise RuntimeError("시도할 OpenAI 모델이 없습니다.")
+        raise RuntimeError("No OpenAI models to try.")
 
     finally:
         if args.delete_uploaded_file and uploaded_file is not None:
             try:
                 client.files.delete(uploaded_file.id)
-                print("OpenAI 업로드 파일 삭제 완료", file=sys.stderr, flush=True)
+                print("OpenAI uploaded file deleted", file=sys.stderr, flush=True)
             except Exception as error:
-                print(f"OpenAI 업로드 파일 삭제 실패: {error}", file=sys.stderr, flush=True)
+                print(f"Failed to delete OpenAI uploaded file: {error}", file=sys.stderr, flush=True)
 
 
 # ----------------------------- Claude -----------------------------
@@ -1262,7 +1263,7 @@ def create_claude_client(api_key: str):
     try:
         from anthropic import Anthropic
     except ImportError as error:
-        raise RuntimeError("Claude API를 쓰려면 `pip install anthropic`가 필요합니다.") from error
+        raise RuntimeError("Claude API requires `pip install anthropic`.") from error
     return Anthropic(api_key=api_key)
 
 
@@ -1280,11 +1281,11 @@ def generate_claude_once(
     with client.messages.stream(
         model=model,
         max_tokens=int(max_output_tokens or DEFAULT_MAX_OUTPUT_TOKENS),
-        # claude-opus/sonnet 최신 계열 일부 모델은 temperature가 deprecated 처리되어
-        # 전송하면 400 invalid_request_error가 발생합니다. 안정성은 프롬프트로 제어합니다.
+        # Some newer claude-opus/sonnet models deprecate temperature.
+        # Sending it can cause a 400 invalid_request_error; use the prompt for stability.
         system=(
-            "너는 PDF 교재/강의자료의 목차를 만드는 전문가다. "
-            "반드시 유효한 JSON 객체 하나만 출력한다. 마크다운과 설명은 출력하지 않는다."
+            "You are an expert at creating tables of contents for PDF textbooks and lecture materials. "
+            "Output exactly one valid JSON object. Do not output Markdown or explanations."
         ),
         messages=[
             {
@@ -1324,8 +1325,8 @@ def generate_claude_text_once(
         model=model,
         max_tokens=int(max_output_tokens or DEFAULT_MAX_OUTPUT_TOKENS),
         system=(
-            "너는 PDF 교재/강의자료의 목차를 만드는 전문가다. "
-            "반드시 유효한 JSON 객체 하나만 출력한다. 마크다운과 설명은 출력하지 않는다."
+            "You are an expert at creating tables of contents for PDF textbooks and lecture materials. "
+            "Output exactly one valid JSON object. Do not output Markdown or explanations."
         ),
         messages=[
             {
@@ -1351,7 +1352,7 @@ def extract_pdf_text_pages(pdf_path: Path) -> list[tuple[int, str]]:
     try:
         import pdfplumber
     except ImportError as error:
-        raise RuntimeError("PDF 텍스트 추출에는 `pip install pdfplumber`가 필요합니다.") from error
+        raise RuntimeError("PDF text extraction requires `pip install pdfplumber`.") from error
 
     pages: list[tuple[int, str]] = []
     with pdfplumber.open(pdf_path) as pdf:
@@ -1361,7 +1362,7 @@ def extract_pdf_text_pages(pdf_path: Path) -> list[tuple[int, str]]:
                 pages.append((page_index, text))
 
     if not pages:
-        raise RuntimeError("PDF에서 추출 가능한 텍스트를 찾지 못했습니다. 스캔 PDF라면 OCR이 필요합니다.")
+        raise RuntimeError("No extractable text was found in the PDF. Scanned PDFs require OCR.")
 
     return pages
 
@@ -1433,14 +1434,14 @@ def build_claude_text_prompt(base_prompt: str, pdf_name: str, text: str) -> str:
     return f"""
 {base_prompt}
 
-[Claude 긴 PDF 텍스트 모드]
-첨부 PDF 대신 아래 [PDF 추출 텍스트]만 근거로 목차를 작성한다.
-페이지 번호는 각 텍스트 블록의 [PAGE n] marker를 기준으로 작성한다.
+[Claude Long PDF Text Mode]
+Create the TOC using only the [Extracted PDF Text] below instead of an attached PDF.
+Use each text block's [PAGE n] marker to determine page numbers.
 
-[PDF 파일명]
+[PDF File Name]
 {pdf_name}
 
-[PDF 추출 텍스트]
+[Extracted PDF Text]
 {text}
 """.strip()
 
@@ -1449,19 +1450,19 @@ def build_claude_chunk_prompt(base_prompt: str, pdf_name: str, chunk: dict[str, 
     return f"""
 {base_prompt}
 
-[Claude 긴 PDF 분할 처리]
-아래 텍스트는 전체 PDF 중 일부다.
-이 범위 안에서 실제로 확인되는 장/절/소제목만 chapters에 넣는다.
-범위 밖 목차는 추정하지 않는다.
-페이지 번호는 [PAGE n] marker를 기준으로 작성한다.
+[Claude Long PDF Chunk Mode]
+The text below is one part of the full PDF.
+Include only chapter, section, and subsection titles that are actually visible within this range.
+Do not infer TOC entries outside this range.
+Use [PAGE n] markers to determine page numbers.
 
-[PDF 파일명]
+[PDF File Name]
 {pdf_name}
 
-[청크]
+[Chunk]
 {chunk["index"]}/{total_chunks}, pages {chunk["start_page"]}-{chunk["end_page"]}
 
-[PDF 추출 텍스트]
+[Extracted PDF Text]
 {chunk["text"]}
 """.strip()
 
@@ -1476,18 +1477,19 @@ def build_claude_merge_prompt(
     return f"""
 {base_prompt}
 
-[분할 목차 병합 지시]
-첨부 PDF 대신 아래 [분할 목차 후보]만 근거로 최종 목차 JSON 객체 하나를 작성한다.
-- 중복 항목은 하나만 남긴다.
-- page 오름차순과 원문 등장 순서를 유지한다.
-- 표지, 머리말, 차례/목차 페이지, 찾아보기/색인, 참고문헌, 반복 머리말/꼬리말은 제거한다.
-- level은 1부터 {max_depth}까지만 사용한다.
-- chapter 제목을 새로 만들지 않는다.
+[Chunked TOC Merge Instruction]
+Create one final TOC JSON object using only the [Partial TOC Candidates] below instead of the attached PDF.
+- Keep only one copy of duplicate entries.
+- Preserve ascending page order and source appearance order.
+- Remove covers, prefaces, existing TOC pages, indexes, references, and repeated headers/footers.
+- Use only levels from 1 to {max_depth}.
+- Do not invent chapter titles.
+- Preserve original chapter/section titles exactly, including Korean text when the source title is Korean.
 
-[PDF 파일명]
+[PDF File Name]
 {pdf_name}
 
-[분할 목차 후보]
+[Partial TOC Candidates]
 {partial_json}
 """.strip()
 
@@ -1496,12 +1498,12 @@ def build_claude_json_retry_prompt(base_prompt: str, error: Exception, raw_text:
     raw_preview = clean_text(raw_text)[:500]
     return (
         base_prompt
-        + "\n\n[중요 재시도 지시]\n"
-        + f"이전 응답은 JSON 파싱에 실패했습니다. 오류: {type(error).__name__}: {error}\n"
-        + ("이전 응답 일부: " + raw_preview + "\n" if raw_preview else "이전 응답은 비어 있었습니다.\n")
-        + "이번 응답은 반드시 Python json.loads()로 바로 파싱 가능한 유효한 JSON 객체 하나만 출력하세요. "
-        + "마크다운/설명/코드블록은 출력하지 말고, 빈 응답도 절대 출력하지 마세요. "
-        + '항목이 없으면 {"title": "문서 제목", "chapters": []} 형식으로 출력하세요.'
+        + "\n\n[Important Retry Instruction]\n"
+        + f"The previous response failed JSON parsing. Error: {type(error).__name__}: {error}\n"
+        + ("Previous response preview: " + raw_preview + "\n" if raw_preview else "The previous response was empty.\n")
+        + "This time, output exactly one valid JSON object that Python json.loads() can parse directly. "
+        + "Do not output Markdown, explanations, or code fences. Never return an empty response. "
+        + 'If there are no entries, output {"title": "Document title", "chapters": []}.'
     )
 
 
@@ -1520,14 +1522,14 @@ def request_claude_json_text(
         request_prompt = prompt_text
         if parse_attempt > 1 and last_error is not None:
             print(
-                f"  {label} JSON 파싱 실패 후 재생성 시도 {parse_attempt}/{retry_count}: {last_error}",
+                f"  Retrying {label} after JSON parse failure {parse_attempt}/{retry_count}: {last_error}",
                 file=sys.stderr,
                 flush=True,
             )
             request_prompt = build_claude_json_retry_prompt(prompt_text, last_error, last_raw_text)
 
         response = with_retry(
-            label=f"{label} 생성",
+            label=f"{label} generation",
             func=lambda request_prompt=request_prompt: generate_claude_text_once(
                 client=client,
                 model=model,
@@ -1549,7 +1551,7 @@ def request_claude_json_text(
 
     if last_error:
         raise last_error
-    raise RuntimeError(f"{label} 실패")
+    raise RuntimeError(f"{label} failed")
 
 
 def page_range_from_chunk_text(text: str, fallback_start: Any, fallback_end: Any) -> tuple[Any, Any]:
@@ -1647,7 +1649,7 @@ def process_claude_text_chunk(
     chunk_label = str(chunk["index"])
     chunk_prompt = build_claude_chunk_prompt(prompt, pdf_path.name, chunk, total_chunks)
     print(
-        f"  Claude 청크 {chunk_label}/{total_chunks} 요청: pages {chunk['start_page']}-{chunk['end_page']}",
+        f"  Claude chunk {chunk_label}/{total_chunks} request: pages {chunk['start_page']}-{chunk['end_page']}",
         flush=True,
     )
 
@@ -1657,7 +1659,7 @@ def process_claude_text_chunk(
             model=model,
             prompt_text=chunk_prompt,
             args=args,
-            label=f"Claude 청크 {chunk_label}/{total_chunks}",
+            label=f"Claude chunk {chunk_label}/{total_chunks}",
         )
         partial_toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
         raw_parts.append({
@@ -1666,7 +1668,7 @@ def process_claude_text_chunk(
             "end_page": chunk["end_page"],
             "raw_response": raw_text,
         })
-        print(f"  Claude 청크 {chunk_label} 완료: {len(partial_toc.get('chapters', []))} chapters", flush=True)
+        print(f"  Claude chunk {chunk_label} completed: {len(partial_toc.get('chapters', []))} chapters", flush=True)
         return [{
             "chunk": chunk["index"],
             "start_page": chunk["start_page"],
@@ -1690,7 +1692,7 @@ def process_claude_text_chunk(
             raise
 
         print(
-            f"  Claude 청크 {chunk_label} 실패, {len(subchunks)}개 하위 청크로 재처리: {error}",
+            f"  Claude chunk {chunk_label} failed; retrying with {len(subchunks)} subchunks: {error}",
             file=sys.stderr,
             flush=True,
         )
@@ -1737,10 +1739,10 @@ def generate_toc_from_pdf_claude_text(
     args: argparse.Namespace,
     prompt: str,
 ) -> tuple[dict[str, Any], str, str]:
-    print("  Claude PDF 텍스트 추출 시작...", flush=True)
+    print("  Claude PDF text extraction started...", flush=True)
     pages = extract_pdf_text_pages(pdf_path)
     extracted_chars = sum(len(text) for _, text in pages)
-    print(f"  Claude PDF 텍스트 추출 완료: {len(pages)} pages, {extracted_chars} chars", flush=True)
+    print(f"  Claude PDF text extraction completed: {len(pages)} pages, {extracted_chars} chars", flush=True)
 
     single_max_chars = max(10000, int(args.claude_text_single_max_chars))
     chunk_chars = max(10000, int(args.claude_text_chunk_chars))
@@ -1748,19 +1750,19 @@ def generate_toc_from_pdf_claude_text(
     if extracted_chars <= single_max_chars:
         full_text = "\n\n".join(f"[PAGE {page_number}]\n{text}" for page_number, text in pages)
         text_prompt = build_claude_text_prompt(prompt, pdf_path.name, full_text)
-        print(f"  Claude 텍스트 목차 생성 요청 시작: {model}", flush=True)
+        print(f"  Claude text TOC generation started: {model}", flush=True)
         parsed, raw_text = request_claude_json_text(
             client=client,
             model=model,
             prompt_text=text_prompt,
             args=args,
-            label=f"Claude 텍스트({model})",
+            label=f"Claude text({model})",
         )
-        print(f"  Claude 텍스트 목차 생성 완료: {model}", flush=True)
+        print(f"  Claude text TOC generation completed: {model}", flush=True)
         return validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth), raw_text, model
 
     chunks = chunk_pdf_text_pages(pages, max_chars=chunk_chars)
-    print(f"  Claude 텍스트 청크 처리 시작: {len(chunks)} chunks", flush=True)
+    print(f"  Claude text chunk processing started: {len(chunks)} chunks", flush=True)
     partial_tocs: list[dict[str, Any]] = []
     raw_parts: list[dict[str, Any]] = []
 
@@ -1779,19 +1781,19 @@ def generate_toc_from_pdf_claude_text(
         )
 
     merge_prompt = build_claude_merge_prompt(prompt, pdf_path.name, partial_tocs, args.max_depth)
-    print(f"  Claude 분할 목차 병합 요청 시작: {model}", flush=True)
+    print(f"  Claude chunked TOC merge started: {model}", flush=True)
     try:
         parsed, final_raw_text = request_claude_json_text(
             client=client,
             model=model,
             prompt_text=merge_prompt,
             args=args,
-            label=f"Claude 분할 목차 병합({model})",
+            label=f"Claude chunked TOC merge({model})",
         )
         toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
     except Exception as merge_error:
         print(
-            f"Claude 분할 목차 병합 실패, 로컬 병합으로 대체: {merge_error}",
+            f"Claude chunked TOC merge failed; falling back to local merge: {merge_error}",
             file=sys.stderr,
             flush=True,
         )
@@ -1828,10 +1830,10 @@ def generate_toc_from_pdf_claude(pdf_path: Path, args: argparse.Namespace, promp
     for index, model in enumerate(models):
         try:
             if index > 0:
-                print(f"Claude fallback 모델 시도: {model}", file=sys.stderr, flush=True)
+                print(f"Trying Claude fallback model: {model}", file=sys.stderr, flush=True)
 
             if args.claude_force_text:
-                print(f"  Claude 텍스트 추출 모드 사용: {model}", flush=True)
+                print(f"  Using Claude text extraction mode: {model}", flush=True)
                 return generate_toc_from_pdf_claude_text(
                     client=client,
                     model=model,
@@ -1840,9 +1842,9 @@ def generate_toc_from_pdf_claude(pdf_path: Path, args: argparse.Namespace, promp
                     prompt=prompt,
                 )
 
-            print(f"  Claude 목차 생성 요청 시작: {model}", flush=True)
+            print(f"  Claude TOC generation started: {model}", flush=True)
             response = with_retry(
-                label=f"Claude 생성({model})",
+                label=f"Claude generation({model})",
                 func=lambda model=model: generate_claude_once(
                     client=client,
                     model=model,
@@ -1854,7 +1856,7 @@ def generate_toc_from_pdf_claude(pdf_path: Path, args: argparse.Namespace, promp
                 max_retries=args.ai_retries,
                 base_delay=args.ai_retry_base_delay,
             )
-            print(f"  Claude 목차 생성 완료: {model}", flush=True)
+            print(f"  Claude TOC generation completed: {model}", flush=True)
 
             raw_text = claude_response_text(response)
             parsed = parse_json_response(response, provider="claude")
@@ -1866,7 +1868,7 @@ def generate_toc_from_pdf_claude(pdf_path: Path, args: argparse.Namespace, promp
                 raise
             if is_prompt_too_long_error(error) or is_stream_required_error(error):
                 print(
-                    f"Claude 긴 입력 처리 제한, 텍스트 추출 fallback으로 전환: {model}",
+                    f"Claude long-input limit reached; switching to text extraction fallback: {model}",
                     file=sys.stderr,
                     flush=True,
                 )
@@ -1882,13 +1884,13 @@ def generate_toc_from_pdf_claude(pdf_path: Path, args: argparse.Namespace, promp
                     last_error = fallback_error
                     if is_configuration_error(fallback_error):
                         raise
-                    print(f"Claude 텍스트 fallback 실패: {model} / {fallback_error}", file=sys.stderr, flush=True)
+                    print(f"Claude text fallback failed: {model} / {fallback_error}", file=sys.stderr, flush=True)
                     continue
-            print(f"Claude 모델 실패: {model} / {error}", file=sys.stderr, flush=True)
+            print(f"Claude model failed: {model} / {error}", file=sys.stderr, flush=True)
 
     if last_error:
         raise last_error
-    raise RuntimeError("시도할 Claude 모델이 없습니다.")
+    raise RuntimeError("No Claude models to try.")
 
 
 # ----------------------------- Gemma -----------------------------
@@ -1908,7 +1910,7 @@ def normalize_gemma_backend(backend: str | None) -> str:
     }
     backend = aliases.get(backend, backend)
     if backend not in {"transformers", "ollama"}:
-        raise ValueError("--gemma-backend는 transformers 또는 ollama만 가능합니다.")
+        raise ValueError("--gemma-backend must be either transformers or ollama.")
     return backend
 
 
@@ -2022,17 +2024,17 @@ def ollama_api_get(
             body = response.read().decode("utf-8", errors="replace")
     except urllib.error.HTTPError as error:
         error_body = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"Ollama API 오류 {error.code}: {error_body}") from error
+        raise RuntimeError(f"Ollama API error {error.code}: {error_body}") from error
     except urllib.error.URLError as error:
-        raise RuntimeError(f"Ollama API 연결 실패({url}): {error}") from error
+        raise RuntimeError(f"Ollama API connection failed({url}): {error}") from error
 
     try:
         parsed = json.loads(body)
     except json.JSONDecodeError as error:
-        raise RuntimeError(f"Ollama API 응답 JSON 파싱 실패: {body[:500]}") from error
+        raise RuntimeError(f"Failed to parse Ollama API response JSON: {body[:500]}") from error
 
     if not isinstance(parsed, dict):
-        raise RuntimeError("Ollama API 응답은 JSON object여야 합니다.")
+        raise RuntimeError("Ollama API response must be a JSON object.")
 
     return parsed
 
@@ -2061,11 +2063,11 @@ def ensure_ollama_model_available(model: str, args: argparse.Namespace) -> None:
     if model in installed_models:
         return
 
-    installed_text = ", ".join(sorted(installed_models)) or "없음"
+    installed_text = ", ".join(sorted(installed_models)) or "none"
     raise RuntimeError(
-        f"Ollama에 모델 '{model}'이 설치되어 있지 않습니다. "
-        f"먼저 `ollama pull {model}`를 실행하세요. "
-        f"현재 설치된 모델: {installed_text}"
+        f"Model '{model}' is not installed in Ollama. "
+        f"Run `ollama pull {model}` first. "
+        f"Currently installed models: {installed_text}"
     )
 
 
@@ -2073,7 +2075,7 @@ def preflight_pdf_text_extraction() -> None:
     try:
         __import__("pdfplumber")
     except ImportError as error:
-        raise RuntimeError("PDF 텍스트 추출에는 `pip install pdfplumber`가 필요합니다.") from error
+        raise RuntimeError("PDF text extraction requires `pip install pdfplumber`.") from error
 
 
 def preflight_gemma_transformers() -> None:
@@ -2086,9 +2088,9 @@ def preflight_gemma_transformers() -> None:
 
     if missing:
         raise RuntimeError(
-            "Gemma transformers 백엔드에 필요한 패키지가 없습니다: "
+            "Missing packages required by the Gemma transformers backend: "
             + ", ".join(missing)
-            + ". 먼저 `pip install -U transformers torch accelerate safetensors huggingface_hub`를 실행하세요."
+            + ". Run `pip install -U transformers torch accelerate safetensors huggingface_hub` first."
         )
 
 
@@ -2136,17 +2138,17 @@ def ollama_api_post(
             body = response.read().decode("utf-8", errors="replace")
     except urllib.error.HTTPError as error:
         error_body = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"Ollama API 오류 {error.code}: {error_body}") from error
+        raise RuntimeError(f"Ollama API error {error.code}: {error_body}") from error
     except urllib.error.URLError as error:
-        raise RuntimeError(f"Ollama API 연결 실패({url}): {error}") from error
+        raise RuntimeError(f"Ollama API connection failed({url}): {error}") from error
 
     try:
         parsed = json.loads(body)
     except json.JSONDecodeError as error:
-        raise RuntimeError(f"Ollama API 응답 JSON 파싱 실패: {body[:500]}") from error
+        raise RuntimeError(f"Failed to parse Ollama API response JSON: {body[:500]}") from error
 
     if not isinstance(parsed, dict):
-        raise RuntimeError("Ollama API 응답은 JSON object여야 합니다.")
+        raise RuntimeError("Ollama API response must be a JSON object.")
 
     return parsed
 
@@ -2226,20 +2228,20 @@ def load_gemma_transformers_model(model: str, args: argparse.Namespace) -> dict[
         from transformers import AutoModelForCausalLM, AutoProcessor
     except ImportError as error:
         raise RuntimeError(
-            "Gemma transformers 백엔드를 쓰려면 "
-            "`pip install -U transformers torch accelerate safetensors huggingface_hub`가 필요합니다."
+            "Gemma transformers backend requires "
+            "`pip install -U transformers torch accelerate safetensors huggingface_hub`."
         ) from error
 
     token_kwargs = gemma_hf_token_kwargs()
-    print(f"  Gemma/Transformers 모델 로드 시작: {model}", flush=True)
+    print(f"  Gemma/Transformers model loading started: {model}", flush=True)
 
     try:
         processor = AutoProcessor.from_pretrained(model, **token_kwargs)
     except Exception as error:
         raise RuntimeError(
-            f"Gemma processor 로드 실패: {model}. "
-            "Hugging Face 모델 접근 권한과 HF_TOKEN/huggingface-cli login 상태를 확인하세요. "
-            f"원인: {error}"
+            f"Failed to load Gemma processor: {model}. "
+            "Check Hugging Face model access and HF_TOKEN/huggingface-cli login state. "
+            f"Cause: {error}"
         ) from error
 
     load_kwargs: dict[str, Any] = dict(token_kwargs)
@@ -2262,9 +2264,9 @@ def load_gemma_transformers_model(model: str, args: argparse.Namespace) -> dict[
         loaded_model = AutoModelForCausalLM.from_pretrained(model, **fallback_kwargs)
     except Exception as error:
         raise RuntimeError(
-            f"Gemma transformers 모델 로드 실패: {model}. "
-            "transformers 버전, Hugging Face 권한, GPU/CPU 메모리를 확인하세요. "
-            f"원인: {error}"
+            f"Failed to load Gemma transformers model: {model}. "
+            "Check the transformers version, Hugging Face access, and GPU/CPU memory. "
+            f"Cause: {error}"
         ) from error
 
     eval_method = getattr(loaded_model, "eval", None)
@@ -2277,7 +2279,7 @@ def load_gemma_transformers_model(model: str, args: argparse.Namespace) -> dict[
         "model": loaded_model,
     }
     _GEMMA_TRANSFORMERS_CACHE[cache_key] = bundle
-    print(f"  Gemma/Transformers 모델 로드 완료: {model}", flush=True)
+    print(f"  Gemma/Transformers model loading completed: {model}", flush=True)
     return bundle
 
 
@@ -2295,8 +2297,8 @@ def generate_gemma_once_transformers(
         {
             "role": "system",
             "content": (
-                "너는 PDF 교재/강의자료의 목차를 만드는 전문가다. "
-                "반드시 유효한 JSON 객체 하나만 출력한다. 마크다운과 설명은 출력하지 않는다."
+                "You are an expert at creating tables of contents for PDF textbooks and lecture materials. "
+                "Output exactly one valid JSON object. Do not output Markdown or explanations."
             ),
         },
         {"role": "user", "content": prompt},
@@ -2311,7 +2313,7 @@ def generate_gemma_once_transformers(
             return_tensors="pt",
         )
     except Exception as error:
-        raise RuntimeError(f"Gemma transformers 입력 생성 실패: {error}") from error
+        raise RuntimeError(f"Failed to build Gemma transformers inputs: {error}") from error
 
     device = first_transformers_device(loaded_model)
     inputs = move_transformers_inputs_to_device(inputs, device)
@@ -2343,7 +2345,7 @@ def generate_gemma_once_transformers(
         with torch.inference_mode():
             outputs = loaded_model.generate(**inputs, **generation_kwargs)
     except Exception as error:
-        raise RuntimeError(f"Gemma transformers 생성 실패: {error}") from error
+        raise RuntimeError(f"Gemma transformers generation failed: {error}") from error
 
     generated_ids = outputs[0][input_length:] if input_length else outputs[0]
     try:
@@ -2368,8 +2370,8 @@ def build_gemma_payloads(
         "model": model,
         "prompt": prompt,
         "system": (
-            "너는 PDF 교재/강의자료의 목차를 만드는 전문가다. "
-            "반드시 유효한 JSON 객체 하나만 출력한다. 마크다운과 설명은 출력하지 않는다."
+            "You are an expert at creating tables of contents for PDF textbooks and lecture materials. "
+            "Output exactly one valid JSON object. Do not output Markdown or explanations."
         ),
         "stream": False,
     }
@@ -2445,7 +2447,7 @@ def generate_gemma_once(
 
     if last_error:
         raise last_error
-    raise RuntimeError("Gemma 응답 생성 실패")
+    raise RuntimeError("Gemma response generation failed")
 
 
 def gemma_response_text(response: Any) -> str:
@@ -2458,14 +2460,14 @@ def build_gemma_text_prompt(base_prompt: str, pdf_name: str, text: str) -> str:
     return f"""
 {base_prompt}
 
-[Gemma 텍스트 모드]
-첨부 PDF 대신 아래 [PDF 추출 텍스트]만 근거로 목차를 작성한다.
-페이지 번호는 각 텍스트 블록의 [PAGE n] marker를 기준으로 작성한다.
+[Gemma Text Mode]
+Create the TOC using only the [Extracted PDF Text] below instead of an attached PDF.
+Use each text block's [PAGE n] marker to determine page numbers.
 
-[PDF 파일명]
+[PDF File Name]
 {pdf_name}
 
-[PDF 추출 텍스트]
+[Extracted PDF Text]
 {text}
 """.strip()
 
@@ -2474,19 +2476,19 @@ def build_gemma_chunk_prompt(base_prompt: str, pdf_name: str, chunk: dict[str, A
     return f"""
 {base_prompt}
 
-[Gemma 텍스트 분할 처리]
-아래 텍스트는 전체 PDF 중 일부다.
-이 범위 안에서 실제로 확인되는 장/절/소제목만 chapters에 넣는다.
-범위 밖 목차는 추정하지 않는다.
-페이지 번호는 [PAGE n] marker를 기준으로 작성한다.
+[Gemma Text Chunk Mode]
+The text below is one part of the full PDF.
+Include only chapter, section, and subsection titles that are actually visible within this range.
+Do not infer TOC entries outside this range.
+Use [PAGE n] markers to determine page numbers.
 
-[PDF 파일명]
+[PDF File Name]
 {pdf_name}
 
-[청크]
+[Chunk]
 {chunk["index"]}/{total_chunks}, pages {chunk["start_page"]}-{chunk["end_page"]}
 
-[PDF 추출 텍스트]
+[Extracted PDF Text]
 {chunk["text"]}
 """.strip()
 
@@ -2501,18 +2503,19 @@ def build_gemma_merge_prompt(
     return f"""
 {base_prompt}
 
-[분할 목차 병합 지시]
-첨부 PDF 대신 아래 [분할 목차 후보]만 근거로 최종 목차 JSON 객체 하나를 작성한다.
-- 중복 항목은 하나만 남긴다.
-- page 오름차순과 원문 등장 순서를 유지한다.
-- 표지, 머리말, 차례/목차 페이지, 찾아보기/색인, 참고문헌, 반복 머리말/꼬리말은 제거한다.
-- level은 1부터 {max_depth}까지만 사용한다.
-- chapter 제목을 새로 만들지 않는다.
+[Chunked TOC Merge Instruction]
+Create one final TOC JSON object using only the [Partial TOC Candidates] below instead of the attached PDF.
+- Keep only one copy of duplicate entries.
+- Preserve ascending page order and source appearance order.
+- Remove covers, prefaces, existing TOC pages, indexes, references, and repeated headers/footers.
+- Use only levels from 1 to {max_depth}.
+- Do not invent chapter titles.
+- Preserve original chapter/section titles exactly, including Korean text when the source title is Korean.
 
-[PDF 파일명]
+[PDF File Name]
 {pdf_name}
 
-[분할 목차 후보]
+[Partial TOC Candidates]
 {partial_json}
 """.strip()
 
@@ -2521,12 +2524,12 @@ def build_gemma_json_retry_prompt(base_prompt: str, error: Exception, raw_text: 
     raw_preview = clean_text(raw_text)[:500]
     return (
         base_prompt
-        + "\n\n[중요 재시도 지시]\n"
-        + f"이전 응답은 JSON 파싱에 실패했습니다. 오류: {type(error).__name__}: {error}\n"
-        + ("이전 응답 일부: " + raw_preview + "\n" if raw_preview else "이전 응답은 비어 있었습니다.\n")
-        + "이번 응답은 반드시 Python json.loads()로 바로 파싱 가능한 유효한 JSON 객체 하나만 출력하세요. "
-        + "마크다운/설명/코드블록은 출력하지 말고, 빈 응답도 절대 출력하지 마세요. "
-        + '항목이 없으면 {"title": "문서 제목", "chapters": []} 형식으로 출력하세요.'
+        + "\n\n[Important Retry Instruction]\n"
+        + f"The previous response failed JSON parsing. Error: {type(error).__name__}: {error}\n"
+        + ("Previous response preview: " + raw_preview + "\n" if raw_preview else "The previous response was empty.\n")
+        + "This time, output exactly one valid JSON object that Python json.loads() can parse directly. "
+        + "Do not output Markdown, explanations, or code fences. Never return an empty response. "
+        + 'If there are no entries, output {"title": "Document title", "chapters": []}.'
     )
 
 
@@ -2544,14 +2547,14 @@ def request_gemma_json_text(
         request_prompt = prompt_text
         if parse_attempt > 1 and last_error is not None:
             print(
-                f"  {label} JSON 파싱 실패 후 재생성 시도 {parse_attempt}/{retry_count}: {last_error}",
+                f"  Retrying {label} after JSON parse failure {parse_attempt}/{retry_count}: {last_error}",
                 file=sys.stderr,
                 flush=True,
             )
             request_prompt = build_gemma_json_retry_prompt(prompt_text, last_error, last_raw_text)
 
         response = with_retry(
-            label=f"{label} 생성",
+            label=f"{label} generation",
             func=lambda request_prompt=request_prompt: generate_gemma_once(
                 model=model,
                 prompt=request_prompt,
@@ -2572,7 +2575,7 @@ def request_gemma_json_text(
 
     if last_error:
         raise last_error
-    raise RuntimeError(f"{label} 실패")
+    raise RuntimeError(f"{label} failed")
 
 
 def process_gemma_text_chunk(
@@ -2588,7 +2591,7 @@ def process_gemma_text_chunk(
     chunk_label = str(chunk["index"])
     chunk_prompt = build_gemma_chunk_prompt(prompt, pdf_path.name, chunk, total_chunks)
     print(
-        f"  Gemma 청크 {chunk_label}/{total_chunks} 요청: pages {chunk['start_page']}-{chunk['end_page']}",
+        f"  Gemma chunk {chunk_label}/{total_chunks} request: pages {chunk['start_page']}-{chunk['end_page']}",
         flush=True,
     )
 
@@ -2597,7 +2600,7 @@ def process_gemma_text_chunk(
             model=model,
             prompt_text=chunk_prompt,
             args=args,
-            label=f"Gemma 청크 {chunk_label}/{total_chunks}",
+            label=f"Gemma chunk {chunk_label}/{total_chunks}",
         )
         partial_toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
         raw_parts.append({
@@ -2606,7 +2609,7 @@ def process_gemma_text_chunk(
             "end_page": chunk["end_page"],
             "raw_response": raw_text,
         })
-        print(f"  Gemma 청크 {chunk_label} 완료: {len(partial_toc.get('chapters', []))} chapters", flush=True)
+        print(f"  Gemma chunk {chunk_label} completed: {len(partial_toc.get('chapters', []))} chapters", flush=True)
         return [{
             "chunk": chunk["index"],
             "start_page": chunk["start_page"],
@@ -2639,7 +2642,7 @@ def process_gemma_text_chunk(
             raise
 
         print(
-            f"  Gemma 청크 {chunk_label} 실패, {len(subchunks)}개 하위 청크로 재처리: {error}",
+            f"  Gemma chunk {chunk_label} failed; retrying with {len(subchunks)} subchunks: {error}",
             file=sys.stderr,
             flush=True,
         )
@@ -2666,10 +2669,10 @@ def generate_toc_from_pdf_gemma_text(
     args: argparse.Namespace,
     prompt: str,
 ) -> tuple[dict[str, Any], str, str]:
-    print("  Gemma PDF 텍스트 추출 시작...", flush=True)
+    print("  Gemma PDF text extraction started...", flush=True)
     pages = extract_pdf_text_pages(pdf_path)
     extracted_chars = sum(len(text) for _, text in pages)
-    print(f"  Gemma PDF 텍스트 추출 완료: {len(pages)} pages, {extracted_chars} chars", flush=True)
+    print(f"  Gemma PDF text extraction completed: {len(pages)} pages, {extracted_chars} chars", flush=True)
 
     single_max_chars = max(10000, int(args.gemma_text_single_max_chars))
     chunk_chars = max(10000, int(args.gemma_text_chunk_chars))
@@ -2677,18 +2680,18 @@ def generate_toc_from_pdf_gemma_text(
     if extracted_chars <= single_max_chars:
         full_text = "\n\n".join(f"[PAGE {page_number}]\n{text}" for page_number, text in pages)
         text_prompt = build_gemma_text_prompt(prompt, pdf_path.name, full_text)
-        print(f"  Gemma 텍스트 목차 생성 요청 시작: {model}", flush=True)
+        print(f"  Gemma text TOC generation started: {model}", flush=True)
         parsed, raw_text = request_gemma_json_text(
             model=model,
             prompt_text=text_prompt,
             args=args,
-            label=f"Gemma 텍스트({model})",
+            label=f"Gemma text({model})",
         )
-        print(f"  Gemma 텍스트 목차 생성 완료: {model}", flush=True)
+        print(f"  Gemma text TOC generation completed: {model}", flush=True)
         return validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth), raw_text, model
 
     chunks = chunk_pdf_text_pages(pages, max_chars=chunk_chars)
-    print(f"  Gemma 텍스트 청크 처리 시작: {len(chunks)} chunks", flush=True)
+    print(f"  Gemma text chunk processing started: {len(chunks)} chunks", flush=True)
     partial_tocs: list[dict[str, Any]] = []
     raw_parts: list[dict[str, Any]] = []
 
@@ -2706,18 +2709,18 @@ def generate_toc_from_pdf_gemma_text(
         )
 
     merge_prompt = build_gemma_merge_prompt(prompt, pdf_path.name, partial_tocs, args.max_depth)
-    print(f"  Gemma 분할 목차 병합 요청 시작: {model}", flush=True)
+    print(f"  Gemma chunked TOC merge started: {model}", flush=True)
     try:
         parsed, final_raw_text = request_gemma_json_text(
             model=model,
             prompt_text=merge_prompt,
             args=args,
-            label=f"Gemma 분할 목차 병합({model})",
+            label=f"Gemma chunked TOC merge({model})",
         )
         toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
     except Exception as merge_error:
         print(
-            f"Gemma 분할 목차 병합 실패, 로컬 병합으로 대체: {merge_error}",
+            f"Gemma chunked TOC merge failed; falling back to local merge: {merge_error}",
             file=sys.stderr,
             flush=True,
         )
@@ -2754,13 +2757,13 @@ def generate_toc_from_pdf_gemma(pdf_path: Path, args: argparse.Namespace, prompt
     for index, model in enumerate(models):
         model = normalize_gemma_model_for_backend(model, backend)
         if index > 0:
-            print(f"Gemma fallback 모델 시도: {model}", file=sys.stderr, flush=True)
+            print(f"Trying Gemma fallback model: {model}", file=sys.stderr, flush=True)
 
         try:
             if backend == "ollama":
-                print(f"  Gemma/Ollama 사용: {normalize_ollama_base_url(args.ollama_base_url)} / {model}", flush=True)
+                print(f"  Using Gemma/Ollama: {normalize_ollama_base_url(args.ollama_base_url)} / {model}", flush=True)
             else:
-                print(f"  Gemma/Transformers 사용: {model}", flush=True)
+                print(f"  Using Gemma/Transformers: {model}", flush=True)
             return generate_toc_from_pdf_gemma_text(
                 model=model,
                 pdf_path=pdf_path,
@@ -2769,11 +2772,11 @@ def generate_toc_from_pdf_gemma(pdf_path: Path, args: argparse.Namespace, prompt
             )
         except Exception as error:
             last_error = error
-            print(f"Gemma 모델 실패: {model} / {error}", file=sys.stderr, flush=True)
+            print(f"Gemma model failed: {model} / {error}", file=sys.stderr, flush=True)
 
     if last_error:
         raise last_error
-    raise RuntimeError("시도할 Gemma 모델이 없습니다.")
+    raise RuntimeError("No Gemma models to try.")
 
 
 # ----------------------------- Common processing -----------------------------
@@ -2797,7 +2800,7 @@ def generate_toc_from_pdf(
     if args.provider == "gemma":
         return generate_toc_from_pdf_gemma(pdf_path=pdf_path, args=args, prompt=prompt)
 
-    raise ValueError(f"지원하지 않는 provider입니다: {args.provider}")
+    raise ValueError(f"Unsupported provider: {args.provider}")
 
 
 def save_json(path: Path, data: Any) -> None:
@@ -2811,14 +2814,14 @@ def save_json(path: Path, data: Any) -> None:
 def format_elapsed(seconds: float) -> str:
     seconds = max(0.0, float(seconds))
     if seconds < 60:
-        return f"{seconds:.1f}초"
+        return f"{seconds:.1f}s"
 
     minutes, remaining_seconds = divmod(seconds, 60)
     if minutes < 60:
-        return f"{int(minutes)}분 {remaining_seconds:.1f}초"
+        return f"{int(minutes)}m {remaining_seconds:.1f}s"
 
     hours, remaining_minutes = divmod(minutes, 60)
-    return f"{int(hours)}시간 {int(remaining_minutes)}분 {remaining_seconds:.1f}초"
+    return f"{int(hours)}h {int(remaining_minutes)}m {remaining_seconds:.1f}s"
 
 
 def add_result_metadata(
@@ -2849,17 +2852,17 @@ def safe_filename_part(value: str) -> str:
 def iter_pdfs(path: Path) -> list[Path]:
     if path.is_file():
         if path.suffix.lower() != ".pdf":
-            raise ValueError(f"PDF 파일이 아닙니다: {path}")
+            raise ValueError(f"Not a PDF file: {path}")
         return [path]
 
     if path.is_dir():
         return sorted(item for item in path.rglob("*") if item.suffix.lower() == ".pdf")
 
-    raise FileNotFoundError(f"경로를 찾을 수 없습니다: {path}")
+    raise FileNotFoundError(f"Path not found: {path}")
 
 
 def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> bool:
-    print(f"처리 시작: {pdf_path.name}", flush=True)
+    print(f"Processing started: {pdf_path.name}", flush=True)
     print(f"  provider: {args.provider}", flush=True)
     started_at = time.perf_counter()
 
@@ -2881,18 +2884,18 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> b
             raw_file = Path(args.output_dir) / f"{pdf_path.stem}_{args.provider}_{model_name_for_file}_raw_response.txt"
             raw_file.parent.mkdir(parents=True, exist_ok=True)
             raw_file.write_text(raw_text, encoding="utf-8")
-            print(f"원본 응답 저장: {raw_file}", flush=True)
+            print(f"Raw response saved: {raw_file}", flush=True)
 
-        print(f"완료: {output_file}", flush=True)
+        print(f"Completed: {output_file}", flush=True)
         print(f"  model: {used_model}", flush=True)
         print(f"  elapsed: {format_elapsed(elapsed_seconds)} ({elapsed_seconds:.3f}s)", flush=True)
         print(f"  title: {toc.get('title')}", flush=True)
-        print(f"  chapters: {len(toc.get('chapters', []))}개", flush=True)
+        print(f"  chapters: {len(toc.get('chapters', []))}", flush=True)
         return True
 
     except Exception as error:
         elapsed_seconds = time.perf_counter() - started_at
-        print(f"실패: {pdf_path.name} / {error}", file=sys.stderr, flush=True)
+        print(f"Failed: {pdf_path.name} / {error}", file=sys.stderr, flush=True)
         print(f"  elapsed: {format_elapsed(elapsed_seconds)} ({elapsed_seconds:.3f}s)", file=sys.stderr, flush=True)
         if args.stop_on_error:
             raise
@@ -2928,8 +2931,8 @@ def process_pdf_with_providers(
         provider_args = build_provider_args(args, provider)
         return {provider: process_pdf(pdf_path=pdf_path, args=provider_args, user_prompt=user_prompt)}
 
-    print(f"처리 시작: {pdf_path.name}", flush=True)
-    print(f"  providers 동시 실행: {', '.join(providers)}", flush=True)
+    print(f"Processing started: {pdf_path.name}", flush=True)
+    print(f"  Running providers concurrently: {', '.join(providers)}", flush=True)
 
     results: dict[str, bool] = {}
     with ThreadPoolExecutor(max_workers=len(providers)) as executor:
@@ -2959,144 +2962,144 @@ def process_pdf_with_providers(
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="PDF 파일과 프롬프트를 AI provider(gemini/openai/claude/gemma)에 보내 목차 JSON을 생성합니다."
+        description="Send PDF files and prompts to AI providers(gemini/openai/claude/gemma) and generate TOC JSON."
     )
 
-    parser.add_argument("path", nargs="?", default="./data/input", help="PDF 파일 또는 PDF 폴더")
+    parser.add_argument("path", nargs="?", default="./data/input", help="PDF file or directory")
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR))
-    parser.add_argument("--prompt", default=None, help="목차 작성 지시문")
-    parser.add_argument("--prompt-file", default=None, help="목차 작성 지시문이 들어 있는 UTF-8 텍스트 파일")
+    parser.add_argument("--prompt", default=None, help="TOC generation instruction")
+    parser.add_argument("--prompt-file", default=None, help="UTF-8 text file containing the TOC instruction")
     parser.add_argument(
         "--provider",
         default=None,
-        help="사용할 AI provider. 생략하거나 all이면 gemini, openai, claude를 동시에 실행합니다. Gemma는 --provider gemma로 선택합니다.",
+        help="AI provider to use. If omitted or set to all, gemini/openai/claude run concurrently. Use --provider gemma for Gemma.",
     )
     parser.add_argument(
         "--gemma",
         action="store_true",
-        help="Gemma provider를 사용하는 단축 옵션. --provider gemma와 같습니다.",
+        help="Shortcut for using the Gemma provider. Same as --provider gemma.",
     )
     parser.add_argument(
         "--model",
         default=None,
-        help="모델명. 생략하면 provider별 env 또는 기본값을 사용합니다.",
+        help="Model name. If omitted, provider-specific env values or defaults are used.",
     )
     parser.add_argument(
         "--ai-fallback-models",
         default=None,
-        help="기본 모델 실패 시 시도할 모델 목록, 쉼표로 구분. 생략하면 provider별 env 또는 기본값을 사용합니다.",
+        help="Comma-separated fallback models to try when the primary model fails. If omitted, provider-specific env values or defaults are used.",
     )
-    parser.add_argument("--ai-retries", type=int, default=DEFAULT_AI_RETRIES, help="일시 오류 재시도 횟수")
+    parser.add_argument("--ai-retries", type=int, default=DEFAULT_AI_RETRIES, help="Retry count for temporary errors")
     parser.add_argument(
         "--ai-retry-base-delay",
         type=float,
         default=DEFAULT_RETRY_BASE_DELAY,
-        help="재시도 기본 대기 시간(초)",
+        help="Base retry delay in seconds",
     )
     parser.add_argument(
         "--file-processing-timeout",
         type=int,
         default=DEFAULT_FILE_PROCESSING_TIMEOUT,
-        help="Gemini 업로드 PDF 처리 대기 제한(초). Gemini에서만 사용합니다.",
+        help="Timeout in seconds while waiting for Gemini uploaded PDF processing. Gemini only.",
     )
-    parser.add_argument("--max-depth", type=int, default=6, help="목차 level 최대값")
-    parser.add_argument("--temperature", type=float, default=0.1, help="AI temperature. OpenAI gpt-5 계열 및 일부 Claude 최신 모델에는 전송하지 않습니다.")
-    parser.add_argument("--max-output-tokens", type=int, default=None, help="최대 출력 토큰 수")
-    parser.add_argument("--no-schema", action="store_true", help="가능한 JSON schema 강제 옵션을 쓰지 않고 프롬프트만 사용")
+    parser.add_argument("--max-depth", type=int, default=6, help="Maximum TOC level")
+    parser.add_argument("--temperature", type=float, default=0.1, help="AI temperature. Not sent to OpenAI gpt-5-family models or some newer Claude models.")
+    parser.add_argument("--max-output-tokens", type=int, default=None, help="Maximum output tokens")
+    parser.add_argument("--no-schema", action="store_true", help="Do not use JSON schema enforcement when available; rely on the prompt only")
     parser.add_argument(
         "--gemini-thinking-budget",
         type=int,
         default=DEFAULT_GEMINI_THINKING_BUDGET,
-        help="Gemini thinking token budget. 0은 thinking 비활성화, -1은 Gemini 자동 설정입니다.",
+        help="Gemini thinking token budget. 0 disables thinking; -1 uses Gemini automatic settings.",
     )
     parser.add_argument(
         "--claude-force-text",
         action="store_true",
-        help="Claude에서 PDF document 입력 대신 텍스트 추출/분할 모드를 바로 사용합니다.",
+        help="Use Claude text extraction/chunk mode directly instead of PDF document input.",
     )
     parser.add_argument(
         "--claude-text-single-max-chars",
         type=int,
         default=DEFAULT_CLAUDE_TEXT_SINGLE_MAX_CHARS,
-        help="Claude 텍스트 모드에서 한 번에 보낼 최대 추출 텍스트 글자 수",
+        help="Maximum extracted text characters to send at once in Claude text mode",
     )
     parser.add_argument(
         "--claude-text-chunk-chars",
         type=int,
         default=DEFAULT_CLAUDE_TEXT_CHUNK_CHARS,
-        help="Claude 텍스트 분할 모드의 청크당 최대 추출 텍스트 글자 수",
+        help="Maximum extracted text characters per chunk in Claude text chunk mode",
     )
     parser.add_argument(
         "--claude-text-min-chunk-chars",
         type=int,
         default=DEFAULT_CLAUDE_TEXT_MIN_CHUNK_CHARS,
-        help="Claude 청크 실패 시 더 작게 쪼갤 때의 최소 청크 글자 수",
+        help="Minimum chunk size when splitting failed Claude chunks into smaller chunks",
     )
     parser.add_argument(
         "--gemma-backend",
         default=DEFAULT_GEMMA_BACKEND,
-        help="Gemma 실행 방식. transformers는 Hugging Face/torch로 직접 실행하고, ollama는 Ollama API를 사용합니다.",
+        help="Gemma execution backend. transformers runs directly with Hugging Face/torch; ollama uses the Ollama API.",
     )
     parser.add_argument(
         "--ollama-base-url",
         default=DEFAULT_OLLAMA_BASE_URL,
-        help="--gemma-backend ollama에서 사용할 Ollama API 주소",
+        help="Ollama API base URL used with --gemma-backend ollama",
     )
     parser.add_argument(
         "--ollama-request-timeout",
         type=int,
         default=DEFAULT_OLLAMA_REQUEST_TIMEOUT,
-        help="--gemma-backend ollama의 Ollama 요청 제한 시간(초)",
+        help="Ollama request timeout in seconds used with --gemma-backend ollama",
     )
     parser.add_argument(
         "--gemma-device-map",
         default=DEFAULT_GEMMA_DEVICE_MAP,
-        help="--gemma-backend transformers에서 사용할 transformers device_map 값",
+        help="transformers device_map value used with --gemma-backend transformers",
     )
     parser.add_argument(
         "--gemma-torch-dtype",
         default=DEFAULT_GEMMA_TORCH_DTYPE,
-        help="--gemma-backend transformers에서 사용할 dtype. 예: auto, bfloat16, float16",
+        help="dtype used with --gemma-backend transformers. Examples: auto, bfloat16, float16",
     )
     parser.add_argument(
         "--gemma-text-single-max-chars",
         type=int,
         default=DEFAULT_GEMMA_TEXT_SINGLE_MAX_CHARS,
-        help="Gemma 텍스트 모드에서 한 번에 보낼 최대 추출 텍스트 글자 수",
+        help="Maximum extracted text characters to send at once in Gemma text mode",
     )
     parser.add_argument(
         "--gemma-text-chunk-chars",
         type=int,
         default=DEFAULT_GEMMA_TEXT_CHUNK_CHARS,
-        help="Gemma 텍스트 분할 모드의 청크당 최대 추출 텍스트 글자 수",
+        help="Maximum extracted text characters per chunk in Gemma text chunk mode",
     )
     parser.add_argument(
         "--gemma-text-min-chunk-chars",
         type=int,
         default=DEFAULT_GEMMA_TEXT_MIN_CHUNK_CHARS,
-        help="Gemma 청크 실패 시 더 작게 쪼갤 때의 최소 청크 글자 수",
+        help="Minimum chunk size when splitting failed Gemma chunks into smaller chunks",
     )
     parser.add_argument(
         "--gemma-context-window",
         type=int,
         default=DEFAULT_GEMMA_CONTEXT_WINDOW,
-        help="Gemma/Ollama 요청에 사용할 context window(num_ctx)",
+        help="Context window(num_ctx) used for Gemma/Ollama requests",
     )
     parser.add_argument(
         "--gemma-keep-alive",
         default=DEFAULT_GEMMA_KEEP_ALIVE,
-        help="Ollama 모델 keep_alive 값. 비우면 전송하지 않습니다.",
+        help="Ollama model keep_alive value. If empty, it is not sent.",
     )
     parser.add_argument(
         "--gemma-think",
         default=DEFAULT_GEMMA_THINK,
-        help="Ollama think 옵션. 예: true, false, high. 비우면 전송하지 않습니다.",
+        help="Ollama think option. Examples: true, false, high. If empty, it is not sent.",
     )
-    parser.add_argument("--write-raw", action="store_true", help="원본 응답 텍스트도 저장")
-    parser.add_argument("--delete-uploaded-file", action="store_true", help="처리 후 업로드 파일 삭제. Gemini/OpenAI에서만 의미가 있습니다.")
-    parser.add_argument("--stop-on-error", action="store_true", help="여러 PDF 처리 중 하나라도 실패하면 즉시 중단")
+    parser.add_argument("--write-raw", action="store_true", help="Also save raw response text")
+    parser.add_argument("--delete-uploaded-file", action="store_true", help="Delete uploaded files after processing. Meaningful only for Gemini/OpenAI.")
+    parser.add_argument("--stop-on-error", action="store_true", help="Stop immediately when any PDF fails during multi-PDF processing")
 
-    # 기존 명령어 호환용. 이제는 항상 AI 방식이므로 동작에는 영향이 없습니다.
+    # Backward compatibility for older commands. The script always uses AI mode now.
     parser.add_argument("--use-ai", action="store_true", help=argparse.SUPPRESS)
 
     return parser
@@ -3109,7 +3112,7 @@ def main() -> int:
     if args.gemma:
         provider_text = clean_text(args.provider).lower()
         if provider_text and provider_text not in {"gemma", "ollama", "local"}:
-            parser.error("--gemma는 --provider gemma와만 함께 사용할 수 있습니다.")
+            parser.error("--gemma can only be used with --provider gemma.")
         args.provider = "gemma"
 
     try:
@@ -3124,10 +3127,10 @@ def main() -> int:
             parser.error(str(error))
 
     if len(providers) > 1 and args.model is not None:
-        parser.error("--model은 --provider로 단일 provider를 선택했을 때만 사용할 수 있습니다.")
+        parser.error("--model can only be used when a single provider is selected with --provider.")
 
     if len(providers) > 1 and args.ai_fallback_models is not None:
-        parser.error("--ai-fallback-models는 --provider로 단일 provider를 선택했을 때만 사용할 수 있습니다.")
+        parser.error("--ai-fallback-models can only be used when a single provider is selected with --provider.")
 
     args.max_depth = max(1, min(int(args.max_depth), 10))
 
@@ -3135,14 +3138,14 @@ def main() -> int:
     pdf_files = iter_pdfs(Path(args.path))
 
     if not pdf_files:
-        print("처리할 PDF 파일이 없습니다.", flush=True)
+        print("No PDF files to process.", flush=True)
         return 0
 
     if "gemma" in providers:
         try:
             preflight_gemma_provider(args)
         except Exception as error:
-            print(f"Gemma 사전 확인 실패: {error}", file=sys.stderr, flush=True)
+            print(f"Gemma preflight failed: {error}", file=sys.stderr, flush=True)
             return 1
 
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)
@@ -3159,7 +3162,7 @@ def main() -> int:
         success_count += sum(1 for success in results.values() if success)
 
     failed_count = total_count - success_count
-    print(f"처리 결과: 성공 {success_count}개 / 실패 {failed_count}개", flush=True)
+    print(f"Processing result: success {success_count} / failed {failed_count}", flush=True)
 
     return 0 if failed_count == 0 else 1
 
