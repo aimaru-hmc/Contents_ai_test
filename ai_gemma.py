@@ -2078,7 +2078,7 @@ def preflight_pdf_text_extraction() -> None:
         raise RuntimeError("PDF text extraction requires `pip install pdfplumber`.") from error
 
 
-def preflight_gemma_transformers() -> None:
+def import_gemma_transformers_dependencies() -> tuple[Any, Any, Any]:
     missing: list[str] = []
     for module_name in ("torch", "transformers", "accelerate", "safetensors", "huggingface_hub"):
         try:
@@ -2092,6 +2092,21 @@ def preflight_gemma_transformers() -> None:
             + ", ".join(missing)
             + ". Run `pip install -U transformers torch accelerate safetensors huggingface_hub` first."
         )
+
+    try:
+        import torch
+        from transformers import AutoModelForCausalLM, AutoProcessor
+    except ImportError as error:
+        raise RuntimeError(
+            "Gemma transformers backend could not import the required model classes. "
+            "Run `pip install -U transformers torch accelerate safetensors huggingface_hub` first."
+        ) from error
+
+    return torch, AutoModelForCausalLM, AutoProcessor
+
+
+def preflight_gemma_transformers() -> None:
+    import_gemma_transformers_dependencies()
 
 
 def preflight_gemma_provider(args: argparse.Namespace) -> None:
@@ -2223,14 +2238,7 @@ def load_gemma_transformers_model(model: str, args: argparse.Namespace) -> dict[
     if cache_key in _GEMMA_TRANSFORMERS_CACHE:
         return _GEMMA_TRANSFORMERS_CACHE[cache_key]
 
-    try:
-        import torch
-        from transformers import AutoModelForCausalLM, AutoProcessor
-    except ImportError as error:
-        raise RuntimeError(
-            "Gemma transformers backend requires "
-            "`pip install -U transformers torch accelerate safetensors huggingface_hub`."
-        ) from error
+    torch, AutoModelForCausalLM, AutoProcessor = import_gemma_transformers_dependencies()
 
     token_kwargs = gemma_hf_token_kwargs()
     print(f"  Gemma/Transformers model loading started: {model}", flush=True)
