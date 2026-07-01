@@ -1351,7 +1351,7 @@ def extract_pdf_text_pages(pdf_path: Path) -> list[tuple[int, str]]:
     try:
         import pdfplumber
     except ImportError as error:
-        raise RuntimeError("Claude 긴 PDF 텍스트 fallback에는 `pip install pdfplumber`가 필요합니다.") from error
+        raise RuntimeError("PDF 텍스트 추출에는 `pip install pdfplumber`가 필요합니다.") from error
 
     pages: list[tuple[int, str]] = []
     with pdfplumber.open(pdf_path) as pdf:
@@ -2069,6 +2069,13 @@ def ensure_ollama_model_available(model: str, args: argparse.Namespace) -> None:
     )
 
 
+def preflight_pdf_text_extraction() -> None:
+    try:
+        __import__("pdfplumber")
+    except ImportError as error:
+        raise RuntimeError("PDF 텍스트 추출에는 `pip install pdfplumber`가 필요합니다.") from error
+
+
 def preflight_gemma_transformers() -> None:
     missing: list[str] = []
     for module_name in ("torch", "transformers", "accelerate"):
@@ -2088,6 +2095,7 @@ def preflight_gemma_transformers() -> None:
 def preflight_gemma_provider(args: argparse.Namespace) -> None:
     provider_args = build_provider_args(args, "gemma")
     backend = normalize_gemma_backend(getattr(provider_args, "gemma_backend", None))
+    preflight_pdf_text_extraction()
 
     if backend == "transformers":
         preflight_gemma_transformers()
