@@ -52,6 +52,11 @@ except ImportError:
 load_dotenv(dotenv_path=Path(__file__).with_name(".env"))
 load_dotenv()
 
+# The model plus a long-context KV cache leaves little headroom; reducing allocator
+# fragmentation reclaims the "reserved but unallocated" memory. Set before torch imports;
+# an explicit user value wins.
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
+
 OUTPUT_DIR = Path("./data/output")
 PROVIDER = "gemma"
 
@@ -60,7 +65,7 @@ DEFAULT_FALLBACK_MODELS = os.getenv("GEMMA_FALLBACK_MODELS", "")
 
 DEFAULT_AI_RETRIES = int(os.getenv("AI_MAX_RETRIES", "3"))
 DEFAULT_RETRY_BASE_DELAY = float(os.getenv("AI_RETRY_BASE_DELAY", "2.0"))
-DEFAULT_MAX_NEW_TOKENS = int(os.getenv("GEMMA_MAX_OUTPUT_TOKENS", os.getenv("AI_MAX_OUTPUT_TOKENS", "32768")))
+DEFAULT_MAX_NEW_TOKENS = int(os.getenv("GEMMA_MAX_OUTPUT_TOKENS", os.getenv("AI_MAX_OUTPUT_TOKENS", "16384")))
 DEFAULT_TEMPERATURE = float(os.getenv("GEMMA_TEMPERATURE", "0.0"))
 DEFAULT_DTYPE = os.getenv("GEMMA_TORCH_DTYPE", os.getenv("GEMMA_DTYPE", "bfloat16")).strip() or "bfloat16"
 DEFAULT_ATTN_IMPL = os.getenv("GEMMA_ATTN_IMPL", "sdpa").strip()
@@ -70,8 +75,12 @@ DEFAULT_MAX_PAGES = int(os.getenv("GEMMA_MAX_PAGES", "0"))  # 0 = all pages
 # Soft warning threshold for total input tokens. 0 = derive from model context.
 DEFAULT_MAX_INPUT_TOKENS = int(os.getenv("GEMMA_MAX_INPUT_TOKENS", "0"))
 # Per-request token budget. Documents above this are split into page windows and merged.
-# Kept well under the context window so the O(n^2) attention tensor stays small enough for one card.
-DEFAULT_CHUNK_TOKENS = int(os.getenv("GEMMA_CHUNK_TOKENS", "100000"))
+# Sized so weights + KV cache + the materialized O(n^2) attention tensor fit one card with margin.
+DEFAULT_CHUNK_TOKENS = int(os.getenv("GEMMA_CHUNK_TOKENS", "60000"))
+# Output cap for the final text-only merge; can exceed the per-chunk cap since merge is lighter.
+DEFAULT_MERGE_MAX_NEW_TOKENS = int(os.getenv("GEMMA_MERGE_MAX_OUTPUT_TOKENS", "32768"))
+# On OOM, a chunk's page window is halved and retried until it reaches this few pages.
+DEFAULT_MIN_CHUNK_PAGES = int(os.getenv("GEMMA_MIN_CHUNK_PAGES", "4"))
 
 TOC_SCHEMA: dict[str, Any] = {
     "type": "object",
@@ -961,7 +970,7 @@ def content_image_count(content: list[dict[str, Any]]) -> int:
 # ----------------------------- Generation -----------------------------
 
 def run_generate(replica: dict[str, Any], content: list[dict[str, Any]], args: argparse.Namespace,
-                 log_prefix: str) -> str:
+                 log_prefix: str, max_new_tokens_override: int | None = None) -> str:
     torch = replica["torch"]
     processor = replica["processor"]
     model = replica["model"]
@@ -1010,7 +1019,7 @@ def run_generate(replica: dict[str, Any], content: list[dict[str, Any]], args: a
     input_ids = inputs["input_ids"] if "input_ids" in inputs else getattr(inputs, "input_ids", None)
     input_length = int(input_ids.shape[-1]) if input_ids is not None else 0
 
-    max_new_tokens = max(1, int(args.max_new_tokens))
+    max_new_tokens = max(1, int(max_new_tokens_override or args.max_new_tokens))
     warn_threshold = int(args.max_input_tokens) or (replica.get("context") or 0)
     image_count = content_image_count(content)
     print(f"  {log_prefix} input tokens: {input_length} (+{image_count} page images), "
@@ -1134,6 +1143,7 @@ def generate_json_toc(
     args: argparse.Namespace,
     fallback_title: str,
     log_prefix: str,
+    max_new_tokens: int | None = None,
 ) -> tuple[dict[str, Any], str]:
     """Generate once and parse, retrying with a stronger JSON instruction on parse failure.
 
@@ -1152,7 +1162,7 @@ def generate_json_toc(
 
             raw_text = with_retry(
                 label=f"{log_prefix} generation",
-                func=lambda content=content: run_generate(replica, content, args, log_prefix),
+                func=lambda content=content: run_generate(replica, content, args, log_prefix, max_new_tokens),
                 max_retries=args.ai_retries,
                 base_delay=args.ai_retry_base_delay,
             )
@@ -1192,6 +1202,46 @@ def generate_chunk_partial(
         )
 
     return generate_json_toc(replica, builder, args, pdf_path.stem, log_prefix)
+
+
+def generate_chunk_with_splitting(
+    replica: dict[str, Any], pdf_path: Path, chunk: dict[str, Any],
+    args: argparse.Namespace, instruction_prompt: str, log_prefix: str, depth: int = 0,
+) -> list[dict[str, Any]]:
+    """Generate a chunk's partial TOC; on CUDA OOM, halve the page window and retry each half.
+
+    Returns a list of partials ({"toc","raw","start_page","end_page"}) - one when the window
+    fits, more when it had to be split down to fit memory. Page boundaries are never split.
+    """
+    try:
+        toc, raw = generate_chunk_partial(replica, pdf_path, chunk, args, instruction_prompt, log_prefix)
+        return [{"toc": toc, "raw": raw, "start_page": chunk["start_page"], "end_page": chunk["end_page"]}]
+    except Exception as error:
+        oom = is_cuda_out_of_memory_error(error)
+        if oom:
+            empty_torch_cuda_cache()
+        pages = chunk["pages"]
+        min_pages = max(1, int(getattr(args, "min_chunk_pages", DEFAULT_MIN_CHUNK_PAGES)))
+        if not oom or len(pages) <= min_pages or depth >= 5:
+            raise
+        mid = len(pages) // 2
+        if mid < 1:
+            raise
+        left, right = pages[:mid], pages[mid:]
+        print(f"  {log_prefix} OOM at {len(pages)} pages ({chunk['start_page']}-{chunk['end_page']}); "
+              f"retrying as {left[0]['page']}-{left[-1]['page']} + {right[0]['page']}-{right[-1]['page']}",
+              file=sys.stderr, flush=True)
+        partials: list[dict[str, Any]] = []
+        for sub in (left, right):
+            sub_chunk = {
+                "index": chunk["index"], "total": chunk["total"],
+                "start_page": sub[0]["page"], "end_page": sub[-1]["page"], "pages": sub,
+            }
+            sub_prefix = f"[{replica['label']} {pdf_path.name} pages {sub[0]['page']}-{sub[-1]['page']}]"
+            partials.extend(generate_chunk_with_splitting(
+                replica, pdf_path, sub_chunk, args, instruction_prompt, sub_prefix, depth + 1,
+            ))
+        return partials
 
 
 def build_merge_prompt(
@@ -1252,8 +1302,10 @@ def merge_chunk_tocs(
             prompt = RETRY_INSTRUCTION + "\n\n" + prompt
         return [{"type": "text", "text": prompt}]
 
+    merge_cap = int(getattr(args, "merge_max_new_tokens", args.max_new_tokens))
     try:
-        return generate_json_toc(replica, builder, args, pdf_path.stem, f"{log_prefix} merge")
+        return generate_json_toc(replica, builder, args, pdf_path.stem, f"{log_prefix} merge",
+                                 max_new_tokens=merge_cap)
     except Exception as error:
         print(f"  {log_prefix} model merge failed; using local merge: {error}", file=sys.stderr, flush=True)
         return merge_partial_tocs_locally(partial_tocs, pdf_path.stem, args.max_depth), "<local merge fallback>"
@@ -1400,13 +1452,12 @@ def run_chunks(
         lp = f"[{replica['label']} {pdf_path.name} chunk {chunk['index']}/{chunk['total']}]"
         print(f"  {lp} pages {chunk['start_page']}-{chunk['end_page']}", flush=True)
         try:
-            toc, raw = generate_chunk_partial(replica, pdf_path, chunk, args, instruction_prompt, lp)
+            partials = generate_chunk_with_splitting(replica, pdf_path, chunk, args, instruction_prompt, lp)
             with results_lock:
-                results[chunk["index"]] = {
-                    "toc": toc, "raw": raw,
-                    "start_page": chunk["start_page"], "end_page": chunk["end_page"],
-                }
-            print(f"  {lp} done: {len(toc.get('chapters', []))} chapters", flush=True)
+                results[chunk["index"]] = {"partials": partials}
+            chapters = sum(len(p["toc"].get("chapters", [])) for p in partials)
+            suffix = "" if len(partials) == 1 else f" across {len(partials)} sub-parts"
+            print(f"  {lp} done: {chapters} chapters{suffix}", flush=True)
         except Exception as error:
             if is_cuda_out_of_memory_error(error):
                 empty_torch_cuda_cache()
@@ -1463,7 +1514,11 @@ def process_pdf(pdf_path: Path, replicas: list[dict[str, Any]], args: argparse.N
 
         chunk_results = run_chunks(chunks, replicas, args, pdf_path, instruction_prompt)
         ordered = [chunk_results[i] for i in sorted(chunk_results)]
-        partial_tocs = [entry["toc"] for entry in ordered if "toc" in entry]
+        partial_entries: list[dict[str, Any]] = []
+        for entry in ordered:
+            partial_entries.extend(entry.get("partials", []))
+        partial_entries.sort(key=lambda p: p.get("start_page", 1))
+        partial_tocs = [p["toc"] for p in partial_entries]
         failed = [entry for entry in ordered if "error" in entry]
 
         if not partial_tocs:
@@ -1471,11 +1526,11 @@ def process_pdf(pdf_path: Path, replicas: list[dict[str, Any]], args: argparse.N
             raise RuntimeError(f"All {len(chunks)} chunk(s) failed. First error: {first}")
         if failed:
             print(f"  {log_prefix} WARNING: {len(failed)}/{len(chunks)} chunk(s) failed; "
-                  f"merging the {len(partial_tocs)} that succeeded", file=sys.stderr, flush=True)
+                  f"merging the {len(partial_tocs)} partial TOC(s) that succeeded", file=sys.stderr, flush=True)
 
-        if len(chunks) == 1:
+        if len(partial_tocs) == 1:
             toc = partial_tocs[0]
-            raw_text = ordered[0].get("raw", "")
+            raw_text = partial_entries[0].get("raw", "")
         else:
             toc, merge_raw = merge_chunk_tocs(replicas[0], pdf_path, partial_tocs, args, user_prompt, log_prefix)
             raw_text = json.dumps({
@@ -1484,13 +1539,14 @@ def process_pdf(pdf_path: Path, replicas: list[dict[str, Any]], args: argparse.N
                 "pdf": pdf_path.name,
                 "pages": len(pages),
                 "chunks": len(chunks),
+                "partials": len(partial_tocs),
                 "failed_chunks": [
                     {"start_page": f["start_page"], "end_page": f["end_page"], "error": f["error"]}
                     for f in failed
                 ],
                 "chunk_raw_responses": [
-                    {"start_page": e.get("start_page"), "end_page": e.get("end_page"), "raw_response": e.get("raw", "")}
-                    for e in ordered if "toc" in e
+                    {"start_page": p.get("start_page"), "end_page": p.get("end_page"), "raw_response": p.get("raw", "")}
+                    for p in partial_entries
                 ],
                 "final_raw_response": merge_raw,
             }, ensure_ascii=False, indent=2)
@@ -1590,6 +1646,10 @@ def build_arg_parser() -> argparse.ArgumentParser:
                         help="Assumed tokens per page image for chunk sizing when the processor doesn't report it")
     parser.add_argument("--local-merge-only", action="store_true",
                         help="Merge chunk TOCs with local dedup/sort instead of an extra model call")
+    parser.add_argument("--merge-max-new-tokens", type=int, default=DEFAULT_MERGE_MAX_NEW_TOKENS,
+                        help="Output token cap for the final merge step (text-only, can exceed per-chunk cap)")
+    parser.add_argument("--min-chunk-pages", type=int, default=DEFAULT_MIN_CHUNK_PAGES,
+                        help="On OOM, keep halving a chunk's page window until it has this few pages")
 
     # Backend / GPU.
     parser.add_argument("--dtype", default=DEFAULT_DTYPE, help="auto, bfloat16 (recommended on H200), float16, float32")
