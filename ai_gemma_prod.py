@@ -7,21 +7,23 @@ produce a study-oriented table of contents as a strict JSON object
 This build is specialized for local, GPU-backed Gemma inference:
 
   * Backend         : Hugging Face Transformers only (no Gemini/OpenAI/Claude/Ollama).
-  * Ingestion       : HYBRID - the whole PDF is sent in ONE request as an
-                      interleaved sequence of per-page rendered images + extracted
-                      text with [PAGE n] markers. No chunking.
-  * Multi-GPU       : one model replica per GPU; PDFs are processed concurrently,
-                      one per replica (data parallel). Use --shard to instead spread
-                      a single (larger) model across all GPUs.
+  * Ingestion       : HYBRID - per-page rendered images + extracted text with
+                      [PAGE n] markers. Sent whole when it fits the context window;
+                      auto-split into context-sized page windows (processed in
+                      parallel across GPUs, then merged) when it does not.
+  * Multi-GPU       : one model replica per GPU. A single big document's chunks are
+                      processed concurrently across replicas; use --shard to instead
+                      spread one (larger) model across all GPUs.
 
 Designed for boxes like 4x H200 (141 GB each), where a 31B Gemma fits comfortably
-on a single card with room for a full-document context.
+on a single card. On a shared box, restrict to free GPUs with CUDA_VISIBLE_DEVICES
+or --gpus (or --min-free-gb) so you don't collide with other jobs.
 
 Example:
     python ai_gemma_prod.py ./data/input --model gemma-4-31B-it
-    python ai_gemma_prod.py book.pdf --image-dpi 150 --max-new-tokens 32768
-    python ai_gemma_prod.py ./pdfs --gpus 0,1,2,3 --write-raw
-    python ai_gemma_prod.py huge.pdf --shard              # one model across all GPUs
+    CUDA_VISIBLE_DEVICES=4,5,6,7 python ai_gemma_prod.py book.pdf   # 4 replicas, chunks in parallel
+    python ai_gemma_prod.py ./pdfs --chunk-tokens 100000 --write-raw
+    python ai_gemma_prod.py huge.pdf --shard                        # one model across all GPUs
 """
 
 from __future__ import annotations
@@ -67,6 +69,9 @@ DEFAULT_IMAGE_MAX_DIM = int(os.getenv("GEMMA_IMAGE_MAX_DIM", "1536"))
 DEFAULT_MAX_PAGES = int(os.getenv("GEMMA_MAX_PAGES", "0"))  # 0 = all pages
 # Soft warning threshold for total input tokens. 0 = derive from model context.
 DEFAULT_MAX_INPUT_TOKENS = int(os.getenv("GEMMA_MAX_INPUT_TOKENS", "0"))
+# Per-request token budget. Documents above this are split into page windows and merged.
+# Kept well under the context window so the O(n^2) attention tensor stays small enough for one card.
+DEFAULT_CHUNK_TOKENS = int(os.getenv("GEMMA_CHUNK_TOKENS", "100000"))
 
 TOC_SCHEMA: dict[str, Any] = {
     "type": "object",
@@ -638,7 +643,27 @@ def resolve_gpu_indices(args: argparse.Namespace) -> list[int]:
         return indices
     if available <= 0:
         return []  # CPU fallback (very slow for large models)
-    return list(range(available))
+
+    min_free = max(0.0, float(getattr(args, "min_free_gb", 0.0))) * (1024 ** 3)
+    if not min_free:
+        return list(range(available))
+
+    # On a shared box, auto-skip GPUs that are already busy (e.g. another job's vLLM).
+    indices: list[int] = []
+    for index in range(available):
+        try:
+            free, _ = torch.cuda.mem_get_info(index)
+        except Exception:
+            free = None
+        if free is None or free >= min_free:
+            indices.append(index)
+        else:
+            print(f"  Skipping GPU {index}: only {free / (1024 ** 3):.1f} GiB free "
+                  f"(< --min-free-gb {getattr(args, 'min_free_gb', 0)})", flush=True)
+    if not indices:
+        print("  No GPU meets --min-free-gb; falling back to all visible GPUs.", file=sys.stderr, flush=True)
+        return list(range(available))
+    return indices
 
 
 def first_transformers_device(model: Any) -> Any:
@@ -892,15 +917,27 @@ RETRY_INSTRUCTION = (
     'If there are no entries, output {"title": "Document title", "chapters": []}.'
 )
 
+CHUNK_NOTE = (
+    "[Chunk {index}/{total}, pages {start}-{end}] The pages below are ONE PART of a larger PDF. "
+    "Extract only chapter/section/subsection titles that actually appear within THIS page range, "
+    "using the [PAGE n] markers for page numbers. Do not infer entries outside this range."
+)
+
 
 def build_multimodal_content(
     instruction_prompt: str,
     pdf_name: str,
     pages: list[dict[str, Any]],
     retry: bool = False,
+    chunk_info: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     content: list[dict[str, Any]] = []
     header = instruction_prompt + f"\n\n[PDF File Name]\n{pdf_name}"
+    if chunk_info:
+        header += "\n\n" + CHUNK_NOTE.format(
+            index=chunk_info["index"], total=chunk_info["total"],
+            start=chunk_info["start_page"], end=chunk_info["end_page"],
+        )
     if retry:
         header = RETRY_INSTRUCTION + "\n\n" + header
     content.append({"type": "text", "text": header})
@@ -1021,30 +1058,94 @@ def run_generate(replica: dict[str, Any], content: list[dict[str, Any]], args: a
     return str(text)
 
 
-def generate_toc_for_pdf(
+def image_tokens_for(processor: Any, args: argparse.Namespace) -> int:
+    """Tokens a single page image expands to; used only for chunk sizing."""
+    for attr in ("image_seq_length", "image_seq_len", "num_image_tokens"):
+        value = getattr(processor, attr, None)
+        if isinstance(value, int) and value > 0:
+            return value
+    return max(1, int(getattr(args, "image_tokens", 256)))
+
+
+def estimate_page_token_counts(
+    pages: list[dict[str, Any]], tokenizer: Any, image_tokens: int,
+    include_text: bool, include_images: bool,
+) -> list[int]:
+    counts: list[int] = []
+    for page in pages:
+        total = 8  # [PAGE n] marker + separators
+        text = page.get("text") or ""
+        if include_text and text:
+            try:
+                total += len(tokenizer.encode(text, add_special_tokens=False))
+            except Exception:
+                total += max(1, len(text) // 2)  # conservative fallback if encode fails
+        if include_images and page.get("image") is not None:
+            total += image_tokens
+        counts.append(total)
+    return counts
+
+
+def plan_chunks(
+    pages: list[dict[str, Any]], tokenizer: Any, processor: Any, args: argparse.Namespace,
+) -> tuple[list[dict[str, Any]], int]:
+    """Pack whole pages into windows that each fit the per-request token budget.
+
+    A document that fits the budget becomes a single window (i.e. one-shot, no merge).
+    Page boundaries are never split, so page numbers stay intact.
+    """
+    include_text = not args.no_text
+    include_images = not args.no_images
+    image_tokens = image_tokens_for(processor, args)
+    per_page = estimate_page_token_counts(pages, tokenizer, image_tokens, include_text, include_images)
+
+    budget = max(20000, int(args.chunk_tokens))
+    overhead = 2000  # reserve for instruction/scaffolding tokens per request
+
+    windows: list[list[dict[str, Any]]] = []
+    current: list[dict[str, Any]] = []
+    current_tokens = overhead
+    for page, page_tokens in zip(pages, per_page):
+        if current and current_tokens + page_tokens > budget:
+            windows.append(current)
+            current = []
+            current_tokens = overhead
+        current.append(page)
+        current_tokens += page_tokens
+    if current:
+        windows.append(current)
+
+    total = len(windows)
+    chunks: list[dict[str, Any]] = []
+    for index, window in enumerate(windows, start=1):
+        chunks.append({
+            "index": index,
+            "total": total,
+            "start_page": window[0]["page"],
+            "end_page": window[-1]["page"],
+            "pages": window,
+        })
+    return chunks, sum(per_page)
+
+
+def generate_json_toc(
     replica: dict[str, Any],
-    pdf_path: Path,
+    content_builder: Callable[[bool], list[dict[str, Any]]],
     args: argparse.Namespace,
-    instruction_prompt: str,
+    fallback_title: str,
     log_prefix: str,
 ) -> tuple[dict[str, Any], str]:
-    pages = load_pdf_pages(pdf_path, args)
-    image_pages = sum(1 for p in pages if p.get("image") is not None)
-    text_pages = sum(1 for p in pages if p.get("text"))
-    print(f"  {log_prefix} ingested {len(pages)} pages "
-          f"({image_pages} images, {text_pages} with text)", flush=True)
+    """Generate once and parse, retrying with a stronger JSON instruction on parse failure.
 
+    content_builder(retry: bool) returns the message content for the attempt.
+    The replica lock serializes access to that GPU model object.
+    """
     retry_count = max(1, int(args.ai_retries))
     last_error: Exception | None = None
-    last_raw = ""
 
-    # One replica is used by a single worker thread; the lock guards against any
-    # accidental re-entrancy on the same CUDA model object.
     with replica["lock"]:
         for attempt in range(1, retry_count + 1):
-            content = build_multimodal_content(
-                instruction_prompt, pdf_path.name, pages, retry=(attempt > 1),
-            )
+            content = content_builder(attempt > 1)
             if attempt > 1:
                 print(f"  {log_prefix} JSON parse retry {attempt}/{retry_count}: {last_error}",
                       file=sys.stderr, flush=True)
@@ -1058,8 +1159,7 @@ def generate_toc_for_pdf(
 
             try:
                 parsed = parse_json_response_text(raw_text)
-                toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
-                return toc, raw_text
+                return validate_toc(parsed, fallback_title, args.max_depth), raw_text
             except Exception as error:
                 attach_error_debug(
                     error, provider=PROVIDER, model=replica.get("model_name"),
@@ -1067,13 +1167,96 @@ def generate_toc_for_pdf(
                     raw_response=raw_text, raw_response_chars=len(raw_text),
                 )
                 last_error = error
-                last_raw = raw_text
                 if attempt >= retry_count:
                     raise
 
     if last_error:
         raise last_error
-    raise RuntimeError(f"{log_prefix} produced no result. Last raw: {last_raw[:200]}")
+    raise RuntimeError(f"{log_prefix} produced no result")
+
+
+def generate_chunk_partial(
+    replica: dict[str, Any], pdf_path: Path, chunk: dict[str, Any],
+    args: argparse.Namespace, instruction_prompt: str, log_prefix: str,
+) -> tuple[dict[str, Any], str]:
+    chunk_info = None
+    if chunk["total"] > 1:
+        chunk_info = {
+            "index": chunk["index"], "total": chunk["total"],
+            "start_page": chunk["start_page"], "end_page": chunk["end_page"],
+        }
+
+    def builder(retry: bool) -> list[dict[str, Any]]:
+        return build_multimodal_content(
+            instruction_prompt, pdf_path.name, chunk["pages"], retry=retry, chunk_info=chunk_info,
+        )
+
+    return generate_json_toc(replica, builder, args, pdf_path.stem, log_prefix)
+
+
+def build_merge_prompt(
+    user_prompt: str, pdf_name: str, partial_tocs: list[dict[str, Any]], max_depth: int,
+) -> str:
+    partial_json = json.dumps(partial_tocs, ensure_ascii=False, indent=2)
+    return f"""
+You are an expert at creating tables of contents for PDF textbooks and lecture materials.
+
+[User Prompt]
+{user_prompt.strip()}
+
+[Chunked TOC Merge Instruction]
+Create one final TOC JSON object from the [Partial TOC Candidates] below (each was extracted
+from a different page range of the same PDF).
+- Keep only one copy of duplicate entries.
+- Preserve ascending page order and the original appearance order.
+- Remove covers, prefaces, existing TOC pages, indexes, references, and repeated headers/footers.
+- Use only levels from 1 to {max_depth}.
+- Do not invent chapter titles.
+- Preserve original chapter/section titles exactly, including Korean text when the source title is Korean.
+- Output exactly one JSON object: {{"title": "...", "chapters": [{{"level": 1, "chapter": "...", "page": 1}}]}}.
+  Do not output Markdown, explanations, or code fences.
+
+[PDF File Name]
+{pdf_name}
+
+[Partial TOC Candidates]
+{partial_json}
+""".strip()
+
+
+def merge_partial_tocs_locally(
+    partial_tocs: list[dict[str, Any]], fallback_title: str, max_depth: int,
+) -> dict[str, Any]:
+    title = ""
+    chapters: list[dict[str, Any]] = []
+    for toc in partial_tocs:
+        if not title:
+            title = clean_text(toc.get("title"))
+        for chapter in toc.get("chapters", []) or []:
+            chapters.append(chapter)
+    merged = validate_toc({"title": title or fallback_title, "chapters": chapters}, fallback_title, max_depth)
+    merged["chapters"].sort(key=lambda entry: entry.get("page", 1))  # stable ascending page order
+    return merged
+
+
+def merge_chunk_tocs(
+    replica: dict[str, Any], pdf_path: Path, partial_tocs: list[dict[str, Any]],
+    args: argparse.Namespace, user_prompt: str, log_prefix: str,
+) -> tuple[dict[str, Any], str]:
+    if getattr(args, "local_merge_only", False):
+        return merge_partial_tocs_locally(partial_tocs, pdf_path.stem, args.max_depth), "<local merge>"
+
+    def builder(retry: bool) -> list[dict[str, Any]]:
+        prompt = build_merge_prompt(user_prompt, pdf_path.name, partial_tocs, args.max_depth)
+        if retry:
+            prompt = RETRY_INSTRUCTION + "\n\n" + prompt
+        return [{"type": "text", "text": prompt}]
+
+    try:
+        return generate_json_toc(replica, builder, args, pdf_path.stem, f"{log_prefix} merge")
+    except Exception as error:
+        print(f"  {log_prefix} model merge failed; using local merge: {error}", file=sys.stderr, flush=True)
+        return merge_partial_tocs_locally(partial_tocs, pdf_path.stem, args.max_depth), "<local merge fallback>"
 
 
 # ----------------------------- Output / logging -----------------------------
@@ -1202,19 +1385,124 @@ def iter_pdfs(path: Path) -> list[Path]:
 
 # ----------------------------- Per-PDF + orchestration -----------------------------
 
-def process_pdf(replica: dict[str, Any], pdf_path: Path, args: argparse.Namespace,
-                instruction_prompt: str) -> bool:
-    log_prefix = f"[{replica['label']} {pdf_path.name}]"
+def run_chunks(
+    chunks: list[dict[str, Any]], replicas: list[dict[str, Any]], args: argparse.Namespace,
+    pdf_path: Path, instruction_prompt: str,
+) -> dict[int, dict[str, Any]]:
+    """Generate a partial TOC per chunk, distributing chunks across GPU replicas.
+
+    A failed chunk is recorded (not raised) so one bad window doesn't lose the rest.
+    """
+    results: dict[int, dict[str, Any]] = {}
+    results_lock = threading.Lock()
+
+    def handle(replica: dict[str, Any], chunk: dict[str, Any]) -> None:
+        lp = f"[{replica['label']} {pdf_path.name} chunk {chunk['index']}/{chunk['total']}]"
+        print(f"  {lp} pages {chunk['start_page']}-{chunk['end_page']}", flush=True)
+        try:
+            toc, raw = generate_chunk_partial(replica, pdf_path, chunk, args, instruction_prompt, lp)
+            with results_lock:
+                results[chunk["index"]] = {
+                    "toc": toc, "raw": raw,
+                    "start_page": chunk["start_page"], "end_page": chunk["end_page"],
+                }
+            print(f"  {lp} done: {len(toc.get('chapters', []))} chapters", flush=True)
+        except Exception as error:
+            if is_cuda_out_of_memory_error(error):
+                empty_torch_cuda_cache()
+            print(f"  {lp} FAILED: {error}", file=sys.stderr, flush=True)
+            with results_lock:
+                results[chunk["index"]] = {
+                    "error": message_of(error),
+                    "start_page": chunk["start_page"], "end_page": chunk["end_page"],
+                }
+
+    if len(replicas) == 1 or len(chunks) == 1:
+        for chunk in chunks:
+            handle(replicas[0], chunk)
+        return results
+
+    chunk_queue: "queue.Queue[dict[str, Any]]" = queue.Queue()
+    for chunk in chunks:
+        chunk_queue.put(chunk)
+
+    def worker(replica: dict[str, Any]) -> None:
+        while True:
+            try:
+                chunk = chunk_queue.get_nowait()
+            except queue.Empty:
+                return
+            try:
+                handle(replica, chunk)
+            finally:
+                chunk_queue.task_done()
+
+    with ThreadPoolExecutor(max_workers=len(replicas)) as executor:
+        for replica in replicas:
+            executor.submit(worker, replica)
+    return results
+
+
+def process_pdf(pdf_path: Path, replicas: list[dict[str, Any]], args: argparse.Namespace,
+                instruction_prompt: str, user_prompt: str) -> bool:
+    log_prefix = f"[{pdf_path.name}]"
     print(f"Processing started: {log_prefix}", flush=True)
     started_at = time.perf_counter()
-    model_name = replica.get("model_name", args.model)
+    model_name = replicas[0].get("model_name", args.model)
+    processor = replicas[0]["processor"]
+    tokenizer = getattr(processor, "tokenizer", processor)
 
     try:
-        toc, raw_text = generate_toc_for_pdf(replica, pdf_path, args, instruction_prompt, log_prefix)
+        pages = load_pdf_pages(pdf_path, args)
+        image_pages = sum(1 for p in pages if p.get("image") is not None)
+        text_pages = sum(1 for p in pages if p.get("text"))
+        chunks, est_tokens = plan_chunks(pages, tokenizer, processor, args)
+        mode = "one-shot" if len(chunks) == 1 else f"{len(chunks)} chunks x {len(replicas)} replica(s)"
+        print(f"  {log_prefix} ingested {len(pages)} pages ({image_pages} images, {text_pages} with text), "
+              f"~{est_tokens} tokens -> {mode} (budget {args.chunk_tokens})", flush=True)
+
+        chunk_results = run_chunks(chunks, replicas, args, pdf_path, instruction_prompt)
+        ordered = [chunk_results[i] for i in sorted(chunk_results)]
+        partial_tocs = [entry["toc"] for entry in ordered if "toc" in entry]
+        failed = [entry for entry in ordered if "error" in entry]
+
+        if not partial_tocs:
+            first = failed[0]["error"] if failed else "unknown error"
+            raise RuntimeError(f"All {len(chunks)} chunk(s) failed. First error: {first}")
+        if failed:
+            print(f"  {log_prefix} WARNING: {len(failed)}/{len(chunks)} chunk(s) failed; "
+                  f"merging the {len(partial_tocs)} that succeeded", file=sys.stderr, flush=True)
+
+        if len(chunks) == 1:
+            toc = partial_tocs[0]
+            raw_text = ordered[0].get("raw", "")
+        else:
+            toc, merge_raw = merge_chunk_tocs(replicas[0], pdf_path, partial_tocs, args, user_prompt, log_prefix)
+            raw_text = json.dumps({
+                "mode": "chunked",
+                "model": model_name,
+                "pdf": pdf_path.name,
+                "pages": len(pages),
+                "chunks": len(chunks),
+                "failed_chunks": [
+                    {"start_page": f["start_page"], "end_page": f["end_page"], "error": f["error"]}
+                    for f in failed
+                ],
+                "chunk_raw_responses": [
+                    {"start_page": e.get("start_page"), "end_page": e.get("end_page"), "raw_response": e.get("raw", "")}
+                    for e in ordered if "toc" in e
+                ],
+                "final_raw_response": merge_raw,
+            }, ensure_ascii=False, indent=2)
+
         elapsed_seconds = time.perf_counter() - started_at
         model_name_for_file = safe_filename_part(model_name)
         output_file = Path(args.output_dir) / f"{pdf_path.stem}_{PROVIDER}_{model_name_for_file}_toc.json"
         result = add_result_metadata(toc, pdf_path, model_name, elapsed_seconds)
+        result["_meta"]["pages"] = len(pages)
+        result["_meta"]["chunks"] = len(chunks)
+        if failed:
+            result["_meta"]["failed_chunks"] = len(failed)
         save_json(output_file, result)
 
         if args.write_raw:
@@ -1240,51 +1528,14 @@ def process_pdf(replica: dict[str, Any], pdf_path: Path, args: argparse.Namespac
 
 
 def process_all(pdf_files: list[Path], replicas: list[dict[str, Any]], args: argparse.Namespace,
-                instruction_prompt: str) -> dict[str, bool]:
+                instruction_prompt: str, user_prompt: str) -> dict[str, bool]:
+    """Process PDFs one at a time; within each PDF, chunks run in parallel across replicas."""
     results: dict[str, bool] = {}
-    results_lock = threading.Lock()
-
-    if len(replicas) == 1 or len(pdf_files) == 1:
-        # Single replica (or single PDF): run sequentially on the one replica.
-        replica = replicas[0]
-        for pdf_path in pdf_files:
-            ok = process_pdf(replica, pdf_path, args, instruction_prompt)
-            results[str(pdf_path)] = ok
-            if not ok and args.stop_on_error:
-                break
-        return results
-
-    print(f"Running {len(pdf_files)} PDFs across {len(replicas)} GPU replicas", flush=True)
-    pdf_queue: "queue.Queue[Path]" = queue.Queue()
     for pdf_path in pdf_files:
-        pdf_queue.put(pdf_path)
-
-    stop_flag = threading.Event()
-
-    def worker(replica: dict[str, Any]) -> None:
-        while not stop_flag.is_set():
-            try:
-                pdf_path = pdf_queue.get_nowait()
-            except queue.Empty:
-                return
-            try:
-                ok = process_pdf(replica, pdf_path, args, instruction_prompt)
-                with results_lock:
-                    results[str(pdf_path)] = ok
-                if not ok and args.stop_on_error:
-                    stop_flag.set()
-            except Exception:
-                with results_lock:
-                    results[str(pdf_path)] = False
-                if args.stop_on_error:
-                    stop_flag.set()
-            finally:
-                pdf_queue.task_done()
-
-    with ThreadPoolExecutor(max_workers=len(replicas)) as executor:
-        for replica in replicas:
-            executor.submit(worker, replica)
-
+        ok = process_pdf(pdf_path, replicas, args, instruction_prompt, user_prompt)
+        results[str(pdf_path)] = ok
+        if not ok and args.stop_on_error:
+            break
     return results
 
 
@@ -1332,11 +1583,22 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-input-tokens", type=int, default=DEFAULT_MAX_INPUT_TOKENS,
                         help="Warn if input+output exceeds this (0 = use model context length)")
 
+    # Chunking (auto: whole-PDF when it fits the budget, else split into page windows + merge).
+    parser.add_argument("--chunk-tokens", type=int, default=DEFAULT_CHUNK_TOKENS,
+                        help="Per-request token budget; documents over this split into page windows and merge")
+    parser.add_argument("--image-tokens", type=int, default=256,
+                        help="Assumed tokens per page image for chunk sizing when the processor doesn't report it")
+    parser.add_argument("--local-merge-only", action="store_true",
+                        help="Merge chunk TOCs with local dedup/sort instead of an extra model call")
+
     # Backend / GPU.
     parser.add_argument("--dtype", default=DEFAULT_DTYPE, help="auto, bfloat16 (recommended on H200), float16, float32")
     parser.add_argument("--attn-impl", default=DEFAULT_ATTN_IMPL,
                         help="attn_implementation: sdpa, flash_attention_2, eager (blank = library default)")
     parser.add_argument("--gpus", default="", help="Comma-separated GPU indices (default: all visible)")
+    parser.add_argument("--min-free-gb", type=float, default=0.0,
+                        help="When --gpus is unset, only use GPUs with at least this many GiB free "
+                             "(auto-skips cards busy with other jobs; 0 = use all)")
     parser.add_argument("--shard", action="store_true",
                         help="Spread ONE model across all GPUs (device_map=auto) instead of one replica per GPU")
 
@@ -1386,7 +1648,7 @@ def main() -> int:
 
     started_at = time.perf_counter()
     try:
-        results = process_all(pdf_files, replicas, args, instruction_prompt)
+        results = process_all(pdf_files, replicas, args, instruction_prompt, user_prompt)
     except Exception as error:
         print(f"Aborted: {error}", file=sys.stderr, flush=True)
         return 1
