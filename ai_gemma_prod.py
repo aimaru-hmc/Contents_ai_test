@@ -682,7 +682,23 @@ def load_replica(model_name: str, args: argparse.Namespace, device_map: Any, lab
     token_kwargs = hf_token_kwargs()
 
     print(f"  [{label}] loading processor: {model_name}", flush=True)
-    processor = AutoProcessor.from_pretrained(model_name, **token_kwargs)
+    try:
+        processor = AutoProcessor.from_pretrained(model_name, **token_kwargs)
+    except Exception as processor_error:
+        # The fast (torchvision-backed) image processor can fail to import even when the
+        # text config loads fine. Retry with the slow, Pillow-only image processor.
+        print(f"  [{label}] fast processor load failed ({processor_error}); retrying with use_fast=False",
+              file=sys.stderr, flush=True)
+        try:
+            processor = AutoProcessor.from_pretrained(model_name, use_fast=False, **token_kwargs)
+        except Exception:
+            raise RuntimeError(
+                f"Failed to load the Gemma processor for '{model_name}'. Original error: {processor_error}. "
+                "Likely fixes: (1) upgrade transformers - "
+                "`pip install -U --force-reinstall git+https://github.com/huggingface/transformers.git`; "
+                "(2) install a torchvision wheel matching your torch/CUDA (the fast image processor needs it); "
+                "(3) for a gated repo, set HF_TOKEN and accept the license on the model page."
+            ) from processor_error
 
     load_kwargs: dict[str, Any] = dict(token_kwargs)
     load_kwargs["device_map"] = device_map
