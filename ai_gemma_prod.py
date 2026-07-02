@@ -1732,6 +1732,11 @@ def build_vllm_engine(args: argparse.Namespace) -> tuple[Any, str]:
         engine_kwargs["trust_remote_code"] = True
     if getattr(args, "vllm_enforce_eager", False):
         engine_kwargs["enforce_eager"] = True
+    # vLLM's custom all-reduce kernel faults on some driver/topology combos
+    # (custom_all_reduce.cuh 'invalid argument'), especially with CUDA_VISIBLE_DEVICES remapping.
+    # Default to NCCL all-reduce for robustness; re-enable with --vllm-enable-custom-all-reduce.
+    if tp > 1 and not getattr(args, "vllm_enable_custom_all_reduce", False):
+        engine_kwargs["disable_custom_all_reduce"] = True
 
     print(f"  Building vLLM engine: {model_name} (TP={tp}, max_model_len={max_model_len}, "
           f"max_images/prompt={args.vllm_max_images})", flush=True)
@@ -1950,6 +1955,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
                         help="[vllm] pass trust_remote_code=True to the engine")
     parser.add_argument("--vllm-enforce-eager", action="store_true",
                         help="[vllm] disable CUDA graphs (slower; for debugging)")
+    parser.add_argument("--vllm-enable-custom-all-reduce", action="store_true",
+                        help="[vllm] re-enable custom all-reduce (off by default; it faults on some "
+                             "driver/topology combos). Only affects tensor-parallel runs.")
 
     parser.add_argument("--write-raw", action="store_true", help="Also save raw model response text")
     parser.add_argument("--no-error-log", action="store_true", help="Disable error logs under output_dir/error_logs")
