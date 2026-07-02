@@ -57,6 +57,11 @@ load_dotenv()
 # fragmentation reclaims the "reserved but unallocated" memory. Set before torch imports;
 # an explicit user value wins.
 os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
+# vLLM with a bf16 model doesn't need DeepGEMM FP8 kernels, but when the `deep_gemm`
+# package is absent/outdated its startup warmup raises instead of skipping. Disable both
+# (harmless for bf16). Set here so vLLM's spawned workers inherit it.
+os.environ.setdefault("VLLM_USE_DEEP_GEMM", "0")
+os.environ.setdefault("VLLM_DEEP_GEMM_WARMUP", "skip")
 
 OUTPUT_DIR = Path("./data/output")
 PROVIDER = "gemma"
