@@ -77,6 +77,7 @@ DEFAULT_GEMMA_THINK = os.getenv("GEMMA_THINK", os.getenv("OLLAMA_THINK", "")).st
 DEFAULT_GEMMA_CONTEXT_WINDOW = int(os.getenv("GEMMA_CONTEXT_WINDOW", os.getenv("OLLAMA_CONTEXT_WINDOW", "32768")))
 DEFAULT_GEMMA_DEVICE_MAP = os.getenv("GEMMA_DEVICE_MAP", "auto").strip() or "auto"
 DEFAULT_GEMMA_TORCH_DTYPE = os.getenv("GEMMA_TORCH_DTYPE", os.getenv("GEMMA_DTYPE", "auto")).strip() or "auto"
+DEFAULT_GEMMA_EXTRACTION_MODE = os.getenv("GEMMA_EXTRACTION_MODE", "layout").strip().lower() or "layout"
 
 TOC_SCHEMA: dict[str, Any] = {
     "type": "object",
@@ -367,6 +368,15 @@ def empty_torch_cuda_cache() -> None:
     empty_cache = getattr(cuda, "empty_cache", None)
     if callable(empty_cache):
         empty_cache()
+
+
+def update_processing_metadata(args: argparse.Namespace, **metadata: Any) -> None:
+    existing = getattr(args, "_ai_processing_metadata", None)
+    if not isinstance(existing, dict):
+        existing = {}
+
+    existing.update(metadata)
+    setattr(args, "_ai_processing_metadata", existing)
 
 
 def is_retryable_error(error: Exception) -> bool:
@@ -1414,6 +1424,171 @@ def extract_pdf_text_pages(pdf_path: Path) -> list[tuple[int, str]]:
     return pages
 
 
+def median_float(values: Iterable[Any], default: float = 0.0) -> float:
+    numbers = sorted(float(value) for value in values if value is not None)
+    if not numbers:
+        return float(default)
+
+    middle = len(numbers) // 2
+    if len(numbers) % 2:
+        return numbers[middle]
+    return (numbers[middle - 1] + numbers[middle]) / 2.0
+
+
+def dominant_text_value(values: Iterable[Any]) -> str:
+    counts: dict[str, int] = {}
+    order: list[str] = []
+    for value in values:
+        text = clean_text(value)
+        if not text:
+            continue
+        if text not in counts:
+            counts[text] = 0
+            order.append(text)
+        counts[text] += 1
+
+    if not counts:
+        return ""
+
+    return max(order, key=lambda item: counts[item])
+
+
+def font_style_flags(fontname: str) -> tuple[int, int]:
+    fontname = clean_text(fontname).lower()
+    bold_markers = ("bold", "black", "heavy", "demi", "semibold", "semi-bold", "medium")
+    italic_markers = ("italic", "oblique", "slant")
+    return (
+        int(any(marker in fontname for marker in bold_markers)),
+        int(any(marker in fontname for marker in italic_markers)),
+    )
+
+
+def compact_font_name(fontname: str) -> str:
+    fontname = clean_text(fontname)
+    if "+" in fontname:
+        fontname = fontname.split("+", 1)[1]
+    fontname = re.sub(r"[^A-Za-z0-9_-]+", "", fontname)
+    return fontname[:24]
+
+
+def font_id_for(fontname: str, font_ids: dict[str, str]) -> str:
+    fontname = compact_font_name(fontname)
+    if not fontname:
+        return "f0"
+    if fontname not in font_ids:
+        font_ids[fontname] = f"f{len(font_ids) + 1}"
+    return font_ids[fontname]
+
+
+def page_body_font_size(page: Any) -> float:
+    sizes = [
+        float(char.get("size"))
+        for char in getattr(page, "chars", []) or []
+        if char.get("size") is not None and clean_text(char.get("text"))
+    ]
+    return median_float(sizes, default=10.0) or 10.0
+
+
+def line_text_from_chars(chars: list[dict[str, Any]], fallback_text: Any) -> str:
+    text = clean_extracted_pdf_text(fallback_text)
+    if text:
+        return text
+
+    return clean_extracted_pdf_text("".join(str(char.get("text") or "") for char in chars))
+
+
+def format_layout_line(
+    line: dict[str, Any],
+    body_size: float,
+    font_ids: dict[str, str],
+) -> str:
+    chars = [char for char in line.get("chars", []) or [] if isinstance(char, dict)]
+    text = line_text_from_chars(chars, line.get("text"))
+    if not text:
+        return ""
+
+    if chars:
+        size = median_float((char.get("size") for char in chars), default=body_size)
+        x0 = min(float(char.get("x0", line.get("x0", 0.0)) or 0.0) for char in chars)
+        top = min(float(char.get("top", line.get("top", 0.0)) or 0.0) for char in chars)
+        fontname = dominant_text_value(char.get("fontname") for char in chars)
+    else:
+        size = float(line.get("size") or body_size or 10.0)
+        x0 = float(line.get("x0") or 0.0)
+        top = float(line.get("top") or 0.0)
+        fontname = clean_text(line.get("fontname"))
+
+    bold, italic = font_style_flags(fontname)
+    ratio = size / body_size if body_size else 1.0
+    font_id = font_id_for(fontname, font_ids)
+    return f"[L s={size:.1f} r={ratio:.2f} x={x0:.0f} y={top:.0f} b={bold} i={italic} f={font_id}] {text}"
+
+
+def extract_pdf_layout_pages(pdf_path: Path) -> tuple[list[tuple[int, str]], dict[str, Any]]:
+    try:
+        import pdfplumber
+    except ImportError as error:
+        raise RuntimeError("PDF layout extraction requires `pip install pdfplumber`.") from error
+
+    pages: list[tuple[int, str]] = []
+    font_ids: dict[str, str] = {}
+    line_count = 0
+    plain_chars = 0
+
+    with pdfplumber.open(pdf_path) as pdf:
+        for page_index, page in enumerate(pdf.pages, start=1):
+            body_size = page_body_font_size(page)
+            lines: list[dict[str, Any]]
+            try:
+                lines = page.extract_text_lines(layout=False, return_chars=True)
+            except Exception:
+                lines = []
+
+            formatted_lines: list[str] = []
+            for line in lines:
+                if not isinstance(line, dict):
+                    continue
+                formatted = format_layout_line(line=line, body_size=body_size, font_ids=font_ids)
+                if formatted:
+                    formatted_lines.append(formatted)
+                    line_count += 1
+                    plain_chars += len(formatted.split("] ", 1)[-1])
+
+            if not formatted_lines:
+                fallback_text = clean_extracted_pdf_text(page.extract_text() or "")
+                if fallback_text:
+                    formatted_lines.append(f"[L s={body_size:.1f} r=1.00 x=0 y=0 b=0 i=0 f=f0] {fallback_text}")
+                    line_count += fallback_text.count("\n") + 1
+                    plain_chars += len(fallback_text)
+
+            if formatted_lines:
+                pages.append((page_index, "\n".join(formatted_lines)))
+
+    if not pages:
+        raise RuntimeError("No extractable text was found in the PDF. Scanned PDFs require OCR.")
+
+    metadata = {
+        "gemma_extraction_mode": "layout",
+        "layout_line_count": line_count,
+        "layout_font_count": len(font_ids),
+        "plain_extracted_chars": plain_chars,
+    }
+    return pages, metadata
+
+
+def extract_gemma_pdf_pages(pdf_path: Path, args: argparse.Namespace) -> tuple[list[tuple[int, str]], dict[str, Any]]:
+    mode = clean_text(getattr(args, "gemma_extraction_mode", DEFAULT_GEMMA_EXTRACTION_MODE)).lower()
+    if mode == "text":
+        pages = extract_pdf_text_pages(pdf_path)
+        plain_chars = sum(len(text) for _, text in pages)
+        return pages, {
+            "gemma_extraction_mode": "text",
+            "plain_extracted_chars": plain_chars,
+        }
+
+    return extract_pdf_layout_pages(pdf_path)
+
+
 def split_page_text_for_claude(page_number: int, text: str, max_chars: int) -> list[str]:
     prefix = f"[PAGE {page_number}]\n"
     max_body_chars = max(1000, max_chars - len(prefix) - 1)
@@ -1961,6 +2136,21 @@ def normalize_gemma_backend(backend: str | None) -> str:
     return backend
 
 
+def normalize_gemma_extraction_mode(mode: str | None) -> str:
+    mode = clean_text(mode).lower() or DEFAULT_GEMMA_EXTRACTION_MODE
+    aliases = {
+        "plain": "text",
+        "simple": "text",
+        "pdfplumber": "layout",
+        "layout-text": "layout",
+        "layout_text": "layout",
+    }
+    mode = aliases.get(mode, mode)
+    if mode not in {"layout", "text"}:
+        raise ValueError("--gemma-extraction-mode must be either layout or text.")
+    return mode
+
+
 def normalize_gemma_hf_model(model: str) -> str:
     model = clean_text(model)
     if model.startswith("models/"):
@@ -2289,6 +2479,125 @@ def first_transformers_device(model: Any) -> Any:
     return None
 
 
+def normalize_device_text(device: Any) -> str:
+    if isinstance(device, int):
+        return f"cuda:{device}"
+
+    text = clean_text(device)
+    if text.isdigit():
+        return f"cuda:{text}"
+    return text
+
+
+def device_text_is_cuda(device: Any) -> bool:
+    text = normalize_device_text(device).lower()
+    return text == "cuda" or text.startswith("cuda:")
+
+
+def transformers_model_device_texts(model: Any, primary_device: Any) -> list[str]:
+    devices: list[str] = []
+
+    device_map = getattr(model, "hf_device_map", None)
+    if isinstance(device_map, dict):
+        for device in device_map.values():
+            device_text = normalize_device_text(device)
+            if device_text and device_text not in devices:
+                devices.append(device_text)
+
+    primary_device_text = normalize_device_text(primary_device)
+    if primary_device_text and primary_device_text != "meta" and primary_device_text not in devices:
+        devices.append(primary_device_text)
+
+    return devices
+
+
+def cuda_device_names(torch_module: Any) -> list[str]:
+    cuda = getattr(torch_module, "cuda", None)
+    if cuda is None:
+        return []
+
+    try:
+        device_count = int(cuda.device_count())
+    except Exception:
+        return []
+
+    names: list[str] = []
+    for index in range(max(0, device_count)):
+        try:
+            names.append(str(cuda.get_device_name(index)))
+        except Exception:
+            names.append(f"cuda:{index}")
+    return names
+
+
+def gemma_transformers_runtime_metadata(
+    torch_module: Any,
+    loaded_model: Any,
+    model: str,
+    device_map: str,
+    dtype_text: str,
+) -> dict[str, Any]:
+    cuda = getattr(torch_module, "cuda", None)
+    try:
+        cuda_available = bool(cuda.is_available()) if cuda is not None else False
+    except Exception:
+        cuda_available = False
+
+    try:
+        cuda_device_count = int(cuda.device_count()) if cuda is not None else 0
+    except Exception:
+        cuda_device_count = 0
+
+    primary_device = first_transformers_device(loaded_model)
+    model_devices = transformers_model_device_texts(loaded_model, primary_device)
+    gpu_used = any(device_text_is_cuda(device) for device in model_devices)
+
+    return {
+        "gemma_backend": "transformers",
+        "gemma_model": model,
+        "gemma_device_map": device_map,
+        "gemma_torch_dtype": dtype_text,
+        "gpu_available": cuda_available,
+        "gpu_used": gpu_used,
+        "gpu_device_count": cuda_device_count,
+        "gpu_devices": cuda_device_names(torch_module),
+        "model_primary_device": normalize_device_text(primary_device) or None,
+        "model_devices": model_devices,
+        "hf_device_map_present": isinstance(getattr(loaded_model, "hf_device_map", None), dict),
+    }
+
+
+def print_gemma_runtime_metadata(metadata: dict[str, Any]) -> None:
+    if metadata.get("gemma_backend") != "transformers":
+        return
+
+    devices = metadata.get("model_devices") or []
+    device_text = ", ".join(str(device) for device in devices) if devices else "unknown"
+    print(
+        f"  Gemma/Transformers device check: gpu_used={metadata.get('gpu_used')} / devices={device_text}",
+        flush=True,
+    )
+    if not metadata.get("gpu_available"):
+        print("  Warning: torch cannot see CUDA, so Gemma/Transformers will not use GPU.", file=sys.stderr, flush=True)
+    elif not metadata.get("gpu_used"):
+        print(
+            "  Warning: CUDA is available, but the loaded Gemma model is not on a CUDA device.",
+            file=sys.stderr,
+            flush=True,
+        )
+
+
+def gemma_ollama_runtime_metadata(args: argparse.Namespace, model: str) -> dict[str, Any]:
+    return {
+        "gemma_backend": "ollama",
+        "gemma_model": model,
+        "ollama_base_url": normalize_ollama_base_url(getattr(args, "ollama_base_url", DEFAULT_OLLAMA_BASE_URL)),
+        "gpu_available": None,
+        "gpu_used": None,
+        "gpu_check": "Ollama runs in a separate server process; GPU use cannot be verified from this client response.",
+    }
+
+
 def move_transformers_inputs_to_device(inputs: Any, device: Any) -> Any:
     if device is None:
         return inputs
@@ -2358,13 +2667,23 @@ def load_gemma_transformers_model(model: str, args: argparse.Namespace) -> dict[
     if callable(eval_method):
         eval_method()
 
+    runtime_metadata = gemma_transformers_runtime_metadata(
+        torch_module=torch,
+        loaded_model=loaded_model,
+        model=model,
+        device_map=device_map,
+        dtype_text=dtype_text,
+    )
+
     bundle = {
         "torch": torch,
         "tokenizer": tokenizer,
         "model": loaded_model,
+        "runtime_metadata": runtime_metadata,
     }
     _GEMMA_TRANSFORMERS_CACHE[cache_key] = bundle
     print(f"  Gemma/Transformers model loading completed: {model}", flush=True)
+    print_gemma_runtime_metadata(runtime_metadata)
     return bundle
 
 
@@ -2437,7 +2756,7 @@ def generate_gemma_once_transformers(
     except TypeError:
         text = tokenizer.decode(generated_ids)
 
-    return {"response": text}
+    return {"response": text, "_runtime": bundle.get("runtime_metadata")}
 
 
 def build_gemma_payloads(
@@ -2517,12 +2836,14 @@ def generate_gemma_once(
     last_error: Exception | None = None
     for index, payload in enumerate(payloads):
         try:
-            return ollama_api_post(
+            response = ollama_api_post(
                 base_url=args.ollama_base_url,
                 path="/api/generate",
                 payload=payload,
                 timeout_seconds=args.ollama_request_timeout,
             )
+            response["_runtime"] = gemma_ollama_runtime_metadata(args=args, model=model)
+            return response
         except Exception as error:
             last_error = error
             if index < len(payloads) - 1 and is_schema_config_error(error):
@@ -2544,9 +2865,13 @@ def build_gemma_text_prompt(base_prompt: str, pdf_name: str, text: str) -> str:
     return f"""
 {base_prompt}
 
-[Gemma Text Mode]
+[Gemma Text/Layout Mode]
 Create the TOC using only the [Extracted PDF Text] below instead of an attached PDF.
 Use each text block's [PAGE n] marker to determine page numbers.
+Some lines may start with compact layout tags:
+- [L s=<font size> r=<size/body ratio> x=<left indent> y=<vertical position> b=<bold 0/1> i=<italic 0/1> f=<font id>]
+- Use larger font size, higher size ratio, bold/italic style, indentation, numbering, and nearby body text to infer TOC levels.
+- Never copy [L ...] tags into chapter titles.
 
 [PDF File Name]
 {pdf_name}
@@ -2560,11 +2885,15 @@ def build_gemma_chunk_prompt(base_prompt: str, pdf_name: str, chunk: dict[str, A
     return f"""
 {base_prompt}
 
-[Gemma Text Chunk Mode]
+[Gemma Text/Layout Chunk Mode]
 The text below is one part of the full PDF.
 Include only chapter, section, and subsection titles that are actually visible within this range.
 Do not infer TOC entries outside this range.
 Use [PAGE n] markers to determine page numbers.
+Some lines may start with compact layout tags:
+- [L s=<font size> r=<size/body ratio> x=<left indent> y=<vertical position> b=<bold 0/1> i=<italic 0/1> f=<font id>]
+- Use larger font size, higher size ratio, bold/italic style, indentation, numbering, and nearby body text to infer TOC levels.
+- Never copy [L ...] tags into chapter titles.
 
 [PDF File Name]
 {pdf_name}
@@ -2647,6 +2976,9 @@ def request_gemma_json_text(
             max_retries=args.ai_retries,
             base_delay=args.ai_retry_base_delay,
         )
+        if isinstance(response, dict) and isinstance(response.get("_runtime"), dict):
+            update_processing_metadata(args, **response["_runtime"])
+
         raw_text = gemma_response_text(response)
 
         try:
@@ -2766,15 +3098,35 @@ def generate_toc_from_pdf_gemma_text(
     args: argparse.Namespace,
     prompt: str,
 ) -> tuple[dict[str, Any], str, str]:
-    print("  Gemma PDF text extraction started...", flush=True)
-    pages = extract_pdf_text_pages(pdf_path)
+    print("  Gemma PDF text/layout extraction started...", flush=True)
+    pages, extraction_metadata = extract_gemma_pdf_pages(pdf_path, args)
     extracted_chars = sum(len(text) for _, text in pages)
-    print(f"  Gemma PDF text extraction completed: {len(pages)} pages, {extracted_chars} chars", flush=True)
+    extraction_mode = extraction_metadata.get("gemma_extraction_mode", "text")
+    print(
+        f"  Gemma PDF extraction completed: {len(pages)} pages, {extracted_chars} chars, mode={extraction_mode}",
+        flush=True,
+    )
+    update_processing_metadata(
+        args,
+        input_mode="extracted_pdf_layout_text" if extraction_mode == "layout" else "extracted_pdf_text",
+        extracted_pages=len(pages),
+        extracted_chars=extracted_chars,
+        **extraction_metadata,
+    )
 
     single_max_chars = max(10000, int(args.gemma_text_single_max_chars))
     chunk_chars = max(10000, int(args.gemma_text_chunk_chars))
 
     if extracted_chars <= single_max_chars:
+        update_processing_metadata(
+            args,
+            chunked=False,
+            chunk_count=1,
+            initial_chunk_count=1,
+            processed_chunk_count=1,
+            gemma_text_single_max_chars=single_max_chars,
+            gemma_text_chunk_chars=chunk_chars,
+        )
         full_text = "\n\n".join(f"[PAGE {page_number}]\n{text}" for page_number, text in pages)
         text_prompt = build_gemma_text_prompt(prompt, pdf_path.name, full_text)
         print(f"  Gemma text TOC generation started: {model}", flush=True)
@@ -2799,6 +3151,15 @@ def generate_toc_from_pdf_gemma_text(
 
     chunks = chunk_pdf_text_pages(pages, max_chars=chunk_chars)
     print(f"  Gemma text chunk processing started: {len(chunks)} chunks", flush=True)
+    update_processing_metadata(
+        args,
+        chunked=True,
+        chunk_count=len(chunks),
+        initial_chunk_count=len(chunks),
+        processed_chunk_count=0,
+        gemma_text_single_max_chars=single_max_chars,
+        gemma_text_chunk_chars=chunk_chars,
+    )
     partial_tocs: list[dict[str, Any]] = []
     raw_parts: list[dict[str, Any]] = []
 
@@ -2814,6 +3175,7 @@ def generate_toc_from_pdf_gemma_text(
                 raw_parts=raw_parts,
             )
         )
+    update_processing_metadata(args, processed_chunk_count=len(raw_parts))
 
     merge_prompt = build_gemma_merge_prompt(prompt, pdf_path.name, partial_tocs, args.max_depth)
     print(f"  Gemma chunked TOC merge started: {model}", flush=True)
@@ -2856,9 +3218,11 @@ def generate_toc_from_pdf_gemma_text(
         "mode": "gemma_text_chunk",
         "model": model,
         "pdf": pdf_path.name,
+        "extraction": extraction_metadata,
         "extracted_pages": len(pages),
         "extracted_chars": extracted_chars,
         "chunk_count": len(chunks),
+        "processed_chunk_count": len(raw_parts),
         "chunk_raw_responses": raw_parts,
         "final_raw_response": final_raw_text,
     }
@@ -2946,15 +3310,20 @@ def add_result_metadata(
     provider: str,
     model: str,
     elapsed_seconds: float,
+    extra_metadata: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     result = dict(toc)
-    result["_meta"] = {
+    metadata: dict[str, Any] = {
         "source_pdf": pdf_path.name,
         "provider": provider,
         "model": model,
         "elapsed_seconds": round(float(elapsed_seconds), 3),
         "elapsed": format_elapsed(elapsed_seconds),
     }
+    if extra_metadata:
+        metadata.update({str(key): jsonable_debug_value(value) for key, value in extra_metadata.items()})
+
+    result["_meta"] = metadata
     return result
 
 
@@ -3084,6 +3453,7 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> b
             provider=args.provider,
             model=used_model,
             elapsed_seconds=elapsed_seconds,
+            extra_metadata=getattr(args, "_ai_processing_metadata", None),
         )
         save_json(output_file, result)
 
@@ -3279,6 +3649,12 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="dtype used with --gemma-backend transformers. Examples: auto, bfloat16, float16",
     )
     parser.add_argument(
+        "--gemma-extraction-mode",
+        default=DEFAULT_GEMMA_EXTRACTION_MODE,
+        choices=("layout", "text"),
+        help="Gemma PDF extraction mode. layout includes compact font size/style/position tags; text uses plain extracted text.",
+    )
+    parser.add_argument(
         "--gemma-text-single-max-chars",
         type=int,
         default=DEFAULT_GEMMA_TEXT_SINGLE_MAX_CHARS,
@@ -3345,6 +3721,7 @@ def main() -> int:
     if "gemma" in providers:
         try:
             args.gemma_backend = normalize_gemma_backend(args.gemma_backend)
+            args.gemma_extraction_mode = normalize_gemma_extraction_mode(args.gemma_extraction_mode)
         except ValueError as error:
             parser.error(str(error))
 
