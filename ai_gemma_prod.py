@@ -1116,6 +1116,7 @@ def estimate_page_token_counts(
 
 def plan_chunks(
     pages: list[dict[str, Any]], tokenizer: Any, processor: Any, args: argparse.Namespace,
+    max_pages_per_chunk: int = 0,
 ) -> tuple[list[dict[str, Any]], int]:
     """Pack whole pages into windows that each fit the per-request token budget.
 
@@ -1134,7 +1135,9 @@ def plan_chunks(
     current: list[dict[str, Any]] = []
     current_tokens = overhead
     for page, page_tokens in zip(pages, per_page):
-        if current and current_tokens + page_tokens > budget:
+        over_tokens = current_tokens + page_tokens > budget
+        over_pages = max_pages_per_chunk and len(current) >= max_pages_per_chunk
+        if current and (over_tokens or over_pages):
             windows.append(current)
             current = []
             current_tokens = overhead
@@ -1633,6 +1636,236 @@ def process_all(pdf_files: list[Path], replicas: list[dict[str, Any]], args: arg
     return results
 
 
+# ----------------------------- vLLM backend -----------------------------
+
+def preflight_vllm() -> None:
+    missing: list[str] = []
+    pip_name = {"fitz": "PyMuPDF", "PIL": "Pillow"}
+    for module_name in ("vllm", "torch", "fitz", "PIL"):
+        try:
+            __import__(module_name)
+        except ImportError:
+            missing.append(pip_name.get(module_name, module_name))
+    if missing:
+        raise RuntimeError(
+            "vLLM backend requires: " + ", ".join(missing)
+            + ". Install with `pip install vllm PyMuPDF Pillow` (torch comes with vllm)."
+        )
+
+
+def pil_to_data_uri(image: Any) -> str:
+    import base64
+    import io
+    buffer = io.BytesIO()
+    image.save(buffer, format="JPEG", quality=90)
+    return "data:image/jpeg;base64," + base64.b64encode(buffer.getvalue()).decode("ascii")
+
+
+def build_vllm_conversation(
+    instruction_prompt: str, pdf_name: str, pages: list[dict[str, Any]],
+    chunk_info: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
+    content: list[dict[str, Any]] = []
+    header = instruction_prompt + f"\n\n[PDF File Name]\n{pdf_name}"
+    if chunk_info:
+        header += "\n\n" + CHUNK_NOTE.format(
+            index=chunk_info["index"], total=chunk_info["total"],
+            start=chunk_info["start_page"], end=chunk_info["end_page"],
+        )
+    content.append({"type": "text", "text": header})
+    for page in pages:
+        content.append({"type": "text", "text": f"[PAGE {page['page']}]"})
+        if page.get("image") is not None:
+            content.append({"type": "image_url", "image_url": {"url": pil_to_data_uri(page["image"])}})
+        page_text = page.get("text") or ""
+        if page_text:
+            content.append({"type": "text", "text": page_text})
+    content.append({"type": "text", "text": CLOSING_INSTRUCTION})
+    return [{"role": "user", "content": content}]
+
+
+def make_vllm_sampling_params(args: argparse.Namespace, max_tokens: int, use_schema: bool):
+    from vllm import SamplingParams
+    base = dict(max_tokens=max(1, int(max_tokens)), temperature=max(0.0, float(args.temperature)))
+    if use_schema and not args.no_schema:
+        # API name changed across vLLM versions; try newest first, then fall back to prompt-only.
+        for module_name, class_name, kwarg in (
+            ("vllm.sampling_params", "StructuredOutputsParams", "structured_outputs"),
+            ("vllm.sampling_params", "GuidedDecodingParams", "guided_decoding"),
+        ):
+            try:
+                module = __import__(module_name, fromlist=[class_name])
+                params_cls = getattr(module, class_name)
+                return SamplingParams(**base, **{kwarg: params_cls(json=TOC_SCHEMA)})
+            except Exception:
+                continue
+    return SamplingParams(**base)
+
+
+def build_vllm_engine(args: argparse.Namespace) -> tuple[Any, str]:
+    try:
+        from vllm import LLM
+    except ImportError as error:
+        raise RuntimeError("vLLM backend requires `pip install vllm`.") from error
+    import torch
+
+    model_name = normalize_hf_model(parse_model_list(args.model, args.fallback_models)[0])
+    tp = int(args.tensor_parallel_size) or (torch.cuda.device_count() if torch.cuda.is_available() else 1)
+    tp = max(1, tp)
+
+    if int(args.vllm_max_model_len) > 0:
+        max_model_len = int(args.vllm_max_model_len)
+    else:
+        max_model_len = int(args.chunk_tokens) + int(args.max_new_tokens) + 8192
+
+    engine_kwargs: dict[str, Any] = dict(
+        model=model_name,
+        tensor_parallel_size=tp,
+        gpu_memory_utilization=float(args.gpu_memory_utilization),
+        max_model_len=max_model_len,
+        limit_mm_per_prompt={"image": int(args.vllm_max_images)},
+        dtype=(clean_text(args.dtype) or "auto"),
+    )
+    if clean_text(getattr(args, "vllm_model_impl", "")):
+        engine_kwargs["model_impl"] = args.vllm_model_impl
+    if getattr(args, "vllm_trust_remote_code", False):
+        engine_kwargs["trust_remote_code"] = True
+    if getattr(args, "vllm_enforce_eager", False):
+        engine_kwargs["enforce_eager"] = True
+
+    print(f"  Building vLLM engine: {model_name} (TP={tp}, max_model_len={max_model_len}, "
+          f"max_images/prompt={args.vllm_max_images})", flush=True)
+    llm = LLM(**engine_kwargs)
+    return llm, model_name
+
+
+def vllm_generate_tocs(
+    llm: Any, conversations: list[list[dict[str, Any]]], args: argparse.Namespace,
+    max_tokens: int, use_schema: bool, fallback_title: str,
+) -> list[tuple[dict[str, Any] | None, str]]:
+    """Batch-generate over conversations; parse each into a validated TOC (None on parse failure)."""
+    sampling = make_vllm_sampling_params(args, max_tokens, use_schema)
+    outputs = llm.chat(conversations, sampling_params=sampling)
+    results: list[tuple[dict[str, Any] | None, str]] = []
+    for output in outputs:
+        text = output.outputs[0].text if getattr(output, "outputs", None) else ""
+        try:
+            results.append((validate_toc(parse_json_response_text(text), fallback_title, args.max_depth), text))
+        except Exception as error:
+            attach_error_debug(error, provider=PROVIDER, raw_response=text, raw_response_chars=len(text))
+            results.append((None, text))
+    return results
+
+
+def process_pdf_vllm(llm: Any, model_name: str, pdf_path: Path, args: argparse.Namespace,
+                     instruction_prompt: str, user_prompt: str) -> bool:
+    log_prefix = f"[{pdf_path.name}]"
+    print(f"Processing started: {log_prefix}", flush=True)
+    started_at = time.perf_counter()
+    tokenizer = llm.get_tokenizer()
+
+    try:
+        pages = load_pdf_pages(pdf_path, args)
+        chunks, est_tokens = plan_chunks(pages, tokenizer, None, args,
+                                         max_pages_per_chunk=int(args.vllm_max_images))
+        print(f"  {log_prefix} ingested {len(pages)} pages, ~{est_tokens} tokens -> {len(chunks)} chunk(s) "
+              f"(budget {args.chunk_tokens}); batching through vLLM", flush=True)
+
+        conversations: list[list[dict[str, Any]]] = []
+        for chunk in chunks:
+            chunk_info = None
+            if chunk["total"] > 1:
+                chunk_info = {"index": chunk["index"], "total": chunk["total"],
+                              "start_page": chunk["start_page"], "end_page": chunk["end_page"]}
+            conversations.append(build_vllm_conversation(instruction_prompt, pdf_path.name, chunk["pages"], chunk_info))
+
+        chunk_out = vllm_generate_tocs(llm, conversations, args, args.max_new_tokens,
+                                       use_schema=True, fallback_title=pdf_path.stem)
+        partials: list[dict[str, Any]] = []
+        raws: list[dict[str, Any]] = []
+        failed = 0
+        for chunk, (toc, raw) in zip(chunks, chunk_out):
+            if toc is None:
+                failed += 1
+                print(f"  {log_prefix} chunk {chunk['index']}/{chunk['total']} "
+                      f"(pages {chunk['start_page']}-{chunk['end_page']}) parse failed", file=sys.stderr, flush=True)
+                continue
+            partials.append(toc)
+            raws.append({"start_page": chunk["start_page"], "end_page": chunk["end_page"], "raw_response": raw})
+            print(f"  {log_prefix} chunk {chunk['index']}/{chunk['total']}: "
+                  f"{len(toc.get('chapters', []))} chapters", flush=True)
+
+        if not partials:
+            raise RuntimeError(f"All {len(chunks)} chunk(s) failed to produce valid JSON.")
+
+        if len(partials) == 1:
+            toc = partials[0]
+            raw_text = raws[0]["raw_response"]
+        elif args.local_merge_only:
+            toc = merge_partial_tocs_locally(partials, pdf_path.stem, args.max_depth)
+            raw_text = "<local merge>"
+        else:
+            merge_prompt = build_merge_prompt(user_prompt, pdf_path.name, partials, args.max_depth)
+            merge_conv = [[{"role": "user", "content": [{"type": "text", "text": merge_prompt}]}]]
+            merged = vllm_generate_tocs(llm, merge_conv, args, args.merge_max_new_tokens,
+                                        use_schema=True, fallback_title=pdf_path.stem)
+            toc, merge_raw = merged[0]
+            if toc is None:
+                print(f"  {log_prefix} model merge parse failed; using local merge", file=sys.stderr, flush=True)
+                toc = merge_partial_tocs_locally(partials, pdf_path.stem, args.max_depth)
+                merge_raw = "<local merge fallback>"
+            raw_text = json.dumps({
+                "mode": "vllm_chunked", "model": model_name, "pdf": pdf_path.name,
+                "pages": len(pages), "chunks": len(chunks), "failed_chunks": failed,
+                "chunk_raw_responses": raws, "final_raw_response": merge_raw,
+            }, ensure_ascii=False, indent=2)
+
+        elapsed = time.perf_counter() - started_at
+        model_part = safe_filename_part(model_name)
+        output_file = Path(args.output_dir) / f"{pdf_path.stem}_{PROVIDER}_{model_part}_toc.json"
+        result = add_result_metadata(toc, pdf_path, model_name, elapsed)
+        result["_meta"]["pages"] = len(pages)
+        result["_meta"]["chunks"] = len(chunks)
+        if failed:
+            result["_meta"]["failed_chunks"] = failed
+        save_json(output_file, result)
+
+        if args.write_raw:
+            raw_file = Path(args.output_dir) / f"{pdf_path.stem}_{PROVIDER}_{model_part}_raw_response.txt"
+            raw_file.parent.mkdir(parents=True, exist_ok=True)
+            raw_file.write_text(raw_text, encoding="utf-8")
+            print(f"Raw response saved: {raw_file}", flush=True)
+
+        print(f"Completed: {output_file}", flush=True)
+        print(f"  {log_prefix} elapsed {format_elapsed(elapsed)}, title {toc.get('title')!r}, "
+              f"chapters {len(toc.get('chapters', []))}"
+              + (f", {failed} chunk(s) failed" if failed else ""), flush=True)
+        return True
+    except Exception as error:
+        elapsed = time.perf_counter() - started_at
+        print(f"Failed: {log_prefix} / {error}", file=sys.stderr, flush=True)
+        log = write_error_log(pdf_path, args, error, model=model_name,
+                              elapsed_seconds=elapsed, stage="vLLM processing failed", fatal=True)
+        if log is not None:
+            print(f"  Error log saved: {log}", file=sys.stderr, flush=True)
+        if args.stop_on_error:
+            raise
+        return False
+
+
+def run_vllm(pdf_files: list[Path], args: argparse.Namespace,
+             instruction_prompt: str, user_prompt: str) -> dict[str, bool]:
+    llm, model_name = build_vllm_engine(args)
+    print(f"vLLM engine ready: {model_name}", flush=True)
+    results: dict[str, bool] = {}
+    for pdf_path in pdf_files:
+        ok = process_pdf_vllm(llm, model_name, pdf_path, args, instruction_prompt, user_prompt)
+        results[str(pdf_path)] = ok
+        if not ok and args.stop_on_error:
+            break
+    return results
+
+
 def load_prompt(args: argparse.Namespace) -> str:
     if args.prompt_file:
         return Path(args.prompt_file).read_text(encoding="utf-8").strip()
@@ -1698,7 +1931,25 @@ def build_arg_parser() -> argparse.ArgumentParser:
                         help="When --gpus is unset, only use GPUs with at least this many GiB free "
                              "(auto-skips cards busy with other jobs; 0 = use all)")
     parser.add_argument("--shard", action="store_true",
-                        help="Spread ONE model across all GPUs (device_map=auto) instead of one replica per GPU")
+                        help="[transformers] Spread ONE model across all GPUs instead of one replica per GPU")
+
+    # Backend selection + vLLM engine options.
+    parser.add_argument("--backend", default="transformers", choices=["transformers", "vllm"],
+                        help="Inference backend. 'vllm' = high-throughput engine (recommended for large jobs).")
+    parser.add_argument("--tensor-parallel-size", type=int, default=0,
+                        help="[vllm] GPUs to shard one engine across (0 = all visible)")
+    parser.add_argument("--gpu-memory-utilization", type=float, default=0.90,
+                        help="[vllm] Fraction of each GPU vLLM may use for weights + KV cache")
+    parser.add_argument("--vllm-max-model-len", type=int, default=0,
+                        help="[vllm] Max sequence length (0 = chunk-tokens + max-new-tokens + margin)")
+    parser.add_argument("--vllm-max-images", type=int, default=128,
+                        help="[vllm] Max images per prompt; also caps pages per chunk")
+    parser.add_argument("--vllm-model-impl", default="",
+                        help="[vllm] model_impl: blank=auto, or 'transformers' if the native arch is unsupported")
+    parser.add_argument("--vllm-trust-remote-code", action="store_true",
+                        help="[vllm] pass trust_remote_code=True to the engine")
+    parser.add_argument("--vllm-enforce-eager", action="store_true",
+                        help="[vllm] disable CUDA graphs (slower; for debugging)")
 
     parser.add_argument("--write-raw", action="store_true", help="Also save raw model response text")
     parser.add_argument("--no-error-log", action="store_true", help="Disable error logs under output_dir/error_logs")
@@ -1717,9 +1968,12 @@ def main() -> int:
 
     models = parse_model_list(args.model, args.fallback_models)
     try:
-        preflight(models)
+        if args.backend == "vllm":
+            preflight_vllm()
+        else:
+            preflight(models)
     except Exception as error:
-        print(f"Gemma preflight failed: {error}", file=sys.stderr, flush=True)
+        print(f"Preflight failed: {error}", file=sys.stderr, flush=True)
         return 1
 
     user_prompt = load_prompt(args)
@@ -1736,17 +1990,15 @@ def main() -> int:
 
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)
 
-    print(f"Loading Gemma replicas (mode: {'shard' if args.shard else 'one-per-GPU'})...", flush=True)
-    try:
-        model_name, replicas = load_replicas(args)
-    except Exception as error:
-        print(f"Model load failed: {error}", file=sys.stderr, flush=True)
-        return 1
-    print(f"Loaded model {model_name} on {len(replicas)} replica(s).", flush=True)
-
     started_at = time.perf_counter()
     try:
-        results = process_all(pdf_files, replicas, args, instruction_prompt, user_prompt)
+        if args.backend == "vllm":
+            results = run_vllm(pdf_files, args, instruction_prompt, user_prompt)
+        else:
+            print(f"Loading Gemma replicas (mode: {'shard' if args.shard else 'one-per-GPU'})...", flush=True)
+            model_name, replicas = load_replicas(args)
+            print(f"Loaded model {model_name} on {len(replicas)} replica(s).", flush=True)
+            results = process_all(pdf_files, replicas, args, instruction_prompt, user_prompt)
     except Exception as error:
         print(f"Aborted: {error}", file=sys.stderr, flush=True)
         return 1
