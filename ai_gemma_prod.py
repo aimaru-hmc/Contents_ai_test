@@ -29,6 +29,7 @@ Example:
 from __future__ import annotations
 
 import argparse
+import contextlib
 import json
 import os
 import queue
@@ -195,6 +196,24 @@ def is_configuration_error(error: Exception) -> bool:
 def is_cuda_out_of_memory_error(error: Exception) -> bool:
     message = message_of(error).upper()
     return "CUDA OUT OF MEMORY" in message or "OUTOFMEMORYERROR" in message
+
+
+def is_fatal_cuda_error(error: Exception) -> bool:
+    """Errors that corrupt the CUDA context for the whole process (not per-op recoverable)."""
+    message = message_of(error).upper()
+    return any(marker in message for marker in (
+        "ILLEGAL MEMORY ACCESS", "DEVICE-SIDE ASSERT", "MISALIGNED ADDRESS",
+        "UNSPECIFIED LAUNCH FAILURE", "UNCORRECTABLE",
+    ))
+
+
+def cuda_device_ctx(torch: Any, device: Any):
+    """Pin the current CUDA device for a block so implicit-current-device kernels
+    (KV cache, attention workspaces) target this replica's own GPU. Without this,
+    multiple replica threads all default to cuda:0 and can trigger illegal memory access."""
+    if device is not None and getattr(device, "type", None) == "cuda":
+        return torch.cuda.device(device)
+    return contextlib.nullcontext()
 
 
 def empty_torch_cuda_cache() -> None:
@@ -1047,14 +1066,14 @@ def run_generate(replica: dict[str, Any], content: list[dict[str, Any]], args: a
         generation_kwargs["eos_token_id"] = eos_token_id
 
     try:
-        with torch.inference_mode():
+        with cuda_device_ctx(torch, device), torch.inference_mode():
             outputs = model.generate(**inputs, **generation_kwargs)
     except Exception as error:
         if is_cuda_out_of_memory_error(error):
             empty_torch_cuda_cache()
             raise RuntimeError(
-                f"CUDA out of memory during generation. Lower --image-dpi/--image-max-dim, "
-                f"cap --max-pages, or reduce --max-new-tokens. Cause: {error}"
+                f"CUDA out of memory during generation. Lower --chunk-tokens/--image-max-dim "
+                f"or --max-new-tokens. Cause: {error}"
             ) from error
         raise RuntimeError(f"Gemma generation failed: {error}") from error
 
@@ -1447,6 +1466,7 @@ def run_chunks(
     """
     results: dict[int, dict[str, Any]] = {}
     results_lock = threading.Lock()
+    stop_event = threading.Event()
 
     def handle(replica: dict[str, Any], chunk: dict[str, Any]) -> None:
         lp = f"[{replica['label']} {pdf_path.name} chunk {chunk['index']}/{chunk['total']}]"
@@ -1467,9 +1487,26 @@ def run_chunks(
                     "error": message_of(error),
                     "start_page": chunk["start_page"], "end_page": chunk["end_page"],
                 }
+            if is_fatal_cuda_error(error):
+                print(f"  {lp} FATAL CUDA error - the process CUDA context is corrupted; aborting "
+                      f"remaining chunks and merging what completed. Re-run to reprocess.",
+                      file=sys.stderr, flush=True)
+                stop_event.set()
+
+    def pin_device(replica: dict[str, Any]) -> None:
+        torch = replica.get("torch")
+        device = replica.get("device")
+        if torch is not None and device is not None and getattr(device, "type", None) == "cuda":
+            try:
+                torch.cuda.set_device(device)
+            except Exception:
+                pass
 
     if len(replicas) == 1 or len(chunks) == 1:
+        pin_device(replicas[0])
         for chunk in chunks:
+            if stop_event.is_set():
+                break
             handle(replicas[0], chunk)
         return results
 
@@ -1478,7 +1515,8 @@ def run_chunks(
         chunk_queue.put(chunk)
 
     def worker(replica: dict[str, Any]) -> None:
-        while True:
+        pin_device(replica)  # pin this thread's current CUDA device to its replica
+        while not stop_event.is_set():
             try:
                 chunk = chunk_queue.get_nowait()
             except queue.Empty:
