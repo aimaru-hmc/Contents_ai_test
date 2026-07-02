@@ -1,5 +1,5 @@
 {
-    "title": "제3장 화학적 요인",
+    "title": "제 3장 화학적 요인",
     "chapters": [
         {
             "level": 1,
@@ -32,24 +32,109 @@
             "page": 2
         },
         {
+            "level": 4,
+            "chapter": "(1) 흡수",
+            "page": 2
+        },
+        {
             "level": 3,
             "chapter": "5) 납중독의 병리",
             "page": 3
         },
         {
-            "level": 3,
+            "level": 4,
+            "chapter": "(2) 체내순환, 분포 및 저장",
+            "page": 3
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 배설",
+            "page": 3
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 헴(heme) 합성의 장해",
+            "page": 3
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 적혈구에 미치는 작용",
+            "page": 4
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 신기능의 장해",
+            "page": 4
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 신경조직의 변화",
+            "page": 4
+        },
+        {
+            "level": 1,
+            "chapter": "제3장 화학적 요인",
+            "page": 5
+        },
+        {
+            "level": 2,
             "chapter": "6) 납중독의 임상증상",
             "page": 5
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "7) 저농도 납 노출로 인한 건강장애",
             "page": 5
         },
         {
             "level": 3,
+            "chapter": "(1) 위장계통 장해",
+            "page": 5
+        },
+        {
+            "level": 3,
+            "chapter": "(2) 신경 근육 계통의 장해",
+            "page": 5
+        },
+        {
+            "level": 3,
+            "chapter": "(3) 중추신경계통 장해",
+            "page": 5
+        },
+        {
+            "level": 2,
             "chapter": "8) 진단",
             "page": 6
+        },
+        {
+            "level": 3,
+            "chapter": "(1) 직업력 조사",
+            "page": 6
+        },
+        {
+            "level": 3,
+            "chapter": "(2) 병력 조사",
+            "page": 6
+        },
+        {
+            "level": 3,
+            "chapter": "(3) 임상증상",
+            "page": 6
+        },
+        {
+            "level": 3,
+            "chapter": "(4) 검사실 소견",
+            "page": 6
+        },
+        {
+            "level": 2,
+            "chapter": "9) 치료",
+            "page": 7
+        },
+        {
+            "level": 2,
+            "chapter": "10) 예방대책",
+            "page": 7
         },
         {
             "level": 2,
@@ -58,12 +143,12 @@
         },
         {
             "level": 3,
-            "chapter": "9) 치료",
+            "chapter": "(1) 급성중독",
             "page": 7
         },
         {
             "level": 3,
-            "chapter": "10) 예방대책",
+            "chapter": "(2) 만성중독",
             "page": 7
         },
         {
@@ -87,13 +172,18 @@
             "page": 8
         },
         {
-            "level": 2,
-            "chapter": "1.3 카드뮴",
+            "level": 1,
+            "chapter": "제3장 화학적 요인",
             "page": 9
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "5) 노출평가",
+            "page": 9
+        },
+        {
+            "level": 2,
+            "chapter": "1.3 카드뮴",
             "page": 9
         },
         {
@@ -107,6 +197,11 @@
             "page": 9
         },
         {
+            "level": 2,
+            "chapter": "1.4 크롬",
+            "page": 10
+        },
+        {
             "level": 3,
             "chapter": "3) 건강영향",
             "page": 10
@@ -117,9 +212,24 @@
             "page": 10
         },
         {
-            "level": 2,
-            "chapter": "1.4 크롬",
-            "page": 11
+            "level": 4,
+            "chapter": "(1) 직업적 노출",
+            "page": 10
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 환경 노출",
+            "page": 10
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 급성 독성",
+            "page": 10
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 만성 독성",
+            "page": 10
         },
         {
             "level": 2,
@@ -152,6 +262,16 @@
             "page": 11
         },
         {
+            "level": 4,
+            "chapter": "(1) 급성 독성",
+            "page": 11
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 만성 독성",
+            "page": 11
+        },
+        {
             "level": 3,
             "chapter": "2) 용도 및 직업적 노출",
             "page": 12
@@ -167,18 +287,23 @@
             "page": 12
         },
         {
-            "level": 3,
+            "level": 1,
+            "chapter": "제3장 화학적 요인",
+            "page": 13
+        },
+        {
+            "level": 2,
             "chapter": "5) 노출평가",
             "page": 13
         },
         {
             "level": 2,
-            "chapter": "1.6 비소",
+            "chapter": "6) 치료 및 예방",
             "page": 14
         },
         {
-            "level": 3,
-            "chapter": "6) 치료 및 예방",
+            "level": 2,
+            "chapter": "1.6 비소",
             "page": 14
         },
         {
@@ -207,6 +332,31 @@
             "page": 15
         },
         {
+            "level": 4,
+            "chapter": "(1) 급성중독",
+            "page": 15
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 만성중독",
+            "page": 15
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 소변",
+            "page": 15
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 혈액",
+            "page": 15
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 모발 및 손발톱",
+            "page": 15
+        },
+        {
             "level": 2,
             "chapter": "1.7 베릴륨",
             "page": 16
@@ -232,12 +382,17 @@
             "page": 16
         },
         {
-            "level": 3,
+            "level": 1,
+            "chapter": "제3장 화학적 요인",
+            "page": 17
+        },
+        {
+            "level": 2,
             "chapter": "4) 노출평가",
             "page": 17
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "5) 예방 및 관리대책",
             "page": 17
         },
@@ -255,6 +410,11 @@
             "level": 2,
             "chapter": "2.2 유기용제의 사용",
             "page": 20
+        },
+        {
+            "level": 1,
+            "chapter": "제3장 화학적 요인",
+            "page": 21
         },
         {
             "level": 2,
@@ -329,6 +489,11 @@
         {
             "level": 2,
             "chapter": "2.7 벤젠",
+            "page": 24
+        },
+        {
+            "level": 1,
+            "chapter": "제3장 화학적 요인",
             "page": 25
         },
         {
@@ -384,37 +549,32 @@
         {
             "level": 3,
             "chapter": "2) 질소산화물(nitrogen oxides, NOx)",
-            "page": 32
+            "page": 31
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "3) 아황산가스(Sulfur dioxide, SO2)",
             "page": 32
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "4) 오존(ozone, O3)",
             "page": 32
         },
         {
-            "level": 2,
+            "level": 1,
             "chapter": "3.3 질식제(chemical asphyxiants)",
             "page": 33
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "5) 불화수소(hydrogen fluoride, HF)",
             "page": 33
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "1) 일산화탄소(carbon monoxide, CO)",
             "page": 33
-        },
-        {
-            "level": 1,
-            "chapter": "제3장 화학적 요인",
-            "page": 34
         },
         {
             "level": 2,
@@ -423,7 +583,7 @@
         },
         {
             "level": 2,
-            "chapter": "3) 황화수소(hydrogen sulfide, H S)",
+            "chapter": "3) 황화수소(hydrogen sulfide, H2S)",
             "page": 34
         },
         {
@@ -502,59 +662,64 @@
             "page": 43
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "2) 카바메이트계",
             "page": 44
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "3) 피레스로이드계",
             "page": 44
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "4) 유기염소계",
             "page": 44
         },
         {
-            "level": 2,
+            "level": 1,
             "chapter": "6.3 농약 노출 평가",
             "page": 45
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "5) 제초제(글리포세이트)",
             "page": 45
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "1) 패치법(patch)",
             "page": 45
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "2) 전신복장노출법(Whole Body Dosimetry, WBD)",
             "page": 45
         },
         {
-            "level": 2,
+            "level": 1,
             "chapter": "6.4 농약 노출에 따른 건강영향 평가",
             "page": 46
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "3) 생체지표 모니터링",
             "page": 46
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "1) 급성 중독",
             "page": 46
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "2) 만성 중독",
             "page": 46
+        },
+        {
+            "level": 1,
+            "chapter": "제3장 화학적 요인",
+            "page": 47
         },
         {
             "level": 2,
@@ -562,13 +727,13 @@
             "page": 47
         },
         {
-            "level": 1,
+            "level": 2,
             "chapter": "7. 나노물질",
             "page": 48
         },
         {
             "level": 1,
-            "chapter": "제4장 생활오염",
+            "chapter": "4 제 장 생활오염",
             "page": 51
         },
         {
@@ -597,102 +762,137 @@
             "page": 54
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "1.5 기후변화 적응 전략",
             "page": 55
         },
         {
-            "level": 2,
+            "level": 1,
             "chapter": "2. 월경성 환경오염 및 지구환경오염",
             "page": 56
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "2.1 황사",
             "page": 56
         },
         {
             "level": 3,
+            "chapter": "1) 황사의 원인",
+            "page": 56
+        },
+        {
+            "level": 3,
+            "chapter": "2) 황사의 건강영향",
+            "page": 57
+        },
+        {
+            "level": 3,
+            "chapter": "3) 대처 방안",
+            "page": 57
+        },
+        {
+            "level": 2,
             "chapter": "2.2 산성비",
             "page": 58
         },
         {
-            "level": 3,
-            "chapter": "2.3 오존층 파괴",
+            "level": 1,
+            "chapter": "제4장 생활오염",
             "page": 59
         },
         {
             "level": 2,
+            "chapter": "2.3 오존층 파괴",
+            "page": 59
+        },
+        {
+            "level": 3,
+            "chapter": "1) 오존층 파괴의 원인",
+            "page": 60
+        },
+        {
+            "level": 3,
+            "chapter": "2) 오존층 파괴의 건강영향",
+            "page": 60
+        },
+        {
+            "level": 3,
+            "chapter": "3) 대처 방안",
+            "page": 61
+        },
+        {
+            "level": 1,
             "chapter": "3. 대기오염",
             "page": 63
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "3.1 서 론",
             "page": 63
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "3.2 대기오염물질의 종류 및 발생원",
             "page": 63
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "3.3 대기환경기준과 대기오염 수준",
             "page": 64
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "3.4 대기오염에 영향을 미치는 기상조건",
             "page": 66
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "3.5 대기오염물질의 건강영향",
             "page": 66
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "1) 미세먼지",
             "page": 67
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "2) 오존(O3)",
             "page": 67
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "3) 아황산가스(SO2)",
             "page": 67
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "4) 질소산화물(NOx)",
             "page": 67
         },
         {
-            "level": 3,
+            "level": 1,
             "chapter": "3.6 대기오염에 민감한 사람들",
             "page": 68
         },
         {
-            "level": 4,
+            "level": 2,
             "chapter": "5) 일산화탄소(CO)",
             "page": 68
         },
         {
-            "level": 4,
+            "level": 2,
             "chapter": "6) 휘발성유기화합물(VOCs)",
             "page": 68
         },
         {
-            "level": 4,
+            "level": 2,
             "chapter": "7) 중금속(heavy metals)",
             "page": 68
         },
         {
-            "level": 3,
+            "level": 1,
             "chapter": "3.7 대기오염의 관리방안",
             "page": 69
         },
@@ -772,38 +972,43 @@
             "page": 75
         },
         {
-            "level": 4,
+            "level": 2,
             "chapter": "(1) 실내공기오염으로 전파(transmission of aerosol)가능한 호흡기바이러스의 종류와 구분",
             "page": 76
         },
         {
-            "level": 4,
+            "level": 2,
             "chapter": "(2) 세균(박테리아)",
             "page": 76
         },
         {
-            "level": 2,
+            "level": 1,
             "chapter": "4.3 실내공기오염의 관리대책",
             "page": 77
         },
         {
-            "level": 3,
-            "chapter": "1) 실내공기오염개선의 배경",
-            "page": 77
-        },
-        {
-            "level": 4,
+            "level": 2,
             "chapter": "(3) 곰팡이(진균)(mold)",
             "page": 77
         },
         {
-            "level": 3,
+            "level": 2,
+            "chapter": "1) 실내공기오염개선의 배경",
+            "page": 77
+        },
+        {
+            "level": 2,
             "chapter": "2) 실내공기오염의 관리대책",
             "page": 78
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "3) 예방대책",
+            "page": 78
+        },
+        {
+            "level": 1,
+            "chapter": "제4장 생활오염",
             "page": 79
         },
         {
@@ -847,119 +1052,129 @@
             "page": 82
         },
         {
-            "level": 3,
+            "level": 1,
+            "chapter": "제4장 생활오염",
+            "page": 83
+        },
+        {
+            "level": 2,
             "chapter": "3) 불소(F)",
             "page": 83
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "4) 암모니아성 질소(ammonia nitrogen, NH3-N)",
             "page": 83
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "5) 질산성 질소(nitrate nitrogen, NO3-N)",
             "page": 83
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "6) 소독부산물(disinfection byproducts)",
             "page": 83
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "7) 경도(hardness)",
             "page": 84
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "8) 과망간산칼륨 소비량(KMnO4 demand)",
             "page": 84
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "9) 냄새⋅맛(odor⋅taste)",
             "page": 84
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "10) 색도(color)",
             "page": 84
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "11) 음이온 계면활성제(alkyl benzene sulfonate)",
             "page": 84
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "12) 수소이온농도(pH)",
             "page": 84
         },
         {
-            "level": 2,
+            "level": 1,
             "chapter": "5.3 수질오염현황",
             "page": 85
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "13) 염소이온(chloride ion, Cl-)",
             "page": 85
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "14) 철(Fe)",
             "page": 85
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "15) 탁도(turbidity)",
             "page": 85
         },
         {
-            "level": 3,
-            "chapter": "1) 수질오염의 특성과 원인",
+            "level": 2,
+            "chapter": "1) 수질오염의 특성과 원인 수질오염",
             "page": 85
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "2) 수질오염의 지표",
             "page": 85
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "(1) 수소이온농도(pH)",
             "page": 85
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "(2) 용존산소(dissolved oxygen, DO)",
             "page": 85
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "3) 한국의 먹는 물 사건",
             "page": 86
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "(3) 생물화학적 산소요구량(biochemical oxygen demand, BOD)",
             "page": 86
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "(4) 화학적 산소요구량(chemical oxygen demand, COD)",
             "page": 86
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "(5) 부유물질(suspended solids, SS)",
             "page": 86
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "(6) 세균(bacteria)",
             "page": 86
+        },
+        {
+            "level": 1,
+            "chapter": "제4장 생활오염",
+            "page": 87
         },
         {
             "level": 2,
@@ -987,9 +1202,29 @@
             "page": 88
         },
         {
+            "level": 3,
+            "chapter": "4) 유독성 유기 또는 무기물질의 영향",
+            "page": 88
+        },
+        {
+            "level": 3,
+            "chapter": "5) 지질 기타 원인에 의한 영향",
+            "page": 88
+        },
+        {
+            "level": 3,
+            "chapter": "6) 방사능 물질",
+            "page": 88
+        },
+        {
             "level": 1,
             "chapter": "6. 식품안전",
             "page": 89
+        },
+        {
+            "level": 1,
+            "chapter": "제4장 생활오염",
+            "page": 91
         },
         {
             "level": 2,
@@ -1022,32 +1257,37 @@
             "page": 94
         },
         {
-            "level": 4,
+            "level": 1,
+            "chapter": "제4장 생활오염",
+            "page": 95
+        },
+        {
+            "level": 3,
             "chapter": "(4) 캠필로박터 식중독",
             "page": 95
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "(5) 클로스트리디움 퍼프린젠스균",
             "page": 95
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "(6) 바이러스 식중독",
             "page": 95
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "2) 화학물질에 의한 식중독",
             "page": 96
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "3) 새로운 위협의 식품",
             "page": 96
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "(1) 유전자재조합식품(genetically modified organism, GMO)",
             "page": 96
         },
@@ -1057,27 +1297,27 @@
             "page": 97
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "(2) 프리온",
             "page": 97
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "1) 식중독 치료",
             "page": 98
         },
         {
-            "level": 3,
+            "level": 2,
             "chapter": "2) 안전대책",
             "page": 98
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "(1) 감시",
             "page": 98
         },
         {
-            "level": 4,
+            "level": 3,
             "chapter": "(2) 관리",
             "page": 98
         },
@@ -1105,13 +1345,48 @@
             "level": 2,
             "chapter": "7.4 다환방향족탄화수소(polycyclic aromatic hydrocarbons, PAHs)",
             "page": 102
+        },
+        {
+            "level": 1,
+            "chapter": "제4장 생활오염",
+            "page": 103
         }
     ],
     "_meta": {
         "source_pdf": "3편3,4장(2021).pdf",
         "provider": "gemma",
         "model": "google/gemma-4-31B-it",
-        "elapsed_seconds": 4909.607,
-        "elapsed": "1h 21m 49.6s"
+        "elapsed_seconds": 2099.792,
+        "elapsed": "34m 59.8s",
+        "input_mode": "extracted_pdf_layout_text",
+        "extracted_pages": 103,
+        "extracted_chars": 343956,
+        "gemma_extraction_mode": "layout",
+        "layout_line_count": 4115,
+        "layout_font_count": 2,
+        "plain_extracted_chars": 169004,
+        "chunked": true,
+        "chunk_count": 27,
+        "initial_chunk_count": 27,
+        "processed_chunk_count": 27,
+        "gemma_text_single_max_chars": 15000,
+        "gemma_text_chunk_chars": 15000,
+        "gemma_backend": "transformers",
+        "gemma_model": "google/gemma-4-31B-it",
+        "gemma_device_map": "auto",
+        "gemma_torch_dtype": "auto",
+        "gpu_available": true,
+        "gpu_used": true,
+        "gpu_device_count": 2,
+        "gpu_devices": [
+            "NVIDIA H200",
+            "NVIDIA H200"
+        ],
+        "model_primary_device": "cuda:0",
+        "model_devices": [
+            "cuda:0",
+            "cuda:1"
+        ],
+        "hf_device_map_present": true
     }
 }
