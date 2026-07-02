@@ -9,6 +9,7 @@ import shutil
 import sys
 import tempfile
 import time
+import traceback
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -320,6 +321,32 @@ def get_api_key(provider: str) -> str:
 
 def message_of(error: Exception) -> str:
     return f"{type(error).__name__}: {error}"
+
+
+def attach_error_debug(error: Exception, **debug: Any) -> Exception:
+    existing = getattr(error, "_ai_debug", None)
+    if isinstance(existing, dict):
+        existing.update(debug)
+        debug = existing
+    try:
+        setattr(error, "_ai_debug", debug)
+    except Exception:
+        pass
+    return error
+
+
+def error_debug_info(error: Exception) -> dict[str, Any]:
+    current: BaseException | None = error
+    seen: set[int] = set()
+
+    while current is not None and id(current) not in seen:
+        seen.add(id(current))
+        debug = getattr(current, "_ai_debug", None)
+        if isinstance(debug, dict):
+            return debug
+        current = current.__cause__ or current.__context__
+
+    return {}
 
 
 def is_cuda_out_of_memory_error(error: Exception) -> bool:
@@ -2625,6 +2652,16 @@ def request_gemma_json_text(
         try:
             return parse_json_response_text(raw_text, provider="gemma"), raw_text
         except Exception as error:
+            attach_error_debug(
+                error,
+                provider="gemma",
+                model=model,
+                label=label,
+                parse_attempt=parse_attempt,
+                retry_count=retry_count,
+                raw_response=raw_text,
+                raw_response_chars=len(raw_text),
+            )
             last_error = error
             last_raw_text = raw_text
             if parse_attempt >= retry_count:
@@ -2794,6 +2831,15 @@ def generate_toc_from_pdf_gemma_text(
             file=sys.stderr,
             flush=True,
         )
+        merge_error_log = write_error_log(
+            pdf_path=pdf_path,
+            args=args,
+            error=merge_error,
+            stage="Gemma chunked TOC merge fallback",
+            fatal=False,
+        )
+        if merge_error_log is not None:
+            print(f"  Merge error log saved: {merge_error_log}", file=sys.stderr, flush=True)
         toc = merge_partial_tocs_locally(partial_tocs, fallback_title=pdf_path.stem, max_depth=args.max_depth)
         final_raw_text = json.dumps(
             {
@@ -2919,6 +2965,97 @@ def safe_filename_part(value: str) -> str:
     return value or "unknown_model"
 
 
+def unique_output_path(path: Path) -> Path:
+    if not path.exists():
+        return path
+
+    for index in range(2, 10000):
+        candidate = path.with_name(f"{path.stem}_{index}{path.suffix}")
+        if not candidate.exists():
+            return candidate
+
+    raise RuntimeError(f"Could not create unique output path for: {path}")
+
+
+def jsonable_debug_value(value: Any) -> Any:
+    if value is None or isinstance(value, (str, int, float, bool)):
+        return value
+
+    if isinstance(value, list):
+        return [jsonable_debug_value(item) for item in value]
+
+    if isinstance(value, dict):
+        return {str(key): jsonable_debug_value(item) for key, item in value.items()}
+
+    return str(value)
+
+
+def write_error_log(
+    pdf_path: Path,
+    args: argparse.Namespace,
+    error: Exception,
+    elapsed_seconds: float | None = None,
+    stage: str | None = None,
+    fatal: bool = True,
+) -> Path | None:
+    if getattr(args, "no_error_log", False):
+        return None
+
+    debug = error_debug_info(error)
+    output_dir = Path(getattr(args, "output_dir", OUTPUT_DIR))
+    error_dir = output_dir / "error_logs"
+    error_dir.mkdir(parents=True, exist_ok=True)
+
+    timestamp = time.strftime("%Y%m%d_%H%M%S")
+    pdf_part = safe_filename_part(pdf_path.stem)
+    provider_part = safe_filename_part(str(getattr(args, "provider", "unknown")))
+    model_text = str(debug.get("model") or getattr(args, "model", "unknown"))
+    model_part = safe_filename_part(model_text)
+    stage_text = stage or str(debug.get("label") or "error")
+    stage_part = safe_filename_part(stage_text)[:80]
+    base_name = f"{timestamp}_{pdf_part}_{provider_part}_{model_part}_{stage_part}"
+
+    raw_text = str(debug.get("raw_response") or "")
+    raw_response_file: Path | None = None
+    if raw_text:
+        raw_response_file = unique_output_path(error_dir / f"{base_name}_raw_response.txt")
+        raw_response_file.write_text(raw_text, encoding="utf-8")
+
+    debug_payload = {
+        str(key): jsonable_debug_value(value)
+        for key, value in debug.items()
+        if key != "raw_response"
+    }
+
+    payload: dict[str, Any] = {
+        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "fatal": bool(fatal),
+        "stage": stage_text,
+        "source_pdf": str(pdf_path),
+        "source_pdf_name": pdf_path.name,
+        "provider": getattr(args, "provider", None),
+        "model": model_text,
+        "error_type": type(error).__name__,
+        "error_message": str(error),
+        "error": message_of(error),
+        "debug": debug_payload,
+        "traceback": "".join(traceback.format_exception(type(error), error, error.__traceback__)),
+    }
+
+    if elapsed_seconds is not None:
+        payload["elapsed_seconds"] = round(float(elapsed_seconds), 3)
+        payload["elapsed"] = format_elapsed(elapsed_seconds)
+
+    if raw_response_file is not None:
+        payload["raw_response_file"] = str(raw_response_file)
+        payload["raw_response_chars"] = len(raw_text)
+        payload["raw_response_preview"] = raw_text[:2000]
+
+    log_file = unique_output_path(error_dir / f"{base_name}_error.json")
+    save_json(log_file, payload)
+    return log_file
+
+
 def iter_pdfs(path: Path) -> list[Path]:
     if path.is_file():
         if path.suffix.lower() != ".pdf":
@@ -2967,6 +3104,16 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> b
         elapsed_seconds = time.perf_counter() - started_at
         print(f"Failed: {pdf_path.name} / {error}", file=sys.stderr, flush=True)
         print(f"  elapsed: {format_elapsed(elapsed_seconds)} ({elapsed_seconds:.3f}s)", file=sys.stderr, flush=True)
+        error_log = write_error_log(
+            pdf_path=pdf_path,
+            args=args,
+            error=error,
+            elapsed_seconds=elapsed_seconds,
+            stage="PDF processing failed",
+            fatal=True,
+        )
+        if error_log is not None:
+            print(f"  Error log saved: {error_log}", file=sys.stderr, flush=True)
         if args.stop_on_error:
             raise
         return False
@@ -3166,6 +3313,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="Ollama think option. Examples: true, false, high. If empty, it is not sent.",
     )
     parser.add_argument("--write-raw", action="store_true", help="Also save raw response text")
+    parser.add_argument(
+        "--no-error-log",
+        action="store_true",
+        help="Disable writing error logs under output_dir/error_logs",
+    )
     parser.add_argument("--delete-uploaded-file", action="store_true", help="Delete uploaded files after processing. Meaningful only for Gemini/OpenAI.")
     parser.add_argument("--stop-on-error", action="store_true", help="Stop immediately when any PDF fails during multi-PDF processing")
 
