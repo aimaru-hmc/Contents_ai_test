@@ -10,10 +10,9 @@ import sys
 import tempfile
 import time
 import traceback
-import urllib.error
-import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+from threading import Lock
 from typing import Any, Callable, Iterable
 
 try:
@@ -33,24 +32,19 @@ DEFAULT_ALL_PROVIDERS = ("gemini", "openai", "claude")
 ALL_PROVIDERS_VALUE = "all"
 DEFAULT_PROVIDER = os.getenv("AI_PROVIDER", ALL_PROVIDERS_VALUE).strip().lower() or ALL_PROVIDERS_VALUE
 DEFAULT_GEMMA_HF_MODEL = "google/gemma-4-31B-it"
-DEFAULT_GEMMA_OLLAMA_MODEL = "gemma4:31b"
-DEFAULT_GEMMA_BACKEND = os.getenv("GEMMA_BACKEND", "transformers").strip().lower() or "transformers"
 
 DEFAULT_MODEL_BY_PROVIDER = {
     "gemini": os.getenv("GEMINI_MODEL", os.getenv("AI_MODEL", "gemini-3.1-pro-preview")),
     "openai": os.getenv("OPENAI_MODEL", os.getenv("AI_MODEL", "gpt-5.5")),
     "claude": os.getenv("CLAUDE_MODEL", os.getenv("AI_MODEL", "claude-opus-4-8")),
-    "gemma": os.getenv("GEMMA_MODEL", os.getenv("OLLAMA_MODEL", os.getenv("AI_MODEL", DEFAULT_GEMMA_HF_MODEL))),
+    "gemma": os.getenv("GEMMA_MODEL", os.getenv("AI_MODEL", DEFAULT_GEMMA_HF_MODEL)),
 }
 
 DEFAULT_FALLBACK_MODELS_BY_PROVIDER = {
     "gemini": os.getenv("GEMINI_FALLBACK_MODELS", os.getenv("AI_FALLBACK_MODELS", DEFAULT_MODEL_BY_PROVIDER["gemini"])),
     "openai": os.getenv("OPENAI_FALLBACK_MODELS", os.getenv("AI_FALLBACK_MODELS", DEFAULT_MODEL_BY_PROVIDER["openai"])),
     "claude": os.getenv("CLAUDE_FALLBACK_MODELS", os.getenv("AI_FALLBACK_MODELS", DEFAULT_MODEL_BY_PROVIDER["claude"])),
-    "gemma": os.getenv(
-        "GEMMA_FALLBACK_MODELS",
-        os.getenv("OLLAMA_FALLBACK_MODELS", os.getenv("AI_FALLBACK_MODELS", DEFAULT_MODEL_BY_PROVIDER["gemma"])),
-    ),
+    "gemma": os.getenv("GEMMA_FALLBACK_MODELS", os.getenv("AI_FALLBACK_MODELS", DEFAULT_MODEL_BY_PROVIDER["gemma"])),
 }
 
 DEFAULT_AI_RETRIES = int(os.getenv("AI_MAX_RETRIES", os.getenv("GEMINI_MAX_RETRIES", "5")))
@@ -61,20 +55,15 @@ DEFAULT_MAX_OUTPUT_TOKENS_BY_PROVIDER = {
     "gemini": int(os.getenv("GEMINI_MAX_OUTPUT_TOKENS", os.getenv("AI_MAX_OUTPUT_TOKENS", "32768"))),
     "openai": int(os.getenv("OPENAI_MAX_OUTPUT_TOKENS", os.getenv("AI_MAX_OUTPUT_TOKENS", "32768"))),
     "claude": int(os.getenv("CLAUDE_MAX_OUTPUT_TOKENS", os.getenv("AI_MAX_OUTPUT_TOKENS", "32768"))),
-    "gemma": int(os.getenv("GEMMA_MAX_OUTPUT_TOKENS", os.getenv("OLLAMA_MAX_OUTPUT_TOKENS", os.getenv("AI_MAX_OUTPUT_TOKENS", "8192")))),
+    "gemma": int(os.getenv("GEMMA_MAX_OUTPUT_TOKENS", os.getenv("AI_MAX_OUTPUT_TOKENS", "8192"))),
 }
 DEFAULT_GEMINI_THINKING_BUDGET = int(os.getenv("GEMINI_THINKING_BUDGET", "256"))
 DEFAULT_CLAUDE_TEXT_SINGLE_MAX_CHARS = int(os.getenv("CLAUDE_TEXT_SINGLE_MAX_CHARS", "350000"))
 DEFAULT_CLAUDE_TEXT_CHUNK_CHARS = int(os.getenv("CLAUDE_TEXT_CHUNK_CHARS", "120000"))
 DEFAULT_CLAUDE_TEXT_MIN_CHUNK_CHARS = int(os.getenv("CLAUDE_TEXT_MIN_CHUNK_CHARS", "30000"))
-DEFAULT_OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434").strip() or "http://localhost:11434"
-DEFAULT_OLLAMA_REQUEST_TIMEOUT = int(os.getenv("OLLAMA_REQUEST_TIMEOUT", "600"))
-DEFAULT_GEMMA_TEXT_SINGLE_MAX_CHARS = int(os.getenv("GEMMA_TEXT_SINGLE_MAX_CHARS", os.getenv("OLLAMA_TEXT_SINGLE_MAX_CHARS", "220000")))
-DEFAULT_GEMMA_TEXT_CHUNK_CHARS = int(os.getenv("GEMMA_TEXT_CHUNK_CHARS", os.getenv("OLLAMA_TEXT_CHUNK_CHARS", "220000")))
-DEFAULT_GEMMA_TEXT_MIN_CHUNK_CHARS = int(os.getenv("GEMMA_TEXT_MIN_CHUNK_CHARS", os.getenv("OLLAMA_TEXT_MIN_CHUNK_CHARS", "10000")))
-DEFAULT_GEMMA_KEEP_ALIVE = os.getenv("GEMMA_KEEP_ALIVE", os.getenv("OLLAMA_KEEP_ALIVE", "5m"))
-DEFAULT_GEMMA_THINK = os.getenv("GEMMA_THINK", os.getenv("OLLAMA_THINK", "")).strip()
-DEFAULT_GEMMA_CONTEXT_WINDOW = int(os.getenv("GEMMA_CONTEXT_WINDOW", os.getenv("OLLAMA_CONTEXT_WINDOW", "32768")))
+DEFAULT_GEMMA_TEXT_SINGLE_MAX_CHARS = int(os.getenv("GEMMA_TEXT_SINGLE_MAX_CHARS", "220000"))
+DEFAULT_GEMMA_TEXT_CHUNK_CHARS = int(os.getenv("GEMMA_TEXT_CHUNK_CHARS", "220000"))
+DEFAULT_GEMMA_TEXT_MIN_CHUNK_CHARS = int(os.getenv("GEMMA_TEXT_MIN_CHUNK_CHARS", "10000"))
 DEFAULT_GEMMA_DEVICE_MAP = os.getenv("GEMMA_DEVICE_MAP", "auto").strip() or "auto"
 DEFAULT_GEMMA_TORCH_DTYPE = os.getenv("GEMMA_TORCH_DTYPE", os.getenv("GEMMA_DTYPE", "auto")).strip() or "auto"
 DEFAULT_GEMMA_EXTRACTION_MODE = os.getenv("GEMMA_EXTRACTION_MODE", "layout").strip().lower() or "layout"
@@ -178,7 +167,6 @@ def normalize_provider(provider: str | None) -> str:
         "anthropic": "claude",
         "open-ai": "openai",
         "google": "gemini",
-        "ollama": "gemma",
         "local": "gemma",
     }
     provider = aliases.get(provider, provider)
@@ -196,7 +184,6 @@ def resolve_providers(provider_option: str | None) -> list[str]:
         "anthropic": "claude",
         "open-ai": "openai",
         "google": "gemini",
-        "ollama": "gemma",
         "local": "gemma",
     }
     provider_text = aliases.get(provider_text, provider_text)
@@ -2187,22 +2174,6 @@ def generate_toc_from_pdf_claude(pdf_path: Path, args: argparse.Namespace, promp
 _GEMMA_TRANSFORMERS_CACHE: dict[tuple[str, str, str], dict[str, Any]] = {}
 
 
-def normalize_gemma_backend(backend: str | None) -> str:
-    backend = clean_text(backend).lower() or DEFAULT_GEMMA_BACKEND
-    aliases = {
-        "hf": "transformers",
-        "huggingface": "transformers",
-        "hugging-face": "transformers",
-        "local": "transformers",
-        "torch": "transformers",
-        "api": "ollama",
-    }
-    backend = aliases.get(backend, backend)
-    if backend not in {"transformers", "ollama"}:
-        raise ValueError("--gemma-backend must be either transformers or ollama.")
-    return backend
-
-
 def normalize_gemma_extraction_mode(mode: str | None) -> str:
     mode = clean_text(mode).lower() or DEFAULT_GEMMA_EXTRACTION_MODE
     aliases = {
@@ -2259,122 +2230,6 @@ def normalize_gemma_hf_model(model: str) -> str:
     return model
 
 
-def normalize_gemma_ollama_model(model: str) -> str:
-    model = clean_text(model)
-    if model.startswith("models/"):
-        model = model.split("/", 1)[1]
-
-    lower = model.lower()
-    if lower in {"latest", "highest", "max"}:
-        return DEFAULT_GEMMA_OLLAMA_MODEL
-
-    if lower in {"e2b", "e4b", "12b", "26b", "31b"}:
-        return f"gemma4:{lower}"
-    if lower == "27b":
-        return "gemma3:27b"
-
-    if lower.startswith("google/"):
-        lower = lower.split("/", 1)[1]
-
-    if lower.startswith("gemma-4-"):
-        if "31b" in lower:
-            return "gemma4:31b"
-        if "26b" in lower:
-            return "gemma4:26b"
-        if "12b" in lower:
-            return "gemma4:12b"
-        if "e4b" in lower:
-            return "gemma4:e4b"
-        if "e2b" in lower:
-            return "gemma4:e2b"
-
-    if lower.startswith("gemma-3-27b"):
-        return "gemma3:27b"
-
-    return model
-
-
-def normalize_gemma_model_for_backend(model: str, backend: str) -> str:
-    if backend == "ollama":
-        return normalize_gemma_ollama_model(model)
-    return normalize_gemma_hf_model(model)
-
-def normalize_ollama_base_url(base_url: str | None) -> str:
-    base_url = clean_text(base_url) or DEFAULT_OLLAMA_BASE_URL
-    return base_url.rstrip("/")
-
-
-def parse_ollama_think(value: str | None) -> bool | str | None:
-    value = clean_text(value).lower()
-    if not value:
-        return None
-    if value in {"1", "true", "yes", "on"}:
-        return True
-    if value in {"0", "false", "no", "off"}:
-        return False
-    return value
-
-
-def ollama_api_get(
-    base_url: str,
-    path: str,
-    timeout_seconds: int,
-) -> dict[str, Any]:
-    url = normalize_ollama_base_url(base_url) + path
-    request = urllib.request.Request(url=url, method="GET")
-
-    try:
-        with urllib.request.urlopen(request, timeout=max(1, int(timeout_seconds))) as response:
-            body = response.read().decode("utf-8", errors="replace")
-    except urllib.error.HTTPError as error:
-        error_body = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"Ollama API error {error.code}: {error_body}") from error
-    except urllib.error.URLError as error:
-        raise RuntimeError(f"Ollama API connection failed({url}): {error}") from error
-
-    try:
-        parsed = json.loads(body)
-    except json.JSONDecodeError as error:
-        raise RuntimeError(f"Failed to parse Ollama API response JSON: {body[:500]}") from error
-
-    if not isinstance(parsed, dict):
-        raise RuntimeError("Ollama API response must be a JSON object.")
-
-    return parsed
-
-
-def ollama_installed_model_names(base_url: str, timeout_seconds: int) -> set[str]:
-    response = ollama_api_get(base_url=base_url, path="/api/tags", timeout_seconds=timeout_seconds)
-    names: set[str] = set()
-
-    for model_info in response.get("models", []) or []:
-        if not isinstance(model_info, dict):
-            continue
-        for key in ("name", "model"):
-            name = clean_text(model_info.get(key))
-            if name:
-                names.add(name)
-
-    return names
-
-
-def ensure_ollama_model_available(model: str, args: argparse.Namespace) -> None:
-    installed_models = ollama_installed_model_names(
-        base_url=args.ollama_base_url,
-        timeout_seconds=args.ollama_request_timeout,
-    )
-
-    if model in installed_models:
-        return
-
-    installed_text = ", ".join(sorted(installed_models)) or "none"
-    raise RuntimeError(
-        f"Model '{model}' is not installed in Ollama. "
-        f"Run `ollama pull {model}` first. "
-        f"Currently installed models: {installed_text}"
-    )
-
-
 def preflight_pdf_text_extraction() -> None:
     try:
         __import__("pdfplumber")
@@ -2392,7 +2247,7 @@ def import_gemma_transformers_dependencies() -> tuple[Any, Any, Any]:
 
     if missing:
         raise RuntimeError(
-            "Missing packages required by the Gemma transformers backend: "
+            "Missing packages required by the Gemma Transformers runtime: "
             + ", ".join(missing)
             + ". Run `pip install -U transformers torch accelerate safetensors huggingface_hub` first."
         )
@@ -2402,7 +2257,7 @@ def import_gemma_transformers_dependencies() -> tuple[Any, Any, Any]:
         from transformers import AutoModelForCausalLM, AutoTokenizer
     except ImportError as error:
         raise RuntimeError(
-            "Gemma transformers backend could not import the required model classes. "
+            "Gemma Transformers runtime could not import the required model classes. "
             "Run `pip install -U transformers torch accelerate safetensors huggingface_hub` first."
         ) from error
 
@@ -2443,63 +2298,12 @@ def preflight_gemma_transformers(models: Iterable[str] | None = None) -> None:
 
 def preflight_gemma_provider(args: argparse.Namespace) -> None:
     provider_args = build_provider_args(args, "gemma")
-    backend = normalize_gemma_backend(getattr(provider_args, "gemma_backend", None))
     preflight_pdf_text_extraction()
     models = [
-        normalize_gemma_model_for_backend(model, backend)
+        normalize_gemma_hf_model(model)
         for model in parse_model_list(provider_args.model, provider_args.ai_fallback_models)
     ]
-
-    if backend == "transformers":
-        preflight_gemma_transformers(models=models)
-        return
-
-    last_error: Exception | None = None
-
-    for model in models:
-        try:
-            ensure_ollama_model_available(model=model, args=provider_args)
-            return
-        except Exception as error:
-            last_error = error
-
-    if last_error:
-        raise last_error
-
-
-def ollama_api_post(
-    base_url: str,
-    path: str,
-    payload: dict[str, Any],
-    timeout_seconds: int,
-) -> dict[str, Any]:
-    url = normalize_ollama_base_url(base_url) + path
-    data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-    request = urllib.request.Request(
-        url=url,
-        data=data,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-
-    try:
-        with urllib.request.urlopen(request, timeout=max(1, int(timeout_seconds))) as response:
-            body = response.read().decode("utf-8", errors="replace")
-    except urllib.error.HTTPError as error:
-        error_body = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"Ollama API error {error.code}: {error_body}") from error
-    except urllib.error.URLError as error:
-        raise RuntimeError(f"Ollama API connection failed({url}): {error}") from error
-
-    try:
-        parsed = json.loads(body)
-    except json.JSONDecodeError as error:
-        raise RuntimeError(f"Failed to parse Ollama API response JSON: {body[:500]}") from error
-
-    if not isinstance(parsed, dict):
-        raise RuntimeError("Ollama API response must be a JSON object.")
-
-    return parsed
+    preflight_gemma_transformers(models=models)
 
 
 def gemma_hf_token_kwargs() -> dict[str, str]:
@@ -2620,7 +2424,6 @@ def gemma_transformers_runtime_metadata(
     gpu_used = any(device_text_is_cuda(device) for device in model_devices)
 
     return {
-        "gemma_backend": "transformers",
         "gemma_model": model,
         "gemma_device_map": device_map,
         "gemma_torch_dtype": dtype_text,
@@ -2635,9 +2438,6 @@ def gemma_transformers_runtime_metadata(
 
 
 def print_gemma_runtime_metadata(metadata: dict[str, Any]) -> None:
-    if metadata.get("gemma_backend") != "transformers":
-        return
-
     devices = metadata.get("model_devices") or []
     device_text = ", ".join(str(device) for device in devices) if devices else "unknown"
     print(
@@ -2652,17 +2452,6 @@ def print_gemma_runtime_metadata(metadata: dict[str, Any]) -> None:
             file=sys.stderr,
             flush=True,
         )
-
-
-def gemma_ollama_runtime_metadata(args: argparse.Namespace, model: str) -> dict[str, Any]:
-    return {
-        "gemma_backend": "ollama",
-        "gemma_model": model,
-        "ollama_base_url": normalize_ollama_base_url(getattr(args, "ollama_base_url", DEFAULT_OLLAMA_BASE_URL)),
-        "gpu_available": None,
-        "gpu_used": None,
-        "gpu_check": "Ollama runs in a separate server process; GPU use cannot be verified from this client response.",
-    }
 
 
 def move_transformers_inputs_to_device(inputs: Any, device: Any) -> Any:
@@ -2826,100 +2615,16 @@ def generate_gemma_once_transformers(
     return {"response": text, "_runtime": bundle.get("runtime_metadata")}
 
 
-def build_gemma_payloads(
-    model: str,
-    prompt: str,
-    temperature: float,
-    max_output_tokens: int | None,
-    context_window: int | None,
-    use_schema: bool,
-    keep_alive: str | None,
-    think: str | None,
-) -> list[dict[str, Any]]:
-    base: dict[str, Any] = {
-        "model": model,
-        "prompt": prompt,
-        "system": (
-            "You are an expert at creating tables of contents for PDF textbooks and lecture materials. "
-            "Output exactly one valid JSON object. Do not output Markdown or explanations."
-        ),
-        "stream": False,
-    }
-
-    options: dict[str, Any] = {"temperature": float(temperature)}
-    if max_output_tokens:
-        options["num_predict"] = int(max_output_tokens)
-    if context_window:
-        options["num_ctx"] = int(context_window)
-    base["options"] = options
-
-    keep_alive = clean_text(keep_alive)
-    if keep_alive:
-        base["keep_alive"] = keep_alive
-
-    parsed_think = parse_ollama_think(think)
-    if parsed_think is not None:
-        base["think"] = parsed_think
-
-    payloads: list[dict[str, Any]] = []
-
-    if use_schema:
-        schema_payload = dict(base)
-        schema_payload["format"] = TOC_SCHEMA
-        payloads.append(schema_payload)
-
-    json_payload = dict(base)
-    json_payload["format"] = "json"
-    payloads.append(json_payload)
-
-    payloads.append(base)
-    return payloads
-
-
 def generate_gemma_once(
     model: str,
     prompt: str,
     args: argparse.Namespace,
 ):
-    backend = normalize_gemma_backend(getattr(args, "gemma_backend", None))
-    if backend == "transformers":
-        return generate_gemma_once_transformers(
-            model=model,
-            prompt=prompt,
-            args=args,
-        )
-
-    payloads = build_gemma_payloads(
+    return generate_gemma_once_transformers(
         model=model,
         prompt=prompt,
-        temperature=args.temperature,
-        max_output_tokens=args.max_output_tokens,
-        context_window=args.gemma_context_window,
-        use_schema=not args.no_schema,
-        keep_alive=args.gemma_keep_alive,
-        think=args.gemma_think,
+        args=args,
     )
-
-    last_error: Exception | None = None
-    for index, payload in enumerate(payloads):
-        try:
-            response = ollama_api_post(
-                base_url=args.ollama_base_url,
-                path="/api/generate",
-                payload=payload,
-                timeout_seconds=args.ollama_request_timeout,
-            )
-            response["_runtime"] = gemma_ollama_runtime_metadata(args=args, model=model)
-            return response
-        except Exception as error:
-            last_error = error
-            if index < len(payloads) - 1 and is_schema_config_error(error):
-                continue
-            raise
-
-    if last_error:
-        raise last_error
-    raise RuntimeError("Gemma response generation failed")
 
 
 def gemma_response_text(response: Any) -> str:
@@ -3304,20 +3009,16 @@ def generate_toc_from_pdf_gemma_text(
 
 
 def generate_toc_from_pdf_gemma(pdf_path: Path, args: argparse.Namespace, prompt: str) -> tuple[dict[str, Any], str, str]:
-    backend = normalize_gemma_backend(getattr(args, "gemma_backend", None))
     models = parse_model_list(args.model, args.ai_fallback_models)
     last_error: Exception | None = None
 
     for index, model in enumerate(models):
-        model = normalize_gemma_model_for_backend(model, backend)
+        model = normalize_gemma_hf_model(model)
         if index > 0:
             print(f"Trying Gemma fallback model: {model}", file=sys.stderr, flush=True)
 
         try:
-            if backend == "ollama":
-                print(f"  Using Gemma/Ollama: {normalize_ollama_base_url(args.ollama_base_url)} / {model}", flush=True)
-            else:
-                print(f"  Using Gemma/Transformers: {model}", flush=True)
+            print(f"  Using Gemma/Transformers: {model}", flush=True)
             return generate_toc_from_pdf_gemma_text(
                 model=model,
                 pdf_path=pdf_path,
@@ -3378,12 +3079,48 @@ def format_elapsed(seconds: float) -> str:
     return f"{int(hours)}h {int(remaining_minutes)}m {remaining_seconds:.1f}s"
 
 
+class TeeStream:
+    def __init__(self, console_stream: Any, log_stream: Any, lock: Lock) -> None:
+        self.console_stream = console_stream
+        self.log_stream = log_stream
+        self.lock = lock
+        self.encoding = getattr(console_stream, "encoding", "utf-8")
+
+    def write(self, text: str) -> int:
+        with self.lock:
+            self.console_stream.write(text)
+            self.console_stream.flush()
+            self.log_stream.write(text)
+            self.log_stream.flush()
+        return len(text)
+
+    def flush(self) -> None:
+        with self.lock:
+            self.console_stream.flush()
+            self.log_stream.flush()
+
+    def isatty(self) -> bool:
+        isatty = getattr(self.console_stream, "isatty", None)
+        return bool(isatty()) if callable(isatty) else False
+
+
+def timestamp_for_filename() -> str:
+    return time.strftime("%Y%m%d_%H%M%S")
+
+
+def timestamp_for_metadata() -> str:
+    return time.strftime("%Y-%m-%d %H:%M:%S")
+
+
 def add_result_metadata(
     toc: dict[str, Any],
     pdf_path: Path,
     provider: str,
     model: str,
     elapsed_seconds: float,
+    generated_timestamp: str,
+    generation_started_at: str,
+    generation_completed_at: str,
     extra_metadata: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     result = dict(toc)
@@ -3391,6 +3128,10 @@ def add_result_metadata(
         "source_pdf": pdf_path.name,
         "provider": provider,
         "model": model,
+        "generated_timestamp": generated_timestamp,
+        "generated_at": generation_completed_at,
+        "generation_started_at": generation_started_at,
+        "generation_completed_at": generation_completed_at,
         "elapsed_seconds": round(float(elapsed_seconds), 3),
         "elapsed": format_elapsed(elapsed_seconds),
     }
@@ -3418,6 +3159,17 @@ def unique_output_path(path: Path) -> Path:
             return candidate
 
     raise RuntimeError(f"Could not create unique output path for: {path}")
+
+
+def build_result_base_path(output_dir: Path, pdf_path: Path, label: str, generated_timestamp: str) -> Path:
+    label_part = safe_filename_part(label)
+    return output_dir / f"{pdf_path.stem}_{label_part}_{generated_timestamp}"
+
+
+def build_run_log_path(output_dir: Path, pdf_files: list[Path], providers: list[str], run_timestamp: str) -> Path:
+    pdf_part = pdf_files[0].stem if len(pdf_files) == 1 else "batch"
+    provider_part = safe_filename_part("-".join(providers))
+    return output_dir / "logs" / f"{pdf_part}_{provider_part}_{run_timestamp}_log.txt"
 
 
 def jsonable_debug_value(value: Any) -> Any:
@@ -3512,6 +3264,7 @@ def iter_pdfs(path: Path) -> list[Path]:
 
 
 def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> bool:
+    generation_started_at = timestamp_for_metadata()
     print(f"Processing started: {pdf_path.name}", flush=True)
     print(f"  provider: {args.provider}", flush=True)
     started_at = time.perf_counter()
@@ -3519,20 +3272,35 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> b
     try:
         toc, raw_text, used_model = generate_toc_from_pdf(pdf_path=pdf_path, args=args, user_prompt=user_prompt)
         elapsed_seconds = time.perf_counter() - started_at
-        model_name_for_file = safe_filename_part(used_model)
-        output_file = Path(args.output_dir) / f"{pdf_path.stem}_{args.provider}_{model_name_for_file}_toc.json"
+        generation_completed_at = timestamp_for_metadata()
+        generated_timestamp = timestamp_for_filename()
+        result_base_path = build_result_base_path(
+            output_dir=Path(args.output_dir),
+            pdf_path=pdf_path,
+            label=args.provider,
+            generated_timestamp=generated_timestamp,
+        )
+        output_file = unique_output_path(result_base_path.with_name(f"{result_base_path.name}_toc.json"))
+        extra_metadata = dict(getattr(args, "_ai_processing_metadata", None) or {})
+        if getattr(args, "_ai_run_timestamp", None):
+            extra_metadata["run_timestamp"] = getattr(args, "_ai_run_timestamp")
+        if getattr(args, "_ai_run_log_file", None):
+            extra_metadata["run_log_file"] = getattr(args, "_ai_run_log_file")
         result = add_result_metadata(
             toc=toc,
             pdf_path=pdf_path,
             provider=args.provider,
             model=used_model,
             elapsed_seconds=elapsed_seconds,
-            extra_metadata=getattr(args, "_ai_processing_metadata", None),
+            generated_timestamp=generated_timestamp,
+            generation_started_at=generation_started_at,
+            generation_completed_at=generation_completed_at,
+            extra_metadata=extra_metadata,
         )
         save_json(output_file, result)
 
         if args.write_raw:
-            raw_file = Path(args.output_dir) / f"{pdf_path.stem}_{args.provider}_{model_name_for_file}_raw_response.txt"
+            raw_file = unique_output_path(result_base_path.with_name(f"{result_base_path.name}_raw_response.txt"))
             raw_file.parent.mkdir(parents=True, exist_ok=True)
             raw_file.write_text(raw_text, encoding="utf-8")
             print(f"Raw response saved: {raw_file}", flush=True)
@@ -3697,30 +3465,14 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="Minimum chunk size when splitting failed Claude chunks into smaller chunks",
     )
     parser.add_argument(
-        "--gemma-backend",
-        default=DEFAULT_GEMMA_BACKEND,
-        help="Gemma execution backend. transformers runs directly with Hugging Face/torch; ollama uses the Ollama API.",
-    )
-    parser.add_argument(
-        "--ollama-base-url",
-        default=DEFAULT_OLLAMA_BASE_URL,
-        help="Ollama API base URL used with --gemma-backend ollama",
-    )
-    parser.add_argument(
-        "--ollama-request-timeout",
-        type=int,
-        default=DEFAULT_OLLAMA_REQUEST_TIMEOUT,
-        help="Ollama request timeout in seconds used with --gemma-backend ollama",
-    )
-    parser.add_argument(
         "--gemma-device-map",
         default=DEFAULT_GEMMA_DEVICE_MAP,
-        help="transformers device_map value used with --gemma-backend transformers",
+        help="Transformers device_map value used by Gemma.",
     )
     parser.add_argument(
         "--gemma-torch-dtype",
         default=DEFAULT_GEMMA_TORCH_DTYPE,
-        help="dtype used with --gemma-backend transformers. Examples: auto, bfloat16, float16",
+        help="dtype used by Gemma/Transformers. Examples: auto, bfloat16, float16",
     )
     parser.add_argument(
         "--gemma-extraction-mode",
@@ -3746,23 +3498,13 @@ def build_arg_parser() -> argparse.ArgumentParser:
         default=DEFAULT_GEMMA_TEXT_MIN_CHUNK_CHARS,
         help="Minimum chunk size when splitting failed Gemma chunks into smaller chunks",
     )
-    parser.add_argument(
-        "--gemma-context-window",
-        type=int,
-        default=DEFAULT_GEMMA_CONTEXT_WINDOW,
-        help="Context window(num_ctx) used for Gemma/Ollama requests",
-    )
-    parser.add_argument(
-        "--gemma-keep-alive",
-        default=DEFAULT_GEMMA_KEEP_ALIVE,
-        help="Ollama model keep_alive value. If empty, it is not sent.",
-    )
-    parser.add_argument(
-        "--gemma-think",
-        default=DEFAULT_GEMMA_THINK,
-        help="Ollama think option. Examples: true, false, high. If empty, it is not sent.",
-    )
     parser.add_argument("--write-raw", action="store_true", help="Also save raw response text")
+    parser.add_argument(
+        "--log-file",
+        default=None,
+        help="Path to save a tee copy of console output. Defaults to output_dir/logs/name_provider_YYYYMMDD_HHMMSS_log.txt.",
+    )
+    parser.add_argument("--no-run-log", action="store_true", help="Disable writing the console output run log")
     parser.add_argument(
         "--no-error-log",
         action="store_true",
@@ -3783,7 +3525,7 @@ def main() -> int:
 
     if args.gemma:
         provider_text = clean_text(args.provider).lower()
-        if provider_text and provider_text not in {"gemma", "ollama", "local"}:
+        if provider_text and provider_text not in {"gemma", "local"}:
             parser.error("--gemma can only be used with --provider gemma.")
         args.provider = "gemma"
 
@@ -3794,7 +3536,6 @@ def main() -> int:
 
     if "gemma" in providers:
         try:
-            args.gemma_backend = normalize_gemma_backend(args.gemma_backend)
             args.gemma_extraction_mode = normalize_gemma_extraction_mode(args.gemma_extraction_mode)
         except ValueError as error:
             parser.error(str(error))
@@ -3807,37 +3548,65 @@ def main() -> int:
 
     args.max_depth = max(1, min(int(args.max_depth), 10))
 
+    run_timestamp = timestamp_for_filename()
+    setattr(args, "_ai_run_timestamp", run_timestamp)
+    Path(args.output_dir).mkdir(parents=True, exist_ok=True)
     user_prompt = load_prompt(args)
     pdf_files = iter_pdfs(Path(args.path))
 
-    if not pdf_files:
-        print("No PDF files to process.", flush=True)
-        return 0
-
-    if "gemma" in providers:
-        try:
-            preflight_gemma_provider(args)
-        except Exception as error:
-            print(f"Gemma preflight failed: {error}", file=sys.stderr, flush=True)
-            return 1
-
-    Path(args.output_dir).mkdir(parents=True, exist_ok=True)
-
-    success_count = 0
-    total_count = len(pdf_files) * len(providers)
-    for pdf_path in pdf_files:
-        results = process_pdf_with_providers(
-            pdf_path=pdf_path,
-            args=args,
-            providers=providers,
-            user_prompt=user_prompt,
+    original_stdout = sys.stdout
+    original_stderr = sys.stderr
+    log_file_handle = None
+    log_path: Path | None = None
+    if not args.no_run_log:
+        configured_log_file = clean_text(args.log_file)
+        log_path = (
+            Path(configured_log_file)
+            if configured_log_file
+            else build_run_log_path(Path(args.output_dir), pdf_files, providers, run_timestamp)
         )
-        success_count += sum(1 for success in results.values() if success)
+        log_path.parent.mkdir(parents=True, exist_ok=True)
+        log_file_handle = log_path.open("a", encoding="utf-8", buffering=1)
+        log_lock = Lock()
+        sys.stdout = TeeStream(original_stdout, log_file_handle, log_lock)
+        sys.stderr = TeeStream(original_stderr, log_file_handle, log_lock)
+        setattr(args, "_ai_run_log_file", str(log_path))
+        print(f"Run log saved: {log_path}", flush=True)
 
-    failed_count = total_count - success_count
-    print(f"Processing result: success {success_count} / failed {failed_count}", flush=True)
+    try:
+        if not pdf_files:
+            print("No PDF files to process.", flush=True)
+            return 0
 
-    return 0 if failed_count == 0 else 1
+        if "gemma" in providers:
+            try:
+                preflight_gemma_provider(args)
+            except Exception as error:
+                print(f"Gemma preflight failed: {error}", file=sys.stderr, flush=True)
+                return 1
+
+        success_count = 0
+        total_count = len(pdf_files) * len(providers)
+        for pdf_path in pdf_files:
+            results = process_pdf_with_providers(
+                pdf_path=pdf_path,
+                args=args,
+                providers=providers,
+                user_prompt=user_prompt,
+            )
+            success_count += sum(1 for success in results.values() if success)
+
+        failed_count = total_count - success_count
+        print(f"Processing result: success {success_count} / failed {failed_count}", flush=True)
+
+        return 0 if failed_count == 0 else 1
+    finally:
+        if log_file_handle is not None:
+            if log_path is not None:
+                print(f"Run log saved: {log_path}", flush=True)
+            sys.stdout = original_stdout
+            sys.stderr = original_stderr
+            log_file_handle.close()
 
 
 if __name__ == "__main__":
