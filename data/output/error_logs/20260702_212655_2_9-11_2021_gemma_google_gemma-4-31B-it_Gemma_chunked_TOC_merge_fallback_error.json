@@ -1,0 +1,24 @@
+{
+    "timestamp": "2026-07-02 21:26:55",
+    "fatal": false,
+    "stage": "Gemma chunked TOC merge fallback",
+    "source_pdf": "data/input/부교재1/1권-한글/2편9-11장(2021).pdf",
+    "source_pdf_name": "2편9-11장(2021).pdf",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "error_type": "JSONDecodeError",
+    "error_message": "Expecting ',' delimiter: line 1 column 1363 (char 1362)",
+    "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 1363 (char 1362)",
+    "debug": {
+        "provider": "gemma",
+        "model": "google/gemma-4-31B-it",
+        "label": "Gemma chunked TOC merge(google/gemma-4-31B-it)",
+        "parse_attempt": 5,
+        "retry_count": 5,
+        "raw_response_chars": 2288
+    },
+    "traceback": "Traceback (most recent call last):\n  File \"/raid/workspace/ykh1030_workspace/Contents_ai_test/ai_gemma.py\", line 3183, in generate_toc_from_pdf_gemma_text\n    parsed, final_raw_text = request_gemma_json_text(\n                             ~~~~~~~~~~~~~~~~~~~~~~~^\n        model=model,\n        ^^^^^^^^^^^^\n    ...<2 lines>...\n        label=f\"Gemma chunked TOC merge({model})\",\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/raid/workspace/ykh1030_workspace/Contents_ai_test/ai_gemma.py\", line 2985, in request_gemma_json_text\n    return parse_json_response_text(raw_text, provider=\"gemma\"), raw_text\n           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/raid/workspace/ykh1030_workspace/Contents_ai_test/ai_gemma.py\", line 700, in parse_json_response_text\n    raise last_error\n  File \"/raid/workspace/ykh1030_workspace/Contents_ai_test/ai_gemma.py\", line 694, in parse_json_response_text\n    data = json.loads(candidate)\n  File \"/home/ykh1030/miniconda3/lib/python3.13/json/__init__.py\", line 352, in loads\n    return _default_decoder.decode(s)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"/home/ykh1030/miniconda3/lib/python3.13/json/decoder.py\", line 345, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ykh1030/miniconda3/lib/python3.13/json/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~~^^^^^^^^\njson.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 1363 (char 1362)\n",
+    "raw_response_file": "data/output/error_logs/20260702_212655_2_9-11_2021_gemma_google_gemma-4-31B-it_Gemma_chunked_TOC_merge_fallback_raw_response.txt",
+    "raw_response_chars": 2288,
+    "raw_response_preview": "{\n  \"title\": \"제9장 근거기반의료와 임상적 의사결정\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"1. 개념과 발전배경\",\n      \"page\": 1\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1.1 근거기반의료의 개념\",\n      \"page\": 1\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1.2 근거기반의료의 배경\",\n      \"page\": 2\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"2. 접근과정과 전략\",\n      \"page\": 3\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2.1 근거기반의료를 이용한 임상문제 해결 과정\",\n      \"page\": 3\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2.2 임상문제의 핵심질문 선정(PICO)\",\n      \"page\": 6\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2.3 임상문제에 대한 정보 검색\",\n      \"page\": 6\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1) 근거기반의료 자료원\",\n      \"page\": 6\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"(1) 요약 및 지침(summaries and guidelines)\",\n      \"page\": 7\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"(2) 사전에 비평된 연구(preappraised research)\",\n      \"page\": 7\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"(3) 사전에 비평되지 않은 연구(nonpreappraised research)\",\n      \"page\": 7\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2) 문헌검색과 활용\",\n      \"page\": 7\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"(1) 자료원의 종류 및 특징\",\n      \"page\": 7\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"① 일반 검색원\",\n      \"page\": 7\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"② 특정주제별 검색원\",\n      \"page\": 8\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"③ 이차 자료 검색원 및 기타 검색원\",\n      \"page\": 8\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"④ 국내 문헌 데이터베이스\",\n      \"page\": 8\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"(2) 문헌검색 과정\",\n      \"page\": 9\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"① PICO(핵심질문)의 선정\",\n      \"page\": 9\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"② 주요검색어의 선정 및 검색전략 수립\",\n      \"page\": 9\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"2.4 근거의 수준과 평가\",\n      \"page\": 9\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"2.5 근거의 적용과 자가 평가\",\n      \"page\": 10\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"3"
+}

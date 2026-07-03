@@ -1,0 +1,132 @@
+{
+  "title": "제9장 근거기반의료와 임상적 의사결정",
+  "chapters": [
+    {
+      "level": 1,
+      "chapter": "1. 개념과 발전배경",
+      "page": 1
+    },
+    {
+      "level": 2,
+      "chapter": "1.1 근거기반의료의 개념",
+      "page": 1
+    },
+    {
+      "level": 2,
+      "chapter": "1.2 근거기반의료의 배경",
+      "page": 2
+    },
+    {
+      "level": 1,
+      "chapter": "2. 접근과정과 전략",
+      "page": 3
+    },
+    {
+      "level": 2,
+      "chapter": "2.1 근거기반의료를 이용한 임상문제 해결 과정",
+      "page": 3
+    },
+    {
+      "level": 2,
+      "chapter": "2.2 임상문제의 핵심질문 선정(PICO)",
+      "page": 6
+    },
+    {
+      "level": 2,
+      "chapter": "2.3 임상문제에 대한 정보 검색",
+      "page": 6
+    },
+    {
+      "level": 3,
+      "chapter": "1) 근거기반의료 자료원",
+      "page": 6
+    },
+    {
+      "level": 4,
+      "chapter": "(1) 요약 및 지침(summaries and guidelines)",
+      "page": 7
+    },
+    {
+      "level": 4,
+      "chapter": "(2) 사전에 비평된 연구(preappraised research)",
+      "page": 7
+    },
+    {
+      "level": 4,
+      "chapter": "(3) 사전에 비평되지 않은 연구(nonpreappraised research)",
+      "page": 7
+    },
+    {
+      "level": 3,
+      "chapter": "2) 문헌검색과 활용",
+      "page": 7
+    },
+    {
+      "level": 4,
+      "chapter": "(1) 자료원의 종류 및 특징",
+      "page": 7
+    },
+    {
+      "level": 5,
+      "chapter": "① 일반 검색원",
+      "page": 7
+    },
+    {
+      "level": 2,
+      "chapter": "② 특정주제별 검색원",
+      "page": 8
+    },
+    {
+      "level": 2,
+      "chapter": "③ 이차 자료 검색원 및 기타 검색원",
+      "page": 8
+    },
+    {
+      "level": 2,
+      "chapter": "④ 국내 문헌 데이터베이스",
+      "page": 8
+    },
+    {
+      "level": 2,
+      "chapter": "(2) 문헌검색 과정",
+      "page": 9
+    },
+    {
+      "level": 3,
+      "chapter": "① PICO(핵심질문)의 선정",
+      "page": 9
+    },
+    {
+      "level": 3,
+      "chapter": "② 주요검색어의 선정 및 검색전략 수립",
+      "page": 9
+    },
+    {
+      "level": 1,
+      "chapter": "2.4 근거의 수준과 평가",
+      "page": 9
+    },
+    {
+      "level": 1,
+      "chapter": "2.5 근거의 적용과 자가 평가",
+      "page": 10
+    },
+    {
+      "level": 1,
+      "chapter": "3. 근거기반 임상적 의사결정 방법",
+      "page": 11
+    },
+    {
+      "level": 2,
+      "chapter": "3.1 과학적 근거기반 임상적 의사결정 방법",
+      "page": 11
+    },
+    {
+      "level": 3,
+      "chapter": "1) 체계적 고찰과 메타분석",
+      "page": 11
+    },
+    {
+      "level": 2,
+      "chapter": "(1) 개념",
+      "page": 1

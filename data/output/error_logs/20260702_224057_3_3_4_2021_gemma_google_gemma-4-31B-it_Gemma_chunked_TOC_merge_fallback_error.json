@@ -1,0 +1,24 @@
+{
+    "timestamp": "2026-07-02 22:40:57",
+    "fatal": false,
+    "stage": "Gemma chunked TOC merge fallback",
+    "source_pdf": "data/input/부교재2/2권-한글/3편3,4장(2021).pdf",
+    "source_pdf_name": "3편3,4장(2021).pdf",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "error_type": "JSONDecodeError",
+    "error_message": "Expecting ',' delimiter: line 1 column 1293 (char 1292)",
+    "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 1293 (char 1292)",
+    "debug": {
+        "provider": "gemma",
+        "model": "google/gemma-4-31B-it",
+        "label": "Gemma chunked TOC merge(google/gemma-4-31B-it)",
+        "parse_attempt": 5,
+        "retry_count": 5,
+        "raw_response_chars": 2277
+    },
+    "traceback": "Traceback (most recent call last):\n  File \"/raid/workspace/ykh1030_workspace/Contents_ai_test/ai_gemma.py\", line 3183, in generate_toc_from_pdf_gemma_text\n    parsed, final_raw_text = request_gemma_json_text(\n                             ~~~~~~~~~~~~~~~~~~~~~~~^\n        model=model,\n        ^^^^^^^^^^^^\n    ...<2 lines>...\n        label=f\"Gemma chunked TOC merge({model})\",\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/raid/workspace/ykh1030_workspace/Contents_ai_test/ai_gemma.py\", line 2985, in request_gemma_json_text\n    return parse_json_response_text(raw_text, provider=\"gemma\"), raw_text\n           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/raid/workspace/ykh1030_workspace/Contents_ai_test/ai_gemma.py\", line 700, in parse_json_response_text\n    raise last_error\n  File \"/raid/workspace/ykh1030_workspace/Contents_ai_test/ai_gemma.py\", line 694, in parse_json_response_text\n    data = json.loads(candidate)\n  File \"/home/ykh1030/miniconda3/lib/python3.13/json/__init__.py\", line 352, in loads\n    return _default_decoder.decode(s)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"/home/ykh1030/miniconda3/lib/python3.13/json/decoder.py\", line 345, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ykh1030/miniconda3/lib/python3.13/json/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~~^^^^^^^^\njson.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 1293 (char 1292)\n",
+    "raw_response_file": "data/output/error_logs/20260702_224057_3_3_4_2021_gemma_google_gemma-4-31B-it_Gemma_chunked_TOC_merge_fallback_raw_response.txt",
+    "raw_response_chars": 2277,
+    "raw_response_preview": "{\n  \"title\": \"3편3,4장(2021).pdf\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"제3장 화학적 요인\",\n      \"page\": 1\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"1. 유해금속\",\n      \"page\": 1\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1.1 납\",\n      \"page\": 1\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1) 납의 특성\",\n      \"page\": 1\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2) 작업환경에서의 납 노출\",\n      \"page\": 2\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3) 생활환경에서의 납 노출\",\n      \"page\": 2\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"4) 납의 체내 대사\",\n      \"page\": 2\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"(1) 흡수\",\n      \"page\": 2\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"(2) 체내순환, 분포 및 저장\",\n      \"page\": 3\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"(3) 배설\",\n      \"page\": 3\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"5) 납중독의 병리\",\n      \"page\": 3\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"(1) 헴(heme) 합성의 장해\",\n      \"page\": 3\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"(2) 적혈구에 미치는 작용\",\n      \"page\": 4\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"(3) 신기능의 장해\",\n      \"page\": 4\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"(4) 신경조직의 변화\",\n      \"page\": 4\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"6) 납중독의 임상증상\",\n      \"page\": 5\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"(1) 위장계통 장해\",\n      \"page\": 5\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"(2) 신경 근육 계통의 장해\",\n      \"page\": 5\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"(3) 중추신경계통 장해\",\n      \"page\": 5\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"7) 저농도 납 노출로 인한 건강장애\",\n      \"page\": 5\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"8) 진단\",\n      \"page\": 6\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"(1) 직업력 조사\",\n      \"page\": 6\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"(2) 병력 조사\",\n      \"page\": 6\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"(3) 임상증상\",\n      \"page\": 6\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"(4) 검사실"
+}

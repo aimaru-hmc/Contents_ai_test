@@ -1,0 +1,135 @@
+{
+  "title": "역학과 그 응용",
+  "chapters": [
+    {
+      "level": 1,
+      "chapter": "제1장 역학의 기본원리",
+      "page": 3
+    },
+    {
+      "level": 2,
+      "chapter": "1. 역학의 정의와 발전과정",
+      "page": 3
+    },
+    {
+      "level": 3,
+      "chapter": "1.1 역학의 정의와 특징",
+      "page": 3
+    },
+    {
+      "level": 3,
+      "chapter": "1.2 역학과 임상의학간의 관계",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "1.3 역학 발전의 역사적 배경",
+      "page": 5
+    },
+    {
+      "level": 4,
+      "chapter": "1) 고대-중세: 역학 개념 성립 이전",
+      "page": 5
+    },
+    {
+      "level": 4,
+      "chapter": "2) 근대-현대: 역학방법론의 논리적 배경",
+      "page": 6
+    },
+    {
+      "level": 4,
+      "chapter": "3) 역학의 기반 개념과 감염병 역학 방법론 정립",
+      "page": 6
+    },
+    {
+      "level": 2,
+      "chapter": "4) 역학의 방법론에 대한 학문적 기반 확립",
+      "page": 7
+    },
+    {
+      "level": 2,
+      "chapter": "1.4 역학의 활용과 영역",
+      "page": 8
+    },
+    {
+      "level": 3,
+      "chapter": "원인의 종류에 따른 분야",
+      "page": 8
+    },
+    {
+      "level": 3,
+      "chapter": "건강 결과의 종류에 따른 분야",
+      "page": 9
+    },
+    {
+      "level": 3,
+      "chapter": "연구가 시행되는 장소의 특성에 따른 분류",
+      "page": 9
+    },
+    {
+      "level": 3,
+      "chapter": "연구방법에 따른 분류",
+      "page": 9
+    },
+    {
+      "level": 1,
+      "chapter": "2. 질병발생 모형과 원인적 연관성",
+      "page": 11
+    },
+    {
+      "level": 2,
+      "chapter": "2.1 질병발생의 다요인설",
+      "page": 11
+    },
+    {
+      "level": 3,
+      "chapter": "1) 병인",
+      "page": 11
+    },
+    {
+      "level": 3,
+      "chapter": "2) 숙주요인 또는 인체 내부요인",
+      "page": 11
+    },
+    {
+      "level": 4,
+      "chapter": "(1) 유전적 요인",
+      "page": 11
+    },
+    {
+      "level": 3,
+      "chapter": "3) 환경요인",
+      "page": 12
+    },
+    {
+      "level": 2,
+      "chapter": "2.2 생태학적 모형과 질병관리",
+      "page": 12
+    },
+    {
+      "level": 3,
+      "chapter": "1) 역학적 삼각형",
+      "page": 12
+    },
+    {
+      "level": 3,
+      "chapter": "2) 거미줄 모형",
+      "page": 13
+    },
+    {
+      "level": 3,
+      "chapter": "3) 수레바퀴 모형",
+      "page": 13
+    },
+    {
+      "level": 2,
+      "chapter": "2.3 원인적 연관성",
+      "page": 13
+    },
+    {
+      "level": 3,
+      "chapter": "1) 과학적 추론의 철학적 배경",
+      "page": 13
+    },
+    {
+      

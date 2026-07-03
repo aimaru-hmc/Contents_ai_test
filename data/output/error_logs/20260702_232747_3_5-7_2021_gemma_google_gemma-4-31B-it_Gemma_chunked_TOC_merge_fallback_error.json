@@ -1,0 +1,24 @@
+{
+    "timestamp": "2026-07-02 23:27:47",
+    "fatal": false,
+    "stage": "Gemma chunked TOC merge fallback",
+    "source_pdf": "data/input/부교재2/2권-한글/3편5-7장(2021).pdf",
+    "source_pdf_name": "3편5-7장(2021).pdf",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "error_type": "JSONDecodeError",
+    "error_message": "Expecting ',' delimiter: line 1 column 1276 (char 1275)",
+    "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 1276 (char 1275)",
+    "debug": {
+        "provider": "gemma",
+        "model": "google/gemma-4-31B-it",
+        "label": "Gemma chunked TOC merge(google/gemma-4-31B-it)",
+        "parse_attempt": 5,
+        "retry_count": 5,
+        "raw_response_chars": 2243
+    },
+    "traceback": "Traceback (most recent call last):\n  File \"/raid/workspace/ykh1030_workspace/Contents_ai_test/ai_gemma.py\", line 3183, in generate_toc_from_pdf_gemma_text\n    parsed, final_raw_text = request_gemma_json_text(\n                             ~~~~~~~~~~~~~~~~~~~~~~~^\n        model=model,\n        ^^^^^^^^^^^^\n    ...<2 lines>...\n        label=f\"Gemma chunked TOC merge({model})\",\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/raid/workspace/ykh1030_workspace/Contents_ai_test/ai_gemma.py\", line 2985, in request_gemma_json_text\n    return parse_json_response_text(raw_text, provider=\"gemma\"), raw_text\n           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/raid/workspace/ykh1030_workspace/Contents_ai_test/ai_gemma.py\", line 700, in parse_json_response_text\n    raise last_error\n  File \"/raid/workspace/ykh1030_workspace/Contents_ai_test/ai_gemma.py\", line 694, in parse_json_response_text\n    data = json.loads(candidate)\n  File \"/home/ykh1030/miniconda3/lib/python3.13/json/__init__.py\", line 352, in loads\n    return _default_decoder.decode(s)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"/home/ykh1030/miniconda3/lib/python3.13/json/decoder.py\", line 345, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ykh1030/miniconda3/lib/python3.13/json/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~~^^^^^^^^\njson.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 1276 (char 1275)\n",
+    "raw_response_file": "data/output/error_logs/20260702_232747_3_5-7_2021_gemma_google_gemma-4-31B-it_Gemma_chunked_TOC_merge_fallback_raw_response.txt",
+    "raw_response_chars": 2243,
+    "raw_response_preview": "{\n  \"title\": \"3편5-7장(2021)\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"제5장 직업보건\",\n      \"page\": 5\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"1. 직업보건의 역사\",\n      \"page\": 1\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1.1 외국의 직업보건\",\n      \"page\": 2\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1.2 한국의 직업보건\",\n      \"page\": 3\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2. 직업보건의 정의와 목표\",\n      \"page\": 5\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.1 직업보건의 정의\",\n      \"page\": 5\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.2 직업보건사업의 목표와 기능\",\n      \"page\": 6\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.3 한국의 직업보건조직\",\n      \"page\": 7\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 정부\",\n      \"page\": 7\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 정부 산하기관\",\n      \"page\": 7\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 산업안전보건공단\",\n      \"page\": 7\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 근로복지공단\",\n      \"page\": 7\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 민간기관\",\n      \"page\": 7\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 대학 및 학회\",\n      \"page\": 7\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 사업수행기관\",\n      \"page\": 8\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 사업장 조직\",\n      \"page\": 8\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"3. 직업보건사업의 내용\",\n      \"page\": 9\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"3.1 작업환경측정 및 유해요인 관리\",\n      \"page\": 9\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"3.2 건강진단\",\n      \"page\": 10\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"3.3 근로자건강센터\",\n      \"page\": 11\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"3.4 사업장 보건관리\",\n      \"page\": 12\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"3.5 직업병감시체계\",\n      \"page\": 14\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"3.6 직장 건강증진\",\n      \"page\": 15\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"4. 직무스트레스\",\n      \"page\": 16\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"4.1 "
+}
