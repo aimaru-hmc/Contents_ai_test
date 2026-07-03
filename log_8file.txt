@@ -1,0 +1,11 @@
+Processing started: 주교재.pdf
+  provider: gemma
+  Using Gemma/Transformers: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 221 pages, 937307 chars, mode=layout
+  Gemma text chunk processing started: 120 chunks
+  Gemma chunk 1/120 request: pages 2-4
+  Gemma/Transformers model loading started: google/gemma-4-31B-it
+  Gemma/Transformers model loading completed: google/gemma-4-31B-it
+  Gemma/Transformers device check: gpu_used=True / devices=cuda:0, cuda:1
+Processing result: success 0 / failed 1
