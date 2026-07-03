@@ -355,6 +355,18 @@ def is_cuda_out_of_memory_error(error: Exception) -> bool:
     return "CUDA OUT OF MEMORY" in message or "OUTOFMEMORYERROR" in message
 
 
+def is_json_parse_error(error: Exception) -> bool:
+    if isinstance(error, json.JSONDecodeError):
+        return True
+    message = message_of(error).upper()
+    return (
+        "JSONDECODEERROR" in message
+        or "EXPECTING ',' DELIMITER" in message
+        or "EXTRA DATA" in message
+        or "UNTERMINATED STRING" in message
+    )
+
+
 def empty_torch_cuda_cache() -> None:
     try:
         import torch
@@ -696,6 +708,10 @@ def parse_json_response_text(text: str, provider: str) -> dict[str, Any]:
         except json.JSONDecodeError as error:
             last_error = error
     else:
+        if provider == "gemma":
+            loose_data = parse_loose_toc_json_text(text)
+            if loose_data is not None:
+                return loose_data
         if last_error:
             raise last_error
         raise ValueError(f"Could not find a JSON object in the {provider} response.")
@@ -704,6 +720,57 @@ def parse_json_response_text(text: str, provider: str) -> dict[str, Any]:
         raise ValueError(f"The top-level JSON value in the {provider} response must be an object.")
 
     return data
+
+
+def json_string_value(value: str) -> str:
+    try:
+        return str(json.loads(f'"{value}"'))
+    except Exception:
+        return value.replace('\\"', '"').replace("\\n", " ").strip()
+
+
+def parse_loose_toc_json_text(text: str) -> dict[str, Any] | None:
+    """Best-effort recovery for Gemma responses with missing commas between flat TOC objects."""
+    title = "Document title"
+    title_match = re.search(r'"title"\s*:\s*"((?:\\.|[^"\\])*)"', text)
+    if title_match:
+        title = clean_text(json_string_value(title_match.group(1))) or title
+
+    chapters: list[dict[str, Any]] = []
+    for match in re.finditer(r'\{[^{}]*"chapter"[^{}]*\}', text, flags=re.DOTALL):
+        object_text = match.group(0)
+        repaired = repair_json_text(object_text)
+        parsed: dict[str, Any] | None = None
+        if repaired:
+            try:
+                candidate = json.loads(repaired)
+                if isinstance(candidate, dict):
+                    parsed = candidate
+            except Exception:
+                parsed = None
+
+        if parsed is None:
+            chapter_match = re.search(r'"chapter"\s*:\s*"((?:\\.|[^"\\])*)"', object_text)
+            if not chapter_match:
+                continue
+            level_match = re.search(r'"level"\s*:\s*(-?\d+)', object_text)
+            page_match = re.search(r'"page"\s*:\s*(-?\d+)', object_text)
+            parsed = {
+                "level": int(level_match.group(1)) if level_match else 1,
+                "chapter": json_string_value(chapter_match.group(1)),
+                "page": int(page_match.group(1)) if page_match else 1,
+            }
+
+        if clean_text(parsed.get("chapter")):
+            chapters.append(parsed)
+
+    if not chapters:
+        return None
+
+    return {
+        "title": title,
+        "chapters": chapters,
+    }
 
 
 def parsed_response_to_dict(parsed: Any) -> dict[str, Any] | None:
@@ -2872,6 +2939,8 @@ Some lines may start with compact layout tags:
 - [L s=<font size> r=<size/body ratio> x=<left indent> y=<vertical position> b=<bold 0/1> i=<italic 0/1> f=<font id>]
 - Use larger font size, higher size ratio, bold/italic style, indentation, numbering, and nearby body text to infer TOC levels.
 - Never copy [L ...] tags into chapter titles.
+- Ignore existing table-of-contents pages, dot-leader lines, page-number-only lines, and repeated headers/footers.
+- Output compact valid JSON only. Every object property and every array item must be separated with commas.
 
 [PDF File Name]
 {pdf_name}
@@ -2894,6 +2963,8 @@ Some lines may start with compact layout tags:
 - [L s=<font size> r=<size/body ratio> x=<left indent> y=<vertical position> b=<bold 0/1> i=<italic 0/1> f=<font id>]
 - Use larger font size, higher size ratio, bold/italic style, indentation, numbering, and nearby body text to infer TOC levels.
 - Never copy [L ...] tags into chapter titles.
+- Ignore existing table-of-contents pages, dot-leader lines, page-number-only lines, and repeated headers/footers.
+- Output compact valid JSON only. Every object property and every array item must be separated with commas.
 
 [PDF File Name]
 {pdf_name}
@@ -3056,7 +3127,10 @@ def process_gemma_text_chunk(
             raise
 
         min_chunk_chars = max(5000, int(getattr(args, "gemma_text_min_chunk_chars", DEFAULT_GEMMA_TEXT_MIN_CHUNK_CHARS)))
-        if len(str(chunk.get("text") or "")) <= min_chunk_chars or depth >= 4:
+        if is_json_parse_error(error):
+            min_chunk_chars = 1500
+        max_depth = 6 if is_json_parse_error(error) else 4
+        if len(str(chunk.get("text") or "")) <= min_chunk_chars or depth >= max_depth:
             raw_parts.append({
                 "chunk": chunk["index"],
                 "start_page": chunk["start_page"],
