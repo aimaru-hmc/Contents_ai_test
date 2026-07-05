@@ -470,6 +470,23 @@ def make_ascii_upload_name(pdf_path: Path) -> str:
     return f"{safe_stem}.pdf"
 
 
+def prepare_pdf_for_processing(pdf_path: Path) -> tuple[Path, str]:
+    """Copy PDFs with non-ASCII names to an ASCII-safe temp path for processing."""
+    if not pdf_path.exists():
+        return pdf_path, pdf_path.name
+
+    ascii_name = make_ascii_upload_name(pdf_path)
+    if ascii_name == pdf_path.name and pdf_path.suffix.lower() == ".pdf":
+        return pdf_path, pdf_path.name
+
+    temp_dir = Path(tempfile.gettempdir()) / "ai_gemma_ascii_pdfs"
+    temp_dir.mkdir(parents=True, exist_ok=True)
+    target_path = temp_dir / ascii_name
+    if not target_path.exists() or target_path.stat().st_size != pdf_path.stat().st_size:
+        shutil.copy2(pdf_path, target_path)
+    return target_path, pdf_path.name
+
+
 def strip_json_fence(text: str) -> str:
     text = str(text or "").strip()
     fence_match = re.search(r"```(?:json)?\s*(.*?)\s*```", text, re.S | re.I)
@@ -3163,7 +3180,8 @@ def unique_output_path(path: Path) -> Path:
 
 def build_result_base_path(output_dir: Path, pdf_path: Path, label: str, generated_timestamp: str) -> Path:
     label_part = safe_filename_part(label)
-    return output_dir / f"{pdf_path.stem}_{label_part}_{generated_timestamp}"
+    pdf_part = safe_filename_part(pdf_path.stem)
+    return output_dir / f"{pdf_part}_{label_part}_{generated_timestamp}"
 
 
 def build_run_log_path(output_dir: Path, pdf_files: list[Path], providers: list[str], run_timestamp: str) -> Path:
@@ -3265,12 +3283,13 @@ def iter_pdfs(path: Path) -> list[Path]:
 
 def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> bool:
     generation_started_at = timestamp_for_metadata()
-    print(f"Processing started: {pdf_path.name}", flush=True)
+    processing_pdf_path, display_name = prepare_pdf_for_processing(pdf_path)
+    print(f"Processing started: {display_name}", flush=True)
     print(f"  provider: {args.provider}", flush=True)
     started_at = time.perf_counter()
 
     try:
-        toc, raw_text, used_model = generate_toc_from_pdf(pdf_path=pdf_path, args=args, user_prompt=user_prompt)
+        toc, raw_text, used_model = generate_toc_from_pdf(pdf_path=processing_pdf_path, args=args, user_prompt=user_prompt)
         elapsed_seconds = time.perf_counter() - started_at
         generation_completed_at = timestamp_for_metadata()
         generated_timestamp = timestamp_for_filename()
@@ -3314,7 +3333,7 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> b
 
     except Exception as error:
         elapsed_seconds = time.perf_counter() - started_at
-        print(f"Failed: {pdf_path.name} / {error}", file=sys.stderr, flush=True)
+        print(f"Failed: {display_name} / {error}", file=sys.stderr, flush=True)
         print(f"  elapsed: {format_elapsed(elapsed_seconds)} ({elapsed_seconds:.3f}s)", file=sys.stderr, flush=True)
         error_log = write_error_log(
             pdf_path=pdf_path,
