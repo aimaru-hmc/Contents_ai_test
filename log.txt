@@ -1,0 +1,66 @@
+Processing started: 1편(2021).pdf
+  Running providers concurrently: gemini, openai, claude
+Processing started: 1편(2021).pdf
+  provider: gemini
+Processing started: 1편(2021).pdf
+  provider: openai
+Processing started: 1편(2021).pdf
+  provider: claude
+  Gemini PDF upload started...
+  OpenAI PDF upload started...
+  Claude TOC generation started: claude-opus-4-8
+  OpenAI PDF upload completed
+  OpenAI TOC generation started: gpt-5.5
+  Gemini PDF upload completed
+  Gemini TOC generation started: gemini-3.1-pro-preview
+  Gemini TOC generation completed: gemini-3.1-pro-preview
+Completed: data/output/1편(2021)_gemini_gemini-3.1-pro-preview_toc.json
+  model: gemini-3.1-pro-preview
+  elapsed: 19.2s (19.186s)
+  title: 건강과 질병
+  chapters: 40
+  Claude TOC generation completed: claude-opus-4-8
+Completed: data/output/1편(2021)_claude_claude-opus-4-8_toc.json
+  model: claude-opus-4-8
+  elapsed: 34.4s (34.383s)
+  title: 예방의학과 공중보건학 - 제1편 건강과 질병
+  chapters: 39
+  OpenAI TOC generation completed: gpt-5.5
+Completed: data/output/1편(2021)_openai_gpt-5.5_toc.json
+  model: gpt-5.5
+  elapsed: 52.3s (52.269s)
+  title: 제1편 건강과 질병
+  chapters: 114
+Processing started: 2편1-4장(2021).pdf
+  Running providers concurrently: gemini, openai, claude
+Processing started: 2편1-4장(2021).pdf
+  provider: gemini
+Processing started: 2편1-4장(2021).pdf
+Processing started: 2편1-4장(2021).pdf
+  provider: claude
+  provider: openai
+  Claude TOC generation started: claude-opus-4-8
+  OpenAI PDF upload started...
+  Gemini PDF upload started...
+  OpenAI PDF upload completed
+  OpenAI TOC generation started: gpt-5.5
+  Gemini PDF upload completed
+  Gemini TOC generation started: gemini-3.1-pro-preview
+  Claude TOC generation completed: claude-opus-4-8
+Completed: data/output/2편1-4장(2021)_claude_claude-opus-4-8_toc.json
+  model: claude-opus-4-8
+  elapsed: 41.8s (41.809s)
+  title: 제2편 역학과 그 응용
+  chapters: 64
+  OpenAI TOC generation completed: gpt-5.5
+Completed: data/output/2편1-4장(2021)_openai_gpt-5.5_toc.json
+  model: gpt-5.5
+  elapsed: 1m 22.9s (82.903s)
+  title: 제2편 역학과 그 응용
+  chapters: 225
+  Gemini TOC generation completed: gemini-3.1-pro-preview
+Completed: data/output/2편1-4장(2021)_gemini_gemini-3.1-pro-preview_toc.json
+  model: gemini-3.1-pro-preview
+  elapsed: 1m 38.6s (98.633s)
+  title: 제2편 역학과 그 응용
+  chapters: 219

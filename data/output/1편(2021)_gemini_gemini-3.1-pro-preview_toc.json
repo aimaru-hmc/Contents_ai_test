@@ -1,0 +1,207 @@
+{
+    "title": "제1편 건강과 질병",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "제1장 건강과 질병의 정의 및 결정요인",
+            "page": 3
+        },
+        {
+            "level": 2,
+            "chapter": "1. 건강상태와 질병상태의 개념",
+            "page": 3
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 건강 개념의 변천",
+            "page": 3
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 질병상태의 개념과 분류",
+            "page": 6
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 건강 관련 삶의 질 개념",
+            "page": 7
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 건강보호의 책임에 대한 개념 변화",
+            "page": 7
+        },
+        {
+            "level": 3,
+            "chapter": "1.5 인권으로서의 건강권",
+            "page": 8
+        },
+        {
+            "level": 2,
+            "chapter": "2. 건강과 질병의 결정요인 및 건강모형",
+            "page": 10
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 결정요인의 개념 및 인과성과 인과론",
+            "page": 10
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 건강-질병현상의 결정요인",
+            "page": 12
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 건강모형",
+            "page": 14
+        },
+        {
+            "level": 1,
+            "chapter": "제2장 예방의학과 공중보건학의 개념과 활용",
+            "page": 19
+        },
+        {
+            "level": 2,
+            "chapter": "1. 예방의학과 공중보건학의 개념",
+            "page": 19
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 의학의 분류",
+            "page": 19
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 예방의학과 공중보건학의 개념",
+            "page": 21
+        },
+        {
+            "level": 2,
+            "chapter": "2. 예방의학과 공중보건학의 내용과 적용",
+            "page": 22
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 질병 발생단계와 예방대책",
+            "page": 22
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 예방의학과 공중보건학의 내용과 활용",
+            "page": 24
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 예방의학과 공중보건학의 접근 전략",
+            "page": 25
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 예방의학과 공중보건윤리",
+            "page": 27
+        },
+        {
+            "level": 1,
+            "chapter": "제3장 예방의학과 공중보건학의 발전과 미래",
+            "page": 34
+        },
+        {
+            "level": 2,
+            "chapter": "1. 서양의 예방의학과 공중보건학의 역사",
+            "page": 34
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 고대(B.C. ? ~ A.D. 476)",
+            "page": 34
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 중세(A.D. 476 ~ 1453)",
+            "page": 35
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 르네상스와 중상주의시대(A.D. 1453 ~ 1750)",
+            "page": 36
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 근대(A.D. 1750 ~ 19세기 후반)",
+            "page": 37
+        },
+        {
+            "level": 3,
+            "chapter": "1.5 20세기 전반기(제2차 대전 종말까지)",
+            "page": 39
+        },
+        {
+            "level": 3,
+            "chapter": "1.6 20세기 후반기(제2차 대전 후)",
+            "page": 40
+        },
+        {
+            "level": 3,
+            "chapter": "1.7 21세기",
+            "page": 42
+        },
+        {
+            "level": 2,
+            "chapter": "2. 한국의 예방의학과 공중보건학의 역사",
+            "page": 42
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 삼국시대",
+            "page": 42
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 통일신라시대",
+            "page": 42
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 고려시대",
+            "page": 43
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 조선시대",
+            "page": 43
+        },
+        {
+            "level": 3,
+            "chapter": "2.5 20세기",
+            "page": 44
+        },
+        {
+            "level": 3,
+            "chapter": "2.6 21세기",
+            "page": 46
+        },
+        {
+            "level": 2,
+            "chapter": "3. 예방의학과 공중보건학의 미래",
+            "page": 47
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 서양에서 예방의학과 공중보건학의 위치와 역할",
+            "page": 47
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 한국의 예방의학과 공중보건학의 미래와 전문가의 역할",
+            "page": 49
+        }
+    ],
+    "_meta": {
+        "source_pdf": "1편(2021).pdf",
+        "provider": "gemini",
+        "model": "gemini-3.1-pro-preview",
+        "elapsed_seconds": 18.13,
+        "elapsed": "18.1s"
+    }
+}

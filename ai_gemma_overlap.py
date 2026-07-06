@@ -10,9 +10,10 @@ import sys
 import tempfile
 import time
 import traceback
+import urllib.error
+import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from threading import Lock
 from typing import Any, Callable, Iterable
 
 try:
@@ -32,19 +33,24 @@ DEFAULT_ALL_PROVIDERS = ("gemini", "openai", "claude")
 ALL_PROVIDERS_VALUE = "all"
 DEFAULT_PROVIDER = os.getenv("AI_PROVIDER", ALL_PROVIDERS_VALUE).strip().lower() or ALL_PROVIDERS_VALUE
 DEFAULT_GEMMA_HF_MODEL = "google/gemma-4-31B-it"
+DEFAULT_GEMMA_OLLAMA_MODEL = "gemma4:31b"
+DEFAULT_GEMMA_BACKEND = os.getenv("GEMMA_BACKEND", "transformers").strip().lower() or "transformers"
 
 DEFAULT_MODEL_BY_PROVIDER = {
     "gemini": os.getenv("GEMINI_MODEL", os.getenv("AI_MODEL", "gemini-3.1-pro-preview")),
     "openai": os.getenv("OPENAI_MODEL", os.getenv("AI_MODEL", "gpt-5.5")),
     "claude": os.getenv("CLAUDE_MODEL", os.getenv("AI_MODEL", "claude-opus-4-8")),
-    "gemma": os.getenv("GEMMA_MODEL", os.getenv("AI_MODEL", DEFAULT_GEMMA_HF_MODEL)),
+    "gemma": os.getenv("GEMMA_MODEL", os.getenv("OLLAMA_MODEL", os.getenv("AI_MODEL", DEFAULT_GEMMA_HF_MODEL))),
 }
 
 DEFAULT_FALLBACK_MODELS_BY_PROVIDER = {
     "gemini": os.getenv("GEMINI_FALLBACK_MODELS", os.getenv("AI_FALLBACK_MODELS", DEFAULT_MODEL_BY_PROVIDER["gemini"])),
     "openai": os.getenv("OPENAI_FALLBACK_MODELS", os.getenv("AI_FALLBACK_MODELS", DEFAULT_MODEL_BY_PROVIDER["openai"])),
     "claude": os.getenv("CLAUDE_FALLBACK_MODELS", os.getenv("AI_FALLBACK_MODELS", DEFAULT_MODEL_BY_PROVIDER["claude"])),
-    "gemma": os.getenv("GEMMA_FALLBACK_MODELS", os.getenv("AI_FALLBACK_MODELS", DEFAULT_MODEL_BY_PROVIDER["gemma"])),
+    "gemma": os.getenv(
+        "GEMMA_FALLBACK_MODELS",
+        os.getenv("OLLAMA_FALLBACK_MODELS", os.getenv("AI_FALLBACK_MODELS", DEFAULT_MODEL_BY_PROVIDER["gemma"])),
+    ),
 }
 
 DEFAULT_AI_RETRIES = int(os.getenv("AI_MAX_RETRIES", os.getenv("GEMINI_MAX_RETRIES", "5")))
@@ -55,27 +61,24 @@ DEFAULT_MAX_OUTPUT_TOKENS_BY_PROVIDER = {
     "gemini": int(os.getenv("GEMINI_MAX_OUTPUT_TOKENS", os.getenv("AI_MAX_OUTPUT_TOKENS", "32768"))),
     "openai": int(os.getenv("OPENAI_MAX_OUTPUT_TOKENS", os.getenv("AI_MAX_OUTPUT_TOKENS", "32768"))),
     "claude": int(os.getenv("CLAUDE_MAX_OUTPUT_TOKENS", os.getenv("AI_MAX_OUTPUT_TOKENS", "32768"))),
-    "gemma": int(os.getenv("GEMMA_MAX_OUTPUT_TOKENS", os.getenv("AI_MAX_OUTPUT_TOKENS", "8192"))),
+    "gemma": int(os.getenv("GEMMA_MAX_OUTPUT_TOKENS", os.getenv("OLLAMA_MAX_OUTPUT_TOKENS", os.getenv("AI_MAX_OUTPUT_TOKENS", "8192")))),
 }
 DEFAULT_GEMINI_THINKING_BUDGET = int(os.getenv("GEMINI_THINKING_BUDGET", "256"))
 DEFAULT_CLAUDE_TEXT_SINGLE_MAX_CHARS = int(os.getenv("CLAUDE_TEXT_SINGLE_MAX_CHARS", "350000"))
 DEFAULT_CLAUDE_TEXT_CHUNK_CHARS = int(os.getenv("CLAUDE_TEXT_CHUNK_CHARS", "120000"))
 DEFAULT_CLAUDE_TEXT_MIN_CHUNK_CHARS = int(os.getenv("CLAUDE_TEXT_MIN_CHUNK_CHARS", "30000"))
-DEFAULT_GEMMA_TEXT_SINGLE_MAX_CHARS = int(os.getenv("GEMMA_TEXT_SINGLE_MAX_CHARS", "220000"))
-DEFAULT_GEMMA_TEXT_CHUNK_CHARS = int(os.getenv("GEMMA_TEXT_CHUNK_CHARS", "220000"))
-DEFAULT_GEMMA_TEXT_MIN_CHUNK_CHARS = int(os.getenv("GEMMA_TEXT_MIN_CHUNK_CHARS", "10000"))
-DEFAULT_GEMMA_RUNTIME = os.getenv("GEMMA_RUNTIME", "transformers").strip().lower() or "transformers"
+DEFAULT_OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434").strip() or "http://localhost:11434"
+DEFAULT_OLLAMA_REQUEST_TIMEOUT = int(os.getenv("OLLAMA_REQUEST_TIMEOUT", "600"))
+DEFAULT_GEMMA_TEXT_SINGLE_MAX_CHARS = int(os.getenv("GEMMA_TEXT_SINGLE_MAX_CHARS", os.getenv("OLLAMA_TEXT_SINGLE_MAX_CHARS", "220000")))
+DEFAULT_GEMMA_TEXT_CHUNK_CHARS = int(os.getenv("GEMMA_TEXT_CHUNK_CHARS", os.getenv("OLLAMA_TEXT_CHUNK_CHARS", "220000")))
+DEFAULT_GEMMA_TEXT_CHUNK_OVERLAP_CHARS = int(os.getenv("GEMMA_TEXT_CHUNK_OVERLAP_CHARS", "5000"))
+DEFAULT_GEMMA_TEXT_MIN_CHUNK_CHARS = int(os.getenv("GEMMA_TEXT_MIN_CHUNK_CHARS", os.getenv("OLLAMA_TEXT_MIN_CHUNK_CHARS", "10000")))
+DEFAULT_GEMMA_KEEP_ALIVE = os.getenv("GEMMA_KEEP_ALIVE", os.getenv("OLLAMA_KEEP_ALIVE", "5m"))
+DEFAULT_GEMMA_THINK = os.getenv("GEMMA_THINK", os.getenv("OLLAMA_THINK", "")).strip()
+DEFAULT_GEMMA_CONTEXT_WINDOW = int(os.getenv("GEMMA_CONTEXT_WINDOW", os.getenv("OLLAMA_CONTEXT_WINDOW", "32768")))
 DEFAULT_GEMMA_DEVICE_MAP = os.getenv("GEMMA_DEVICE_MAP", "auto").strip() or "auto"
 DEFAULT_GEMMA_TORCH_DTYPE = os.getenv("GEMMA_TORCH_DTYPE", os.getenv("GEMMA_DTYPE", "auto")).strip() or "auto"
 DEFAULT_GEMMA_EXTRACTION_MODE = os.getenv("GEMMA_EXTRACTION_MODE", "layout").strip().lower() or "layout"
-DEFAULT_GEMMA_MERGE_MODE = os.getenv("GEMMA_MERGE_MODE", "local").strip().lower() or "local"
-DEFAULT_GEMMA_VLLM_TENSOR_PARALLEL_SIZE = int(os.getenv("GEMMA_VLLM_TENSOR_PARALLEL_SIZE", os.getenv("VLLM_TENSOR_PARALLEL_SIZE", "1")))
-DEFAULT_GEMMA_VLLM_GPU_MEMORY_UTILIZATION = float(os.getenv("GEMMA_VLLM_GPU_MEMORY_UTILIZATION", os.getenv("VLLM_GPU_MEMORY_UTILIZATION", "0.9")))
-DEFAULT_GEMMA_VLLM_MAX_MODEL_LEN = os.getenv("GEMMA_VLLM_MAX_MODEL_LEN", os.getenv("VLLM_MAX_MODEL_LEN", "")).strip()
-DEFAULT_GEMMA_VLLM_TRUST_REMOTE_CODE = (
-    os.getenv("GEMMA_VLLM_TRUST_REMOTE_CODE", os.getenv("VLLM_TRUST_REMOTE_CODE", "false")).strip().lower()
-    in {"1", "true", "yes", "on"}
-)
 
 TOC_SCHEMA: dict[str, Any] = {
     "type": "object",
@@ -176,6 +179,7 @@ def normalize_provider(provider: str | None) -> str:
         "anthropic": "claude",
         "open-ai": "openai",
         "google": "gemini",
+        "ollama": "gemma",
         "local": "gemma",
     }
     provider = aliases.get(provider, provider)
@@ -193,6 +197,7 @@ def resolve_providers(provider_option: str | None) -> list[str]:
         "anthropic": "claude",
         "open-ai": "openai",
         "google": "gemini",
+        "ollama": "gemma",
         "local": "gemma",
     }
     provider_text = aliases.get(provider_text, provider_text)
@@ -351,18 +356,6 @@ def is_cuda_out_of_memory_error(error: Exception) -> bool:
     return "CUDA OUT OF MEMORY" in message or "OUTOFMEMORYERROR" in message
 
 
-def is_json_parse_error(error: Exception) -> bool:
-    if isinstance(error, json.JSONDecodeError):
-        return True
-    message = message_of(error).upper()
-    return (
-        "JSONDECODEERROR" in message
-        or "EXPECTING ',' DELIMITER" in message
-        or "EXTRA DATA" in message
-        or "UNTERMINATED STRING" in message
-    )
-
-
 def empty_torch_cuda_cache() -> None:
     try:
         import torch
@@ -477,23 +470,6 @@ def make_ascii_upload_name(pdf_path: Path) -> str:
     safe_stem = re.sub(r"[^A-Za-z0-9_.-]+", "_", pdf_path.stem)
     safe_stem = safe_stem.strip("._-") or "input_pdf"
     return f"{safe_stem}.pdf"
-
-
-def prepare_pdf_for_processing(pdf_path: Path) -> tuple[Path, str]:
-    """Copy PDFs with non-ASCII names to an ASCII-safe temp path for processing."""
-    if not pdf_path.exists():
-        return pdf_path, pdf_path.name
-
-    ascii_name = make_ascii_upload_name(pdf_path)
-    if ascii_name == pdf_path.name and pdf_path.suffix.lower() == ".pdf":
-        return pdf_path, pdf_path.name
-
-    temp_dir = Path(tempfile.gettempdir()) / "ai_gemma_ascii_pdfs"
-    temp_dir.mkdir(parents=True, exist_ok=True)
-    target_path = temp_dir / ascii_name
-    if not target_path.exists() or target_path.stat().st_size != pdf_path.stat().st_size:
-        shutil.copy2(pdf_path, target_path)
-    return target_path, pdf_path.name
 
 
 def strip_json_fence(text: str) -> str:
@@ -721,10 +697,6 @@ def parse_json_response_text(text: str, provider: str) -> dict[str, Any]:
         except json.JSONDecodeError as error:
             last_error = error
     else:
-        if provider == "gemma":
-            loose_data = parse_loose_toc_json_text(text)
-            if loose_data is not None:
-                return loose_data
         if last_error:
             raise last_error
         raise ValueError(f"Could not find a JSON object in the {provider} response.")
@@ -733,57 +705,6 @@ def parse_json_response_text(text: str, provider: str) -> dict[str, Any]:
         raise ValueError(f"The top-level JSON value in the {provider} response must be an object.")
 
     return data
-
-
-def json_string_value(value: str) -> str:
-    try:
-        return str(json.loads(f'"{value}"'))
-    except Exception:
-        return value.replace('\\"', '"').replace("\\n", " ").strip()
-
-
-def parse_loose_toc_json_text(text: str) -> dict[str, Any] | None:
-    """Best-effort recovery for Gemma responses with missing commas between flat TOC objects."""
-    title = "Document title"
-    title_match = re.search(r'"title"\s*:\s*"((?:\\.|[^"\\])*)"', text)
-    if title_match:
-        title = clean_text(json_string_value(title_match.group(1))) or title
-
-    chapters: list[dict[str, Any]] = []
-    for match in re.finditer(r'\{[^{}]*"chapter"[^{}]*\}', text, flags=re.DOTALL):
-        object_text = match.group(0)
-        repaired = repair_json_text(object_text)
-        parsed: dict[str, Any] | None = None
-        if repaired:
-            try:
-                candidate = json.loads(repaired)
-                if isinstance(candidate, dict):
-                    parsed = candidate
-            except Exception:
-                parsed = None
-
-        if parsed is None:
-            chapter_match = re.search(r'"chapter"\s*:\s*"((?:\\.|[^"\\])*)"', object_text)
-            if not chapter_match:
-                continue
-            level_match = re.search(r'"level"\s*:\s*(-?\d+)', object_text)
-            page_match = re.search(r'"page"\s*:\s*(-?\d+)', object_text)
-            parsed = {
-                "level": int(level_match.group(1)) if level_match else 1,
-                "chapter": json_string_value(chapter_match.group(1)),
-                "page": int(page_match.group(1)) if page_match else 1,
-            }
-
-        if clean_text(parsed.get("chapter")):
-            chapters.append(parsed)
-
-    if not chapters:
-        return None
-
-    return {
-        "title": title,
-        "chapters": chapters,
-    }
 
 
 def parsed_response_to_dict(parsed: Any) -> dict[str, Any] | None:
@@ -1693,15 +1614,52 @@ def split_page_text_for_claude(page_number: int, text: str, max_chars: int) -> l
 def chunk_pdf_text_pages(
     pages: list[tuple[int, str]],
     max_chars: int,
+    overlap_chars: int = 0,
 ) -> list[dict[str, Any]]:
     max_chars = max(10000, int(max_chars))
+    overlap_chars = max(0, min(int(overlap_chars), max_chars // 2))
     chunks: list[dict[str, Any]] = []
     current_parts: list[str] = []
     current_chars = 0
     current_start_page: int | None = None
     current_end_page: int | None = None
 
-    def flush() -> None:
+    def part_len(part: str) -> int:
+        return len(part) + 2
+
+    def page_range_from_parts(parts: list[str]) -> tuple[int | None, int | None]:
+        page_numbers = [
+            int(match.group(1))
+            for part in parts
+            for match in re.finditer(r"\[PAGE\s+(\d+)\]", part)
+        ]
+        if not page_numbers:
+            return None, None
+        return min(page_numbers), max(page_numbers)
+
+    def tail_overlap_parts(parts: list[str]) -> list[str]:
+        if overlap_chars <= 0:
+            return []
+
+        tail: list[str] = []
+        tail_chars = 0
+        for part in reversed(parts):
+            length = part_len(part)
+            if tail and tail_chars + length > overlap_chars:
+                break
+            tail.insert(0, part)
+            tail_chars += length
+            if tail_chars >= overlap_chars:
+                break
+        return tail
+
+    def reset_to_parts(parts: list[str]) -> None:
+        nonlocal current_parts, current_chars, current_start_page, current_end_page
+        current_parts = list(parts)
+        current_chars = sum(part_len(part) for part in current_parts)
+        current_start_page, current_end_page = page_range_from_parts(current_parts)
+
+    def flush(keep_overlap: bool = True) -> None:
         nonlocal current_parts, current_chars, current_start_page, current_end_page
         if not current_parts:
             return
@@ -1711,24 +1669,23 @@ def chunk_pdf_text_pages(
             "end_page": current_end_page,
             "text": "\n\n".join(current_parts),
         })
-        current_parts = []
-        current_chars = 0
-        current_start_page = None
-        current_end_page = None
+        reset_to_parts(tail_overlap_parts(current_parts) if keep_overlap else [])
 
     for page_number, page_text in pages:
         for part in split_page_text_for_claude(page_number, page_text, max_chars):
-            part_len = len(part) + 2
-            if current_parts and current_chars + part_len > max_chars:
+            length = part_len(part)
+            if current_parts and current_chars + length > max_chars:
                 flush()
+                if current_parts and current_chars + length > max_chars:
+                    reset_to_parts([])
 
             if current_start_page is None:
                 current_start_page = page_number
             current_end_page = page_number
             current_parts.append(part)
-            current_chars += part_len
+            current_chars += length
 
-    flush()
+    flush(keep_overlap=False)
     return chunks
 
 
@@ -2198,43 +2155,22 @@ def generate_toc_from_pdf_claude(pdf_path: Path, args: argparse.Namespace, promp
 # ----------------------------- Gemma -----------------------------
 
 _GEMMA_TRANSFORMERS_CACHE: dict[tuple[str, str, str], dict[str, Any]] = {}
-_GEMMA_VLLM_CACHE: dict[tuple[str, str, int, float, str, bool], dict[str, Any]] = {}
-
-GEMMA_SYSTEM_PROMPT = (
-    "You are an expert at creating tables of contents for PDF textbooks and lecture materials. "
-    "Output exactly one valid JSON object. Do not output Markdown or explanations."
-)
 
 
-def normalize_gemma_runtime(runtime: str | None) -> str:
-    runtime = clean_text(runtime).lower() or DEFAULT_GEMMA_RUNTIME
+def normalize_gemma_backend(backend: str | None) -> str:
+    backend = clean_text(backend).lower() or DEFAULT_GEMMA_BACKEND
     aliases = {
         "hf": "transformers",
         "huggingface": "transformers",
         "hugging-face": "transformers",
-        "transformer": "transformers",
-        "vllm-offline": "vllm",
-        "vllm_offline": "vllm",
+        "local": "transformers",
+        "torch": "transformers",
+        "api": "ollama",
     }
-    runtime = aliases.get(runtime, runtime)
-    if runtime not in {"transformers", "vllm"}:
-        raise ValueError("--gemma-runtime must be either transformers or vllm.")
-    return runtime
-
-
-def normalize_gemma_merge_mode(mode: str | None) -> str:
-    mode = clean_text(mode).lower() or DEFAULT_GEMMA_MERGE_MODE
-    aliases = {
-        "code": "local",
-        "python": "local",
-        "offline": "local",
-        "llm": "gemma",
-        "ai": "gemma",
-    }
-    mode = aliases.get(mode, mode)
-    if mode not in {"local", "gemma"}:
-        raise ValueError("--gemma-merge-mode must be either local or gemma.")
-    return mode
+    backend = aliases.get(backend, backend)
+    if backend not in {"transformers", "ollama"}:
+        raise ValueError("--gemma-backend must be either transformers or ollama.")
+    return backend
 
 
 def normalize_gemma_extraction_mode(mode: str | None) -> str:
@@ -2293,6 +2229,122 @@ def normalize_gemma_hf_model(model: str) -> str:
     return model
 
 
+def normalize_gemma_ollama_model(model: str) -> str:
+    model = clean_text(model)
+    if model.startswith("models/"):
+        model = model.split("/", 1)[1]
+
+    lower = model.lower()
+    if lower in {"latest", "highest", "max"}:
+        return DEFAULT_GEMMA_OLLAMA_MODEL
+
+    if lower in {"e2b", "e4b", "12b", "26b", "31b"}:
+        return f"gemma4:{lower}"
+    if lower == "27b":
+        return "gemma3:27b"
+
+    if lower.startswith("google/"):
+        lower = lower.split("/", 1)[1]
+
+    if lower.startswith("gemma-4-"):
+        if "31b" in lower:
+            return "gemma4:31b"
+        if "26b" in lower:
+            return "gemma4:26b"
+        if "12b" in lower:
+            return "gemma4:12b"
+        if "e4b" in lower:
+            return "gemma4:e4b"
+        if "e2b" in lower:
+            return "gemma4:e2b"
+
+    if lower.startswith("gemma-3-27b"):
+        return "gemma3:27b"
+
+    return model
+
+
+def normalize_gemma_model_for_backend(model: str, backend: str) -> str:
+    if backend == "ollama":
+        return normalize_gemma_ollama_model(model)
+    return normalize_gemma_hf_model(model)
+
+def normalize_ollama_base_url(base_url: str | None) -> str:
+    base_url = clean_text(base_url) or DEFAULT_OLLAMA_BASE_URL
+    return base_url.rstrip("/")
+
+
+def parse_ollama_think(value: str | None) -> bool | str | None:
+    value = clean_text(value).lower()
+    if not value:
+        return None
+    if value in {"1", "true", "yes", "on"}:
+        return True
+    if value in {"0", "false", "no", "off"}:
+        return False
+    return value
+
+
+def ollama_api_get(
+    base_url: str,
+    path: str,
+    timeout_seconds: int,
+) -> dict[str, Any]:
+    url = normalize_ollama_base_url(base_url) + path
+    request = urllib.request.Request(url=url, method="GET")
+
+    try:
+        with urllib.request.urlopen(request, timeout=max(1, int(timeout_seconds))) as response:
+            body = response.read().decode("utf-8", errors="replace")
+    except urllib.error.HTTPError as error:
+        error_body = error.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"Ollama API error {error.code}: {error_body}") from error
+    except urllib.error.URLError as error:
+        raise RuntimeError(f"Ollama API connection failed({url}): {error}") from error
+
+    try:
+        parsed = json.loads(body)
+    except json.JSONDecodeError as error:
+        raise RuntimeError(f"Failed to parse Ollama API response JSON: {body[:500]}") from error
+
+    if not isinstance(parsed, dict):
+        raise RuntimeError("Ollama API response must be a JSON object.")
+
+    return parsed
+
+
+def ollama_installed_model_names(base_url: str, timeout_seconds: int) -> set[str]:
+    response = ollama_api_get(base_url=base_url, path="/api/tags", timeout_seconds=timeout_seconds)
+    names: set[str] = set()
+
+    for model_info in response.get("models", []) or []:
+        if not isinstance(model_info, dict):
+            continue
+        for key in ("name", "model"):
+            name = clean_text(model_info.get(key))
+            if name:
+                names.add(name)
+
+    return names
+
+
+def ensure_ollama_model_available(model: str, args: argparse.Namespace) -> None:
+    installed_models = ollama_installed_model_names(
+        base_url=args.ollama_base_url,
+        timeout_seconds=args.ollama_request_timeout,
+    )
+
+    if model in installed_models:
+        return
+
+    installed_text = ", ".join(sorted(installed_models)) or "none"
+    raise RuntimeError(
+        f"Model '{model}' is not installed in Ollama. "
+        f"Run `ollama pull {model}` first. "
+        f"Currently installed models: {installed_text}"
+    )
+
+
 def preflight_pdf_text_extraction() -> None:
     try:
         __import__("pdfplumber")
@@ -2310,7 +2362,7 @@ def import_gemma_transformers_dependencies() -> tuple[Any, Any, Any]:
 
     if missing:
         raise RuntimeError(
-            "Missing packages required by the Gemma Transformers runtime: "
+            "Missing packages required by the Gemma transformers backend: "
             + ", ".join(missing)
             + ". Run `pip install -U transformers torch accelerate safetensors huggingface_hub` first."
         )
@@ -2320,23 +2372,11 @@ def import_gemma_transformers_dependencies() -> tuple[Any, Any, Any]:
         from transformers import AutoModelForCausalLM, AutoTokenizer
     except ImportError as error:
         raise RuntimeError(
-            "Gemma Transformers runtime could not import the required model classes. "
+            "Gemma transformers backend could not import the required model classes. "
             "Run `pip install -U transformers torch accelerate safetensors huggingface_hub` first."
         ) from error
 
     return torch, AutoModelForCausalLM, AutoTokenizer
-
-
-def import_gemma_vllm_dependencies() -> tuple[Any, Any]:
-    try:
-        from vllm import LLM, SamplingParams
-    except ImportError as error:
-        raise RuntimeError(
-            "Missing packages required by the Gemma vLLM runtime. "
-            "Run `pip install -U vllm` first. vLLM also requires a compatible GPU/CUDA environment."
-        ) from error
-
-    return LLM, SamplingParams
 
 
 def gemma_model_needs_gemma4_config(model: str) -> bool:
@@ -2351,8 +2391,7 @@ def preflight_gemma_transformers(models: Iterable[str] | None = None) -> None:
         return
 
     try:
-        from transformers import Gemma4Config
-        assert Gemma4Config is not None
+        from transformers import Gemma4Config  # noqa: F401
     except Exception as error:
         error_text = message_of(error)
         if "torchvision::nms" in error_text or "torchvision" in error_text:
@@ -2372,22 +2411,65 @@ def preflight_gemma_transformers(models: Iterable[str] | None = None) -> None:
         ) from error
 
 
-def preflight_gemma_vllm() -> None:
-    import_gemma_vllm_dependencies()
-
-
 def preflight_gemma_provider(args: argparse.Namespace) -> None:
     provider_args = build_provider_args(args, "gemma")
+    backend = normalize_gemma_backend(getattr(provider_args, "gemma_backend", None))
     preflight_pdf_text_extraction()
     models = [
-        normalize_gemma_hf_model(model)
+        normalize_gemma_model_for_backend(model, backend)
         for model in parse_model_list(provider_args.model, provider_args.ai_fallback_models)
     ]
-    runtime = normalize_gemma_runtime(getattr(provider_args, "gemma_runtime", DEFAULT_GEMMA_RUNTIME))
-    if runtime == "vllm":
-        preflight_gemma_vllm()
-    else:
+
+    if backend == "transformers":
         preflight_gemma_transformers(models=models)
+        return
+
+    last_error: Exception | None = None
+
+    for model in models:
+        try:
+            ensure_ollama_model_available(model=model, args=provider_args)
+            return
+        except Exception as error:
+            last_error = error
+
+    if last_error:
+        raise last_error
+
+
+def ollama_api_post(
+    base_url: str,
+    path: str,
+    payload: dict[str, Any],
+    timeout_seconds: int,
+) -> dict[str, Any]:
+    url = normalize_ollama_base_url(base_url) + path
+    data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    request = urllib.request.Request(
+        url=url,
+        data=data,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+
+    try:
+        with urllib.request.urlopen(request, timeout=max(1, int(timeout_seconds))) as response:
+            body = response.read().decode("utf-8", errors="replace")
+    except urllib.error.HTTPError as error:
+        error_body = error.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"Ollama API error {error.code}: {error_body}") from error
+    except urllib.error.URLError as error:
+        raise RuntimeError(f"Ollama API connection failed({url}): {error}") from error
+
+    try:
+        parsed = json.loads(body)
+    except json.JSONDecodeError as error:
+        raise RuntimeError(f"Failed to parse Ollama API response JSON: {body[:500]}") from error
+
+    if not isinstance(parsed, dict):
+        raise RuntimeError("Ollama API response must be a JSON object.")
+
+    return parsed
 
 
 def gemma_hf_token_kwargs() -> dict[str, str]:
@@ -2508,6 +2590,7 @@ def gemma_transformers_runtime_metadata(
     gpu_used = any(device_text_is_cuda(device) for device in model_devices)
 
     return {
+        "gemma_backend": "transformers",
         "gemma_model": model,
         "gemma_device_map": device_map,
         "gemma_torch_dtype": dtype_text,
@@ -2522,6 +2605,9 @@ def gemma_transformers_runtime_metadata(
 
 
 def print_gemma_runtime_metadata(metadata: dict[str, Any]) -> None:
+    if metadata.get("gemma_backend") != "transformers":
+        return
+
     devices = metadata.get("model_devices") or []
     device_text = ", ".join(str(device) for device in devices) if devices else "unknown"
     print(
@@ -2536,6 +2622,17 @@ def print_gemma_runtime_metadata(metadata: dict[str, Any]) -> None:
             file=sys.stderr,
             flush=True,
         )
+
+
+def gemma_ollama_runtime_metadata(args: argparse.Namespace, model: str) -> dict[str, Any]:
+    return {
+        "gemma_backend": "ollama",
+        "gemma_model": model,
+        "ollama_base_url": normalize_ollama_base_url(getattr(args, "ollama_base_url", DEFAULT_OLLAMA_BASE_URL)),
+        "gpu_available": None,
+        "gpu_used": None,
+        "gpu_check": "Ollama runs in a separate server process; GPU use cannot be verified from this client response.",
+    }
 
 
 def move_transformers_inputs_to_device(inputs: Any, device: Any) -> Any:
@@ -2554,32 +2651,6 @@ def move_transformers_inputs_to_device(inputs: Any, device: Any) -> Any:
         return moved
 
     return inputs
-
-
-def build_gemma_chat_messages(prompt: str) -> list[dict[str, str]]:
-    return [
-        {"role": "system", "content": GEMMA_SYSTEM_PROMPT},
-        {"role": "user", "content": prompt},
-    ]
-
-
-def build_gemma_vllm_prompt(tokenizer: Any, prompt: str) -> str:
-    messages = build_gemma_chat_messages(prompt)
-
-    apply_chat_template = getattr(tokenizer, "apply_chat_template", None)
-    if callable(apply_chat_template):
-        try:
-            rendered = apply_chat_template(
-                messages,
-                add_generation_prompt=True,
-                tokenize=False,
-            )
-            if isinstance(rendered, str) and rendered.strip():
-                return rendered
-        except Exception:
-            pass
-
-    return f"System: {GEMMA_SYSTEM_PROMPT}\n\nUser: {prompt}\n\nAssistant:"
 
 
 def load_gemma_transformers_model(model: str, args: argparse.Namespace) -> dict[str, Any]:
@@ -2663,7 +2734,16 @@ def generate_gemma_once_transformers(
     tokenizer = bundle["tokenizer"]
     loaded_model = bundle["model"]
 
-    messages = build_gemma_chat_messages(prompt)
+    messages = [
+        {
+            "role": "system",
+            "content": (
+                "You are an expert at creating tables of contents for PDF textbooks and lecture materials. "
+                "Output exactly one valid JSON object. Do not output Markdown or explanations."
+            ),
+        },
+        {"role": "user", "content": prompt},
+    ]
 
     try:
         inputs = tokenizer.apply_chat_template(
@@ -2716,152 +2796,54 @@ def generate_gemma_once_transformers(
     return {"response": text, "_runtime": bundle.get("runtime_metadata")}
 
 
-def load_gemma_vllm_model(model: str, args: argparse.Namespace) -> dict[str, Any]:
-    dtype_text = clean_text(getattr(args, "gemma_torch_dtype", DEFAULT_GEMMA_TORCH_DTYPE)) or "auto"
-    tensor_parallel_size = max(
-        1,
-        int(getattr(args, "gemma_vllm_tensor_parallel_size", DEFAULT_GEMMA_VLLM_TENSOR_PARALLEL_SIZE)),
-    )
-    gpu_memory_utilization = float(
-        getattr(args, "gemma_vllm_gpu_memory_utilization", DEFAULT_GEMMA_VLLM_GPU_MEMORY_UTILIZATION)
-    )
-    if not 0 < gpu_memory_utilization <= 1:
-        raise ValueError("--gemma-vllm-gpu-memory-utilization must be greater than 0 and less than or equal to 1.")
-
-    max_model_len_text = clean_text(getattr(args, "gemma_vllm_max_model_len", DEFAULT_GEMMA_VLLM_MAX_MODEL_LEN))
-    trust_remote_code = bool(
-        getattr(args, "gemma_vllm_trust_remote_code", DEFAULT_GEMMA_VLLM_TRUST_REMOTE_CODE)
-    )
-    cache_key = (
-        model,
-        dtype_text,
-        tensor_parallel_size,
-        gpu_memory_utilization,
-        max_model_len_text,
-        trust_remote_code,
-    )
-
-    if cache_key in _GEMMA_VLLM_CACHE:
-        return _GEMMA_VLLM_CACHE[cache_key]
-
-    LLM, SamplingParams = import_gemma_vllm_dependencies()
-
-    load_kwargs: dict[str, Any] = {
-        "model": model,
-        "dtype": dtype_text,
-        "tensor_parallel_size": tensor_parallel_size,
-        "gpu_memory_utilization": gpu_memory_utilization,
-        "trust_remote_code": trust_remote_code,
-    }
-    if max_model_len_text:
-        load_kwargs["max_model_len"] = int(max_model_len_text)
-
-    print(f"  Gemma/vLLM model loading started: {model}", flush=True)
-    try:
-        llm = LLM(**load_kwargs)
-    except Exception as error:
-        raise RuntimeError(
-            f"Failed to load Gemma vLLM model: {model}. "
-            "Check vLLM installation, Hugging Face access, and GPU memory. "
-            f"Cause: {error}"
-        ) from error
-
-    tokenizer = None
-    get_tokenizer = getattr(llm, "get_tokenizer", None)
-    if callable(get_tokenizer):
-        try:
-            tokenizer = get_tokenizer()
-        except Exception:
-            tokenizer = None
-
-    runtime_metadata = {
-        "gemma_runtime": "vllm",
-        "gemma_model": model,
-        "gemma_torch_dtype": dtype_text,
-        "gemma_vllm_tensor_parallel_size": tensor_parallel_size,
-        "gemma_vllm_gpu_memory_utilization": gpu_memory_utilization,
-        "gemma_vllm_max_model_len": int(max_model_len_text) if max_model_len_text else None,
-        "gemma_vllm_trust_remote_code": trust_remote_code,
-    }
-
-    bundle = {
-        "llm": llm,
-        "tokenizer": tokenizer,
-        "SamplingParams": SamplingParams,
-        "runtime_metadata": runtime_metadata,
-    }
-    _GEMMA_VLLM_CACHE[cache_key] = bundle
-    print(f"  Gemma/vLLM model loading completed: {model}", flush=True)
-    print(
-        "  Gemma/vLLM config: "
-        f"tensor_parallel_size={tensor_parallel_size} / dtype={dtype_text} / "
-        f"gpu_memory_utilization={gpu_memory_utilization}",
-        flush=True,
-    )
-    return bundle
-
-
-def build_gemma_vllm_sampling_params(tokenizer: Any, SamplingParams: Any, args: argparse.Namespace) -> Any:
-    max_tokens = max(1, int(args.max_output_tokens or DEFAULT_MAX_OUTPUT_TOKENS_BY_PROVIDER["gemma"]))
-    temperature = max(0.0, float(args.temperature))
-    sampling_kwargs: dict[str, Any] = {
-        "max_tokens": max_tokens,
-        "temperature": temperature,
-    }
-
-    eos_token_id = getattr(tokenizer, "eos_token_id", None)
-    if eos_token_id is not None:
-        sampling_kwargs["stop_token_ids"] = [eos_token_id]
-
-    try:
-        return SamplingParams(**sampling_kwargs)
-    except TypeError:
-        sampling_kwargs.pop("stop_token_ids", None)
-        return SamplingParams(**sampling_kwargs)
-
-
-def generate_gemma_vllm_texts(
-    model: str,
-    prompts: list[str],
-    args: argparse.Namespace,
-) -> tuple[list[str], dict[str, Any]]:
-    bundle = load_gemma_vllm_model(model=model, args=args)
-    llm = bundle["llm"]
-    tokenizer = bundle.get("tokenizer")
-    SamplingParams = bundle["SamplingParams"]
-
-    request_prompts = [build_gemma_vllm_prompt(tokenizer, prompt) for prompt in prompts]
-    sampling_params = build_gemma_vllm_sampling_params(tokenizer, SamplingParams, args)
-
-    try:
-        try:
-            outputs = llm.generate(request_prompts, sampling_params=sampling_params, use_tqdm=False)
-        except TypeError:
-            outputs = llm.generate(request_prompts, sampling_params=sampling_params)
-    except Exception as error:
-        raise RuntimeError(f"Gemma vLLM generation failed: {error}") from error
-
-    if not outputs or len(outputs) != len(prompts):
-        raise RuntimeError("Gemma vLLM generation returned no outputs.")
-
-    texts: list[str] = []
-    for output in outputs:
-        candidates = getattr(output, "outputs", None)
-        if not candidates:
-            raise RuntimeError("Gemma vLLM generation returned an empty candidate list.")
-        texts.append(str(getattr(candidates[0], "text", "") or ""))
-
-    return texts, dict(bundle.get("runtime_metadata") or {})
-
-
-def generate_gemma_once_vllm(
+def build_gemma_payloads(
     model: str,
     prompt: str,
-    args: argparse.Namespace,
-) -> dict[str, Any]:
-    texts, runtime_metadata = generate_gemma_vllm_texts(model=model, prompts=[prompt], args=args)
-    text = texts[0] if texts else ""
-    return {"response": text, "_runtime": runtime_metadata}
+    temperature: float,
+    max_output_tokens: int | None,
+    context_window: int | None,
+    use_schema: bool,
+    keep_alive: str | None,
+    think: str | None,
+) -> list[dict[str, Any]]:
+    base: dict[str, Any] = {
+        "model": model,
+        "prompt": prompt,
+        "system": (
+            "You are an expert at creating tables of contents for PDF textbooks and lecture materials. "
+            "Output exactly one valid JSON object. Do not output Markdown or explanations."
+        ),
+        "stream": False,
+    }
+
+    options: dict[str, Any] = {"temperature": float(temperature)}
+    if max_output_tokens:
+        options["num_predict"] = int(max_output_tokens)
+    if context_window:
+        options["num_ctx"] = int(context_window)
+    base["options"] = options
+
+    keep_alive = clean_text(keep_alive)
+    if keep_alive:
+        base["keep_alive"] = keep_alive
+
+    parsed_think = parse_ollama_think(think)
+    if parsed_think is not None:
+        base["think"] = parsed_think
+
+    payloads: list[dict[str, Any]] = []
+
+    if use_schema:
+        schema_payload = dict(base)
+        schema_payload["format"] = TOC_SCHEMA
+        payloads.append(schema_payload)
+
+    json_payload = dict(base)
+    json_payload["format"] = "json"
+    payloads.append(json_payload)
+
+    payloads.append(base)
+    return payloads
 
 
 def generate_gemma_once(
@@ -2869,20 +2851,45 @@ def generate_gemma_once(
     prompt: str,
     args: argparse.Namespace,
 ):
-    runtime = normalize_gemma_runtime(getattr(args, "gemma_runtime", DEFAULT_GEMMA_RUNTIME))
-    update_processing_metadata(args, gemma_runtime=runtime)
-    if runtime == "vllm":
-        return generate_gemma_once_vllm(
+    backend = normalize_gemma_backend(getattr(args, "gemma_backend", None))
+    if backend == "transformers":
+        return generate_gemma_once_transformers(
             model=model,
             prompt=prompt,
             args=args,
         )
 
-    return generate_gemma_once_transformers(
+    payloads = build_gemma_payloads(
         model=model,
         prompt=prompt,
-        args=args,
+        temperature=args.temperature,
+        max_output_tokens=args.max_output_tokens,
+        context_window=args.gemma_context_window,
+        use_schema=not args.no_schema,
+        keep_alive=args.gemma_keep_alive,
+        think=args.gemma_think,
     )
+
+    last_error: Exception | None = None
+    for index, payload in enumerate(payloads):
+        try:
+            response = ollama_api_post(
+                base_url=args.ollama_base_url,
+                path="/api/generate",
+                payload=payload,
+                timeout_seconds=args.ollama_request_timeout,
+            )
+            response["_runtime"] = gemma_ollama_runtime_metadata(args=args, model=model)
+            return response
+        except Exception as error:
+            last_error = error
+            if index < len(payloads) - 1 and is_schema_config_error(error):
+                continue
+            raise
+
+    if last_error:
+        raise last_error
+    raise RuntimeError("Gemma response generation failed")
 
 
 def gemma_response_text(response: Any) -> str:
@@ -2902,8 +2909,6 @@ Some lines may start with compact layout tags:
 - [L s=<font size> r=<size/body ratio> x=<left indent> y=<vertical position> b=<bold 0/1> i=<italic 0/1> f=<font id>]
 - Use larger font size, higher size ratio, bold/italic style, indentation, numbering, and nearby body text to infer TOC levels.
 - Never copy [L ...] tags into chapter titles.
-- Ignore existing table-of-contents pages, dot-leader lines, page-number-only lines, and repeated headers/footers.
-- Output compact valid JSON only. Every object property and every array item must be separated with commas.
 
 [PDF File Name]
 {pdf_name}
@@ -2922,12 +2927,11 @@ The text below is one part of the full PDF.
 Include only chapter, section, and subsection titles that are actually visible within this range.
 Do not infer TOC entries outside this range.
 Use [PAGE n] markers to determine page numbers.
+Adjacent chunks may overlap; if the same title appears again because of overlap, keep the page number/title consistent.
 Some lines may start with compact layout tags:
 - [L s=<font size> r=<size/body ratio> x=<left indent> y=<vertical position> b=<bold 0/1> i=<italic 0/1> f=<font id>]
 - Use larger font size, higher size ratio, bold/italic style, indentation, numbering, and nearby body text to infer TOC levels.
 - Never copy [L ...] tags into chapter titles.
-- Ignore existing table-of-contents pages, dot-leader lines, page-number-only lines, and repeated headers/footers.
-- Output compact valid JSON only. Every object property and every array item must be separated with commas.
 
 [PDF File Name]
 {pdf_name}
@@ -3090,10 +3094,7 @@ def process_gemma_text_chunk(
             raise
 
         min_chunk_chars = max(5000, int(getattr(args, "gemma_text_min_chunk_chars", DEFAULT_GEMMA_TEXT_MIN_CHUNK_CHARS)))
-        if is_json_parse_error(error):
-            min_chunk_chars = 1500
-        max_depth = 6 if is_json_parse_error(error) else 4
-        if len(str(chunk.get("text") or "")) <= min_chunk_chars or depth >= max_depth:
+        if len(str(chunk.get("text") or "")) <= min_chunk_chars or depth >= 4:
             raw_parts.append({
                 "chunk": chunk["index"],
                 "start_page": chunk["start_page"],
@@ -3153,6 +3154,7 @@ def generate_toc_from_pdf_gemma_text(
 
     single_max_chars = max(10000, int(args.gemma_text_single_max_chars))
     chunk_chars = max(10000, int(args.gemma_text_chunk_chars))
+    overlap_chars = max(0, min(int(args.gemma_text_chunk_overlap_chars), chunk_chars // 2))
 
     if extracted_chars <= single_max_chars:
         update_processing_metadata(
@@ -3163,6 +3165,7 @@ def generate_toc_from_pdf_gemma_text(
             processed_chunk_count=1,
             gemma_text_single_max_chars=single_max_chars,
             gemma_text_chunk_chars=chunk_chars,
+            gemma_text_chunk_overlap_chars=0,
         )
         full_text = "\n\n".join(f"[PAGE {page_number}]\n{text}" for page_number, text in pages)
         text_prompt = build_gemma_text_prompt(prompt, pdf_path.name, full_text)
@@ -3186,8 +3189,11 @@ def generate_toc_from_pdf_gemma_text(
                 flush=True,
             )
 
-    chunks = chunk_pdf_text_pages(pages, max_chars=chunk_chars)
-    print(f"  Gemma text chunk processing started: {len(chunks)} chunks", flush=True)
+    chunks = chunk_pdf_text_pages(pages, max_chars=chunk_chars, overlap_chars=overlap_chars)
+    print(
+        f"  Gemma text chunk processing started: {len(chunks)} chunks, overlap={overlap_chars} chars",
+        flush=True,
+    )
     update_processing_metadata(
         args,
         chunked=True,
@@ -3196,6 +3202,7 @@ def generate_toc_from_pdf_gemma_text(
         processed_chunk_count=0,
         gemma_text_single_max_chars=single_max_chars,
         gemma_text_chunk_chars=chunk_chars,
+        gemma_text_chunk_overlap_chars=overlap_chars,
     )
     partial_tocs: list[dict[str, Any]] = []
     raw_parts: list[dict[str, Any]] = []
@@ -3214,69 +3221,52 @@ def generate_toc_from_pdf_gemma_text(
         )
     update_processing_metadata(args, processed_chunk_count=len(raw_parts))
 
-    merge_mode = normalize_gemma_merge_mode(getattr(args, "gemma_merge_mode", DEFAULT_GEMMA_MERGE_MODE))
-    update_processing_metadata(args, gemma_merge_mode=merge_mode)
-
-    if merge_mode == "local":
-        print("  Gemma chunked TOC local merge started", flush=True)
+    merge_prompt = build_gemma_merge_prompt(prompt, pdf_path.name, partial_tocs, args.max_depth)
+    print(f"  Gemma chunked TOC merge started: {model}", flush=True)
+    try:
+        parsed, final_raw_text = request_gemma_json_text(
+            model=model,
+            prompt_text=merge_prompt,
+            args=args,
+            label=f"Gemma chunked TOC merge({model})",
+        )
+        toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
+    except Exception as merge_error:
+        print(
+            f"Gemma chunked TOC merge failed; falling back to local merge: {merge_error}",
+            file=sys.stderr,
+            flush=True,
+        )
+        merge_error_log = write_error_log(
+            pdf_path=pdf_path,
+            args=args,
+            error=merge_error,
+            stage="Gemma chunked TOC merge fallback",
+            fatal=False,
+        )
+        if merge_error_log is not None:
+            print(f"  Merge error log saved: {merge_error_log}", file=sys.stderr, flush=True)
         toc = merge_partial_tocs_locally(partial_tocs, fallback_title=pdf_path.stem, max_depth=args.max_depth)
         final_raw_text = json.dumps(
             {
-                "mode": "local_merge",
+                "mode": "local_merge_after_gemma_merge_failure",
+                "error": message_of(merge_error),
                 "title": toc.get("title"),
                 "chapters": len(toc.get("chapters", [])),
             },
             ensure_ascii=False,
             indent=2,
         )
-        print("  Gemma chunked TOC local merge completed", flush=True)
-    else:
-        merge_prompt = build_gemma_merge_prompt(prompt, pdf_path.name, partial_tocs, args.max_depth)
-        print(f"  Gemma chunked TOC merge started: {model}", flush=True)
-        try:
-            parsed, final_raw_text = request_gemma_json_text(
-                model=model,
-                prompt_text=merge_prompt,
-                args=args,
-                label=f"Gemma chunked TOC merge({model})",
-            )
-            toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
-        except Exception as merge_error:
-            print(
-                f"Gemma chunked TOC merge failed; falling back to local merge: {merge_error}",
-                file=sys.stderr,
-                flush=True,
-            )
-            merge_error_log = write_error_log(
-                pdf_path=pdf_path,
-                args=args,
-                error=merge_error,
-                stage="Gemma chunked TOC merge fallback",
-                fatal=False,
-            )
-            if merge_error_log is not None:
-                print(f"  Merge error log saved: {merge_error_log}", file=sys.stderr, flush=True)
-            toc = merge_partial_tocs_locally(partial_tocs, fallback_title=pdf_path.stem, max_depth=args.max_depth)
-            final_raw_text = json.dumps(
-                {
-                    "mode": "local_merge_after_gemma_merge_failure",
-                    "error": message_of(merge_error),
-                    "title": toc.get("title"),
-                    "chapters": len(toc.get("chapters", [])),
-                },
-                ensure_ascii=False,
-                indent=2,
-            )
 
     raw_bundle = {
         "mode": "gemma_text_chunk",
-        "merge_mode": merge_mode,
         "model": model,
         "pdf": pdf_path.name,
         "extraction": extraction_metadata,
         "extracted_pages": len(pages),
         "extracted_chars": extracted_chars,
         "chunk_count": len(chunks),
+        "chunk_overlap_chars": overlap_chars,
         "processed_chunk_count": len(raw_parts),
         "chunk_raw_responses": raw_parts,
         "final_raw_response": final_raw_text,
@@ -3285,16 +3275,20 @@ def generate_toc_from_pdf_gemma_text(
 
 
 def generate_toc_from_pdf_gemma(pdf_path: Path, args: argparse.Namespace, prompt: str) -> tuple[dict[str, Any], str, str]:
+    backend = normalize_gemma_backend(getattr(args, "gemma_backend", None))
     models = parse_model_list(args.model, args.ai_fallback_models)
     last_error: Exception | None = None
 
     for index, model in enumerate(models):
-        model = normalize_gemma_hf_model(model)
+        model = normalize_gemma_model_for_backend(model, backend)
         if index > 0:
             print(f"Trying Gemma fallback model: {model}", file=sys.stderr, flush=True)
 
         try:
-            print(f"  Using Gemma/Transformers: {model}", flush=True)
+            if backend == "ollama":
+                print(f"  Using Gemma/Ollama: {normalize_ollama_base_url(args.ollama_base_url)} / {model}", flush=True)
+            else:
+                print(f"  Using Gemma/Transformers: {model}", flush=True)
             return generate_toc_from_pdf_gemma_text(
                 model=model,
                 pdf_path=pdf_path,
@@ -3355,48 +3349,12 @@ def format_elapsed(seconds: float) -> str:
     return f"{int(hours)}h {int(remaining_minutes)}m {remaining_seconds:.1f}s"
 
 
-class TeeStream:
-    def __init__(self, console_stream: Any, log_stream: Any, lock: Lock) -> None:
-        self.console_stream = console_stream
-        self.log_stream = log_stream
-        self.lock = lock
-        self.encoding = getattr(console_stream, "encoding", "utf-8")
-
-    def write(self, text: str) -> int:
-        with self.lock:
-            self.console_stream.write(text)
-            self.console_stream.flush()
-            self.log_stream.write(text)
-            self.log_stream.flush()
-        return len(text)
-
-    def flush(self) -> None:
-        with self.lock:
-            self.console_stream.flush()
-            self.log_stream.flush()
-
-    def isatty(self) -> bool:
-        isatty = getattr(self.console_stream, "isatty", None)
-        return bool(isatty()) if callable(isatty) else False
-
-
-def timestamp_for_filename() -> str:
-    return time.strftime("%Y%m%d_%H%M%S")
-
-
-def timestamp_for_metadata() -> str:
-    return time.strftime("%Y-%m-%d %H:%M:%S")
-
-
 def add_result_metadata(
     toc: dict[str, Any],
     pdf_path: Path,
     provider: str,
     model: str,
     elapsed_seconds: float,
-    generated_timestamp: str,
-    generation_started_at: str,
-    generation_completed_at: str,
     extra_metadata: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     result = dict(toc)
@@ -3404,10 +3362,6 @@ def add_result_metadata(
         "source_pdf": pdf_path.name,
         "provider": provider,
         "model": model,
-        "generated_timestamp": generated_timestamp,
-        "generated_at": generation_completed_at,
-        "generation_started_at": generation_started_at,
-        "generation_completed_at": generation_completed_at,
         "elapsed_seconds": round(float(elapsed_seconds), 3),
         "elapsed": format_elapsed(elapsed_seconds),
     }
@@ -3435,18 +3389,6 @@ def unique_output_path(path: Path) -> Path:
             return candidate
 
     raise RuntimeError(f"Could not create unique output path for: {path}")
-
-
-def build_result_base_path(output_dir: Path, pdf_path: Path, label: str, generated_timestamp: str) -> Path:
-    label_part = safe_filename_part(label)
-    pdf_part = safe_filename_part(pdf_path.stem)
-    return output_dir / f"{pdf_part}_{label_part}_{generated_timestamp}"
-
-
-def build_run_log_path(output_dir: Path, pdf_files: list[Path], providers: list[str], run_timestamp: str) -> Path:
-    pdf_part = pdf_files[0].stem if len(pdf_files) == 1 else "batch"
-    provider_part = safe_filename_part("-".join(providers))
-    return output_dir / "logs" / f"{pdf_part}_{provider_part}_{run_timestamp}_log.txt"
 
 
 def jsonable_debug_value(value: Any) -> Any:
@@ -3541,44 +3483,27 @@ def iter_pdfs(path: Path) -> list[Path]:
 
 
 def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> bool:
-    generation_started_at = timestamp_for_metadata()
-    processing_pdf_path, display_name = prepare_pdf_for_processing(pdf_path)
-    print(f"Processing started: {display_name}", flush=True)
+    print(f"Processing started: {pdf_path.name}", flush=True)
     print(f"  provider: {args.provider}", flush=True)
     started_at = time.perf_counter()
 
     try:
-        toc, raw_text, used_model = generate_toc_from_pdf(pdf_path=processing_pdf_path, args=args, user_prompt=user_prompt)
+        toc, raw_text, used_model = generate_toc_from_pdf(pdf_path=pdf_path, args=args, user_prompt=user_prompt)
         elapsed_seconds = time.perf_counter() - started_at
-        generation_completed_at = timestamp_for_metadata()
-        generated_timestamp = timestamp_for_filename()
-        result_base_path = build_result_base_path(
-            output_dir=Path(args.output_dir),
-            pdf_path=pdf_path,
-            label=args.provider,
-            generated_timestamp=generated_timestamp,
-        )
-        output_file = unique_output_path(result_base_path.with_name(f"{result_base_path.name}_toc.json"))
-        extra_metadata = dict(getattr(args, "_ai_processing_metadata", None) or {})
-        if getattr(args, "_ai_run_timestamp", None):
-            extra_metadata["run_timestamp"] = getattr(args, "_ai_run_timestamp")
-        if getattr(args, "_ai_run_log_file", None):
-            extra_metadata["run_log_file"] = getattr(args, "_ai_run_log_file")
+        model_name_for_file = safe_filename_part(used_model)
+        output_file = Path(args.output_dir) / f"{pdf_path.stem}_{args.provider}_{model_name_for_file}_toc.json"
         result = add_result_metadata(
             toc=toc,
             pdf_path=pdf_path,
             provider=args.provider,
             model=used_model,
             elapsed_seconds=elapsed_seconds,
-            generated_timestamp=generated_timestamp,
-            generation_started_at=generation_started_at,
-            generation_completed_at=generation_completed_at,
-            extra_metadata=extra_metadata,
+            extra_metadata=getattr(args, "_ai_processing_metadata", None),
         )
         save_json(output_file, result)
 
         if args.write_raw:
-            raw_file = unique_output_path(result_base_path.with_name(f"{result_base_path.name}_raw_response.txt"))
+            raw_file = Path(args.output_dir) / f"{pdf_path.stem}_{args.provider}_{model_name_for_file}_raw_response.txt"
             raw_file.parent.mkdir(parents=True, exist_ok=True)
             raw_file.write_text(raw_text, encoding="utf-8")
             print(f"Raw response saved: {raw_file}", flush=True)
@@ -3592,7 +3517,7 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> b
 
     except Exception as error:
         elapsed_seconds = time.perf_counter() - started_at
-        print(f"Failed: {display_name} / {error}", file=sys.stderr, flush=True)
+        print(f"Failed: {pdf_path.name} / {error}", file=sys.stderr, flush=True)
         print(f"  elapsed: {format_elapsed(elapsed_seconds)} ({elapsed_seconds:.3f}s)", file=sys.stderr, flush=True)
         error_log = write_error_log(
             pdf_path=pdf_path,
@@ -3682,6 +3607,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="AI provider to use. If omitted or set to all, gemini/openai/claude run concurrently. Use --provider gemma for Gemma.",
     )
     parser.add_argument(
+        "--gemma",
+        action="store_true",
+        help="Shortcut for using the Gemma provider. Same as --provider gemma.",
+    )
+    parser.add_argument(
         "--model",
         default=None,
         help="Model name. If omitted, provider-specific env values or defaults are used.",
@@ -3705,7 +3635,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="Timeout in seconds while waiting for Gemini uploaded PDF processing. Gemini only.",
     )
     parser.add_argument("--max-depth", type=int, default=6, help="Maximum TOC level")
-    parser.add_argument("--temperature", type=float, default=0, help="AI temperature. Not sent to OpenAI gpt-5-family models or some newer Claude models.")
+    parser.add_argument("--temperature", type=float, default=0.1, help="AI temperature. Not sent to OpenAI gpt-5-family models or some newer Claude models.")
     parser.add_argument("--max-output-tokens", type=int, default=None, help="Maximum output tokens")
     parser.add_argument("--no-schema", action="store_true", help="Do not use JSON schema enforcement when available; rely on the prompt only")
     parser.add_argument(
@@ -3738,48 +3668,30 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="Minimum chunk size when splitting failed Claude chunks into smaller chunks",
     )
     parser.add_argument(
+        "--gemma-backend",
+        default=DEFAULT_GEMMA_BACKEND,
+        help="Gemma execution backend. transformers runs directly with Hugging Face/torch; ollama uses the Ollama API.",
+    )
+    parser.add_argument(
+        "--ollama-base-url",
+        default=DEFAULT_OLLAMA_BASE_URL,
+        help="Ollama API base URL used with --gemma-backend ollama",
+    )
+    parser.add_argument(
+        "--ollama-request-timeout",
+        type=int,
+        default=DEFAULT_OLLAMA_REQUEST_TIMEOUT,
+        help="Ollama request timeout in seconds used with --gemma-backend ollama",
+    )
+    parser.add_argument(
         "--gemma-device-map",
         default=DEFAULT_GEMMA_DEVICE_MAP,
-        help="Transformers device_map value used by Gemma. Meaningful only for --gemma-runtime transformers.",
+        help="transformers device_map value used with --gemma-backend transformers",
     )
     parser.add_argument(
         "--gemma-torch-dtype",
         default=DEFAULT_GEMMA_TORCH_DTYPE,
-        help="dtype used by Gemma. Examples: auto, bfloat16, float16",
-    )
-    parser.add_argument(
-        "--gemma-runtime",
-        default=DEFAULT_GEMMA_RUNTIME,
-        help="Gemma inference runtime: transformers or vllm.",
-    )
-    parser.add_argument(
-        "--gemma-merge-mode",
-        default=DEFAULT_GEMMA_MERGE_MODE,
-        choices=("local", "gemma"),
-        help="How to merge chunked Gemma TOCs. local uses Python only; gemma asks Gemma to merge and falls back to local on failure.",
-    )
-    parser.add_argument(
-        "--gemma-vllm-tensor-parallel-size",
-        type=int,
-        default=DEFAULT_GEMMA_VLLM_TENSOR_PARALLEL_SIZE,
-        help="vLLM tensor_parallel_size for Gemma. Meaningful only for --gemma-runtime vllm.",
-    )
-    parser.add_argument(
-        "--gemma-vllm-gpu-memory-utilization",
-        type=float,
-        default=DEFAULT_GEMMA_VLLM_GPU_MEMORY_UTILIZATION,
-        help="vLLM GPU memory utilization fraction for Gemma. Meaningful only for --gemma-runtime vllm.",
-    )
-    parser.add_argument(
-        "--gemma-vllm-max-model-len",
-        default=DEFAULT_GEMMA_VLLM_MAX_MODEL_LEN,
-        help="Optional vLLM max_model_len for Gemma. Leave empty to use vLLM/model default.",
-    )
-    parser.add_argument(
-        "--gemma-vllm-trust-remote-code",
-        action="store_true",
-        default=DEFAULT_GEMMA_VLLM_TRUST_REMOTE_CODE,
-        help="Pass trust_remote_code=True when loading Gemma with vLLM.",
+        help="dtype used with --gemma-backend transformers. Examples: auto, bfloat16, float16",
     )
     parser.add_argument(
         "--gemma-extraction-mode",
@@ -3800,18 +3712,34 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="Maximum extracted text characters per chunk in Gemma text chunk mode",
     )
     parser.add_argument(
+        "--gemma-text-chunk-overlap-chars",
+        type=int,
+        default=DEFAULT_GEMMA_TEXT_CHUNK_OVERLAP_CHARS,
+        help="Characters copied from the end of each Gemma chunk into the next chunk. 0 disables overlap.",
+    )
+    parser.add_argument(
         "--gemma-text-min-chunk-chars",
         type=int,
         default=DEFAULT_GEMMA_TEXT_MIN_CHUNK_CHARS,
         help="Minimum chunk size when splitting failed Gemma chunks into smaller chunks",
     )
-    parser.add_argument("--write-raw", action="store_true", help="Also save raw response text")
     parser.add_argument(
-        "--log-file",
-        default=None,
-        help="Path to save a tee copy of console output. Defaults to output_dir/logs/name_provider_YYYYMMDD_HHMMSS_log.txt.",
+        "--gemma-context-window",
+        type=int,
+        default=DEFAULT_GEMMA_CONTEXT_WINDOW,
+        help="Context window(num_ctx) used for Gemma/Ollama requests",
     )
-    parser.add_argument("--no-run-log", action="store_true", help="Disable writing the console output run log")
+    parser.add_argument(
+        "--gemma-keep-alive",
+        default=DEFAULT_GEMMA_KEEP_ALIVE,
+        help="Ollama model keep_alive value. If empty, it is not sent.",
+    )
+    parser.add_argument(
+        "--gemma-think",
+        default=DEFAULT_GEMMA_THINK,
+        help="Ollama think option. Examples: true, false, high. If empty, it is not sent.",
+    )
+    parser.add_argument("--write-raw", action="store_true", help="Also save raw response text")
     parser.add_argument(
         "--no-error-log",
         action="store_true",
@@ -3830,6 +3758,12 @@ def main() -> int:
     parser = build_arg_parser()
     args = parser.parse_args()
 
+    if args.gemma:
+        provider_text = clean_text(args.provider).lower()
+        if provider_text and provider_text not in {"gemma", "ollama", "local"}:
+            parser.error("--gemma can only be used with --provider gemma.")
+        args.provider = "gemma"
+
     try:
         providers = resolve_providers(args.provider)
     except ValueError as error:
@@ -3837,8 +3771,7 @@ def main() -> int:
 
     if "gemma" in providers:
         try:
-            args.gemma_runtime = normalize_gemma_runtime(args.gemma_runtime)
-            args.gemma_merge_mode = normalize_gemma_merge_mode(args.gemma_merge_mode)
+            args.gemma_backend = normalize_gemma_backend(args.gemma_backend)
             args.gemma_extraction_mode = normalize_gemma_extraction_mode(args.gemma_extraction_mode)
         except ValueError as error:
             parser.error(str(error))
@@ -3851,65 +3784,37 @@ def main() -> int:
 
     args.max_depth = max(1, min(int(args.max_depth), 10))
 
-    run_timestamp = timestamp_for_filename()
-    setattr(args, "_ai_run_timestamp", run_timestamp)
-    Path(args.output_dir).mkdir(parents=True, exist_ok=True)
     user_prompt = load_prompt(args)
     pdf_files = iter_pdfs(Path(args.path))
 
-    original_stdout = sys.stdout
-    original_stderr = sys.stderr
-    log_file_handle = None
-    log_path: Path | None = None
-    if not args.no_run_log:
-        configured_log_file = clean_text(args.log_file)
-        log_path = (
-            Path(configured_log_file)
-            if configured_log_file
-            else build_run_log_path(Path(args.output_dir), pdf_files, providers, run_timestamp)
+    if not pdf_files:
+        print("No PDF files to process.", flush=True)
+        return 0
+
+    if "gemma" in providers:
+        try:
+            preflight_gemma_provider(args)
+        except Exception as error:
+            print(f"Gemma preflight failed: {error}", file=sys.stderr, flush=True)
+            return 1
+
+    Path(args.output_dir).mkdir(parents=True, exist_ok=True)
+
+    success_count = 0
+    total_count = len(pdf_files) * len(providers)
+    for pdf_path in pdf_files:
+        results = process_pdf_with_providers(
+            pdf_path=pdf_path,
+            args=args,
+            providers=providers,
+            user_prompt=user_prompt,
         )
-        log_path.parent.mkdir(parents=True, exist_ok=True)
-        log_file_handle = log_path.open("a", encoding="utf-8", buffering=1)
-        log_lock = Lock()
-        sys.stdout = TeeStream(original_stdout, log_file_handle, log_lock)
-        sys.stderr = TeeStream(original_stderr, log_file_handle, log_lock)
-        setattr(args, "_ai_run_log_file", str(log_path))
-        print(f"Run log saved: {log_path}", flush=True)
+        success_count += sum(1 for success in results.values() if success)
 
-    try:
-        if not pdf_files:
-            print("No PDF files to process.", flush=True)
-            return 0
+    failed_count = total_count - success_count
+    print(f"Processing result: success {success_count} / failed {failed_count}", flush=True)
 
-        if "gemma" in providers:
-            try:
-                preflight_gemma_provider(args)
-            except Exception as error:
-                print(f"Gemma preflight failed: {error}", file=sys.stderr, flush=True)
-                return 1
-
-        success_count = 0
-        total_count = len(pdf_files) * len(providers)
-        for pdf_path in pdf_files:
-            results = process_pdf_with_providers(
-                pdf_path=pdf_path,
-                args=args,
-                providers=providers,
-                user_prompt=user_prompt,
-            )
-            success_count += sum(1 for success in results.values() if success)
-
-        failed_count = total_count - success_count
-        print(f"Processing result: success {success_count} / failed {failed_count}", flush=True)
-
-        return 0 if failed_count == 0 else 1
-    finally:
-        if log_file_handle is not None:
-            if log_path is not None:
-                print(f"Run log saved: {log_path}", flush=True)
-            sys.stdout = original_stdout
-            sys.stderr = original_stderr
-            log_file_handle.close()
+    return 0 if failed_count == 0 else 1
 
 
 if __name__ == "__main__":
