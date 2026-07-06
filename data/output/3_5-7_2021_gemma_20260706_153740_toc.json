@@ -1,0 +1,1064 @@
+{
+    "title": "제5장 직업보건",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "1. 직업보건의 역사",
+            "page": 1
+        },
+        {
+            "level": 2,
+            "chapter": "1.1 외국의 직업보건",
+            "page": 2
+        },
+        {
+            "level": 2,
+            "chapter": "1.2 한국의 직업보건",
+            "page": 3
+        },
+        {
+            "level": 1,
+            "chapter": "2. 직업보건의 정의와 목표",
+            "page": 5
+        },
+        {
+            "level": 2,
+            "chapter": "2.1 직업보건의 정의",
+            "page": 5
+        },
+        {
+            "level": 2,
+            "chapter": "2.2 직업보건사업의 목표와 기능",
+            "page": 6
+        },
+        {
+            "level": 2,
+            "chapter": "2.3 한국의 직업보건조직",
+            "page": 7
+        },
+        {
+            "level": 3,
+            "chapter": "1) 정부",
+            "page": 7
+        },
+        {
+            "level": 3,
+            "chapter": "2) 정부 산하기관",
+            "page": 7
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 산업안전보건공단",
+            "page": 7
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 근로복지공단",
+            "page": 7
+        },
+        {
+            "level": 3,
+            "chapter": "3) 민간기관",
+            "page": 7
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 대학 및 학회",
+            "page": 7
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 사업수행기관",
+            "page": 8
+        },
+        {
+            "level": 3,
+            "chapter": "4) 사업장 조직",
+            "page": 8
+        },
+        {
+            "level": 1,
+            "chapter": "3. 직업보건사업의 내용",
+            "page": 9
+        },
+        {
+            "level": 2,
+            "chapter": "3.1 작업환경측정 및 유해요인 관리",
+            "page": 9
+        },
+        {
+            "level": 2,
+            "chapter": "3.2 건강진단",
+            "page": 10
+        },
+        {
+            "level": 2,
+            "chapter": "3.3 근로자건강센터",
+            "page": 11
+        },
+        {
+            "level": 2,
+            "chapter": "3.4 사업장 보건관리",
+            "page": 12
+        },
+        {
+            "level": 2,
+            "chapter": "3.5 직업병감시체계",
+            "page": 14
+        },
+        {
+            "level": 2,
+            "chapter": "3.6 직장 건강증진",
+            "page": 15
+        },
+        {
+            "level": 1,
+            "chapter": "4. 직무스트레스",
+            "page": 17
+        },
+        {
+            "level": 2,
+            "chapter": "4.1 직무스트레스의 정의와 원인",
+            "page": 17
+        },
+        {
+            "level": 3,
+            "chapter": "1) 직무스트레스 정의",
+            "page": 17
+        },
+        {
+            "level": 3,
+            "chapter": "2) 직무스트레스 원인",
+            "page": 17
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 직무 내재적 요인",
+            "page": 17
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 조직 내에서의 역할",
+            "page": 17
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 경력의 개발",
+            "page": 17
+        },
+        {
+            "level": 2,
+            "chapter": "4.2 직무스트레스 평가",
+            "page": 18
+        },
+        {
+            "level": 2,
+            "chapter": "4.3 직무스트레스로 인한 영향",
+            "page": 18
+        },
+        {
+            "level": 2,
+            "chapter": "4.4 직무스트레스 관리",
+            "page": 18
+        },
+        {
+            "level": 3,
+            "chapter": "1) 개인적 관리",
+            "page": 19
+        },
+        {
+            "level": 3,
+            "chapter": "2) 조직적 관리",
+            "page": 19
+        },
+        {
+            "level": 1,
+            "chapter": "5. 야간노동과 교대근무",
+            "page": 20
+        },
+        {
+            "level": 2,
+            "chapter": "5.1 야간노동과 교대근무의 개념",
+            "page": 20
+        },
+        {
+            "level": 2,
+            "chapter": "5.2 일주기리듬과 신체의 변화",
+            "page": 21
+        },
+        {
+            "level": 2,
+            "chapter": "5.3 야간노동과 교대근무의 건강영향",
+            "page": 21
+        },
+        {
+            "level": 2,
+            "chapter": "5.4 야간노동과 교대근무의 관리방안",
+            "page": 22
+        },
+        {
+            "level": 3,
+            "chapter": "1) 조직적 관리방안: 교대근무 일정 조정",
+            "page": 22
+        },
+        {
+            "level": 3,
+            "chapter": "2) 개인적 관리방안",
+            "page": 23
+        },
+        {
+            "level": 1,
+            "chapter": "6. 여성 노동자의 건강",
+            "page": 25
+        },
+        {
+            "level": 2,
+            "chapter": "6.1 여성 노동자 건강에 미치는 위험요인들과 그 기전",
+            "page": 26
+        },
+        {
+            "level": 3,
+            "chapter": "1) 사회구조적 조건과 사회적 관계",
+            "page": 26
+        },
+        {
+            "level": 3,
+            "chapter": "2) 노동시장에서의 불평등한 고용관계: 낮은 고용 지위와 비정규직화",
+            "page": 26
+        },
+        {
+            "level": 3,
+            "chapter": "3) 작업장 노동조건: 장시간 노동 시간, 야간노동, 저임금, 빈곤화",
+            "page": 27
+        },
+        {
+            "level": 3,
+            "chapter": "4) 작업장 노동환경: 육체적 하중과 노동강도",
+            "page": 27
+        },
+        {
+            "level": 3,
+            "chapter": "5) 작업장 유해물질: 발암물질, 화학 독성물질의 증대",
+            "page": 27
+        },
+        {
+            "level": 3,
+            "chapter": "6) 작업장 유해물질: 생식독성물질의 증대",
+            "page": 27
+        },
+        {
+            "level": 3,
+            "chapter": "7) 작업장의 폭력과 정신적 위험요인: 성차별, 성희롱, 성폭력, 직장 내 괴롭힘, 직무스트레스",
+            "page": 28
+        },
+        {
+            "level": 3,
+            "chapter": "8) 건강행동: 흡연, 음주, 영양",
+            "page": 28
+        },
+        {
+            "level": 3,
+            "chapter": "9) 여성들의 이중 노동: 가정과 노동시장에서의 노동",
+            "page": 28
+        },
+        {
+            "level": 3,
+            "chapter": "10) 사회문화적 요소, 국가 권력구조: 법⋅제도",
+            "page": 28
+        },
+        {
+            "level": 2,
+            "chapter": "6.2 한국 여성 노동자들의 10대 직업성 질환들의 발생 현황",
+            "page": 28
+        },
+        {
+            "level": 3,
+            "chapter": "1) 작업장 폭력(성희롱, 성폭력) 문제, 감정노동",
+            "page": 28
+        },
+        {
+            "level": 3,
+            "chapter": "2) 우울증, 자살생각 등 정신건강",
+            "page": 29
+        },
+        {
+            "level": 3,
+            "chapter": "3) 생식기계 장애",
+            "page": 29
+        },
+        {
+            "level": 3,
+            "chapter": "4) 암",
+            "page": 29
+        },
+        {
+            "level": 3,
+            "chapter": "5) 장시간 노동 시간, 야간노동으로 인한 건강장해",
+            "page": 29
+        },
+        {
+            "level": 3,
+            "chapter": "6) 근골격계질환",
+            "page": 30
+        },
+        {
+            "level": 3,
+            "chapter": "7) 만성질환 유병률",
+            "page": 30
+        },
+        {
+            "level": 3,
+            "chapter": "8) 노령 여성의 건강",
+            "page": 30
+        },
+        {
+            "level": 3,
+            "chapter": "9) 여성 노동자의 이중 노동으로 인한 소진(burn out), 주관적 건강, 삶의 질, 여명의 문제",
+            "page": 30
+        },
+        {
+            "level": 3,
+            "chapter": "10) 여성 산업재해율 과소 보고 문제",
+            "page": 30
+        },
+        {
+            "level": 2,
+            "chapter": "6.3 여성 노동자의 보건정책 방향",
+            "page": 30
+        },
+        {
+            "level": 3,
+            "chapter": "1) 여성을 위한 세계보건기구(WHO) 보건정책의 전략",
+            "page": 30
+        },
+        {
+            "level": 4,
+            "chapter": "(1) WHO의 여성을 위한 보건정책 전략의 원칙",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "(2) WHO의 남/여 형평성 전략",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 성평등과 평등을 위한 협의와 참여, 집단행동",
+            "page": 31
+        },
+        {
+            "level": 3,
+            "chapter": "2) 국제노동기구(ILO)의 “산업안전보건에서 성인지적 관점을 위한 10가지 지침”",
+            "page": 31
+        },
+        {
+            "level": 3,
+            "chapter": "3) 한국에서 여성 노동자들의 산업안전보건 정책 방안",
+            "page": 31
+        },
+        {
+            "level": 1,
+            "chapter": "7. 직업역학",
+            "page": 32
+        },
+        {
+            "level": 2,
+            "chapter": "7.1 직업역학의 정의와 방법",
+            "page": 32
+        },
+        {
+            "level": 2,
+            "chapter": "7.2 직업역학의 특징",
+            "page": 32
+        },
+        {
+            "level": 2,
+            "chapter": "7.3 직업역학 연구방법",
+            "page": 33
+        },
+        {
+            "level": 3,
+            "chapter": "1) 사례보고 및 사례군연구(case report and case series study)",
+            "page": 33
+        },
+        {
+            "level": 3,
+            "chapter": "2) 단면연구",
+            "page": 33
+        },
+        {
+            "level": 3,
+            "chapter": "3) 환자-대조군연구",
+            "page": 33
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 산업장 중심의 환자-대조군연구",
+            "page": 33
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 등록기반 환자-대조군연구",
+            "page": 34
+        },
+        {
+            "level": 3,
+            "chapter": "4) 코호트연구",
+            "page": 34
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 전향적 코호트연구",
+            "page": 34
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 후향적 코호트연구",
+            "page": 35
+        },
+        {
+            "level": 3,
+            "chapter": "5) 사망 자료에 대한 기술학적 연구",
+            "page": 37
+        },
+        {
+            "level": 1,
+            "chapter": "7.4 직업역학 연구에서 고려할 사항",
+            "page": 37
+        },
+        {
+            "level": 2,
+            "chapter": "1) 연구수행가능성(feasibility)",
+            "page": 37
+        },
+        {
+            "level": 2,
+            "chapter": "2) 윤리적 및 정치적 문제(ethical and political issues)",
+            "page": 37
+        },
+        {
+            "level": 1,
+            "chapter": "6 제 장 산업재해",
+            "page": 40
+        },
+        {
+            "level": 1,
+            "chapter": "1. 산업재해의 정의와 특징",
+            "page": 40
+        },
+        {
+            "level": 2,
+            "chapter": "1.1 산업재해의 정의",
+            "page": 40
+        },
+        {
+            "level": 3,
+            "chapter": "1) 산업재해의 정의",
+            "page": 40
+        },
+        {
+            "level": 3,
+            "chapter": "2) 산업재해의 범위",
+            "page": 40
+        },
+        {
+            "level": 3,
+            "chapter": "3) 산업재해의 분류",
+            "page": 41
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 업무상 사고",
+            "page": 41
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 업무상 질병",
+            "page": 41
+        },
+        {
+            "level": 2,
+            "chapter": "1.2 산업재해의 이론적 특성",
+            "page": 42
+        },
+        {
+            "level": 3,
+            "chapter": "1) 하인리히 법칙과 도미노 이론",
+            "page": 42
+        },
+        {
+            "level": 3,
+            "chapter": "2) 도미노 이론의 발전",
+            "page": 42
+        },
+        {
+            "level": 3,
+            "chapter": "3) 다수요인 이론(multiple factor theory)",
+            "page": 42
+        },
+        {
+            "level": 3,
+            "chapter": "4) 인간요인 이론(human factor theory)",
+            "page": 43
+        },
+        {
+            "level": 1,
+            "chapter": "2. 산업재해의 지표와 현황",
+            "page": 43
+        },
+        {
+            "level": 2,
+            "chapter": "2.1 산업재해의 지표",
+            "page": 43
+        },
+        {
+            "level": 2,
+            "chapter": "2.2 산업재해의 현황",
+            "page": 44
+        },
+        {
+            "level": 3,
+            "chapter": "1) 근로자수와 산업재해율",
+            "page": 44
+        },
+        {
+            "level": 3,
+            "chapter": "2) 재해율의 국제간 비교",
+            "page": 45
+        },
+        {
+            "level": 2,
+            "chapter": "2.3 업무상 재해의 특성",
+            "page": 48
+        },
+        {
+            "level": 1,
+            "chapter": "3. 산업재해 예방과 관리",
+            "page": 51
+        },
+        {
+            "level": 2,
+            "chapter": "3.1 산업재해 예방대책",
+            "page": 51
+        },
+        {
+            "level": 3,
+            "chapter": "1) 여러 나라의 재해예방을 위한 제도적 특징",
+            "page": 51
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 미국의 산업안전보건 관리체계",
+            "page": 51
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 영국의 산업안전보건 관리체계",
+            "page": 51
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 독일의 산업안전보건 관리체계",
+            "page": 52
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 일본의 산업안전보건 관리체계",
+            "page": 52
+        },
+        {
+            "level": 3,
+            "chapter": "2) 한국의 산업재해 예방대책",
+            "page": 53
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 산업안전보건 관련 행정체계",
+            "page": 53
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 산업안전보건 관련 기술지원체계",
+            "page": 53
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 작업환경실태조사",
+            "page": 53
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 사업장내 산업안전보건 관리체계",
+            "page": 54
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 산업재해예방의 기본조건",
+            "page": 54
+        },
+        {
+            "level": 2,
+            "chapter": "3.2 산업재해 관리방법",
+            "page": 54
+        },
+        {
+            "level": 3,
+            "chapter": "1) 산업재해 관리방법",
+            "page": 54
+        },
+        {
+            "level": 3,
+            "chapter": "2) 재해 근로자 업무복귀",
+            "page": 55
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 업무복귀의 의미",
+            "page": 55
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 업무복귀에 영향을 주는 요인",
+            "page": 56
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 업무복귀를 높이기 위한 방안",
+            "page": 56
+        },
+        {
+            "level": 1,
+            "chapter": "4. 산업재해보상보험",
+            "page": 58
+        },
+        {
+            "level": 2,
+            "chapter": "4.1 산업재해보상보험의 원리",
+            "page": 58
+        },
+        {
+            "level": 3,
+            "chapter": "1) 산업재해보상보험의 역사적 배경",
+            "page": 58
+        },
+        {
+            "level": 3,
+            "chapter": "2) 산업재해보상보험의 원리",
+            "page": 58
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 무과실책임주의",
+            "page": 58
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 정률보상",
+            "page": 59
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 사회보험",
+            "page": 59
+        },
+        {
+            "level": 2,
+            "chapter": "4.2 산업재해보상보험의 내용",
+            "page": 59
+        },
+        {
+            "level": 3,
+            "chapter": "1) 산업재해보상보험의 급여의 종류",
+            "page": 59
+        },
+        {
+            "level": 3,
+            "chapter": "2) 산업재해보상보험상의 신체장해평가",
+            "page": 60
+        },
+        {
+            "level": 3,
+            "chapter": "3) 재해의 인정과 인과관계 판정",
+            "page": 61
+        },
+        {
+            "level": 2,
+            "chapter": "4.3 산업재해보상보험과 사회보장",
+            "page": 62
+        },
+        {
+            "level": 3,
+            "chapter": "1) 산업재해와 사회보장",
+            "page": 62
+        },
+        {
+            "level": 3,
+            "chapter": "2) 사회보험으로서 산업재해보상보험",
+            "page": 62
+        },
+        {
+            "level": 3,
+            "chapter": "3) 다른 사회보험과의 관계",
+            "page": 63
+        },
+        {
+            "level": 1,
+            "chapter": "제 7 장 환경 및 직업요인에 의한 질환",
+            "page": 65
+        },
+        {
+            "level": 1,
+            "chapter": "1. 환경성질환",
+            "page": 65
+        },
+        {
+            "level": 2,
+            "chapter": "1.1 환경성질환의 개념",
+            "page": 65
+        },
+        {
+            "level": 2,
+            "chapter": "1.2 세계보건기구의 환경성 질병부담",
+            "page": 66
+        },
+        {
+            "level": 2,
+            "chapter": "1.3 한국의 환경성질환",
+            "page": 67
+        },
+        {
+            "level": 3,
+            "chapter": "1) 한국 환경성질환의 역사",
+            "page": 67
+        },
+        {
+            "level": 3,
+            "chapter": "2) 환경성질환의 법적 정의",
+            "page": 67
+        },
+        {
+            "level": 1,
+            "chapter": "2. 직업성질환의 개념",
+            "page": 69
+        },
+        {
+            "level": 2,
+            "chapter": "2.1 직업성질환의 정의와 개념",
+            "page": 69
+        },
+        {
+            "level": 3,
+            "chapter": "1) 직업성질환의 정의",
+            "page": 69
+        },
+        {
+            "level": 3,
+            "chapter": "2) 직업성질환과 작업관련성질환의 차이점",
+            "page": 69
+        },
+        {
+            "level": 2,
+            "chapter": "2.2 직업성질환의 종류",
+            "page": 70
+        },
+        {
+            "level": 3,
+            "chapter": "1) 원인별로 분류한 직업성질환",
+            "page": 70
+        },
+        {
+            "level": 3,
+            "chapter": "2) 계통별로 분류한 직업성질환",
+            "page": 70
+        },
+        {
+            "level": 3,
+            "chapter": "3) 법규에 명시된 업무상 질병",
+            "page": 71
+        },
+        {
+            "level": 2,
+            "chapter": "2.3 직업성질환의 발생 현황",
+            "page": 71
+        },
+        {
+            "level": 2,
+            "chapter": "2.4 직업성질환의 진단",
+            "page": 73
+        },
+        {
+            "level": 3,
+            "chapter": "(1) 직업력 조사",
+            "page": 73
+        },
+        {
+            "level": 3,
+            "chapter": "(2) 과거력",
+            "page": 73
+        },
+        {
+            "level": 3,
+            "chapter": "(3) 작업장에서 노출되고 있는 유해요인, 보호구 착용 여부 및 착용 시기",
+            "page": 73
+        },
+        {
+            "level": 3,
+            "chapter": "(4) 발병까지의 시간 경과 및 임상증상",
+            "page": 73
+        },
+        {
+            "level": 3,
+            "chapter": "(5) 동료 근로자에서의 증상 또는 질병 조사",
+            "page": 73
+        },
+        {
+            "level": 3,
+            "chapter": "(6) 비직업적 요인",
+            "page": 73
+        },
+        {
+            "level": 3,
+            "chapter": "(7) 이학적 검사",
+            "page": 73
+        },
+        {
+            "level": 2,
+            "chapter": "2.5 직업성질환의 예방 및 관리",
+            "page": 74
+        },
+        {
+            "level": 3,
+            "chapter": "1) 작업환경관리",
+            "page": 75
+        },
+        {
+            "level": 3,
+            "chapter": "2) 근로자 건강관리",
+            "page": 75
+        },
+        {
+            "level": 3,
+            "chapter": "3) 근로자 교육",
+            "page": 75
+        },
+        {
+            "level": 1,
+            "chapter": "3. 직업과 건강",
+            "page": 76
+        },
+        {
+            "level": 2,
+            "chapter": "3.1 직업에 따른 직업성질환",
+            "page": 76
+        },
+        {
+            "level": 3,
+            "chapter": "1) 보건의료종사자의 직업성질환",
+            "page": 77
+        },
+        {
+            "level": 3,
+            "chapter": "2) 정규직과 비정규직근로자의 직업성질환",
+            "page": 77
+        },
+        {
+            "level": 3,
+            "chapter": "3) 교대작업자의 직업성질환",
+            "page": 77
+        },
+        {
+            "level": 2,
+            "chapter": "3.2 업종에 따른 직업성질환",
+            "page": 78
+        },
+        {
+            "level": 1,
+            "chapter": "4. 직업성 암",
+            "page": 81
+        },
+        {
+            "level": 2,
+            "chapter": "4.1 직업성 암의 역학",
+            "page": 81
+        },
+        {
+            "level": 3,
+            "chapter": "1) 직업성 발암물질 노출 후부터 암 발생까지의 시간",
+            "page": 81
+        },
+        {
+            "level": 3,
+            "chapter": "2) 직업성 암의 발생빈도",
+            "page": 81
+        },
+        {
+            "level": 2,
+            "chapter": "4.2 직업성 발암물질",
+            "page": 82
+        },
+        {
+            "level": 3,
+            "chapter": "1) 국제암연구소(International Agency for Research on Cancer, IARC)",
+            "page": 82
+        },
+        {
+            "level": 3,
+            "chapter": "2) 미국산업위생사협회(American Conference of Governmental Industrial Hygienists, ACGIH)",
+            "page": 82
+        },
+        {
+            "level": 3,
+            "chapter": "3) 한국의 직업성 발암물질 분류",
+            "page": 84
+        },
+        {
+            "level": 3,
+            "chapter": "4) 직업성 암의 유발물질과 관련작업",
+            "page": 84
+        },
+        {
+            "level": 3,
+            "chapter": "5) 한국의 직업성 암 원인물질",
+            "page": 84
+        },
+        {
+            "level": 2,
+            "chapter": "4.3 직업성 암의 진단",
+            "page": 86
+        },
+        {
+            "level": 3,
+            "chapter": "1) 암의 확진",
+            "page": 86
+        },
+        {
+            "level": 3,
+            "chapter": "2) 발암물질 노출 확인",
+            "page": 86
+        },
+        {
+            "level": 3,
+            "chapter": "3) 잠복기 조사",
+            "page": 87
+        },
+        {
+            "level": 3,
+            "chapter": "4) 발암물질 노출과 암 발생과의 관련성 평가",
+            "page": 87
+        },
+        {
+            "level": 3,
+            "chapter": "5) 직업관련성 평가",
+            "page": 87
+        },
+        {
+            "level": 2,
+            "chapter": "4.4 직업성 암의 예방",
+            "page": 87
+        },
+        {
+            "level": 3,
+            "chapter": "1) 일차 예방",
+            "page": 87
+        },
+        {
+            "level": 3,
+            "chapter": "2) 이차 예방",
+            "page": 87
+        },
+        {
+            "level": 1,
+            "chapter": "5. 직업성폐질환",
+            "page": 89
+        },
+        {
+            "level": 2,
+            "chapter": "5.1 직업성폐질환의 역학",
+            "page": 90
+        },
+        {
+            "level": 3,
+            "chapter": "1) 현황",
+            "page": 90
+        },
+        {
+            "level": 3,
+            "chapter": "2) 직업성폐질환의 개념 및 정의",
+            "page": 90
+        },
+        {
+            "level": 3,
+            "chapter": "3) 발생 원인 및 역학적 특성",
+            "page": 90
+        },
+        {
+            "level": 2,
+            "chapter": "5.2 직업성폐질환의 진단",
+            "page": 92
+        },
+        {
+            "level": 2,
+            "chapter": "5.3 직업성폐질환의 예방과 관리",
+            "page": 93
+        },
+        {
+            "level": 1,
+            "chapter": "6. 근골격계질환",
+            "page": 95
+        },
+        {
+            "level": 2,
+            "chapter": "6.1 작업관련성 근골격계질환의 개념",
+            "page": 95
+        },
+        {
+            "level": 3,
+            "chapter": "1) 작업관련성 근골격계질환의 정의",
+            "page": 95
+        },
+        {
+            "level": 3,
+            "chapter": "2) 작업관련성 근골격계질환의 특징",
+            "page": 98
+        },
+        {
+            "level": 3,
+            "chapter": "3) 작업관련성 근골격계질환의 원인",
+            "page": 98
+        }
+    ],
+    "_meta": {
+        "source_pdf": "3편5-7장(2021).pdf",
+        "provider": "gemma",
+        "model": "google/gemma-4-31B-it",
+        "generated_timestamp": "20260706_153740",
+        "generated_at": "2026-07-06 15:37:40",
+        "generation_started_at": "2026-07-06 15:34:16",
+        "generation_completed_at": "2026-07-06 15:37:40",
+        "elapsed_seconds": 204.035,
+        "elapsed": "3m 24.0s",
+        "input_mode": "extracted_pdf_layout_text",
+        "extracted_pages": 138,
+        "extracted_chars": 450269,
+        "gemma_extraction_mode": "layout",
+        "layout_line_count": 5421,
+        "layout_font_count": 5,
+        "plain_extracted_chars": 219762,
+        "chunked": true,
+        "chunk_count": 4,
+        "initial_chunk_count": 4,
+        "processed_chunk_count": 12,
+        "gemma_text_single_max_chars": 350000,
+        "gemma_text_chunk_chars": 120000,
+        "gemma_runtime": "vllm",
+        "gemma_model": "google/gemma-4-31B-it",
+        "gemma_torch_dtype": "auto",
+        "gemma_vllm_tensor_parallel_size": 4,
+        "gemma_vllm_gpu_memory_utilization": 0.85,
+        "gemma_vllm_max_model_len": 65536,
+        "gemma_vllm_trust_remote_code": false,
+        "gemma_merge_mode": "gemma",
+        "run_timestamp": "20260706_152005",
+        "run_log_file": "data/output/logs/batch_gemma_20260706_152005_log.txt"
+    }
+}

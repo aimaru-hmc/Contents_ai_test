@@ -1,0 +1,1074 @@
+{
+    "title": "제5장 타당도와 신뢰도",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "1. 연구의 타당도",
+            "page": 1
+        },
+        {
+            "level": 2,
+            "chapter": "1.1 연구집단",
+            "page": 1
+        },
+        {
+            "level": 3,
+            "chapter": "1) 단계별 연구집단의 개념",
+            "page": 1
+        },
+        {
+            "level": 3,
+            "chapter": "2) 연구설계와 목표에 따른 인구집단",
+            "page": 1
+        },
+        {
+            "level": 2,
+            "chapter": "1.2 내적타당도와 외적타당도의 정의",
+            "page": 3
+        },
+        {
+            "level": 2,
+            "chapter": "1.3 내적타당도",
+            "page": 3
+        },
+        {
+            "level": 2,
+            "chapter": "1.4 외적타당도",
+            "page": 4
+        },
+        {
+            "level": 2,
+            "chapter": "1.5 내적타당도 대 외적타당도",
+            "page": 4
+        },
+        {
+            "level": 1,
+            "chapter": "2. 측정방법의 타당도와 신뢰도",
+            "page": 5
+        },
+        {
+            "level": 2,
+            "chapter": "2.1 정 의",
+            "page": 5
+        },
+        {
+            "level": 2,
+            "chapter": "2.2 타당도",
+            "page": 6
+        },
+        {
+            "level": 3,
+            "chapter": "1) 민감도",
+            "page": 6
+        },
+        {
+            "level": 3,
+            "chapter": "2) 특이도",
+            "page": 6
+        },
+        {
+            "level": 3,
+            "chapter": "3) 위음성률과 위양성률",
+            "page": 6
+        },
+        {
+            "level": 3,
+            "chapter": "4) 양성예측도와 음성예측도",
+            "page": 6
+        },
+        {
+            "level": 3,
+            "chapter": "5) 검사결과가 연속형 변수로 측정될 때 타당도 평가",
+            "page": 8
+        },
+        {
+            "level": 2,
+            "chapter": "2.3 신뢰도",
+            "page": 10
+        },
+        {
+            "level": 3,
+            "chapter": "1) 신뢰도에 영향을 미치는 변이",
+            "page": 10
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 피검자의 생물학적 변이",
+            "page": 10
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 검사자 내 변이(intra-observer variability)와 검사자 간 변이(inter-observer variability)",
+            "page": 10
+        },
+        {
+            "level": 3,
+            "chapter": "2) 신뢰도의 측정방법",
+            "page": 11
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 일치율(agreement percent)",
+            "page": 11
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 카파통계량(kappa statistics, kappa value)",
+            "page": 11
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 상관계수(correlation coefficient)",
+            "page": 12
+        },
+        {
+            "level": 1,
+            "chapter": "3. 바이어스",
+            "page": 13
+        },
+        {
+            "level": 2,
+            "chapter": "3.1 무작위 오류와 체계적 오류",
+            "page": 13
+        },
+        {
+            "level": 2,
+            "chapter": "3.2 오류, 신뢰도, 타당도 간 관련성",
+            "page": 13
+        },
+        {
+            "level": 2,
+            "chapter": "3.3 바이어스와 내적타당도",
+            "page": 14
+        },
+        {
+            "level": 2,
+            "chapter": "3.4 바이어스의 분류",
+            "page": 14
+        },
+        {
+            "level": 3,
+            "chapter": "1) 선택 바이어스",
+            "page": 14
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 무응답 바이어스",
+            "page": 15
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 버크슨 바이어스",
+            "page": 15
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 선택적 생존 바이어스",
+            "page": 16
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 자발적 참여자 바이어스",
+            "page": 16
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 탈락 바이어스",
+            "page": 16
+        },
+        {
+            "level": 4,
+            "chapter": "(6) 기간차이 바이어스",
+            "page": 17
+        },
+        {
+            "level": 3,
+            "chapter": "2) 정보 바이어스",
+            "page": 17
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 면담자 바이어스",
+            "page": 17
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 측정 바이어스",
+            "page": 17
+        },
+        {
+            "level": 3,
+            "chapter": "3) 오분류 방향에 따른 결과와의 연관성 평가",
+            "page": 19
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 차별적 오분류",
+            "page": 19
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 비차별적 오분류",
+            "page": 21
+        },
+        {
+            "level": 3,
+            "chapter": "3) 교란 바이어스",
+            "page": 22
+        },
+        {
+            "level": 2,
+            "chapter": "3.5 바이어스의 제어",
+            "page": 23
+        },
+        {
+            "level": 1,
+            "chapter": "제 6 장 역학연구방법론",
+            "page": 25
+        },
+        {
+            "level": 2,
+            "chapter": "1. 역학연구 방법의 분류",
+            "page": 25
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 관찰연구",
+            "page": 25
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 실험연구",
+            "page": 26
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 역학연구 설계에 따른 인과성에 대한 근거 수준",
+            "page": 26
+        },
+        {
+            "level": 2,
+            "chapter": "2. 기술역학의 세 주요 변수",
+            "page": 27
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 인적 변수",
+            "page": 28
+        },
+        {
+            "level": 4,
+            "chapter": "1) 연령",
+            "page": 28
+        },
+        {
+            "level": 4,
+            "chapter": "2) 성별",
+            "page": 29
+        },
+        {
+            "level": 4,
+            "chapter": "3) 결혼 상태",
+            "page": 29
+        },
+        {
+            "level": 4,
+            "chapter": "4) 직업과 사회경제적 수준(socioeconomic status, SES)",
+            "page": 30
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 시간적 변수",
+            "page": 30
+        },
+        {
+            "level": 4,
+            "chapter": "1) 장기 추세 변동(secular trends over a long period of time)",
+            "page": 30
+        },
+        {
+            "level": 4,
+            "chapter": "2) 주기변동(cyclic variation over several years)",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "3) 계절 변동(seasonal variation)",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "4) 유행 곡선(epidemic curve)",
+            "page": 31
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 지역적 변수",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "1) 지역응집성",
+            "page": 32
+        },
+        {
+            "level": 4,
+            "chapter": "2) 지역 간 비교 단위",
+            "page": 32
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 지역 분포 비교",
+            "page": 32
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 지역 간 비교",
+            "page": 33
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 국가 간 비교",
+            "page": 33
+        },
+        {
+            "level": 2,
+            "chapter": "3. 생태학적연구와 사례/사례군연구",
+            "page": 35
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 생태학적연구",
+            "page": 35
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 사례연구와 사례군연구",
+            "page": 37
+        },
+        {
+            "level": 4,
+            "chapter": "1) 사례연구",
+            "page": 37
+        },
+        {
+            "level": 4,
+            "chapter": "2) 사례군연구",
+            "page": 37
+        },
+        {
+            "level": 1,
+            "chapter": "4. 단면연구",
+            "page": 40
+        },
+        {
+            "level": 2,
+            "chapter": "4.1 단면연구의 기본 개념",
+            "page": 40
+        },
+        {
+            "level": 2,
+            "chapter": "4.2 단면연구의 분석",
+            "page": 40
+        },
+        {
+            "level": 3,
+            "chapter": "1) 질병 유병률과 요인 노출률 측정",
+            "page": 40
+        },
+        {
+            "level": 3,
+            "chapter": "2) 유병률비와 유병교차비를 이용한 요인과 질병의 연관성 분석",
+            "page": 41
+        },
+        {
+            "level": 2,
+            "chapter": "4.3 단면연구의 장단점과 바이어스",
+            "page": 42
+        },
+        {
+            "level": 1,
+            "chapter": "5. 환자-대조군연구",
+            "page": 44
+        },
+        {
+            "level": 2,
+            "chapter": "5.1 환자-대조군연구의 정의",
+            "page": 44
+        },
+        {
+            "level": 2,
+            "chapter": "5.2 환자-대조군연구의 수행",
+            "page": 44
+        },
+        {
+            "level": 3,
+            "chapter": "1) 대상자의 선별",
+            "page": 44
+        },
+        {
+            "level": 3,
+            "chapter": "2) 환자-대조군연구의 종류",
+            "page": 45
+        },
+        {
+            "level": 3,
+            "chapter": "3) 짝짓기(matching)",
+            "page": 46
+        },
+        {
+            "level": 2,
+            "chapter": "5.3 환자-대조군연구의 분석",
+            "page": 46
+        },
+        {
+            "level": 2,
+            "chapter": "5.4 환자-대조군연구의 장단점과 바이어스",
+            "page": 47
+        },
+        {
+            "level": 1,
+            "chapter": "6. 코호트연구",
+            "page": 49
+        },
+        {
+            "level": 2,
+            "chapter": "6.1 코호트연구의 정의",
+            "page": 49
+        },
+        {
+            "level": 2,
+            "chapter": "6.2 코호트연구의 설계",
+            "page": 49
+        },
+        {
+            "level": 3,
+            "chapter": "1) 코호트 구축",
+            "page": 49
+        },
+        {
+            "level": 3,
+            "chapter": "2) 전향적 및 후향적 코호트 설계",
+            "page": 50
+        },
+        {
+            "level": 2,
+            "chapter": "6.3 코호트연구에서의 분석",
+            "page": 50
+        },
+        {
+            "level": 3,
+            "chapter": "1) 코호트연구에서의 질병발생률",
+            "page": 51
+        },
+        {
+            "level": 3,
+            "chapter": "2) 코호트연구에서의 질병발생률 비교",
+            "page": 51
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 상대위험도",
+            "page": 51
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 기여위험도",
+            "page": 52
+        },
+        {
+            "level": 2,
+            "chapter": "6.4 코호트연구의 장단점과 바이어스",
+            "page": 54
+        },
+        {
+            "level": 1,
+            "chapter": "7. 혼합설계연구",
+            "page": 56
+        },
+        {
+            "level": 2,
+            "chapter": "7.1 기술역학의 세 주요변수를 이용한 혼합설계",
+            "page": 56
+        },
+        {
+            "level": 3,
+            "chapter": "1) 이민자연구",
+            "page": 56
+        },
+        {
+            "level": 2,
+            "chapter": "2) 쌍둥이연구",
+            "page": 57
+        },
+        {
+            "level": 3,
+            "chapter": "(1) 유전자발굴 연구에서의 쌍둥이연구의 활용",
+            "page": 58
+        },
+        {
+            "level": 3,
+            "chapter": "(2) 일란성 쌍둥이를 통한 쌍둥이-대조군연구",
+            "page": 58
+        },
+        {
+            "level": 2,
+            "chapter": "3) 출생코호트연구",
+            "page": 58
+        },
+        {
+            "level": 3,
+            "chapter": "(1) 출생코호트의 바이어스",
+            "page": 60
+        },
+        {
+            "level": 2,
+            "chapter": "4) 연령-기간-코호트 분석",
+            "page": 60
+        },
+        {
+            "level": 1,
+            "chapter": "7.2 코호트내 환자-대조군연구와 환자-코호트연구",
+            "page": 62
+        },
+        {
+            "level": 2,
+            "chapter": "1) 코호트내 환자-대조군연구",
+            "page": 62
+        },
+        {
+            "level": 2,
+            "chapter": "2) 환자-코호트연구",
+            "page": 64
+        },
+        {
+            "level": 2,
+            "chapter": "3) 코호트 내 환자-대조군연구와 환자-코호트연구의 비교",
+            "page": 65
+        },
+        {
+            "level": 1,
+            "chapter": "7.3 패널연구와 경향연구",
+            "page": 65
+        },
+        {
+            "level": 1,
+            "chapter": "7.4 환자-교차설계연구와 환자-시간대조군연구",
+            "page": 66
+        },
+        {
+            "level": 1,
+            "chapter": "8. 임상시험",
+            "page": 68
+        },
+        {
+            "level": 2,
+            "chapter": "8.1 실험역학의 정의, 방법과 특징",
+            "page": 69
+        },
+        {
+            "level": 2,
+            "chapter": "8.2 임상시험의 단계와 특징",
+            "page": 69
+        },
+        {
+            "level": 2,
+            "chapter": "8.3 임상시험의 설계와 방법",
+            "page": 70
+        },
+        {
+            "level": 3,
+            "chapter": "1) 임상시험 설계",
+            "page": 70
+        },
+        {
+            "level": 3,
+            "chapter": "2) 임상시험에서의 비교군 설정",
+            "page": 71
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 비교군 설정이 필요한 경우",
+            "page": 71
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 비교군의 종류",
+            "page": 71
+        },
+        {
+            "level": 3,
+            "chapter": "3) 시험대상자 수 산출",
+            "page": 72
+        },
+        {
+            "level": 3,
+            "chapter": "4) 무작위배정법",
+            "page": 72
+        },
+        {
+            "level": 3,
+            "chapter": "5) 눈가림법",
+            "page": 73
+        },
+        {
+            "level": 2,
+            "chapter": "6) 기초자료 수집",
+            "page": 74
+        },
+        {
+            "level": 2,
+            "chapter": "7) 결과 관찰",
+            "page": 74
+        },
+        {
+            "level": 2,
+            "chapter": "8) 통계분석",
+            "page": 74
+        },
+        {
+            "level": 2,
+            "chapter": "8.4 임상시험 계획에서 고려할 점",
+            "page": 75
+        },
+        {
+            "level": 1,
+            "chapter": "9. 예방시험",
+            "page": 76
+        },
+        {
+            "level": 2,
+            "chapter": "9.1 예방시험의 개념과 특성",
+            "page": 76
+        },
+        {
+            "level": 2,
+            "chapter": "9.2 예방시험 설계와 방법",
+            "page": 77
+        },
+        {
+            "level": 2,
+            "chapter": "9.3 예방시험의 장단점과 바이어스",
+            "page": 79
+        },
+        {
+            "level": 1,
+            "chapter": "10. 지역사회시험",
+            "page": 80
+        },
+        {
+            "level": 2,
+            "chapter": "10.1 지역사회시험의 개념과 특징",
+            "page": 80
+        },
+        {
+            "level": 2,
+            "chapter": "10.2 지역사회시험의 연구수행",
+            "page": 81
+        },
+        {
+            "level": 2,
+            "chapter": "10.3 지역사회시험의 활용과 기여",
+            "page": 82
+        },
+        {
+            "level": 1,
+            "chapter": "11. 체계적 문헌고찰과 메타분석",
+            "page": 83
+        },
+        {
+            "level": 2,
+            "chapter": "11.1 체계적 문헌고찰과 메타분석의 정의와 특징",
+            "page": 83
+        },
+        {
+            "level": 2,
+            "chapter": "11.2 연구문제의 설정과 문헌선정",
+            "page": 84
+        },
+        {
+            "level": 2,
+            "chapter": "11.3 메타분석의 수행",
+            "page": 86
+        },
+        {
+            "level": 3,
+            "chapter": "1) 자료추출과 개별연구의 바이어스 위험평가",
+            "page": 86
+        },
+        {
+            "level": 3,
+            "chapter": "2) 통합분석 수행과 이질성 평가",
+            "page": 87
+        },
+        {
+            "level": 2,
+            "chapter": "11.4 바이어스 탐색",
+            "page": 89
+        },
+        {
+            "level": 1,
+            "chapter": "12. 역학연구에서의 윤리적 문제",
+            "page": 91
+        },
+        {
+            "level": 2,
+            "chapter": "12.1 인간 대상 연구에 대한 윤리 규정 및 규제",
+            "page": 91
+        },
+        {
+            "level": 2,
+            "chapter": "12.2 연구윤리 관련 기관 및 위원회",
+            "page": 92
+        },
+        {
+            "level": 2,
+            "chapter": "12.3 실험역학연구에서 윤리적 고려사항",
+            "page": 93
+        },
+        {
+            "level": 3,
+            "chapter": "1) 역학연구의 윤리적 정당성과 과학적 타당성",
+            "page": 93
+        },
+        {
+            "level": 3,
+            "chapter": "2) 사전 동의(informed consent)",
+            "page": 93
+        },
+        {
+            "level": 3,
+            "chapter": "3) 연구 참여의 이익과 위험",
+            "page": 94
+        },
+        {
+            "level": 3,
+            "chapter": "4) 임상시험에서 대조군 선택",
+            "page": 94
+        },
+        {
+            "level": 3,
+            "chapter": "5) 연구대상자 모집과 취약한 연구대상자",
+            "page": 94
+        },
+        {
+            "level": 3,
+            "chapter": "6) 이해상충의 공개와 관리",
+            "page": 95
+        },
+        {
+            "level": 3,
+            "chapter": "7) 지역사회시험",
+            "page": 95
+        },
+        {
+            "level": 2,
+            "chapter": "12.4 관찰역학연구와 역학조사에서의 윤리적 고려사항",
+            "page": 96
+        },
+        {
+            "level": 3,
+            "chapter": "1) 역학연구와 역학조사의 구분",
+            "page": 96
+        },
+        {
+            "level": 3,
+            "chapter": "2) 관찰역학연구와 개인정보보호",
+            "page": 96
+        },
+        {
+            "level": 2,
+            "chapter": "12.5 유전자연구와 인체유래물 연구의 윤리적 고려사항",
+            "page": 97
+        },
+        {
+            "level": 3,
+            "chapter": "1) 인체유래물연구와 생명윤리법",
+            "page": 97
+        },
+        {
+            "level": 3,
+            "chapter": "2) 유전자연구의 윤리적 고려사항",
+            "page": 98
+        },
+        {
+            "level": 3,
+            "chapter": "3) 유전체연구 데이터의 공유의 윤리적 문제",
+            "page": 98
+        },
+        {
+            "level": 2,
+            "chapter": "12.6 특수노출집단연구에서 윤리적 고려사항",
+            "page": 98
+        },
+        {
+            "level": 1,
+            "chapter": "제7장 분야별 역학연구",
+            "page": 102
+        },
+        {
+            "level": 2,
+            "chapter": "1. 약물역학",
+            "page": 102
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 약물역학의 개념과 발전배경",
+            "page": 102
+        },
+        {
+            "level": 4,
+            "chapter": "1) 약물역학(pharmacoepidemiology)의 정의",
+            "page": 102
+        },
+        {
+            "level": 4,
+            "chapter": "2) 발전배경",
+            "page": 102
+        },
+        {
+            "level": 4,
+            "chapter": "3) 약물역학연구의 필요성과 의의",
+            "page": 103
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 약물역학 관련 제도 및 기관",
+            "page": 104
+        },
+        {
+            "level": 4,
+            "chapter": "1) 자발적 부작용신고제도(spontaneous adverse event reporting system)",
+            "page": 104
+        },
+        {
+            "level": 4,
+            "chapter": "2) 약물역학 관련 기관",
+            "page": 104
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 약물역학연구의 설계와 방법",
+            "page": 104
+        },
+        {
+            "level": 4,
+            "chapter": "1) 데이터마이닝",
+            "page": 104
+        },
+        {
+            "level": 4,
+            "chapter": "2) 사례연구",
+            "page": 105
+        },
+        {
+            "level": 4,
+            "chapter": "3) 사례군연구",
+            "page": 105
+        },
+        {
+            "level": 4,
+            "chapter": "4) 생태학적연구",
+            "page": 105
+        },
+        {
+            "level": 4,
+            "chapter": "5) 환자-대조군연구",
+            "page": 105
+        },
+        {
+            "level": 4,
+            "chapter": "6) 코호트연구",
+            "page": 106
+        },
+        {
+            "level": 4,
+            "chapter": "7) 환자-교차연구(case-crossover design)",
+            "page": 106
+        },
+        {
+            "level": 4,
+            "chapter": "8) 환자-자기대조군연구(self-controlled case series study)",
+            "page": 106
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 약물역학연구에서 발생할 수 있는 바이어스",
+            "page": 107
+        },
+        {
+            "level": 4,
+            "chapter": "1) 적응증 교란 바이어스",
+            "page": 107
+        },
+        {
+            "level": 4,
+            "chapter": "2) 전조증상 바이어스",
+            "page": 107
+        },
+        {
+            "level": 4,
+            "chapter": "3) 불멸시간 바이어스",
+            "page": 108
+        },
+        {
+            "level": 4,
+            "chapter": "4) 측정불가시간 바이어스",
+            "page": 108
+        },
+        {
+            "level": 3,
+            "chapter": "1.5 약물역학연구 공개자료원",
+            "page": 108
+        },
+        {
+            "level": 4,
+            "chapter": "1) 건강보험공단 및 건강보험심사평가원 자료",
+            "page": 108
+        },
+        {
+            "level": 4,
+            "chapter": "2) 의약품 부작용 보고자료",
+            "page": 108
+        },
+        {
+            "level": 2,
+            "chapter": "1.6 약물역학의 활용과 기여",
+            "page": 109
+        },
+        {
+            "level": 3,
+            "chapter": "1) 규제적 의사결정을 위한 약물역학의 활용",
+            "page": 109
+        },
+        {
+            "level": 3,
+            "chapter": "2) 약물역학연구의 임상적 적용 사례",
+            "page": 109
+        },
+        {
+            "level": 3,
+            "chapter": "3) 약물역학연구의 지역사회 및 국가 등 공익적 적용 사례",
+            "page": 109
+        },
+        {
+            "level": 1,
+            "chapter": "2. 영양역학",
+            "page": 110
+        },
+        {
+            "level": 2,
+            "chapter": "2.1 영양역학의 개념과 발전",
+            "page": 110
+        },
+        {
+            "level": 3,
+            "chapter": "1) 영양역학의 개념",
+            "page": 110
+        },
+        {
+            "level": 2,
+            "chapter": "2) 영양역학의 발전 배경",
+            "page": 111
+        },
+        {
+            "level": 2,
+            "chapter": "2.2 영양역학연구의 영양상태 평가방법",
+            "page": 111
+        },
+        {
+            "level": 3,
+            "chapter": "1) 식이섭취(dietary intake) 조사방법",
+            "page": 111
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 개방형 영양조사",
+            "page": 111
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 식품섭취빈도조사",
+            "page": 112
+        },
+        {
+            "level": 2,
+            "chapter": "2.3 영양역학연구의 영양요인 자료 분석",
+            "page": 112
+        },
+        {
+            "level": 3,
+            "chapter": "1) 식품 및 영양소 섭취량 분석을 위한 자료",
+            "page": 112
+        },
+        {
+            "level": 3,
+            "chapter": "2) 식품섭취량 조사 자료 분석",
+            "page": 113
+        },
+        {
+            "level": 2,
+            "chapter": "2.4 영양역학연구의 공개자료원",
+            "page": 114
+        },
+        {
+            "level": 3,
+            "chapter": "1) 국민건강영양조사",
+            "page": 114
+        },
+        {
+            "level": 3,
+            "chapter": "2) 한국인유전체역학조사사업",
+            "page": 114
+        },
+        {
+            "level": 2,
+            "chapter": "2.5 영양역학연구에서의 오류와 바이어스",
+            "page": 114
+        },
+        {
+            "level": 3,
+            "chapter": "1) 오류",
+            "page": 115
+        },
+        {
+            "level": 3,
+            "chapter": "2) 바이어스",
+            "page": 115
+        }
+    ],
+    "_meta": {
+        "source_pdf": "2편5-8장(2021).pdf",
+        "provider": "gemma",
+        "model": "google/gemma-4-31B-it",
+        "generated_timestamp": "20260706_152619",
+        "generated_at": "2026-07-06 15:26:19",
+        "generation_started_at": "2026-07-06 15:22:43",
+        "generation_completed_at": "2026-07-06 15:26:19",
+        "elapsed_seconds": 215.701,
+        "elapsed": "3m 35.7s",
+        "input_mode": "extracted_pdf_layout_text",
+        "extracted_pages": 177,
+        "extracted_chars": 582690,
+        "gemma_extraction_mode": "layout",
+        "layout_line_count": 7197,
+        "layout_font_count": 3,
+        "plain_extracted_chars": 276425,
+        "chunked": true,
+        "chunk_count": 5,
+        "initial_chunk_count": 5,
+        "processed_chunk_count": 15,
+        "gemma_text_single_max_chars": 350000,
+        "gemma_text_chunk_chars": 120000,
+        "gemma_runtime": "vllm",
+        "gemma_model": "google/gemma-4-31B-it",
+        "gemma_torch_dtype": "auto",
+        "gemma_vllm_tensor_parallel_size": 4,
+        "gemma_vllm_gpu_memory_utilization": 0.85,
+        "gemma_vllm_max_model_len": 65536,
+        "gemma_vllm_trust_remote_code": false,
+        "gemma_merge_mode": "gemma",
+        "run_timestamp": "20260706_152005",
+        "run_log_file": "data/output/logs/batch_gemma_20260706_152005_log.txt"
+    }
+}
