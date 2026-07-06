@@ -1,0 +1,295 @@
+Run log saved: data/output/logs/batch_gemma_20260706_140545_log.txt
+Processing started: 1편(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 51 pages, 169770 chars, mode=layout
+  Gemma text chunk processing started: 3 chunks
+  Gemma chunk 1/3 request: pages 1-24
+  Gemma/vLLM model loading started: google/gemma-4-31B-it
+[32mINFO[0m [90m07-06 14:05:58[0m [90m[api_utils.py:273][0m non-default args: {'max_model_len': 65536, 'tensor_parallel_size': 4, 'gpu_memory_utilization': 0.85, 'disable_log_stats': True, 'model': 'google/gemma-4-31B-it'}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[32mINFO[0m [90m07-06 14:06:00[0m [90m[model.py:598][0m Resolved architecture: Gemma4ForConditionalGeneration
+[32mINFO[0m [90m07-06 14:06:00[0m [90m[model.py:1725][0m Using max model len 65536
+[32mINFO[0m [90m07-06 14:06:04[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=16384.
+[32mINFO[0m [90m07-06 14:06:04[0m [90m[config.py:90][0m Gemma4 model has heterogeneous head dimensions (head_dim=256, global_head_dim=512). Using FA4 for all layers to avoid mixed FA3/FA4 penalty.
+[32mINFO[0m [90m07-06 14:06:04[0m [90m[vllm.py:1006][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m07-06 14:06:04[0m [90m[kernel.py:276][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m07-06 14:06:04[0m [90m[cuda.py:322][0m Forcing --disable_chunked_mm_input for models with multimodal-bidirectional attention.
+[32mINFO[0m [90m07-06 14:06:06[0m [90m[compilation.py:310][0m Enabled custom fusions: allreduce_rms
+[33mWARNING[0m [90m07-06 14:06:10[0m [90m[system_utils.py:157][0m We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
+  Gemma/vLLM model loading completed: google/gemma-4-31B-it
+  Gemma/vLLM config: tensor_parallel_size=4 / dtype=auto / gpu_memory_utilization=0.85
+  Gemma chunk 1 completed: 36 chapters
+  Gemma chunk 2/3 request: pages 25-47
+  Gemma chunk 2 completed: 64 chapters
+  Gemma chunk 3/3 request: pages 48-51
+  Gemma chunk 3 completed: 2 chapters
+  Gemma chunked TOC merge started: google/gemma-4-31B-it
+Completed: data/output/1_2021_gemma_20260706_140919_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 3m 28.7s (208.697s)
+  title: 건강과 질병
+  chapters: 100
+Processing started: 2편1-4장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 98 pages, 300119 chars, mode=layout
+  Gemma text chunk processing started: 4 chunks
+  Gemma chunk 1/4 request: pages 1-28
+  Gemma chunk 1 completed: 69 chapters
+  Gemma chunk 2/4 request: pages 29-54
+  Gemma chunk 2 completed: 60 chapters
+  Gemma chunk 3/4 request: pages 55-82
+  Gemma chunk 3 completed: 62 chapters
+  Gemma chunk 4/4 request: pages 83-100
+  Gemma chunk 4 completed: 30 chapters
+  Gemma chunked TOC merge started: google/gemma-4-31B-it
+Completed: data/output/2_1-4_2021_gemma_20260706_141200_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 2m 40.9s (160.944s)
+  title: 역학과 그 응용
+  chapters: 212
+Processing started: 2편5-8장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 177 pages, 582690 chars, mode=layout
+  Gemma text chunk processing started: 8 chunks
+  Gemma chunk 1/8 request: pages 1-24
+  Gemma chunk 1 completed: 52 chapters
+  Gemma chunk 2/8 request: pages 25-51
+  Gemma chunk 2 completed: 49 chapters
+  Gemma chunk 3/8 request: pages 52-74
+  Gemma chunk 3 completed: 31 chapters
+  Gemma chunk 4/8 request: pages 75-97
+  Gemma chunk 4 completed: 32 chapters
+  Gemma chunk 5/8 request: pages 98-122
+  Gemma chunk 5 completed: 64 chapters
+  Gemma chunk 6/8 request: pages 123-145
+  Gemma chunk 6 completed: 41 chapters
+  Gemma chunk 7/8 request: pages 146-167
+  Gemma chunk 7 completed: 35 chapters
+  Gemma chunk 8/8 request: pages 168-178
+  Gemma chunk 8 completed: 15 chapters
+  Gemma chunked TOC merge started: google/gemma-4-31B-it
+Completed: data/output/2_5-8_2021_gemma_20260706_141536_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 3m 36.1s (216.114s)
+  title: 제5장 타당도와 신뢰도
+  chapters: 207
+Processing started: 2편9-11장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 271 pages, 907916 chars, mode=layout
+  Gemma text chunk processing started: 12 chunks
+  Gemma chunk 1/12 request: pages 1-22
+  Gemma chunk 1 completed: 26 chapters
+  Gemma chunk 2/12 request: pages 23-49
+  Gemma chunk 2 completed: 49 chapters
+  Gemma chunk 3/12 request: pages 50-73
+  Gemma chunk 3 completed: 38 chapters
+  Gemma chunk 4/12 request: pages 74-100
+  Gemma chunk 4 completed: 60 chapters
+  Gemma chunk 5/12 request: pages 101-123
+  Gemma chunk 5 completed: 53 chapters
+  Gemma chunk 6/12 request: pages 124-147
+  Gemma chunk 6 completed: 49 chapters
+  Gemma chunk 7/12 request: pages 148-172
+  Gemma chunk 7 completed: 38 chapters
+  Gemma chunk 8/12 request: pages 173-191
+  Gemma chunk 8 completed: 27 chapters
+  Gemma chunk 9/12 request: pages 192-213
+  Gemma chunk 9 completed: 23 chapters
+  Gemma chunk 10/12 request: pages 214-236
+  Gemma chunk 10 completed: 30 chapters
+  Gemma chunk 11/12 request: pages 237-259
+  Gemma chunk 11 completed: 21 chapters
+  Gemma chunk 12/12 request: pages 260-272
+  Gemma chunk 12 completed: 11 chapters
+  Gemma chunked TOC merge started: google/gemma-4-31B-it
+Completed: data/output/2_9-11_2021_gemma_20260706_142014_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 4m 38.5s (278.530s)
+  title: 제2편 역학과 그 응용
+  chapters: 212
+Processing started: 3편1,2장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 111 pages, 371441 chars, mode=layout
+  Gemma text chunk processing started: 5 chunks
+  Gemma chunk 1/5 request: pages 1-24
+  Gemma chunk 1 completed: 34 chapters
+  Gemma chunk 2/5 request: pages 25-46
+  Gemma chunk 2 completed: 41 chapters
+  Gemma chunk 3/5 request: pages 47-70
+  Gemma chunk 3 completed: 47 chapters
+  Gemma chunk 4/5 request: pages 71-92
+  Gemma chunk 4 completed: 67 chapters
+  Gemma chunk 5/5 request: pages 93-111
+  Gemma chunk 5 completed: 57 chapters
+  Gemma chunked TOC merge started: google/gemma-4-31B-it
+Completed: data/output/3_1_2_2021_gemma_20260706_142307_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 2m 52.3s (172.272s)
+  title: 환경과 건강
+  chapters: 216
+Processing started: 3편3,4장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 103 pages, 343956 chars, mode=layout
+  Gemma text chunk processing started: 5 chunks
+  Gemma chunk 1/5 request: pages 1-23
+  Gemma chunk 1 completed: 90 chapters
+  Gemma chunk 2/5 request: pages 24-45
+  Gemma chunk 2 completed: 43 chapters
+  Gemma chunk 3/5 request: pages 46-70
+  Gemma chunk 3 completed: 39 chapters
+  Gemma chunk 4/5 request: pages 71-93
+  Gemma chunk 4 completed: 66 chapters
+  Gemma chunk 5/5 request: pages 94-103
+  Gemma chunk 5 completed: 19 chapters
+  Gemma chunked TOC merge started: google/gemma-4-31B-it
+Completed: data/output/3_3_4_2021_gemma_20260706_142558_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 2m 51.0s (171.013s)
+  title: 제3장 화학적 요인
+  chapters: 217
+Processing started: 3편5-7장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 138 pages, 450269 chars, mode=layout
+  Gemma text chunk processing started: 6 chunks
+  Gemma chunk 1/6 request: pages 1-22
+  Gemma chunk 1 completed: 42 chapters
+  Gemma chunk 2/6 request: pages 23-48
+  Gemma chunk 2 completed: 66 chapters
+  Gemma chunk 3/6 request: pages 49-73
+  Gemma chunk 3 completed: 59 chapters
+  Gemma chunk 4/6 request: pages 74-96
+  Gemma chunk 4 completed: 40 chapters
+  Gemma chunk 5/6 request: pages 97-120
+  Gemma chunk 5 completed: 59 chapters
+  Gemma chunk 6/6 request: pages 121-139
+  Gemma chunk 6 completed: 39 chapters
+  Gemma chunked TOC merge started: google/gemma-4-31B-it
+Completed: data/output/3_5-7_2021_gemma_20260706_142920_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 3m 22.1s (202.066s)
+  title: 제5장 직업보건
+  chapters: 205
+Processing started: 부교재3.PDF
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 572 pages, 2195951 chars, mode=layout
+  Gemma text chunk processing started: 29 chunks
+  Gemma chunk 1/29 request: pages 5-21
+  Gemma chunk 1 completed: 212 chapters
+  Gemma chunk 2/29 request: pages 22-46
+  Gemma chunk 2 completed: 68 chapters
+  Gemma chunk 3/29 request: pages 47-70
+  Gemma chunk 3 completed: 38 chapters
+  Gemma chunk 4/29 request: pages 71-92
+  Gemma chunk 4 completed: 51 chapters
+  Gemma chunk 5/29 request: pages 93-119
+  Gemma chunk 5 completed: 69 chapters
+  Gemma chunk 6/29 request: pages 120-142
+  Gemma chunk 6 completed: 33 chapters
+  Gemma chunk 7/29 request: pages 143-168
+  Gemma chunk 7 completed: 50 chapters
+  Gemma chunk 8/29 request: pages 169-193
+  Gemma chunk 8 completed: 35 chapters
+  Gemma chunk 9/29 request: pages 194-216
+  Gemma chunk 9 completed: 46 chapters
+  Gemma chunk 10/29 request: pages 217-237
+  Gemma chunk 10 completed: 43 chapters
+  Gemma chunk 11/29 request: pages 238-258
+  Gemma chunk 11 completed: 22 chapters
+  Gemma chunk 12/29 request: pages 259-279
+  Gemma chunk 12 completed: 29 chapters
+  Gemma chunk 13/29 request: pages 280-296
+  Gemma chunk 13 completed: 30 chapters
+  Gemma chunk 14/29 request: pages 297-318
+  Gemma chunk 14 completed: 61 chapters
+  Gemma chunk 15/29 request: pages 319-327
+  Gemma chunk 15 completed: 13 chapters
+  Gemma chunk 16/29 request: pages 328-342
+  Gemma chunk 16 completed: 26 chapters
+  Gemma chunk 17/29 request: pages 343-356
+  Gemma chunk 17 completed: 24 chapters
+  Gemma chunk 18/29 request: pages 357-379
+  Gemma chunk 18 completed: 60 chapters
+  Gemma chunk 19/29 request: pages 380-402
+  Gemma chunk 19 completed: 63 chapters
+  Gemma chunk 20/29 request: pages 403-424
+  Gemma chunk 20 completed: 54 chapters
+  Gemma chunk 21/29 request: pages 425-440
+  Gemma chunk 21 completed: 25 chapters
+  Gemma chunk 22/29 request: pages 441-466
+  Gemma chunk 22 completed: 46 chapters
+  Gemma chunk 23/29 request: pages 467-482
+  Gemma chunk 23 completed: 23 chapters
+  Gemma chunk 24/29 request: pages 483-496
+  Gemma chunk 24 completed: 31 chapters
+  Gemma chunk 25/29 request: pages 497-511
+  Gemma chunk 25 completed: 28 chapters
+  Gemma chunk 26/29 request: pages 512-533
+  Gemma chunk 26 completed: 43 chapters
+  Gemma chunk 27/29 request: pages 534-557
+  Gemma chunk 27 completed: 21 chapters
+  Gemma chunk 28/29 request: pages 558-575
+  Gemma chunk 28 completed: 0 chapters
+  Gemma chunk 29/29 request: pages 576-583
+  Gemma chunk 29 completed: 0 chapters
+  Gemma chunked TOC merge started: google/gemma-4-31B-it
+Completed: data/output/3_gemma_20260706_143917_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 9m 57.8s (597.825s)
+  title: 예방의학과 공중보건학
+  chapters: 212
+Processing started: 주교재.pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 221 pages, 937307 chars, mode=layout
+  Gemma text chunk processing started: 13 chunks
+  Gemma chunk 1/13 request: pages 2-23
+  Gemma chunk 1 completed: 22 chapters
+  Gemma chunk 2/13 request: pages 24-42
+  Gemma chunk 2 completed: 27 chapters
+  Gemma chunk 3/13 request: pages 43-59
+  Gemma chunk 3 completed: 30 chapters
+  Gemma chunk 4/13 request: pages 60-76
+  Gemma chunk 4 completed: 29 chapters
+  Gemma chunk 5/13 request: pages 77-94
+  Gemma chunk 5 completed: 41 chapters
+  Gemma chunk 6/13 request: pages 95-112
+  Gemma chunk 6 completed: 28 chapters
+  Gemma chunk 7/13 request: pages 113-130
+  Gemma chunk 7 completed: 25 chapters
+  Gemma chunk 8/13 request: pages 131-147
+  Gemma chunk 8 completed: 30 chapters
+  Gemma chunk 9/13 request: pages 148-165
+  Gemma chunk 9 completed: 33 chapters
+  Gemma chunk 10/13 request: pages 166-184
+  Gemma chunk 10 completed: 30 chapters
+  Gemma chunk 11/13 request: pages 185-202
+  Gemma chunk 11 completed: 20 chapters
+  Gemma chunk 12/13 request: pages 203-223
+  Gemma chunk 12 completed: 10 chapters
+  Gemma chunk 13/13 request: pages 224-226
+  Gemma chunk 13 completed: 0 chapters
+  Gemma chunked TOC merge started: google/gemma-4-31B-it
+Completed: data/output/unknown_model_gemma_20260706_144233_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 3m 15.5s (195.530s)
+  title: Basic epidemiology
+  chapters: 249
+Processing result: success 9 / failed 0
+Run log saved: data/output/logs/batch_gemma_20260706_140545_log.txt
