@@ -3294,7 +3294,9 @@ def generate_toc_from_pdf_gemma(pdf_path: Path, args: argparse.Namespace, prompt
             print(f"Trying Gemma fallback model: {model}", file=sys.stderr, flush=True)
 
         try:
-            print(f"  Using Gemma/Transformers: {model}", flush=True)
+            runtime = normalize_gemma_runtime(getattr(args, "gemma_runtime", DEFAULT_GEMMA_RUNTIME))
+            runtime_label = "vLLM" if runtime == "vllm" else "Transformers"
+            print(f"  Using Gemma/{runtime_label}: {model}", flush=True)
             return generate_toc_from_pdf_gemma_text(
                 model=model,
                 pdf_path=pdf_path,
@@ -3378,6 +3380,15 @@ class TeeStream:
     def isatty(self) -> bool:
         isatty = getattr(self.console_stream, "isatty", None)
         return bool(isatty()) if callable(isatty) else False
+
+    def fileno(self) -> int:
+        fileno = getattr(self.console_stream, "fileno", None)
+        if callable(fileno):
+            return int(fileno())
+        log_fileno = getattr(self.log_stream, "fileno", None)
+        if callable(log_fileno):
+            return int(log_fileno())
+        raise OSError("TeeStream does not wrap a stream with fileno().")
 
 
 def timestamp_for_filename() -> str:
