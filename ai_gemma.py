@@ -69,6 +69,14 @@ DEFAULT_GEMMA_DEVICE_MAP = os.getenv("GEMMA_DEVICE_MAP", "auto").strip() or "aut
 DEFAULT_GEMMA_TORCH_DTYPE = os.getenv("GEMMA_TORCH_DTYPE", os.getenv("GEMMA_DTYPE", "auto")).strip() or "auto"
 DEFAULT_GEMMA_EXTRACTION_MODE = os.getenv("GEMMA_EXTRACTION_MODE", "layout").strip().lower() or "layout"
 DEFAULT_GEMMA_MERGE_MODE = os.getenv("GEMMA_MERGE_MODE", "local").strip().lower() or "local"
+DEFAULT_GEMMA_LEVEL_REFERENCE = (
+    os.getenv("GEMMA_LEVEL_REFERENCE", "true").strip().lower()
+    in {"1", "true", "yes", "on"}
+)
+DEFAULT_WRITE_PARSED_PDF = (
+    os.getenv("WRITE_PARSED_PDF", "true").strip().lower()
+    in {"1", "true", "yes", "on"}
+)
 DEFAULT_GEMMA_VLLM_TENSOR_PARALLEL_SIZE = int(os.getenv("GEMMA_VLLM_TENSOR_PARALLEL_SIZE", os.getenv("VLLM_TENSOR_PARALLEL_SIZE", "1")))
 DEFAULT_GEMMA_VLLM_GPU_MEMORY_UTILIZATION = float(os.getenv("GEMMA_VLLM_GPU_MEMORY_UTILIZATION", os.getenv("VLLM_GPU_MEMORY_UTILIZATION", "0.9")))
 DEFAULT_GEMMA_VLLM_MAX_MODEL_LEN = os.getenv("GEMMA_VLLM_MAX_MODEL_LEN", os.getenv("VLLM_MAX_MODEL_LEN", "")).strip()
@@ -1732,6 +1740,58 @@ def chunk_pdf_text_pages(
     return chunks
 
 
+def parsed_pdf_text_for_file(
+    pdf_path: Path,
+    pages: list[tuple[int, str]],
+    extraction_metadata: dict[str, Any],
+    source_pdf_path: Path | None = None,
+) -> str:
+    source_path = source_pdf_path or pdf_path
+    lines = [
+        "# Parsed PDF Text",
+        f"source_pdf: {source_path}",
+        f"processed_pdf: {pdf_path}",
+        f"extraction_metadata: {json.dumps(extraction_metadata, ensure_ascii=False, sort_keys=True)}",
+        "",
+    ]
+    for page_number, text in pages:
+        lines.append(f"[PAGE {page_number}]")
+        lines.append(str(text or ""))
+        lines.append("")
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def write_parsed_pdf_text(
+    pdf_path: Path,
+    args: argparse.Namespace,
+    pages: list[tuple[int, str]],
+    extraction_metadata: dict[str, Any],
+) -> Path | None:
+    if not getattr(args, "write_parsed_pdf", DEFAULT_WRITE_PARSED_PDF):
+        return None
+
+    source_pdf_text = str(getattr(args, "_ai_current_input_pdf_path", "") or "").strip()
+    source_pdf_path = Path(source_pdf_text) if source_pdf_text else pdf_path
+    run_timestamp = clean_text(getattr(args, "_ai_run_timestamp", "")) or timestamp_for_filename()
+    provider_part = safe_filename_part(clean_text(getattr(args, "provider", "")) or "provider")
+    pdf_part = safe_filename_part(source_pdf_path.stem or pdf_path.stem)
+    parsed_dir = Path(args.output_dir) / "parsed_pdfs"
+    parsed_file = unique_output_path(parsed_dir / f"{pdf_part}_{provider_part}_{run_timestamp}_parsed_pdf.txt")
+    parsed_file.parent.mkdir(parents=True, exist_ok=True)
+    parsed_file.write_text(
+        parsed_pdf_text_for_file(
+            pdf_path=pdf_path,
+            pages=pages,
+            extraction_metadata=extraction_metadata,
+            source_pdf_path=source_pdf_path,
+        ),
+        encoding="utf-8",
+    )
+    update_processing_metadata(args, parsed_pdf_file=str(parsed_file))
+    print(f"  Parsed PDF text saved: {parsed_file}", flush=True)
+    return parsed_file
+
+
 def build_claude_text_prompt(base_prompt: str, pdf_name: str, text: str) -> str:
     return f"""
 {base_prompt}
@@ -2891,6 +2951,167 @@ def gemma_response_text(response: Any) -> str:
     return str(response or "")
 
 
+def compact_toc_example_title(value: Any, max_chars: int = 80) -> str:
+    text = clean_text(value)
+    if len(text) <= max_chars:
+        return text
+    return text[: max_chars - 1].rstrip() + "..."
+
+
+def normalize_toc_match_text(value: Any) -> str:
+    return re.sub(r"\s+", "", clean_text(value)).lower()
+
+
+def parse_layout_line(line: str) -> dict[str, Any] | None:
+    match = re.match(r"^\[L\s+([^\]]+)\]\s*(.*)$", str(line or ""))
+    if not match:
+        return None
+
+    raw_fields, title_text = match.groups()
+    metadata: dict[str, Any] = {"text": clean_text(title_text)}
+
+    for key, raw_value in re.findall(r"([A-Za-z]+)=([^\s\]]+)", raw_fields):
+        value = clean_text(raw_value)
+        try:
+            if key in {"s", "r", "x", "y"}:
+                number = float(value)
+                metadata[{
+                    "s": "font_size",
+                    "r": "size_ratio",
+                    "x": "left_indent",
+                    "y": "vertical_position",
+                }[key]] = round(number, 2)
+            elif key in {"b", "i"}:
+                metadata[{"b": "bold", "i": "italic"}[key]] = int(float(value))
+            elif key == "f":
+                metadata["font_id"] = value
+        except Exception:
+            continue
+
+    return metadata
+
+
+def find_layout_for_chapter_title(chunk_text: str, title: str) -> dict[str, Any]:
+    normalized_title = normalize_toc_match_text(title)
+    if not normalized_title:
+        return {}
+
+    fallback_match: dict[str, Any] = {}
+    for line in str(chunk_text or "").splitlines():
+        layout = parse_layout_line(line)
+        if not layout:
+            continue
+
+        line_title = clean_text(layout.get("text"))
+        normalized_line = normalize_toc_match_text(line_title)
+        if not normalized_line:
+            continue
+
+        if normalized_line == normalized_title:
+            return layout
+        if normalized_title in normalized_line or normalized_line in normalized_title:
+            if not fallback_match:
+                fallback_match = layout
+
+    return fallback_match
+
+
+def toc_level_reference_entry(chapter_title: str, chunk_text: str) -> dict[str, Any]:
+    entry: dict[str, Any] = {"title": compact_toc_example_title(chapter_title)}
+    layout = find_layout_for_chapter_title(chunk_text=chunk_text, title=chapter_title)
+    for key in (
+        "font_size",
+        "size_ratio",
+        "left_indent",
+        "bold",
+        "italic",
+        "font_id",
+    ):
+        if key in layout:
+            entry[key] = layout[key]
+    return entry
+
+
+def format_toc_level_reference_entry(entry: dict[str, Any]) -> str:
+    title = clean_text(entry.get("title"))
+    style_parts: list[str] = []
+    if "font_size" in entry:
+        style_parts.append(f"s={entry['font_size']}")
+    if "size_ratio" in entry:
+        style_parts.append(f"r={entry['size_ratio']}")
+    if "left_indent" in entry:
+        style_parts.append(f"x={entry['left_indent']}")
+    if "bold" in entry:
+        style_parts.append(f"b={entry['bold']}")
+    if "italic" in entry:
+        style_parts.append(f"i={entry['italic']}")
+    if clean_text(entry.get("font_id")):
+        style_parts.append(f"f={clean_text(entry.get('font_id'))}")
+
+    style_text = f" style({', '.join(style_parts)})" if style_parts else ""
+    return f'title="{title}"{style_text}' if title else style_text.strip()
+
+
+def update_toc_level_reference(
+    level_reference: dict[int, list[dict[str, Any]]],
+    toc: dict[str, Any],
+    max_depth: int,
+    chunk_text: str = "",
+    max_examples_per_level: int = 5,
+) -> None:
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return
+
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+
+        try:
+            level = int(chapter.get("level", 1))
+        except Exception:
+            continue
+        if level < 1 or level > max_depth:
+            continue
+
+        chapter_title = clean_text(chapter.get("chapter"))
+        title = compact_toc_example_title(chapter_title)
+        if not title:
+            continue
+
+        examples = level_reference.setdefault(level, [])
+        normalized = re.sub(r"\s+", "", title).lower()
+        if any(normalize_toc_match_text(existing.get("title")) == normalized for existing in examples):
+            continue
+        if len(examples) < max_examples_per_level:
+            examples.append(toc_level_reference_entry(chapter_title=chapter_title, chunk_text=chunk_text))
+
+
+def format_toc_level_reference(level_reference: dict[int, list[dict[str, Any]]]) -> str:
+    lines: list[str] = []
+    for level in sorted(level_reference):
+        examples = [
+            format_toc_level_reference_entry(example)
+            for example in level_reference[level]
+            if isinstance(example, dict)
+        ]
+        examples = [example for example in examples if clean_text(example)]
+        if not examples:
+            continue
+        lines.append(f"- level {level}: {'; '.join(examples)}")
+
+    if not lines:
+        return ""
+
+    return "\n".join([
+        "[Previous TOC Level Reference]",
+        "These examples came from earlier chunks. Style fields are from parsed layout tags: s=font size, r=size/body ratio, x=left indent, b=bold, i=italic, f=font id.",
+        "Use title hierarchy and style patterns only to keep level numbers consistent.",
+        "Do not copy these titles unless the same title is actually visible in the current chunk.",
+        *lines,
+    ])
+
+
 def build_gemma_text_prompt(base_prompt: str, pdf_name: str, text: str) -> str:
     return f"""
 {base_prompt}
@@ -2913,7 +3134,14 @@ Some lines may start with compact layout tags:
 """.strip()
 
 
-def build_gemma_chunk_prompt(base_prompt: str, pdf_name: str, chunk: dict[str, Any], total_chunks: int) -> str:
+def build_gemma_chunk_prompt(
+    base_prompt: str,
+    pdf_name: str,
+    chunk: dict[str, Any],
+    total_chunks: int,
+    level_reference_text: str = "",
+) -> str:
+    level_reference_block = f"\n\n{level_reference_text}" if clean_text(level_reference_text) else ""
     return f"""
 {base_prompt}
 
@@ -2922,12 +3150,14 @@ The text below is one part of the full PDF.
 Include only chapter, section, and subsection titles that are actually visible within this range.
 Do not infer TOC entries outside this range.
 Use [PAGE n] markers to determine page numbers.
+If a previous TOC level reference is provided, follow its level convention unless the current chunk visibly uses a different hierarchy.
 Some lines may start with compact layout tags:
 - [L s=<font size> r=<size/body ratio> x=<left indent> y=<vertical position> b=<bold 0/1> i=<italic 0/1> f=<font id>]
 - Use larger font size, higher size ratio, bold/italic style, indentation, numbering, and nearby body text to infer TOC levels.
 - Never copy [L ...] tags into chapter titles.
 - Ignore existing table-of-contents pages, dot-leader lines, page-number-only lines, and repeated headers/footers.
 - Output compact valid JSON only. Every object property and every array item must be separated with commas.
+{level_reference_block}
 
 [PDF File Name]
 {pdf_name}
@@ -3046,10 +3276,19 @@ def process_gemma_text_chunk(
     chunk: dict[str, Any],
     total_chunks: int,
     raw_parts: list[dict[str, Any]],
+    level_reference: dict[int, list[dict[str, Any]]] | None = None,
     depth: int = 0,
 ) -> list[dict[str, Any]]:
     chunk_label = str(chunk["index"])
-    chunk_prompt = build_gemma_chunk_prompt(prompt, pdf_path.name, chunk, total_chunks)
+    use_level_reference = bool(getattr(args, "gemma_level_reference", DEFAULT_GEMMA_LEVEL_REFERENCE))
+    level_reference_text = format_toc_level_reference(level_reference or {}) if use_level_reference else ""
+    chunk_prompt = build_gemma_chunk_prompt(
+        prompt,
+        pdf_path.name,
+        chunk,
+        total_chunks,
+        level_reference_text=level_reference_text,
+    )
     print(
         f"  Gemma chunk {chunk_label}/{total_chunks} request: pages {chunk['start_page']}-{chunk['end_page']}",
         flush=True,
@@ -3069,6 +3308,13 @@ def process_gemma_text_chunk(
             "end_page": chunk["end_page"],
             "raw_response": raw_text,
         })
+        if use_level_reference and level_reference is not None:
+            update_toc_level_reference(
+                level_reference,
+                partial_toc,
+                max_depth=args.max_depth,
+                chunk_text=str(chunk.get("text") or ""),
+            )
         print(f"  Gemma chunk {chunk_label} completed: {len(partial_toc.get('chapters', []))} chapters", flush=True)
         return [{
             "chunk": chunk["index"],
@@ -3123,6 +3369,7 @@ def process_gemma_text_chunk(
                     chunk=subchunk,
                     total_chunks=total_chunks,
                     raw_parts=raw_parts,
+                    level_reference=level_reference,
                     depth=depth + 1,
                 )
             )
@@ -3149,6 +3396,12 @@ def generate_toc_from_pdf_gemma_text(
         extracted_pages=len(pages),
         extracted_chars=extracted_chars,
         **extraction_metadata,
+    )
+    write_parsed_pdf_text(
+        pdf_path=pdf_path,
+        args=args,
+        pages=pages,
+        extraction_metadata=extraction_metadata,
     )
 
     single_max_chars = max(10000, int(args.gemma_text_single_max_chars))
@@ -3199,6 +3452,9 @@ def generate_toc_from_pdf_gemma_text(
     )
     partial_tocs: list[dict[str, Any]] = []
     raw_parts: list[dict[str, Any]] = []
+    level_reference: dict[int, list[dict[str, Any]]] = {}
+    level_reference_enabled = bool(getattr(args, "gemma_level_reference", DEFAULT_GEMMA_LEVEL_REFERENCE))
+    update_processing_metadata(args, gemma_level_reference=level_reference_enabled)
 
     for chunk in chunks:
         partial_tocs.extend(
@@ -3210,9 +3466,17 @@ def generate_toc_from_pdf_gemma_text(
                 chunk=chunk,
                 total_chunks=len(chunks),
                 raw_parts=raw_parts,
+                level_reference=level_reference,
             )
         )
     update_processing_metadata(args, processed_chunk_count=len(raw_parts))
+    update_processing_metadata(
+        args,
+        gemma_level_reference_levels=sorted(level_reference) if level_reference_enabled else [],
+        gemma_level_reference_examples={
+            str(level): examples for level, examples in sorted(level_reference.items())
+        } if level_reference_enabled else {},
+    )
 
     merge_mode = normalize_gemma_merge_mode(getattr(args, "gemma_merge_mode", DEFAULT_GEMMA_MERGE_MODE))
     update_processing_metadata(args, gemma_merge_mode=merge_mode)
@@ -3278,6 +3542,9 @@ def generate_toc_from_pdf_gemma_text(
         "extracted_chars": extracted_chars,
         "chunk_count": len(chunks),
         "processed_chunk_count": len(raw_parts),
+        "level_reference": {
+            str(level): examples for level, examples in sorted(level_reference.items())
+        } if level_reference_enabled else {},
         "chunk_raw_responses": raw_parts,
         "final_raw_response": final_raw_text,
     }
@@ -3579,6 +3846,9 @@ def print_quiet_console(args: argparse.Namespace, text: str, error: bool = False
 def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> bool:
     generation_started_at = timestamp_for_metadata()
     processing_pdf_path, display_name = prepare_pdf_for_processing(pdf_path)
+    setattr(args, "_ai_current_input_pdf_path", str(pdf_path))
+    setattr(args, "_ai_current_display_name", display_name)
+    setattr(args, "_ai_processing_metadata", {})
     print(f"Processing started: {display_name}", flush=True)
     print(f"  provider: {args.provider}", flush=True)
     started_at = time.perf_counter()
@@ -3809,6 +4079,19 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="How to merge chunked Gemma TOCs. local uses Python only; gemma asks Gemma to merge and falls back to local on failure.",
     )
     parser.add_argument(
+        "--gemma-level-reference",
+        dest="gemma_level_reference",
+        action="store_true",
+        default=DEFAULT_GEMMA_LEVEL_REFERENCE,
+        help="Use earlier Gemma chunk TOC level examples as a reference for later chunks.",
+    )
+    parser.add_argument(
+        "--no-gemma-level-reference",
+        dest="gemma_level_reference",
+        action="store_false",
+        help="Disable passing earlier Gemma chunk TOC level examples to later chunks.",
+    )
+    parser.add_argument(
         "--gemma-vllm-tensor-parallel-size",
         type=int,
         default=DEFAULT_GEMMA_VLLM_TENSOR_PARALLEL_SIZE,
@@ -3856,6 +4139,19 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="Minimum chunk size when splitting failed Gemma chunks into smaller chunks",
     )
     parser.add_argument("--write-raw", action="store_true", help="Also save raw response text")
+    parser.add_argument(
+        "--write-parsed-pdf",
+        dest="write_parsed_pdf",
+        action="store_true",
+        default=DEFAULT_WRITE_PARSED_PDF,
+        help="Save extracted PDF text/layout input under output_dir/parsed_pdfs. Enabled by default.",
+    )
+    parser.add_argument(
+        "--no-write-parsed-pdf",
+        dest="write_parsed_pdf",
+        action="store_false",
+        help="Do not save extracted PDF text/layout input.",
+    )
     parser.add_argument(
         "--log-file",
         default=None,

@@ -1,0 +1,51 @@
+Run log saved: data/output/logs/부교재3_claude_20260706_150027_log.txt
+Processing started: 부교재3.PDF
+  provider: claude
+  Claude TOC generation started: claude-opus-4-8
+Claude long-input limit reached; switching to text extraction fallback: claude-opus-4-8
+  Claude PDF text extraction started...
+  Claude PDF text extraction completed: 572 pages, 1221298 chars
+  Claude text chunk processing started: 11 chunks
+  Claude chunk 1/11 request: pages 5-62
+  Claude chunk 1 completed: 187 chapters
+  Claude chunk 2/11 request: pages 63-137
+  Claude chunk 2 completed: 96 chapters
+  Claude chunk 3/11 request: pages 138-211
+  Claude chunk 3 completed: 79 chapters
+  Claude chunk 4/11 request: pages 212-278
+  Claude chunk 4 completed: 80 chapters
+  Claude chunk 5/11 request: pages 279-319
+  Retrying Claude chunk 5/11 after JSON parse failure 2/5: claude response is empty.
+  Retrying Claude chunk 5/11 after JSON parse failure 3/5: claude response is empty.
+  Retrying Claude chunk 5/11 after JSON parse failure 4/5: claude response is empty.
+  Retrying Claude chunk 5/11 after JSON parse failure 5/5: claude response is empty.
+  Claude chunk 5 failed; retrying with 3 subchunks: claude response is empty.
+  Claude chunk 5.1/11 request: pages 279-300
+  Claude chunk 5.1 completed: 49 chapters
+  Claude chunk 5.2/11 request: pages 301-318
+  Claude chunk 5.2 completed: 42 chapters
+  Claude chunk 5.3/11 request: pages 319-319
+  Retrying Claude chunk 5.3/11 after JSON parse failure 2/5: claude response is empty.
+  Claude chunk 5.3 completed: 0 chapters
+  Claude chunk 6/11 request: pages 320-348
+  Retrying Claude chunk 6/11 after JSON parse failure 2/5: claude response is empty.
+  Claude chunk 6 completed: 39 chapters
+  Claude chunk 7/11 request: pages 349-414
+  Claude chunk 7 completed: 86 chapters
+  Claude chunk 8/11 request: pages 415-475
+  Claude chunk 8 completed: 110 chapters
+  Claude chunk 9/11 request: pages 476-498
+  Retrying Claude chunk 9/11 after JSON parse failure 2/5: Expecting ',' delimiter: line 1 column 860 (char 859)
+  Claude chunk 9 completed: 46 chapters
+  Claude chunk 10/11 request: pages 499-565
+  Claude chunk 10 completed: 78 chapters
+  Claude chunk 11/11 request: pages 566-583
+  Claude chunk 11 completed: 1 chapters
+  Claude chunked TOC merge started: claude-opus-4-8
+Completed: data/output/3_claude_20260706_151038_toc.json
+  model: claude-opus-4-8
+  elapsed: 10m 11.8s (611.812s)
+  title: 예방의학과 공중보건학
+  chapters: 440
+Processing result: success 1 / failed 0
+Run log saved: data/output/logs/부교재3_claude_20260706_150027_log.txt
