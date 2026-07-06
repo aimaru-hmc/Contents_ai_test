@@ -1,0 +1,3 @@
+Run log saved: data/output/logs/1편(2021)_gemma_20260706_105432_log.txt
+Gemma preflight failed: Missing packages required by the Gemma vLLM runtime. Run `pip install -U vllm` first. vLLM also requires a compatible GPU/CUDA environment.
+Run log saved: data/output/logs/1편(2021)_gemma_20260706_105432_log.txt

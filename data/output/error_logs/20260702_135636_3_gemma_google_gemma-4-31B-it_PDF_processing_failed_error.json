@@ -1,0 +1,16 @@
+{
+    "timestamp": "2026-07-02 13:56:36",
+    "fatal": true,
+    "stage": "PDF processing failed",
+    "source_pdf": "data/input/부교재3.PDF",
+    "source_pdf_name": "부교재3.PDF",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "error_type": "RuntimeError",
+    "error_message": "All 16 chunk(s) failed. First error: RuntimeError: Gemma generation failed: CUDA error: an illegal memory access was encountered\nSearch for `cudaErrorIllegalAddress' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n",
+    "error": "RuntimeError: All 16 chunk(s) failed. First error: RuntimeError: Gemma generation failed: CUDA error: an illegal memory access was encountered\nSearch for `cudaErrorIllegalAddress' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n",
+    "debug": {},
+    "traceback": "Traceback (most recent call last):\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma_prod.py\", line 1564, in process_pdf\n    raise RuntimeError(f\"All {len(chunks)} chunk(s) failed. First error: {first}\")\nRuntimeError: All 16 chunk(s) failed. First error: RuntimeError: Gemma generation failed: CUDA error: an illegal memory access was encountered\nSearch for `cudaErrorIllegalAddress' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n",
+    "elapsed_seconds": 45.764,
+    "elapsed": "45.8s"
+}

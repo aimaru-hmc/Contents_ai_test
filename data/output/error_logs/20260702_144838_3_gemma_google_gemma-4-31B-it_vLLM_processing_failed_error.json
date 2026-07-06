@@ -1,0 +1,16 @@
+{
+    "timestamp": "2026-07-02 14:48:38",
+    "fatal": true,
+    "stage": "vLLM processing failed",
+    "source_pdf": "data/input/부교재3.PDF",
+    "source_pdf_name": "부교재3.PDF",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "error_type": "AttributeError",
+    "error_message": "'Namespace' object has no attribute 'no_schema'",
+    "error": "AttributeError: 'Namespace' object has no attribute 'no_schema'",
+    "debug": {},
+    "traceback": "Traceback (most recent call last):\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma_prod.py\", line 1792, in process_pdf_vllm\n    chunk_out = vllm_generate_tocs(llm, conversations, args, args.max_new_tokens,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma_prod.py\", line 1757, in vllm_generate_tocs\n    sampling = make_vllm_sampling_params(args, max_tokens, use_schema)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma_prod.py\", line 1695, in make_vllm_sampling_params\n    if use_schema and not args.no_schema:\n                          ^^^^^^^^^^^^^^\nAttributeError: 'Namespace' object has no attribute 'no_schema'\n",
+    "elapsed_seconds": 1.296,
+    "elapsed": "1.3s"
+}

@@ -1,0 +1,162 @@
+{
+  "title": "Basic epidemiology",
+  "chapters": [
+    {
+      "level": 1,
+      "chapter": "Chapter 1 What is epidemiology?",
+      "page": 4
+    },
+    {
+      "level": 2,
+      "chapter": "Key messages",
+      "page": 4
+    },
+    {
+      "level": 2,
+      "chapter": "The historical context",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Origins",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Recent developments in epidemiology",
+      "page": 4
+    },
+    {
+      "level": 2,
+      "chapter": "Definition, scope, and uses of epidemiology",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Definition",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Scope",
+      "page": 4
+    },
+    {
+      "level": 2,
+      "chapter": "Epidemiology and public health",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Causation of disease",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Natural history of disease",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Health status of populations",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Evaluating interventions",
+      "page": 4
+    },
+    {
+      "level": 2,
+      "chapter": "Achievements in epidemiology",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Smallpox",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Methyl mercury poisoning",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Rheumatic fever and rheumatic heart disease",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Iodine deficiency diseases",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Tobacco use, asbestos and lung cancer",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Hip fractures",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "HIV/AIDS",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "SARS",
+      "page": 4
+    },
+    {
+      "level": 1,
+      "chapter": "Chapter 2 Measuring health and disease",
+      "page": 4
+    },
+    {
+      "level": 2,
+      "chapter": "Key messages",
+      "page": 4
+    },
+    {
+      "level": 2,
+      "chapter": "Defining health and disease",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Definitions",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Diagnostic criteria",
+      "page": 4
+    },
+    {
+      "level": 2,
+      "chapter": "Measuring disease frequency",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Population at risk",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Incidence and prevalence",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Case fatality",
+      "page": 4
+    },
+    {
+      "level": 3,
+      "chapter": "Interrelationships of the different measures",
+      "page": 4

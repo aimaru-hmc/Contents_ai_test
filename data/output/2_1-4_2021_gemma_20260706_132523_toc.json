@@ -1,0 +1,1099 @@
+{
+    "title": "역학과 그 응용",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "제1장 역학의 기본원리",
+            "page": 3
+        },
+        {
+            "level": 2,
+            "chapter": "1. 역학의 정의와 발전과정",
+            "page": 3
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 역학의 정의와 특징",
+            "page": 3
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 역학과 임상의학간의 관계",
+            "page": 4
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 역학 발전의 역사적 배경",
+            "page": 5
+        },
+        {
+            "level": 4,
+            "chapter": "1) 고대-중세: 역학 개념 성립 이전",
+            "page": 5
+        },
+        {
+            "level": 4,
+            "chapter": "2) 근대-현대: 역학방법론의 논리적 배경",
+            "page": 6
+        },
+        {
+            "level": 4,
+            "chapter": "3) 역학의 기반 개념과 감염병 역학 방법론 정립",
+            "page": 6
+        },
+        {
+            "level": 4,
+            "chapter": "4) 역학의 방법론에 대한 학문적 기반 확립",
+            "page": 7
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 역학의 활용과 영역",
+            "page": 8
+        },
+        {
+            "level": 2,
+            "chapter": "2. 질병발생 모형과 원인적 연관성",
+            "page": 11
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 질병발생의 다요인설",
+            "page": 11
+        },
+        {
+            "level": 4,
+            "chapter": "1) 병인",
+            "page": 11
+        },
+        {
+            "level": 4,
+            "chapter": "2) 숙주요인 또는 인체 내부요인",
+            "page": 11
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 유전적 요인",
+            "page": 11
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 과거 노출에 의한 숙주요인의 변화",
+            "page": 12
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 기타",
+            "page": 12
+        },
+        {
+            "level": 4,
+            "chapter": "3) 환경요인",
+            "page": 12
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 생태학적 모형과 질병관리",
+            "page": 12
+        },
+        {
+            "level": 4,
+            "chapter": "1) 역학적 삼각형",
+            "page": 12
+        },
+        {
+            "level": 4,
+            "chapter": "2) 거미줄 모형",
+            "page": 13
+        },
+        {
+            "level": 4,
+            "chapter": "3) 수레바퀴 모형",
+            "page": 13
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 원인적 연관성",
+            "page": 13
+        },
+        {
+            "level": 4,
+            "chapter": "1) 과학적 추론의 철학적 배경",
+            "page": 13
+        },
+        {
+            "level": 4,
+            "chapter": "2) 인과관계에 관한 로스만의 원인모형",
+            "page": 14
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 충분원인과 필요원인",
+            "page": 14
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 원인의 강도",
+            "page": 15
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 기여분율의 합",
+            "page": 15
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 원인간의 상호작용",
+            "page": 15
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 유도기간",
+            "page": 15
+        },
+        {
+            "level": 4,
+            "chapter": "3) 역학에서의 인과관계",
+            "page": 16
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 요인에 대한 노출과 질병발생과의 시간적 선후관계",
+            "page": 16
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 연관성의 강도",
+            "page": 17
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 연관성의 일관성",
+            "page": 17
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 연관성의 특이성",
+            "page": 17
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 양-반응관계",
+            "page": 17
+        },
+        {
+            "level": 5,
+            "chapter": "(6) 생물학적 설명 가능성",
+            "page": 17
+        },
+        {
+            "level": 5,
+            "chapter": "(7) 기존 지식과 일치",
+            "page": 17
+        },
+        {
+            "level": 5,
+            "chapter": "(8) 실험적 입증",
+            "page": 17
+        },
+        {
+            "level": 1,
+            "chapter": "제2장 역학연구의 자료",
+            "page": 20
+        },
+        {
+            "level": 2,
+            "chapter": "1. 일차 자료의 수집 방법과 활용",
+            "page": 20
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 일차 자료의 정의와 특성",
+            "page": 20
+        },
+        {
+            "level": 4,
+            "chapter": "1) 일차 자료의 정의",
+            "page": 20
+        },
+        {
+            "level": 4,
+            "chapter": "2) 일차 자료를 수집하는 방법",
+            "page": 20
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 표본조사의 정의와 특성, 장단점",
+            "page": 21
+        },
+        {
+            "level": 4,
+            "chapter": "1) 표본조사의 정의와 특성",
+            "page": 21
+        },
+        {
+            "level": 4,
+            "chapter": "2) 표본조사의 장단점",
+            "page": 21
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 표본추출법",
+            "page": 22
+        },
+        {
+            "level": 4,
+            "chapter": "1) 확률표본추출",
+            "page": 22
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 단순무작위표본추출(simple random sampling)",
+            "page": 22
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 층화무작위표본추출(stratified random sampling)",
+            "page": 22
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 계통 표본추출(systematic sampling)",
+            "page": 23
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 집락표본추출(cluster sampling)",
+            "page": 24
+        },
+        {
+            "level": 4,
+            "chapter": "2) 비확률표본추출",
+            "page": 24
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 표본조사의 종류와 방법",
+            "page": 25
+        },
+        {
+            "level": 4,
+            "chapter": "1) 응답자가 직접 기록하는 형태",
+            "page": 25
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 자기기입식 설문조사(self-administered questionnaire survey)",
+            "page": 25
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 우편 조사(mail survey)",
+            "page": 25
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 인터넷 조사(internet survey, on-line survey)",
+            "page": 25
+        },
+        {
+            "level": 4,
+            "chapter": "2) 설문 조사자가 대신 기록하는 형태",
+            "page": 25
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 면접조사(interview survey)",
+            "page": 25
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 전화조사(telephone survey)",
+            "page": 27
+        },
+        {
+            "level": 4,
+            "chapter": "3) 조사 장소에 따른 형태",
+            "page": 27
+        },
+        {
+            "level": 2,
+            "chapter": "2. 이차 자료의 종류와 활용",
+            "page": 28
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 이차 자료의 정의와 특성",
+            "page": 28
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 인구자료",
+            "page": 28
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 사망자료",
+            "page": 29
+        },
+        {
+            "level": 4,
+            "chapter": "1) 사망통계 자료원",
+            "page": 29
+        },
+        {
+            "level": 4,
+            "chapter": "2) 사망자료의 장단점",
+            "page": 29
+        },
+        {
+            "level": 4,
+            "chapter": "3) 사망자료의 활용",
+            "page": 29
+        },
+        {
+            "level": 4,
+            "chapter": "4) 사망신고자료가 부정확한 이유",
+            "page": 29
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 상병자료",
+            "page": 30
+        },
+        {
+            "level": 4,
+            "chapter": "1) 건강보험자료",
+            "page": 30
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직장자료",
+            "page": 30
+        },
+        {
+            "level": 4,
+            "chapter": "3) 병원자료",
+            "page": 30
+        },
+        {
+            "level": 4,
+            "chapter": "4) 신고자료",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "5) 등록자료",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "6) 건강조사자료",
+            "page": 31
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 국민건강영양조사",
+            "page": 31
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 청소년건강행태조사",
+            "page": 32
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 지역사회건강조사",
+            "page": 32
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 구강건강실태조사",
+            "page": 32
+        },
+        {
+            "level": 2,
+            "chapter": "3. 공중보건감시",
+            "page": 34
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 공중보건감시의 정의와 활용",
+            "page": 34
+        },
+        {
+            "level": 2,
+            "chapter": "3.2 감시체계와 구조",
+            "page": 35
+        },
+        {
+            "level": 2,
+            "chapter": "3.3 수동감시체계와 능동감시체계",
+            "page": 36
+        },
+        {
+            "level": 3,
+            "chapter": "1) 수동감시체계",
+            "page": 36
+        },
+        {
+            "level": 3,
+            "chapter": "2) 능동감시체계",
+            "page": 36
+        },
+        {
+            "level": 2,
+            "chapter": "3.4 감시체계에 이용되는 자료원",
+            "page": 36
+        },
+        {
+            "level": 1,
+            "chapter": "4. 질병과 사망원인의 분류와 사망진단서",
+            "page": 37
+        },
+        {
+            "level": 2,
+            "chapter": "4.1 국제질병분류체계",
+            "page": 37
+        },
+        {
+            "level": 3,
+            "chapter": "1) 국제질병분류",
+            "page": 37
+        },
+        {
+            "level": 2,
+            "chapter": "4.2 국제기능장애건강분류체계",
+            "page": 37
+        },
+        {
+            "level": 2,
+            "chapter": "4.3 사망신고제도",
+            "page": 40
+        },
+        {
+            "level": 2,
+            "chapter": "4.4 사망진단서(시체검안서) 작성법",
+            "page": 40
+        },
+        {
+            "level": 3,
+            "chapter": "1) 제목",
+            "page": 40
+        },
+        {
+            "level": 3,
+            "chapter": "2) 사망자 확인",
+            "page": 40
+        },
+        {
+            "level": 3,
+            "chapter": "3) 발병일시와 사망일시",
+            "page": 40
+        },
+        {
+            "level": 3,
+            "chapter": "4) 사망장소",
+            "page": 41
+        },
+        {
+            "level": 3,
+            "chapter": "5) 사망의 원인",
+            "page": 41
+        },
+        {
+            "level": 3,
+            "chapter": "6) 사망의 종류 판단",
+            "page": 41
+        },
+        {
+            "level": 3,
+            "chapter": "7) 외인사의 추가사항",
+            "page": 42
+        },
+        {
+            "level": 3,
+            "chapter": "8) 사망진단서 작성 시 주의사항",
+            "page": 42
+        },
+        {
+            "level": 1,
+            "chapter": "제 3 장 질병 및 사망, 건강수준의 측정",
+            "page": 45
+        },
+        {
+            "level": 2,
+            "chapter": "1. 보건지표",
+            "page": 45
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 지표의 개념",
+            "page": 45
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 지표 산출 방법",
+            "page": 45
+        },
+        {
+            "level": 4,
+            "chapter": "1) 비",
+            "page": 46
+        },
+        {
+            "level": 4,
+            "chapter": "2) 분율",
+            "page": 46
+        },
+        {
+            "level": 4,
+            "chapter": "3) 율",
+            "page": 46
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 율의 표준화",
+            "page": 46
+        },
+        {
+            "level": 4,
+            "chapter": "1) 율의 표준화 필요성",
+            "page": 46
+        },
+        {
+            "level": 4,
+            "chapter": "2) 표준화 방법",
+            "page": 47
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 직접표준화법",
+            "page": 47
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 간접표준화법",
+            "page": 48
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 표준인구",
+            "page": 49
+        },
+        {
+            "level": 2,
+            "chapter": "2. 이환지표",
+            "page": 50
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 발생률과 유병률",
+            "page": 50
+        },
+        {
+            "level": 4,
+            "chapter": "1) 발생률",
+            "page": 50
+        },
+        {
+            "level": 2,
+            "chapter": "1) 누적발생률",
+            "page": 51
+        },
+        {
+            "level": 2,
+            "chapter": "2) 평균발생률(발생밀도)",
+            "page": 51
+        },
+        {
+            "level": 2,
+            "chapter": "2) 유병률",
+            "page": 51
+        },
+        {
+            "level": 2,
+            "chapter": "3) 발생률과 유병률의 상호관계와 용도",
+            "page": 52
+        },
+        {
+            "level": 1,
+            "chapter": "2.2 발병률과 이차발병률",
+            "page": 53
+        },
+        {
+            "level": 1,
+            "chapter": "3. 사망 및 출생지표",
+            "page": 54
+        },
+        {
+            "level": 2,
+            "chapter": "3.1 사망지표",
+            "page": 55
+        },
+        {
+            "level": 3,
+            "chapter": "1) 보통사망률(crude death rate)",
+            "page": 55
+        },
+        {
+            "level": 3,
+            "chapter": "2) 특수사망률(specific death rate)",
+            "page": 55
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 연령별 (특수)사망률(age-specific death rate)",
+            "page": 55
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 성별 (특수)사망률(sex-specific death rate)",
+            "page": 55
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 사인별 (특수)사망률(cause-specific death rate)",
+            "page": 56
+        },
+        {
+            "level": 3,
+            "chapter": "3) 비례사망, 비례사망비 및 비례사망지수",
+            "page": 56
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 비례사망(proportional mortality)",
+            "page": 56
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 비례사망비(proportional mortality ratio)",
+            "page": 57
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 비례사망지수(proportional mortality indicator, PMI)",
+            "page": 57
+        },
+        {
+            "level": 3,
+            "chapter": "4) 치명률(case fatality rate, CFR)",
+            "page": 57
+        },
+        {
+            "level": 3,
+            "chapter": "5) 특수 집단의 사망률",
+            "page": 57
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 영아사망률(infant mortality rate)",
+            "page": 57
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 신생아사망률(neonatal mortality rate)",
+            "page": 58
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 알파지표(index)",
+            "page": 58
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 주산기사망률(perinatal mortality rate)",
+            "page": 58
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 모성사망비(maternal mortality ratio)",
+            "page": 59
+        },
+        {
+            "level": 2,
+            "chapter": "3.2 인구재생산지표",
+            "page": 59
+        },
+        {
+            "level": 3,
+            "chapter": "1) 보통출생률(crude birth rate)",
+            "page": 59
+        },
+        {
+            "level": 3,
+            "chapter": "2) 일반출산율(general fertility rate)",
+            "page": 59
+        },
+        {
+            "level": 3,
+            "chapter": "3) 연령별 출산율(age-specific fertility rate)",
+            "page": 59
+        },
+        {
+            "level": 3,
+            "chapter": "4) 합계출산율(total fertility rate)",
+            "page": 60
+        },
+        {
+            "level": 1,
+            "chapter": "4. 주관적 건강지표",
+            "page": 60
+        },
+        {
+            "level": 2,
+            "chapter": "4.1 삶의 질 측정 도구",
+            "page": 61
+        },
+        {
+            "level": 3,
+            "chapter": "1) EQ-5D",
+            "page": 61
+        },
+        {
+            "level": 3,
+            "chapter": "2) SF-36과 SF-12",
+            "page": 61
+        },
+        {
+            "level": 3,
+            "chapter": "3) WHOQOL-BREF",
+            "page": 61
+        },
+        {
+            "level": 3,
+            "chapter": "4) PWI-SF",
+            "page": 62
+        },
+        {
+            "level": 2,
+            "chapter": "4.2 정신질환과 인지능력 측정 도구",
+            "page": 62
+        },
+        {
+            "level": 3,
+            "chapter": "1) MMPI",
+            "page": 62
+        },
+        {
+            "level": 3,
+            "chapter": "2) CES-D-K",
+            "page": 62
+        },
+        {
+            "level": 3,
+            "chapter": "3) MMSE",
+            "page": 63
+        },
+        {
+            "level": 3,
+            "chapter": "4) GDS",
+            "page": 63
+        },
+        {
+            "level": 2,
+            "chapter": "4.3 일상생활 능력 조사도구",
+            "page": 63
+        },
+        {
+            "level": 3,
+            "chapter": "1) ADL",
+            "page": 63
+        },
+        {
+            "level": 3,
+            "chapter": "2) IADL",
+            "page": 63
+        },
+        {
+            "level": 1,
+            "chapter": "제 4 장 한국인의 건강수준",
+            "page": 66
+        },
+        {
+            "level": 2,
+            "chapter": "1. 역학적 변천설과 한국의 역학적 변천",
+            "page": 66
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 역학적 변천설",
+            "page": 66
+        },
+        {
+            "level": 2,
+            "chapter": "1.2 한국의 역학적 변천",
+            "page": 67
+        },
+        {
+            "level": 1,
+            "chapter": "2. 인구구조 변화와 그에 따른 보건문제",
+            "page": 68
+        },
+        {
+            "level": 2,
+            "chapter": "2.1 인구구조의 변화",
+            "page": 68
+        },
+        {
+            "level": 3,
+            "chapter": "1) 인구성장률 감소와 성비변화",
+            "page": 68
+        },
+        {
+            "level": 2,
+            "chapter": "2.2 보건문제와 대책",
+            "page": 72
+        },
+        {
+            "level": 3,
+            "chapter": "1) 고령화",
+            "page": 72
+        },
+        {
+            "level": 3,
+            "chapter": "2) 저출산",
+            "page": 72
+        },
+        {
+            "level": 3,
+            "chapter": "3) 다문화가정",
+            "page": 72
+        },
+        {
+            "level": 1,
+            "chapter": "3. 건강수준의 시간변화",
+            "page": 73
+        },
+        {
+            "level": 2,
+            "chapter": "3.1 건강수준의 장기 추이",
+            "page": 73
+        },
+        {
+            "level": 3,
+            "chapter": "1) 질병양상과 사망수준의 추이 경향",
+            "page": 73
+        },
+        {
+            "level": 3,
+            "chapter": "2) 보건문제와 대책",
+            "page": 76
+        },
+        {
+            "level": 2,
+            "chapter": "3.2 계절에 따른 건강수준 변화",
+            "page": 78
+        },
+        {
+            "level": 3,
+            "chapter": "1) 계절별 변화 양상",
+            "page": 78
+        },
+        {
+            "level": 3,
+            "chapter": "2) 보건문제와 대책",
+            "page": 80
+        },
+        {
+            "level": 1,
+            "chapter": "4. 공간에 따른 건강수준 차이",
+            "page": 82
+        },
+        {
+            "level": 2,
+            "chapter": "4.1 국가 간 건강수준의 차이",
+            "page": 82
+        },
+        {
+            "level": 3,
+            "chapter": "1) 한국과 OECD 국가 간 건강수준 비교",
+            "page": 82
+        },
+        {
+            "level": 3,
+            "chapter": "2) 보건문제와 대책",
+            "page": 83
+        },
+        {
+            "level": 2,
+            "chapter": "4.2 건강수준의 지역별 격차",
+            "page": 82
+        },
+        {
+            "level": 3,
+            "chapter": "1) 건강수준의 지역별 비교의 의의",
+            "page": 84
+        },
+        {
+            "level": 3,
+            "chapter": "2) 지역에 따른 건강수준 전망과 대책",
+            "page": 84
+        },
+        {
+            "level": 2,
+            "chapter": "4.3 건강수준의 도농간 격차",
+            "page": 84
+        },
+        {
+            "level": 3,
+            "chapter": "1) 건강수준과 관련 요인의 도농간 격차",
+            "page": 84
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 건강수준 및 관련 요인의 도농간 격차",
+            "page": 84
+        },
+        {
+            "level": 2,
+            "chapter": "2) 보건문제와 대책",
+            "page": 88
+        },
+        {
+            "level": 1,
+            "chapter": "5. 집단별 건강수준 차이",
+            "page": 89
+        },
+        {
+            "level": 2,
+            "chapter": "5.1 성별 건강수준",
+            "page": 89
+        },
+        {
+            "level": 3,
+            "chapter": "1) 성별 건강수준과 요인 분포",
+            "page": 89
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 성별에 따른 사망과 질병 양상 및 관련 요인의 분포",
+            "page": 89
+        },
+        {
+            "level": 3,
+            "chapter": "2) 보건문제와 대책",
+            "page": 91
+        },
+        {
+            "level": 2,
+            "chapter": "5.2 생애주기별 건강수준",
+            "page": 92
+        },
+        {
+            "level": 3,
+            "chapter": "1) 생애주기별 개념과 건강수준의 특징",
+            "page": 92
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 건강질병에 대한 생애주기별 접근모형",
+            "page": 92
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 생애주기별 접근모형의 대두 배경과 필요성",
+            "page": 93
+        },
+        {
+            "level": 3,
+            "chapter": "2) 생애주기별 보건문제와 대책",
+            "page": 93
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 신생아, 영아, 유아기",
+            "page": 93
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 학령기 및 청소년기",
+            "page": 94
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 청년기(대학생 및 비대학생)",
+            "page": 95
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 장년기",
+            "page": 95
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 노년기",
+            "page": 95
+        },
+        {
+            "level": 2,
+            "chapter": "5.3 특정 집단의 건강수준",
+            "page": 97
+        },
+        {
+            "level": 3,
+            "chapter": "1) 장애인 건강수준과 그 대책",
+            "page": 97
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 장애 역학",
+            "page": 97
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 장애인의 보건문제와 대책",
+            "page": 97
+        },
+        {
+            "level": 2,
+            "chapter": "이차 건강상태",
+            "page": 98
+        },
+        {
+            "level": 2,
+            "chapter": "2) 저소득계층의 건강수준과 그 대책",
+            "page": 98
+        },
+        {
+            "level": 3,
+            "chapter": "(1) 저소득계층의 개념 및 건강수준 격차",
+            "page": 98
+        }
+    ],
+    "_meta": {
+        "source_pdf": "2편1-4장(2021).pdf",
+        "provider": "gemma",
+        "model": "google/gemma-4-31B-it",
+        "generated_timestamp": "20260706_132523",
+        "generated_at": "2026-07-06 13:25:23",
+        "generation_started_at": "2026-07-06 13:22:43",
+        "generation_completed_at": "2026-07-06 13:25:23",
+        "elapsed_seconds": 160.611,
+        "elapsed": "2m 40.6s",
+        "input_mode": "extracted_pdf_layout_text",
+        "extracted_pages": 98,
+        "extracted_chars": 300119,
+        "gemma_extraction_mode": "layout",
+        "layout_line_count": 3770,
+        "layout_font_count": 3,
+        "plain_extracted_chars": 139661,
+        "chunked": true,
+        "chunk_count": 4,
+        "initial_chunk_count": 4,
+        "processed_chunk_count": 10,
+        "gemma_text_single_max_chars": 100000,
+        "gemma_text_chunk_chars": 100000,
+        "gemma_runtime": "vllm",
+        "gemma_model": "google/gemma-4-31B-it",
+        "gemma_torch_dtype": "auto",
+        "gemma_vllm_tensor_parallel_size": 4,
+        "gemma_vllm_gpu_memory_utilization": 0.85,
+        "gemma_vllm_max_model_len": 65536,
+        "gemma_vllm_trust_remote_code": false,
+        "gemma_merge_mode": "gemma",
+        "run_timestamp": "20260706_131903",
+        "run_log_file": "data/output/logs/batch_gemma_20260706_131903_log.txt"
+    }
+}

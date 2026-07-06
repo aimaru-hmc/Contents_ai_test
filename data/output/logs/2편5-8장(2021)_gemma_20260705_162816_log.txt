@@ -1,0 +1,35 @@
+Run log saved: data/output/logs/2편5-8장(2021)_gemma_20260705_162816_log.txt
+Processing started: 2편5-8장(2021).pdf
+  provider: gemma
+  Using Gemma/Transformers: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 177 pages, 582690 chars, mode=layout
+  Gemma text chunk processing started: 13 chunks
+  Gemma chunk 1/13 request: pages 1-15
+  Gemma/Transformers model loading started: google/gemma-4-31B-it
+Loading weights:   0%|          | 0/1188 [00:00<?, ?it/s]Loading weights:   0%|          | 2/1188 [00:00<02:43,  7.27it/s]Loading weights:   0%|          | 3/1188 [00:00<02:25,  8.16it/s]Loading weights:   2%|▏         | 19/1188 [00:00<00:22, 51.12it/s]Loading weights:   3%|▎         | 33/1188 [00:00<00:15, 75.96it/s]Loading weights:   4%|▍         | 47/1188 [00:00<00:13, 84.70it/s]Loading weights:   5%|▍         | 57/1188 [00:00<00:15, 73.50it/s]Loading weights:   6%|▋         | 77/1188 [00:01<00:11, 96.37it/s]Loading weights:   7%|▋         | 88/1188 [00:01<00:12, 87.66it/s]Loading weights:   8%|▊         | 99/1188 [00:01<00:12, 85.24it/s]Loading weights:  10%|▉         | 116/1188 [00:01<00:11, 96.22it/s]Loading weights:  11%|█         | 126/1188 [00:01<00:11, 88.68it/s]Loading weights:  11%|█▏        | 136/1188 [00:01<00:12, 87.02it/s]Loading weights:  13%|█▎        | 155/1188 [00:01<00:09, 105.32it/s]Loading weights:  14%|█▍        | 171/1188 [00:02<00:08, 113.88it/s]Loading weights:  15%|█▌        | 183/1188 [00:02<00:11, 90.60it/s] Loading weights:  17%|█▋        | 199/1188 [00:02<00:09, 104.22it/s]Loading weights:  18%|█▊        | 212/1188 [00:02<00:09, 100.86it/s]Loading weights:  19%|█▉        | 227/1188 [00:02<00:08, 111.05it/s]Loading weights:  20%|██        | 239/1188 [00:02<00:10, 88.71it/s] Loading weights:  21%|██▏       | 255/1188 [00:02<00:10, 92.52it/s]Loading weights:  23%|██▎       | 269/1188 [00:03<00:09, 101.45it/s]Loading weights:  24%|██▎       | 280/1188 [00:03<00:10, 88.42it/s] Loading weights:  25%|██▍       | 293/1188 [00:03<00:09, 96.77it/s]Loading weights:  26%|██▌       | 310/1188 [00:03<00:09, 96.99it/s]Loading weights:  27%|██▋       | 325/1188 [00:03<00:08, 107.40it/s]Loading weights:  28%|██▊       | 337/1188 [00:03<00:08, 97.67it/s] Loading weights:  29%|██▉       | 350/1188 [00:03<00:08, 96.34it/s]Loading weights:  30%|███       | 362/1188 [00:04<00:09, 87.24it/s]Loading weights:  32%|███▏      | 379/1188 [00:04<00:08, 97.09it/s]Loading weights:  33%|███▎      | 392/1188 [00:04<00:08, 95.59it/s]Loading weights:  34%|███▍      | 409/1188 [00:04<00:07, 106.38it/s]Loading weights:  35%|███▌      | 420/1188 [00:04<00:07, 101.96it/s]Loading weights:  37%|███▋      | 434/1188 [00:04<00:06, 110.01it/s]Loading weights:  38%|███▊      | 446/1188 [00:04<00:07, 102.21it/s]Loading weights:  39%|███▊      | 459/1188 [00:04<00:06, 107.60it/s]Loading weights:  40%|███▉      | 471/1188 [00:05<00:07, 100.37it/s]Loading weights:  41%|████      | 482/1188 [00:05<00:07, 93.43it/s] Loading weights:  41%|████▏     | 492/1188 [00:05<00:07, 95.03it/s]Loading weights:  42%|████▏     | 503/1188 [00:05<00:07, 93.56it/s]Loading weights:  43%|████▎     | 514/1188 [00:05<00:07, 88.74it/s]Loading weights:  44%|████▍     | 528/1188 [00:05<00:07, 86.07it/s]Loading weights:  46%|████▌     | 542/1188 [00:05<00:06, 97.06it/s]Loading weights:  47%|████▋     | 553/1188 [00:06<00:06, 91.08it/s]Loading weights:  48%|████▊     | 565/1188 [00:06<00:07, 83.19it/s]Loading weights:  49%|████▉     | 587/1188 [00:06<00:05, 108.79it/s]Loading weights:  50%|█████     | 599/1188 [00:06<00:05, 109.87it/s]Loading weights:  51%|█████▏    | 611/1188 [00:06<00:06, 95.19it/s] Loading weights:  53%|█████▎    | 625/1188 [00:06<00:05, 104.08it/s]Loading weights:  54%|█████▎    | 637/1188 [00:06<00:05, 106.33it/s]Loading weights:  55%|█████▍    | 650/1188 [00:06<00:04, 112.37it/s]Loading weights:  56%|█████▌    | 662/1188 [00:07<00:04, 108.06it/s]Loading weights:  57%|█████▋    | 674/1188 [00:07<00:05, 88.08it/s] Loading weights:  58%|█████▊    | 687/1188 [00:07<00:05, 97.77it/s]Loading weights:  59%|█████▉    | 698/1188 [00:07<00:04, 99.28it/s]Loading weights:  60%|█████▉    | 709/1188 [00:07<00:05, 85.68it/s]Loading weights:  61%|██████    | 724/1188 [00:07<00:04, 99.25it/s]Loading weights:  62%|██████▏   | 735/1188 [00:07<00:05, 86.36it/s]Loading weights:  63%|██████▎   | 748/1188 [00:07<00:04, 91.85it/s]Loading weights:  64%|██████▍   | 759/1188 [00:08<00:04, 95.27it/s]Loading weights:  65%|██████▌   | 777/1188 [00:08<00:03, 115.15it/s]Loading weights:  66%|██████▋   | 790/1188 [00:08<00:03, 106.83it/s]Loading weights:  68%|██████▊   | 802/1188 [00:08<00:04, 81.01it/s] Loading weights:  69%|██████▉   | 817/1188 [00:08<00:04, 83.60it/s]Loading weights:  81%|████████▏ | 968/1188 [00:08<00:00, 375.82it/s]Loading weights:  99%|█████████▊| 1171/1188 [00:08<00:00, 750.71it/s]Loading weights: 100%|██████████| 1188/1188 [00:08<00:00, 132.25it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  Gemma/Transformers model loading completed: google/gemma-4-31B-it
+  Gemma/Transformers device check: gpu_used=True / devices=cuda:0, cuda:1, cuda:2, cuda:3
+  Gemma chunk 1 completed: 32 chapters
+  Gemma chunk 2/13 request: pages 16-30
+  Gemma chunk 2 completed: 33 chapters
+  Gemma chunk 3/13 request: pages 31-47
+  Gemma chunk 3 completed: 25 chapters
+  Gemma chunk 4/13 request: pages 48-61
+  Gemma chunk 4 completed: 20 chapters
+  Gemma chunk 5/13 request: pages 62-76
+  Gemma chunk 5 completed: 21 chapters
+  Gemma chunk 6/13 request: pages 77-91
+  Gemma chunk 6 completed: 15 chapters
+  Gemma chunk 7/13 request: pages 92-106
+  Gemma chunk 7 completed: 35 chapters
+  Gemma chunk 8/13 request: pages 107-121
+  Gemma chunk 8 completed: 43 chapters
+  Gemma chunk 9/13 request: pages 122-135
+  Gemma chunk 9 completed: 24 chapters
+  Gemma chunk 10/13 request: pages 136-149
+  Gemma chunk 10 completed: 23 chapters
+  Gemma chunk 11/13 request: pages 150-162
+  Gemma chunk 11 completed: 21 chapters
+  Gemma chunk 12/13 request: pages 163-176

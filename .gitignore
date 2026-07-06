@@ -4,10 +4,3 @@ __pycache__/
 .pytest_cache/
 .venv/
 
-data/output/*
-!data/output/
-!data/output/*_toc.json
-data/output/logs/
-data/output/error_logs/
-data/output/*_raw_response.txt
-data/강의록/

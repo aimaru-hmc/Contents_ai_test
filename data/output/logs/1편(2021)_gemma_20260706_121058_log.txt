@@ -1,0 +1,25 @@
+Run log saved: data/output/logs/1편(2021)_gemma_20260706_121058_log.txt
+Processing started: 1편(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 51 pages, 169770 chars, mode=layout
+  Gemma text TOC generation started: google/gemma-4-31B-it
+  Gemma/vLLM model loading started: google/gemma-4-31B-it
+[32mINFO[0m [90m07-06 12:11:11[0m [90m[api_utils.py:273][0m non-default args: {'max_model_len': 65536, 'tensor_parallel_size': 4, 'gpu_memory_utilization': 0.85, 'disable_log_stats': True, 'model': 'google/gemma-4-31B-it'}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[32mINFO[0m [90m07-06 12:11:12[0m [90m[model.py:598][0m Resolved architecture: Gemma4ForConditionalGeneration
+[32mINFO[0m [90m07-06 12:11:12[0m [90m[model.py:1725][0m Using max model len 65536
+[32mINFO[0m [90m07-06 12:11:17[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=16384.
+[32mINFO[0m [90m07-06 12:11:17[0m [90m[config.py:90][0m Gemma4 model has heterogeneous head dimensions (head_dim=256, global_head_dim=512). Using FA4 for all layers to avoid mixed FA3/FA4 penalty.
+[32mINFO[0m [90m07-06 12:11:17[0m [90m[vllm.py:1006][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m07-06 12:11:17[0m [90m[kernel.py:276][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m07-06 12:11:17[0m [90m[cuda.py:322][0m Forcing --disable_chunked_mm_input for models with multimodal-bidirectional attention.
+[32mINFO[0m [90m07-06 12:11:19[0m [90m[compilation.py:310][0m Enabled custom fusions: allreduce_rms
+[33mWARNING[0m [90m07-06 12:11:24[0m [90m[system_utils.py:157][0m We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
+Gemma model failed: google/gemma-4-31B-it / Failed to load Gemma vLLM model: google/gemma-4-31B-it. Check vLLM installation, Hugging Face access, and GPU memory. Cause: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+Failed: 1편(2021).pdf / Failed to load Gemma vLLM model: google/gemma-4-31B-it. Check vLLM installation, Hugging Face access, and GPU memory. Cause: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+  elapsed: 2m 20.5s (140.492s)
+  Error log saved: data/output/error_logs/20260706_121323_1_2021_gemma_google_gemma-4-31B-it_PDF_processing_failed_error.json
+Processing result: success 0 / failed 1
+Run log saved: data/output/logs/1편(2021)_gemma_20260706_121058_log.txt

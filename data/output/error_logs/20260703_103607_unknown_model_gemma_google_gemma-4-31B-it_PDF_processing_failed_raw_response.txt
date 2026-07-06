@@ -1,0 +1,626 @@
+{
+  "title": "주교재.pdf",
+  "chapters": [
+    {
+      "level": 2,
+      "chapter": "Maternal mortality rate",
+      "page": 27
+    },
+    {
+      "level": 2,
+      "chapter": "Adult mortality rate",
+      "page": 28
+    },
+    {
+      "level": 2,
+      "chapter": "Life expectancy",
+      "page": 28
+    },
+    {
+      "level": 2,
+      "chapter": "Age-standardized rates",
+      "page": 29
+    },
+    {
+      "level": 1,
+      "chapter": "Morbidity",
+      "page": 30
+    },
+    {
+      "level": 2,
+      "chapter": "Disability",
+      "page": 31
+    },
+    {
+      "level": 2,
+      "chapter": "Health determinants, indicators, and risk factors",
+      "page": 32
+    },
+    {
+      "level": 2,
+      "chapter": "Other summary measures of population health",
+      "page": 32
+    },
+    {
+      "level": 1,
+      "chapter": "Comparing disease occurrence",
+      "page": 34
+    },
+    {
+      "level": 2,
+      "chapter": "Absolute comparisons",
+      "page": 34
+    },
+    {
+      "level": 2,
+      "chapter": "Relative comparisons",
+      "page": 35
+    },
+    {
+      "level": 1,
+      "chapter": "Chapter 3 Types of studies",
+      "page": 39
+    },
+    {
+      "level": 2,
+      "chapter": "Key messages",
+      "page": 39
+    },
+    {
+      "level": 2,
+      "chapter": "Observations and experiments",
+      "page": 39
+    },
+    {
+      "level": 3,
+      "chapter": "Observational studies",
+      "page": 39
+    },
+    {
+      "level": 3,
+      "chapter": "Experimental studies",
+      "page": 39
+    },
+    {
+      "level": 2,
+      "chapter": "Observational epidemiology",
+      "page": 40
+    },
+    {
+      "level": 3,
+      "chapter": "Descriptive studies",
+      "page": 40
+    },
+    {
+      "level": 3,
+      "chapter": "Ecological studies",
+      "page": 41
+    },
+    {
+      "level": 4,
+      "chapter": "Ecological fallacy",
+      "page": 43
+    },
+    {
+      "level": 3,
+      "chapter": "Cross-sectional studies",
+      "page": 44
+    },
+    {
+      "level": 3,
+      "chapter": "Case-control studies",
+      "page": 44
+    },
+    {
+      "level": 3,
+      "chapter": "Cohort studies",
+      "page": 46
+    },
+    {
+      "level": 3,
+      "chapter": "Summary of epidemiological studies",
+      "page": 49
+    },
+    {
+      "level": 2,
+      "chapter": "Experimental epidemiology",
+      "page": 49
+    },
+    {
+      "level": 3,
+      "chapter": "Randomized controlled trials",
+      "page": 50
+    },
+    {
+      "level": 3,
+      "chapter": "Field trials",
+      "page": 50
+    },
+    {
+      "level": 3,
+      "chapter": "Community trials",
+      "page": 51
+    },
+    {
+      "level": 2,
+      "chapter": "Potential errors in epidemiological studies",
+      "page": 51
+    },
+    {
+      "level": 3,
+      "chapter": "Random error",
+      "page": 52
+    },
+    {
+      "level": 3,
+      "chapter": "Sample size",
+      "page": 52
+    },
+    {
+      "level": 3,
+      "chapter": "Systematic error",
+      "page": 53
+    },
+    {
+      "level": 4,
+      "chapter": "Selection bias",
+      "page": 53
+    },
+    {
+      "level": 4,
+      "chapter": "Measurement bias",
+      "page": 54
+    },
+    {
+      "level": 2,
+      "chapter": "Confounding",
+      "page": 55
+    },
+    {
+      "level": 3,
+      "chapter": "The control of confounding",
+      "page": 56
+    },
+    {
+      "level": 3,
+      "chapter": "Validity",
+      "page": 57
+    },
+    {
+      "level": 3,
+      "chapter": "Ethical issues",
+      "page": 58
+    },
+    {
+      "level": 1,
+      "chapter": "Chapter 4 Basic biostatistics: concepts and tools",
+      "page": 63
+    },
+    {
+      "level": 2,
+      "chapter": "Key messages",
+      "page": 63
+    },
+    {
+      "level": 2,
+      "chapter": "Summarizing data",
+      "page": 63
+    },
+    {
+      "level": 3,
+      "chapter": "Tables and graphs",
+      "page": 64
+    },
+    {
+      "level": 4,
+      "chapter": "Pie charts and component band charts",
+      "page": 64
+    },
+    {
+      "level": 4,
+      "chapter": "Spot maps and rate maps",
+      "page": 65
+    },
+    {
+      "level": 4,
+      "chapter": "Bar charts",
+      "page": 65
+    },
+    {
+      "level": 4,
+      "chapter": "Line graphs",
+      "page": 66
+    },
+    {
+      "level": 4,
+      "chapter": "Frequency distributions and histograms",
+      "page": 66
+    },
+    {
+      "level": 4,
+      "chapter": "Normal distributions",
+      "page": 67
+    },
+    {
+      "level": 3,
+      "chapter": "Summary numbers",
+      "page": 67
+    },
+    {
+      "level": 4,
+      "chapter": "Means, medians and mode",
+      "page": 67
+    },
+    {
+      "level": 4,
+      "chapter": "Variances, standard deviations and standard errors",
+      "page": 68
+    },
+    {
+      "level": 2,
+      "chapter": "Basic concepts of statistical inference",
+      "page": 69
+    },
+    {
+      "level": 3,
+      "chapter": "Using samples to understand populations",
+      "page": 69
+    },
+    {
+      "level": 3,
+      "chapter": "Confidence intervals",
+      "page": 70
+    },
+    {
+      "level": 3,
+      "chapter": "Hypothesis tests, p-values, statistical power",
+      "page": 71
+    },
+    {
+      "level": 4,
+      "chapter": "The p-value",
+      "page": 71
+    },
+    {
+      "level": 4,
+      "chapter": "Statistical power",
+      "page": 71
+    },
+    {
+      "level": 2,
+      "chapter": "Basic methods",
+      "page": 73
+    },
+    {
+      "level": 3,
+      "chapter": "t-tests",
+      "page": 73
+    },
+    {
+      "level": 3,
+      "chapter": "Chi-squared tests for cross tabulations",
+      "page": 74
+    },
+    {
+      "level": 3,
+      "chapter": "Correlation",
+      "page": 75
+    },
+    {
+      "level": 3,
+      "chapter": "Regression",
+      "page": 75
+    },
+    {
+      "level": 4,
+      "chapter": "Linear regression",
+      "page": 76
+    },
+    {
+      "level": 4,
+      "chapter": "Logistic regression",
+      "page": 78
+    },
+    {
+      "level": 3,
+      "chapter": "Survival analyses and Cox proportional hazards models",
+      "page": 79
+    },
+    {
+      "level": 4,
+      "chapter": "Kaplan-Meier survival curves",
+      "page": 79
+    },
+    {
+      "level": 4,
+      "chapter": "Sample size issues",
+      "page": 80
+    },
+    {
+      "level": 2,
+      "chapter": "Meta-analysis",
+      "page": 81
+    },
+    {
+      "level": 1,
+      "chapter": "Chapter 5 Causation in epidemiology",
+      "page": 83
+    },
+    {
+      "level": 2,
+      "chapter": "Key messages",
+      "page": 83
+    },
+    {
+      "level": 2,
+      "chapter": "The concept of cause",
+      "page": 83
+    },
+    {
+      "level": 3,
+      "chapter": "Sufficient or necessary",
+      "page": 83
+    },
+    {
+      "level": 3,
+      "chapter": "Sufficient and necessary",
+      "page": 84
+    },
+    {
+      "level": 3,
+      "chapter": "A causal pathway",
+      "page": 85
+    },
+    {
+      "level": 3,
+      "chapter": "Single and multiple causes",
+      "page": 86
+    },
+    {
+      "level": 3,
+      "chapter": "Factors in causation",
+      "page": 87
+    },
+    {
+      "level": 4,
+      "chapter": "Interaction",
+      "page": 88
+    },
+    {
+      "level": 4,
+      "chapter": "A hierarchy of causes",
+      "page": 88
+    },
+    {
+      "level": 2,
+      "chapter": "Establishing the cause of a disease",
+      "page": 89
+    },
+    {
+      "level": 3,
+      "chapter": "Considering causation",
+      "page": 89
+    },
+    {
+      "level": 4,
+      "chapter": "Temporal relationship",
+      "page": 89
+    },
+    {
+      "level": 4,
+      "chapter": "Plausibility",
+      "page": 91
+    },
+    {
+      "level": 4,
+      "chapter": "Consistency",
+      "page": 91
+    },
+    {
+      "level": 4,
+      "chapter": "Strength",
+      "page": 93
+    },
+    {
+      "level": 4,
+      "chapter": "Dose–response relationship",
+      "page": 93
+    },
+    {
+      "level": 4,
+      "chapter": "Reversibility",
+      "page": 95
+    },
+    {
+      "level": 4,
+      "chapter": "Study design",
+      "page": 95
+    },
+    {
+      "level": 4,
+      "chapter": "Judging the evidence",
+      "page": 96
+    },
+    {
+      "level": 1,
+      "chapter": "Chapter 6 Epidemiology and prevention: chronic noncommunicable diseases",
+      "page": 99
+    },
+    {
+      "level": 2,
+      "chapter": "Key messages",
+      "page": 99
+    },
+    {
+      "level": 2,
+      "chapter": "The scope of prevention",
+      "page": 99
+    },
+    {
+      "level": 3,
+      "chapter": "Recent trends in death rates",
+      "page": 99
+    },
+    {
+      "level": 3,
+      "chapter": "Preventive potential",
+      "page": 101
+    },
+    {
+      "level": 3,
+      "chapter": "Causation framework",
+      "page": 102
+    },
+    {
+      "level": 2,
+      "chapter": "Levels of prevention",
+      "page": 103
+    },
+    {
+      "level": 3,
+      "chapter": "Primordial prevention",
+      "page": 103
+    },
+    {
+      "level": 3,
+      "chapter": "Primary prevention",
+      "page": 105
+    },
+    {
+      "level": 4,
+      "chapter": "Population strategy",
+      "page": 105
+    },
+    {
+      "level": 4,
+      "chapter": "High-risk individual strategy",
+      "page": 107
+    },
+    {
+      "level": 3,
+      "chapter": "Secondary prevention",
+      "page": 108
+    },
+    {
+      "level": 3,
+      "chapter": "Tertiary prevention",
+      "page": 109
+    },
+    {
+      "level": 2,
+      "chapter": "Screening",
+      "page": 110
+    },
+    {
+      "level": 3,
+      "chapter": "Definition",
+      "page": 110
+    },
+    {
+      "level": 3,
+      "chapter": "Types of screening",
+      "page": 110
+    },
+    {
+      "level": 3,
+      "chapter": "Criteria for screening",
+      "page": 110
+    },
+    {
+      "level": 1,
+      "chapter": "Chapter 7 Communicable diseases: epidemiology surveillance and response",
+      "page": 117
+    },
+    {
+      "level": 2,
+      "chapter": "Key messages",
+      "page": 117
+    },
+    {
+      "level": 2,
+      "chapter": "Introduction",
+      "page": 117
+    },
+    {
+      "level": 3,
+      "chapter": "Definitions",
+      "page": 117
+    },
+    {
+      "level": 3,
+      "chapter": "Role of epidemiology",
+      "page": 118
+    },
+    {
+      "level": 2,
+      "chapter": "The burden of communicable disease",
+      "page": 118
+    },
+    {
+      "level": 3,
+      "chapter": "Threats to human security and health systems",
+      "page": 118
+    },
+    {
+      "level": 2,
+      "chapter": "Epidemic and endemic disease",
+      "page": 119
+    },
+    {
+      "level": 3,
+      "chapter": "Epidemics",
+      "page": 119
+    },
+    {
+      "level": 3,
+      "chapter": "Endemic diseases",
+      "page": 121
+    },
+    {
+      "level": 3,
+      "chapter": "Emerging and re-emerging infections",
+      "page": 122
+    },
+    {
+      "level": 2,
+      "chapter": "Chain of infection",
+      "page": 123
+    },
+    {
+      "level": 3,
+      "chapter": "The infectious agent",
+      "page": 123
+    },
+    {
+      "level": 3,
+      "chapter": "Transmission",
+      "page": 124
+    },
+    {
+      "level": 3,
+      "chapter": "Host",
+      "page": 125
+    },
+    {
+      "level": 3,
+      "chapter": "Environment",
+      "page": 125
+    },
+    {
+      "level": 2,
+      "chapter": "Investigation and control of epidemics",
+      "page": 126
+    },
+    {
+      "level": 3,
+      "chapter": "Investigation",
+      "page": 126
+    },
+    {
+      "level": 4,
+      "chapter": "Identifying cases",
+      "page": 126
+    },
+    {
+      "level": 3,
+      "chapter": "Management and control

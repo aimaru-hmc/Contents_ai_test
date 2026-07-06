@@ -1,0 +1,16 @@
+{
+    "timestamp": "2026-07-02 13:39:01",
+    "fatal": true,
+    "stage": "PDF processing failed",
+    "source_pdf": "data/input/부교재3.PDF",
+    "source_pdf_name": "부교재3.PDF",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "error_type": "RuntimeError",
+    "error_message": "All 10 chunk(s) failed. First error: RuntimeError: CUDA out of memory during generation. Lower --image-dpi/--image-max-dim, cap --max-pages, or reduce --max-new-tokens. Cause: CUDA out of memory. Tried to allocate 35.24 GiB. GPU 0 has a total capacity of 139.80 GiB of which 13.57 GiB is free. Including non-PyTorch memory, this process has 126.22 GiB memory in use. Of the allocated memory 104.03 GiB is allocated by PyTorch, and 21.52 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)",
+    "error": "RuntimeError: All 10 chunk(s) failed. First error: RuntimeError: CUDA out of memory during generation. Lower --image-dpi/--image-max-dim, cap --max-pages, or reduce --max-new-tokens. Cause: CUDA out of memory. Tried to allocate 35.24 GiB. GPU 0 has a total capacity of 139.80 GiB of which 13.57 GiB is free. Including non-PyTorch memory, this process has 126.22 GiB memory in use. Of the allocated memory 104.03 GiB is allocated by PyTorch, and 21.52 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)",
+    "debug": {},
+    "traceback": "Traceback (most recent call last):\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma_prod.py\", line 1471, in process_pdf\n    raise RuntimeError(f\"All {len(chunks)} chunk(s) failed. First error: {first}\")\nRuntimeError: All 10 chunk(s) failed. First error: RuntimeError: CUDA out of memory during generation. Lower --image-dpi/--image-max-dim, cap --max-pages, or reduce --max-new-tokens. Cause: CUDA out of memory. Tried to allocate 35.24 GiB. GPU 0 has a total capacity of 139.80 GiB of which 13.57 GiB is free. Including non-PyTorch memory, this process has 126.22 GiB memory in use. Of the allocated memory 104.03 GiB is allocated by PyTorch, and 21.52 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+    "elapsed_seconds": 112.985,
+    "elapsed": "1m 53.0s"
+}

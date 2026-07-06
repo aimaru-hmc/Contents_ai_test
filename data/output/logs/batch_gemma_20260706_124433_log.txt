@@ -1,0 +1,5 @@
+Run log saved: data/output/logs/batch_gemma_20260706_124433_log.txt
+Processing started: 1편(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
