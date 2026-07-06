@@ -97,6 +97,7 @@ TOC_SCHEMA: dict[str, Any] = {
                     "level": {"type": "integer"},
                     "chapter": {"type": "string"},
                     "page": {"type": "integer"},
+                    "level_reason": {"type": "string"},
                 },
                 "required": ["level", "chapter", "page"],
                 "additionalProperties": False,
@@ -294,8 +295,8 @@ Output exactly one JSON object in the format below. Do not output explanations, 
 {{
   "title": "Document title",
   "chapters": [
-    {{"level": 1, "chapter": "Major section title", "page": 1}},
-    {{"level": 2, "chapter": "Subsection title", "page": 3}}
+    {{"level": 1, "chapter": "Major section title", "page": 1, "level_reason": "Concise reason this is a top-level section."}},
+    {{"level": 2, "chapter": "Subsection title", "page": 3, "level_reason": "Concise reason this is a subsection under the previous level 1 entry."}}
   ]
 }}
 
@@ -307,6 +308,7 @@ Output exactly one JSON object in the format below. Do not output explanations, 
 - Preserve original title numbering, but do not invent missing numbering.
 - Preserve original chapter/section titles exactly, including Korean text when the source title is Korean.
 - Exclude body sentences, examples, questions, table/figure captions, and references that are not suitable TOC entries.
+- For every chapter object, include level_reason explaining why that entry has its level. Use numbering, hierarchy, font size/style, indentation, and surrounding context when available.
 - Never output any text outside the JSON object.
 """.strip()
 
@@ -886,11 +888,15 @@ def validate_toc(data: dict[str, Any], fallback_title: str, max_depth: int) -> d
             continue
 
         seen.add(key)
-        chapters.append({
+        chapter_item = {
             "level": level,
             "chapter": chapter,
             "page": page,
-        })
+        }
+        level_reason = clean_text(item.get("level_reason"))
+        if level_reason:
+            chapter_item["level_reason"] = level_reason
+        chapters.append(chapter_item)
 
     return {
         "title": title,
@@ -3052,6 +3058,197 @@ def format_toc_level_reference_entry(entry: dict[str, Any]) -> str:
     return f'title="{title}"{style_text}' if title else style_text.strip()
 
 
+def level_role_text(level: int) -> str:
+    if level == 1:
+        return "상위 장/대단원"
+    if level == 2:
+        return "중간 절/하위 단원"
+    if level == 3:
+        return "소절"
+    return "세부 항목"
+
+
+def layout_reason_style_text(layout: dict[str, Any]) -> str:
+    parts: list[str] = []
+    labels = (
+        ("font_size", "s"),
+        ("size_ratio", "r"),
+        ("left_indent", "x"),
+        ("bold", "b"),
+        ("italic", "i"),
+        ("font_id", "f"),
+    )
+    for key, label in labels:
+        value = layout.get(key)
+        if value is None or clean_text(value) == "":
+            continue
+        parts.append(f"{label}={value}")
+    return ", ".join(parts)
+
+
+def style_distance(left: dict[str, Any], right: dict[str, Any]) -> float:
+    score = 0.0
+    compared = False
+    for key, weight in (
+        ("font_size", 1.0),
+        ("size_ratio", 8.0),
+        ("left_indent", 0.08),
+    ):
+        if key not in left or key not in right:
+            continue
+        try:
+            score += abs(float(left[key]) - float(right[key])) * weight
+            compared = True
+        except Exception:
+            continue
+
+    for key, penalty in (("bold", 2.0), ("italic", 1.0), ("font_id", 1.0)):
+        if key not in left or key not in right:
+            continue
+        compared = True
+        if clean_text(left[key]) != clean_text(right[key]):
+            score += penalty
+
+    return score if compared else 9999.0
+
+
+def closest_level_reference(
+    layout: dict[str, Any],
+    level_reference: dict[int, list[dict[str, Any]]] | None,
+) -> tuple[int | None, dict[str, Any] | None]:
+    if not layout or not level_reference:
+        return None, None
+
+    best_level: int | None = None
+    best_entry: dict[str, Any] | None = None
+    best_score = 9999.0
+    for level, entries in level_reference.items():
+        for entry in entries:
+            if not isinstance(entry, dict):
+                continue
+            score = style_distance(layout, entry)
+            if score < best_score:
+                best_score = score
+                best_level = level
+                best_entry = entry
+
+    if best_score >= 9999.0:
+        return None, None
+    return best_level, best_entry
+
+
+def build_level_reason(
+    level: int,
+    chapter_title: str,
+    chunk_text: str,
+    level_reference: dict[int, list[dict[str, Any]]] | None = None,
+) -> str:
+    layout = find_layout_for_chapter_title(chunk_text=chunk_text, title=chapter_title)
+    role = level_role_text(level)
+    reason_parts = [f"level {level}: {role} 계층으로 분류됨"]
+
+    style_text = layout_reason_style_text(layout)
+    if style_text:
+        reason_parts.append(f"현재 줄 layout({style_text})")
+    else:
+        reason_parts.append("현재 chunk에서 대응 layout tag를 찾지 못해 번호 체계와 주변 문맥 기준")
+
+    closest_level, closest_entry = closest_level_reference(layout, level_reference)
+    if closest_level is not None:
+        closest_title = clean_text((closest_entry or {}).get("title"))
+        if closest_level == level:
+            suffix = f' "{closest_title}"' if closest_title else ""
+            reason_parts.append(f"이전 level {level} 예시{suffix}와 가장 가까운 style 패턴")
+        else:
+            reason_parts.append(
+                f"이전 style 기준으로는 level {closest_level}와 가장 가까우나, 번호/문맥상 level {level}로 유지"
+            )
+    else:
+        reason_parts.append("이전 level style 기준 없음")
+
+    return "; ".join(reason_parts) + "."
+
+
+def add_level_reasons_to_toc(
+    toc: dict[str, Any],
+    chunk_text: str,
+    level_reference: dict[int, list[dict[str, Any]]] | None = None,
+    overwrite: bool = False,
+) -> dict[str, Any]:
+    chapters = toc.get("chapters")
+    if not isinstance(chapters, list):
+        return toc
+
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        if clean_text(chapter.get("level_reason")) and not overwrite:
+            continue
+        try:
+            level = int(chapter.get("level", 1))
+        except Exception:
+            level = 1
+        title = clean_text(chapter.get("chapter"))
+        if not title:
+            continue
+        chapter["level_reason"] = build_level_reason(
+            level=level,
+            chapter_title=title,
+            chunk_text=chunk_text,
+            level_reference=level_reference,
+        )
+    return toc
+
+
+def partial_toc_level_reason_map(partial_tocs: list[dict[str, Any]]) -> dict[tuple[str, int], str]:
+    reason_by_key: dict[tuple[str, int], str] = {}
+    for partial in partial_tocs:
+        toc = partial.get("toc") if isinstance(partial, dict) else None
+        if not isinstance(toc, dict):
+            continue
+        chapters = toc.get("chapters", [])
+        if not isinstance(chapters, list):
+            continue
+        for chapter in chapters:
+            if not isinstance(chapter, dict):
+                continue
+            reason = clean_text(chapter.get("level_reason"))
+            title = normalize_toc_match_text(chapter.get("chapter"))
+            if not reason or not title:
+                continue
+            try:
+                page = int(chapter.get("page", 1))
+            except Exception:
+                page = 1
+            reason_by_key.setdefault((title, page), reason)
+    return reason_by_key
+
+
+def restore_level_reasons_from_partials(toc: dict[str, Any], partial_tocs: list[dict[str, Any]]) -> dict[str, Any]:
+    reason_by_key = partial_toc_level_reason_map(partial_tocs)
+    if not reason_by_key:
+        return toc
+
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return toc
+
+    for chapter in chapters:
+        if not isinstance(chapter, dict) or clean_text(chapter.get("level_reason")):
+            continue
+        title = normalize_toc_match_text(chapter.get("chapter"))
+        if not title:
+            continue
+        try:
+            page = int(chapter.get("page", 1))
+        except Exception:
+            page = 1
+        reason = reason_by_key.get((title, page))
+        if reason:
+            chapter["level_reason"] = reason
+    return toc
+
+
 def update_toc_level_reference(
     level_reference: dict[int, list[dict[str, Any]]],
     toc: dict[str, Any],
@@ -3124,6 +3321,7 @@ Some lines may start with compact layout tags:
 - Use larger font size, higher size ratio, bold/italic style, indentation, numbering, and nearby body text to infer TOC levels.
 - Never copy [L ...] tags into chapter titles.
 - Ignore existing table-of-contents pages, dot-leader lines, page-number-only lines, and repeated headers/footers.
+- Include level_reason in every chapter object. Explain the level using numbering, hierarchy, font size/ratio, bold/italic, indentation, and context.
 - Output compact valid JSON only. Every object property and every array item must be separated with commas.
 
 [PDF File Name]
@@ -3156,6 +3354,7 @@ Some lines may start with compact layout tags:
 - Use larger font size, higher size ratio, bold/italic style, indentation, numbering, and nearby body text to infer TOC levels.
 - Never copy [L ...] tags into chapter titles.
 - Ignore existing table-of-contents pages, dot-leader lines, page-number-only lines, and repeated headers/footers.
+- Include level_reason in every chapter object. Explain the level using numbering, hierarchy, font size/ratio, bold/italic, indentation, and context.
 - Output compact valid JSON only. Every object property and every array item must be separated with commas.
 {level_reference_block}
 
@@ -3188,6 +3387,7 @@ Create one final TOC JSON object using only the [Partial TOC Candidates] below i
 - Use only levels from 1 to {max_depth}.
 - Do not invent chapter titles.
 - Preserve original chapter/section titles exactly, including Korean text when the source title is Korean.
+- Preserve level_reason when it exists. If an entry has no level_reason, add a concise reason based only on the candidate entry and nearby level pattern.
 
 [PDF File Name]
 {pdf_name}
@@ -3302,6 +3502,11 @@ def process_gemma_text_chunk(
             label=f"Gemma chunk {chunk_label}/{total_chunks}",
         )
         partial_toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
+        add_level_reasons_to_toc(
+            partial_toc,
+            chunk_text=str(chunk.get("text") or ""),
+            level_reference=level_reference if use_level_reference else None,
+        )
         raw_parts.append({
             "chunk": chunk["index"],
             "start_page": chunk["start_page"],
@@ -3428,7 +3633,9 @@ def generate_toc_from_pdf_gemma_text(
                 label=f"Gemma text({model})",
             )
             print(f"  Gemma text TOC generation completed: {model}", flush=True)
-            return validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth), raw_text, model
+            toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
+            add_level_reasons_to_toc(toc, chunk_text=full_text)
+            return toc, raw_text, model
         except Exception as error:
             if not is_cuda_out_of_memory_error(error):
                 raise
@@ -3484,6 +3691,7 @@ def generate_toc_from_pdf_gemma_text(
     if merge_mode == "local":
         print("  Gemma chunked TOC local merge started", flush=True)
         toc = merge_partial_tocs_locally(partial_tocs, fallback_title=pdf_path.stem, max_depth=args.max_depth)
+        restore_level_reasons_from_partials(toc, partial_tocs)
         final_raw_text = json.dumps(
             {
                 "mode": "local_merge",
@@ -3505,6 +3713,7 @@ def generate_toc_from_pdf_gemma_text(
                 label=f"Gemma chunked TOC merge({model})",
             )
             toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
+            restore_level_reasons_from_partials(toc, partial_tocs)
         except Exception as merge_error:
             print(
                 f"Gemma chunked TOC merge failed; falling back to local merge: {merge_error}",
@@ -3521,6 +3730,7 @@ def generate_toc_from_pdf_gemma_text(
             if merge_error_log is not None:
                 print(f"  Merge error log saved: {merge_error_log}", file=sys.stderr, flush=True)
             toc = merge_partial_tocs_locally(partial_tocs, fallback_title=pdf_path.stem, max_depth=args.max_depth)
+            restore_level_reasons_from_partials(toc, partial_tocs)
             final_raw_text = json.dumps(
                 {
                     "mode": "local_merge_after_gemma_merge_failure",
