@@ -1,0 +1,2289 @@
+{
+    "title": "근거기반의료와 임상적 의사결정",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "1. 개념과 발전배경",
+            "page": 1
+        },
+        {
+            "level": 2,
+            "chapter": "1.1 근거기반의료의 개념",
+            "page": 1
+        },
+        {
+            "level": 2,
+            "chapter": "1.2 근거기반의료의 배경",
+            "page": 2
+        },
+        {
+            "level": 1,
+            "chapter": "2. 접근과정과 전략",
+            "page": 3
+        },
+        {
+            "level": 2,
+            "chapter": "2.1 근거기반의료를 이용한 임상문제 해결 과정",
+            "page": 3
+        },
+        {
+            "level": 2,
+            "chapter": "2.2 임상문제의 핵심질문 선정(PICO)",
+            "page": 6
+        },
+        {
+            "level": 2,
+            "chapter": "2.3 임상문제에 대한 정보 검색",
+            "page": 6
+        },
+        {
+            "level": 3,
+            "chapter": "1) 근거기반의료 자료원",
+            "page": 6
+        },
+        {
+            "level": 3,
+            "chapter": "2) 문헌검색과 활용",
+            "page": 7
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 자료원의 종류 및 특징",
+            "page": 7
+        },
+        {
+            "level": 2,
+            "chapter": "2.4 근거의 수준과 평가",
+            "page": 9
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 문헌검색 과정",
+            "page": 9
+        },
+        {
+            "level": 2,
+            "chapter": "2.5 근거의 적용과 자가 평가",
+            "page": 10
+        },
+        {
+            "level": 1,
+            "chapter": "3. 근거기반 임상적 의사결정 방법",
+            "page": 11
+        },
+        {
+            "level": 2,
+            "chapter": "3.1 과학적 근거기반 임상적 의사결정 방법",
+            "page": 11
+        },
+        {
+            "level": 3,
+            "chapter": "1) 체계적 고찰과 메타분석",
+            "page": 11
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 개념",
+            "page": 12
+        },
+        {
+            "level": 2,
+            "chapter": "2) 임상연구 수행을 통한 의사결정",
+            "page": 15
+        },
+        {
+            "level": 2,
+            "chapter": "3) 근거기반 의사결정에 고려되어져야 할 사항",
+            "page": 16
+        },
+        {
+            "level": 1,
+            "chapter": "3.2 경제성 및 효용성 기반 임상적 의사결정",
+            "page": 17
+        },
+        {
+            "level": 1,
+            "chapter": "3.3 임상적 의사결정에 도움이 되는 통계분석",
+            "page": 19
+        },
+        {
+            "level": 2,
+            "chapter": "1) ROC",
+            "page": 19
+        },
+        {
+            "level": 3,
+            "chapter": "(1) 원리",
+            "page": 20
+        },
+        {
+            "level": 3,
+            "chapter": "(2) ROC 적용사례",
+            "page": 21
+        },
+        {
+            "level": 2,
+            "chapter": "2) 베이즈 정리",
+            "page": 22
+        },
+        {
+            "level": 2,
+            "chapter": "3) 의사결정분석",
+            "page": 25
+        },
+        {
+            "level": 3,
+            "chapter": "(1) 원리",
+            "page": 25
+        },
+        {
+            "level": 3,
+            "chapter": "(2) 적용 사례",
+            "page": 25
+        },
+        {
+            "level": 1,
+            "chapter": "4. 근거기반의 활용",
+            "page": 27
+        },
+        {
+            "level": 2,
+            "chapter": "4.1 의학논문의 비판적 검토",
+            "page": 27
+        },
+        {
+            "level": 3,
+            "chapter": "1) 비판적 검토의 필요성",
+            "page": 27
+        },
+        {
+            "level": 3,
+            "chapter": "2) 연구설계에 따른 비판적 검토",
+            "page": 27
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 연구설계의 구분",
+            "page": 27
+        },
+        {
+            "level": 3,
+            "chapter": "3) 문헌의 질평가 주요 영역",
+            "page": 28
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 연구설계에 따른 평가도구",
+            "page": 28
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 타당도 평가",
+            "page": 28
+        },
+        {
+            "level": 1,
+            "chapter": "4) 연구목적에 따른 문헌평가",
+            "page": 29
+        },
+        {
+            "level": 2,
+            "chapter": "(2) 임상적 중요성",
+            "page": 29
+        },
+        {
+            "level": 2,
+            "chapter": "(3) 적용가능성",
+            "page": 29
+        },
+        {
+            "level": 2,
+            "chapter": "(1) 치료 연구",
+            "page": 30
+        },
+        {
+            "level": 3,
+            "chapter": "① 문헌의 타당성 평가",
+            "page": 30
+        },
+        {
+            "level": 1,
+            "chapter": "제9장 근거기반의료와 임상적 의사결정",
+            "page": 31
+        },
+        {
+            "level": 3,
+            "chapter": "② 임상적 중요성에 대한 평가",
+            "page": 31
+        },
+        {
+            "level": 2,
+            "chapter": "(2) 진단 연구",
+            "page": 32
+        },
+        {
+            "level": 3,
+            "chapter": "③ 적용가능성에 대한 평가",
+            "page": 32
+        },
+        {
+            "level": 3,
+            "chapter": "① 연구의 타당성 평가",
+            "page": 32
+        },
+        {
+            "level": 3,
+            "chapter": "② 임상적 중요성에 대한 평가",
+            "page": 32
+        },
+        {
+            "level": 2,
+            "chapter": "(3) 예후 연구",
+            "page": 33
+        },
+        {
+            "level": 3,
+            "chapter": "③ 적용성에 대한 평가",
+            "page": 33
+        },
+        {
+            "level": 3,
+            "chapter": "① 연구의 타당성 평가",
+            "page": 33
+        },
+        {
+            "level": 2,
+            "chapter": "4.2 임상진료지침",
+            "page": 34
+        },
+        {
+            "level": 3,
+            "chapter": "② 임상적 중요성",
+            "page": 34
+        },
+        {
+            "level": 3,
+            "chapter": "③ 적용가능성",
+            "page": 34
+        },
+        {
+            "level": 3,
+            "chapter": "1) 배경 및 필요성",
+            "page": 34
+        },
+        {
+            "level": 3,
+            "chapter": "2) 임상진료지침의 주요 개발내용과 방법",
+            "page": 34
+        },
+        {
+            "level": 3,
+            "chapter": "3) 임상진료지침의 개발과정",
+            "page": 35
+        },
+        {
+            "level": 3,
+            "chapter": "4) 임상진료지침의 보급과 한국에서의 과제",
+            "page": 38
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 임상진료지침의 보급",
+            "page": 38
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 임상진료지침의 과제",
+            "page": 38
+        },
+        {
+            "level": 2,
+            "chapter": "4.3 의료기술 평가",
+            "page": 39
+        },
+        {
+            "level": 2,
+            "chapter": "4.4 근거기반 예방의학 및 근거기반 공중보건",
+            "page": 40
+        },
+        {
+            "level": 1,
+            "chapter": "제10장 감염병의 역학",
+            "page": 42
+        },
+        {
+            "level": 2,
+            "chapter": "1. 감염병의 특성",
+            "page": 42
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 정의와 개념",
+            "page": 42
+        },
+        {
+            "level": 4,
+            "chapter": "1) 감염병역학",
+            "page": 42
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 감염병의 감염 경과",
+            "page": 43
+        },
+        {
+            "level": 4,
+            "chapter": "2) 감염과 전염, 오염, 집락형성",
+            "page": 43
+        },
+        {
+            "level": 4,
+            "chapter": "3) 풍토병과 유행병, 범유행",
+            "page": 43
+        },
+        {
+            "level": 4,
+            "chapter": "1) 사람 중심으로 본 감염 경과",
+            "page": 43
+        },
+        {
+            "level": 4,
+            "chapter": "2) 병원체 중심으로 본 감염 경과",
+            "page": 44
+        },
+        {
+            "level": 4,
+            "chapter": "3) 호흡기감염병과 소화기감염병의 감염경과 비교",
+            "page": 44
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 감염병의 임상경과",
+            "page": 45
+        },
+        {
+            "level": 4,
+            "chapter": "1) 현성감염과 불현성감염",
+            "page": 45
+        },
+        {
+            "level": 4,
+            "chapter": "2) 잠재감염",
+            "page": 45
+        },
+        {
+            "level": 1,
+            "chapter": "1.4 감염병에서의 감염지표",
+            "page": 46
+        },
+        {
+            "level": 2,
+            "chapter": "1) 감염력",
+            "page": 46
+        },
+        {
+            "level": 2,
+            "chapter": "2) 병원력",
+            "page": 46
+        },
+        {
+            "level": 2,
+            "chapter": "3) 독력",
+            "page": 46
+        },
+        {
+            "level": 1,
+            "chapter": "2. 감염병의 생성과 전파",
+            "page": 48
+        },
+        {
+            "level": 2,
+            "chapter": "2.1 병원체",
+            "page": 49
+        },
+        {
+            "level": 2,
+            "chapter": "2.2 병원소",
+            "page": 49
+        },
+        {
+            "level": 3,
+            "chapter": "1) 인간 병원소",
+            "page": 50
+        },
+        {
+            "level": 3,
+            "chapter": "2) 동물 병원소",
+            "page": 50
+        },
+        {
+            "level": 2,
+            "chapter": "2.3 병원소에서 병원체 탈출",
+            "page": 51
+        },
+        {
+            "level": 2,
+            "chapter": "2.4 전 파",
+            "page": 51
+        },
+        {
+            "level": 3,
+            "chapter": "3) 환경 병원소",
+            "page": 51
+        },
+        {
+            "level": 3,
+            "chapter": "1) 전파수단에 따른 분류: 직접전파와 간접전파",
+            "page": 51
+        },
+        {
+            "level": 2,
+            "chapter": "2.5 새로운 숙주로 침입",
+            "page": 53
+        },
+        {
+            "level": 2,
+            "chapter": "2.6 숙주의 감수성과 면역",
+            "page": 53
+        },
+        {
+            "level": 3,
+            "chapter": "2) 전파양식에 따른 분류: 공동매개전파와 사람간 전파(접촉전파)",
+            "page": 53
+        },
+        {
+            "level": 3,
+            "chapter": "1) 감수성과 면역성",
+            "page": 53
+        },
+        {
+            "level": 3,
+            "chapter": "2) 집단면역(herd immunity)",
+            "page": 54
+        },
+        {
+            "level": 1,
+            "chapter": "3. 감염병 관리와 예방",
+            "page": 56
+        },
+        {
+            "level": 2,
+            "chapter": "3.1 감염병 관리",
+            "page": 56
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체와 병원소 관리",
+            "page": 56
+        },
+        {
+            "level": 3,
+            "chapter": "2) 전파과정 관리",
+            "page": 56
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 격리와 검역",
+            "page": 56
+        },
+        {
+            "level": 3,
+            "chapter": "3) 숙주 관리",
+            "page": 58
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 위생관리",
+            "page": 58
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 숙주 면역 증강",
+            "page": 58
+        },
+        {
+            "level": 2,
+            "chapter": "3.2 예방접종의 의미와 역학적 효과 판정",
+            "page": 59
+        },
+        {
+            "level": 3,
+            "chapter": "1) 예방접종의 역학적 의미",
+            "page": 59
+        },
+        {
+            "level": 3,
+            "chapter": "2) 집단 예방접종의 선정 기준",
+            "page": 59
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 환자 조기발견 조기치료",
+            "page": 59
+        },
+        {
+            "level": 3,
+            "chapter": "3) 지역사회에서의 예방접종 효과 측정",
+            "page": 60
+        },
+        {
+            "level": 1,
+            "chapter": "3.3 법정감염병과 감염병 관리",
+            "page": 61
+        },
+        {
+            "level": 2,
+            "chapter": "1) 법정감염병",
+            "page": 61
+        },
+        {
+            "level": 2,
+            "chapter": "2) 법정감염병의 신고",
+            "page": 61
+        },
+        {
+            "level": 1,
+            "chapter": "3.4 국제적 감염병 관리 수준",
+            "page": 64
+        },
+        {
+            "level": 2,
+            "chapter": "3) 감염병 환자, 의사환자 및 병원체 보유자",
+            "page": 64
+        },
+        {
+            "level": 1,
+            "chapter": "4. 감염병의 유행과 유행조사",
+            "page": 65
+        },
+        {
+            "level": 2,
+            "chapter": "4.1 감염병 유행의 원리와 의미",
+            "page": 66
+        },
+        {
+            "level": 3,
+            "chapter": "1) 감염재생산수와 유행의 원리",
+            "page": 66
+        },
+        {
+            "level": 3,
+            "chapter": "2) 감염재생산수의 결정요인",
+            "page": 67
+        },
+        {
+            "level": 2,
+            "chapter": "4.2 감염병 유행과 유행조사",
+            "page": 68
+        },
+        {
+            "level": 2,
+            "chapter": "4.3 유행조사의 목적",
+            "page": 68
+        },
+        {
+            "level": 2,
+            "chapter": "4.4 유행조사의 기본 단계",
+            "page": 68
+        },
+        {
+            "level": 3,
+            "chapter": "1) 1단계: 유행의 확인과 크기 측정",
+            "page": 69
+        },
+        {
+            "level": 3,
+            "chapter": "2) 2단계: 유행질환의 기술역학적 분석",
+            "page": 69
+        },
+        {
+            "level": 3,
+            "chapter": "3) 3단계: 유행 원인에 대한 가설 설정",
+            "page": 73
+        },
+        {
+            "level": 3,
+            "chapter": "4) 4단계: 분석역학적 연구를 통한 가설 검정",
+            "page": 73
+        },
+        {
+            "level": 3,
+            "chapter": "5) 5단계: 유행관리 사업평가와 커뮤니케이션",
+            "page": 73
+        },
+        {
+            "level": 1,
+            "chapter": "5. 새로이 출현하는 감염병",
+            "page": 75
+        },
+        {
+            "level": 2,
+            "chapter": "5.1 출현 배경과 특성",
+            "page": 75
+        },
+        {
+            "level": 2,
+            "chapter": "5.2 감염병의 출현에 기여하는 요인",
+            "page": 76
+        },
+        {
+            "level": 2,
+            "chapter": "5.3 신종감염병 이해를 위한 원헬스 모형",
+            "page": 77
+        },
+        {
+            "level": 2,
+            "chapter": "5.4 한국의 신종감염병과 재출현 감염병",
+            "page": 78
+        },
+        {
+            "level": 3,
+            "chapter": "1) 새로 발견된 감염병",
+            "page": 78
+        },
+        {
+            "level": 3,
+            "chapter": "2) 재출현 감염병",
+            "page": 78
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 식수 및 식품매개감염병",
+            "page": 78
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 예방접종대상감염병",
+            "page": 78
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 절지동물매개감염병",
+            "page": 78
+        },
+        {
+            "level": 2,
+            "chapter": "5.5 대비와 대응",
+            "page": 79
+        },
+        {
+            "level": 3,
+            "chapter": "3) 외국에서 유입되어 발생하는 감염병",
+            "page": 79
+        },
+        {
+            "level": 1,
+            "chapter": "6. 수인성 및 식품매개감염병",
+            "page": 81
+        },
+        {
+            "level": 2,
+            "chapter": "6.1 예방과 관리",
+            "page": 81
+        },
+        {
+            "level": 2,
+            "chapter": "6.2 콜레라",
+            "page": 82
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 82
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 82
+        },
+        {
+            "level": 2,
+            "chapter": "6.3 장티푸스",
+            "page": 83
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방 및 관리",
+            "page": 83
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 환자 관리",
+            "page": 83
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 유행 시 조치",
+            "page": 83
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 예방",
+            "page": 83
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 84
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 84
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방 및 관리",
+            "page": 84
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 환자 및 보균자 관리",
+            "page": 84
+        },
+        {
+            "level": 2,
+            "chapter": "6.4 세균성이질",
+            "page": 85
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 85
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 85
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 유행 시 조치",
+            "page": 85
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 예방",
+            "page": 85
+        },
+        {
+            "level": 2,
+            "chapter": "6.5 장출혈성대장균감염증",
+            "page": 86
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방 및 관리",
+            "page": 86
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 86
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 환자 관리",
+            "page": 86
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 유행 시 조치",
+            "page": 86
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 예방",
+            "page": 86
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 87
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방 및 관리",
+            "page": 87
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 환자 관리",
+            "page": 87
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 유행 시 조치",
+            "page": 87
+        },
+        {
+            "level": 2,
+            "chapter": "6.6 A형간염",
+            "page": 88
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 88
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 88
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 예방",
+            "page": 88
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방 및 관리",
+            "page": 89
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 환자 및 접촉자 관리",
+            "page": 89
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 유행 시 조치",
+            "page": 89
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 예방",
+            "page": 89
+        },
+        {
+            "level": 1,
+            "chapter": "7. 예방접종 대상 감염병",
+            "page": 91
+        },
+        {
+            "level": 2,
+            "chapter": "7.1 예방과 관리",
+            "page": 92
+        },
+        {
+            "level": 2,
+            "chapter": "7.2 홍역",
+            "page": 93
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 93
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 93
+        },
+        {
+            "level": 2,
+            "chapter": "7.3 볼거리",
+            "page": 94
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방과 관리",
+            "page": 94
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 94
+        },
+        {
+            "level": 1,
+            "chapter": "7.4 수두",
+            "page": 95
+        },
+        {
+            "level": 2,
+            "chapter": "2) 역학적 특성",
+            "page": 95
+        },
+        {
+            "level": 2,
+            "chapter": "3) 예방과 관리",
+            "page": 95
+        },
+        {
+            "level": 2,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 95
+        },
+        {
+            "level": 1,
+            "chapter": "7.5 파상풍",
+            "page": 96
+        },
+        {
+            "level": 2,
+            "chapter": "2) 역학적 특성",
+            "page": 96
+        },
+        {
+            "level": 2,
+            "chapter": "3) 예방과 관리",
+            "page": 96
+        },
+        {
+            "level": 2,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 96
+        },
+        {
+            "level": 1,
+            "chapter": "7.6 백일해",
+            "page": 97
+        },
+        {
+            "level": 2,
+            "chapter": "3) 예방과 관리",
+            "page": 97
+        },
+        {
+            "level": 2,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 97
+        },
+        {
+            "level": 2,
+            "chapter": "2) 역학적 특성",
+            "page": 97
+        },
+        {
+            "level": 1,
+            "chapter": "7.7 일본뇌염",
+            "page": 99
+        },
+        {
+            "level": 2,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 99
+        },
+        {
+            "level": 2,
+            "chapter": "2) 역학적 특성",
+            "page": 99
+        },
+        {
+            "level": 2,
+            "chapter": "3) 예방과 관리",
+            "page": 99
+        },
+        {
+            "level": 1,
+            "chapter": "8. 사람 간 접촉에 의한 감염병",
+            "page": 100
+        },
+        {
+            "level": 2,
+            "chapter": "8.1 예방과 관리",
+            "page": 100
+        },
+        {
+            "level": 2,
+            "chapter": "8.2 인플루엔자",
+            "page": 101
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 101
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 102
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방과 관리",
+            "page": 102
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 환자 관리",
+            "page": 102
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 유행 시 조치",
+            "page": 102
+        },
+        {
+            "level": 2,
+            "chapter": "8.3 신종인플루엔자",
+            "page": 103
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 예방",
+            "page": 103
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 104
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 104
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방과 관리",
+            "page": 104
+        },
+        {
+            "level": 2,
+            "chapter": "8.4 코로나바이러스 감염",
+            "page": 105
+        },
+        {
+            "level": 3,
+            "chapter": "1) 중동호흡기증후군(MERS, 메르스)",
+            "page": 105
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 병원체 및 임상적 특징",
+            "page": 106
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 역학적 특성",
+            "page": 106
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 예방과 관리",
+            "page": 107
+        },
+        {
+            "level": 3,
+            "chapter": "2) 코로나바이러스감염증-19(COVID-19, 코로나19)",
+            "page": 108
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 병원체 및 임상적 특징",
+            "page": 108
+        },
+        {
+            "level": 2,
+            "chapter": "(2) 전파",
+            "page": 109
+        },
+        {
+            "level": 2,
+            "chapter": "(3) 역학적 특성",
+            "page": 109
+        },
+        {
+            "level": 2,
+            "chapter": "(4) 예방과 관리",
+            "page": 110
+        },
+        {
+            "level": 1,
+            "chapter": "8.5 지역사회 호흡기감염병",
+            "page": 111
+        },
+        {
+            "level": 2,
+            "chapter": "1) 성홍열",
+            "page": 111
+        },
+        {
+            "level": 3,
+            "chapter": "(1) 병원체 및 임상적 특징",
+            "page": 111
+        },
+        {
+            "level": 3,
+            "chapter": "(2) 역학적 특성",
+            "page": 111
+        },
+        {
+            "level": 2,
+            "chapter": "2) 급성호흡기감염증",
+            "page": 112
+        },
+        {
+            "level": 3,
+            "chapter": "(3) 예방과 관리",
+            "page": 112
+        },
+        {
+            "level": 3,
+            "chapter": "(1) 병원체 및 임상적 특징",
+            "page": 112
+        },
+        {
+            "level": 3,
+            "chapter": "(2) 역학적 특성",
+            "page": 112
+        },
+        {
+            "level": 1,
+            "chapter": "8.6 에볼라바이러스병",
+            "page": 113
+        },
+        {
+            "level": 2,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 113
+        },
+        {
+            "level": 3,
+            "chapter": "(3) 예방과 관리",
+            "page": 113
+        },
+        {
+            "level": 2,
+            "chapter": "2) 역학적 특성",
+            "page": 114
+        },
+        {
+            "level": 2,
+            "chapter": "3) 예방과 관리",
+            "page": 114
+        },
+        {
+            "level": 1,
+            "chapter": "9. 절지동물매개감염병",
+            "page": 115
+        },
+        {
+            "level": 2,
+            "chapter": "9.1 말라리아",
+            "page": 116
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 116
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 116
+        },
+        {
+            "level": 2,
+            "chapter": "9.2 쯔쯔가무시증",
+            "page": 118
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방 및 관리",
+            "page": 118
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 119
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 119
+        },
+        {
+            "level": 2,
+            "chapter": "9.3 중증열성혈소판감소증후군",
+            "page": 120
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방과 관리",
+            "page": 120
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 매개체의 특성",
+            "page": 120
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 121
+        },
+        {
+            "level": 3,
+            "chapter": "3) 임상적 특징",
+            "page": 121
+        },
+        {
+            "level": 3,
+            "chapter": "4) 신고기준",
+            "page": 121
+        },
+        {
+            "level": 2,
+            "chapter": "9.4 뎅기열",
+            "page": 122
+        },
+        {
+            "level": 3,
+            "chapter": "5) 예방과 관리",
+            "page": 122
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 122
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 123
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방과 관리",
+            "page": 123
+        },
+        {
+            "level": 2,
+            "chapter": "9.5 지카바이러스감염증",
+            "page": 124
+        },
+        {
+            "level": 1,
+            "chapter": "10. 인수공통감염병",
+            "page": 125
+        },
+        {
+            "level": 2,
+            "chapter": "10.1 예방과 관리",
+            "page": 126
+        },
+        {
+            "level": 2,
+            "chapter": "10.2 렙토스피라증",
+            "page": 127
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 127
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 127
+        },
+        {
+            "level": 2,
+            "chapter": "10.3 신증후군출혈열",
+            "page": 128
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방과 관리",
+            "page": 128
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 128
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 128
+        },
+        {
+            "level": 2,
+            "chapter": "10.4 큐열",
+            "page": 129
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방과 관리",
+            "page": 129
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 129
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 129
+        },
+        {
+            "level": 2,
+            "chapter": "10.5 브루셀라증",
+            "page": 130
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방과 관리",
+            "page": 130
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 130
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 130
+        },
+        {
+            "level": 2,
+            "chapter": "10.6 탄저",
+            "page": 131
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방과 관리",
+            "page": 131
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 131
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 132
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방과 관리",
+            "page": 133
+        },
+        {
+            "level": 1,
+            "chapter": "11. 만성감염병",
+            "page": 134
+        },
+        {
+            "level": 2,
+            "chapter": "11.1 결 핵",
+            "page": 135
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 135
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 135
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방 및 관리",
+            "page": 136
+        },
+        {
+            "level": 2,
+            "chapter": "11.2 B형간염",
+            "page": 137
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 환자 관리",
+            "page": 137
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 유행 시 조치",
+            "page": 137
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 예방",
+            "page": 137
+        },
+        {
+            "level": 3,
+            "chapter": "1) 병원체 및 임상적 특징",
+            "page": 138
+        },
+        {
+            "level": 3,
+            "chapter": "2) 역학적 특성",
+            "page": 138
+        },
+        {
+            "level": 3,
+            "chapter": "3) 예방 및 관리",
+            "page": 139
+        },
+        {
+            "level": 1,
+            "chapter": "11.3 C형간염",
+            "page": 140
+        },
+        {
+            "level": 2,
+            "chapter": "1) 병원체 및 임상적 특성",
+            "page": 140
+        },
+        {
+            "level": 2,
+            "chapter": "2) 역학적 특성",
+            "page": 140
+        },
+        {
+            "level": 1,
+            "chapter": "11.4 후천성면역결핍증",
+            "page": 141
+        },
+        {
+            "level": 2,
+            "chapter": "3) 예방 및 관리",
+            "page": 141
+        },
+        {
+            "level": 2,
+            "chapter": "1) 병원체 및 임상적 특성",
+            "page": 141
+        },
+        {
+            "level": 2,
+            "chapter": "2) 역학적 특성",
+            "page": 142
+        },
+        {
+            "level": 2,
+            "chapter": "3) 예방 및 관리",
+            "page": 143
+        },
+        {
+            "level": 1,
+            "chapter": "12. 의료관련감염병",
+            "page": 144
+        },
+        {
+            "level": 2,
+            "chapter": "12.1 의료관련감염의 질병부담과 발생률",
+            "page": 145
+        },
+        {
+            "level": 2,
+            "chapter": "12.2 요로감염",
+            "page": 146
+        },
+        {
+            "level": 2,
+            "chapter": "12.3 균혈증",
+            "page": 146
+        },
+        {
+            "level": 2,
+            "chapter": "12.4 원내폐렴",
+            "page": 146
+        },
+        {
+            "level": 2,
+            "chapter": "12.5 예방과 관리",
+            "page": 147
+        },
+        {
+            "level": 1,
+            "chapter": "13. 해외여행 감염증",
+            "page": 148
+        },
+        {
+            "level": 2,
+            "chapter": "13.1 해외여행 시 필요한 질병예방의 원칙",
+            "page": 148
+        },
+        {
+            "level": 2,
+            "chapter": "13.2 해외여행 시 예방접종",
+            "page": 149
+        },
+        {
+            "level": 2,
+            "chapter": "13.3 해외여행 시 말라리아 예방",
+            "page": 149
+        },
+        {
+            "level": 2,
+            "chapter": "13.4 해외여행 시 위생관리: 여행자 설사",
+            "page": 150
+        },
+        {
+            "level": 1,
+            "chapter": "제11장 만성질환의 역학",
+            "page": 154
+        },
+        {
+            "level": 2,
+            "chapter": "1. 만성질환",
+            "page": 154
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 만성질환의 역학적 특성",
+            "page": 154
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 고위험집단과 취약집단",
+            "page": 156
+        },
+        {
+            "level": 1,
+            "chapter": "1.3 만성질환의 관리와 예방",
+            "page": 157
+        },
+        {
+            "level": 2,
+            "chapter": "1) 만성질환의 자연사 특성에 따른 예방전략",
+            "page": 157
+        },
+        {
+            "level": 2,
+            "chapter": "2) 만성질환의 다요인 특성에 따른 관리 전략",
+            "page": 158
+        },
+        {
+            "level": 2,
+            "chapter": "3) 고령 취약집단에 대한 만성질환 관리 전략",
+            "page": 158
+        },
+        {
+            "level": 1,
+            "chapter": "1.4 만성질환 감시체계",
+            "page": 159
+        },
+        {
+            "level": 2,
+            "chapter": "1) 만성질환 감시의 개념과 원칙",
+            "page": 159
+        },
+        {
+            "level": 2,
+            "chapter": "2) 만성질환 감시 현황",
+            "page": 161
+        },
+        {
+            "level": 1,
+            "chapter": "2. 암",
+            "page": 163
+        },
+        {
+            "level": 2,
+            "chapter": "2.1 암의 역학적 특성",
+            "page": 163
+        },
+        {
+            "level": 3,
+            "chapter": "1) 기술역학적 특성",
+            "page": 163
+        },
+        {
+            "level": 3,
+            "chapter": "2) 위험요인",
+            "page": 164
+        },
+        {
+            "level": 2,
+            "chapter": "2.2 암 관리와 예방",
+            "page": 165
+        },
+        {
+            "level": 3,
+            "chapter": "1) 암 관리 전략과 원칙",
+            "page": 165
+        },
+        {
+            "level": 3,
+            "chapter": "2) 암 관리 사업",
+            "page": 165
+        },
+        {
+            "level": 3,
+            "chapter": "3) 암 관리 영역",
+            "page": 166
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 암 예방",
+            "page": 166
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 암 검진",
+            "page": 167
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 암 진단과 치료",
+            "page": 167
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 암 생존자 지지와 지원",
+            "page": 167
+        },
+        {
+            "level": 2,
+            "chapter": "2.3 암 공개자료원",
+            "page": 168
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 완화의료",
+            "page": 168
+        },
+        {
+            "level": 2,
+            "chapter": "2.4 암 생존자 관리",
+            "page": 169
+        },
+        {
+            "level": 3,
+            "chapter": "1) 암 생존자 개념",
+            "page": 169
+        },
+        {
+            "level": 3,
+            "chapter": "2) 암 생존기 개념과 중요성",
+            "page": 170
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 급성 생존기(acute survivorship)",
+            "page": 170
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 이행 생존기(transition survivorship)",
+            "page": 170
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 연장 생존기(extended survivorship)",
+            "page": 170
+        },
+        {
+            "level": 3,
+            "chapter": "3) 암 생존기 관리 전략과 방안",
+            "page": 171
+        },
+        {
+            "level": 2,
+            "chapter": "2.5 한국인 호발 암의 역학",
+            "page": 173
+        },
+        {
+            "level": 3,
+            "chapter": "1) 폐암",
+            "page": 173
+        },
+        {
+            "level": 3,
+            "chapter": "2) 위암",
+            "page": 173
+        },
+        {
+            "level": 3,
+            "chapter": "3) 간암",
+            "page": 175
+        },
+        {
+            "level": 3,
+            "chapter": "4) 대장암",
+            "page": 176
+        },
+        {
+            "level": 3,
+            "chapter": "5) 갑상선암",
+            "page": 177
+        },
+        {
+            "level": 3,
+            "chapter": "6) 유방암",
+            "page": 178
+        },
+        {
+            "level": 3,
+            "chapter": "7) 자궁경부암",
+            "page": 180
+        },
+        {
+            "level": 3,
+            "chapter": "8) 전립선암",
+            "page": 180
+        },
+        {
+            "level": 2,
+            "chapter": "2.6 한국인 비호발 암의 역학",
+            "page": 181
+        },
+        {
+            "level": 3,
+            "chapter": "1) 혈액암",
+            "page": 181
+        },
+        {
+            "level": 2,
+            "chapter": "2) 췌장암",
+            "page": 182
+        },
+        {
+            "level": 2,
+            "chapter": "3) 담낭암과 담도암",
+            "page": 182
+        },
+        {
+            "level": 2,
+            "chapter": "4) 구강암",
+            "page": 183
+        },
+        {
+            "level": 2,
+            "chapter": "5) 두경부암",
+            "page": 183
+        },
+        {
+            "level": 2,
+            "chapter": "6) 방광암",
+            "page": 184
+        },
+        {
+            "level": 2,
+            "chapter": "7) 신장암",
+            "page": 184
+        },
+        {
+            "level": 1,
+            "chapter": "3. 심뇌혈관질환",
+            "page": 186
+        },
+        {
+            "level": 2,
+            "chapter": "3.1 심뇌혈관질환의 역학적 특성",
+            "page": 187
+        },
+        {
+            "level": 3,
+            "chapter": "1) 고혈압",
+            "page": 188
+        },
+        {
+            "level": 3,
+            "chapter": "2) 흡연",
+            "page": 188
+        },
+        {
+            "level": 3,
+            "chapter": "3) 고콜레스테롤혈증과 지방섭취",
+            "page": 188
+        },
+        {
+            "level": 2,
+            "chapter": "3.2 심뇌혈관질환 예방과 관리",
+            "page": 189
+        },
+        {
+            "level": 3,
+            "chapter": "4) 당뇨병",
+            "page": 189
+        },
+        {
+            "level": 3,
+            "chapter": "1) 자연사 관점에서의 심뇌혈관질환 예방 원칙과 전략",
+            "page": 189
+        },
+        {
+            "level": 3,
+            "chapter": "2) 인구집단 및 개인별 접근에 따른 심뇌혈관질환 예방",
+            "page": 191
+        },
+        {
+            "level": 3,
+            "chapter": "3) 심뇌혈관질환 관리 전략과 방안",
+            "page": 191
+        },
+        {
+            "level": 2,
+            "chapter": "3.3 공개자료원",
+            "page": 193
+        },
+        {
+            "level": 2,
+            "chapter": "3.4 고혈압",
+            "page": 194
+        },
+        {
+            "level": 2,
+            "chapter": "1) 역학적 특성",
+            "page": 195
+        },
+        {
+            "level": 1,
+            "chapter": "3.5 허혈성심장질환",
+            "page": 196
+        },
+        {
+            "level": 2,
+            "chapter": "2) 예방과 관리",
+            "page": 196
+        },
+        {
+            "level": 2,
+            "chapter": "1) 역학적 특성",
+            "page": 197
+        },
+        {
+            "level": 2,
+            "chapter": "2) 예방과 관리",
+            "page": 199
+        },
+        {
+            "level": 1,
+            "chapter": "3.6 심부전",
+            "page": 200
+        },
+        {
+            "level": 2,
+            "chapter": "1) 역학적 특성",
+            "page": 200
+        },
+        {
+            "level": 2,
+            "chapter": "2) 예방과 관리",
+            "page": 200
+        },
+        {
+            "level": 1,
+            "chapter": "3.7 뇌졸중",
+            "page": 201
+        },
+        {
+            "level": 2,
+            "chapter": "1) 역학적 특성",
+            "page": 201
+        },
+        {
+            "level": 2,
+            "chapter": "2) 예방과 관리",
+            "page": 202
+        },
+        {
+            "level": 1,
+            "chapter": "4. 내분비, 영양 및 대사질환",
+            "page": 203
+        },
+        {
+            "level": 2,
+            "chapter": "4.1 내분비, 영양 및 대사질환의 특징",
+            "page": 203
+        },
+        {
+            "level": 2,
+            "chapter": "4.2 공개자료원",
+            "page": 204
+        },
+        {
+            "level": 2,
+            "chapter": "4.3 대사증후군",
+            "page": 204
+        },
+        {
+            "level": 3,
+            "chapter": "1) 역학적 특성",
+            "page": 205
+        },
+        {
+            "level": 3,
+            "chapter": "2) 예방과 관리",
+            "page": 206
+        },
+        {
+            "level": 1,
+            "chapter": "제11장 만성질환의 역학",
+            "page": 209
+        },
+        {
+            "level": 2,
+            "chapter": "4.4 당뇨병",
+            "page": 209
+        },
+        {
+            "level": 3,
+            "chapter": "1) 역학적 특성",
+            "page": 209
+        },
+        {
+            "level": 2,
+            "chapter": "2) 예방과 관리",
+            "page": 212
+        },
+        {
+            "level": 1,
+            "chapter": "4.5 갑상선기능항진증과 기능저하증",
+            "page": 213
+        },
+        {
+            "level": 1,
+            "chapter": "5. 소화기질환",
+            "page": 215
+        },
+        {
+            "level": 2,
+            "chapter": "5.1 염증성 장질환",
+            "page": 215
+        },
+        {
+            "level": 2,
+            "chapter": "5.2 기능성 소화기질환과 과민성대장증후군",
+            "page": 215
+        },
+        {
+            "level": 2,
+            "chapter": "5.3 위염과 소화성궤양",
+            "page": 216
+        },
+        {
+            "level": 2,
+            "chapter": "5.4 식도염과 위⋅식도역류질환",
+            "page": 216
+        },
+        {
+            "level": 2,
+            "chapter": "5.5 지방간과 알코올성/비알콜성 간질환",
+            "page": 216
+        },
+        {
+            "level": 2,
+            "chapter": "5.6 만성 간질환과 간경변",
+            "page": 217
+        },
+        {
+            "level": 2,
+            "chapter": "5.7 담낭 및 담도질환",
+            "page": 217
+        },
+        {
+            "level": 2,
+            "chapter": "5.8 췌장염",
+            "page": 218
+        },
+        {
+            "level": 1,
+            "chapter": "6. 호흡기질환",
+            "page": 220
+        },
+        {
+            "level": 2,
+            "chapter": "6.1 만성폐쇄성폐질환",
+            "page": 220
+        },
+        {
+            "level": 2,
+            "chapter": "6.2 천식",
+            "page": 221
+        },
+        {
+            "level": 2,
+            "chapter": "6.3 기관지확장증",
+            "page": 222
+        },
+        {
+            "level": 2,
+            "chapter": "6.4 폐렴",
+            "page": 223
+        },
+        {
+            "level": 2,
+            "chapter": "6.5 기관지염, 기관지세염",
+            "page": 224
+        },
+        {
+            "level": 2,
+            "chapter": "6.6 상기도 감염, 부비동염과 만성비염",
+            "page": 224
+        },
+        {
+            "level": 2,
+            "chapter": "6.7 기흉",
+            "page": 225
+        },
+        {
+            "level": 1,
+            "chapter": "7. 근골격계질환",
+            "page": 226
+        },
+        {
+            "level": 2,
+            "chapter": "7.1 골관절염과 류마티스관절염",
+            "page": 227
+        },
+        {
+            "level": 2,
+            "chapter": "7.2 골다공증",
+            "page": 227
+        },
+        {
+            "level": 2,
+            "chapter": "7.3 통풍",
+            "page": 228
+        },
+        {
+            "level": 2,
+            "chapter": "7.4 근막통증 증후군",
+            "page": 228
+        },
+        {
+            "level": 1,
+            "chapter": "8. 신장 및 비뇨기계질환",
+            "page": 230
+        },
+        {
+            "level": 2,
+            "chapter": "8.1 급성신손상",
+            "page": 230
+        },
+        {
+            "level": 2,
+            "chapter": "8.2 만성신장질환",
+            "page": 231
+        },
+        {
+            "level": 2,
+            "chapter": "8.3 전립선비대증",
+            "page": 232
+        },
+        {
+            "level": 2,
+            "chapter": "8.4 신장, 요관 및 요로결석",
+            "page": 233
+        },
+        {
+            "level": 2,
+            "chapter": "8.5 방광염 및 요도염",
+            "page": 233
+        },
+        {
+            "level": 2,
+            "chapter": "8.6 요실금",
+            "page": 234
+        },
+        {
+            "level": 2,
+            "chapter": "8.7 재발성 및 지속성 혈뇨와 고립성 단백뇨",
+            "page": 235
+        },
+        {
+            "level": 1,
+            "chapter": "9. 신경질환",
+            "page": 237
+        },
+        {
+            "level": 2,
+            "chapter": "9.1 알츠하이머병 및 치매",
+            "page": 237
+        },
+        {
+            "level": 1,
+            "chapter": "9.2 파킨슨병",
+            "page": 238
+        },
+        {
+            "level": 1,
+            "chapter": "9.3 뇌전증",
+            "page": 238
+        },
+        {
+            "level": 1,
+            "chapter": "9.4 다발경화증",
+            "page": 239
+        },
+        {
+            "level": 1,
+            "chapter": "9.5 단발성 및 다발성신경병증",
+            "page": 240
+        },
+        {
+            "level": 1,
+            "chapter": "9.6 안면신경마비 및 삼차신경통",
+            "page": 242
+        },
+        {
+            "level": 1,
+            "chapter": "9.7 만성두통",
+            "page": 242
+        },
+        {
+            "level": 1,
+            "chapter": "9.8 수면장애",
+            "page": 244
+        },
+        {
+            "level": 1,
+            "chapter": "10. 손상과 사고",
+            "page": 245
+        },
+        {
+            "level": 2,
+            "chapter": "10.1 손상과 사고 역학",
+            "page": 247
+        },
+        {
+            "level": 2,
+            "chapter": "10.2 자살",
+            "page": 249
+        },
+        {
+            "level": 1,
+            "chapter": "11. 구강질환",
+            "page": 253
+        },
+        {
+            "level": 2,
+            "chapter": "11.1 치아우식증(Dental caries)",
+            "page": 253
+        },
+        {
+            "level": 2,
+            "chapter": "11.2 치주염, 치염 등 치주질환",
+            "page": 254
+        },
+        {
+            "level": 2,
+            "chapter": "11.3 부정교합",
+            "page": 255
+        },
+        {
+            "level": 2,
+            "chapter": "11.4 공중구강보건사업",
+            "page": 256
+        },
+        {
+            "level": 3,
+            "chapter": "1) 지역사회 구강보건사업",
+            "page": 256
+        },
+        {
+            "level": 3,
+            "chapter": "2) 학교 구강보건사업",
+            "page": 257
+        },
+        {
+            "level": 3,
+            "chapter": "3) 사업장 구강보건사업",
+            "page": 257
+        },
+        {
+            "level": 1,
+            "chapter": "12. 노인질환",
+            "page": 258
+        },
+        {
+            "level": 2,
+            "chapter": "12.1 노인성 만성기침",
+            "page": 260
+        },
+        {
+            "level": 2,
+            "chapter": "12.2 노인성 백내장, 노인성 시력/시야 장애 및 청각장애",
+            "page": 261
+        },
+        {
+            "level": 2,
+            "chapter": "12.3 복합이환",
+            "page": 261
+        },
+        {
+            "level": 1,
+            "chapter": "13. 소아 질환",
+            "page": 264
+        },
+        {
+            "level": 1,
+            "chapter": "제11장 만성질환의 역학",
+            "page": 265
+        },
+        {
+            "level": 2,
+            "chapter": "13.1 소아 호발 암",
+            "page": 265
+        },
+        {
+            "level": 1,
+            "chapter": "13.2 소아 알레르기와 아토피피부염",
+            "page": 266
+        },
+        {
+            "level": 1,
+            "chapter": "13.3 주의력결핍 과잉행동장애",
+            "page": 267
+        },
+        {
+            "level": 1,
+            "chapter": "13.4 소아비만과 당뇨병",
+            "page": 268
+        },
+        {
+            "level": 1,
+            "chapter": "13.5 소아 신장질환",
+            "page": 269
+        },
+        {
+            "level": 1,
+            "chapter": "13.6 소아 성조숙증",
+            "page": 269
+        },
+        {
+            "level": 1,
+            "chapter": "13.7 성장 장애",
+            "page": 270
+        }
+    ],
+    "_meta": {
+        "source_pdf": "2편9-11장(2021).pdf",
+        "provider": "gemma",
+        "model": "google/gemma-4-31B-it",
+        "generated_timestamp": "20260706_125530",
+        "generated_at": "2026-07-06 12:55:30",
+        "generation_started_at": "2026-07-06 12:51:54",
+        "generation_completed_at": "2026-07-06 12:55:30",
+        "elapsed_seconds": 215.511,
+        "elapsed": "3m 35.5s",
+        "input_mode": "extracted_pdf_layout_text",
+        "extracted_pages": 271,
+        "extracted_chars": 907916,
+        "gemma_extraction_mode": "layout",
+        "layout_line_count": 10742,
+        "layout_font_count": 3,
+        "plain_extracted_chars": 451573,
+        "chunked": true,
+        "chunk_count": 10,
+        "initial_chunk_count": 10,
+        "processed_chunk_count": 28,
+        "gemma_text_single_max_chars": 100000,
+        "gemma_text_chunk_chars": 100000,
+        "gemma_runtime": "vllm",
+        "gemma_model": "google/gemma-4-31B-it",
+        "gemma_torch_dtype": "auto",
+        "gemma_vllm_tensor_parallel_size": 4,
+        "gemma_vllm_gpu_memory_utilization": 0.85,
+        "gemma_vllm_max_model_len": 65536,
+        "gemma_vllm_trust_remote_code": false,
+        "gemma_merge_mode": "local",
+        "run_timestamp": "20260706_124450",
+        "run_log_file": "data/output/logs/batch_gemma_20260706_124450_log.txt"
+    }
+}
