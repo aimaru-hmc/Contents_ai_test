@@ -3358,23 +3358,26 @@ def format_elapsed(seconds: float) -> str:
 
 
 class TeeStream:
-    def __init__(self, console_stream: Any, log_stream: Any, lock: Lock) -> None:
+    def __init__(self, console_stream: Any, log_stream: Any, lock: Lock, echo_console: bool = True) -> None:
         self.console_stream = console_stream
         self.log_stream = log_stream
         self.lock = lock
+        self.echo_console = bool(echo_console)
         self.encoding = getattr(console_stream, "encoding", "utf-8")
 
     def write(self, text: str) -> int:
         with self.lock:
-            self.console_stream.write(text)
-            self.console_stream.flush()
+            if self.echo_console:
+                self.console_stream.write(text)
+                self.console_stream.flush()
             self.log_stream.write(text)
             self.log_stream.flush()
         return len(text)
 
     def flush(self) -> None:
         with self.lock:
-            self.console_stream.flush()
+            if self.echo_console:
+                self.console_stream.flush()
             self.log_stream.flush()
 
     def isatty(self) -> bool:
@@ -3382,6 +3385,11 @@ class TeeStream:
         return bool(isatty()) if callable(isatty) else False
 
     def fileno(self) -> int:
+        if not self.echo_console:
+            log_fileno = getattr(self.log_stream, "fileno", None)
+            if callable(log_fileno):
+                return int(log_fileno())
+
         fileno = getattr(self.console_stream, "fileno", None)
         if callable(fileno):
             return int(fileno())
@@ -3551,6 +3559,23 @@ def iter_pdfs(path: Path) -> list[Path]:
     raise FileNotFoundError(f"Path not found: {path}")
 
 
+def print_quiet_console(args: argparse.Namespace, text: str, error: bool = False) -> None:
+    if not getattr(args, "quiet_console", False):
+        return
+
+    stream = getattr(args, "_ai_console_stderr", None) if error else getattr(args, "_ai_console_stdout", None)
+    if stream is None:
+        stream = sys.stderr if error else sys.stdout
+
+    lock = getattr(args, "_ai_console_lock", None)
+    if lock is None:
+        print(text, file=stream, flush=True)
+        return
+
+    with lock:
+        print(text, file=stream, flush=True)
+
+
 def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> bool:
     generation_started_at = timestamp_for_metadata()
     processing_pdf_path, display_name = prepare_pdf_for_processing(pdf_path)
@@ -3599,6 +3624,14 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> b
         print(f"  elapsed: {format_elapsed(elapsed_seconds)} ({elapsed_seconds:.3f}s)", flush=True)
         print(f"  title: {toc.get('title')}", flush=True)
         print(f"  chapters: {len(toc.get('chapters', []))}", flush=True)
+        print_quiet_console(
+            args,
+            (
+                f"Completed: {output_file} / "
+                f"elapsed {format_elapsed(elapsed_seconds)} / "
+                f"chapters {len(toc.get('chapters', []))}"
+            ),
+        )
         return True
 
     except Exception as error:
@@ -3615,6 +3648,12 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> b
         )
         if error_log is not None:
             print(f"  Error log saved: {error_log}", file=sys.stderr, flush=True)
+        error_log_text = f" / error log {error_log}" if error_log is not None else ""
+        print_quiet_console(
+            args,
+            f"Failed: {display_name} / elapsed {format_elapsed(elapsed_seconds)} / {error}{error_log_text}",
+            error=True,
+        )
         if args.stop_on_error:
             raise
         return False
@@ -3822,6 +3861,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
         default=None,
         help="Path to save a tee copy of console output. Defaults to output_dir/logs/name_provider_YYYYMMDD_HHMMSS_log.txt.",
     )
+    parser.add_argument(
+        "--quiet-console",
+        action="store_true",
+        help="Save detailed run logs to the log file, but print only final per-PDF results and the final summary to the terminal.",
+    )
     parser.add_argument("--no-run-log", action="store_true", help="Disable writing the console output run log")
     parser.add_argument(
         "--no-error-log",
@@ -3840,6 +3884,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
 def main() -> int:
     parser = build_arg_parser()
     args = parser.parse_args()
+
+    if args.quiet_console and args.no_run_log:
+        parser.error("--quiet-console requires run logging; remove --no-run-log.")
 
     try:
         providers = resolve_providers(args.provider)
@@ -3872,6 +3919,10 @@ def main() -> int:
     original_stderr = sys.stderr
     log_file_handle = None
     log_path: Path | None = None
+    console_lock = Lock()
+    setattr(args, "_ai_console_stdout", original_stdout)
+    setattr(args, "_ai_console_stderr", original_stderr)
+    setattr(args, "_ai_console_lock", console_lock)
     if not args.no_run_log:
         configured_log_file = clean_text(args.log_file)
         log_path = (
@@ -3881,9 +3932,18 @@ def main() -> int:
         )
         log_path.parent.mkdir(parents=True, exist_ok=True)
         log_file_handle = log_path.open("a", encoding="utf-8", buffering=1)
-        log_lock = Lock()
-        sys.stdout = TeeStream(original_stdout, log_file_handle, log_lock)
-        sys.stderr = TeeStream(original_stderr, log_file_handle, log_lock)
+        sys.stdout = TeeStream(
+            original_stdout,
+            log_file_handle,
+            console_lock,
+            echo_console=not args.quiet_console,
+        )
+        sys.stderr = TeeStream(
+            original_stderr,
+            log_file_handle,
+            console_lock,
+            echo_console=not args.quiet_console,
+        )
         setattr(args, "_ai_run_log_file", str(log_path))
         print(f"Run log saved: {log_path}", flush=True)
 
@@ -3897,6 +3957,7 @@ def main() -> int:
                 preflight_gemma_provider(args)
             except Exception as error:
                 print(f"Gemma preflight failed: {error}", file=sys.stderr, flush=True)
+                print_quiet_console(args, f"Failed before processing: Gemma preflight failed / {error}", error=True)
                 return 1
 
         success_count = 0
@@ -3912,6 +3973,7 @@ def main() -> int:
 
         failed_count = total_count - success_count
         print(f"Processing result: success {success_count} / failed {failed_count}", flush=True)
+        print_quiet_console(args, f"Processing result: success {success_count} / failed {failed_count}")
 
         return 0 if failed_count == 0 else 1
     finally:
