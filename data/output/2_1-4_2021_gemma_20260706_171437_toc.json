@@ -1,0 +1,1092 @@
+{
+    "title": "역학과 그 응용",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "제1장 역학의 기본원리",
+            "page": 3,
+            "level_reason": "Chapter title with largest font size and '제1장' numbering."
+        },
+        {
+            "level": 2,
+            "chapter": "1. 역학의 정의와 발전과정",
+            "page": 3,
+            "level_reason": "Section title with '1.' numbering and larger font than body text."
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 역학의 정의와 특징",
+            "page": 3,
+            "level_reason": "Subsection title with '1.1' numbering."
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 역학과 임상의학간의 관계",
+            "page": 4,
+            "level_reason": "Subsection title with '1.2' numbering."
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 역학 발전의 역사적 배경",
+            "page": 5,
+            "level_reason": "Subsection title with '1.3' numbering."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 고대-중세: 역학 개념 성립 이전",
+            "page": 5,
+            "level_reason": "Lower level numbering '1)' under subsection 1.3."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 근대-현대: 역학방법론의 논리적 배경",
+            "page": 6,
+            "level_reason": "Lower level numbering '2)' under subsection 1.3."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 역학의 기반 개념과 감염병 역학 방법론 정립",
+            "page": 6,
+            "level_reason": "Lower level numbering '3)' under subsection 1.3."
+        },
+        {
+            "level": 4,
+            "chapter": "4) 역학의 방법론에 대한 학문적 기반 확립",
+            "page": 7,
+            "level_reason": "Lower level numbering '4)' under subsection 1.3."
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 역학의 활용과 영역",
+            "page": 8,
+            "level_reason": "Subsection title with '1.4' numbering."
+        },
+        {
+            "level": 2,
+            "chapter": "2. 질병발생 모형과 원인적 연관성",
+            "page": 11,
+            "level_reason": "Section title with '2.' numbering."
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 질병발생의 다요인설",
+            "page": 11,
+            "level_reason": "Subsection title with '2.1' numbering."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 병인",
+            "page": 11,
+            "level_reason": "Lower level numbering '1)' under subsection 2.1."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 숙주요인 또는 인체 내부요인",
+            "page": 11,
+            "level_reason": "Lower level numbering '2)' under subsection 2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 유전적 요인",
+            "page": 11,
+            "level_reason": "Further nested numbering '(1)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 과거 노출에 의한 숙주요인의 변화",
+            "page": 12,
+            "level_reason": "Further nested numbering '(2)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 기타",
+            "page": 12,
+            "level_reason": "Further nested numbering '(3)' under level 4."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 환경요인",
+            "page": 12,
+            "level_reason": "Lower level numbering '3)' under subsection 2.1."
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 생태학적 모형과 질병관리",
+            "page": 12,
+            "level_reason": "Subsection title with '2.2' numbering."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 역학적 삼각형",
+            "page": 12,
+            "level_reason": "Lower level numbering '1)' under subsection 2.2."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 거미줄 모형",
+            "page": 13,
+            "level_reason": "Lower level numbering '2)' under subsection 2.2."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 수레바퀴 모형",
+            "page": 13,
+            "level_reason": "Lower level numbering '3)' under subsection 2.2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 원인적 연관성",
+            "page": 13,
+            "level_reason": "Subsection title with '2.3' numbering."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 과학적 추론의 철학적 배경",
+            "page": 13,
+            "level_reason": "Lower level numbering '1)' under subsection 2.3."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 인과관계에 관한 로스만의 원인모형",
+            "page": 14,
+            "level_reason": "Lower level numbering '2)' under subsection 2.3."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 충분원인과 필요원인",
+            "page": 14,
+            "level_reason": "Further nested numbering '(1)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 원인의 강도",
+            "page": 15,
+            "level_reason": "Further nested numbering '(2)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 기여분율의 합",
+            "page": 15,
+            "level_reason": "Further nested numbering '(3)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 원인간의 상호작용",
+            "page": 15,
+            "level_reason": "Further nested numbering '(4)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 유도기간",
+            "page": 15,
+            "level_reason": "Further nested numbering '(5)' under level 4."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 역학에서의 인과관계",
+            "page": 16,
+            "level_reason": "Lower level numbering '3)' under subsection 2.3."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 요인에 대한 노출과 질병발생과의 시간적 선후관계",
+            "page": 16,
+            "level_reason": "Further nested numbering '(1)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 연관성의 강도",
+            "page": 17,
+            "level_reason": "Further nested numbering '(2)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 연관성의 일관성",
+            "page": 17,
+            "level_reason": "Further nested numbering '(3)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 연관성의 특이성",
+            "page": 17,
+            "level_reason": "Further nested numbering '(4)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 양-반응관계",
+            "page": 17,
+            "level_reason": "Further nested numbering '(5)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(6) 생물학적 설명 가능성",
+            "page": 17,
+            "level_reason": "Further nested numbering '(6)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(7) 기존 지식과 일치",
+            "page": 17,
+            "level_reason": "Further nested numbering '(7)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(8) 실험적 입증",
+            "page": 17,
+            "level_reason": "Further nested numbering '(8)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(9) 기존의 다른 인과관계와의 유사성",
+            "page": 18,
+            "level_reason": "Further nested numbering '(9)' under level 4."
+        },
+        {
+            "level": 1,
+            "chapter": "제2장 역학연구의 자료",
+            "page": 20,
+            "level_reason": "Chapter title with largest font size and '제2장' numbering."
+        },
+        {
+            "level": 2,
+            "chapter": "1. 일차 자료의 수집 방법과 활용",
+            "page": 20,
+            "level_reason": "Section title with '1.' numbering."
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 일차 자료의 정의와 특성",
+            "page": 20,
+            "level_reason": "Subsection title with '1.1' numbering."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 일차 자료의 정의",
+            "page": 20,
+            "level_reason": "Lower level numbering '1)' under subsection 1.1."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 일차 자료를 수집하는 방법",
+            "page": 20,
+            "level_reason": "Lower level numbering '2)' under subsection 1.1."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 의사소통 또는 관찰에 따른 분류",
+            "page": 21,
+            "level_reason": "Further nested numbering '(1)' under level 4."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 설문지 기록자에 따른 분류",
+            "page": 21,
+            "level_reason": "Further nested numbering '(2)' under level 4."
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 표본조사의 정의와 특성, 장단점",
+            "page": 21,
+            "level_reason": "Subsection title with '1.2' numbering."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 표본조사의 정의와 특성",
+            "page": 21,
+            "level_reason": "Lower level numbering '1)' under subsection 1.2."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 표본조사의 장단점",
+            "page": 21,
+            "level_reason": "Lower level numbering '2)' under subsection 1.2."
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 표본추출법",
+            "page": 22,
+            "level_reason": "Numbered as 1.3, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 확률표본추출",
+            "page": 22,
+            "level_reason": "Numbered as 1), subsection under 1.3."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 단순무작위표본추출(simple random sampling)",
+            "page": 22,
+            "level_reason": "Numbered as (1), subsection under 1) 확률표본추출."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 층화무작위표본추출(stratified random sampling)",
+            "page": 22,
+            "level_reason": "Numbered as (2), subsection under 1) 확률표본추출."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 계통 표본추출(systematic sampling)",
+            "page": 23,
+            "level_reason": "Numbered as (3), subsection under 1) 확률표본추출."
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 집락표본추출(cluster sampling)",
+            "page": 24,
+            "level_reason": "Numbered as (4), subsection under 1) 확률표본추출."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 비확률표본추출",
+            "page": 24,
+            "level_reason": "Numbered as 2), subsection under 1.3."
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 표본조사의 종류와 방법",
+            "page": 25,
+            "level_reason": "Numbered as 1.4, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 응답자가 직접 기록하는 형태",
+            "page": 25,
+            "level_reason": "Numbered as 1), subsection under 1.4."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 자기기입식 설문조사(self-administered questionnaire survey)",
+            "page": 25,
+            "level_reason": "Numbered as (1), subsection under 1) 응답자가 직접 기록하는 형태."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 우편 조사(mail survey)",
+            "page": 25,
+            "level_reason": "Numbered as (2), subsection under 1) 응답자가 직접 기록하는 형태."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 인터넷 조사(internet survey, on-line survey)",
+            "page": 25,
+            "level_reason": "Numbered as (3), subsection under 1) 응답자가 직접 기록하는 형태."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 설문 조사자가 대신 기록하는 형태",
+            "page": 25,
+            "level_reason": "Numbered as 2), subsection under 1.4."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 면접조사(interview survey)",
+            "page": 25,
+            "level_reason": "Numbered as (1), subsection under 2) 설문 조사자가 대신 기록하는 형태."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 전화조사(telephone survey)",
+            "page": 27,
+            "level_reason": "Numbered as (2), subsection under 2) 설문 조사자가 대신 기록하는 형태."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 조사 장소에 따른 형태",
+            "page": 27,
+            "level_reason": "Numbered as 3), subsection under 1.4."
+        },
+        {
+            "level": 2,
+            "chapter": "2. 이차 자료의 종류와 활용",
+            "page": 28,
+            "level_reason": "Numbered as 2, top-level section within the chapter."
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 이차 자료의 정의와 특성",
+            "page": 28,
+            "level_reason": "Numbered as 2.1, subsection under 2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 인구자료",
+            "page": 28,
+            "level_reason": "Numbered as 2.2, subsection under 2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 사망자료",
+            "page": 29,
+            "level_reason": "Numbered as 2.3, subsection under 2."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 사망통계 자료원",
+            "page": 29,
+            "level_reason": "Numbered as 1), subsection under 2.3."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 사망자료의 장단점",
+            "page": 29,
+            "level_reason": "Numbered as 2), subsection under 2.3."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 사망자료의 활용",
+            "page": 29,
+            "level_reason": "Numbered as 3), subsection under 2.3."
+        },
+        {
+            "level": 4,
+            "chapter": "4) 사망신고자료가 부정확한 이유",
+            "page": 29,
+            "level_reason": "Numbered as 4), subsection under 2.3."
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 상병자료",
+            "page": 30,
+            "level_reason": "Numbered as 2.4, subsection under 2."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 건강보험자료",
+            "page": 30,
+            "level_reason": "Numbered as 1), subsection under 2.4."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직장자료",
+            "page": 30,
+            "level_reason": "Numbered as 2), subsection under 2.4."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 병원자료",
+            "page": 30,
+            "level_reason": "Numbered as 3), subsection under 2.4."
+        },
+        {
+            "level": 4,
+            "chapter": "4) 신고자료",
+            "page": 31,
+            "level_reason": "Numbered as 4), subsection under 2.4."
+        },
+        {
+            "level": 4,
+            "chapter": "5) 등록자료",
+            "page": 31,
+            "level_reason": "Numbered as 5), subsection under 2.4."
+        },
+        {
+            "level": 4,
+            "chapter": "6) 건강조사자료",
+            "page": 31,
+            "level_reason": "Numbered as 6), subsection under 2.4."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 국민건강영양조사",
+            "page": 31,
+            "level_reason": "Numbered as (1), subsection under 6) 건강조사자료."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 청소년건강행태조사",
+            "page": 32,
+            "level_reason": "Numbered as (2), subsection under 6) 건강조사자료."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 지역사회건강조사",
+            "page": 32,
+            "level_reason": "Numbered as (3), subsection under 6) 건강조사자료."
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 구강건강실태조사",
+            "page": 32,
+            "level_reason": "Numbered as (4), subsection under 6) 건강조사자료."
+        },
+        {
+            "level": 2,
+            "chapter": "3. 공중보건감시",
+            "page": 34,
+            "level_reason": "Numbered as 3, top-level section within the chapter."
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 공중보건감시의 정의와 활용",
+            "page": 34,
+            "level_reason": "Numbered as 3.1, subsection under 3."
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 감시체계와 구조",
+            "page": 35,
+            "level_reason": "Numbered as 3.2, subsection under 3."
+        },
+        {
+            "level": 3,
+            "chapter": "3.3 수동감시체계와 능동감시체계",
+            "page": 36,
+            "level_reason": "Numbered as 3.3, subsection under 3."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 수동감시체계",
+            "page": 36,
+            "level_reason": "Numbered as 1), subsection under 3.3."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 능동감시체계",
+            "page": 36,
+            "level_reason": "Numbered as 2), subsection under 3.3."
+        },
+        {
+            "level": 3,
+            "chapter": "3.4 감시체계에 이용되는 자료원",
+            "page": 36,
+            "level_reason": "Numbered as 3.4, subsection under 3."
+        },
+        {
+            "level": 2,
+            "chapter": "4. 질병과 사망원인의 분류와 사망진단서",
+            "page": 37,
+            "level_reason": "Numbered as 4, top-level section within the chapter."
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 국제질병분류체계",
+            "page": 37,
+            "level_reason": "Numbered as 4.1, subsection under 4."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 국제질병분류",
+            "page": 37,
+            "level_reason": "Numbered as 1), subsection under 4.1."
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 국제기능장애건강분류체계",
+            "page": 37,
+            "level_reason": "Numbered as 4.2, subsection under 4."
+        },
+        {
+            "level": 3,
+            "chapter": "4.3 사망신고제도",
+            "page": 40,
+            "level_reason": "Numbered as 4.3, subsection under 4."
+        },
+        {
+            "level": 3,
+            "chapter": "4.4 사망진단서(시체검안서) 작성법",
+            "page": 40,
+            "level_reason": "Numbered as 4.4, subsection under 4."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 제목",
+            "page": 40,
+            "level_reason": "Numbered as 1), subsection under 4.4."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 사망자 확인",
+            "page": 40,
+            "level_reason": "Numbered as 2), subsection under 4.4."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 발병일시와 사망일시",
+            "page": 40,
+            "level_reason": "Numbered as 3), subsection under 4.4."
+        },
+        {
+            "level": 4,
+            "chapter": "4) 사망장소",
+            "page": 41,
+            "level_reason": "Numbered as 4), consistent with level 4 pattern."
+        },
+        {
+            "level": 4,
+            "chapter": "5) 사망의 원인",
+            "page": 41,
+            "level_reason": "Numbered as 5), consistent with level 4 pattern."
+        },
+        {
+            "level": 4,
+            "chapter": "6) 사망의 종류 판단",
+            "page": 41,
+            "level_reason": "Numbered as 6), consistent with level 4 pattern."
+        },
+        {
+            "level": 4,
+            "chapter": "7) 외인사의 추가사항",
+            "page": 42,
+            "level_reason": "Numbered as 7), consistent with level 4 pattern."
+        },
+        {
+            "level": 4,
+            "chapter": "8) 사망진단서 작성 시 주의사항",
+            "page": 42,
+            "level_reason": "Numbered as 8), consistent with level 4 pattern."
+        },
+        {
+            "level": 1,
+            "chapter": "제 3 장 질병 및 사망, 건강수준의 측정",
+            "page": 45,
+            "level_reason": "Chapter title with largest font size and '제 장' prefix."
+        },
+        {
+            "level": 2,
+            "chapter": "1. 보건지표",
+            "page": 45,
+            "level_reason": "Numbered as 1. with large font size."
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 지표의 개념",
+            "page": 45,
+            "level_reason": "Numbered as 1.1 with medium font size."
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 지표 산출 방법",
+            "page": 45,
+            "level_reason": "Numbered as 1.2 with medium font size."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 비",
+            "page": 46,
+            "level_reason": "Numbered as 1) with font size s=12.0."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 분율",
+            "page": 46,
+            "level_reason": "Numbered as 2) with font size s=12.0."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 율",
+            "page": 46,
+            "level_reason": "Numbered as 3) with font size s=12.0."
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 율의 표준화",
+            "page": 46,
+            "level_reason": "Numbered as 1.3 with medium font size."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 율의 표준화 필요성",
+            "page": 46,
+            "level_reason": "Numbered as 1) with font size s=12.0."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 표준화 방법",
+            "page": 47,
+            "level_reason": "Numbered as 2) with font size s=12.0."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 직접표준화법",
+            "page": 47,
+            "level_reason": "Numbered as (1) with font size s=10.0."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 간접표준화법",
+            "page": 48,
+            "level_reason": "Numbered as (2) with font size s=10.0."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 표준인구",
+            "page": 49,
+            "level_reason": "Numbered as (3) with font size s=10.0."
+        },
+        {
+            "level": 2,
+            "chapter": "2. 이환지표",
+            "page": 50,
+            "level_reason": "Numbered as 2. with large font size."
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 발생률과 유병률",
+            "page": 50,
+            "level_reason": "Numbered as 2.1 with medium font size."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 발생률",
+            "page": 50,
+            "level_reason": "Numbered as 1) with font size s=12.0."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 누적발생률",
+            "page": 51,
+            "level_reason": "Numbered as (1) with font size s=10.0."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 평균발생률(발생밀도)",
+            "page": 51,
+            "level_reason": "Numbered as (2) with font size s=10.0."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 유병률",
+            "page": 51,
+            "level_reason": "Numbered as 2) with font size s=12.0."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 발생률과 유병률의 상호관계와 용도",
+            "page": 52,
+            "level_reason": "Numbered as 3) with font size s=12.0."
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 발병률과 이차발병률",
+            "page": 53,
+            "level_reason": "Numbered as 2.2 with medium font size."
+        },
+        {
+            "level": 2,
+            "chapter": "3. 사망 및 출생지표",
+            "page": 54,
+            "level_reason": "Numbered as 3. with large font size."
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 사망지표",
+            "page": 55,
+            "level_reason": "Numbered as 3.1 with medium font size."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 보통사망률(crude death rate)",
+            "page": 55,
+            "level_reason": "Numbered as 1) with font size s=12.0."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 특수사망률(specific death rate)",
+            "page": 55,
+            "level_reason": "Numbered as 2) with font size s=12.0."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 연령별 (특수)사망률(age-specific death rate)",
+            "page": 55,
+            "level_reason": "Numbered as (1) with font size s=10.0."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 성별 (특수)사망률(sex-specific death rate)",
+            "page": 55,
+            "level_reason": "Numbered as (2) with font size s=10.0."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 사인별 (특수)사망률(cause-specific death rate)",
+            "page": 56,
+            "level_reason": "Numbered as (3) with font size s=10.0."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 비례사망, 비례사망비 및 비례사망지수",
+            "page": 56,
+            "level_reason": "Numbered as 3) with font size s=12.0."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 비례사망(proportional mortality)",
+            "page": 56,
+            "level_reason": "Numbered as (1) with font size s=10.0."
+        }
+    ],
+    "_meta": {
+        "source_pdf": "2편1-4장(2021).pdf",
+        "provider": "gemma",
+        "model": "google/gemma-4-31B-it",
+        "generated_timestamp": "20260706_171437",
+        "generated_at": "2026-07-06 17:14:37",
+        "generation_started_at": "2026-07-06 17:11:00",
+        "generation_completed_at": "2026-07-06 17:14:37",
+        "elapsed_seconds": 217.468,
+        "elapsed": "3m 37.5s",
+        "input_mode": "extracted_pdf_layout_text",
+        "extracted_pages": 98,
+        "extracted_chars": 300119,
+        "gemma_extraction_mode": "layout",
+        "layout_line_count": 3770,
+        "layout_font_count": 3,
+        "plain_extracted_chars": 139661,
+        "parsed_pdf_file": "data/output/parsed_pdfs/2_1-4_2021_gemma_20260706_170634_parsed_pdf.txt",
+        "chunked": true,
+        "chunk_count": 3,
+        "initial_chunk_count": 3,
+        "processed_chunk_count": 7,
+        "gemma_text_single_max_chars": 120000,
+        "gemma_text_chunk_chars": 120000,
+        "gemma_level_reference": true,
+        "gemma_runtime": "vllm",
+        "gemma_model": "google/gemma-4-31B-it",
+        "gemma_torch_dtype": "auto",
+        "gemma_vllm_tensor_parallel_size": 4,
+        "gemma_vllm_gpu_memory_utilization": 0.85,
+        "gemma_vllm_max_model_len": 65536,
+        "gemma_vllm_trust_remote_code": false,
+        "gemma_level_reference_levels": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "gemma_level_reference_examples": {
+            "1": [
+                {
+                    "title": "제1장 역학의 기본원리",
+                    "font_size": 12.0,
+                    "size_ratio": 1.0,
+                    "left_indent": 340.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "제2장 역학연구의 자료",
+                    "font_size": 12.0,
+                    "size_ratio": 1.0,
+                    "left_indent": 340.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "제 3 장 질병 및 사망, 건강수준의 측정",
+                    "font_size": 32.0,
+                    "size_ratio": 3.38,
+                    "left_indent": 115.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "4 제 장 한국인의 건강수준",
+                    "font_size": 32.0,
+                    "size_ratio": 3.38,
+                    "left_indent": 115.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                }
+            ],
+            "2": [
+                {
+                    "title": "1. 역학의 정의와 발전과정",
+                    "font_size": 18.0,
+                    "size_ratio": 1.9,
+                    "left_indent": 77.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "2. 질병발생 모형과 원인적 연관성",
+                    "font_size": 18.0,
+                    "size_ratio": 1.9,
+                    "left_indent": 77.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "1. 일차 자료의 수집 방법과 활용",
+                    "font_size": 18.0,
+                    "size_ratio": 1.9,
+                    "left_indent": 185.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "2. 이차 자료의 종류와 활용",
+                    "font_size": 18.0,
+                    "size_ratio": 1.9,
+                    "left_indent": 185.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "3. 공중보건감시",
+                    "font_size": 18.0,
+                    "size_ratio": 1.9,
+                    "left_indent": 185.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                }
+            ],
+            "3": [
+                {
+                    "title": "1.1 역학의 정의와 특징",
+                    "font_size": 12.5,
+                    "size_ratio": 1.32,
+                    "left_indent": 73.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "1.2 역학과 임상의학간의 관계",
+                    "font_size": 12.5,
+                    "size_ratio": 1.32,
+                    "left_indent": 181.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "1.3 역학 발전의 역사적 배경",
+                    "font_size": 12.5,
+                    "size_ratio": 1.32,
+                    "left_indent": 73.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "1.4 역학의 활용과 영역",
+                    "font_size": 12.5,
+                    "size_ratio": 1.32,
+                    "left_indent": 181.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "2.1 질병발생의 다요인설",
+                    "font_size": 12.5,
+                    "size_ratio": 1.32,
+                    "left_indent": 73.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                }
+            ],
+            "4": [
+                {
+                    "title": "1) 고대-중세: 역학 개념 성립 이전",
+                    "font_size": 12.0,
+                    "size_ratio": 1.27,
+                    "left_indent": 65.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "2) 근대-현대: 역학방법론의 논리적 배경",
+                    "font_size": 12.0,
+                    "size_ratio": 1.27,
+                    "left_indent": 173.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "3) 역학의 기반 개념과 감염병 역학 방법론 정립",
+                    "font_size": 12.0,
+                    "size_ratio": 1.27,
+                    "left_indent": 173.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "4) 역학의 방법론에 대한 학문적 기반 확립",
+                    "font_size": 12.0,
+                    "size_ratio": 1.27,
+                    "left_indent": 65.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "1) 병인",
+                    "font_size": 12.0,
+                    "size_ratio": 1.27,
+                    "left_indent": 65.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                }
+            ],
+            "5": [
+                {
+                    "title": "(1) 유전적 요인",
+                    "font_size": 10.0,
+                    "size_ratio": 1.05,
+                    "left_indent": 75.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "(2) 과거 노출에 의한 숙주요인의 변화",
+                    "font_size": 10.0,
+                    "size_ratio": 1.05,
+                    "left_indent": 183.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "(3) 기타",
+                    "font_size": 10.0,
+                    "size_ratio": 1.05,
+                    "left_indent": 183.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "(1) 충분원인과 필요원인",
+                    "font_size": 10.0,
+                    "size_ratio": 1.05,
+                    "left_indent": 183.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "(2) 원인의 강도",
+                    "font_size": 10.0,
+                    "size_ratio": 1.05,
+                    "left_indent": 75.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                }
+            ]
+        },
+        "gemma_merge_mode": "gemma",
+        "run_timestamp": "20260706_170634",
+        "run_log_file": "data/output/logs/batch_gemma_20260706_170634_log.txt"
+    }
+}
