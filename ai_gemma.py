@@ -3235,6 +3235,31 @@ def format_toc_level_reference_entry(entry: dict[str, Any]) -> str:
     return f'title="{title}"{style_text}' if title else style_text.strip()
 
 
+def chapter_numbering_level_hint(title: Any, max_depth: int) -> int | None:
+    text = clean_text(title)
+    if not text:
+        return None
+
+    if re.match(r"^(?:제\s*\d+\s*(?:장|편|부)(?:\s|$)|chapter\s+\d+(?:\s|:|-|$))", text, flags=re.IGNORECASE):
+        return min(1, max_depth)
+
+    if re.match(r"^\(\d+\)\s+", text):
+        return min(5, max_depth)
+
+    if re.match(r"^\d+\)\s+", text):
+        return min(4, max_depth)
+
+    decimal_match = re.match(r"^(\d+(?:\.\d+)+)(?:\s|[^\d.])", text)
+    if decimal_match:
+        dot_count = decimal_match.group(1).count(".")
+        return min(2 + dot_count, max_depth)
+
+    if re.match(r"^\d+[.．]\s+", text):
+        return min(2, max_depth)
+
+    return None
+
+
 def level_role_text(level: int) -> str:
     if level == 1:
         return "상위 장/대단원"
@@ -3348,6 +3373,188 @@ def style_distance(left: dict[str, Any], right: dict[str, Any]) -> float:
             score += penalty
 
     return score if compared else 9999.0
+
+
+def reference_entry_has_style(entry: dict[str, Any]) -> bool:
+    return any(key in entry for key in ("font_size", "size_ratio", "left_indent"))
+
+
+def level_reference_style_scores(
+    layout: dict[str, Any],
+    level_reference: dict[int, list[dict[str, Any]]],
+) -> dict[int, float]:
+    scores: dict[int, float] = {}
+    if not layout:
+        return scores
+
+    for level, entries in level_reference.items():
+        best_score = 9999.0
+        for entry in entries:
+            if not isinstance(entry, dict) or not reference_entry_has_style(entry):
+                continue
+            score = style_distance(layout, entry)
+            if score < best_score:
+                best_score = score
+        if best_score < 9999.0:
+            scores[level] = best_score
+    return scores
+
+
+def combined_level_style_reference(
+    toc: dict[str, Any],
+    level_reference: dict[int, list[dict[str, Any]]] | None,
+    max_depth: int,
+) -> dict[int, list[dict[str, Any]]]:
+    combined: dict[int, list[dict[str, Any]]] = {}
+    if isinstance(level_reference, dict):
+        for level, entries in level_reference.items():
+            filtered_entries: list[dict[str, Any]] = []
+            for entry in entries:
+                if not isinstance(entry, dict):
+                    continue
+                hint = chapter_numbering_level_hint(entry.get("title"), max_depth=max_depth)
+                if hint is not None and hint != level:
+                    continue
+                filtered_entries.append(dict(entry))
+            combined[level] = filtered_entries
+
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return combined
+
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        try:
+            level = int(chapter.get("level", 1))
+        except Exception:
+            continue
+        if level < 1 or level > max_depth:
+            continue
+
+        hint = chapter_numbering_level_hint(chapter.get("chapter"), max_depth=max_depth)
+        if hint != level:
+            continue
+
+        entry = toc_level_reference_entry(
+            chapter_title=clean_text(chapter.get("chapter")),
+            chunk_text="",
+            chapter=chapter,
+        )
+        if reference_entry_has_style(entry):
+            combined.setdefault(level, []).append(entry)
+
+    return combined
+
+
+def verified_level_for_chapter(
+    chapter: dict[str, Any],
+    style_reference: dict[int, list[dict[str, Any]]],
+    max_depth: int,
+) -> tuple[int | None, str]:
+    try:
+        current_level = int(chapter.get("level", 1))
+    except Exception:
+        return None, ""
+
+    hinted_level = chapter_numbering_level_hint(chapter.get("chapter"), max_depth=max_depth)
+    if hinted_level is None or hinted_level == current_level:
+        return None, ""
+    if hinted_level < 1 or hinted_level > max_depth:
+        return None, ""
+
+    title = clean_text(chapter.get("chapter"))
+    layout = layout_from_toc_metadata(chapter)
+    scores = level_reference_style_scores(layout, style_reference)
+    hinted_score = scores.get(hinted_level)
+    current_score = scores.get(current_level)
+
+    if hinted_score is not None and hinted_score <= 6.0:
+        if current_score is not None and hinted_score + 6.0 <= current_score:
+            return hinted_level, (
+                f"numbering pattern of '{title}' indicates level {hinted_level}; "
+                f"layout style is closer to level {hinted_level} reference "
+                f"(score {hinted_score:.2f}) than level {current_level} "
+                f"(score {current_score:.2f})"
+            )
+
+    if hinted_level == 1 and re.match(r"^(?:제\s*\d+\s*(?:장|편|부)(?:\s|$)|chapter\s+\d+(?:\s|:|-|$))", title, flags=re.IGNORECASE):
+        return hinted_level, f"explicit chapter numbering pattern indicates level {hinted_level}"
+
+    return None, ""
+
+
+def append_level_verification_reason(chapter: dict[str, Any], old_level: int, new_level: int, reason: str) -> None:
+    existing = clean_text(chapter.get("level_reason"))
+    suffix = f"Code level verification changed level {old_level} to {new_level}: {reason}."
+    chapter["level_reason"] = f"{existing} {suffix}".strip() if existing else suffix
+
+
+def verify_toc_levels(
+    toc: dict[str, Any],
+    level_reference: dict[int, list[dict[str, Any]]] | None,
+    max_depth: int,
+) -> list[dict[str, Any]]:
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return []
+
+    style_reference = combined_level_style_reference(toc, level_reference, max_depth=max_depth)
+    corrections: list[dict[str, Any]] = []
+
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        try:
+            old_level = int(chapter.get("level", 1))
+        except Exception:
+            continue
+
+        new_level, reason = verified_level_for_chapter(
+            chapter=chapter,
+            style_reference=style_reference,
+            max_depth=max_depth,
+        )
+        if new_level is None or new_level == old_level:
+            continue
+
+        chapter["level"] = new_level
+        append_level_verification_reason(chapter, old_level=old_level, new_level=new_level, reason=reason)
+        corrections.append({
+            "chapter": clean_text(chapter.get("chapter")),
+            "page": chapter.get("page"),
+            "old_level": old_level,
+            "new_level": new_level,
+            "reason": reason,
+        })
+
+    return corrections
+
+
+def record_level_corrections(
+    args: argparse.Namespace,
+    corrections: list[dict[str, Any]],
+    chunk_label: str | None = None,
+) -> None:
+    if not corrections:
+        return
+
+    existing = getattr(args, "_ai_gemma_level_corrections", None)
+    if not isinstance(existing, list):
+        existing = []
+
+    for correction in corrections:
+        item = dict(correction)
+        if clean_text(chunk_label):
+            item["chunk"] = clean_text(chunk_label)
+        existing.append(item)
+
+    setattr(args, "_ai_gemma_level_corrections", existing)
+    update_processing_metadata(
+        args,
+        gemma_level_correction_count=len(existing),
+        gemma_level_corrections=existing,
+    )
 
 
 def closest_level_reference(
@@ -3600,6 +3807,9 @@ def update_toc_level_reference(
         chapter_title = clean_text(chapter.get("chapter"))
         title = compact_toc_example_title(chapter_title)
         if not title:
+            continue
+        hinted_level = chapter_numbering_level_hint(chapter_title, max_depth=max_depth)
+        if hinted_level is not None and hinted_level != level:
             continue
 
         examples = level_reference.setdefault(level, [])
@@ -4170,6 +4380,17 @@ def process_gemma_text_chunk(
             chunk_text=str(chunk.get("text") or ""),
             level_reference=level_reference if use_level_reference else None,
         )
+        level_corrections = verify_toc_levels(
+            partial_toc,
+            level_reference if use_level_reference else None,
+            max_depth=args.max_depth,
+        )
+        if level_corrections:
+            record_level_corrections(args, level_corrections, chunk_label=chunk_label)
+            print(
+                f"  Gemma chunk {chunk_label} level corrections: {len(level_corrections)}",
+                flush=True,
+            )
         raw_parts.append({
             "chunk": chunk["index"],
             "start_page": chunk["start_page"],
@@ -4298,6 +4519,10 @@ def generate_toc_from_pdf_gemma_text(
             print(f"  Gemma text TOC generation completed: {model}", flush=True)
             toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
             add_level_reasons_to_toc(toc, chunk_text=full_text)
+            level_corrections = verify_toc_levels(toc, level_reference=None, max_depth=args.max_depth)
+            if level_corrections:
+                record_level_corrections(args, level_corrections, chunk_label="single")
+                print(f"  Gemma text level corrections: {len(level_corrections)}", flush=True)
             return toc, raw_text, model
         except Exception as error:
             if not is_cuda_out_of_memory_error(error):
@@ -4429,6 +4654,15 @@ def generate_toc_from_pdf_gemma_text(
                 indent=2,
             )
 
+    final_level_corrections = verify_toc_levels(
+        toc,
+        level_reference if level_reference_enabled else None,
+        max_depth=args.max_depth,
+    )
+    if final_level_corrections:
+        record_level_corrections(args, final_level_corrections, chunk_label="final_merge")
+        print(f"  Gemma final TOC level corrections: {len(final_level_corrections)}", flush=True)
+
     raw_bundle = {
         "mode": "gemma_text_chunk",
         "merge_mode": merge_mode,
@@ -4444,6 +4678,7 @@ def generate_toc_from_pdf_gemma_text(
         "level_reference": {
             str(level): examples for level, examples in sorted(level_reference.items())
         } if level_reference_enabled else {},
+        "level_corrections": getattr(args, "_ai_gemma_level_corrections", []),
         "input_chunk_files": getattr(args, "_ai_input_chunk_files", []),
         "chunk_raw_responses": raw_parts,
         "final_raw_response": final_raw_text,
@@ -4750,6 +4985,7 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> b
     setattr(args, "_ai_current_display_name", display_name)
     setattr(args, "_ai_processing_metadata", {})
     setattr(args, "_ai_input_chunk_files", [])
+    setattr(args, "_ai_gemma_level_corrections", [])
     print(f"Processing started: {display_name}", flush=True)
     print(f"  provider: {args.provider}", flush=True)
     started_at = time.perf_counter()
