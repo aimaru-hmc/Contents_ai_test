@@ -69,6 +69,8 @@ DEFAULT_GEMMA_DEVICE_MAP = os.getenv("GEMMA_DEVICE_MAP", "auto").strip() or "aut
 DEFAULT_GEMMA_TORCH_DTYPE = os.getenv("GEMMA_TORCH_DTYPE", os.getenv("GEMMA_DTYPE", "auto")).strip() or "auto"
 DEFAULT_GEMMA_EXTRACTION_MODE = os.getenv("GEMMA_EXTRACTION_MODE", "layout").strip().lower() or "layout"
 DEFAULT_GEMMA_MERGE_MODE = os.getenv("GEMMA_MERGE_MODE", "local").strip().lower() or "local"
+DEFAULT_GEMMA_MERGE_STRATEGY = os.getenv("GEMMA_MERGE_STRATEGY", "batched").strip().lower() or "batched"
+DEFAULT_GEMMA_MERGE_BATCH_CHARS = int(os.getenv("GEMMA_MERGE_BATCH_CHARS", "60000"))
 DEFAULT_GEMMA_LEVEL_REFERENCE = (
     os.getenv("GEMMA_LEVEL_REFERENCE", "true").strip().lower()
     in {"1", "true", "yes", "on"}
@@ -2081,6 +2083,40 @@ def process_claude_text_chunk(
             )
         return partials
 
+def int_sort_value(value: Any, default: int = 0) -> int:
+    try:
+        return int(value)
+    except Exception:
+        return default
+
+
+def float_sort_value(value: Any) -> float | None:
+    try:
+        return float(value)
+    except Exception:
+        return None
+
+
+def first_float_sort_value(item: dict[str, Any], keys: Iterable[str]) -> float | None:
+    for key in keys:
+        value = float_sort_value(item.get(key))
+        if value is not None:
+            return value
+    return None
+
+
+def local_merge_sort_key(item: dict[str, Any]) -> tuple[int, int, float, float, int, int]:
+    page = int_sort_value(item.get("page"), default=1)
+    level = int_sort_value(item.get("level"), default=1)
+    y = first_float_sort_value(item, ("_layout_y", "layout_y", "vertical_position"))
+    x = first_float_sort_value(item, ("_layout_x", "layout_x", "left_indent"))
+    source_order = int_sort_value(item.get("_source_order", item.get("_local_merge_order")), default=0)
+
+    if y is None:
+        return (page, 1, float(source_order), x if x is not None else 999999.0, source_order, level)
+
+    return (page, 0, y, x if x is not None else 999999.0, source_order, level)
+
 
 def merge_partial_tocs_locally(partial_tocs: list[dict[str, Any]], fallback_title: str, max_depth: int) -> dict[str, Any]:
     title = fallback_title
@@ -2094,9 +2130,11 @@ def merge_partial_tocs_locally(partial_tocs: list[dict[str, Any]], fallback_titl
             title = clean_text(toc.get("title"))
         for chapter in toc.get("chapters", []) or []:
             if isinstance(chapter, dict):
-                chapters.append(chapter)
+                chapter_item = dict(chapter)
+                chapter_item.setdefault("_local_merge_order", len(chapters))
+                chapters.append(chapter_item)
 
-    chapters.sort(key=lambda item: (int(item.get("page", 1) or 1), int(item.get("level", 1) or 1)))
+    chapters.sort(key=local_merge_sort_key)
     return validate_toc({"title": title, "chapters": chapters}, fallback_title=fallback_title, max_depth=max_depth)
 
 
@@ -2301,6 +2339,23 @@ def normalize_gemma_merge_mode(mode: str | None) -> str:
     if mode not in {"local", "gemma"}:
         raise ValueError("--gemma-merge-mode must be either local or gemma.")
     return mode
+
+
+def normalize_gemma_merge_strategy(strategy: str | None) -> str:
+    strategy = clean_text(strategy).lower() or DEFAULT_GEMMA_MERGE_STRATEGY
+    aliases = {
+        "batch": "batched",
+        "batches": "batched",
+        "chunked": "batched",
+        "safe": "batched",
+        "one": "single",
+        "once": "single",
+        "legacy": "single",
+    }
+    strategy = aliases.get(strategy, strategy)
+    if strategy not in {"single", "batched"}:
+        raise ValueError("--gemma-merge-strategy must be either single or batched.")
+    return strategy
 
 
 def normalize_gemma_extraction_mode(mode: str | None) -> str:
@@ -3003,10 +3058,11 @@ def find_layout_for_chapter_title(chunk_text: str, title: str) -> dict[str, Any]
         return {}
 
     fallback_match: dict[str, Any] = {}
-    for line in str(chunk_text or "").splitlines():
+    for line_index, line in enumerate(str(chunk_text or "").splitlines()):
         layout = parse_layout_line(line)
         if not layout:
             continue
+        layout["line_index"] = line_index
 
         line_title = clean_text(layout.get("text"))
         normalized_line = normalize_toc_match_text(line_title)
@@ -3086,6 +3142,20 @@ def layout_reason_style_text(layout: dict[str, Any]) -> str:
     return ", ".join(parts)
 
 
+def copy_layout_sort_metadata(chapter: dict[str, Any], layout: dict[str, Any], fallback_order: int) -> None:
+    chapter["_source_order"] = int_sort_value(layout.get("line_index"), default=fallback_order)
+    if "vertical_position" in layout:
+        chapter["_layout_y"] = layout["vertical_position"]
+    if "left_indent" in layout:
+        chapter["_layout_x"] = layout["left_indent"]
+    if "font_size" in layout:
+        chapter["_layout_font_size"] = layout["font_size"]
+    if "size_ratio" in layout:
+        chapter["_layout_size_ratio"] = layout["size_ratio"]
+    if clean_text(layout.get("text")):
+        chapter["_layout_text"] = clean_text(layout.get("text"))
+
+
 def style_distance(left: dict[str, Any], right: dict[str, Any]) -> float:
     score = 0.0
     compared = False
@@ -3142,8 +3212,9 @@ def build_level_reason(
     chapter_title: str,
     chunk_text: str,
     level_reference: dict[int, list[dict[str, Any]]] | None = None,
+    layout: dict[str, Any] | None = None,
 ) -> str:
-    layout = find_layout_for_chapter_title(chunk_text=chunk_text, title=chapter_title)
+    layout = layout if isinstance(layout, dict) else find_layout_for_chapter_title(chunk_text=chunk_text, title=chapter_title)
     role = level_role_text(level)
     reason_parts = [f"level {level}: {role} 계층으로 분류됨"]
 
@@ -3179,10 +3250,8 @@ def add_level_reasons_to_toc(
     if not isinstance(chapters, list):
         return toc
 
-    for chapter in chapters:
+    for chapter_index, chapter in enumerate(chapters):
         if not isinstance(chapter, dict):
-            continue
-        if clean_text(chapter.get("level_reason")) and not overwrite:
             continue
         try:
             level = int(chapter.get("level", 1))
@@ -3191,11 +3260,16 @@ def add_level_reasons_to_toc(
         title = clean_text(chapter.get("chapter"))
         if not title:
             continue
+        layout = find_layout_for_chapter_title(chunk_text=chunk_text, title=title)
+        copy_layout_sort_metadata(chapter, layout, fallback_order=chapter_index)
+        if clean_text(chapter.get("level_reason")) and not overwrite:
+            continue
         chapter["level_reason"] = build_level_reason(
             level=level,
             chapter_title=title,
             chunk_text=chunk_text,
             level_reference=level_reference,
+            layout=layout,
         )
     return toc
 
@@ -3374,8 +3448,14 @@ def build_gemma_merge_prompt(
     pdf_name: str,
     partial_tocs: list[dict[str, Any]],
     max_depth: int,
+    include_level_reason: bool = True,
 ) -> str:
     partial_json = json.dumps(partial_tocs, ensure_ascii=False, indent=2)
+    level_reason_instruction = (
+        "- Preserve level_reason when it exists. If an entry has no level_reason, add a concise reason based only on the candidate entry and nearby level pattern."
+        if include_level_reason
+        else "- For this merge response, omit level_reason to keep the JSON compact. The program will restore level_reason from chunk results after merge."
+    )
     return f"""
 {base_prompt}
 
@@ -3387,7 +3467,7 @@ Create one final TOC JSON object using only the [Partial TOC Candidates] below i
 - Use only levels from 1 to {max_depth}.
 - Do not invent chapter titles.
 - Preserve original chapter/section titles exactly, including Korean text when the source title is Korean.
-- Preserve level_reason when it exists. If an entry has no level_reason, add a concise reason based only on the candidate entry and nearby level pattern.
+{level_reason_instruction}
 
 [PDF File Name]
 {pdf_name}
@@ -3466,6 +3546,311 @@ def request_gemma_json_text(
     if last_error:
         raise last_error
     raise RuntimeError(f"{label} failed")
+
+
+def toc_chapter_pages(toc: dict[str, Any]) -> list[int]:
+    pages: list[int] = []
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return pages
+
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        try:
+            pages.append(int(chapter.get("page", 0)))
+        except Exception:
+            continue
+    return [page for page in pages if page > 0]
+
+
+def partial_toc_pages(partial_tocs: list[dict[str, Any]]) -> list[int]:
+    pages: list[int] = []
+    for partial in partial_tocs:
+        toc = partial.get("toc") if isinstance(partial, dict) else None
+        if isinstance(toc, dict):
+            pages.extend(toc_chapter_pages(toc))
+    return pages
+
+
+def partial_toc_chapter_count(partial_tocs: list[dict[str, Any]]) -> int:
+    count = 0
+    for partial in partial_tocs:
+        toc = partial.get("toc") if isinstance(partial, dict) else None
+        chapters = toc.get("chapters", []) if isinstance(toc, dict) else []
+        if isinstance(chapters, list):
+            count += sum(1 for chapter in chapters if isinstance(chapter, dict))
+    return count
+
+
+def compact_toc_for_gemma_merge(toc: dict[str, Any]) -> dict[str, Any]:
+    compact: dict[str, Any] = {
+        "title": clean_text(toc.get("title")),
+        "chapters": [],
+    }
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return compact
+
+    compact_chapters: list[dict[str, Any]] = []
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        item = {
+            "level": chapter.get("level"),
+            "chapter": clean_text(chapter.get("chapter")),
+            "page": chapter.get("page"),
+        }
+        if item["chapter"]:
+            compact_chapters.append(item)
+    compact["chapters"] = compact_chapters
+    return compact
+
+
+def compact_partial_toc_for_gemma_merge(partial: dict[str, Any]) -> dict[str, Any]:
+    toc = partial.get("toc") if isinstance(partial, dict) else None
+    return {
+        "chunk": partial.get("chunk") if isinstance(partial, dict) else None,
+        "start_page": partial.get("start_page") if isinstance(partial, dict) else None,
+        "end_page": partial.get("end_page") if isinstance(partial, dict) else None,
+        "toc": compact_toc_for_gemma_merge(toc if isinstance(toc, dict) else {}),
+    }
+
+
+def compact_partial_tocs_for_gemma_merge(partial_tocs: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [compact_partial_toc_for_gemma_merge(partial) for partial in partial_tocs]
+
+
+def split_partial_tocs_for_gemma_merge(
+    partial_tocs: list[dict[str, Any]],
+    max_chars: int,
+) -> list[list[dict[str, Any]]]:
+    max_chars = max(10000, int(max_chars))
+    batches: list[list[dict[str, Any]]] = []
+    current: list[dict[str, Any]] = []
+
+    def batch_chars(batch: list[dict[str, Any]]) -> int:
+        compact_batch = compact_partial_tocs_for_gemma_merge(batch)
+        return len(json.dumps(compact_batch, ensure_ascii=False))
+
+    for partial in partial_tocs:
+        candidate = [*current, partial]
+        if current and batch_chars(candidate) > max_chars:
+            batches.append(current)
+            current = [partial]
+        else:
+            current = candidate
+
+    if current:
+        batches.append(current)
+    return batches
+
+
+def partial_toc_page_bounds(partial_tocs: list[dict[str, Any]]) -> tuple[int | None, int | None]:
+    pages = partial_toc_pages(partial_tocs)
+    if pages:
+        return min(pages), max(pages)
+
+    starts: list[int] = []
+    ends: list[int] = []
+    for partial in partial_tocs:
+        if not isinstance(partial, dict):
+            continue
+        try:
+            starts.append(int(partial.get("start_page")))
+        except Exception:
+            pass
+        try:
+            ends.append(int(partial.get("end_page")))
+        except Exception:
+            pass
+    if starts or ends:
+        values = [*starts, *ends]
+        return min(values), max(values)
+    return None, None
+
+
+def gemma_merge_appears_tail_truncated(toc: dict[str, Any], source_partials: list[dict[str, Any]]) -> bool:
+    source_pages = partial_toc_pages(source_partials)
+    output_pages = toc_chapter_pages(toc)
+    if not source_pages or not output_pages:
+        return False
+
+    source_max = max(source_pages)
+    output_max = max(output_pages)
+    if output_max >= source_max:
+        return False
+
+    missing_tail_pages = [page for page in source_pages if page > output_max + 3]
+    if source_max - output_max >= 10 and len(missing_tail_pages) >= 3:
+        return True
+
+    source_count = partial_toc_chapter_count(source_partials)
+    output_count = len(toc.get("chapters", []) or [])
+    return source_count >= 50 and output_count < max(10, source_count // 5) and source_max - output_max >= 5
+
+
+def merge_gemma_partial_tocs_once(
+    model: str,
+    pdf_path: Path,
+    args: argparse.Namespace,
+    prompt: str,
+    partial_tocs: list[dict[str, Any]],
+    label: str,
+) -> tuple[dict[str, Any], str, dict[str, Any]]:
+    compact_partials = compact_partial_tocs_for_gemma_merge(partial_tocs)
+    merge_prompt = build_gemma_merge_prompt(
+        prompt,
+        pdf_path.name,
+        compact_partials,
+        args.max_depth,
+        include_level_reason=False,
+    )
+    parsed, raw_text = request_gemma_json_text(
+        model=model,
+        prompt_text=merge_prompt,
+        args=args,
+        label=label,
+    )
+    toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
+    restore_level_reasons_from_partials(toc, partial_tocs)
+
+    source_min_page, source_max_page = partial_toc_page_bounds(partial_tocs)
+    output_pages = toc_chapter_pages(toc)
+    output_max_page = max(output_pages) if output_pages else None
+    status = {
+        "label": label,
+        "source_chapters": partial_toc_chapter_count(partial_tocs),
+        "output_chapters": len(toc.get("chapters", []) or []),
+        "source_min_page": source_min_page,
+        "source_max_page": source_max_page,
+        "output_max_page": output_max_page,
+        "used_local_fallback": False,
+    }
+
+    if gemma_merge_appears_tail_truncated(toc, partial_tocs):
+        print(
+            f"  {label} appears tail-truncated; using local merge for this batch",
+            file=sys.stderr,
+            flush=True,
+        )
+        toc = merge_partial_tocs_locally(partial_tocs, fallback_title=pdf_path.stem, max_depth=args.max_depth)
+        restore_level_reasons_from_partials(toc, partial_tocs)
+        output_pages = toc_chapter_pages(toc)
+        status.update({
+            "output_chapters": len(toc.get("chapters", []) or []),
+            "output_max_page": max(output_pages) if output_pages else None,
+            "used_local_fallback": True,
+            "fallback_reason": "gemma_merge_tail_truncated",
+        })
+
+    return toc, raw_text, status
+
+
+def merge_gemma_partial_tocs_batched(
+    model: str,
+    pdf_path: Path,
+    args: argparse.Namespace,
+    prompt: str,
+    partial_tocs: list[dict[str, Any]],
+) -> tuple[dict[str, Any], str, dict[str, Any]]:
+    batch_chars = max(10000, int(getattr(args, "gemma_merge_batch_chars", DEFAULT_GEMMA_MERGE_BATCH_CHARS)))
+    batches = split_partial_tocs_for_gemma_merge(partial_tocs, max_chars=batch_chars)
+    batch_partials: list[dict[str, Any]] = []
+    batch_raw_parts: list[dict[str, Any]] = []
+    print(
+        f"  Gemma chunked TOC batched merge started: {model} / batches={len(batches)} / batch_chars={batch_chars}",
+        flush=True,
+    )
+
+    for index, batch in enumerate(batches, start=1):
+        label = f"Gemma chunked TOC merge batch {index}/{len(batches)}({model})"
+        start_page, end_page = partial_toc_page_bounds(batch)
+        print(
+            f"  Gemma merge batch {index}/{len(batches)} request: pages {start_page}-{end_page}",
+            flush=True,
+        )
+        try:
+            batch_toc, raw_text, status = merge_gemma_partial_tocs_once(
+                model=model,
+                pdf_path=pdf_path,
+                args=args,
+                prompt=prompt,
+                partial_tocs=batch,
+                label=label,
+            )
+        except Exception as error:
+            print(
+                f"  Gemma merge batch {index}/{len(batches)} failed; using local merge for this batch: {error}",
+                file=sys.stderr,
+                flush=True,
+            )
+            batch_toc = merge_partial_tocs_locally(batch, fallback_title=pdf_path.stem, max_depth=args.max_depth)
+            restore_level_reasons_from_partials(batch_toc, batch)
+            raw_text = json.dumps(
+                {
+                    "mode": "local_merge_after_gemma_batch_failure",
+                    "error": message_of(error),
+                    "batch": index,
+                    "title": batch_toc.get("title"),
+                    "chapters": len(batch_toc.get("chapters", []) or []),
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+            status = {
+                "label": label,
+                "source_chapters": partial_toc_chapter_count(batch),
+                "output_chapters": len(batch_toc.get("chapters", []) or []),
+                "source_min_page": start_page,
+                "source_max_page": end_page,
+                "output_max_page": max(toc_chapter_pages(batch_toc)) if toc_chapter_pages(batch_toc) else None,
+                "used_local_fallback": True,
+                "fallback_reason": "gemma_batch_merge_error",
+            }
+
+        batch_raw_parts.append({
+            **status,
+            "raw_response": raw_text,
+        })
+        batch_partials.append({
+            "chunk": f"merge_batch_{index}",
+            "start_page": start_page,
+            "end_page": end_page,
+            "toc": batch_toc,
+        })
+        print(
+            f"  Gemma merge batch {index} completed: {len(batch_toc.get('chapters', []) or [])} chapters",
+            flush=True,
+        )
+
+    if len(batch_partials) == 1:
+        final_toc = batch_partials[0]["toc"]
+    else:
+        final_toc = merge_partial_tocs_locally(batch_partials, fallback_title=pdf_path.stem, max_depth=args.max_depth)
+        restore_level_reasons_from_partials(final_toc, batch_partials)
+        restore_level_reasons_from_partials(final_toc, partial_tocs)
+
+    final_raw_text = json.dumps(
+        {
+            "mode": "gemma_batched_merge_with_local_final_stitch",
+            "batch_chars": batch_chars,
+            "batch_count": len(batches),
+            "final_chapters": len(final_toc.get("chapters", []) or []),
+            "batches": batch_raw_parts,
+        },
+        ensure_ascii=False,
+        indent=2,
+    )
+    metadata = {
+        "gemma_merge_strategy": "batched",
+        "gemma_merge_batch_chars": batch_chars,
+        "gemma_merge_batch_count": len(batches),
+        "gemma_merge_batch_local_fallback_count": sum(
+            1 for item in batch_raw_parts if item.get("used_local_fallback")
+        ),
+    }
+    return final_toc, final_raw_text, metadata
 
 
 def process_gemma_text_chunk(
@@ -3703,17 +4088,41 @@ def generate_toc_from_pdf_gemma_text(
         )
         print("  Gemma chunked TOC local merge completed", flush=True)
     else:
-        merge_prompt = build_gemma_merge_prompt(prompt, pdf_path.name, partial_tocs, args.max_depth)
-        print(f"  Gemma chunked TOC merge started: {model}", flush=True)
+        merge_strategy = normalize_gemma_merge_strategy(
+            getattr(args, "gemma_merge_strategy", DEFAULT_GEMMA_MERGE_STRATEGY)
+        )
+        update_processing_metadata(
+            args,
+            gemma_merge_strategy=merge_strategy,
+            gemma_merge_batch_chars=max(
+                10000,
+                int(getattr(args, "gemma_merge_batch_chars", DEFAULT_GEMMA_MERGE_BATCH_CHARS)),
+            ),
+        )
         try:
-            parsed, final_raw_text = request_gemma_json_text(
-                model=model,
-                prompt_text=merge_prompt,
-                args=args,
-                label=f"Gemma chunked TOC merge({model})",
-            )
-            toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
-            restore_level_reasons_from_partials(toc, partial_tocs)
+            if merge_strategy == "batched":
+                toc, final_raw_text, merge_metadata = merge_gemma_partial_tocs_batched(
+                    model=model,
+                    pdf_path=pdf_path,
+                    args=args,
+                    prompt=prompt,
+                    partial_tocs=partial_tocs,
+                )
+                update_processing_metadata(args, **merge_metadata)
+            else:
+                print(f"  Gemma chunked TOC merge started: {model}", flush=True)
+                toc, final_raw_text, merge_status = merge_gemma_partial_tocs_once(
+                    model=model,
+                    pdf_path=pdf_path,
+                    args=args,
+                    prompt=prompt,
+                    partial_tocs=partial_tocs,
+                    label=f"Gemma chunked TOC merge({model})",
+                )
+                update_processing_metadata(
+                    args,
+                    gemma_merge_single_status=merge_status,
+                )
         except Exception as merge_error:
             print(
                 f"Gemma chunked TOC merge failed; falling back to local merge: {merge_error}",
@@ -3745,6 +4154,8 @@ def generate_toc_from_pdf_gemma_text(
     raw_bundle = {
         "mode": "gemma_text_chunk",
         "merge_mode": merge_mode,
+        "merge_strategy": getattr(args, "gemma_merge_strategy", DEFAULT_GEMMA_MERGE_STRATEGY),
+        "merge_batch_chars": getattr(args, "gemma_merge_batch_chars", DEFAULT_GEMMA_MERGE_BATCH_CHARS),
         "model": model,
         "pdf": pdf_path.name,
         "extraction": extraction_metadata,
@@ -4289,6 +4700,18 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="How to merge chunked Gemma TOCs. local uses Python only; gemma asks Gemma to merge and falls back to local on failure.",
     )
     parser.add_argument(
+        "--gemma-merge-strategy",
+        default=DEFAULT_GEMMA_MERGE_STRATEGY,
+        choices=("single", "batched"),
+        help="Gemma merge strategy. batched merges smaller groups with Gemma and stitches them locally to avoid long-output truncation.",
+    )
+    parser.add_argument(
+        "--gemma-merge-batch-chars",
+        type=int,
+        default=DEFAULT_GEMMA_MERGE_BATCH_CHARS,
+        help="Approximate compact partial-TOC JSON characters per Gemma merge batch.",
+    )
+    parser.add_argument(
         "--gemma-level-reference",
         dest="gemma_level_reference",
         action="store_true",
@@ -4403,6 +4826,7 @@ def main() -> int:
         try:
             args.gemma_runtime = normalize_gemma_runtime(args.gemma_runtime)
             args.gemma_merge_mode = normalize_gemma_merge_mode(args.gemma_merge_mode)
+            args.gemma_merge_strategy = normalize_gemma_merge_strategy(args.gemma_merge_strategy)
             args.gemma_extraction_mode = normalize_gemma_extraction_mode(args.gemma_extraction_mode)
         except ValueError as error:
             parser.error(str(error))
