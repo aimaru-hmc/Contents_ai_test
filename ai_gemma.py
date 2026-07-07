@@ -79,6 +79,13 @@ DEFAULT_GEMMA_LEVEL_VERIFY = (
     os.getenv("GEMMA_LEVEL_VERIFY", "true").strip().lower()
     in {"1", "true", "yes", "on"}
 )
+DEFAULT_GEMMA_LEVEL_VERIFY_SCOPE = (
+    os.getenv(
+        "GEMMA_LEVEL_VERIFY_SCOPE",
+        "final" if DEFAULT_GEMMA_LEVEL_VERIFY else "none",
+    ).strip().lower()
+    or ("final" if DEFAULT_GEMMA_LEVEL_VERIFY else "none")
+)
 DEFAULT_WRITE_PARSED_PDF = (
     os.getenv("WRITE_PARSED_PDF", "true").strip().lower()
     in {"1", "true", "yes", "on"}
@@ -2477,6 +2484,49 @@ def normalize_gemma_merge_strategy(strategy: str | None) -> str:
     return strategy
 
 
+def normalize_gemma_level_verify_scope(scope: str | None) -> str:
+    scope = clean_text(scope).lower() or DEFAULT_GEMMA_LEVEL_VERIFY_SCOPE
+    aliases = {
+        "0": "none",
+        "false": "none",
+        "no": "none",
+        "off": "none",
+        "disable": "none",
+        "disabled": "none",
+        "skip": "none",
+        "1": "final",
+        "true": "final",
+        "yes": "final",
+        "on": "final",
+        "merge": "final",
+        "merged": "final",
+        "after-merge": "final",
+        "after_merge": "final",
+        "final-only": "final",
+        "final_only": "final",
+        "chunks": "chunk",
+        "chunked": "chunk",
+        "per-chunk": "chunk",
+        "per_chunk": "chunk",
+        "initial": "chunk",
+        "all": "both",
+        "everywhere": "both",
+        "chunk-final": "both",
+        "chunk_final": "both",
+    }
+    scope = aliases.get(scope, scope)
+    if scope not in {"none", "chunk", "final", "both"}:
+        raise ValueError("--gemma-level-verify-scope must be one of: none, chunk, final, both.")
+    return scope
+
+
+def gemma_level_verify_enabled(args: argparse.Namespace, scope: str) -> bool:
+    verify_scope = normalize_gemma_level_verify_scope(
+        getattr(args, "gemma_level_verify_scope", DEFAULT_GEMMA_LEVEL_VERIFY_SCOPE)
+    )
+    return verify_scope == "both" or verify_scope == scope
+
+
 def normalize_gemma_extraction_mode(mode: str | None) -> str:
     mode = clean_text(mode).lower() or DEFAULT_GEMMA_EXTRACTION_MODE
     aliases = {
@@ -3448,8 +3498,8 @@ def add_level_reasons_to_toc(
     return toc
 
 
-def partial_toc_level_reason_map(partial_tocs: list[dict[str, Any]]) -> dict[tuple[str, int], str]:
-    reason_by_key: dict[tuple[str, int], str] = {}
+def partial_toc_level_reason_map(partial_tocs: list[dict[str, Any]]) -> dict[tuple[str, int], dict[str, Any]]:
+    reason_by_key: dict[tuple[str, int], dict[str, Any]] = {}
     for partial in partial_tocs:
         toc = partial.get("toc") if isinstance(partial, dict) else None
         if not isinstance(toc, dict):
@@ -3468,7 +3518,11 @@ def partial_toc_level_reason_map(partial_tocs: list[dict[str, Any]]) -> dict[tup
                 page = int(chapter.get("page", 1))
             except Exception:
                 page = 1
-            reason_by_key.setdefault((title, page), reason)
+            try:
+                level = int(chapter.get("level", 1))
+            except Exception:
+                level = 1
+            reason_by_key.setdefault((title, page), {"reason": reason, "level": level})
     return reason_by_key
 
 
@@ -3529,7 +3583,15 @@ def restore_level_reasons_from_partials(toc: dict[str, Any], partial_tocs: list[
             page = int(chapter.get("page", 1))
         except Exception:
             page = 1
-        reason = reason_by_key.get((title, page))
+        reason_entry = reason_by_key.get((title, page))
+        if not reason_entry:
+            continue
+        try:
+            if int(chapter.get("level", 1)) != int(reason_entry.get("level", 1)):
+                continue
+        except Exception:
+            continue
+        reason = clean_text(reason_entry.get("reason"))
         if reason:
             chapter["level_reason"] = reason
     return toc
@@ -3613,6 +3675,30 @@ def update_toc_level_reference(
             continue
         if len(examples) < max_examples_per_level:
             examples.append(entry)
+
+
+def build_toc_level_reference(
+    toc: dict[str, Any],
+    max_depth: int,
+    chunk_text: str = "",
+) -> dict[int, list[dict[str, Any]]]:
+    level_reference: dict[int, list[dict[str, Any]]] = {}
+    update_toc_level_reference(
+        level_reference,
+        toc,
+        max_depth=max_depth,
+        chunk_text=chunk_text,
+    )
+    return level_reference
+
+
+def serialize_toc_level_reference(
+    level_reference: dict[int, list[dict[str, Any]]],
+) -> dict[str, list[dict[str, Any]]]:
+    return {
+        str(level): examples
+        for level, examples in sorted(level_reference.items())
+    }
 
 
 def format_toc_level_reference(level_reference: dict[int, list[dict[str, Any]]]) -> str:
@@ -4119,7 +4205,9 @@ def review_gemma_toc_levels(
     partial_tocs: list[dict[str, Any]] | None = None,
     level_reference_text: str = "",
 ) -> tuple[dict[str, Any], str, dict[str, Any]]:
-    if not bool(getattr(args, "gemma_level_verify", DEFAULT_GEMMA_LEVEL_VERIFY)):
+    if normalize_gemma_level_verify_scope(
+        getattr(args, "gemma_level_verify_scope", DEFAULT_GEMMA_LEVEL_VERIFY_SCOPE)
+    ) == "none":
         return toc, "", {"enabled": False, "success": False, "skipped": True}
 
     label = f"Gemma level review({stage_label})"
@@ -4421,7 +4509,13 @@ def process_gemma_text_chunk(
     depth: int = 0,
 ) -> list[dict[str, Any]]:
     chunk_label = str(chunk["index"])
-    use_level_reference = bool(getattr(args, "gemma_level_reference", DEFAULT_GEMMA_LEVEL_REFERENCE))
+    use_level_reference = bool(
+        getattr(
+            args,
+            "_gemma_chunk_level_reference_enabled",
+            getattr(args, "gemma_level_reference", DEFAULT_GEMMA_LEVEL_REFERENCE),
+        )
+    )
     level_reference_text = format_toc_level_reference(level_reference or {}) if use_level_reference else ""
     chunk_prompt = build_gemma_chunk_prompt(
         prompt,
@@ -4458,12 +4552,29 @@ def process_gemma_text_chunk(
             chunk_text=str(chunk.get("text") or ""),
             level_reference=level_reference if use_level_reference else None,
         )
+        level_review_raw_text = ""
+        level_review_status: dict[str, Any] = {}
+        if gemma_level_verify_enabled(args, "chunk"):
+            partial_toc, level_review_raw_text, level_review_status = review_gemma_toc_levels(
+                model=model,
+                pdf_path=pdf_path,
+                args=args,
+                prompt=prompt,
+                toc=partial_toc,
+                stage_label=f"chunk {chunk_label}/{total_chunks}",
+                source_text=str(chunk.get("text") or ""),
+                level_reference_text=level_reference_text,
+            )
         raw_part = {
             "chunk": chunk["index"],
             "start_page": chunk["start_page"],
             "end_page": chunk["end_page"],
             "raw_response": raw_text,
         }
+        if level_review_status:
+            raw_part["level_review"] = level_review_status
+        if level_review_raw_text:
+            raw_part["level_review_raw_response"] = level_review_raw_text
         raw_parts.append(raw_part)
         if use_level_reference and level_reference is not None:
             update_toc_level_reference(
@@ -4556,8 +4667,12 @@ def generate_toc_from_pdf_gemma_text(
     )
     update_processing_metadata(
         args,
-        gemma_level_verify=bool(getattr(args, "gemma_level_verify", DEFAULT_GEMMA_LEVEL_VERIFY)),
-        gemma_level_verify_scope="final",
+        gemma_level_verify=normalize_gemma_level_verify_scope(
+            getattr(args, "gemma_level_verify_scope", DEFAULT_GEMMA_LEVEL_VERIFY_SCOPE)
+        ) != "none",
+        gemma_level_verify_scope=normalize_gemma_level_verify_scope(
+            getattr(args, "gemma_level_verify_scope", DEFAULT_GEMMA_LEVEL_VERIFY_SCOPE)
+        ),
     )
     write_parsed_pdf_text(
         pdf_path=pdf_path,
@@ -4594,7 +4709,9 @@ def generate_toc_from_pdf_gemma_text(
             add_level_reasons_to_toc(toc, chunk_text=full_text)
             level_review_raw_text = ""
             level_review_status: dict[str, Any] = {}
-            if bool(getattr(args, "gemma_level_verify", DEFAULT_GEMMA_LEVEL_VERIFY)):
+            if normalize_gemma_level_verify_scope(
+                getattr(args, "gemma_level_verify_scope", DEFAULT_GEMMA_LEVEL_VERIFY_SCOPE)
+            ) != "none":
                 toc, level_review_raw_text, level_review_status = review_gemma_toc_levels(
                     model=model,
                     pdf_path=pdf_path,
@@ -4604,6 +4721,20 @@ def generate_toc_from_pdf_gemma_text(
                     stage_label="single text",
                     source_text=full_text,
                 )
+            single_level_reference_enabled = bool(getattr(args, "gemma_level_reference", DEFAULT_GEMMA_LEVEL_REFERENCE))
+            single_level_reference = (
+                build_toc_level_reference(toc, max_depth=args.max_depth, chunk_text=full_text)
+                if single_level_reference_enabled
+                else {}
+            )
+            update_processing_metadata(
+                args,
+                gemma_level_reference=single_level_reference_enabled,
+                gemma_chunk_level_reference=False,
+                gemma_level_reference_source="final_toc",
+                gemma_level_reference_levels=sorted(single_level_reference) if single_level_reference_enabled else [],
+                gemma_level_reference_examples=serialize_toc_level_reference(single_level_reference) if single_level_reference_enabled else {},
+            )
             raw_bundle = {
                 "mode": "gemma_text_single",
                 "model": model,
@@ -4614,6 +4745,7 @@ def generate_toc_from_pdf_gemma_text(
                 "raw_response": raw_text,
                 "level_review": level_review_status,
                 "level_review_raw_response": level_review_raw_text,
+                "level_reference": serialize_toc_level_reference(single_level_reference) if single_level_reference_enabled else {},
             }
             return toc, json.dumps(raw_bundle, ensure_ascii=False, indent=2), model
         except Exception as error:
@@ -4641,7 +4773,25 @@ def generate_toc_from_pdf_gemma_text(
     raw_parts: list[dict[str, Any]] = []
     level_reference: dict[int, list[dict[str, Any]]] = {}
     level_reference_enabled = bool(getattr(args, "gemma_level_reference", DEFAULT_GEMMA_LEVEL_REFERENCE))
-    update_processing_metadata(args, gemma_level_reference=level_reference_enabled)
+    level_verify_scope = normalize_gemma_level_verify_scope(
+        getattr(args, "gemma_level_verify_scope", DEFAULT_GEMMA_LEVEL_VERIFY_SCOPE)
+    )
+    chunk_level_reference_enabled = level_reference_enabled and level_verify_scope != "final"
+    chunk_level_reference_source = (
+        "verified_chunk_toc"
+        if level_verify_scope in {"chunk", "both"}
+        else "unverified_chunk_toc"
+        if chunk_level_reference_enabled
+        else "disabled"
+    )
+    setattr(args, "_gemma_chunk_level_reference_enabled", chunk_level_reference_enabled)
+    update_processing_metadata(
+        args,
+        gemma_level_reference=level_reference_enabled,
+        gemma_chunk_level_reference=chunk_level_reference_enabled,
+        gemma_chunk_level_reference_source=chunk_level_reference_source,
+        gemma_level_reference_source="final_toc",
+    )
 
     for chunk in chunks:
         partial_tocs.extend(
@@ -4657,13 +4807,6 @@ def generate_toc_from_pdf_gemma_text(
             )
         )
     update_processing_metadata(args, processed_chunk_count=len(raw_parts))
-    update_processing_metadata(
-        args,
-        gemma_level_reference_levels=sorted(level_reference) if level_reference_enabled else [],
-        gemma_level_reference_examples={
-            str(level): examples for level, examples in sorted(level_reference.items())
-        } if level_reference_enabled else {},
-    )
 
     merge_mode = normalize_gemma_merge_mode(getattr(args, "gemma_merge_mode", DEFAULT_GEMMA_MERGE_MODE))
     update_processing_metadata(args, gemma_merge_mode=merge_mode)
@@ -4748,10 +4891,10 @@ def generate_toc_from_pdf_gemma_text(
 
     final_level_review_raw_text = ""
     final_level_review_status: dict[str, Any] = {}
-    if bool(getattr(args, "gemma_level_verify", DEFAULT_GEMMA_LEVEL_VERIFY)):
+    if gemma_level_verify_enabled(args, "final"):
         final_level_reference_text = (
             format_toc_level_reference(level_reference)
-            if level_reference_enabled
+            if level_verify_scope == "both" and level_reference_enabled
             else ""
         )
         toc, final_level_review_raw_text, final_level_review_status = review_gemma_toc_levels(
@@ -4772,6 +4915,17 @@ def generate_toc_from_pdf_gemma_text(
             max_depth=args.max_depth,
         )
 
+    final_level_reference = (
+        build_toc_level_reference(toc, max_depth=args.max_depth)
+        if level_reference_enabled
+        else {}
+    )
+    update_processing_metadata(
+        args,
+        gemma_level_reference_levels=sorted(final_level_reference) if level_reference_enabled else [],
+        gemma_level_reference_examples=serialize_toc_level_reference(final_level_reference) if level_reference_enabled else {},
+    )
+
     raw_bundle = {
         "mode": "gemma_text_chunk",
         "merge_mode": merge_mode,
@@ -4784,9 +4938,19 @@ def generate_toc_from_pdf_gemma_text(
         "extracted_chars": extracted_chars,
         "chunk_count": len(chunks),
         "processed_chunk_count": len(raw_parts),
-        "level_reference": {
-            str(level): examples for level, examples in sorted(level_reference.items())
-        } if level_reference_enabled else {},
+        "level_verify_scope": level_verify_scope,
+        "level_reference": serialize_toc_level_reference(final_level_reference) if level_reference_enabled else {},
+        "chunk_level_reference": (
+            serialize_toc_level_reference(level_reference)
+            if chunk_level_reference_enabled
+            else {}
+        ),
+        "chunk_level_reference_source": chunk_level_reference_source,
+        "chunk_level_reference_unverified": (
+            serialize_toc_level_reference(level_reference)
+            if chunk_level_reference_source == "unverified_chunk_toc"
+            else {}
+        ),
         "input_chunk_files": getattr(args, "_ai_input_chunk_files", []),
         "chunk_raw_responses": raw_parts,
         "final_raw_response": final_raw_text,
@@ -5353,14 +5517,19 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "--gemma-level-verify",
         dest="gemma_level_verify",
         action="store_true",
-        default=DEFAULT_GEMMA_LEVEL_VERIFY,
-        help="Ask Gemma to run one separate level verification/correction pass on the final TOC. Enabled by default.",
+        default=None,
+        help="Backward-compatible shortcut for --gemma-level-verify-scope final.",
     )
     parser.add_argument(
         "--no-gemma-level-verify",
         dest="gemma_level_verify",
         action="store_false",
-        help="Disable the final Gemma level verification/correction pass.",
+        help="Backward-compatible shortcut for --gemma-level-verify-scope none.",
+    )
+    parser.add_argument(
+        "--gemma-level-verify-scope",
+        default=DEFAULT_GEMMA_LEVEL_VERIFY_SCOPE,
+        help="Where to run separate Gemma level verification/correction: none, chunk, final, or both. Default: final.",
     )
     parser.add_argument(
         "--gemma-vllm-tensor-parallel-size",
@@ -5481,6 +5650,12 @@ def main() -> int:
             args.gemma_merge_mode = normalize_gemma_merge_mode(args.gemma_merge_mode)
             args.gemma_merge_strategy = normalize_gemma_merge_strategy(args.gemma_merge_strategy)
             args.gemma_extraction_mode = normalize_gemma_extraction_mode(args.gemma_extraction_mode)
+            args.gemma_level_verify_scope = normalize_gemma_level_verify_scope(args.gemma_level_verify_scope)
+            if args.gemma_level_verify is False:
+                args.gemma_level_verify_scope = "none"
+            elif args.gemma_level_verify is True:
+                args.gemma_level_verify_scope = "final"
+            args.gemma_level_verify = args.gemma_level_verify_scope != "none"
         except ValueError as error:
             parser.error(str(error))
 
