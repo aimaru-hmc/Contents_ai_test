@@ -1,0 +1,56 @@
+{
+    "timestamp": "2026-07-07 14:12:07",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편9-11장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_9-11_2021.pdf",
+    "chunk": "2.3",
+    "total_chunks": 8,
+    "start_page": 73,
+    "end_page": 73,
+    "input_chars": 3698,
+    "toc": {
+        "title": "제10장 감염병의 역학",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "3) 3단계: 유행 원인에 대한 가설 설정",
+                "page": 73,
+                "level_reason": "Numbered as '3)', font size 12.0, and follows the level 3 pattern from previous TOC references.",
+                "_source_order": 2,
+                "_layout_y": 85.0,
+                "_layout_x": 65.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 3단계: 유행 원인에 대한 가설 설정"
+            },
+            {
+                "level": 3,
+                "chapter": "4) 4단계: 분석역학적 연구를 통한 가설 검정",
+                "page": 73,
+                "level_reason": "Numbered as '4)', font size 12.0, and follows the level 3 pattern from previous TOC references.",
+                "_source_order": 9,
+                "_layout_y": 212.0,
+                "_layout_x": 65.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "4) 4단계: 분석역학적 연구를 통한 가설 검정"
+            },
+            {
+                "level": 3,
+                "chapter": "5) 5단계: 유행관리 사업평가와 커뮤니케이션",
+                "page": 73,
+                "level_reason": "Numbered as '5)', font size 12.0, and follows the level 3 pattern from previous TOC references.",
+                "_source_order": 46,
+                "_layout_y": 746.0,
+                "_layout_x": 65.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "5) 5단계: 유행관리 사업평가와 커뮤니케이션"
+            }
+        ]
+    },
+    "chapter_count": 3,
+    "raw_response": "{\n  \"title\": \"제10장 감염병의 역학\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"3) 3단계: 유행 원인에 대한 가설 설정\",\n      \"page\": 73,\n      \"level_reason\": \"Numbered as '3)', font size 12.0, and follows the level 3 pattern from previous TOC references.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"4) 4단계: 분석역학적 연구를 통한 가설 검정\",\n      \"page\": 73,\n      \"level_reason\": \"Numbered as '4)', font size 12.0, and follows the level 3 pattern from previous TOC references.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"5) 5단계: 유행관리 사업평가와 커뮤니케이션\",\n      \"page\": 73,\n      \"level_reason\": \"Numbered as '5)', font size 12.0, and follows the level 3 pattern from previous TOC references.\"\n    }\n  ]\n}",
+    "raw_response_chars": 693
+}

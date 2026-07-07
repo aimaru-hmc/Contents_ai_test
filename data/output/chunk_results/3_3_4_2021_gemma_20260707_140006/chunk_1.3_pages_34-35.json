@@ -1,0 +1,80 @@
+{
+    "timestamp": "2026-07-07 14:19:54",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재2/2권-한글/3편3,4장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_3_4_2021.pdf",
+    "chunk": "1.3",
+    "total_chunks": 3,
+    "start_page": 34,
+    "end_page": 35,
+    "input_chars": 6201,
+    "toc": {
+        "title": "3_3_4_2021.pdf",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "2) 사이안화물(cyanide)",
+                "page": 34,
+                "level_reason": "Numbered as '2)' and uses font size 12.0, consistent with level 3 hierarchy from previous references.",
+                "_source_order": 5,
+                "_layout_y": 146.0,
+                "_layout_x": 173.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 사이안화물(cyanide)"
+            },
+            {
+                "level": 3,
+                "chapter": "3) 황화수소(hydrogen sulfide, H S)",
+                "page": 34,
+                "level_reason": "Numbered as '3)' and uses font size 12.0, consistent with level 3 hierarchy from previous references.",
+                "_source_order": 26,
+                "_layout_y": 486.0,
+                "_layout_x": 173.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 황화수소(hydrogen sulfide, H S)"
+            },
+            {
+                "level": 1,
+                "chapter": "4. 잔류유기오염물질",
+                "page": 35,
+                "level_reason": "Numbered as '4.' and uses the largest font size (18.0) and ratio (1.9), matching level 1 style.",
+                "_source_order": 60,
+                "_layout_y": 381.0,
+                "_layout_x": 77.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "4. 잔류유기오염물질"
+            },
+            {
+                "level": 2,
+                "chapter": "4.1 잔류유기오염물질의 정의 및 특성",
+                "page": 35,
+                "level_reason": "Numbered as '4.1' and uses font size 12.5, matching level 2 hierarchy.",
+                "_source_order": 62,
+                "_layout_y": 527.0,
+                "_layout_x": 73.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "4.1 잔류유기오염물질의 정의 및 특성"
+            },
+            {
+                "level": 2,
+                "chapter": "4.2 잔류유기오염물질의 종류",
+                "page": 35,
+                "level_reason": "Numbered as '4.2' and uses font size 12.5, matching level 2 hierarchy.",
+                "_source_order": 69,
+                "_layout_y": 672.0,
+                "_layout_x": 73.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "4.2 잔류유기오염물질의 종류"
+            }
+        ]
+    },
+    "chapter_count": 5,
+    "raw_response": "{\n  \"title\": \"3_3_4_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"2) 사이안화물(cyanide)\",\n      \"page\": 34,\n      \"level_reason\": \"Numbered as '2)' and uses font size 12.0, consistent with level 3 hierarchy from previous references.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3) 황화수소(hydrogen sulfide, H S)\",\n      \"page\": 34,\n      \"level_reason\": \"Numbered as '3)' and uses font size 12.0, consistent with level 3 hierarchy from previous references.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"4. 잔류유기오염물질\",\n      \"page\": 35,\n      \"level_reason\": \"Numbered as '4.' and uses the largest font size (18.0) and ratio (1.9), matching level 1 style.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"4.1 잔류유기오염물질의 정의 및 특성\",\n      \"page\": 35,\n      \"level_reason\": \"Numbered as '4.1' and uses font size 12.5, matching level 2 hierarchy.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"4.2 잔류유기오염물질의 종류\",\n      \"page\": 35,\n      \"level_reason\": \"Numbered as '4.2' and uses font size 12.5, matching level 2 hierarchy.\"\n    }\n  ]\n}",
+    "raw_response_chars": 1058
+}

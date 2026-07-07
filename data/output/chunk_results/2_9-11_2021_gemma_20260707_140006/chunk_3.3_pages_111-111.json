@@ -1,0 +1,68 @@
+{
+    "timestamp": "2026-07-07 14:13:10",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편9-11장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_9-11_2021.pdf",
+    "chunk": "3.3",
+    "total_chunks": 8,
+    "start_page": 111,
+    "end_page": 111,
+    "input_chars": 3272,
+    "toc": {
+        "title": "제10장 감염병의 역학",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "8.5 지역사회 호흡기감염병",
+                "page": 111,
+                "level_reason": "Numbered as 8.5 with font size 12.5 and ratio 1.32, consistent with level 2 style.",
+                "_source_order": 2,
+                "_layout_y": 92.0,
+                "_layout_x": 73.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "8.5 지역사회 호흡기감염병"
+            },
+            {
+                "level": 3,
+                "chapter": "1) 성홍열",
+                "page": 111,
+                "level_reason": "Numbered with 1) and font size 12.0, consistent with level 3 style.",
+                "_source_order": 16,
+                "_layout_y": 337.0,
+                "_layout_x": 65.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 성홍열"
+            },
+            {
+                "level": 4,
+                "chapter": "(1) 병원체 및 임상적 특징",
+                "page": 111,
+                "level_reason": "Numbered with (1) and font size 10.0, consistent with level 4 style.",
+                "_source_order": 17,
+                "_layout_y": 371.0,
+                "_layout_x": 75.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(1) 병원체 및 임상적 특징"
+            },
+            {
+                "level": 4,
+                "chapter": "(2) 역학적 특성",
+                "page": 111,
+                "level_reason": "Numbered with (2) and font size 10.0, consistent with level 4 style.",
+                "_source_order": 28,
+                "_layout_y": 556.0,
+                "_layout_x": 75.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(2) 역학적 특성"
+            }
+        ]
+    },
+    "chapter_count": 4,
+    "raw_response": "{\n  \"title\": \"제10장 감염병의 역학\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"8.5 지역사회 호흡기감염병\",\n      \"page\": 111,\n      \"level_reason\": \"Numbered as 8.5 with font size 12.5 and ratio 1.32, consistent with level 2 style.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1) 성홍열\",\n      \"page\": 111,\n      \"level_reason\": \"Numbered with 1) and font size 12.0, consistent with level 3 style.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"(1) 병원체 및 임상적 특징\",\n      \"page\": 111,\n      \"level_reason\": \"Numbered with (1) and font size 10.0, consistent with level 4 style.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"(2) 역학적 특성\",\n      \"page\": 111,\n      \"level_reason\": \"Numbered with (2) and font size 10.0, consistent with level 4 style.\"\n    }\n  ]\n}",
+    "raw_response_chars": 765
+}

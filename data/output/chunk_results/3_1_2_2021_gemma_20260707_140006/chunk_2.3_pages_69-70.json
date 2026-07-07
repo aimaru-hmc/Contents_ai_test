@@ -1,0 +1,68 @@
+{
+    "timestamp": "2026-07-07 14:17:16",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재2/2권-한글/3편1,2장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_1_2_2021.pdf",
+    "chunk": "2.3",
+    "total_chunks": 4,
+    "start_page": 69,
+    "end_page": 70,
+    "input_chars": 6565,
+    "toc": {
+        "title": "3_1_2_2021.pdf",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "1.2 소음으로 인한 건강영향",
+                "page": 69,
+                "level_reason": "Numbered as 1.2, font size s=12.5, r=1.32, consistent with level 3 pattern from previous reference.",
+                "_source_order": 29,
+                "_layout_y": 381.0,
+                "_layout_x": 73.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.2 소음으로 인한 건강영향"
+            },
+            {
+                "level": 4,
+                "chapter": "1) 비청각기 영향",
+                "page": 69,
+                "level_reason": "Numbered as 1), font size s=12.0, r=1.27, consistent with level 4 pattern from previous reference.",
+                "_source_order": 34,
+                "_layout_y": 489.0,
+                "_layout_x": 65.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 비청각기 영향"
+            },
+            {
+                "level": 4,
+                "chapter": "2) 청각기 영향",
+                "page": 69,
+                "level_reason": "Numbered as 2), font size s=12.0, r=1.27, consistent with level 4 pattern from previous reference.",
+                "_source_order": 43,
+                "_layout_y": 647.0,
+                "_layout_x": 65.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 청각기 영향"
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 소음성 난청",
+                "page": 70,
+                "level_reason": "Numbered as (1), font size s=10.0, r=1.05, consistent with level 5 pattern from previous reference.",
+                "_source_order": 60,
+                "_layout_y": 161.0,
+                "_layout_x": 183.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(1) 소음성 난청"
+            }
+        ]
+    },
+    "chapter_count": 4,
+    "raw_response": "{\n  \"title\": \"3_1_2_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"1.2 소음으로 인한 건강영향\",\n      \"page\": 69,\n      \"level_reason\": \"Numbered as 1.2, font size s=12.5, r=1.32, consistent with level 3 pattern from previous reference.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 비청각기 영향\",\n      \"page\": 69,\n      \"level_reason\": \"Numbered as 1), font size s=12.0, r=1.27, consistent with level 4 pattern from previous reference.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 청각기 영향\",\n      \"page\": 69,\n      \"level_reason\": \"Numbered as 2), font size s=12.0, r=1.27, consistent with level 4 pattern from previous reference.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 소음성 난청\",\n      \"page\": 70,\n      \"level_reason\": \"Numbered as (1), font size s=10.0, r=1.05, consistent with level 5 pattern from previous reference.\"\n    }\n  ]\n}",
+    "raw_response_chars": 870
+}

@@ -1,0 +1,140 @@
+{
+    "timestamp": "2026-07-07 14:18:34",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재2/2권-한글/3편1,2장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_1_2_2021.pdf",
+    "chunk": 4,
+    "total_chunks": 4,
+    "start_page": 107,
+    "end_page": 111,
+    "input_chars": 17180,
+    "toc": {
+        "title": "3_1_2_2021.pdf",
+        "chapters": [
+            {
+                "level": 4,
+                "chapter": "2) 고주파(라디오파, radiofrequency radiation, RF)",
+                "page": 107,
+                "level_reason": "Numbered as '2)' and uses font size s=12.0, r=1.27, consistent with level 4 hierarchy.",
+                "_source_order": 24,
+                "_layout_y": 474.0,
+                "_layout_x": 65.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 고주파(라디오파, radiofrequency radiation, RF)"
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 건강영향",
+                "page": 108,
+                "level_reason": "Numbered as '(1)' and uses font size s=10.0, r=1.05, consistent with level 5 hierarchy under the previous level 4 entry.",
+                "_source_order": 65,
+                "_layout_y": 272.0,
+                "_layout_x": 183.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(1) 건강영향"
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 고주파 노출에 대한 의학적 관리",
+                "page": 108,
+                "level_reason": "Numbered as '(2)' and uses font size s=10.0, r=1.05, consistent with level 5 hierarchy under the previous level 4 entry.",
+                "_source_order": 72,
+                "_layout_y": 396.0,
+                "_layout_x": 183.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(2) 고주파 노출에 대한 의학적 관리"
+            },
+            {
+                "level": 4,
+                "chapter": "3) 적외선(infrared radiation)",
+                "page": 108,
+                "level_reason": "Numbered as '3)' and uses font size s=12.0, r=1.27, consistent with level 4 hierarchy.",
+                "_source_order": 79,
+                "_layout_y": 520.0,
+                "_layout_x": 173.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 적외선(infrared radiation)"
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 예방대책",
+                "page": 108,
+                "level_reason": "Numbered as '(2)' and uses font size s=10.0, r=1.05, consistent with level 5 hierarchy under the previous level 4 entry.",
+                "_source_order": 91,
+                "_layout_y": 696.0,
+                "_layout_x": 60.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "장을 말한다. (2) 예방대책"
+            },
+            {
+                "level": 4,
+                "chapter": "4) 가시광선(visible light)",
+                "page": 108,
+                "level_reason": "Numbered as '4)' and uses font size s=12.0, r=1.27, consistent with level 4 hierarchy.",
+                "_source_order": 95,
+                "_layout_y": 775.0,
+                "_layout_x": 173.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "4) 가시광선(visible light)"
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 건강영향",
+                "page": 109,
+                "level_reason": "Numbered as '(1)' and uses font size s=10.0, r=1.05, consistent with level 5 hierarchy under the previous level 4 entry.",
+                "_source_order": 65,
+                "_layout_y": 272.0,
+                "_layout_x": 183.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(1) 건강영향"
+            },
+            {
+                "level": 4,
+                "chapter": "5) 자외선(ultraviolet radiation, UV)",
+                "page": 109,
+                "level_reason": "Numbered as '5)' and uses font size s=12.0, r=1.27, consistent with level 4 hierarchy.",
+                "_source_order": 108,
+                "_layout_y": 255.0,
+                "_layout_x": 65.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "5) 자외선(ultraviolet radiation, UV)"
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 자외선 노출의 예방",
+                "page": 110,
+                "level_reason": "Numbered as '(2)' and uses font size s=10.0, r=1.05, consistent with level 5 hierarchy under the previous level 4 entry.",
+                "_source_order": 163,
+                "_layout_y": 373.0,
+                "_layout_x": 183.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(2) 자외선 노출의 예방"
+            },
+            {
+                "level": 4,
+                "chapter": "6) 레이저광(laser radiation)",
+                "page": 110,
+                "level_reason": "Numbered as '6)' and uses font size s=12.0, r=1.27, consistent with level 4 hierarchy.",
+                "_source_order": 169,
+                "_layout_y": 483.0,
+                "_layout_x": 173.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "6) 레이저광(laser radiation)"
+            }
+        ]
+    },
+    "chapter_count": 10,
+    "raw_response": "{\n  \"title\": \"3_1_2_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 고주파(라디오파, radiofrequency radiation, RF)\",\n      \"page\": 107,\n      \"level_reason\": \"Numbered as '2)' and uses font size s=12.0, r=1.27, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 건강영향\",\n      \"page\": 108,\n      \"level_reason\": \"Numbered as '(1)' and uses font size s=10.0, r=1.05, consistent with level 5 hierarchy under the previous level 4 entry.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 고주파 노출에 대한 의학적 관리\",\n      \"page\": 108,\n      \"level_reason\": \"Numbered as '(2)' and uses font size s=10.0, r=1.05, consistent with level 5 hierarchy under the previous level 4 entry.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 적외선(infrared radiation)\",\n      \"page\": 108,\n      \"level_reason\": \"Numbered as '3)' and uses font size s=12.0, r=1.27, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 건강영향\",\n      \"page\": 108,\n      \"level_reason\": \"Numbered as '(1)' and uses font size s=10.0, r=1.05, consistent with level 5 hierarchy under the previous level 4 entry.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 예방대책\",\n      \"page\": 108,\n      \"level_reason\": \"Numbered as '(2)' and uses font size s=10.0, r=1.05, consistent with level 5 hierarchy under the previous level 4 entry.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 가시광선(visible light)\",\n      \"page\": 108,\n      \"level_reason\": \"Numbered as '4)' and uses font size s=12.0, r=1.27, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 건강영향\",\n      \"page\": 109,\n      \"level_reason\": \"Numbered as '(1)' and uses font size s=10.0, r=1.05, consistent with level 5 hierarchy under the previous level 4 entry.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"5) 자외선(ultraviolet radiation, UV)\",\n      \"page\": 109,\n      \"level_reason\": \"Numbered as '5)' and uses font size s=12.0, r=1.27, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 건강영향\",\n      \"page\": 109,\n      \"level_reason\": \"Numbered as '(1)' and uses font size s=10.0, r=1.05, consistent with level 5 hierarchy under the previous level 4 entry.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 자외선 노출의 예방\",\n      \"page\": 110,\n      \"level_reason\": \"Numbered as '(2)' and uses font size s=10.0, r=1.05, consistent with level 5 hierarchy under the previous level 4 entry.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"6) 레이저광(laser radiation)\",\n      \"page\": 110,\n      \"level_reason\": \"Numbered as '6)' and uses font size s=12.0, r=1.27, consistent with level 4 hierarchy.\"\n    }\n  ]\n}",
+    "raw_response_chars": 2695
+}

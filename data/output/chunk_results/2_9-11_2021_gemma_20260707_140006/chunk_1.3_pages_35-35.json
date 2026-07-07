@@ -1,0 +1,32 @@
+{
+    "timestamp": "2026-07-07 14:11:23",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편9-11장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_9-11_2021.pdf",
+    "chunk": "1.3",
+    "total_chunks": 8,
+    "start_page": 35,
+    "end_page": 35,
+    "input_chars": 1990,
+    "toc": {
+        "title": "제9장 근거기반의료와 임상적 의사결정",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "3) 임상진료지침의 개발과정",
+                "page": 35,
+                "level_reason": "Numbered as '3)', font size s=12.0 and ratio r=1.27, consistent with level 3 patterns in previous TOC references.",
+                "_source_order": 4,
+                "_layout_y": 131.0,
+                "_layout_x": 65.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 임상진료지침의 개발과정"
+            }
+        ]
+    },
+    "chapter_count": 1,
+    "raw_response": "{\n  \"title\": \"제9장 근거기반의료와 임상적 의사결정\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"3) 임상진료지침의 개발과정\",\n      \"page\": 35,\n      \"level_reason\": \"Numbered as '3)', font size s=12.0 and ratio r=1.27, consistent with level 3 patterns in previous TOC references.\"\n    }\n  ]\n}",
+    "raw_response_chars": 280
+}

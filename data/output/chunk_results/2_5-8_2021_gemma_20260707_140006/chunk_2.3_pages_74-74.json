@@ -1,0 +1,56 @@
+{
+    "timestamp": "2026-07-07 14:08:00",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편5-8장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_5-8_2021.pdf",
+    "chunk": "2.3",
+    "total_chunks": 5,
+    "start_page": 74,
+    "end_page": 74,
+    "input_chars": 3818,
+    "toc": {
+        "title": "2_5-8_2021.pdf",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "6) 기초자료 수집",
+                "page": 74,
+                "level_reason": "Numbered with '6)', font size 12.0 (r=1.27), consistent with level 3 patterns in previous references.",
+                "_source_order": 12,
+                "_layout_y": 252.0,
+                "_layout_x": 173.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "6) 기초자료 수집"
+            },
+            {
+                "level": 3,
+                "chapter": "7) 결과 관찰",
+                "page": 74,
+                "level_reason": "Numbered with '7)', font size 12.0 (r=1.27), consistent with level 3 patterns in previous references.",
+                "_source_order": 23,
+                "_layout_y": 442.0,
+                "_layout_x": 173.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "7) 결과 관찰"
+            },
+            {
+                "level": 3,
+                "chapter": "8) 통계분석",
+                "page": 74,
+                "level_reason": "Numbered with '8)', font size 12.0 (r=1.27), consistent with level 3 patterns in previous references.",
+                "_source_order": 33,
+                "_layout_y": 616.0,
+                "_layout_x": 173.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "8) 통계분석"
+            }
+        ]
+    },
+    "chapter_count": 3,
+    "raw_response": "{\n  \"title\": \"2_5-8_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"6) 기초자료 수집\",\n      \"page\": 74,\n      \"level_reason\": \"Numbered with '6)', font size 12.0 (r=1.27), consistent with level 3 patterns in previous references.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"7) 결과 관찰\",\n      \"page\": 74,\n      \"level_reason\": \"Numbered with '7)', font size 12.0 (r=1.27), consistent with level 3 patterns in previous references.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"8) 통계분석\",\n      \"page\": 74,\n      \"level_reason\": \"Numbered with '8)', font size 12.0 (r=1.27), consistent with level 3 patterns in previous references.\"\n    }\n  ]\n}",
+    "raw_response_chars": 664
+}

@@ -1,0 +1,44 @@
+{
+    "timestamp": "2026-07-07 14:14:32",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편9-11장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_9-11_2021.pdf",
+    "chunk": "5.3",
+    "total_chunks": 8,
+    "start_page": 182,
+    "end_page": 182,
+    "input_chars": 4165,
+    "toc": {
+        "title": "2_9-11_2021.pdf",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "2) 췌장암",
+                "page": 182,
+                "level_reason": "Numbered as '2)', font size 12.0 (r=1.27), which matches the level 3 pattern from previous TOC references.",
+                "_source_order": 6,
+                "_layout_y": 161.0,
+                "_layout_x": 173.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 췌장암"
+            },
+            {
+                "level": 3,
+                "chapter": "3) 담낭암과 담도암",
+                "page": 182,
+                "level_reason": "Numbered as '3)', font size 12.0 (r=1.27), which matches the level 3 pattern from previous TOC references.",
+                "_source_order": 33,
+                "_layout_y": 592.0,
+                "_layout_x": 173.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 담낭암과 담도암"
+            }
+        ]
+    },
+    "chapter_count": 2,
+    "raw_response": "{\n  \"title\": \"2_9-11_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"2) 췌장암\",\n      \"page\": 182,\n      \"level_reason\": \"Numbered as '2)', font size 12.0 (r=1.27), which matches the level 3 pattern from previous TOC references.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3) 담낭암과 담도암\",\n      \"page\": 182,\n      \"level_reason\": \"Numbered as '3)', font size 12.0 (r=1.27), which matches the level 3 pattern from previous TOC references.\"\n    }\n  ]\n}",
+    "raw_response_chars": 473
+}

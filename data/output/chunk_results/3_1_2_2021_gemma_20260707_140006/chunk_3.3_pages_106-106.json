@@ -1,0 +1,44 @@
+{
+    "timestamp": "2026-07-07 14:18:25",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재2/2권-한글/3편1,2장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_1_2_2021.pdf",
+    "chunk": "3.3",
+    "total_chunks": 4,
+    "start_page": 106,
+    "end_page": 106,
+    "input_chars": 3976,
+    "toc": {
+        "title": "3_1_2_2021.pdf",
+        "chapters": [
+            {
+                "level": 5,
+                "chapter": "(1) 건강영향",
+                "page": 106,
+                "level_reason": "Numbered as (1) with font size s=10.0 and ratio r=1.05, following the established level 5 pattern for subsections.",
+                "_source_order": 26,
+                "_layout_y": 438.0,
+                "_layout_x": 183.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(1) 건강영향"
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 노출 차단 및 예방",
+                "page": 106,
+                "level_reason": "Numbered as (2) with font size s=10.0 and ratio r=1.05, following the established level 5 pattern for subsections.",
+                "_source_order": 50,
+                "_layout_y": 714.0,
+                "_layout_x": 183.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(2) 노출 차단 및 예방"
+            }
+        ]
+    },
+    "chapter_count": 2,
+    "raw_response": "{\n  \"title\": \"3_1_2_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 건강영향\",\n      \"page\": 106,\n      \"level_reason\": \"Numbered as (1) with font size s=10.0 and ratio r=1.05, following the established level 5 pattern for subsections.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 노출 차단 및 예방\",\n      \"page\": 106,\n      \"level_reason\": \"Numbered as (2) with font size s=10.0 and ratio r=1.05, following the established level 5 pattern for subsections.\"\n    }\n  ]\n}",
+    "raw_response_chars": 493
+}

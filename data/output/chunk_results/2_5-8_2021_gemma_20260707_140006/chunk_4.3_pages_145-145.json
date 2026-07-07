@@ -1,0 +1,32 @@
+{
+    "timestamp": "2026-07-07 14:09:29",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편5-8장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_5-8_2021.pdf",
+    "chunk": "4.3",
+    "total_chunks": 5,
+    "start_page": 145,
+    "end_page": 145,
+    "input_chars": 4765,
+    "toc": {
+        "title": "제8장 의학연구에서 통계의 활용",
+        "chapters": [
+            {
+                "level": 4,
+                "chapter": "(3) t-분포를 이용한 의사결정",
+                "page": 145,
+                "level_reason": "Numbered as (3) with a font size of 10.0 and ratio 1.05, following the hierarchy of previous level 4 entries.",
+                "_source_order": 47,
+                "_layout_y": 479.0,
+                "_layout_x": 75.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(3) t-분포를 이용한 의사결정"
+            }
+        ]
+    },
+    "chapter_count": 1,
+    "raw_response": "{\n  \"title\": \"제8장 의학연구에서 통계의 활용\",\n  \"chapters\": [\n    {\n      \"level\": 4,\n      \"chapter\": \"(3) t-분포를 이용한 의사결정\",\n      \"page\": 145,\n      \"level_reason\": \"Numbered as (3) with a font size of 10.0 and ratio 1.05, following the hierarchy of previous level 4 entries.\"\n    }\n  ]\n}",
+    "raw_response_chars": 277
+}

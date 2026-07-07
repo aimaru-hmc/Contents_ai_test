@@ -1,0 +1,56 @@
+{
+    "timestamp": "2026-07-07 14:13:59",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편9-11장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_9-11_2021.pdf",
+    "chunk": "4.3",
+    "total_chunks": 8,
+    "start_page": 147,
+    "end_page": 148,
+    "input_chars": 6208,
+    "toc": {
+        "title": "제10장 감염병의 역학",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "12.5 예방과 관리",
+                "page": 147,
+                "level_reason": "Numbered as 12.5 with font size 12.5 and ratio 1.32, consistent with level 2 subsection style.",
+                "_source_order": 11,
+                "_layout_y": 244.0,
+                "_layout_x": 72.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "12.5 예방과 관리"
+            },
+            {
+                "level": 1,
+                "chapter": "13. 해외여행 감염증",
+                "page": 148,
+                "level_reason": "Numbered as 13 with large font size 18.0 and ratio 1.9, consistent with level 1 major section style.",
+                "_source_order": 52,
+                "_layout_y": 302.0,
+                "_layout_x": 185.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "13. 해외여행 감염증"
+            },
+            {
+                "level": 2,
+                "chapter": "13.1 해외여행 시 필요한 질병예방의 원칙",
+                "page": 148,
+                "level_reason": "Numbered as 13.1 with font size 12.5 and ratio 1.32, consistent with level 2 subsection style.",
+                "_source_order": 69,
+                "_layout_y": 660.0,
+                "_layout_x": 180.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "13.1 해외여행 시 필요한 질병예방의 원칙"
+            }
+        ]
+    },
+    "chapter_count": 3,
+    "raw_response": "{\n  \"title\": \"제10장 감염병의 역학\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"12.5 예방과 관리\",\n      \"page\": 147,\n      \"level_reason\": \"Numbered as 12.5 with font size 12.5 and ratio 1.32, consistent with level 2 subsection style.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"13. 해외여행 감염증\",\n      \"page\": 148,\n      \"level_reason\": \"Numbered as 13 with large font size 18.0 and ratio 1.9, consistent with level 1 major section style.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"13.1 해외여행 시 필요한 질병예방의 원칙\",\n      \"page\": 148,\n      \"level_reason\": \"Numbered as 13.1 with font size 12.5 and ratio 1.32, consistent with level 2 subsection style.\"\n    }\n  ]\n}",
+    "raw_response_chars": 672
+}
