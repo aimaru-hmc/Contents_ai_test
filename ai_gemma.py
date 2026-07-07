@@ -79,6 +79,10 @@ DEFAULT_WRITE_PARSED_PDF = (
     os.getenv("WRITE_PARSED_PDF", "true").strip().lower()
     in {"1", "true", "yes", "on"}
 )
+DEFAULT_WRITE_CHUNK_RESULTS = (
+    os.getenv("WRITE_CHUNK_RESULTS", "true").strip().lower()
+    in {"1", "true", "yes", "on"}
+)
 DEFAULT_GEMMA_VLLM_TENSOR_PARALLEL_SIZE = int(os.getenv("GEMMA_VLLM_TENSOR_PARALLEL_SIZE", os.getenv("VLLM_TENSOR_PARALLEL_SIZE", "1")))
 DEFAULT_GEMMA_VLLM_GPU_MEMORY_UTILIZATION = float(os.getenv("GEMMA_VLLM_GPU_MEMORY_UTILIZATION", os.getenv("VLLM_GPU_MEMORY_UTILIZATION", "0.9")))
 DEFAULT_GEMMA_VLLM_MAX_MODEL_LEN = os.getenv("GEMMA_VLLM_MAX_MODEL_LEN", os.getenv("VLLM_MAX_MODEL_LEN", "")).strip()
@@ -1798,6 +1802,71 @@ def write_parsed_pdf_text(
     update_processing_metadata(args, parsed_pdf_file=str(parsed_file))
     print(f"  Parsed PDF text saved: {parsed_file}", flush=True)
     return parsed_file
+
+
+def write_chunk_result(
+    *,
+    provider: str,
+    model: str,
+    pdf_path: Path,
+    args: argparse.Namespace,
+    chunk: dict[str, Any],
+    total_chunks: int,
+    toc: dict[str, Any] | None = None,
+    raw_response: str | None = None,
+    error: Exception | None = None,
+) -> Path | None:
+    if not getattr(args, "write_chunk_results", DEFAULT_WRITE_CHUNK_RESULTS):
+        return None
+
+    source_pdf_text = str(getattr(args, "_ai_current_input_pdf_path", "") or "").strip()
+    source_pdf_path = Path(source_pdf_text) if source_pdf_text else pdf_path
+    run_timestamp = clean_text(getattr(args, "_ai_run_timestamp", "")) or timestamp_for_filename()
+    provider_part = safe_filename_part(provider or clean_text(getattr(args, "provider", "")) or "provider")
+    pdf_part = safe_filename_part(source_pdf_path.stem or pdf_path.stem)
+    chunk_part = safe_filename_part(str(chunk.get("index", "chunk")))
+    start_page = chunk.get("start_page")
+    end_page = chunk.get("end_page")
+
+    chunk_dir = Path(args.output_dir) / "chunk_results" / f"{pdf_part}_{provider_part}_{run_timestamp}"
+    chunk_file = unique_output_path(chunk_dir / f"chunk_{chunk_part}_pages_{start_page}-{end_page}.json")
+    chunk_file.parent.mkdir(parents=True, exist_ok=True)
+
+    payload: dict[str, Any] = {
+        "timestamp": timestamp_for_metadata(),
+        "provider": provider,
+        "model": model,
+        "source_pdf": str(source_pdf_path),
+        "processed_pdf": str(pdf_path),
+        "chunk": chunk.get("index"),
+        "total_chunks": total_chunks,
+        "start_page": start_page,
+        "end_page": end_page,
+        "input_chars": len(str(chunk.get("text") or "")),
+    }
+    if toc is not None:
+        payload["toc"] = toc
+        payload["chapter_count"] = len(toc.get("chapters", []) or [])
+    if raw_response is not None:
+        payload["raw_response"] = raw_response
+        payload["raw_response_chars"] = len(raw_response)
+    if error is not None:
+        payload["error_type"] = type(error).__name__
+        payload["error"] = message_of(error)
+
+    save_json(chunk_file, payload)
+
+    chunk_files = getattr(args, "_ai_chunk_result_files", None)
+    if not isinstance(chunk_files, list):
+        chunk_files = []
+    chunk_files.append(str(chunk_file))
+    setattr(args, "_ai_chunk_result_files", chunk_files)
+    update_processing_metadata(
+        args,
+        chunk_result_dir=str(chunk_file.parent),
+        chunk_result_files=chunk_files,
+    )
+    return chunk_file
 
 
 def build_claude_text_prompt(base_prompt: str, pdf_name: str, text: str) -> str:
@@ -3986,6 +4055,18 @@ def process_gemma_text_chunk(
             "end_page": chunk["end_page"],
             "raw_response": raw_text,
         })
+        chunk_result_file = write_chunk_result(
+            provider="gemma",
+            model=model,
+            pdf_path=pdf_path,
+            args=args,
+            chunk=chunk,
+            total_chunks=total_chunks,
+            toc=partial_toc,
+            raw_response=raw_text,
+        )
+        if chunk_result_file is not None:
+            print(f"  Gemma chunk {chunk_label} result saved: {chunk_result_file}", flush=True)
         if use_level_reference and level_reference is not None:
             update_toc_level_reference(
                 level_reference,
@@ -4011,6 +4092,17 @@ def process_gemma_text_chunk(
                 "end_page": chunk["end_page"],
                 "error": message_of(error),
             })
+            chunk_result_file = write_chunk_result(
+                provider="gemma",
+                model=model,
+                pdf_path=pdf_path,
+                args=args,
+                chunk=chunk,
+                total_chunks=total_chunks,
+                error=error,
+            )
+            if chunk_result_file is not None:
+                print(f"  Gemma chunk {chunk_label} error saved: {chunk_result_file}", flush=True)
             raise
 
         min_chunk_chars = max(5000, int(getattr(args, "gemma_text_min_chunk_chars", DEFAULT_GEMMA_TEXT_MIN_CHUNK_CHARS)))
@@ -4024,6 +4116,17 @@ def process_gemma_text_chunk(
                 "end_page": chunk["end_page"],
                 "error": message_of(error),
             })
+            chunk_result_file = write_chunk_result(
+                provider="gemma",
+                model=model,
+                pdf_path=pdf_path,
+                args=args,
+                chunk=chunk,
+                total_chunks=total_chunks,
+                error=error,
+            )
+            if chunk_result_file is not None:
+                print(f"  Gemma chunk {chunk_label} error saved: {chunk_result_file}", flush=True)
             raise
 
         subchunk_chars = max(min_chunk_chars, len(str(chunk.get("text") or "")) // 2)
@@ -4254,6 +4357,7 @@ def generate_toc_from_pdf_gemma_text(
         "level_reference": {
             str(level): examples for level, examples in sorted(level_reference.items())
         } if level_reference_enabled else {},
+        "chunk_result_files": getattr(args, "_ai_chunk_result_files", []),
         "chunk_raw_responses": raw_parts,
         "final_raw_response": final_raw_text,
     }
@@ -4558,6 +4662,7 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> b
     setattr(args, "_ai_current_input_pdf_path", str(pdf_path))
     setattr(args, "_ai_current_display_name", display_name)
     setattr(args, "_ai_processing_metadata", {})
+    setattr(args, "_ai_chunk_result_files", [])
     print(f"Processing started: {display_name}", flush=True)
     print(f"  provider: {args.provider}", flush=True)
     started_at = time.perf_counter()
@@ -4872,6 +4977,19 @@ def build_arg_parser() -> argparse.ArgumentParser:
         dest="write_parsed_pdf",
         action="store_false",
         help="Do not save extracted PDF text/layout input.",
+    )
+    parser.add_argument(
+        "--write-chunk-results",
+        dest="write_chunk_results",
+        action="store_true",
+        default=DEFAULT_WRITE_CHUNK_RESULTS,
+        help="Save each Gemma chunk partial TOC and raw response under output_dir/chunk_results. Enabled by default.",
+    )
+    parser.add_argument(
+        "--no-write-chunk-results",
+        dest="write_chunk_results",
+        action="store_false",
+        help="Do not save per-chunk Gemma result files.",
     )
     parser.add_argument(
         "--log-file",
