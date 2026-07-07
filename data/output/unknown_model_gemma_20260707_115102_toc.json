@@ -1,0 +1,2223 @@
+{
+    "title": "Basic epidemiology",
+    "chapters": [
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 14,
+            "level_reason": "Section title under Chapter 1, indicated by font size and bold style."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 1 What is epidemiology?",
+            "page": 14,
+            "level_reason": "Numbered chapter title with largest font size and bold style."
+        },
+        {
+            "level": 2,
+            "chapter": "The historical context",
+            "page": 14,
+            "level_reason": "Section title under Chapter 1, indicated by font size and bold style."
+        },
+        {
+            "level": 3,
+            "chapter": "Origins",
+            "page": 14,
+            "level_reason": "Subsection under The historical context, indicated by smaller font size and indentation."
+        },
+        {
+            "level": 3,
+            "chapter": "Recent developments in epidemiology",
+            "page": 14,
+            "level_reason": "Subsection under The historical context, indicated by smaller font size and indentation."
+        },
+        {
+            "level": 2,
+            "chapter": "Definition, scope, and uses of epidemiology",
+            "page": 15,
+            "level_reason": "Section title under Chapter 1, indicated by font size and bold style."
+        },
+        {
+            "level": 3,
+            "chapter": "Definition",
+            "page": 15,
+            "level_reason": "Subsection under Definition, scope, and uses of epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Scope",
+            "page": 16,
+            "level_reason": "Subsection under Definition, scope, and uses of epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Natural history of disease",
+            "page": 17,
+            "level_reason": "Subsection under Epidemiology and public health."
+        },
+        {
+            "level": 2,
+            "chapter": "Epidemiology and public health",
+            "page": 17,
+            "level_reason": "Section title under Chapter 1, indicated by font size and bold style."
+        },
+        {
+            "level": 3,
+            "chapter": "Causation of disease",
+            "page": 17,
+            "level_reason": "Subsection under Epidemiology and public health."
+        },
+        {
+            "level": 3,
+            "chapter": "Health status of populations",
+            "page": 18,
+            "level_reason": "Subsection under Epidemiology and public health."
+        },
+        {
+            "level": 3,
+            "chapter": "Evaluating interventions",
+            "page": 18,
+            "level_reason": "Subsection under Epidemiology and public health."
+        },
+        {
+            "level": 2,
+            "chapter": "Achievements in epidemiology",
+            "page": 19,
+            "level_reason": "Section title under Chapter 1, indicated by font size and bold style."
+        },
+        {
+            "level": 3,
+            "chapter": "Smallpox",
+            "page": 19,
+            "level_reason": "Subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Methyl mercury poisoning",
+            "page": 20,
+            "level_reason": "Subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Rheumatic fever and rheumatic heart disease",
+            "page": 20,
+            "level_reason": "Subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Iodine deficiency diseases",
+            "page": 21,
+            "level_reason": "Subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Tobacco use, asbestos and lung cancer",
+            "page": 22,
+            "level_reason": "Subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Hip fractures",
+            "page": 22,
+            "level_reason": "Subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "HIV/AIDS",
+            "page": 23,
+            "level_reason": "Subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "SARS",
+            "page": 23,
+            "level_reason": "Subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 28,
+            "level_reason": "Section title under Chapter 2, indicated by font size and bold style."
+        },
+        {
+            "level": 2,
+            "chapter": "Defining health and disease",
+            "page": 28,
+            "level_reason": "Section title under Chapter 2, indicated by font size and bold style."
+        },
+        {
+            "level": 3,
+            "chapter": "Definitions",
+            "page": 28,
+            "level_reason": "Subsection under Defining health and disease."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 2 Measuring health and disease",
+            "page": 28,
+            "level_reason": "Numbered chapter title with largest font size and bold style."
+        },
+        {
+            "level": 3,
+            "chapter": "Diagnostic criteria",
+            "page": 29,
+            "level_reason": "Subsection under Defining health and disease."
+        },
+        {
+            "level": 2,
+            "chapter": "Measuring disease frequency",
+            "page": 30,
+            "level_reason": "Section title under Chapter 2, indicated by font size and bold style."
+        },
+        {
+            "level": 3,
+            "chapter": "Population at risk",
+            "page": 30,
+            "level_reason": "Subsection under Measuring disease frequency."
+        },
+        {
+            "level": 3,
+            "chapter": "Incidence and prevalence",
+            "page": 31,
+            "level_reason": "Subsection under Measuring disease frequency."
+        },
+        {
+            "level": 4,
+            "chapter": "Prevalence",
+            "page": 32,
+            "level_reason": "Sub-subsection under Incidence and prevalence, indicated by bold italic style."
+        },
+        {
+            "level": 4,
+            "chapter": "Incidence",
+            "page": 33,
+            "level_reason": "Sub-subsection under Incidence and prevalence, indicated by bold italic style."
+        },
+        {
+            "level": 4,
+            "chapter": "Cumulative incidence",
+            "page": 34,
+            "level_reason": "Sub-subsection under Incidence and prevalence, indicated by bold italic style."
+        },
+        {
+            "level": 3,
+            "chapter": "Case fatality",
+            "page": 35,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Interrelationships of the different measures",
+            "page": 35,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 2,
+            "chapter": "Using available information to measure health and disease",
+            "page": 36,
+            "level_reason": "Font size 20.0, ratio 2.00, consistent with level 2 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Mortality",
+            "page": 36,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Limitations of death certificates",
+            "page": 36,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Limitations of vital registration systems",
+            "page": 37,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Verbal autopsy",
+            "page": 37,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Towards comparable estimates",
+            "page": 37,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 2,
+            "chapter": "Death rates",
+            "page": 38,
+            "level_reason": "Font size 20.0, ratio 2.00, consistent with level 2 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Age-specific death rates",
+            "page": 38,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Proportionate mortality",
+            "page": 38,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Infant mortality",
+            "page": 39,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Child mortality rate",
+            "page": 39,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Maternal mortality rate",
+            "page": 40,
+            "level_reason": "Font size 14.0, ratio 1.56, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Adult mortality rate",
+            "page": 41,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Life expectancy",
+            "page": 41,
+            "level_reason": "Font size 8.0, ratio 0.80, bold, used as a sub-topic under Adult mortality rate."
+        },
+        {
+            "level": 3,
+            "chapter": "Age-standardized rates",
+            "page": 42,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 2,
+            "chapter": "Morbidity",
+            "page": 43,
+            "level_reason": "Font size 20.0, ratio 2.00, consistent with level 2 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Disability",
+            "page": 44,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Health determinants, indicators, and risk factors",
+            "page": 45,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Health determinants",
+            "page": 45,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Health indicators",
+            "page": 45,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Risk factors",
+            "page": 45,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Other summary measures of population health",
+            "page": 45,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Disability-adjusted life years",
+            "page": 46,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 2,
+            "chapter": "Comparing disease occurrence",
+            "page": 47,
+            "level_reason": "Font size 20.0, ratio 2.00, consistent with level 2 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Absolute comparisons",
+            "page": 47,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Risk difference",
+            "page": 47,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Attributable fraction (exposed)",
+            "page": 47,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Population attributable risk",
+            "page": 48,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Relative comparisons",
+            "page": 48,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Relative risk",
+            "page": 48,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Attributable risk",
+            "page": 48,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 52,
+            "level_reason": "Font size 20.0, ratio 2.00, consistent with level 2 style from previous reference."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 3 Types of studies",
+            "page": 52,
+            "level_reason": "Font size 32.0, ratio 3.20, top-level chapter heading."
+        },
+        {
+            "level": 2,
+            "chapter": "Observations and experiments",
+            "page": 52,
+            "level_reason": "Font size 20.0, ratio 2.00, consistent with level 2 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Observational studies",
+            "page": 52,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Experimental studies",
+            "page": 52,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Descriptive studies",
+            "page": 53,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 2,
+            "chapter": "Observational epidemiology",
+            "page": 53,
+            "level_reason": "Font size 20.0, ratio 2.00, consistent with level 2 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Ecological studies",
+            "page": 54,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Ecological fallacy",
+            "page": 56,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Cross-sectional studies",
+            "page": 57,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Case-control studies",
+            "page": 57,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Selection of cases and controls",
+            "page": 58,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Exposure",
+            "page": 58,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Odds ratio",
+            "page": 59,
+            "level_reason": "Font size 9.0, ratio 0.90, bold and italic, consistent with level 4 style from previous reference."
+        },
+        {
+            "level": 3,
+            "chapter": "Cohort studies",
+            "page": 59,
+            "level_reason": "Font size 14.0, ratio 1.40, consistent with level 3 style from previous reference."
+        },
+        {
+            "level": 4,
+            "chapter": "Historical cohort studies",
+            "page": 61,
+            "level_reason": "Bold italic style, smaller font size, and indented relative to main sections."
+        },
+        {
+            "level": 4,
+            "chapter": "Nested case-control studies",
+            "page": 61,
+            "level_reason": "Bold italic style, smaller font size, and indented relative to main sections."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 3 Types of studies",
+            "page": 61,
+            "level_reason": "Matches level 1 style from previous reference (Chapter title)."
+        },
+        {
+            "level": 3,
+            "chapter": "Summary of epidemiological studies",
+            "page": 62,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "Experimental epidemiology",
+            "page": 62,
+            "level_reason": "Font size s=20.0, r=2.00, consistent with level 2 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Randomized controlled trials",
+            "page": 63,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Field trials",
+            "page": 63,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Community trials",
+            "page": 64,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "Potential errors in epidemiological studies",
+            "page": 64,
+            "level_reason": "Font size s=20.0, r=2.00, consistent with level 2 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Random error",
+            "page": 65,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Sample size",
+            "page": 65,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Systematic error",
+            "page": 66,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Selection bias",
+            "page": 66,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Measurement bias",
+            "page": 67,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "Confounding",
+            "page": 68,
+            "level_reason": "Font size s=20.0, r=2.00, consistent with level 2 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "The control of confounding",
+            "page": 69,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "Randomization",
+            "page": 69,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "Restriction",
+            "page": 69,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "Matching",
+            "page": 69,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "Stratification and statistical modelling",
+            "page": 70,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "Validity",
+            "page": 70,
+            "level_reason": "Font size s=14.0, r=1.40, but functions as a major section here; however, following the provided reference for level 2 (s=20), this is technically level 3 based on font size, but contextually a major section. I will use level 3 to be consistent with s=14.0."
+        },
+        {
+            "level": 4,
+            "chapter": "Internal validity",
+            "page": 71,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "External validity",
+            "page": 71,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Ethical issues",
+            "page": 71,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "Informed consent",
+            "page": 71,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "Confidentiality",
+            "page": 72,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "Respect for individual rights",
+            "page": 72,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "Scientific integrity",
+            "page": 72,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 4 Basic biostatistics: concepts and tools",
+            "page": 76,
+            "level_reason": "Matches level 1 style (Chapter title)."
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 76,
+            "level_reason": "Font size s=20.0, r=2.00, consistent with level 2 hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "Summarizing data",
+            "page": 76,
+            "level_reason": "Font size s=20.0, r=2.00, consistent with level 2 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Tables and graphs",
+            "page": 77,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Pie charts and component band charts",
+            "page": 77,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Spot maps and rate maps",
+            "page": 78,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Bar charts",
+            "page": 78,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Line graphs",
+            "page": 79,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Frequency distributions and histograms",
+            "page": 79,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Normal distributions",
+            "page": 80,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "Summary numbers",
+            "page": 80,
+            "level_reason": "Font size s=20.0, r=2.00, consistent with level 2 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Means, medians and mode",
+            "page": 80,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "The mean",
+            "page": 80,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "The median",
+            "page": 80,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "The mode",
+            "page": 81,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Variances, standard deviations and standard errors",
+            "page": 81,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "Basic concepts of statistical inference",
+            "page": 82,
+            "level_reason": "Font size s=20.0, r=2.00, consistent with level 2 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Using samples to understand populations",
+            "page": 82,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "Random samples",
+            "page": 82,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Confidence intervals",
+            "page": 83,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "Calculating a confidence interval",
+            "page": 83,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "Degrees of freedom",
+            "page": 83,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 4,
+            "chapter": "Interpreting measures outside the confidence interval",
+            "page": 84,
+            "level_reason": "Bold italic style, smaller font size, consistent with level 4 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Hypothesis tests, p-values, statistical power",
+            "page": 84,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "The p-value",
+            "page": 84,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Statistical power",
+            "page": 84,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "Basic methods",
+            "page": 86,
+            "level_reason": "Font size s=20.0, r=2.00, consistent with level 2 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "t-tests",
+            "page": 86,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Chi-squared tests for cross tabulations",
+            "page": 87,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "Correlation",
+            "page": 88,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Regression",
+            "page": 88,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Using and interpreting regression models",
+            "page": 88,
+            "level_reason": "Font size 9.0, ratio 0.9, bold and italic, matches previous level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Different regression models",
+            "page": 88,
+            "level_reason": "Font size 9.0, ratio 0.9, bold and italic, matches previous level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Key concept for regression models",
+            "page": 88,
+            "level_reason": "Font size 9.0, ratio 0.9, bold and italic, matches previous level 4 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Linear regression",
+            "page": 89,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Dependent variable",
+            "page": 89,
+            "level_reason": "Font size 9.0, ratio 0.9, bold and italic, matches previous level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Independent variables",
+            "page": 90,
+            "level_reason": "Font size 9.0, ratio 0.9, bold and italic, matches previous level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Multiple variables",
+            "page": 90,
+            "level_reason": "Font size 9.0, ratio 0.9, bold and italic, matches previous level 4 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Logistic regression",
+            "page": 91,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Survival analyses and Cox proportional hazards models",
+            "page": 92,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Kaplan-Meier survival curves",
+            "page": 92,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Sample size issues",
+            "page": 93,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Two sample t-test",
+            "page": 93,
+            "level_reason": "Font size 9.0, ratio 0.9, bold and italic, matches previous level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Test comparing proportions",
+            "page": 94,
+            "level_reason": "Font size 9.0, ratio 0.9, bold and italic, matches previous level 4 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Meta-analysis",
+            "page": 94,
+            "level_reason": "Font size 20.0, ratio 2.0, matches previous level 2 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 96,
+            "level_reason": "Font size 20.0, ratio 2.0, matches previous level 2 style."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 5 Causation in epidemiology",
+            "page": 96,
+            "level_reason": "Font size 32.0, ratio 3.2, matches previous level 1 style."
+        },
+        {
+            "level": 2,
+            "chapter": "The concept of cause",
+            "page": 96,
+            "level_reason": "Font size 20.0, ratio 2.0, matches previous level 2 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Sufficient or necessary",
+            "page": 96,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Multiple factors",
+            "page": 97,
+            "level_reason": "Font size 9.0, ratio 0.9, bold and italic, matches previous level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Attributable fraction",
+            "page": 97,
+            "level_reason": "Font size 9.0, ratio 0.9, bold and italic, matches previous level 4 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Sufficient and necessary",
+            "page": 97,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "A causal pathway",
+            "page": 98,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Single and multiple causes",
+            "page": 99,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Factors in causation",
+            "page": 100,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Interaction",
+            "page": 101,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "A hierarchy of causes",
+            "page": 101,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Establishing the cause of a disease",
+            "page": 102,
+            "level_reason": "Font size 20.0, ratio 2.0, matches previous level 2 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Considering causation",
+            "page": 102,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Temporal relationship",
+            "page": 102,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Plausibility",
+            "page": 104,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Consistency",
+            "page": 104,
+            "level_reason": "Font size 9.0, ratio 0.9, matches previous level 3 style context."
+        },
+        {
+            "level": 3,
+            "chapter": "Strength",
+            "page": 106,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Dose–response relationship",
+            "page": 106,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Reversibility",
+            "page": 108,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Study design",
+            "page": 108,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Experimental studies",
+            "page": 108,
+            "level_reason": "Font size 9.0, ratio 0.9, bold and italic, matches previous level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Cohort and case control studies",
+            "page": 108,
+            "level_reason": "Font size 9.0, ratio 0.9, bold and italic, matches previous level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Cross-sectional studies",
+            "page": 108,
+            "level_reason": "Font size 9.0, ratio 0.9, bold and italic, matches previous level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Ecological studies",
+            "page": 108,
+            "level_reason": "Font size 9.0, ratio 0.9, bold and italic, matches previous level 4 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Judging the evidence",
+            "page": 109,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 112,
+            "level_reason": "Font size 20.0, ratio 2.0, matches previous level 2 style."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 6 Epidemiology and prevention: chronic noncommunicable diseases",
+            "page": 112,
+            "level_reason": "Font size 32.0, ratio 3.2, matches previous level 1 style."
+        },
+        {
+            "level": 2,
+            "chapter": "The scope of prevention",
+            "page": 112,
+            "level_reason": "Font size 20.0, ratio 2.0, matches previous level 2 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Recent trends in death rates",
+            "page": 112,
+            "level_reason": "Font size 14.0, ratio 1.4, matches previous level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Preventive potential",
+            "page": 114,
+            "level_reason": "Font size s=14.0 and ratio r=1.56, consistent with level 3 style in previous references."
+        },
+        {
+            "level": 3,
+            "chapter": "Causation framework",
+            "page": 115,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Levels of prevention",
+            "page": 116,
+            "level_reason": "Font size s=20.0 and ratio r=2.00, consistent with level 2 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Primordial prevention",
+            "page": 116,
+            "level_reason": "Font size s=20.0 and ratio r=2.00, consistent with level 2 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Primary prevention",
+            "page": 118,
+            "level_reason": "Font size s=20.0 and ratio r=2.00, consistent with level 2 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Population strategy",
+            "page": 118,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "High-risk individual strategy",
+            "page": 120,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Secondary prevention",
+            "page": 121,
+            "level_reason": "Font size s=20.0 and ratio r=2.50, consistent with level 2 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Tertiary prevention",
+            "page": 122,
+            "level_reason": "Font size s=20.0 and ratio r=2.00, consistent with level 2 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Screening",
+            "page": 123,
+            "level_reason": "Font size s=20.0 and ratio r=2.00, consistent with level 2 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Definition",
+            "page": 123,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Types of screening",
+            "page": 123,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Criteria for screening",
+            "page": 123,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Costs",
+            "page": 124,
+            "level_reason": "Font size s=9.0, bold and italic (b=1, i=1), consistent with level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Lead time",
+            "page": 124,
+            "level_reason": "Font size s=9.0, bold and italic (b=1, i=1), consistent with level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Length bias",
+            "page": 124,
+            "level_reason": "Font size s=9.0, bold and italic (b=1, i=1), consistent with level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Screening test",
+            "page": 125,
+            "level_reason": "Font size s=9.0, bold and italic (b=1, i=1), consistent with level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Natural history",
+            "page": 126,
+            "level_reason": "Font size s=9.0, bold and italic (b=1, i=1), consistent with level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Impact",
+            "page": 126,
+            "level_reason": "Font size s=9.0, bold and italic (b=1, i=1), consistent with level 4 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 130,
+            "level_reason": "Font size s=20.0 and ratio r=2.00, consistent with level 2 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Introduction",
+            "page": 130,
+            "level_reason": "Font size s=20.0 and ratio r=2.00, consistent with level 2 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Definitions",
+            "page": 130,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 7 Communicable diseases: epidemiology surveillance and response",
+            "page": 130,
+            "level_reason": "Explicitly labeled 'Chapter 7' with largest font size s=32.0."
+        },
+        {
+            "level": 3,
+            "chapter": "Role of epidemiology",
+            "page": 131,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Threats to human security and health systems",
+            "page": 131,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Epidemic and endemic disease",
+            "page": 132,
+            "level_reason": "Font size s=20.0 and ratio r=2.00, consistent with level 2 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Epidemics",
+            "page": 132,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Endemic diseases",
+            "page": 134,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Emerging and re-emerging infections",
+            "page": 135,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Chain of infection",
+            "page": 136,
+            "level_reason": "Font size s=20.0 and ratio r=2.00, consistent with level 2 style."
+        },
+        {
+            "level": 3,
+            "chapter": "The infectious agent",
+            "page": 136,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Transmission",
+            "page": 137,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Direct transmission",
+            "page": 137,
+            "level_reason": "Font size s=9.0, bold and italic (b=1, i=1), consistent with level 4 style."
+        },
+        {
+            "level": 4,
+            "chapter": "Indirect transmission",
+            "page": 137,
+            "level_reason": "Font size s=9.0, bold and italic (b=1, i=1), consistent with level 4 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Host",
+            "page": 138,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Environment",
+            "page": 138,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Investigation and control of epidemics",
+            "page": 139,
+            "level_reason": "Font size s=20.0 and ratio r=2.00, consistent with level 2 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Investigation",
+            "page": 139,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Identifying cases",
+            "page": 139,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Management and control",
+            "page": 139,
+            "level_reason": "Font size s=14.0 and ratio r=1.40, consistent with level 3 style."
+        },
+        {
+            "level": 2,
+            "chapter": "Surveillance and response",
+            "page": 140,
+            "level_reason": "Section title with font size 14.0 and ratio 1.4, appearing as a major topic within Chapter 7."
+        },
+        {
+            "level": 3,
+            "chapter": "Definition",
+            "page": 140,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Surveillance and response."
+        },
+        {
+            "level": 3,
+            "chapter": "The scope of surveillance",
+            "page": 140,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Surveillance and response."
+        },
+        {
+            "level": 3,
+            "chapter": "Sources of data",
+            "page": 141,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Surveillance and response."
+        },
+        {
+            "level": 3,
+            "chapter": "Surveillance in practice",
+            "page": 141,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Surveillance and response."
+        },
+        {
+            "level": 3,
+            "chapter": "Analysis and interpretation of surveillance data",
+            "page": 142,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Surveillance and response."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 8 Clinical epidemiology",
+            "page": 146,
+            "level_reason": "Chapter title with largest font size 32.0 and ratio 3.2."
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 146,
+            "level_reason": "Major section title with font size 20.0 and ratio 2.0."
+        },
+        {
+            "level": 2,
+            "chapter": "Introduction",
+            "page": 146,
+            "level_reason": "Major section title with font size 20.0 and ratio 2.0."
+        },
+        {
+            "level": 2,
+            "chapter": "Definitions of normality and abnormality",
+            "page": 146,
+            "level_reason": "Major section title with font size 20.0 and ratio 2.0."
+        },
+        {
+            "level": 3,
+            "chapter": "Normal as common",
+            "page": 147,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Definitions of normality and abnormality."
+        },
+        {
+            "level": 3,
+            "chapter": "Abnormality associated with disease",
+            "page": 148,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Definitions of normality and abnormality."
+        },
+        {
+            "level": 3,
+            "chapter": "Abnormal as treatable",
+            "page": 148,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Definitions of normality and abnormality."
+        },
+        {
+            "level": 2,
+            "chapter": "Diagnostic tests",
+            "page": 149,
+            "level_reason": "Major section title with font size 20.0 and ratio 2.0."
+        },
+        {
+            "level": 3,
+            "chapter": "Value of a test",
+            "page": 149,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Diagnostic tests."
+        },
+        {
+            "level": 2,
+            "chapter": "Natural history and prognosis",
+            "page": 150,
+            "level_reason": "Major section title with font size 20.0 and ratio 2.0."
+        },
+        {
+            "level": 3,
+            "chapter": "Prognosis",
+            "page": 150,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Natural history and prognosis."
+        },
+        {
+            "level": 4,
+            "chapter": "Quality of life",
+            "page": 151,
+            "level_reason": "Lower level subsection with font size 14.0, nested under Prognosis."
+        },
+        {
+            "level": 4,
+            "chapter": "Quantity of life",
+            "page": 151,
+            "level_reason": "Lower level subsection with font size 14.0, nested under Prognosis."
+        },
+        {
+            "level": 2,
+            "chapter": "Effectiveness of treatment",
+            "page": 152,
+            "level_reason": "Major section title with font size 20.0 and ratio 2.0."
+        },
+        {
+            "level": 2,
+            "chapter": "Use of evidence-based guidelines",
+            "page": 153,
+            "level_reason": "Major section title with font size 20.0 and ratio 2.0."
+        },
+        {
+            "level": 2,
+            "chapter": "Prevention in clinical practice",
+            "page": 153,
+            "level_reason": "Major section title with font size 20.0 and ratio 2.0."
+        },
+        {
+            "level": 3,
+            "chapter": "Reducing risks",
+            "page": 154,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Prevention in clinical practice."
+        },
+        {
+            "level": 3,
+            "chapter": "Reducing risks in patients with established disease",
+            "page": 154,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Prevention in clinical practice."
+        },
+        {
+            "level": 4,
+            "chapter": "Behavioural interventions",
+            "page": 155,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Reducing risks in patients with established disease."
+        },
+        {
+            "level": 4,
+            "chapter": "Pharmacological interventions",
+            "page": 155,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Reducing risks in patients with established disease."
+        },
+        {
+            "level": 4,
+            "chapter": "Other interventions",
+            "page": 155,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Reducing risks in patients with established disease."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 9 Environmental and occupational epidemiology",
+            "page": 158,
+            "level_reason": "Chapter title with largest font size 32.0 and ratio 3.2."
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 158,
+            "level_reason": "Major section title with font size 20.0 and ratio 2.0."
+        },
+        {
+            "level": 2,
+            "chapter": "Environment and health",
+            "page": 158,
+            "level_reason": "Major section title with font size 20.0 and ratio 2.0."
+        },
+        {
+            "level": 3,
+            "chapter": "Impact of exposure to environmental factors",
+            "page": 159,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Environment and health."
+        },
+        {
+            "level": 4,
+            "chapter": "Multi-causality",
+            "page": 159,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Impact of exposure to environmental factors."
+        },
+        {
+            "level": 3,
+            "chapter": "Evaluation of preventive measures",
+            "page": 160,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Environment and health."
+        },
+        {
+            "level": 4,
+            "chapter": "Value of prevention",
+            "page": 160,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Evaluation of preventive measures."
+        },
+        {
+            "level": 4,
+            "chapter": "Future challenges",
+            "page": 160,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Evaluation of preventive measures."
+        },
+        {
+            "level": 2,
+            "chapter": "Exposure and dose",
+            "page": 162,
+            "level_reason": "Major section title with font size 20.0 and ratio 2.0."
+        },
+        {
+            "level": 3,
+            "chapter": "General concepts",
+            "page": 162,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Exposure and dose."
+        },
+        {
+            "level": 3,
+            "chapter": "Biological monitoring",
+            "page": 163,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Exposure and dose."
+        },
+        {
+            "level": 4,
+            "chapter": "Interpreting biological data",
+            "page": 164,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Biological monitoring."
+        },
+        {
+            "level": 4,
+            "chapter": "Individual versus group measurements",
+            "page": 164,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Biological monitoring."
+        },
+        {
+            "level": 4,
+            "chapter": "Variation in time",
+            "page": 164,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Biological monitoring."
+        },
+        {
+            "level": 4,
+            "chapter": "Variation in exposure",
+            "page": 165,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Biological monitoring."
+        },
+        {
+            "level": 4,
+            "chapter": "Distribution issues",
+            "page": 165,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Biological monitoring."
+        },
+        {
+            "level": 4,
+            "chapter": "Measures of effect",
+            "page": 165,
+            "level_reason": "Subsection title with bold and italic style, font size 9.0, nested under Biological monitoring."
+        },
+        {
+            "level": 3,
+            "chapter": "Population dose",
+            "page": 165,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Exposure and dose."
+        },
+        {
+            "level": 3,
+            "chapter": "Dose-effect relationships",
+            "page": 166,
+            "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Exposure and dose."
+        },
+        {
+            "level": 3,
+            "chapter": "Dose–response relationships",
+            "page": 167,
+            "level_reason": "Font size s=14.0, r=1.40, consistent with level 3 style in previous references."
+        },
+        {
+            "level": 2,
+            "chapter": "Assessing risk",
+            "page": 168,
+            "level_reason": "Font size s=20.0, r=2.00, bold-like prominence, consistent with level 2 style."
+        },
+        {
+            "level": 3,
+            "chapter": "Risk assessment",
+            "page": 168,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Assessing risk."
+        },
+        {
+            "level": 3,
+            "chapter": "Health impact assessment",
+            "page": 168,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Assessing risk."
+        },
+        {
+            "level": 3,
+            "chapter": "Risk management",
+            "page": 168,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Assessing risk."
+        },
+        {
+            "level": 3,
+            "chapter": "Environmental health impact assessment",
+            "page": 168,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Assessing risk."
+        },
+        {
+            "level": 2,
+            "chapter": "Injury epidemiology",
+            "page": 170,
+            "level_reason": "Font size s=20.0, r=2.00, major section title."
+        },
+        {
+            "level": 3,
+            "chapter": "Traffic crash injuries",
+            "page": 170,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Injury epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Workplace injury",
+            "page": 170,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Injury epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Violence",
+            "page": 171,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Injury epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Suicides",
+            "page": 171,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Injury epidemiology."
+        },
+        {
+            "level": 2,
+            "chapter": "Special features of environmental and occupational epidemiology",
+            "page": 172,
+            "level_reason": "Font size s=20.0, r=2.00, major section title."
+        },
+        {
+            "level": 3,
+            "chapter": "Setting safety standards",
+            "page": 172,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Special features."
+        },
+        {
+            "level": 3,
+            "chapter": "Measuring past exposure",
+            "page": 173,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Special features."
+        },
+        {
+            "level": 3,
+            "chapter": "Healthy worker effect in occupational studies",
+            "page": 173,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Special features."
+        },
+        {
+            "level": 3,
+            "chapter": "Continuing challenges for epidemiologists",
+            "page": 173,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Special features."
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 178,
+            "level_reason": "Font size s=20.0, r=2.00, standard chapter opening section."
+        },
+        {
+            "level": 2,
+            "chapter": "Introduction",
+            "page": 178,
+            "level_reason": "Font size s=20.0, r=2.00, standard chapter opening section."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 10 Epidemiology, health policy and planning",
+            "page": 178,
+            "level_reason": "Chapter numbering and largest font size s=32.0, r=3.20."
+        },
+        {
+            "level": 3,
+            "chapter": "Health policy",
+            "page": 178,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Introduction."
+        },
+        {
+            "level": 3,
+            "chapter": "Health planning",
+            "page": 178,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Introduction."
+        },
+        {
+            "level": 3,
+            "chapter": "Evaluation",
+            "page": 178,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Introduction."
+        },
+        {
+            "level": 3,
+            "chapter": "The influence of epidemiology",
+            "page": 179,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Health policy."
+        },
+        {
+            "level": 2,
+            "chapter": "Health policy",
+            "page": 179,
+            "level_reason": "Font size s=20.0, r=2.00, major section title."
+        },
+        {
+            "level": 3,
+            "chapter": "Framing health policy",
+            "page": 180,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Health policy."
+        },
+        {
+            "level": 3,
+            "chapter": "Health policy in practice",
+            "page": 181,
+            "level_reason": "Font size s=14.0, r=1.56, subsection under Health policy."
+        },
+        {
+            "level": 2,
+            "chapter": "Health planning",
+            "page": 182,
+            "level_reason": "Font size s=20.0, r=2.00, major section title."
+        },
+        {
+            "level": 3,
+            "chapter": "The planning cycle",
+            "page": 183,
+            "level_reason": "Font size s=20.0, r=2.00, though styled as level 2, it is logically a subsection of Health planning."
+        },
+        {
+            "level": 4,
+            "chapter": "Assessing burden",
+            "page": 184,
+            "level_reason": "Font size s=14.0, r=1.56, part of the planning cycle steps."
+        },
+        {
+            "level": 4,
+            "chapter": "Summary population measures",
+            "page": 185,
+            "level_reason": "Font size s=9.0, r=0.90, bold/italic, sub-component of Assessing burden."
+        },
+        {
+            "level": 4,
+            "chapter": "Rapid assessment",
+            "page": 185,
+            "level_reason": "Font size s=9.0, r=0.90, bold/italic, sub-component of Assessing burden."
+        },
+        {
+            "level": 4,
+            "chapter": "Understanding causes",
+            "page": 185,
+            "level_reason": "Font size s=14.0, r=1.40, part of the planning cycle steps."
+        },
+        {
+            "level": 4,
+            "chapter": "Measuring effectiveness of interventions",
+            "page": 185,
+            "level_reason": "Font size s=14.0, r=1.40, part of the planning cycle steps."
+        },
+        {
+            "level": 4,
+            "chapter": "Assessing efficiency",
+            "page": 186,
+            "level_reason": "Font size s=14.0, r=1.40, part of the planning cycle steps."
+        },
+        {
+            "level": 4,
+            "chapter": "Implementing interventions",
+            "page": 187,
+            "level_reason": "Font size s=14.0, r=1.40, part of the planning cycle steps."
+        },
+        {
+            "level": 4,
+            "chapter": "Monitoring activities and measuring progress",
+            "page": 188,
+            "level_reason": "Font size s=14.0, r=1.40, part of the planning cycle steps."
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 190,
+            "level_reason": "Font size s=20.0, r=2.00, standard chapter opening section."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 11 First steps in practical epidemiology",
+            "page": 190,
+            "level_reason": "Chapter numbering and largest font size s=32.0, r=3.20."
+        },
+        {
+            "level": 2,
+            "chapter": "Introduction",
+            "page": 190,
+            "level_reason": "Font size s=20.0, r=2.00, standard chapter opening section."
+        },
+        {
+            "level": 2,
+            "chapter": "Specific diseases",
+            "page": 190,
+            "level_reason": "Font size s=20.0, r=2.00, major section title."
+        },
+        {
+            "level": 2,
+            "chapter": "Critical reading",
+            "page": 191,
+            "level_reason": "Font size s=20.0, r=2.00, major section title."
+        },
+        {
+            "level": 2,
+            "chapter": "Planning a research project",
+            "page": 194,
+            "level_reason": "Font size s=20.0, r=2.00, major section title."
+        },
+        {
+            "level": 3,
+            "chapter": "Choosing a project",
+            "page": 194,
+            "level_reason": "Font size s=14.0, r=1.40, subsection under Planning a research project."
+        },
+        {
+            "level": 3,
+            "chapter": "Writing the protocol",
+            "page": 195,
+            "level_reason": "Font size s=14.0, r=1.40, and indentation x=140 indicate a subsection level."
+        },
+        {
+            "level": 3,
+            "chapter": "Doing the research",
+            "page": 196,
+            "level_reason": "Font size s=14.0, r=1.40, and indentation x=55 indicate a subsection level."
+        },
+        {
+            "level": 3,
+            "chapter": "Analysing the data",
+            "page": 196,
+            "level_reason": "Font size s=14.0, r=1.40, and indentation x=55 indicate a subsection level."
+        },
+        {
+            "level": 3,
+            "chapter": "Getting published",
+            "page": 196,
+            "level_reason": "Font size s=14.0, r=1.40, and indentation x=55 indicate a subsection level."
+        },
+        {
+            "level": 2,
+            "chapter": "Further reading",
+            "page": 197,
+            "level_reason": "Font size s=20.0, r=2.23, and bold-like prominence indicate a major section within the chapter."
+        },
+        {
+            "level": 2,
+            "chapter": "Further training",
+            "page": 198,
+            "level_reason": "Font size s=20.0, r=2.50, and prominence indicate a major section within the chapter."
+        },
+        {
+            "level": 2,
+            "chapter": "Study questions",
+            "page": 199,
+            "level_reason": "Font size s=20.0, r=2.50, and prominence indicate a major section within the chapter."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 1",
+            "page": 202,
+            "level_reason": "Font size s=20.0, r=2.00, and explicit 'Chapter' numbering indicate a top-level section in the Annex."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 2",
+            "page": 203,
+            "level_reason": "Font size s=20.0, r=2.00, and explicit 'Chapter' numbering indicate a top-level section in the Annex."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 3",
+            "page": 205,
+            "level_reason": "Font size s=20.0, r=2.00, and explicit 'Chapter' numbering indicate a top-level section in the Annex."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 4",
+            "page": 207,
+            "level_reason": "Font size s=20.0, r=2.00, and explicit 'Chapter' numbering indicate a top-level section in the Annex."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 5",
+            "page": 208,
+            "level_reason": "Font size s=20.0, r=2.00, and explicit 'Chapter' numbering indicate a top-level section in the Annex."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 6",
+            "page": 210,
+            "level_reason": "Font size s=20.0, r=2.00, and explicit 'Chapter' numbering indicate a top-level section in the Annex."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 7",
+            "page": 211,
+            "level_reason": "Font size s=20.0, r=2.00, and explicit 'Chapter' numbering indicate a top-level section in the Annex."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 8",
+            "page": 213,
+            "level_reason": "Font size s=20.0, r=2.00, and explicit 'Chapter' numbering indicate a top-level section in the Annex."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 9",
+            "page": 214,
+            "level_reason": "Font size s=20.0, r=2.00, and explicit 'Chapter' numbering indicate a top-level section in the Annex."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 10",
+            "page": 215,
+            "level_reason": "Font size s=20.0, r=2.00, and explicit 'Chapter' numbering indicate a top-level section in the Annex."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 11",
+            "page": 217,
+            "level_reason": "Font size s=20.0, r=2.00, and explicit 'Chapter' numbering indicate a top-level section in the Annex."
+        }
+    ],
+    "_meta": {
+        "source_pdf": "주교재.pdf",
+        "provider": "gemma",
+        "model": "google/gemma-4-31B-it",
+        "generated_timestamp": "20260707_115102",
+        "generated_at": "2026-07-07 11:51:02",
+        "generation_started_at": "2026-07-07 11:47:18",
+        "generation_completed_at": "2026-07-07 11:51:02",
+        "elapsed_seconds": 223.955,
+        "elapsed": "3m 44.0s",
+        "input_mode": "extracted_pdf_layout_text",
+        "extracted_pages": 221,
+        "extracted_chars": 937307,
+        "gemma_extraction_mode": "layout",
+        "layout_line_count": 9501,
+        "layout_font_count": 28,
+        "plain_extracted_chars": 526098,
+        "parsed_pdf_file": "data/output/parsed_pdfs/unknown_model_gemma_20260707_110906_parsed_pdf.txt",
+        "chunked": true,
+        "chunk_count": 8,
+        "initial_chunk_count": 8,
+        "processed_chunk_count": 8,
+        "gemma_text_single_max_chars": 120000,
+        "gemma_text_chunk_chars": 120000,
+        "gemma_level_reference": true,
+        "gemma_runtime": "vllm",
+        "gemma_model": "google/gemma-4-31B-it",
+        "gemma_torch_dtype": "auto",
+        "gemma_vllm_tensor_parallel_size": 4,
+        "gemma_vllm_gpu_memory_utilization": 0.85,
+        "gemma_vllm_max_model_len": 65536,
+        "gemma_vllm_trust_remote_code": false,
+        "gemma_level_reference_levels": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "gemma_level_reference_examples": {
+            "1": [
+                {
+                    "title": "Chapter 1 What is epidemiology?",
+                    "font_size": 56.0,
+                    "size_ratio": 3.74,
+                    "left_indent": 162.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f1"
+                },
+                {
+                    "title": "Chapter 2 Measuring health and disease",
+                    "font_size": 10.0,
+                    "size_ratio": 1.0,
+                    "left_indent": 55.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f5"
+                },
+                {
+                    "title": "Chapter 3 Types of studies",
+                    "font_size": 10.0,
+                    "size_ratio": 1.0,
+                    "left_indent": 221.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f5"
+                },
+                {
+                    "title": "Chapter 4 Basic biostatistics: concepts and tools",
+                    "font_size": 20.0,
+                    "size_ratio": 2.0,
+                    "left_indent": 55.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f9"
+                },
+                {
+                    "title": "Chapter 5 Causation in epidemiology",
+                    "font_size": 8.4,
+                    "size_ratio": 0.84,
+                    "left_indent": 193.0,
+                    "bold": 0,
+                    "italic": 1,
+                    "font_id": "f21"
+                }
+            ],
+            "2": [
+                {
+                    "title": "Key messages",
+                    "font_size": 20.0,
+                    "size_ratio": 2.0,
+                    "left_indent": 168.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f9"
+                },
+                {
+                    "title": "The historical context",
+                    "font_size": 20.0,
+                    "size_ratio": 2.0,
+                    "left_indent": 55.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f9"
+                },
+                {
+                    "title": "Definition, scope, and uses of epidemiology",
+                    "font_size": 20.0,
+                    "size_ratio": 2.23,
+                    "left_indent": 140.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f9"
+                },
+                {
+                    "title": "Epidemiology and public health",
+                    "font_size": 20.0,
+                    "size_ratio": 2.0,
+                    "left_indent": 140.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f9"
+                },
+                {
+                    "title": "Achievements in epidemiology",
+                    "font_size": 20.0,
+                    "size_ratio": 2.0,
+                    "left_indent": 140.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f9"
+                }
+            ],
+            "3": [
+                {
+                    "title": "Origins",
+                    "font_size": 14.0,
+                    "size_ratio": 1.4,
+                    "left_indent": 55.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f10"
+                },
+                {
+                    "title": "Recent developments in epidemiology",
+                    "font_size": 14.0,
+                    "size_ratio": 1.4,
+                    "left_indent": 55.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f10"
+                },
+                {
+                    "title": "Definition",
+                    "font_size": 14.0,
+                    "size_ratio": 1.56,
+                    "left_indent": 140.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f10"
+                },
+                {
+                    "title": "Scope",
+                    "font_size": 14.0,
+                    "size_ratio": 1.75,
+                    "left_indent": 55.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f10"
+                },
+                {
+                    "title": "Causation of disease",
+                    "font_size": 14.0,
+                    "size_ratio": 1.4,
+                    "left_indent": 140.0,
+                    "bold": 0,
+                    "italic": 0,
+                    "font_id": "f10"
+                }
+            ],
+            "4": [
+                {
+                    "title": "Prevalence",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "left_indent": 55.0,
+                    "bold": 1,
+                    "italic": 1,
+                    "font_id": "f15"
+                },
+                {
+                    "title": "Incidence",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "left_indent": 140.0,
+                    "bold": 1,
+                    "italic": 1,
+                    "font_id": "f15"
+                },
+                {
+                    "title": "Cumulative incidence",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "left_indent": 55.0,
+                    "bold": 1,
+                    "italic": 1,
+                    "font_id": "f15"
+                },
+                {
+                    "title": "Verbal autopsy",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "left_indent": 140.0,
+                    "bold": 1,
+                    "italic": 1,
+                    "font_id": "f15"
+                },
+                {
+                    "title": "Age-specific death rates",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "left_indent": 55.0,
+                    "bold": 1,
+                    "italic": 1,
+                    "font_id": "f15"
+                }
+            ]
+        },
+        "gemma_merge_mode": "local",
+        "run_timestamp": "20260707_110906",
+        "run_log_file": "data/output/logs/batch_gemma_20260707_110906_log.txt"
+    }
+}
