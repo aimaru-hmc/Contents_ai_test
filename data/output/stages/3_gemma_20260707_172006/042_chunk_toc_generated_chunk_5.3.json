@@ -1,0 +1,71 @@
+{
+    "timestamp": "2026-07-07 18:15:37",
+    "stage_index": 42,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "5.3",
+    "total_chunks": 19,
+    "start_page": 182,
+    "end_page": 182,
+    "toc": {
+        "title": "제4편 보건의료와 건강관리",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "(3) 향후 과제",
+                "page": 182,
+                "level_reason": "Numbered with (3) and uses a smaller font size (s=10.0) compared to the main section title.",
+                "_layout_x": 183.0,
+                "_layout_y": 116.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(3) 향후 과제",
+                "_layout_page": 182,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "3) 외국의 진료비 지불제도 개혁 동향과 시사점",
+                "page": 182,
+                "level_reason": "Numbered with 3) and uses the largest font size (s=12.0) in this chunk, indicating a higher-level section.",
+                "_layout_x": 173.0,
+                "_layout_y": 316.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 외국의 진료비 지불제도 개혁 동향과 시사점",
+                "_layout_page": 182,
+                "_source_order": 1
+            },
+            {
+                "level": 3,
+                "chapter": "(1) 인구집단 보건의료의 구축과 가치기반 지불제도의 도입",
+                "page": 182,
+                "level_reason": "Numbered with (1) and uses a smaller font size (s=10.0) under the level 2 section.",
+                "_layout_x": 183.0,
+                "_layout_y": 428.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 인구집단 보건의료의 구축과 가치기반 지불제도의 도입",
+                "_layout_page": 182,
+                "_source_order": 2
+            },
+            {
+                "level": 3,
+                "chapter": "(2) 미국 책임의료조직",
+                "page": 182,
+                "level_reason": "Numbered with (2) and uses a smaller font size (s=10.0) under the level 2 section.",
+                "_layout_x": 183.0,
+                "_layout_y": 704.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 미국 책임의료조직",
+                "_layout_page": 182,
+                "_source_order": 3
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"제4편 보건의료와 건강관리\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"(3) 향후 과제\",\n      \"page\": 182,\n      \"level_reason\": \"Numbered with (3) and uses a smaller font size (s=10.0) compared to the main section title.\",\n      \"_layout_page\": 182,\n      \"_layout_x\": 183,\n      \"_layout_y\": 116,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.06,\n      \"_layout_text\": \"(3) 향후 과제\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"3) 외국의 진료비 지불제도 개혁 동향과 시사점\",\n      \"page\": 182,\n      \"level_reason\": \"Numbered with 3) and uses the largest font size (s=12.0) in this chunk, indicating a higher-level section.\",\n      \"_layout_page\": 182,\n      \"_layout_x\": 173,\n      \"_layout_y\": 316,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"3) 외국의 진료비 지불제도 개혁 동향과 시사점\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"(1) 인구집단 보건의료의 구축과 가치기반 지불제도의 도입\",\n      \"page\": 182,\n      \"level_reason\": \"Numbered with (1) and uses a smaller font size (s=10.0) under the level 2 section.\",\n      \"_layout_page\": 182,\n      \"_layout_x\": 183,\n      \"_layout_y\": 428,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.06,\n      \"_layout_text\": \"(1) 인구집단 보건의료의 구축과 가치기반 지불제도의 도입\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"(2) 미국 책임의료조직\",\n      \"page\": 182,\n      \"level_reason\": \"Numbered with (2) and uses a smaller font size (s=10.0) under the level 2 section.\",\n      \"_layout_page\": 182,\n      \"_layout_x\": 183,\n      \"_layout_y\": 704,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.06,\n      \"_layout_text\": \"(2) 미국 책임의료조직\"\n    }\n  ]\n}"
+}

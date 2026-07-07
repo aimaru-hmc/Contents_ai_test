@@ -1,0 +1,71 @@
+{
+    "timestamp": "2026-07-07 17:52:16",
+    "stage_index": 18,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재2/2권-한글/3편1,2장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_1_2_2021.pdf",
+    "chunk": "2.3",
+    "total_chunks": 4,
+    "start_page": 69,
+    "end_page": 70,
+    "toc": {
+        "title": "3_1_2_2021.pdf",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "1.2 소음으로 인한 건강영향",
+                "page": 69,
+                "level_reason": "Numbered as 1.2 with a larger font size (12.5) compared to body text, indicating a section level.",
+                "_layout_x": 73.0,
+                "_layout_y": 381.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.2 소음으로 인한 건강영향",
+                "_layout_page": 69,
+                "_source_order": 0
+            },
+            {
+                "level": 3,
+                "chapter": "1) 비청각기 영향",
+                "page": 69,
+                "level_reason": "Numbered as 1) with a font size (12.0) slightly smaller than the section title, indicating a subsection.",
+                "_layout_x": 65.0,
+                "_layout_y": 489.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 비청각기 영향",
+                "_layout_page": 69,
+                "_source_order": 1
+            },
+            {
+                "level": 3,
+                "chapter": "2) 청각기 영향",
+                "page": 69,
+                "level_reason": "Numbered as 2) with a font size (12.0) consistent with the previous subsection.",
+                "_layout_x": 65.0,
+                "_layout_y": 647.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 청각기 영향",
+                "_layout_page": 69,
+                "_source_order": 2
+            },
+            {
+                "level": 4,
+                "chapter": "(1) 소음성 난청",
+                "page": 70,
+                "level_reason": "Numbered as (1) with a font size (10.0) smaller than the subsection title, indicating a lower level of hierarchy.",
+                "_layout_x": 183.0,
+                "_layout_y": 161.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(1) 소음성 난청",
+                "_layout_page": 70,
+                "_source_order": 3
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"3_1_2_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"1.2 소음으로 인한 건강영향\",\n      \"page\": 69,\n      \"level_reason\": \"Numbered as 1.2 with a larger font size (12.5) compared to body text, indicating a section level.\",\n      \"_layout_page\": 69,\n      \"_layout_x\": 73,\n      \"_layout_y\": 381,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"1.2 소음으로 인한 건강영향\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1) 비청각기 영향\",\n      \"page\": 69,\n      \"level_reason\": \"Numbered as 1) with a font size (12.0) slightly smaller than the section title, indicating a subsection.\",\n      \"_layout_page\": 69,\n      \"_layout_x\": 65,\n      \"_layout_y\": 489,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"1) 비청각기 영향\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2) 청각기 영향\",\n      \"page\": 69,\n      \"level_reason\": \"Numbered as 2) with a font size (12.0) consistent with the previous subsection.\",\n      \"_layout_page\": 69,\n      \"_layout_x\": 65,\n      \"_layout_y\": 647,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"2) 청각기 영향\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"(1) 소음성 난청\",\n      \"page\": 70,\n      \"level_reason\": \"Numbered as (1) with a font size (10.0) smaller than the subsection title, indicating a lower level of hierarchy.\",\n      \"_layout_page\": 70,\n      \"_layout_x\": 183,\n      \"_layout_y\": 161,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.05,\n      \"_layout_text\": \"(1) 소음성 난청\"\n    }\n  ]\n}"
+}

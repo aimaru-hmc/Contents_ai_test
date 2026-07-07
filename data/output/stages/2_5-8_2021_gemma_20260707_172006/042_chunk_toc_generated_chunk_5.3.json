@@ -1,0 +1,45 @@
+{
+    "timestamp": "2026-07-07 17:38:46",
+    "stage_index": 42,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편5-8장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_5-8_2021.pdf",
+    "chunk": "5.3",
+    "total_chunks": 5,
+    "start_page": 177,
+    "end_page": 178,
+    "toc": {
+        "title": "제8장 의학연구에서 통계의 활용",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "(2) 기본가정",
+                "page": 177,
+                "level_reason": "Numbered as (2) with a larger font size (s=10.0) and ratio (r=1.05) compared to body text, indicating a subsection.",
+                "_layout_x": 75.0,
+                "_layout_y": 85.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(2) 기본가정",
+                "_layout_page": 177,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "(3) 분석방법",
+                "page": 177,
+                "level_reason": "Numbered as (3) with a larger font size (s=10.0) and ratio (r=1.05) compared to body text, indicating a subsection parallel to (2).",
+                "_layout_x": 75.0,
+                "_layout_y": 242.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(3) 분석방법",
+                "_layout_page": 177,
+                "_source_order": 1
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"제8장 의학연구에서 통계의 활용\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"(2) 기본가정\",\n      \"page\": 177,\n      \"level_reason\": \"Numbered as (2) with a larger font size (s=10.0) and ratio (r=1.05) compared to body text, indicating a subsection.\",\n      \"_layout_page\": 177,\n      \"_layout_x\": 75,\n      \"_layout_y\": 85,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.05,\n      \"_layout_text\": \"(2) 기본가정\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"(3) 분석방법\",\n      \"page\": 177,\n      \"level_reason\": \"Numbered as (3) with a larger font size (s=10.0) and ratio (r=1.05) compared to body text, indicating a subsection parallel to (2).\",\n      \"_layout_page\": 177,\n      \"_layout_x\": 75,\n      \"_layout_y\": 242,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.05,\n      \"_layout_text\": \"(3) 분석방법\"\n    }\n  ]\n}"
+}

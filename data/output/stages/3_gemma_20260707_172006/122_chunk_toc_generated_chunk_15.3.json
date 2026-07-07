@@ -1,0 +1,58 @@
+{
+    "timestamp": "2026-07-07 18:28:47",
+    "stage_index": 122,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "15.3",
+    "total_chunks": 19,
+    "start_page": 478,
+    "end_page": 478,
+    "toc": {
+        "title": "3.pdf",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "(cid:20)(cid:17)(cid:22) (cid:12460)(cid:13148)(cid:11689)(cid:11360)(cid:12250)(cid:12174)(cid:13508)(cid:12796) (cid:13025)(cid:12520)(cid:11342)(cid:11758)(cid:13552) (cid:11360)(cid:12250)(cid:12174)(cid:13508)",
+                "page": 478,
+                "level_reason": "Largest font size (s=12.5) and highest size ratio (r=1.32) on the page, indicating a primary section header.",
+                "_layout_x": 182.0,
+                "_layout_y": 276.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "(cid:20)(cid:17)(cid:22) (cid:12460)(cid:13148)(cid:11689)(cid:11360)(cid:12250)(cid:12174)(cid:13508)(cid:12796) (cid:13025)(cid:12520)(cid:11342)(cid:11758)(cid:13552) (cid:11360)(cid:12250)(cid:12174)(cid:13508)",
+                "_layout_page": 478,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "(cid:20)(cid:12) (cid:12443)(cid:13131)(cid:11672)(cid:11343)(cid:12233)(cid:12157)(cid:13491)",
+                "page": 478,
+                "level_reason": "Font size (s=12.0) is smaller than the level 1 header but larger than body text, indicating a subsection.",
+                "_layout_x": 173.0,
+                "_layout_y": 317.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "(cid:20)(cid:12) (cid:12443)(cid:13131)(cid:11672)(cid:11343)(cid:12233)(cid:12157)(cid:13491)",
+                "_layout_page": 478,
+                "_source_order": 1
+            },
+            {
+                "level": 2,
+                "chapter": "(cid:21)(cid:12) (cid:13008)(cid:12503)(cid:11325)(cid:11741)(cid:13535) (cid:11343)(cid:12233)(cid:12157)(cid:13491)",
+                "page": 478,
+                "level_reason": "Font size (s=12.0) and style match the previous level 2 entry, indicating a parallel subsection.",
+                "_layout_x": 173.0,
+                "_layout_y": 536.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "(cid:21)(cid:12) (cid:13008)(cid:12503)(cid:11325)(cid:11741)(cid:13535) (cid:11343)(cid:12233)(cid:12157)(cid:13491)",
+                "_layout_page": 478,
+                "_source_order": 2
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"3.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"(cid:20)(cid:17)(cid:22) (cid:12460)(cid:13148)(cid:11689)(cid:11360)(cid:12250)(cid:12174)(cid:13508)(cid:12796) (cid:13025)(cid:12520)(cid:11342)(cid:11758)(cid:13552) (cid:11360)(cid:12250)(cid:12174)(cid:13508)\",\n      \"page\": 478,\n      \"level_reason\": \"Largest font size (s=12.5) and highest size ratio (r=1.32) on the page, indicating a primary section header.\",\n      \"_layout_page\": 478,\n      \"_layout_x\": 182,\n      \"_layout_y\": 276,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"(cid:20)(cid:17)(cid:22) (cid:12460)(cid:13148)(cid:11689)(cid:11360)(cid:12250)(cid:12174)(cid:13508)(cid:12796) (cid:13025)(cid:12520)(cid:11342)(cid:11758)(cid:13552) (cid:11360)(cid:12250)(cid:12174)(cid:13508)\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"(cid:20)(cid:12) (cid:12443)(cid:13131)(cid:11672)(cid:11343)(cid:12233)(cid:12157)(cid:13491)\",\n      \"page\": 478,\n      \"level_reason\": \"Font size (s=12.0) is smaller than the level 1 header but larger than body text, indicating a subsection.\",\n      \"_layout_page\": 478,\n      \"_layout_x\": 173,\n      \"_layout_y\": 317,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"(cid:20)(cid:12) (cid:12443)(cid:13131)(cid:11672)(cid:11343)(cid:12233)(cid:12157)(cid:13491)\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"(cid:21)(cid:12) (cid:13008)(cid:12503)(cid:11325)(cid:11741)(cid:13535) (cid:11343)(cid:12233)(cid:12157)(cid:13491)\",\n      \"page\": 478,\n      \"level_reason\": \"Font size (s=12.0) and style match the previous level 2 entry, indicating a parallel subsection.\",\n      \"_layout_page\": 478,\n      \"_layout_x\": 173,\n      \"_layout_y\": 536,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"(cid:21)(cid:12) (cid:13008)(cid:12503)(cid:11325)(cid:11741)(cid:13535) (cid:11343)(cid:12233)(cid:12157)(cid:13491)\"\n    }\n  ]\n}\n```"
+}

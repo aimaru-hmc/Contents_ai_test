@@ -1,0 +1,15 @@
+{
+    "timestamp": "2026-07-07 17:32:03",
+    "stage_index": 5,
+    "stage": "chunk_input_ready",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편5-8장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_5-8_2021.pdf",
+    "chunk": "1.1",
+    "total_chunks": 5,
+    "start_page": 1,
+    "end_page": 17,
+    "input_chars": 55894,
+    "input_chunk_file": "data/output/input_chunks/2_5-8_2021_gemma_20260707_172006/chunk_1.1_pages_1-17.json"
+}

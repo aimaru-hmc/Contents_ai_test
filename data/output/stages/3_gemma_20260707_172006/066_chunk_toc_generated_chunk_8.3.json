@@ -1,0 +1,32 @@
+{
+    "timestamp": "2026-07-07 18:19:29",
+    "stage_index": 66,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "8.3",
+    "total_chunks": 19,
+    "start_page": 280,
+    "end_page": 280,
+    "toc": {
+        "title": "3.pdf",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "(21)(17)(22) (cid:12776)(cid:12257)(cid:12941)(cid:12969)",
+                "page": 280,
+                "level_reason": "Largest font size (s=12.5) and highest size ratio (r=1.32) on the page, indicating a primary section header.",
+                "_layout_x": 181.0,
+                "_layout_y": 595.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "(cid:21)(cid:17)(cid:22) (cid:12776)(cid:12257)(cid:12941)(cid:12969)",
+                "_layout_page": 280,
+                "_source_order": 0
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"3.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"(21)(17)(22) (cid:12776)(cid:12257)(cid:12941)(cid:12969)\",\n      \"page\": 280,\n      \"level_reason\": \"Largest font size (s=12.5) and highest size ratio (r=1.32) on the page, indicating a primary section header.\",\n      \"_layout_page\": 280,\n      \"_layout_x\": 181,\n      \"_layout_y\": 595,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"(cid:21)(cid:17)(cid:22) (cid:12776)(cid:12257)(cid:12941)(cid:12969)\"\n    }\n  ]\n}\n```"
+}

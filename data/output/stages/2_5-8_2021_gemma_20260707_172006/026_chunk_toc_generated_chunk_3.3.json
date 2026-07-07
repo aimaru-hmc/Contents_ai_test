@@ -1,0 +1,110 @@
+{
+    "timestamp": "2026-07-07 17:36:13",
+    "stage_index": 26,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편5-8장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_5-8_2021.pdf",
+    "chunk": "3.3",
+    "total_chunks": 5,
+    "start_page": 109,
+    "end_page": 110,
+    "toc": {
+        "title": "2_5-8_2021.pdf",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "1.6 약물역학의 활용과 기여",
+                "page": 109,
+                "level_reason": "Numbered as 1.6 with a larger font size (12.5) and size ratio (1.32) compared to body text.",
+                "_layout_x": 73.0,
+                "_layout_y": 290.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.6 약물역학의 활용과 기여",
+                "_layout_page": 109,
+                "_source_order": 0
+            },
+            {
+                "level": 3,
+                "chapter": "1) 규제적 의사결정을 위한 약물역학의 활용",
+                "page": 109,
+                "level_reason": "Numbered with '1)' and has a slightly smaller font size (12.0) than the level 2 section.",
+                "_layout_x": 65.0,
+                "_layout_y": 331.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 규제적 의사결정을 위한 약물역학의 활용",
+                "_layout_page": 109,
+                "_source_order": 1
+            },
+            {
+                "level": 3,
+                "chapter": "2) 약물역학연구의 임상적 적용 사례",
+                "page": 109,
+                "level_reason": "Numbered with '2)' and follows the same style as the previous level 3 entry.",
+                "_layout_x": 65.0,
+                "_layout_y": 549.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 약물역학연구의 임상적 적용 사례",
+                "_layout_page": 109,
+                "_source_order": 2
+            },
+            {
+                "level": 3,
+                "chapter": "3) 약물역학연구의 지역사회 및 국가 등 공익적 적용 사례",
+                "page": 109,
+                "level_reason": "Numbered with '3)' and follows the same style as the previous level 3 entries.",
+                "_layout_x": 65.0,
+                "_layout_y": 738.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 약물역학연구의 지역사회 및 국가 등 공익적 적용 사례",
+                "_layout_page": 109,
+                "_source_order": 3
+            },
+            {
+                "level": 1,
+                "chapter": "2. 영양역학",
+                "page": 110,
+                "level_reason": "Major section title with the largest font size (18.0) and highest size ratio (1.90) in the chunk.",
+                "_layout_x": 185.0,
+                "_layout_y": 488.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "2. 영양역학",
+                "_layout_page": 110,
+                "_source_order": 4
+            },
+            {
+                "level": 2,
+                "chapter": "2.1 영양역학의 개념과 발전",
+                "page": 110,
+                "level_reason": "Numbered as 2.1 with a font size (12.5) and ratio (1.32) consistent with previous level 2 entries.",
+                "_layout_x": 181.0,
+                "_layout_y": 691.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.1 영양역학의 개념과 발전",
+                "_layout_page": 110,
+                "_source_order": 5
+            },
+            {
+                "level": 3,
+                "chapter": "1) 영양역학의 개념",
+                "page": 110,
+                "level_reason": "Numbered with '1)' and has a font size (12.0) consistent with previous level 3 entries.",
+                "_layout_x": 173.0,
+                "_layout_y": 733.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 영양역학의 개념",
+                "_layout_page": 110,
+                "_source_order": 6
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"2_5-8_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"1.6 약물역학의 활용과 기여\",\n      \"page\": 109,\n      \"level_reason\": \"Numbered as 1.6 with a larger font size (12.5) and size ratio (1.32) compared to body text.\",\n      \"_layout_page\": 109,\n      \"_layout_x\": 73,\n      \"_layout_y\": 290,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"1.6 약물역학의 활용과 기여\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1) 규제적 의사결정을 위한 약물역학의 활용\",\n      \"page\": 109,\n      \"level_reason\": \"Numbered with '1)' and has a slightly smaller font size (12.0) than the level 2 section.\",\n      \"_layout_page\": 109,\n      \"_layout_x\": 65,\n      \"_layout_y\": 331,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"1) 규제적 의사결정을 위한 약물역학의 활용\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2) 약물역학연구의 임상적 적용 사례\",\n      \"page\": 109,\n      \"level_reason\": \"Numbered with '2)' and follows the same style as the previous level 3 entry.\",\n      \"_layout_page\": 109,\n      \"_layout_x\": 65,\n      \"_layout_y\": 549,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"2) 약물역학연구의 임상적 적용 사례\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3) 약물역학연구의 지역사회 및 국가 등 공익적 적용 사례\",\n      \"page\": 109,\n      \"level_reason\": \"Numbered with '3)' and follows the same style as the previous level 3 entries.\",\n      \"_layout_page\": 109,\n      \"_layout_x\": 65,\n      \"_layout_y\": 738,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"3) 약물역학연구의 지역사회 및 국가 등 공익적 적용 사례\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"2. 영양역학\",\n      \"page\": 110,\n      \"level_reason\": \"Major section title with the largest font size (18.0) and highest size ratio (1.90) in the chunk.\",\n      \"_layout_page\": 110,\n      \"_layout_x\": 185,\n      \"_layout_y\": 488,\n      \"_layout_font_size\": 18.0,\n      \"_layout_size_ratio\": 1.90,\n      \"_layout_text\": \"2. 영양역학\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2.1 영양역학의 개념과 발전\",\n      \"page\": 110,\n      \"level_reason\": \"Numbered as 2.1 with a font size (12.5) and ratio (1.32) consistent with previous level 2 entries.\",\n      \"_layout_page\": 110,\n      \"_layout_x\": 181,\n      \"_layout_y\": 691,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"2.1 영양역학의 개념과 발전\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1) 영양역학의 개념\",\n      \"page\": 110,\n      \"level_reason\": \"Numbered with '1)' and has a font size (12.0) consistent with previous level 3 entries.\",\n      \"_layout_page\": 110,\n      \"_layout_x\": 173,\n      \"_layout_y\": 733,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"1) 영양역학의 개념\"\n    }\n  ]\n}"
+}

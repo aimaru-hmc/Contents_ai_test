@@ -1,0 +1,32 @@
+{
+    "timestamp": "2026-07-07 18:14:05",
+    "stage_index": 34,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "4.3",
+    "total_chunks": 19,
+    "start_page": 144,
+    "end_page": 144,
+    "toc": {
+        "title": "3.pdf",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "2) 의료의 질 향상 활동 모델",
+                "page": 144,
+                "level_reason": "Numbered as '2)', indicating a subsection, and has a larger font size (s=12.0) compared to the body text.",
+                "_layout_x": 173.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 의료의 질 향상 활동 모델",
+                "_layout_page": 144,
+                "_source_order": 0
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"3.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"2) 의료의 질 향상 활동 모델\",\n      \"page\": 144,\n      \"level_reason\": \"Numbered as '2)', indicating a subsection, and has a larger font size (s=12.0) compared to the body text.\",\n      \"_layout_page\": 144,\n      \"_layout_x\": 173,\n      \"_layout_y\": 86,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"2) 의료의 질 향상 활동 모델\"\n    }\n  ]\n}"
+}

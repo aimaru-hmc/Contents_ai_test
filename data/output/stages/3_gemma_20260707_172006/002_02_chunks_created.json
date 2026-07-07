@@ -1,0 +1,127 @@
+{
+    "timestamp": "2026-07-07 18:07:32",
+    "stage_index": 2,
+    "stage": "02_chunks_created",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk_count": 19,
+    "chunk_chars": 120000,
+    "chunks": [
+        {
+            "index": 1,
+            "start_page": 5,
+            "end_page": 35,
+            "input_chars": 119951
+        },
+        {
+            "index": 2,
+            "start_page": 36,
+            "end_page": 71,
+            "input_chars": 118949
+        },
+        {
+            "index": 3,
+            "start_page": 72,
+            "end_page": 109,
+            "input_chars": 118150
+        },
+        {
+            "index": 4,
+            "start_page": 110,
+            "end_page": 144,
+            "input_chars": 116397
+        },
+        {
+            "index": 5,
+            "start_page": 145,
+            "end_page": 182,
+            "input_chars": 118893
+        },
+        {
+            "index": 6,
+            "start_page": 183,
+            "end_page": 217,
+            "input_chars": 118709
+        },
+        {
+            "index": 7,
+            "start_page": 218,
+            "end_page": 250,
+            "input_chars": 118967
+        },
+        {
+            "index": 8,
+            "start_page": 251,
+            "end_page": 280,
+            "input_chars": 119307
+        },
+        {
+            "index": 9,
+            "start_page": 281,
+            "end_page": 314,
+            "input_chars": 116720
+        },
+        {
+            "index": 10,
+            "start_page": 315,
+            "end_page": 333,
+            "input_chars": 116279
+        },
+        {
+            "index": 11,
+            "start_page": 334,
+            "end_page": 352,
+            "input_chars": 117361
+        },
+        {
+            "index": 12,
+            "start_page": 353,
+            "end_page": 386,
+            "input_chars": 118222
+        },
+        {
+            "index": 13,
+            "start_page": 387,
+            "end_page": 421,
+            "input_chars": 119100
+        },
+        {
+            "index": 14,
+            "start_page": 422,
+            "end_page": 449,
+            "input_chars": 116976
+        },
+        {
+            "index": 15,
+            "start_page": 450,
+            "end_page": 478,
+            "input_chars": 119412
+        },
+        {
+            "index": 16,
+            "start_page": 479,
+            "end_page": 496,
+            "input_chars": 91708
+        },
+        {
+            "index": 17,
+            "start_page": 497,
+            "end_page": 521,
+            "input_chars": 117565
+        },
+        {
+            "index": 18,
+            "start_page": 522,
+            "end_page": 557,
+            "input_chars": 116935
+        },
+        {
+            "index": 19,
+            "start_page": 558,
+            "end_page": 583,
+            "input_chars": 103650
+        }
+    ]
+}

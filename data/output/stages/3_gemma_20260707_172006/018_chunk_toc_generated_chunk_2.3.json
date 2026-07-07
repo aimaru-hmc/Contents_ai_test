@@ -1,0 +1,32 @@
+{
+    "timestamp": "2026-07-07 18:10:53",
+    "stage_index": 18,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "2.3",
+    "total_chunks": 19,
+    "start_page": 71,
+    "end_page": 71,
+    "toc": {
+        "title": "제3장 보건의료자원과 조직의 관리",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "(4) 의사인력의 분포",
+                "page": 71,
+                "level_reason": "Numbered as (4), indicating a subsection within a larger section, with a larger font size (10.0) and bold-like prominence compared to body text.",
+                "_layout_x": 75.0,
+                "_layout_y": 329.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(4) 의사인력의 분포",
+                "_layout_page": 71,
+                "_source_order": 0
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"제3장 보건의료자원과 조직의 관리\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"(4) 의사인력의 분포\",\n      \"page\": 71,\n      \"level_reason\": \"Numbered as (4), indicating a subsection within a larger section, with a larger font size (10.0) and bold-like prominence compared to body text.\",\n      \"_layout_page\": 71,\n      \"_layout_x\": 75,\n      \"_layout_y\": 329,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.06,\n      \"_layout_text\": \"(4) 의사인력의 분포\"\n    }\n  ]\n}"
+}

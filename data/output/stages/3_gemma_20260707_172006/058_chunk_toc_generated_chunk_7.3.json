@@ -1,0 +1,45 @@
+{
+    "timestamp": "2026-07-07 18:18:27",
+    "stage_index": 58,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "7.3",
+    "total_chunks": 19,
+    "start_page": 250,
+    "end_page": 250,
+    "toc": {
+        "title": "제4편 보건의료와 건강관리",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "1.3 건강증진사업 모형",
+                "page": 250,
+                "level_reason": "Numbered as 1.3 with a larger font size (s=12.5) and higher size ratio (r=1.46) compared to body text.",
+                "_layout_x": 182.0,
+                "_layout_y": 380.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.46,
+                "_layout_text": "1.3 건강증진사업 모형",
+                "_layout_page": 250,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "1) PRECEDE-PROCEED 모형",
+                "page": 250,
+                "level_reason": "Numbered as 1) and uses a font size (s=12.0) slightly smaller than the level 1 section, indicating a subsection.",
+                "_layout_x": 173.0,
+                "_layout_y": 488.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.41,
+                "_layout_text": "1) PRECEDE-PROCEED 모형",
+                "_layout_page": 250,
+                "_source_order": 1
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"제4편 보건의료와 건강관리\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"1.3 건강증진사업 모형\",\n      \"page\": 250,\n      \"level_reason\": \"Numbered as 1.3 with a larger font size (s=12.5) and higher size ratio (r=1.46) compared to body text.\",\n      \"_layout_page\": 250,\n      \"_layout_x\": 182,\n      \"_layout_y\": 380,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.46,\n      \"_layout_text\": \"1.3 건강증진사업 모형\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1) PRECEDE-PROCEED 모형\",\n      \"page\": 250,\n      \"level_reason\": \"Numbered as 1) and uses a font size (s=12.0) slightly smaller than the level 1 section, indicating a subsection.\",\n      \"_layout_page\": 250,\n      \"_layout_x\": 173,\n      \"_layout_y\": 488,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.41,\n      \"_layout_text\": \"1) PRECEDE-PROCEED 모형\"\n    }\n  ]\n}"
+}

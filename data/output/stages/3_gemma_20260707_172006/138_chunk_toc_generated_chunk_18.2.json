@@ -1,0 +1,45 @@
+{
+    "timestamp": "2026-07-07 18:31:11",
+    "stage_index": 138,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "18.2",
+    "total_chunks": 19,
+    "start_page": 540,
+    "end_page": 556,
+    "toc": {
+        "title": "제6장 국제보건과 북한의료",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "2) 국내 대북 보건의료지원",
+                "page": 540,
+                "level_reason": "Numbered as '2)', indicating a subsection of a larger section (likely 6-5), with a larger font size (s=12.0) than body text.",
+                "_layout_x": 173.0,
+                "_layout_y": 587.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 국내 대북 보건의료지원",
+                "_layout_page": 540,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "3) 남북보건의료 교류 협력의 과제",
+                "page": 541,
+                "level_reason": "Numbered as '3)', following the previous subsection '2)', with a larger font size (s=12.0) than body text.",
+                "_layout_x": 65.0,
+                "_layout_y": 425.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 남북보건의료 교류 협력의 과제",
+                "_layout_page": 541,
+                "_source_order": 1
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"제6장 국제보건과 북한의료\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"2) 국내 대북 보건의료지원\",\n      \"page\": 540,\n      \"level_reason\": \"Numbered as '2)', indicating a subsection of a larger section (likely 6-5), with a larger font size (s=12.0) than body text.\",\n      \"_layout_page\": 540,\n      \"_layout_x\": 173,\n      \"_layout_y\": 587,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"2) 국내 대북 보건의료지원\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"3) 남북보건의료 교류 협력의 과제\",\n      \"page\": 541,\n      \"level_reason\": \"Numbered as '3)', following the previous subsection '2)', with a larger font size (s=12.0) than body text.\",\n      \"_layout_page\": 541,\n      \"_layout_x\": 65,\n      \"_layout_y\": 425,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"3) 남북보건의료 교류 협력의 과제\"\n    }\n  ]\n}\n```"
+}

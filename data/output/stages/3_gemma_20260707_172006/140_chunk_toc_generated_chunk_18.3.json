@@ -1,0 +1,32 @@
+{
+    "timestamp": "2026-07-07 18:31:12",
+    "stage_index": 140,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "18.3",
+    "total_chunks": 19,
+    "start_page": 557,
+    "end_page": 557,
+    "toc": {
+        "title": "3.pdf",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "찾아보기",
+                "page": 557,
+                "level_reason": "Top-level section indicated by larger font size and position as a main index header.",
+                "_layout_x": 512.0,
+                "_layout_y": 53.0,
+                "_layout_font_size": 8.0,
+                "_layout_size_ratio": 0.84,
+                "_layout_text": "찾아보기∙xiii",
+                "_layout_page": 557,
+                "_source_order": 0
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"3.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"찾아보기\",\n      \"page\": 557,\n      \"level_reason\": \"Top-level section indicated by larger font size and position as a main index header.\",\n      \"_layout_page\": 557,\n      \"_layout_x\": 512,\n      \"_layout_y\": 53,\n      \"_layout_font_size\": 8.0,\n      \"_layout_size_ratio\": 0.84,\n      \"_layout_text\": \"찾아보기∙xiii\"\n    }\n  ]\n}"
+}

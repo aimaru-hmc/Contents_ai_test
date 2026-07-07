@@ -1,0 +1,45 @@
+{
+    "timestamp": "2026-07-07 18:21:57",
+    "stage_index": 82,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "10.3",
+    "total_chunks": 19,
+    "start_page": 333,
+    "end_page": 333,
+    "toc": {
+        "title": "제2장 예방의료수준에 따른 임상예방서비스",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "3) 선별검사 시행의 목적",
+                "page": 333,
+                "level_reason": "Numbered as '3)', using a larger font size (12.0) and bold-like style compared to body text, indicating a subsection.",
+                "_layout_x": 65.0,
+                "_layout_y": 238.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 선별검사 시행의 목적",
+                "_layout_page": 333,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "4) 선별검사의 효과 평가",
+                "page": 333,
+                "level_reason": "Numbered as '4)', using a larger font size (12.0) and bold-like style compared to body text, indicating a subsection.",
+                "_layout_x": 65.0,
+                "_layout_y": 380.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "4) 선별검사의 효과 평가",
+                "_layout_page": 333,
+                "_source_order": 1
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"제2장 예방의료수준에 따른 임상예방서비스\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"3) 선별검사 시행의 목적\",\n      \"page\": 333,\n      \"level_reason\": \"Numbered as '3)', using a larger font size (12.0) and bold-like style compared to body text, indicating a subsection.\",\n      \"_layout_page\": 333,\n      \"_layout_x\": 65,\n      \"_layout_y\": 238,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"3) 선별검사 시행의 목적\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"4) 선별검사의 효과 평가\",\n      \"page\": 333,\n      \"level_reason\": \"Numbered as '4)', using a larger font size (12.0) and bold-like style compared to body text, indicating a subsection.\",\n      \"_layout_page\": 333,\n      \"_layout_x\": 65,\n      \"_layout_y\": 380,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"4) 선별검사의 효과 평가\"\n    }\n  ]\n}"
+}

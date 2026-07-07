@@ -1,0 +1,43 @@
+{
+    "timestamp": "2026-07-07 17:32:03",
+    "stage_index": 2,
+    "stage": "02_chunks_created",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편5-8장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_5-8_2021.pdf",
+    "chunk_count": 5,
+    "chunk_chars": 120000,
+    "chunks": [
+        {
+            "index": 1,
+            "start_page": 1,
+            "end_page": 39,
+            "input_chars": 118238
+        },
+        {
+            "index": 2,
+            "start_page": 40,
+            "end_page": 74,
+            "input_chars": 116930
+        },
+        {
+            "index": 3,
+            "start_page": 75,
+            "end_page": 110,
+            "input_chars": 117278
+        },
+        {
+            "index": 4,
+            "start_page": 111,
+            "end_page": 145,
+            "input_chars": 117292
+        },
+        {
+            "index": 5,
+            "start_page": 146,
+            "end_page": 178,
+            "input_chars": 115135
+        }
+    ]
+}

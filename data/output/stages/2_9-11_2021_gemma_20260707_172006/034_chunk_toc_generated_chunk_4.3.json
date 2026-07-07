@@ -1,0 +1,58 @@
+{
+    "timestamp": "2026-07-07 17:45:59",
+    "stage_index": 34,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편9-11장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_9-11_2021.pdf",
+    "chunk": "4.3",
+    "total_chunks": 8,
+    "start_page": 147,
+    "end_page": 148,
+    "toc": {
+        "title": "제10장 감염병의 역학",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "12.5 예방과 관리",
+                "page": 147,
+                "level_reason": "Numbered section with larger font size (s=12.5) and size ratio (r=1.32) compared to body text.",
+                "_layout_x": 72.0,
+                "_layout_y": 244.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "12.5 예방과 관리",
+                "_layout_page": 147,
+                "_source_order": 0
+            },
+            {
+                "level": 1,
+                "chapter": "13. 해외여행 감염증",
+                "page": 148,
+                "level_reason": "Major section title with the largest font size (s=18.0) and size ratio (r=1.90) in the chunk.",
+                "_layout_x": 185.0,
+                "_layout_y": 302.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "13. 해외여행 감염증",
+                "_layout_page": 148,
+                "_source_order": 1
+            },
+            {
+                "level": 2,
+                "chapter": "13.1 해외여행 시 필요한 질병예방의 원칙",
+                "page": 148,
+                "level_reason": "Subsection under section 13, indicated by numbering (13.1) and larger font size (s=12.5) than body text.",
+                "_layout_x": 180.0,
+                "_layout_y": 660.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "13.1 해외여행 시 필요한 질병예방의 원칙",
+                "_layout_page": 148,
+                "_source_order": 2
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"제10장 감염병의 역학\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"12.5 예방과 관리\",\n      \"page\": 147,\n      \"level_reason\": \"Numbered section with larger font size (s=12.5) and size ratio (r=1.32) compared to body text.\",\n      \"_layout_page\": 147,\n      \"_layout_x\": 72,\n      \"_layout_y\": 244,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"12.5 예방과 관리\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"13. 해외여행 감염증\",\n      \"page\": 148,\n      \"level_reason\": \"Major section title with the largest font size (s=18.0) and size ratio (r=1.90) in the chunk.\",\n      \"_layout_page\": 148,\n      \"_layout_x\": 185,\n      \"_layout_y\": 302,\n      \"_layout_font_size\": 18.0,\n      \"_layout_size_ratio\": 1.90,\n      \"_layout_text\": \"13. 해외여행 감염증\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"13.1 해외여행 시 필요한 질병예방의 원칙\",\n      \"page\": 148,\n      \"level_reason\": \"Subsection under section 13, indicated by numbering (13.1) and larger font size (s=12.5) than body text.\",\n      \"_layout_page\": 148,\n      \"_layout_x\": 180,\n      \"_layout_y\": 660,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"13.1 해외여행 시 필요한 질병예방의 원칙\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,32 @@
+{
+    "timestamp": "2026-07-07 17:48:52",
+    "stage_index": 58,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편9-11장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_9-11_2021.pdf",
+    "chunk": "7.3",
+    "total_chunks": 8,
+    "start_page": 247,
+    "end_page": 248,
+    "toc": {
+        "title": "2_9-11_2021.pdf",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "10.1 손상과 사고 역학",
+                "page": 247,
+                "level_reason": "Numbered as 10.1 with a larger font size (s=12.5) and size ratio (r=1.32) compared to body text, indicating a section level.",
+                "_layout_x": 72.0,
+                "_layout_y": 366.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "10.1 손상과 사고 역학",
+                "_layout_page": 247,
+                "_source_order": 0
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"2_9-11_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"10.1 손상과 사고 역학\",\n      \"page\": 247,\n      \"level_reason\": \"Numbered as 10.1 with a larger font size (s=12.5) and size ratio (r=1.32) compared to body text, indicating a section level.\",\n      \"_layout_page\": 247,\n      \"_layout_x\": 72,\n      \"_layout_y\": 366,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"10.1 손상과 사고 역학\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,58 @@
+{
+    "timestamp": "2026-07-07 18:12:40",
+    "stage_index": 26,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "3.3",
+    "total_chunks": 19,
+    "start_page": 109,
+    "end_page": 109,
+    "toc": {
+        "title": "제4장 건강관련행태",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "(3) 활용",
+                "page": 109,
+                "level_reason": "Numbered as (3), indicating a third-level subsection within a larger section.",
+                "_layout_x": 75.0,
+                "_layout_y": 415.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.18,
+                "_layout_text": "(3) 활용",
+                "_layout_page": 109,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "3) 범이론적 모형",
+                "page": 109,
+                "level_reason": "Numbered as 3) and uses a larger font size (12.0) compared to the surrounding text, indicating a second-level section.",
+                "_layout_x": 65.0,
+                "_layout_y": 680.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.41,
+                "_layout_text": "3) 범이론적 모형",
+                "_layout_page": 109,
+                "_source_order": 1
+            },
+            {
+                "level": 3,
+                "chapter": "(1) 이론의 배경 및 기본 전제",
+                "page": 109,
+                "level_reason": "Numbered as (1) under section 3), indicating a third-level subsection.",
+                "_layout_x": 75.0,
+                "_layout_y": 713.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.18,
+                "_layout_text": "(1) 이론의 배경 및 기본 전제",
+                "_layout_page": 109,
+                "_source_order": 2
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"제4장 건강관련행태\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"(3) 활용\",\n      \"page\": 109,\n      \"level_reason\": \"Numbered as (3), indicating a third-level subsection within a larger section.\",\n      \"_layout_page\": 109,\n      \"_layout_x\": 75,\n      \"_layout_y\": 415,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.18,\n      \"_layout_text\": \"(3) 활용\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"3) 범이론적 모형\",\n      \"page\": 109,\n      \"level_reason\": \"Numbered as 3) and uses a larger font size (12.0) compared to the surrounding text, indicating a second-level section.\",\n      \"_layout_page\": 109,\n      \"_layout_x\": 65,\n      \"_layout_y\": 680,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.41,\n      \"_layout_text\": \"3) 범이론적 모형\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"(1) 이론의 배경 및 기본 전제\",\n      \"page\": 109,\n      \"level_reason\": \"Numbered as (1) under section 3), indicating a third-level subsection.\",\n      \"_layout_page\": 109,\n      \"_layout_x\": 75,\n      \"_layout_y\": 713,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.18,\n      \"_layout_text\": \"(1) 이론의 배경 및 기본 전제\"\n    }\n  ]\n}"
+}

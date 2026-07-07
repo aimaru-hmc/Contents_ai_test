@@ -1,0 +1,45 @@
+{
+    "timestamp": "2026-07-07 18:22:40",
+    "stage_index": 90,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "11.3",
+    "total_chunks": 19,
+    "start_page": 352,
+    "end_page": 352,
+    "toc": {
+        "title": "제5편 임상예방의학과 지역사회예방서비스",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "② 신장암",
+                "page": 352,
+                "level_reason": "Numbered with a circled digit (②) and uses a distinct font style (f1), indicating a subsection within a larger category.",
+                "_layout_x": 183.0,
+                "_layout_y": 177.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "② 신장암",
+                "_layout_page": 352,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "③ 방광암",
+                "page": 352,
+                "level_reason": "Numbered with a circled digit (③) and uses a distinct font style (f1), consistent with the previous subsection level.",
+                "_layout_x": 183.0,
+                "_layout_y": 541.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "③ 방광암",
+                "_layout_page": 352,
+                "_source_order": 1
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"제5편 임상예방의학과 지역사회예방서비스\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"② 신장암\",\n      \"page\": 352,\n      \"level_reason\": \"Numbered with a circled digit (②) and uses a distinct font style (f1), indicating a subsection within a larger category.\",\n      \"_layout_page\": 352,\n      \"_layout_x\": 183,\n      \"_layout_y\": 177,\n      \"_layout_font_size\": 9.5,\n      \"_layout_size_ratio\": 1.0,\n      \"_layout_text\": \"② 신장암\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"③ 방광암\",\n      \"page\": 352,\n      \"level_reason\": \"Numbered with a circled digit (③) and uses a distinct font style (f1), consistent with the previous subsection level.\",\n      \"_layout_page\": 352,\n      \"_layout_x\": 183,\n      \"_layout_y\": 541,\n      \"_layout_font_size\": 9.5,\n      \"_layout_size_ratio\": 1.0,\n      \"_layout_text\": \"③ 방광암\"\n    }\n  ]\n}"
+}

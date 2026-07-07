@@ -1,0 +1,58 @@
+{
+    "timestamp": "2026-07-07 17:34:45",
+    "stage_index": 18,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편5-8장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_5-8_2021.pdf",
+    "chunk": "2.3",
+    "total_chunks": 5,
+    "start_page": 74,
+    "end_page": 74,
+    "toc": {
+        "title": "2_5-8_2021.pdf",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "6) 기초자료 수집",
+                "page": 74,
+                "level_reason": "Numbered list item with larger font size (s=12.0) and higher size ratio (r=1.27) compared to body text.",
+                "_layout_x": 173.0,
+                "_layout_y": 252.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "6) 기초자료 수집",
+                "_layout_page": 74,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "7) 결과 관찰",
+                "page": 74,
+                "level_reason": "Numbered list item with larger font size (s=12.0) and higher size ratio (r=1.27) compared to body text.",
+                "_layout_x": 173.0,
+                "_layout_y": 442.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "7) 결과 관찰",
+                "_layout_page": 74,
+                "_source_order": 1
+            },
+            {
+                "level": 2,
+                "chapter": "8) 통계분석",
+                "page": 74,
+                "level_reason": "Numbered list item with larger font size (s=12.0) and higher size ratio (r=1.27) compared to body text.",
+                "_layout_x": 173.0,
+                "_layout_y": 616.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "8) 통계분석",
+                "_layout_page": 74,
+                "_source_order": 2
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"2_5-8_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"6) 기초자료 수집\",\n      \"page\": 74,\n      \"level_reason\": \"Numbered list item with larger font size (s=12.0) and higher size ratio (r=1.27) compared to body text.\",\n      \"_layout_page\": 74,\n      \"_layout_x\": 173,\n      \"_layout_y\": 252,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"6) 기초자료 수집\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"7) 결과 관찰\",\n      \"page\": 74,\n      \"level_reason\": \"Numbered list item with larger font size (s=12.0) and higher size ratio (r=1.27) compared to body text.\",\n      \"_layout_page\": 74,\n      \"_layout_x\": 173,\n      \"_layout_y\": 442,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"7) 결과 관찰\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"8) 통계분석\",\n      \"page\": 74,\n      \"level_reason\": \"Numbered list item with larger font size (s=12.0) and higher size ratio (r=1.27) compared to body text.\",\n      \"_layout_page\": 74,\n      \"_layout_x\": 173,\n      \"_layout_y\": 616,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"8) 통계분석\"\n    }\n  ]\n}"
+}

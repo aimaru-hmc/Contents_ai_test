@@ -1,0 +1,58 @@
+{
+    "timestamp": "2026-07-07 18:30:20",
+    "stage_index": 132,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "17.3",
+    "total_chunks": 19,
+    "start_page": 521,
+    "end_page": 521,
+    "toc": {
+        "title": "제6장 국제보건과 북한의료",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "(2) 국제보건사업 평가기준",
+                "page": 521,
+                "level_reason": "Numbered as (2) with a larger font size (s=10.0) and ratio (r=1.18) compared to body text, indicating a subsection.",
+                "_layout_x": 75.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.18,
+                "_layout_text": "(2) 국제보건사업 평가기준",
+                "_layout_page": 521,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "(3) 국제보건사업의 평가품질 관리",
+                "page": 521,
+                "level_reason": "Numbered as (3) with a larger font size (s=10.0) and ratio (r=1.18) compared to body text, indicating a subsection parallel to (2).",
+                "_layout_x": 75.0,
+                "_layout_y": 537.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.18,
+                "_layout_text": "(3) 국제보건사업의 평가품질 관리",
+                "_layout_page": 521,
+                "_source_order": 1
+            },
+            {
+                "level": 3,
+                "chapter": "① 평가 시 주요 고려사항",
+                "page": 521,
+                "level_reason": "Numbered with a circled digit (①) and indented under subsection (3), indicating a lower-level subsection.",
+                "_layout_x": 75.0,
+                "_layout_y": 722.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "① 평가 시 주요 고려사항",
+                "_layout_page": 521,
+                "_source_order": 2
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"제6장 국제보건과 북한의료\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"(2) 국제보건사업 평가기준\",\n      \"page\": 521,\n      \"level_reason\": \"Numbered as (2) with a larger font size (s=10.0) and ratio (r=1.18) compared to body text, indicating a subsection.\",\n      \"_layout_page\": 521,\n      \"_layout_x\": 75,\n      \"_layout_y\": 86,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.18,\n      \"_layout_text\": \"(2) 국제보건사업 평가기준\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"(3) 국제보건사업의 평가품질 관리\",\n      \"page\": 521,\n      \"level_reason\": \"Numbered as (3) with a larger font size (s=10.0) and ratio (r=1.18) compared to body text, indicating a subsection parallel to (2).\",\n      \"_layout_page\": 521,\n      \"_layout_x\": 75,\n      \"_layout_y\": 537,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.18,\n      \"_layout_text\": \"(3) 국제보건사업의 평가품질 관리\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"① 평가 시 주요 고려사항\",\n      \"page\": 521,\n      \"level_reason\": \"Numbered with a circled digit (①) and indented under subsection (3), indicating a lower-level subsection.\",\n      \"_layout_page\": 521,\n      \"_layout_x\": 75,\n      \"_layout_y\": 722,\n      \"_layout_font_size\": 9.5,\n      \"_layout_size_ratio\": 1.11,\n      \"_layout_text\": \"① 평가 시 주요 고려사항\"\n    }\n  ]\n}"
+}

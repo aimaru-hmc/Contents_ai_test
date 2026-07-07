@@ -1,0 +1,32 @@
+{
+    "timestamp": "2026-07-07 17:59:44",
+    "stage_index": 26,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재2/2권-한글/3편3,4장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_3_4_2021.pdf",
+    "chunk": "3.3",
+    "total_chunks": 3,
+    "start_page": 102,
+    "end_page": 103,
+    "toc": {
+        "title": "3_3_4_2021.pdf",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "7.4 다환방향족탄화수소(polycyclic aromatic hydrocarbons, PAHs)",
+                "page": 102,
+                "level_reason": "Numbered section title with larger font size (s=12.5) and higher size ratio (r=1.32) compared to body text.",
+                "_layout_x": 181.0,
+                "_layout_y": 229.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "7.4 다환방향족탄화수소(polycyclic aromatic hydrocarbons, PAHs)",
+                "_layout_page": 102,
+                "_source_order": 0
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"3_3_4_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"7.4 다환방향족탄화수소(polycyclic aromatic hydrocarbons, PAHs)\",\n      \"page\": 102,\n      \"level_reason\": \"Numbered section title with larger font size (s=12.5) and higher size ratio (r=1.32) compared to body text.\",\n      \"_layout_page\": 102,\n      \"_layout_x\": 181,\n      \"_layout_y\": 229,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"7.4 다환방향족탄화수소(polycyclic aromatic hydrocarbons, PAHs)\"\n    }\n  ]\n}"
+}

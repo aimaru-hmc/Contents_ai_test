@@ -1,0 +1,45 @@
+{
+    "timestamp": "2026-07-07 17:54:13",
+    "stage_index": 26,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재2/2권-한글/3편1,2장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_1_2_2021.pdf",
+    "chunk": "3.3",
+    "total_chunks": 4,
+    "start_page": 106,
+    "end_page": 106,
+    "toc": {
+        "title": "3_1_2_2021.pdf",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "(1) 건강영향",
+                "page": 106,
+                "level_reason": "Numbered as (1) with a font size (10.0) larger than the body text (9.5), indicating a subsection.",
+                "_layout_x": 183.0,
+                "_layout_y": 438.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(1) 건강영향",
+                "_layout_page": 106,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "(2) 노출 차단 및 예방",
+                "page": 106,
+                "level_reason": "Numbered as (2) with a font size (10.0) larger than the body text (9.5), indicating a subsection parallel to (1).",
+                "_layout_x": 183.0,
+                "_layout_y": 714.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(2) 노출 차단 및 예방",
+                "_layout_page": 106,
+                "_source_order": 1
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"3_1_2_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"(1) 건강영향\",\n      \"page\": 106,\n      \"level_reason\": \"Numbered as (1) with a font size (10.0) larger than the body text (9.5), indicating a subsection.\",\n      \"_layout_page\": 106,\n      \"_layout_x\": 183,\n      \"_layout_y\": 438,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.05,\n      \"_layout_text\": \"(1) 건강영향\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"(2) 노출 차단 및 예방\",\n      \"page\": 106,\n      \"level_reason\": \"Numbered as (2) with a font size (10.0) larger than the body text (9.5), indicating a subsection parallel to (1).\",\n      \"_layout_page\": 106,\n      \"_layout_x\": 183,\n      \"_layout_y\": 714,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.05,\n      \"_layout_text\": \"(2) 노출 차단 및 예방\"\n    }\n  ]\n}"
+}

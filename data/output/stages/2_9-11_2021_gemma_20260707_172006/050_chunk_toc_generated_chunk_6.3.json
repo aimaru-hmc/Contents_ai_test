@@ -1,0 +1,18 @@
+{
+    "timestamp": "2026-07-07 17:47:55",
+    "stage_index": 50,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편9-11장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_9-11_2021.pdf",
+    "chunk": "6.3",
+    "total_chunks": 8,
+    "start_page": 214,
+    "end_page": 214,
+    "toc": {
+        "title": "2_9-11_2021.pdf",
+        "chapters": []
+    },
+    "raw_response": "{\n  \"title\": \"2_9-11_2021.pdf\",\n  \"chapters\": []\n}"
+}

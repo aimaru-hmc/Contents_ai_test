@@ -1,0 +1,71 @@
+{
+    "timestamp": "2026-07-07 17:44:20",
+    "stage_index": 26,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편9-11장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_9-11_2021.pdf",
+    "chunk": "3.3",
+    "total_chunks": 8,
+    "start_page": 111,
+    "end_page": 111,
+    "toc": {
+        "title": "제10장 감염병의 역학",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "8.5 지역사회 호흡기감염병",
+                "page": 111,
+                "level_reason": "Numbered section with larger font size (12.5) and higher size ratio (1.32) compared to body text.",
+                "_layout_x": 73.0,
+                "_layout_y": 92.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "8.5 지역사회 호흡기감염병",
+                "_layout_page": 111,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "1) 성홍열",
+                "page": 111,
+                "level_reason": "Numbered subsection using '1)' format with font size (12.0) larger than body text, indented under section 8.5.",
+                "_layout_x": 65.0,
+                "_layout_y": 337.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 성홍열",
+                "_layout_page": 111,
+                "_source_order": 1
+            },
+            {
+                "level": 3,
+                "chapter": "(1) 병원체 및 임상적 특징",
+                "page": 111,
+                "level_reason": "Numbered subsection using '(1)' format, indented under '1) 성홍열'.",
+                "_layout_x": 75.0,
+                "_layout_y": 371.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(1) 병원체 및 임상적 특징",
+                "_layout_page": 111,
+                "_source_order": 2
+            },
+            {
+                "level": 3,
+                "chapter": "(2) 역학적 특성",
+                "page": 111,
+                "level_reason": "Numbered subsection using '(2)' format, parallel to '(1)' and indented under '1) 성홍열'.",
+                "_layout_x": 75.0,
+                "_layout_y": 556.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(2) 역학적 특성",
+                "_layout_page": 111,
+                "_source_order": 3
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"제10장 감염병의 역학\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"8.5 지역사회 호흡기감염병\",\n      \"page\": 111,\n      \"level_reason\": \"Numbered section with larger font size (12.5) and higher size ratio (1.32) compared to body text.\",\n      \"_layout_page\": 111,\n      \"_layout_x\": 73,\n      \"_layout_y\": 92,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"8.5 지역사회 호흡기감염병\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1) 성홍열\",\n      \"page\": 111,\n      \"level_reason\": \"Numbered subsection using '1)' format with font size (12.0) larger than body text, indented under section 8.5.\",\n      \"_layout_page\": 111,\n      \"_layout_x\": 65,\n      \"_layout_y\": 337,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"1) 성홍열\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"(1) 병원체 및 임상적 특징\",\n      \"page\": 111,\n      \"level_reason\": \"Numbered subsection using '(1)' format, indented under '1) 성홍열'.\",\n      \"_layout_page\": 111,\n      \"_layout_x\": 75,\n      \"_layout_y\": 371,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.05,\n      \"_layout_text\": \"(1) 병원체 및 임상적 특징\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"(2) 역학적 특성\",\n      \"page\": 111,\n      \"level_reason\": \"Numbered subsection using '(2)' format, parallel to '(1)' and indented under '1) 성홍열'.\",\n      \"_layout_page\": 111,\n      \"_layout_x\": 75,\n      \"_layout_y\": 556,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.05,\n      \"_layout_text\": \"(2) 역학적 특성\"\n    }\n  ]\n}"
+}

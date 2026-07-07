@@ -1,0 +1,97 @@
+{
+    "timestamp": "2026-07-07 18:05:05",
+    "stage_index": 26,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재2/2권-한글/3편5-7장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_5-7_2021.pdf",
+    "chunk": "3.3",
+    "total_chunks": 4,
+    "start_page": 108,
+    "end_page": 108,
+    "toc": {
+        "title": "3_5-7_2021.pdf",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "(3) 화학적 요인",
+                "page": 108,
+                "level_reason": "Numbered as (3) with a smaller font size than the main section, indicating a subsection.",
+                "_layout_x": 183.0,
+                "_layout_y": 85.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(3) 화학적 요인",
+                "_layout_page": 108,
+                "_source_order": 0
+            },
+            {
+                "level": 3,
+                "chapter": "(4) 개인의 감수성",
+                "page": 108,
+                "level_reason": "Numbered as (4) with a smaller font size than the main section, indicating a subsection.",
+                "_layout_x": 183.0,
+                "_layout_y": 255.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(4) 개인의 감수성",
+                "_layout_page": 108,
+                "_source_order": 1
+            },
+            {
+                "level": 2,
+                "chapter": "2) 작업관련성 정신질환의 역학",
+                "page": 108,
+                "level_reason": "Numbered as 2) with a larger font size (12.0) and distinct indentation, indicating a second-level section.",
+                "_layout_x": 173.0,
+                "_layout_y": 394.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 작업관련성 정신질환의 역학",
+                "_layout_page": 108,
+                "_source_order": 2
+            },
+            {
+                "level": 1,
+                "chapter": "8.2 작업관련성 정신질환의 진단",
+                "page": 108,
+                "level_reason": "Numbered as 8.2 with the largest font size (12.5) in this chunk, indicating a top-level section.",
+                "_layout_x": 181.0,
+                "_layout_y": 681.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "8.2 작업관련성 정신질환의 진단",
+                "_layout_page": 108,
+                "_source_order": 3
+            },
+            {
+                "level": 2,
+                "chapter": "1) 작업관련성 정신질환 진단",
+                "page": 108,
+                "level_reason": "Numbered as 1) under section 8.2 with a slightly smaller font size (12.0).",
+                "_layout_x": 173.0,
+                "_layout_y": 722.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 작업관련성 정신질환 진단",
+                "_layout_page": 108,
+                "_source_order": 4
+            },
+            {
+                "level": 3,
+                "chapter": "(1) 사업장 내 정신과적 증상에 대한 평가",
+                "page": 108,
+                "level_reason": "Numbered as (1) under section 1) with a smaller font size (10.0).",
+                "_layout_x": 183.0,
+                "_layout_y": 759.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(1) 사업장 내 정신과적 증상에 대한 평가",
+                "_layout_page": 108,
+                "_source_order": 5
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"3_5-7_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"(3) 화학적 요인\",\n      \"page\": 108,\n      \"level_reason\": \"Numbered as (3) with a smaller font size than the main section, indicating a subsection.\",\n      \"_layout_page\": 108,\n      \"_layout_x\": 183,\n      \"_layout_y\": 85,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.05,\n      \"_layout_text\": \"(3) 화학적 요인\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"(4) 개인의 감수성\",\n      \"page\": 108,\n      \"level_reason\": \"Numbered as (4) with a smaller font size than the main section, indicating a subsection.\",\n      \"_layout_page\": 108,\n      \"_layout_x\": 183,\n      \"_layout_y\": 255,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.05,\n      \"_layout_text\": \"(4) 개인의 감수성\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2) 작업관련성 정신질환의 역학\",\n      \"page\": 108,\n      \"level_reason\": \"Numbered as 2) with a larger font size (12.0) and distinct indentation, indicating a second-level section.\",\n      \"_layout_page\": 108,\n      \"_layout_x\": 173,\n      \"_layout_y\": 394,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"2) 작업관련성 정신질환의 역학\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"8.2 작업관련성 정신질환의 진단\",\n      \"page\": 108,\n      \"level_reason\": \"Numbered as 8.2 with the largest font size (12.5) in this chunk, indicating a top-level section.\",\n      \"_layout_page\": 108,\n      \"_layout_x\": 181,\n      \"_layout_y\": 681,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"8.2 작업관련성 정신질환의 진단\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1) 작업관련성 정신질환 진단\",\n      \"page\": 108,\n      \"level_reason\": \"Numbered as 1) under section 8.2 with a slightly smaller font size (12.0).\",\n      \"_layout_page\": 108,\n      \"_layout_x\": 173,\n      \"_layout_y\": 722,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"1) 작업관련성 정신질환 진단\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"(1) 사업장 내 정신과적 증상에 대한 평가\",\n      \"page\": 108,\n      \"level_reason\": \"Numbered as (1) under section 1) with a smaller font size (10.0).\",\n      \"_layout_page\": 108,\n      \"_layout_x\": 183,\n      \"_layout_y\": 759,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.05,\n      \"_layout_text\": \"(1) 사업장 내 정신과적 증상에 대한 평가\"\n    }\n  ]\n}"
+}

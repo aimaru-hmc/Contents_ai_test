@@ -1,0 +1,45 @@
+{
+    "timestamp": "2026-07-07 18:17:05",
+    "stage_index": 50,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "6.3",
+    "total_chunks": 19,
+    "start_page": 217,
+    "end_page": 217,
+    "toc": {
+        "title": "3.pdf",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "제8장 지역사회보건",
+                "page": 217,
+                "level_reason": "Highest level section indicated by '제8장' (Chapter 8) and larger font size in the header.",
+                "_layout_x": 470.0,
+                "_layout_y": 53.0,
+                "_layout_font_size": 8.0,
+                "_layout_size_ratio": 0.94,
+                "_layout_text": "제8장 지역사회보건 ∙ 1093",
+                "_layout_page": 217,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "(1) 감염성질환 관리사업",
+                "page": 217,
+                "level_reason": "Subsection indicated by numbering '(1)' and larger font size (s=10.0) compared to body text.",
+                "_layout_x": 75.0,
+                "_layout_y": 622.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.18,
+                "_layout_text": "(1) 감염성질환 관리사업",
+                "_layout_page": 217,
+                "_source_order": 1
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"3.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"제8장 지역사회보건\",\n      \"page\": 217,\n      \"level_reason\": \"Highest level section indicated by '제8장' (Chapter 8) and larger font size in the header.\",\n      \"_layout_page\": 217,\n      \"_layout_x\": 470,\n      \"_layout_y\": 53,\n      \"_layout_font_size\": 8.0,\n      \"_layout_size_ratio\": 0.94,\n      \"_layout_text\": \"제8장 지역사회보건 ∙ 1093\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"(1) 감염성질환 관리사업\",\n      \"page\": 217,\n      \"level_reason\": \"Subsection indicated by numbering '(1)' and larger font size (s=10.0) compared to body text.\",\n      \"_layout_page\": 217,\n      \"_layout_x\": 75,\n      \"_layout_y\": 622,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.18,\n      \"_layout_text\": \"(1) 감염성질환 관리사업\"\n    }\n  ]\n}"
+}

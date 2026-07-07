@@ -1,0 +1,18 @@
+{
+    "timestamp": "2026-07-07 18:07:32",
+    "stage_index": 1,
+    "stage": "01_pdf_extracted",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "extraction": {
+        "gemma_extraction_mode": "layout",
+        "layout_line_count": 23445,
+        "layout_font_count": 29,
+        "plain_extracted_chars": 1198425
+    },
+    "extracted_pages": 572,
+    "extracted_chars": 2195951,
+    "parsed_pdf_file": "data/output/parsed_pdfs/3_gemma_20260707_172006_parsed_pdf.txt"
+}

@@ -1,0 +1,123 @@
+{
+    "timestamp": "2026-07-07 18:29:01",
+    "stage_index": 124,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "16",
+    "total_chunks": 19,
+    "start_page": 479,
+    "end_page": 496,
+    "toc": {
+        "title": "제6장 국제보건과 북한의료",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "2. 국제보건에 대한 접근",
+                "page": 481,
+                "level_reason": "Large font size (s=18.0) and primary numbering '2.' indicating a major section.",
+                "_layout_x": 77.0,
+                "_layout_y": 105.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "2. 국제보건에 대한 접근",
+                "_layout_page": 481,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "2.1 세계의 질병부담",
+                "page": 481,
+                "level_reason": "Subsection numbering '2.1' with medium font size (s=12.5).",
+                "_layout_x": 74.0,
+                "_layout_y": 308.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.1 세계의 질병부담",
+                "_layout_page": 481,
+                "_source_order": 1
+            },
+            {
+                "level": 3,
+                "chapter": "1) 질병부담 측정방법",
+                "page": 481,
+                "level_reason": "Lower level numbering '1)' under section 2.1.",
+                "_layout_x": 65.0,
+                "_layout_y": 350.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 질병부담 측정방법",
+                "_layout_page": 481,
+                "_source_order": 2
+            },
+            {
+                "level": 3,
+                "chapter": "2) 장애보정생존년수(DALY) 측정방법",
+                "page": 481,
+                "level_reason": "Lower level numbering '2)' under section 2.1.",
+                "_layout_x": 65.0,
+                "_layout_y": 659.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 장애보정생존년수(DALY) 측정방법",
+                "_layout_page": 481,
+                "_source_order": 3
+            },
+            {
+                "level": 3,
+                "chapter": "3) 한국과 세계의 질병부담 현황",
+                "page": 482,
+                "level_reason": "Lower level numbering '3)' under section 2.1.",
+                "_layout_x": 173.0,
+                "_layout_y": 450.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 한국과 세계의 질병부담 현황",
+                "_layout_page": 482,
+                "_source_order": 4
+            },
+            {
+                "level": 3,
+                "chapter": "4) 질병부담 측정 및 활용",
+                "page": 483,
+                "level_reason": "Lower level numbering '4)' under section 2.1.",
+                "_layout_x": 65.0,
+                "_layout_y": 485.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "4) 질병부담 측정 및 활용",
+                "_layout_page": 483,
+                "_source_order": 5
+            },
+            {
+                "level": 2,
+                "chapter": "2.2 국제보건과 인권, 건강권",
+                "page": 483,
+                "level_reason": "Subsection numbering '2.2' with medium font size (s=12.5).",
+                "_layout_x": 73.0,
+                "_layout_y": 620.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.2 국제보건과 인권, 건강권",
+                "_layout_page": 483,
+                "_source_order": 6
+            },
+            {
+                "level": 3,
+                "chapter": "1) 인권의 개념과 역사",
+                "page": 483,
+                "level_reason": "Lower level numbering '1)' under section 2.2.",
+                "_layout_x": 65.0,
+                "_layout_y": 661.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 인권의 개념과 역사",
+                "_layout_page": 483,
+                "_source_order": 7
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"제6장 국제보건과 북한의료\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"2. 국제보건에 대한 접근\",\n      \"page\": 481,\n      \"level_reason\": \"Large font size (s=18.0) and primary numbering '2.' indicating a major section.\",\n      \"_layout_page\": 481,\n      \"_layout_x\": 77,\n      \"_layout_y\": 105,\n      \"_layout_font_size\": 18.0,\n      \"_layout_size_ratio\": 1.9,\n      \"_layout_text\": \"2. 국제보건에 대한 접근\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2.1 세계의 질병부담\",\n      \"page\": 481,\n      \"level_reason\": \"Subsection numbering '2.1' with medium font size (s=12.5).\",\n      \"_layout_page\": 481,\n      \"_layout_x\": 74,\n      \"_layout_y\": 308,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"2.1 세계의 질병부담\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1) 질병부담 측정방법\",\n      \"page\": 481,\n      \"level_reason\": \"Lower level numbering '1)' under section 2.1.\",\n      \"_layout_page\": 481,\n      \"_layout_x\": 65,\n      \"_layout_y\": 350,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"1) 질병부담 측정방법\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2) 장애보정생존년수(DALY) 측정방법\",\n      \"page\": 481,\n      \"level_reason\": \"Lower level numbering '2)' under section 2.1.\",\n      \"_layout_page\": 481,\n      \"_layout_x\": 65,\n      \"_layout_y\": 659,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"2) 장애보정생존년수(DALY) 측정방법\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3) 한국과 세계의 질병부담 현황\",\n      \"page\": 482,\n      \"level_reason\": \"Lower level numbering '3)' under section 2.1.\",\n      \"_layout_page\": 482,\n      \"_layout_x\": 173,\n      \"_layout_y\": 450,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"3) 한국과 세계의 질병부담 현황\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"4) 질병부담 측정 및 활용\",\n      \"page\": 483,\n      \"level_reason\": \"Lower level numbering '4)' under section 2.1.\",\n      \"_layout_page\": 483,\n      \"_layout_x\": 65,\n      \"_layout_y\": 485,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"4) 질병부담 측정 및 활용\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2.2 국제보건과 인권, 건강권\",\n      \"page\": 483,\n      \"level_reason\": \"Subsection numbering '2.2' with medium font size (s=12.5).\",\n      \"_layout_page\": 483,\n      \"_layout_x\": 73,\n      \"_layout_y\": 620,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"2.2 국제보건과 인권, 건강권\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1) 인권의 개념과 역사\",\n      \"page\": 483,\n      \"level_reason\": \"Lower level numbering '1)' under section 2.2.\",\n      \"_layout_page\": 483,\n      \"_layout_x\": 65,\n      \"_layout_y\": 661,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"1) 인권의 개념과 역사\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2) 인권으로서의 건강권\",\n      \"page\": 484,\n      \"level_reason\": \"Lower level numbering '2)' under section 2.2.\",\n      \"_layout_page\": 48"
+}

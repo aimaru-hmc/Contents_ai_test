@@ -1,0 +1,45 @@
+{
+    "timestamp": "2026-07-07 17:57:58",
+    "stage_index": 18,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재2/2권-한글/3편3,4장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_3_4_2021.pdf",
+    "chunk": "2.3",
+    "total_chunks": 3,
+    "start_page": 71,
+    "end_page": 71,
+    "toc": {
+        "title": "3_3_4_2021.pdf",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "제4장 생활오염",
+                "page": 71,
+                "level_reason": "Chapter level indicated by '제4장' and larger font size in the header area.",
+                "_layout_x": 482.0,
+                "_layout_y": 52.0,
+                "_layout_font_size": 8.0,
+                "_layout_size_ratio": 0.85,
+                "_layout_text": "제4장 생활오염",
+                "_layout_page": 71,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "4.1 실내공기오염의 정의와 건강영향",
+                "page": 71,
+                "level_reason": "Section level indicated by '4.1' numbering and larger font size (12.5) compared to body text.",
+                "_layout_x": 73.0,
+                "_layout_y": 92.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "4.1 실내공기오염의 정의와 건강영향",
+                "_layout_page": 71,
+                "_source_order": 1
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"3_3_4_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"제4장 생활오염\",\n      \"page\": 71,\n      \"level_reason\": \"Chapter level indicated by '제4장' and larger font size in the header area.\",\n      \"_layout_page\": 71,\n      \"_layout_x\": 482,\n      \"_layout_y\": 52,\n      \"_layout_font_size\": 8.0,\n      \"_layout_size_ratio\": 0.85,\n      \"_layout_text\": \"제4장 생활오염\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"4.1 실내공기오염의 정의와 건강영향\",\n      \"page\": 71,\n      \"level_reason\": \"Section level indicated by '4.1' numbering and larger font size (12.5) compared to body text.\",\n      \"_layout_page\": 71,\n      \"_layout_x\": 73,\n      \"_layout_y\": 92,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"4.1 실내공기오염의 정의와 건강영향\"\n    }\n  ]\n}"
+}

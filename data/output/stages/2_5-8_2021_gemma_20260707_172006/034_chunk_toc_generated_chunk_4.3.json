@@ -1,0 +1,32 @@
+{
+    "timestamp": "2026-07-07 17:37:41",
+    "stage_index": 34,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편5-8장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_5-8_2021.pdf",
+    "chunk": "4.3",
+    "total_chunks": 5,
+    "start_page": 145,
+    "end_page": 145,
+    "toc": {
+        "title": "2_5-8_2021.pdf",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "(3) t-분포를 이용한 의사결정",
+                "page": 145,
+                "level_reason": "Numbered as (3) and uses a larger font size (s=10.0) compared to the surrounding body text (s=9.5), indicating a subsection level.",
+                "_layout_x": 75.0,
+                "_layout_y": 479.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.05,
+                "_layout_text": "(3) t-분포를 이용한 의사결정",
+                "_layout_page": 145,
+                "_source_order": 0
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"2_5-8_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"(3) t-분포를 이용한 의사결정\",\n      \"page\": 145,\n      \"level_reason\": \"Numbered as (3) and uses a larger font size (s=10.0) compared to the surrounding body text (s=9.5), indicating a subsection level.\",\n      \"_layout_page\": 145,\n      \"_layout_x\": 75,\n      \"_layout_y\": 479,\n      \"_layout_font_size\": 10.0,\n      \"_layout_size_ratio\": 1.05,\n      \"_layout_text\": \"(3) t-분포를 이용한 의사결정\"\n    }\n  ]\n}"
+}

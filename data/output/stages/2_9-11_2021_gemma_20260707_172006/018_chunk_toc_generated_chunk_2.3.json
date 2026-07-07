@@ -1,0 +1,58 @@
+{
+    "timestamp": "2026-07-07 17:42:08",
+    "stage_index": 18,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편9-11장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_9-11_2021.pdf",
+    "chunk": "2.3",
+    "total_chunks": 8,
+    "start_page": 73,
+    "end_page": 73,
+    "toc": {
+        "title": "제10장 감염병의 역학",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "3) 3단계: 유행 원인에 대한 가설 설정",
+                "page": 73,
+                "level_reason": "Numbered as a step (3) with a larger font size (12.0) and ratio (1.27) compared to body text.",
+                "_layout_x": 65.0,
+                "_layout_y": 85.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 3단계: 유행 원인에 대한 가설 설정",
+                "_layout_page": 73,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "4) 4단계: 분석역학적 연구를 통한 가설 검정",
+                "page": 73,
+                "level_reason": "Numbered as a step (4) with a larger font size (12.0) and ratio (1.27) compared to body text.",
+                "_layout_x": 65.0,
+                "_layout_y": 212.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "4) 4단계: 분석역학적 연구를 통한 가설 검정",
+                "_layout_page": 73,
+                "_source_order": 1
+            },
+            {
+                "level": 2,
+                "chapter": "5) 5단계: 유행관리 사업평가와 커뮤니케이션",
+                "page": 73,
+                "level_reason": "Numbered as a step (5) with a larger font size (12.0) and ratio (1.27) compared to body text.",
+                "_layout_x": 65.0,
+                "_layout_y": 746.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "5) 5단계: 유행관리 사업평가와 커뮤니케이션",
+                "_layout_page": 73,
+                "_source_order": 2
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"제10장 감염병의 역학\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"3) 3단계: 유행 원인에 대한 가설 설정\",\n      \"page\": 73,\n      \"level_reason\": \"Numbered as a step (3) with a larger font size (12.0) and ratio (1.27) compared to body text.\",\n      \"_layout_page\": 73,\n      \"_layout_x\": 65,\n      \"_layout_y\": 85,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"3) 3단계: 유행 원인에 대한 가설 설정\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"4) 4단계: 분석역학적 연구를 통한 가설 검정\",\n      \"page\": 73,\n      \"level_reason\": \"Numbered as a step (4) with a larger font size (12.0) and ratio (1.27) compared to body text.\",\n      \"_layout_page\": 73,\n      \"_layout_x\": 65,\n      \"_layout_y\": 212,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"4) 4단계: 분석역학적 연구를 통한 가설 검정\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"5) 5단계: 유행관리 사업평가와 커뮤니케이션\",\n      \"page\": 73,\n      \"level_reason\": \"Numbered as a step (5) with a larger font size (12.0) and ratio (1.27) compared to body text.\",\n      \"_layout_page\": 73,\n      \"_layout_x\": 65,\n      \"_layout_y\": 746,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"5) 5단계: 유행관리 사업평가와 커뮤니케이션\"\n    }\n  ]\n}"
+}

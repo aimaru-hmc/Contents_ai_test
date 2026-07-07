@@ -1,0 +1,18 @@
+{
+    "timestamp": "2026-07-07 18:00:07",
+    "stage_index": 1,
+    "stage": "01_pdf_extracted",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재2/2권-한글/3편5-7장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_5-7_2021.pdf",
+    "extraction": {
+        "gemma_extraction_mode": "layout",
+        "layout_line_count": 5421,
+        "layout_font_count": 5,
+        "plain_extracted_chars": 219762
+    },
+    "extracted_pages": 138,
+    "extracted_chars": 450269,
+    "parsed_pdf_file": "data/output/parsed_pdfs/3_5-7_2021_gemma_20260707_172006_parsed_pdf.txt"
+}

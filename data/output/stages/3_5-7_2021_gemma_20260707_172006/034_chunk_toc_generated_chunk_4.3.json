@@ -1,0 +1,58 @@
+{
+    "timestamp": "2026-07-07 18:06:39",
+    "stage_index": 34,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재2/2권-한글/3편5-7장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_5-7_2021.pdf",
+    "chunk": "4.3",
+    "total_chunks": 4,
+    "start_page": 138,
+    "end_page": 139,
+    "toc": {
+        "title": "3_5-7_2021.pdf",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "14.3 혈구형성 장애",
+                "page": 138,
+                "level_reason": "Numbered as 14.3 with a larger font size (12.5) and size ratio (1.32) compared to the body text.",
+                "_layout_x": 180.0,
+                "_layout_y": 183.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "14.3 혈구형성 장애",
+                "_layout_page": 138,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "1) 재생불량성 빈혈",
+                "page": 138,
+                "level_reason": "Numbered as 1) and uses a font size (12.0) slightly smaller than the level 1 section but larger than body text.",
+                "_layout_x": 173.0,
+                "_layout_y": 225.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 재생불량성 빈혈",
+                "_layout_page": 138,
+                "_source_order": 1
+            },
+            {
+                "level": 2,
+                "chapter": "2) 기타 림프조혈기계 질환",
+                "page": 138,
+                "level_reason": "Numbered as 2) and follows the same font size (12.0) and style as the previous level 2 entry.",
+                "_layout_x": 173.0,
+                "_layout_y": 519.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 기타 림프조혈기계 질환",
+                "_layout_page": 138,
+                "_source_order": 2
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"3_5-7_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"14.3 혈구형성 장애\",\n      \"page\": 138,\n      \"level_reason\": \"Numbered as 14.3 with a larger font size (12.5) and size ratio (1.32) compared to the body text.\",\n      \"_layout_page\": 138,\n      \"_layout_x\": 180,\n      \"_layout_y\": 183,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"14.3 혈구형성 장애\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1) 재생불량성 빈혈\",\n      \"page\": 138,\n      \"level_reason\": \"Numbered as 1) and uses a font size (12.0) slightly smaller than the level 1 section but larger than body text.\",\n      \"_layout_page\": 138,\n      \"_layout_x\": 173,\n      \"_layout_y\": 225,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"1) 재생불량성 빈혈\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2) 기타 림프조혈기계 질환\",\n      \"page\": 138,\n      \"level_reason\": \"Numbered as 2) and follows the same font size (12.0) and style as the previous level 2 entry.\",\n      \"_layout_page\": 138,\n      \"_layout_x\": 173,\n      \"_layout_y\": 519,\n      \"_layout_font_size\": 12.0,\n      \"_layout_size_ratio\": 1.27,\n      \"_layout_text\": \"2) 기타 림프조혈기계 질환\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,45 @@
+{
+    "timestamp": "2026-07-07 18:27:33",
+    "stage_index": 114,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "14.3",
+    "total_chunks": 19,
+    "start_page": 449,
+    "end_page": 449,
+    "toc": {
+        "title": "제5장 재난과 공중보건위기의 대비와 대응",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "2.2 공중보건감시와 역학조사의 자료원",
+                "page": 449,
+                "level_reason": "Numbered as 2.2, uses a larger font size (s=12.5) and higher size ratio (r=1.32) compared to body text.",
+                "_layout_x": 73.0,
+                "_layout_y": 93.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.2 공중보건감시와 역학조사의 자료원",
+                "_layout_page": 449,
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "2.3 재난 공중보건감시",
+                "page": 449,
+                "level_reason": "Numbered as 2.3, uses a larger font size (s=12.5) and higher size ratio (r=1.32) compared to body text.",
+                "_layout_x": 73.0,
+                "_layout_y": 488.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.3 재난 공중보건감시",
+                "_layout_page": 449,
+                "_source_order": 1
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"제5장 재난과 공중보건위기의 대비와 대응\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"2.2 공중보건감시와 역학조사의 자료원\",\n      \"page\": 449,\n      \"level_reason\": \"Numbered as 2.2, uses a larger font size (s=12.5) and higher size ratio (r=1.32) compared to body text.\",\n      \"_layout_page\": 449,\n      \"_layout_x\": 73,\n      \"_layout_y\": 93,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"2.2 공중보건감시와 역학조사의 자료원\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2.3 재난 공중보건감시\",\n      \"page\": 449,\n      \"level_reason\": \"Numbered as 2.3, uses a larger font size (s=12.5) and higher size ratio (r=1.32) compared to body text.\",\n      \"_layout_page\": 449,\n      \"_layout_x\": 73,\n      \"_layout_y\": 488,\n      \"_layout_font_size\": 12.5,\n      \"_layout_size_ratio\": 1.32,\n      \"_layout_text\": \"2.3 재난 공중보건감시\"\n    }\n  ]\n}"
+}
