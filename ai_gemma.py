@@ -114,6 +114,16 @@ TOC_SCHEMA: dict[str, Any] = {
     "additionalProperties": False,
 }
 
+LAYOUT_METADATA_FIELD_ALIASES: dict[str, tuple[str, ...]] = {
+    "_layout_x": ("_layout_x", "layout_x", "x", "left_indent"),
+    "_layout_y": ("_layout_y", "layout_y", "y", "vertical_position"),
+    "_layout_font_size": ("_layout_font_size", "layout_font_size", "font_size", "s"),
+    "_layout_size_ratio": ("_layout_size_ratio", "layout_size_ratio", "size_ratio", "r"),
+    "_layout_text": ("_layout_text", "layout_text", "source_text"),
+    "_layout_page": ("_layout_page", "layout_page"),
+    "_source_order": ("_source_order", "source_order"),
+}
+
 DEFAULT_USER_PROMPT = """
 Read the full PDF and create a study-oriented table of contents.
 
@@ -859,6 +869,50 @@ def parse_json_response(response: Any, provider: str) -> dict[str, Any]:
     return parse_json_response_text(text, provider)
 
 
+def first_present_metadata_value(source: dict[str, Any], aliases: Iterable[str]) -> Any:
+    for alias in aliases:
+        if alias in source and source.get(alias) is not None:
+            return source.get(alias)
+    return None
+
+
+def metadata_float_value(value: Any) -> float | None:
+    try:
+        return round(float(value), 2)
+    except Exception:
+        return None
+
+
+def metadata_int_value(value: Any) -> int | None:
+    try:
+        return int(value)
+    except Exception:
+        return None
+
+
+def copy_toc_layout_metadata(source: dict[str, Any], target: dict[str, Any]) -> None:
+    for target_key, aliases in LAYOUT_METADATA_FIELD_ALIASES.items():
+        value = first_present_metadata_value(source, aliases)
+        if value is None:
+            continue
+
+        if target_key in {"_layout_x", "_layout_y", "_layout_font_size", "_layout_size_ratio"}:
+            number = metadata_float_value(value)
+            if number is not None:
+                target[target_key] = number
+            continue
+
+        if target_key in {"_layout_page", "_source_order"}:
+            number = metadata_int_value(value)
+            if number is not None:
+                target[target_key] = number
+            continue
+
+        text = clean_text(value)
+        if text:
+            target[target_key] = text
+
+
 def validate_toc(data: dict[str, Any], fallback_title: str, max_depth: int) -> dict[str, Any]:
     title = clean_text(data.get("title")) or fallback_title
     chapters: list[dict[str, Any]] = []
@@ -902,6 +956,7 @@ def validate_toc(data: dict[str, Any], fallback_title: str, max_depth: int) -> d
         level_reason = clean_text(item.get("level_reason"))
         if level_reason:
             chapter_item["level_reason"] = level_reason
+        copy_toc_layout_metadata(item, chapter_item)
         chapters.append(chapter_item)
 
     return {
@@ -3138,9 +3193,15 @@ def find_layout_for_chapter_title(chunk_text: str, title: str) -> dict[str, Any]
     return fallback_match
 
 
-def toc_level_reference_entry(chapter_title: str, chunk_text: str) -> dict[str, Any]:
+def toc_level_reference_entry(
+    chapter_title: str,
+    chunk_text: str,
+    chapter: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     entry: dict[str, Any] = {"title": compact_toc_example_title(chapter_title)}
-    layout = find_layout_for_chapter_title(chunk_text=chunk_text, title=chapter_title)
+    layout = layout_from_toc_metadata(chapter) if isinstance(chapter, dict) else {}
+    if not layout:
+        layout = find_layout_for_chapter_title(chunk_text=chunk_text, title=chapter_title)
     for key in (
         "font_size",
         "size_ratio",
@@ -3203,18 +3264,64 @@ def layout_reason_style_text(layout: dict[str, Any]) -> str:
     return ", ".join(parts)
 
 
-def copy_layout_sort_metadata(chapter: dict[str, Any], layout: dict[str, Any], fallback_order: int) -> None:
-    chapter["_source_order"] = int_sort_value(layout.get("line_index"), default=fallback_order)
+def layout_from_toc_metadata(chapter: dict[str, Any]) -> dict[str, Any]:
+    layout: dict[str, Any] = {}
+    for target_key, aliases in LAYOUT_METADATA_FIELD_ALIASES.items():
+        value = first_present_metadata_value(chapter, aliases)
+        if value is None:
+            continue
+
+        if target_key == "_layout_x":
+            number = metadata_float_value(value)
+            if number is not None:
+                layout["left_indent"] = number
+        elif target_key == "_layout_y":
+            number = metadata_float_value(value)
+            if number is not None:
+                layout["vertical_position"] = number
+        elif target_key == "_layout_font_size":
+            number = metadata_float_value(value)
+            if number is not None:
+                layout["font_size"] = number
+        elif target_key == "_layout_size_ratio":
+            number = metadata_float_value(value)
+            if number is not None:
+                layout["size_ratio"] = number
+        elif target_key == "_layout_text":
+            text = clean_text(value)
+            if text:
+                layout["text"] = text
+        elif target_key == "_source_order":
+            number = metadata_int_value(value)
+            if number is not None:
+                layout["line_index"] = number
+
+    return layout
+
+
+def copy_layout_sort_metadata(
+    chapter: dict[str, Any],
+    layout: dict[str, Any],
+    fallback_order: int,
+    overwrite: bool = False,
+) -> None:
+    def assign(key: str, value: Any) -> None:
+        if value is None:
+            return
+        if overwrite or key not in chapter:
+            chapter[key] = value
+
+    assign("_source_order", int_sort_value(layout.get("line_index"), default=fallback_order))
     if "vertical_position" in layout:
-        chapter["_layout_y"] = layout["vertical_position"]
+        assign("_layout_y", layout["vertical_position"])
     if "left_indent" in layout:
-        chapter["_layout_x"] = layout["left_indent"]
+        assign("_layout_x", layout["left_indent"])
     if "font_size" in layout:
-        chapter["_layout_font_size"] = layout["font_size"]
+        assign("_layout_font_size", layout["font_size"])
     if "size_ratio" in layout:
-        chapter["_layout_size_ratio"] = layout["size_ratio"]
+        assign("_layout_size_ratio", layout["size_ratio"])
     if clean_text(layout.get("text")):
-        chapter["_layout_text"] = clean_text(layout.get("text"))
+        assign("_layout_text", clean_text(layout.get("text")))
 
 
 def style_distance(left: dict[str, Any], right: dict[str, Any]) -> float:
@@ -3321,7 +3428,9 @@ def add_level_reasons_to_toc(
         title = clean_text(chapter.get("chapter"))
         if not title:
             continue
-        layout = find_layout_for_chapter_title(chunk_text=chunk_text, title=title)
+        layout = layout_from_toc_metadata(chapter)
+        if not layout:
+            layout = find_layout_for_chapter_title(chunk_text=chunk_text, title=title)
         copy_layout_sort_metadata(chapter, layout, fallback_order=chapter_index)
         if clean_text(chapter.get("level_reason")) and not overwrite:
             continue
@@ -3386,6 +3495,7 @@ def partial_toc_layout_sort_map(partial_tocs: list[dict[str, Any]]) -> dict[tupl
                 "_layout_font_size",
                 "_layout_size_ratio",
                 "_layout_text",
+                "_layout_page",
                 "_source_order",
                 "_local_merge_order",
             ):
@@ -3497,7 +3607,7 @@ def update_toc_level_reference(
         if any(normalize_toc_match_text(existing.get("title")) == normalized for existing in examples):
             continue
         if len(examples) < max_examples_per_level:
-            examples.append(toc_level_reference_entry(chapter_title=chapter_title, chunk_text=chunk_text))
+            examples.append(toc_level_reference_entry(chapter_title=chapter_title, chunk_text=chunk_text, chapter=chapter))
 
 
 def format_toc_level_reference(level_reference: dict[int, list[dict[str, Any]]]) -> str:
@@ -3538,6 +3648,11 @@ Some lines may start with compact layout tags:
 - Never copy [L ...] tags into chapter titles.
 - Ignore existing table-of-contents pages, dot-leader lines, page-number-only lines, and repeated headers/footers.
 - Include level_reason in every chapter object. Explain the level using numbering, hierarchy, font size/ratio, bold/italic, indentation, and context.
+- For every chapter object, copy layout metadata from the actual visible body-title line you used:
+  "_layout_page" from [PAGE n], "_layout_x" from x=, "_layout_y" from y=, "_layout_font_size" from s=, "_layout_size_ratio" from r=, and "_layout_text" as the exact text after the [L ...] tag.
+- Use layout metadata from the same [PAGE n] as the chapter page. Do not use layout metadata from existing TOC pages, headers, footers, indexes, or repeated running titles.
+- If a title spans multiple layout lines, use the main descriptive title line with the strongest title style, and keep the combined title in "chapter".
+- If no reliable [L ...] line exists for an entry, omit the _layout_* fields instead of guessing.
 - Output compact valid JSON only. Every object property and every array item must be separated with commas.
 
 [PDF File Name]
@@ -3571,6 +3686,11 @@ Some lines may start with compact layout tags:
 - Never copy [L ...] tags into chapter titles.
 - Ignore existing table-of-contents pages, dot-leader lines, page-number-only lines, and repeated headers/footers.
 - Include level_reason in every chapter object. Explain the level using numbering, hierarchy, font size/ratio, bold/italic, indentation, and context.
+- For every chapter object, copy layout metadata from the actual visible body-title line you used:
+  "_layout_page" from [PAGE n], "_layout_x" from x=, "_layout_y" from y=, "_layout_font_size" from s=, "_layout_size_ratio" from r=, and "_layout_text" as the exact text after the [L ...] tag.
+- Use layout metadata from the same [PAGE n] as the chapter page. Do not use layout metadata from existing TOC pages, headers, footers, indexes, or repeated running titles.
+- If a title spans multiple layout lines, use the main descriptive title line with the strongest title style, and keep the combined title in "chapter".
+- If no reliable [L ...] line exists for an entry, omit the _layout_* fields instead of guessing.
 - Output compact valid JSON only. Every object property and every array item must be separated with commas.
 {level_reference_block}
 
