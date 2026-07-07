@@ -1,0 +1,56 @@
+{
+    "timestamp": "2026-07-07 14:05:48",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편1-4장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_1-4_2021.pdf",
+    "chunk": "2.3",
+    "total_chunks": 3,
+    "start_page": 82,
+    "end_page": 82,
+    "input_chars": 3111,
+    "toc": {
+        "title": "2_1-4_2021.pdf",
+        "chapters": [
+            {
+                "level": 2,
+                "chapter": "4. 공간에 따른 건강수준 차이",
+                "page": 82,
+                "level_reason": "Numbered as '4.' with a larger font size (s=18.0, r=1.90) compared to body text, matching the level 2 style from previous references.",
+                "_source_order": 8,
+                "_layout_y": 288.0,
+                "_layout_x": 185.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "4. 공간에 따른 건강수준 차이"
+            },
+            {
+                "level": 3,
+                "chapter": "4.1 국가 간 건강수준의 차이",
+                "page": 82,
+                "level_reason": "Numbered as '4.1' with a medium font size (s=12.5, r=1.32), indicating a subsection of section 4.",
+                "_source_order": 13,
+                "_layout_y": 461.0,
+                "_layout_x": 181.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "4.1 국가 간 건강수준의 차이"
+            },
+            {
+                "level": 4,
+                "chapter": "1) 한국과 OECD 국가 간 건강수준 비교",
+                "page": 82,
+                "level_reason": "Numbered as '1)' with a font size (s=12.0, r=1.27) consistent with level 4 hierarchy.",
+                "_source_order": 14,
+                "_layout_y": 502.0,
+                "_layout_x": 173.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 한국과 OECD 국가 간 건강수준 비교"
+            }
+        ]
+    },
+    "chapter_count": 3,
+    "raw_response": "{\n  \"title\": \"2_1-4_2021.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 2,\n      \"chapter\": \"4. 공간에 따른 건강수준 차이\",\n      \"page\": 82,\n      \"level_reason\": \"Numbered as '4.' with a larger font size (s=18.0, r=1.90) compared to body text, matching the level 2 style from previous references.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"4.1 국가 간 건강수준의 차이\",\n      \"page\": 82,\n      \"level_reason\": \"Numbered as '4.1' with a medium font size (s=12.5, r=1.32), indicating a subsection of section 4.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 한국과 OECD 국가 간 건강수준 비교\",\n      \"page\": 82,\n      \"level_reason\": \"Numbered as '1)' with a font size (s=12.0, r=1.27) consistent with level 4 hierarchy.\"\n    }\n  ]\n}",
+    "raw_response_chars": 709
+}
