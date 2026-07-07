@@ -56,3 +56,7 @@ Processing started: 2편1-4장(2021).pdf
   Gemma chunk 1 failed; retrying with 3 subchunks: Gemma vLLM generation failed: This model's maximum context length is 65536 tokens. However, you requested 0 output tokens and your prompt contains at least 65537 input tokens, for a total of at least 65537 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=65537)
   Gemma chunk 1.1/3 request: pages 1-21
   Gemma input chunk 1.1 saved: data/output/input_chunks/2_1-4_2021_gemma_20260707_161755/chunk_1.1_pages_1-21.json
+  Gemma chunk 1.1 completed: 50 chapters
+  Gemma chunk 1.2/3 request: pages 22-40
+  Gemma input chunk 1.2 saved: data/output/input_chunks/2_1-4_2021_gemma_20260707_161755/chunk_1.2_pages_22-40.json
+Run log saved: data/output/logs/batch_gemma_20260707_161755_log.txt
