@@ -3130,6 +3130,7 @@ def layout_reason_style_text(layout: dict[str, Any]) -> str:
         ("font_size", "s"),
         ("size_ratio", "r"),
         ("left_indent", "x"),
+        ("vertical_position", "y"),
         ("bold", "b"),
         ("italic", "i"),
         ("font_id", "f"),
@@ -3298,6 +3299,43 @@ def partial_toc_level_reason_map(partial_tocs: list[dict[str, Any]]) -> dict[tup
     return reason_by_key
 
 
+def partial_toc_layout_sort_map(partial_tocs: list[dict[str, Any]]) -> dict[tuple[str, int], dict[str, Any]]:
+    layout_by_key: dict[tuple[str, int], dict[str, Any]] = {}
+    for partial in partial_tocs:
+        toc = partial.get("toc") if isinstance(partial, dict) else None
+        if not isinstance(toc, dict):
+            continue
+        chapters = toc.get("chapters", [])
+        if not isinstance(chapters, list):
+            continue
+        for chapter in chapters:
+            if not isinstance(chapter, dict):
+                continue
+            title = normalize_toc_match_text(chapter.get("chapter"))
+            if not title:
+                continue
+            try:
+                page = int(chapter.get("page", 1))
+            except Exception:
+                page = 1
+
+            metadata: dict[str, Any] = {}
+            for key in (
+                "_layout_y",
+                "_layout_x",
+                "_layout_font_size",
+                "_layout_size_ratio",
+                "_layout_text",
+                "_source_order",
+                "_local_merge_order",
+            ):
+                if key in chapter:
+                    metadata[key] = chapter[key]
+            if metadata:
+                layout_by_key.setdefault((title, page), metadata)
+    return layout_by_key
+
+
 def restore_level_reasons_from_partials(toc: dict[str, Any], partial_tocs: list[dict[str, Any]]) -> dict[str, Any]:
     reason_by_key = partial_toc_level_reason_map(partial_tocs)
     if not reason_by_key:
@@ -3321,6 +3359,50 @@ def restore_level_reasons_from_partials(toc: dict[str, Any], partial_tocs: list[
         if reason:
             chapter["level_reason"] = reason
     return toc
+
+
+def restore_layout_sort_metadata_from_partials(toc: dict[str, Any], partial_tocs: list[dict[str, Any]]) -> dict[str, Any]:
+    layout_by_key = partial_toc_layout_sort_map(partial_tocs)
+    if not layout_by_key:
+        return toc
+
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return toc
+
+    for index, chapter in enumerate(chapters):
+        if not isinstance(chapter, dict):
+            continue
+        title = normalize_toc_match_text(chapter.get("chapter"))
+        if not title:
+            continue
+        try:
+            page = int(chapter.get("page", 1))
+        except Exception:
+            page = 1
+        metadata = layout_by_key.get((title, page))
+        if not metadata:
+            continue
+        for key, value in metadata.items():
+            chapter.setdefault(key, value)
+        chapter.setdefault("_local_merge_order", index)
+    return toc
+
+
+def sort_toc_with_restored_layout(
+    toc: dict[str, Any],
+    partial_tocs: list[dict[str, Any]],
+    fallback_title: str,
+    max_depth: int,
+) -> dict[str, Any]:
+    restore_layout_sort_metadata_from_partials(toc, partial_tocs)
+    chapters = toc.get("chapters", [])
+    if isinstance(chapters, list):
+        for index, chapter in enumerate(chapters):
+            if isinstance(chapter, dict):
+                chapter.setdefault("_local_merge_order", index)
+        chapters.sort(key=lambda item: local_merge_sort_key(item) if isinstance(item, dict) else (999999,))
+    return validate_toc(toc, fallback_title=fallback_title, max_depth=max_depth)
 
 
 def update_toc_level_reference(
@@ -3714,6 +3796,12 @@ def merge_gemma_partial_tocs_once(
     )
     toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
     restore_level_reasons_from_partials(toc, partial_tocs)
+    toc = sort_toc_with_restored_layout(
+        toc,
+        partial_tocs=partial_tocs,
+        fallback_title=pdf_path.stem,
+        max_depth=args.max_depth,
+    )
 
     source_min_page, source_max_page = partial_toc_page_bounds(partial_tocs)
     output_pages = toc_chapter_pages(toc)
