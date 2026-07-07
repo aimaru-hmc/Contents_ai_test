@@ -94,6 +94,10 @@ DEFAULT_WRITE_INPUT_CHUNKS = (
     os.getenv("WRITE_INPUT_CHUNKS", os.getenv("WRITE_CHUNK_RESULTS", "true")).strip().lower()
     in {"1", "true", "yes", "on"}
 )
+DEFAULT_WRITE_STAGE_FILES = (
+    os.getenv("WRITE_STAGE_FILES", "true").strip().lower()
+    in {"1", "true", "yes", "on"}
+)
 DEFAULT_GEMMA_VLLM_TENSOR_PARALLEL_SIZE = int(os.getenv("GEMMA_VLLM_TENSOR_PARALLEL_SIZE", os.getenv("VLLM_TENSOR_PARALLEL_SIZE", "1")))
 DEFAULT_GEMMA_VLLM_GPU_MEMORY_UTILIZATION = float(os.getenv("GEMMA_VLLM_GPU_MEMORY_UTILIZATION", os.getenv("VLLM_GPU_MEMORY_UTILIZATION", "0.9")))
 DEFAULT_GEMMA_VLLM_MAX_MODEL_LEN = os.getenv("GEMMA_VLLM_MAX_MODEL_LEN", os.getenv("VLLM_MAX_MODEL_LEN", "")).strip()
@@ -1924,6 +1928,59 @@ def write_input_chunk(
         input_chunk_files=input_chunk_files,
     )
     return chunk_file
+
+
+def write_stage_file(
+    *,
+    args: argparse.Namespace,
+    pdf_path: Path,
+    provider: str,
+    model: str,
+    stage: str,
+    payload: dict[str, Any],
+    chunk: Any = None,
+) -> Path | None:
+    if not getattr(args, "write_stage_files", DEFAULT_WRITE_STAGE_FILES):
+        return None
+
+    source_pdf_text = str(getattr(args, "_ai_current_input_pdf_path", "") or "").strip()
+    source_pdf_path = Path(source_pdf_text) if source_pdf_text else pdf_path
+    run_timestamp = clean_text(getattr(args, "_ai_run_timestamp", "")) or timestamp_for_filename()
+    provider_part = safe_filename_part(provider or clean_text(getattr(args, "provider", "")) or "provider")
+    pdf_part = safe_filename_part(source_pdf_path.stem or pdf_path.stem)
+    stage_part = safe_filename_part(stage)
+    chunk_part = f"_chunk_{safe_filename_part(str(chunk))}" if chunk is not None else ""
+
+    stage_index = int(getattr(args, "_ai_stage_index", 0) or 0) + 1
+    setattr(args, "_ai_stage_index", stage_index)
+
+    stage_dir = Path(args.output_dir) / "stages" / f"{pdf_part}_{provider_part}_{run_timestamp}"
+    stage_file = unique_output_path(stage_dir / f"{stage_index:03d}_{stage_part}{chunk_part}.json")
+    stage_payload: dict[str, Any] = {
+        "timestamp": timestamp_for_metadata(),
+        "stage_index": stage_index,
+        "stage": stage,
+        "provider": provider,
+        "model": model,
+        "source_pdf": str(source_pdf_path),
+        "processed_pdf": str(pdf_path),
+    }
+    if chunk is not None:
+        stage_payload["chunk"] = chunk
+    stage_payload.update({str(key): jsonable_debug_value(value) for key, value in payload.items()})
+    save_json(stage_file, stage_payload)
+
+    stage_files = getattr(args, "_ai_stage_files", None)
+    if not isinstance(stage_files, list):
+        stage_files = []
+    stage_files.append(str(stage_file))
+    setattr(args, "_ai_stage_files", stage_files)
+    update_processing_metadata(
+        args,
+        stage_dir=str(stage_file.parent),
+        stage_files=stage_files,
+    )
+    return stage_file
 
 
 def build_claude_text_prompt(base_prompt: str, pdf_name: str, text: str) -> str:
@@ -3836,6 +3893,130 @@ Create one final TOC JSON object using only the [Partial TOC Candidates] below i
 """.strip()
 
 
+def toc_chapter_style_key(chapter: dict[str, Any]) -> tuple[float | None, float | None]:
+    font_size = metadata_float_value(chapter.get("_layout_font_size"))
+    size_ratio = metadata_float_value(chapter.get("_layout_size_ratio"))
+    if font_size is not None:
+        font_size = round(font_size, 1)
+    if size_ratio is not None:
+        size_ratio = round(size_ratio, 2)
+    return font_size, size_ratio
+
+
+def format_style_key(style_key: tuple[float | None, float | None]) -> str:
+    font_size, size_ratio = style_key
+    parts: list[str] = []
+    if font_size is not None:
+        parts.append(f"font_size={font_size}")
+    if size_ratio is not None:
+        parts.append(f"size_ratio={size_ratio}")
+    return ", ".join(parts) if parts else "no layout style"
+
+
+def format_gemma_level_style_summary(toc: dict[str, Any], max_conflicts: int = 20) -> str:
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return ""
+
+    by_level_style: dict[int, dict[tuple[float | None, float | None], dict[str, Any]]] = {}
+    by_style_level_count: dict[tuple[float | None, float | None], dict[int, int]] = {}
+    chapter_rows: list[dict[str, Any]] = []
+
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        title = clean_text(chapter.get("chapter"))
+        if not title:
+            continue
+        try:
+            level = int(chapter.get("level", 1))
+        except Exception:
+            level = 1
+        style_key = toc_chapter_style_key(chapter)
+        if style_key == (None, None):
+            continue
+        x_value = metadata_float_value(chapter.get("_layout_x"))
+        page = metadata_int_value(chapter.get("page"))
+
+        level_styles = by_level_style.setdefault(level, {})
+        style_entry = level_styles.setdefault(
+            style_key,
+            {
+                "count": 0,
+                "examples": [],
+                "x_values": [],
+            },
+        )
+        style_entry["count"] += 1
+        if len(style_entry["examples"]) < 3:
+            style_entry["examples"].append(title)
+        if x_value is not None:
+            style_entry["x_values"].append(x_value)
+
+        style_counts = by_style_level_count.setdefault(style_key, {})
+        style_counts[level] = style_counts.get(level, 0) + 1
+        chapter_rows.append({
+            "level": level,
+            "title": title,
+            "page": page,
+            "style_key": style_key,
+            "x": x_value,
+        })
+
+    if not by_level_style:
+        return ""
+
+    lines = ["[Observed TOC Level Style Evidence]"]
+    lines.append(
+        "Use this only as evidence for the correction pass. It summarizes the levels already present in the current TOC; it is not a rule table."
+    )
+    for level in sorted(by_level_style):
+        lines.append(f"Level {level} observed styles:")
+        level_styles = sorted(
+            by_level_style[level].items(),
+            key=lambda item: (-int(item[1].get("count", 0)), format_style_key(item[0])),
+        )
+        for style_key, info in level_styles[:5]:
+            x_values = [float(value) for value in info.get("x_values", []) if value is not None]
+            x_text = ""
+            if x_values:
+                x_text = f", left_indent_range={min(x_values):.1f}-{max(x_values):.1f}"
+            examples = "; ".join(compact_toc_example_title(title, max_chars=60) for title in info.get("examples", []))
+            lines.append(
+                f"- {format_style_key(style_key)}{x_text}: count={info.get('count', 0)}, examples={examples}"
+            )
+
+    conflicts: list[str] = []
+    for row in chapter_rows:
+        style_key = row["style_key"]
+        current_level = int(row["level"])
+        style_counts = by_style_level_count.get(style_key, {})
+        if not style_counts:
+            continue
+        best_level, best_count = max(style_counts.items(), key=lambda item: (item[1], -item[0]))
+        current_count = style_counts.get(current_level, 0)
+        current_level_styles = by_level_style.get(current_level, {})
+        dominant_current_count = max((int(info.get("count", 0)) for info in current_level_styles.values()), default=0)
+        current_style_count = int(current_level_styles.get(style_key, {}).get("count", 0))
+        if best_level == current_level and current_style_count >= dominant_current_count:
+            continue
+        if best_level != current_level and best_count < max(2, current_count + 1):
+            continue
+        page_text = f", page={row['page']}" if row.get("page") else ""
+        x_text = f", x={row['x']:.1f}" if row.get("x") is not None else ""
+        conflicts.append(
+            f'- title="{compact_toc_example_title(row["title"], max_chars=90)}"{page_text}: current level {current_level}, style {format_style_key(style_key)}{x_text} is more consistent with observed level {best_level} (style count {best_count} vs current level count {current_count}).'
+        )
+        if len(conflicts) >= max_conflicts:
+            break
+
+    if conflicts:
+        lines.append("Potential style-level conflicts to audit carefully:")
+        lines.extend(conflicts)
+
+    return "\n".join(lines)
+
+
 def build_gemma_level_review_prompt(
     base_prompt: str,
     pdf_name: str,
@@ -3847,6 +4028,8 @@ def build_gemma_level_review_prompt(
     level_reference_text: str = "",
 ) -> str:
     toc_json = json.dumps(compact_toc_for_gemma_level_review(toc), ensure_ascii=False, indent=2)
+    style_summary = format_gemma_level_style_summary(toc)
+    style_block = f"\n\n{style_summary}" if clean_text(style_summary) else ""
     source_block = f"\n\n[Source Text/Layout]\n{source_text}" if clean_text(source_text) else ""
     partial_block = ""
     if partial_tocs:
@@ -3866,14 +4049,21 @@ Review the [Current TOC JSON] and return one corrected TOC JSON object.
 This is a verification pass after the first TOC extraction/merge.
 - Correct wrong "level" values by inferring this document's hierarchy from repeated title patterns, page order, layout metadata, and nearby context.
 - Do not use a universal numbering-to-level rule. Korean chapter markers, "1.", "1.1", "(1)", roman numerals, and letters can mean different levels in different books.
+- Visual hierarchy is stronger evidence than numbering alone. Font size, size/body ratio, indentation, bold/italic style, and repeated visual patterns must override a superficial numbering interpretation when they conflict.
+- Before deciding levels, internally build a style cluster table for each level using _layout_font_size, _layout_size_ratio, _layout_x, and repeated title patterns. Do not output this table; use it to correct the JSON.
+- A level must be visually coherent within the same document. If one entry assigned to level 1 has a much smaller font/ratio and matches the repeated style of level 2 entries, move it to level 2 even if its title starts with a simple number such as "3.".
+- Do not keep an entry at level 1 merely because it is numbered "1.", "2.", "3.", etc. If true level 1 entries use a larger chapter-title style, a smaller "N." title is usually a lower section level in this document.
+- Audit every "level": 1 entry especially strictly. Level 1 should represent the highest visible hierarchy; entries with section-level typography must be corrected downward.
+- When [Observed TOC Level Style Evidence] lists a potential style-level conflict, explicitly resolve it in the output: either change the level to the visually matching level, or keep it only if there is stronger document-specific evidence and explain that evidence in level_reason.
 - Keep the same title, chapter text, page numbers, and order unless an entry is an exact duplicate or clearly invalid from the given context.
 - Do not invent new chapter titles or pages.
 - Use only levels from 1 to {max_depth}.
 - Preserve existing _layout_* metadata when it still describes the visible title line. If a correction uses a better visible line from [Source Text/Layout], update the _layout_* fields from that line.
-- Include level_reason for every chapter. If you changed a level, mention the previous level and the document-specific evidence for the corrected level.
+- Include level_reason for every chapter. If you changed a level, mention the previous level and the document-specific evidence for the corrected level, including font_size/size_ratio/indent and the matching repeated style cluster.
 - If the evidence is ambiguous, keep the current level and say why in level_reason.
 - Output compact valid JSON only.
 {reference_block}
+{style_block}
 
 [PDF File Name]
 {pdf_name}
@@ -4463,6 +4653,23 @@ def merge_gemma_partial_tocs_batched(
             "end_page": end_page,
             "toc": batch_toc,
         })
+        write_stage_file(
+            args=args,
+            pdf_path=pdf_path,
+            provider="gemma",
+            model=model,
+            stage="gemma_merge_batch_completed",
+            chunk=index,
+            payload={
+                "batch": index,
+                "batch_count": len(batches),
+                "start_page": start_page,
+                "end_page": end_page,
+                "status": status,
+                "toc": batch_toc,
+                "raw_response": raw_text,
+            },
+        )
         print(
             f"  Gemma merge batch {index} completed: {len(batch_toc.get('chapters', []) or [])} chapters",
             flush=True,
@@ -4538,6 +4745,21 @@ def process_gemma_text_chunk(
     )
     if input_chunk_file is not None:
         print(f"  Gemma input chunk {chunk_label} saved: {input_chunk_file}", flush=True)
+    write_stage_file(
+        args=args,
+        pdf_path=pdf_path,
+        provider="gemma",
+        model=model,
+        stage="chunk_input_ready",
+        chunk=chunk_label,
+        payload={
+            "total_chunks": total_chunks,
+            "start_page": chunk.get("start_page"),
+            "end_page": chunk.get("end_page"),
+            "input_chars": len(str(chunk.get("text") or "")),
+            "input_chunk_file": str(input_chunk_file) if input_chunk_file is not None else None,
+        },
+    )
 
     try:
         parsed, raw_text = request_gemma_json_text(
@@ -4552,6 +4774,21 @@ def process_gemma_text_chunk(
             chunk_text=str(chunk.get("text") or ""),
             level_reference=level_reference if use_level_reference else None,
         )
+        write_stage_file(
+            args=args,
+            pdf_path=pdf_path,
+            provider="gemma",
+            model=model,
+            stage="chunk_toc_generated",
+            chunk=chunk_label,
+            payload={
+                "total_chunks": total_chunks,
+                "start_page": chunk.get("start_page"),
+                "end_page": chunk.get("end_page"),
+                "toc": partial_toc,
+                "raw_response": raw_text,
+            },
+        )
         level_review_raw_text = ""
         level_review_status: dict[str, Any] = {}
         if gemma_level_verify_enabled(args, "chunk"):
@@ -4564,6 +4801,22 @@ def process_gemma_text_chunk(
                 stage_label=f"chunk {chunk_label}/{total_chunks}",
                 source_text=str(chunk.get("text") or ""),
                 level_reference_text=level_reference_text,
+            )
+            write_stage_file(
+                args=args,
+                pdf_path=pdf_path,
+                provider="gemma",
+                model=model,
+                stage="chunk_level_reviewed",
+                chunk=chunk_label,
+                payload={
+                    "total_chunks": total_chunks,
+                    "start_page": chunk.get("start_page"),
+                    "end_page": chunk.get("end_page"),
+                    "level_review": level_review_status,
+                    "toc": partial_toc,
+                    "raw_response": level_review_raw_text,
+                },
             )
         raw_part = {
             "chunk": chunk["index"],
@@ -4626,6 +4879,21 @@ def process_gemma_text_chunk(
             file=sys.stderr,
             flush=True,
         )
+        write_stage_file(
+            args=args,
+            pdf_path=pdf_path,
+            provider="gemma",
+            model=model,
+            stage="chunk_split_retry",
+            chunk=chunk_label,
+            payload={
+                "start_page": chunk.get("start_page"),
+                "end_page": chunk.get("end_page"),
+                "input_chars": len(str(chunk.get("text") or "")),
+                "subchunk_count": len(subchunks),
+                "error": message_of(error),
+            },
+        )
         partials: list[dict[str, Any]] = []
         for subchunk in subchunks:
             partials.extend(
@@ -4680,6 +4948,19 @@ def generate_toc_from_pdf_gemma_text(
         pages=pages,
         extraction_metadata=extraction_metadata,
     )
+    write_stage_file(
+        args=args,
+        pdf_path=pdf_path,
+        provider="gemma",
+        model=model,
+        stage="01_pdf_extracted",
+        payload={
+            "extraction": extraction_metadata,
+            "extracted_pages": len(pages),
+            "extracted_chars": extracted_chars,
+            "parsed_pdf_file": getattr(args, "_ai_processing_metadata", {}).get("parsed_pdf_file"),
+        },
+    )
 
     single_max_chars = max(10000, int(args.gemma_text_single_max_chars))
     chunk_chars = max(10000, int(args.gemma_text_chunk_chars))
@@ -4707,6 +4988,18 @@ def generate_toc_from_pdf_gemma_text(
             print(f"  Gemma text TOC generation completed: {model}", flush=True)
             toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
             add_level_reasons_to_toc(toc, chunk_text=full_text)
+            write_stage_file(
+                args=args,
+                pdf_path=pdf_path,
+                provider="gemma",
+                model=model,
+                stage="02_single_toc_generated",
+                payload={
+                    "input_chars": len(full_text),
+                    "toc": toc,
+                    "raw_response": raw_text,
+                },
+            )
             level_review_raw_text = ""
             level_review_status: dict[str, Any] = {}
             if normalize_gemma_level_verify_scope(
@@ -4721,6 +5014,18 @@ def generate_toc_from_pdf_gemma_text(
                     stage_label="single text",
                     source_text=full_text,
                 )
+                write_stage_file(
+                    args=args,
+                    pdf_path=pdf_path,
+                    provider="gemma",
+                    model=model,
+                    stage="03_single_level_reviewed",
+                    payload={
+                        "level_review": level_review_status,
+                        "toc": toc,
+                        "raw_response": level_review_raw_text,
+                    },
+                )
             single_level_reference_enabled = bool(getattr(args, "gemma_level_reference", DEFAULT_GEMMA_LEVEL_REFERENCE))
             single_level_reference = (
                 build_toc_level_reference(toc, max_depth=args.max_depth, chunk_text=full_text)
@@ -4734,6 +5039,17 @@ def generate_toc_from_pdf_gemma_text(
                 gemma_level_reference_source="final_toc",
                 gemma_level_reference_levels=sorted(single_level_reference) if single_level_reference_enabled else [],
                 gemma_level_reference_examples=serialize_toc_level_reference(single_level_reference) if single_level_reference_enabled else {},
+            )
+            write_stage_file(
+                args=args,
+                pdf_path=pdf_path,
+                provider="gemma",
+                model=model,
+                stage="04_single_final_ready",
+                payload={
+                    "toc": toc,
+                    "level_reference": serialize_toc_level_reference(single_level_reference) if single_level_reference_enabled else {},
+                },
             )
             raw_bundle = {
                 "mode": "gemma_text_single",
@@ -4760,6 +5076,26 @@ def generate_toc_from_pdf_gemma_text(
 
     chunks = chunk_pdf_text_pages(pages, max_chars=chunk_chars)
     print(f"  Gemma text chunk processing started: {len(chunks)} chunks", flush=True)
+    write_stage_file(
+        args=args,
+        pdf_path=pdf_path,
+        provider="gemma",
+        model=model,
+        stage="02_chunks_created",
+        payload={
+            "chunk_count": len(chunks),
+            "chunk_chars": chunk_chars,
+            "chunks": [
+                {
+                    "index": chunk.get("index"),
+                    "start_page": chunk.get("start_page"),
+                    "end_page": chunk.get("end_page"),
+                    "input_chars": len(str(chunk.get("text") or "")),
+                }
+                for chunk in chunks
+            ],
+        },
+    )
     update_processing_metadata(
         args,
         chunked=True,
@@ -4807,6 +5143,20 @@ def generate_toc_from_pdf_gemma_text(
             )
         )
     update_processing_metadata(args, processed_chunk_count=len(raw_parts))
+    write_stage_file(
+        args=args,
+        pdf_path=pdf_path,
+        provider="gemma",
+        model=model,
+        stage="03_chunks_completed",
+        payload={
+            "processed_chunk_count": len(raw_parts),
+            "partial_count": len(partial_tocs),
+            "partial_tocs": partial_tocs,
+            "chunk_level_reference": serialize_toc_level_reference(level_reference) if level_reference_enabled else {},
+            "chunk_level_reference_source": chunk_level_reference_source,
+        },
+    )
 
     merge_mode = normalize_gemma_merge_mode(getattr(args, "gemma_merge_mode", DEFAULT_GEMMA_MERGE_MODE))
     update_processing_metadata(args, gemma_merge_mode=merge_mode)
@@ -4889,6 +5239,20 @@ def generate_toc_from_pdf_gemma_text(
                 indent=2,
             )
 
+    write_stage_file(
+        args=args,
+        pdf_path=pdf_path,
+        provider="gemma",
+        model=model,
+        stage="04_merge_completed",
+        payload={
+            "merge_mode": merge_mode,
+            "merge_strategy": getattr(args, "gemma_merge_strategy", DEFAULT_GEMMA_MERGE_STRATEGY),
+            "toc": toc,
+            "raw_response": final_raw_text,
+        },
+    )
+
     final_level_review_raw_text = ""
     final_level_review_status: dict[str, Any] = {}
     if gemma_level_verify_enabled(args, "final"):
@@ -4914,6 +5278,18 @@ def generate_toc_from_pdf_gemma_text(
             fallback_title=pdf_path.stem,
             max_depth=args.max_depth,
         )
+        write_stage_file(
+            args=args,
+            pdf_path=pdf_path,
+            provider="gemma",
+            model=model,
+            stage="05_final_level_reviewed",
+            payload={
+                "level_review": final_level_review_status,
+                "toc": toc,
+                "raw_response": final_level_review_raw_text,
+            },
+        )
 
     final_level_reference = (
         build_toc_level_reference(toc, max_depth=args.max_depth)
@@ -4924,6 +5300,18 @@ def generate_toc_from_pdf_gemma_text(
         args,
         gemma_level_reference_levels=sorted(final_level_reference) if level_reference_enabled else [],
         gemma_level_reference_examples=serialize_toc_level_reference(final_level_reference) if level_reference_enabled else {},
+    )
+    write_stage_file(
+        args=args,
+        pdf_path=pdf_path,
+        provider="gemma",
+        model=model,
+        stage="06_final_toc_ready",
+        payload={
+            "toc": toc,
+            "level_reference": serialize_toc_level_reference(final_level_reference) if level_reference_enabled else {},
+            "final_level_review": final_level_review_status,
+        },
     )
 
     raw_bundle = {
@@ -5259,6 +5647,8 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> b
     setattr(args, "_ai_current_display_name", display_name)
     setattr(args, "_ai_processing_metadata", {})
     setattr(args, "_ai_input_chunk_files", [])
+    setattr(args, "_ai_stage_files", [])
+    setattr(args, "_ai_stage_index", 0)
     print(f"Processing started: {display_name}", flush=True)
     print(f"  provider: {args.provider}", flush=True)
     started_at = time.perf_counter()
@@ -5606,6 +5996,19 @@ def build_arg_parser() -> argparse.ArgumentParser:
         dest="write_input_chunks",
         action="store_false",
         help="Do not save Gemma input chunk files.",
+    )
+    parser.add_argument(
+        "--write-stage-files",
+        dest="write_stage_files",
+        action="store_true",
+        default=DEFAULT_WRITE_STAGE_FILES,
+        help="Save Gemma intermediate stage JSON files under output_dir/stages. Enabled by default.",
+    )
+    parser.add_argument(
+        "--no-write-stage-files",
+        dest="write_stage_files",
+        action="store_false",
+        help="Do not save Gemma intermediate stage JSON files.",
     )
     parser.add_argument(
         "--log-file",
