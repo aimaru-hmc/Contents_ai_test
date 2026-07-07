@@ -75,6 +75,10 @@ DEFAULT_GEMMA_LEVEL_REFERENCE = (
     os.getenv("GEMMA_LEVEL_REFERENCE", "true").strip().lower()
     in {"1", "true", "yes", "on"}
 )
+DEFAULT_GEMMA_LEVEL_VERIFY = (
+    os.getenv("GEMMA_LEVEL_VERIFY", "true").strip().lower()
+    in {"1", "true", "yes", "on"}
+)
 DEFAULT_WRITE_PARSED_PDF = (
     os.getenv("WRITE_PARSED_PDF", "true").strip().lower()
     in {"1", "true", "yes", "on"}
@@ -3746,6 +3750,58 @@ Create one final TOC JSON object using only the [Partial TOC Candidates] below i
 """.strip()
 
 
+def build_gemma_level_review_prompt(
+    base_prompt: str,
+    pdf_name: str,
+    toc: dict[str, Any],
+    max_depth: int,
+    stage_label: str,
+    source_text: str = "",
+    partial_tocs: list[dict[str, Any]] | None = None,
+    level_reference_text: str = "",
+) -> str:
+    toc_json = json.dumps(compact_toc_for_gemma_level_review(toc), ensure_ascii=False, indent=2)
+    source_block = f"\n\n[Source Text/Layout]\n{source_text}" if clean_text(source_text) else ""
+    partial_block = ""
+    if partial_tocs:
+        partial_json = json.dumps(
+            compact_partial_tocs_for_gemma_level_review(partial_tocs),
+            ensure_ascii=False,
+            indent=2,
+        )
+        partial_block = f"\n\n[Partial TOC Candidates]\n{partial_json}"
+    reference_block = f"\n\n{level_reference_text}" if clean_text(level_reference_text) else ""
+
+    return f"""
+{base_prompt}
+
+[Gemma TOC Level Verification and Correction]
+Review the [Current TOC JSON] and return one corrected TOC JSON object.
+This is a verification pass after the first TOC extraction/merge.
+- Correct wrong "level" values by inferring this document's hierarchy from repeated title patterns, page order, layout metadata, and nearby context.
+- Do not use a universal numbering-to-level rule. Korean chapter markers, "1.", "1.1", "(1)", roman numerals, and letters can mean different levels in different books.
+- Keep the same title, chapter text, page numbers, and order unless an entry is an exact duplicate or clearly invalid from the given context.
+- Do not invent new chapter titles or pages.
+- Use only levels from 1 to {max_depth}.
+- Preserve existing _layout_* metadata when it still describes the visible title line. If a correction uses a better visible line from [Source Text/Layout], update the _layout_* fields from that line.
+- Include level_reason for every chapter. If you changed a level, mention the previous level and the document-specific evidence for the corrected level.
+- If the evidence is ambiguous, keep the current level and say why in level_reason.
+- Output compact valid JSON only.
+{reference_block}
+
+[PDF File Name]
+{pdf_name}
+
+[Review Stage]
+{stage_label}
+
+[Current TOC JSON]
+{toc_json}
+{partial_block}
+{source_block}
+""".strip()
+
+
 def build_gemma_json_retry_prompt(base_prompt: str, error: Exception, raw_text: str) -> str:
     raw_preview = clean_text(raw_text)[:500]
     return (
@@ -3888,6 +3944,231 @@ def compact_partial_toc_for_gemma_merge(partial: dict[str, Any]) -> dict[str, An
 
 def compact_partial_tocs_for_gemma_merge(partial_tocs: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return [compact_partial_toc_for_gemma_merge(partial) for partial in partial_tocs]
+
+
+def compact_toc_for_gemma_level_review(toc: dict[str, Any]) -> dict[str, Any]:
+    compact: dict[str, Any] = {
+        "title": clean_text(toc.get("title")),
+        "chapters": [],
+    }
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return compact
+
+    metadata_keys = (
+        "level_reason",
+        "_layout_page",
+        "_layout_x",
+        "_layout_y",
+        "_layout_font_size",
+        "_layout_size_ratio",
+        "_layout_text",
+        "_source_order",
+        "_local_merge_order",
+    )
+    compact_chapters: list[dict[str, Any]] = []
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        item: dict[str, Any] = {
+            "level": chapter.get("level"),
+            "chapter": clean_text(chapter.get("chapter")),
+            "page": chapter.get("page"),
+        }
+        if not item["chapter"]:
+            continue
+        for key in metadata_keys:
+            value = chapter.get(key)
+            if value is None:
+                continue
+            if isinstance(value, str):
+                value = clean_text(value)
+                if not value:
+                    continue
+            item[key] = value
+        compact_chapters.append(item)
+    compact["chapters"] = compact_chapters
+    return compact
+
+
+def compact_partial_toc_for_gemma_level_review(partial: dict[str, Any]) -> dict[str, Any]:
+    toc = partial.get("toc") if isinstance(partial, dict) else None
+    return {
+        "chunk": partial.get("chunk") if isinstance(partial, dict) else None,
+        "start_page": partial.get("start_page") if isinstance(partial, dict) else None,
+        "end_page": partial.get("end_page") if isinstance(partial, dict) else None,
+        "toc": compact_toc_for_gemma_level_review(toc if isinstance(toc, dict) else {}),
+    }
+
+
+def compact_partial_tocs_for_gemma_level_review(partial_tocs: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [compact_partial_toc_for_gemma_level_review(partial) for partial in partial_tocs]
+
+
+def toc_level_by_match_key(toc: dict[str, Any]) -> dict[tuple[str, int], int]:
+    level_by_key: dict[tuple[str, int], int] = {}
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return level_by_key
+
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        title = normalize_toc_match_text(chapter.get("chapter"))
+        if not title:
+            continue
+        try:
+            page = int(chapter.get("page", 1))
+            level = int(chapter.get("level", 1))
+        except Exception:
+            continue
+        level_by_key[(title, page)] = level
+    return level_by_key
+
+
+def count_toc_level_changes(before: dict[str, Any], after: dict[str, Any]) -> int:
+    before_levels = toc_level_by_match_key(before)
+    after_levels = toc_level_by_match_key(after)
+    return sum(
+        1
+        for key, after_level in after_levels.items()
+        if key in before_levels and before_levels[key] != after_level
+    )
+
+
+def restore_missing_toc_metadata_from_source(toc: dict[str, Any], source_toc: dict[str, Any]) -> dict[str, Any]:
+    source_by_key: dict[tuple[str, int], dict[str, Any]] = {}
+    source_chapters = source_toc.get("chapters", [])
+    if isinstance(source_chapters, list):
+        for chapter in source_chapters:
+            if not isinstance(chapter, dict):
+                continue
+            title = normalize_toc_match_text(chapter.get("chapter"))
+            if not title:
+                continue
+            try:
+                page = int(chapter.get("page", 1))
+            except Exception:
+                page = 1
+            source_by_key[(title, page)] = chapter
+
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return toc
+
+    metadata_keys = (
+        "level_reason",
+        "_layout_page",
+        "_layout_x",
+        "_layout_y",
+        "_layout_font_size",
+        "_layout_size_ratio",
+        "_layout_text",
+        "_source_order",
+        "_local_merge_order",
+    )
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        title = normalize_toc_match_text(chapter.get("chapter"))
+        if not title:
+            continue
+        try:
+            page = int(chapter.get("page", 1))
+        except Exception:
+            page = 1
+        source_chapter = source_by_key.get((title, page))
+        if not source_chapter:
+            continue
+        for key in metadata_keys:
+            if key in chapter:
+                continue
+            if key == "level_reason":
+                try:
+                    if int(source_chapter.get("level", 1)) != int(chapter.get("level", 1)):
+                        continue
+                except Exception:
+                    continue
+            value = source_chapter.get(key)
+            if value is not None:
+                chapter[key] = value
+    return toc
+
+
+def record_gemma_level_review_status(args: argparse.Namespace, status: dict[str, Any]) -> None:
+    stats = dict(getattr(args, "_gemma_level_review_stats", None) or {})
+    stats.setdefault("enabled", True)
+    stats["attempts"] = int(stats.get("attempts", 0)) + 1
+    if status.get("success"):
+        stats["success"] = int(stats.get("success", 0)) + 1
+    else:
+        stats["failed"] = int(stats.get("failed", 0)) + 1
+    stats["level_changes"] = int(stats.get("level_changes", 0)) + int(status.get("level_changes", 0) or 0)
+    setattr(args, "_gemma_level_review_stats", stats)
+    update_processing_metadata(args, gemma_level_review=stats)
+
+
+def review_gemma_toc_levels(
+    model: str,
+    pdf_path: Path,
+    args: argparse.Namespace,
+    prompt: str,
+    toc: dict[str, Any],
+    stage_label: str,
+    source_text: str = "",
+    partial_tocs: list[dict[str, Any]] | None = None,
+    level_reference_text: str = "",
+) -> tuple[dict[str, Any], str, dict[str, Any]]:
+    if not bool(getattr(args, "gemma_level_verify", DEFAULT_GEMMA_LEVEL_VERIFY)):
+        return toc, "", {"enabled": False, "success": False, "skipped": True}
+
+    label = f"Gemma level review({stage_label})"
+    review_prompt = build_gemma_level_review_prompt(
+        base_prompt=prompt,
+        pdf_name=pdf_path.name,
+        toc=toc,
+        max_depth=args.max_depth,
+        stage_label=stage_label,
+        source_text=source_text,
+        partial_tocs=partial_tocs,
+        level_reference_text=level_reference_text,
+    )
+    print(f"  {label} started", flush=True)
+    try:
+        parsed, raw_text = request_gemma_json_text(
+            model=model,
+            prompt_text=review_prompt,
+            args=args,
+            label=label,
+        )
+        reviewed_toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
+        restore_missing_toc_metadata_from_source(reviewed_toc, toc)
+        level_changes = count_toc_level_changes(toc, reviewed_toc)
+        status = {
+            "enabled": True,
+            "success": True,
+            "stage": stage_label,
+            "input_chapters": len(toc.get("chapters", []) or []),
+            "output_chapters": len(reviewed_toc.get("chapters", []) or []),
+            "level_changes": level_changes,
+        }
+        record_gemma_level_review_status(args, status)
+        print(
+            f"  {label} completed: {status['output_chapters']} chapters / level changes {level_changes}",
+            flush=True,
+        )
+        return reviewed_toc, raw_text, status
+    except Exception as error:
+        status = {
+            "enabled": True,
+            "success": False,
+            "stage": stage_label,
+            "error": message_of(error),
+            "level_changes": 0,
+        }
+        record_gemma_level_review_status(args, status)
+        print(f"  {label} failed; keeping previous TOC: {error}", file=sys.stderr, flush=True)
+        return toc, "", status
 
 
 def split_partial_tocs_for_gemma_merge(
@@ -4177,12 +4458,13 @@ def process_gemma_text_chunk(
             chunk_text=str(chunk.get("text") or ""),
             level_reference=level_reference if use_level_reference else None,
         )
-        raw_parts.append({
+        raw_part = {
             "chunk": chunk["index"],
             "start_page": chunk["start_page"],
             "end_page": chunk["end_page"],
             "raw_response": raw_text,
-        })
+        }
+        raw_parts.append(raw_part)
         if use_level_reference and level_reference is not None:
             update_toc_level_reference(
                 level_reference,
@@ -4272,6 +4554,11 @@ def generate_toc_from_pdf_gemma_text(
         extracted_chars=extracted_chars,
         **extraction_metadata,
     )
+    update_processing_metadata(
+        args,
+        gemma_level_verify=bool(getattr(args, "gemma_level_verify", DEFAULT_GEMMA_LEVEL_VERIFY)),
+        gemma_level_verify_scope="final",
+    )
     write_parsed_pdf_text(
         pdf_path=pdf_path,
         args=args,
@@ -4305,7 +4592,30 @@ def generate_toc_from_pdf_gemma_text(
             print(f"  Gemma text TOC generation completed: {model}", flush=True)
             toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
             add_level_reasons_to_toc(toc, chunk_text=full_text)
-            return toc, raw_text, model
+            level_review_raw_text = ""
+            level_review_status: dict[str, Any] = {}
+            if bool(getattr(args, "gemma_level_verify", DEFAULT_GEMMA_LEVEL_VERIFY)):
+                toc, level_review_raw_text, level_review_status = review_gemma_toc_levels(
+                    model=model,
+                    pdf_path=pdf_path,
+                    args=args,
+                    prompt=prompt,
+                    toc=toc,
+                    stage_label="single text",
+                    source_text=full_text,
+                )
+            raw_bundle = {
+                "mode": "gemma_text_single",
+                "model": model,
+                "pdf": pdf_path.name,
+                "extraction": extraction_metadata,
+                "extracted_pages": len(pages),
+                "extracted_chars": extracted_chars,
+                "raw_response": raw_text,
+                "level_review": level_review_status,
+                "level_review_raw_response": level_review_raw_text,
+            }
+            return toc, json.dumps(raw_bundle, ensure_ascii=False, indent=2), model
         except Exception as error:
             if not is_cuda_out_of_memory_error(error):
                 raise
@@ -4436,6 +4746,32 @@ def generate_toc_from_pdf_gemma_text(
                 indent=2,
             )
 
+    final_level_review_raw_text = ""
+    final_level_review_status: dict[str, Any] = {}
+    if bool(getattr(args, "gemma_level_verify", DEFAULT_GEMMA_LEVEL_VERIFY)):
+        final_level_reference_text = (
+            format_toc_level_reference(level_reference)
+            if level_reference_enabled
+            else ""
+        )
+        toc, final_level_review_raw_text, final_level_review_status = review_gemma_toc_levels(
+            model=model,
+            pdf_path=pdf_path,
+            args=args,
+            prompt=prompt,
+            toc=toc,
+            stage_label="final merged TOC",
+            partial_tocs=partial_tocs,
+            level_reference_text=final_level_reference_text,
+        )
+        restore_level_reasons_from_partials(toc, partial_tocs)
+        toc = sort_toc_with_restored_layout(
+            toc,
+            partial_tocs=partial_tocs,
+            fallback_title=pdf_path.stem,
+            max_depth=args.max_depth,
+        )
+
     raw_bundle = {
         "mode": "gemma_text_chunk",
         "merge_mode": merge_mode,
@@ -4454,6 +4790,8 @@ def generate_toc_from_pdf_gemma_text(
         "input_chunk_files": getattr(args, "_ai_input_chunk_files", []),
         "chunk_raw_responses": raw_parts,
         "final_raw_response": final_raw_text,
+        "final_level_review": final_level_review_status,
+        "final_level_review_raw_response": final_level_review_raw_text,
     }
     return toc, json.dumps(raw_bundle, ensure_ascii=False, indent=2), model
 
@@ -5010,6 +5348,19 @@ def build_arg_parser() -> argparse.ArgumentParser:
         dest="gemma_level_reference",
         action="store_false",
         help="Disable passing earlier Gemma chunk TOC level examples to later chunks.",
+    )
+    parser.add_argument(
+        "--gemma-level-verify",
+        dest="gemma_level_verify",
+        action="store_true",
+        default=DEFAULT_GEMMA_LEVEL_VERIFY,
+        help="Ask Gemma to run one separate level verification/correction pass on the final TOC. Enabled by default.",
+    )
+    parser.add_argument(
+        "--no-gemma-level-verify",
+        dest="gemma_level_verify",
+        action="store_false",
+        help="Disable the final Gemma level verification/correction pass.",
     )
     parser.add_argument(
         "--gemma-vllm-tensor-parallel-size",
