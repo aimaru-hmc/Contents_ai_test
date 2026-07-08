@@ -1,0 +1,1085 @@
+{
+    "timestamp": "2026-07-08 16:26:32",
+    "stage_index": 14,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "4",
+    "total_chunks": 8,
+    "start_page": 88,
+    "end_page": 113,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 4/8",
+        "input_chapters": 50,
+        "output_chapters": 50,
+        "level_changes": 0,
+        "possible_invalid_heading_candidate_count": 17,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "Using and interpreting regression models",
+                "level": 4,
+                "page": 88,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Regression.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 397.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=88, line=26, s=9.0, r=0.9, x=55.0, y=397.0: \"Using and interpreting regression models\""
+                    ]
+                }
+            },
+            {
+                "title": "Different regression models",
+                "level": 4,
+                "page": 88,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Regression.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 482.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=88, line=32, s=9.0, r=0.9, x=55.0, y=482.0: \"Different regression models\""
+                    ]
+                }
+            },
+            {
+                "title": "Key concept for regression models",
+                "level": 4,
+                "page": 88,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Regression.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 562.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=88, line=37, s=9.0, r=0.9, x=55.0, y=562.0: \"Key concept for regression models\""
+                    ]
+                }
+            },
+            {
+                "title": "Dependent variable",
+                "level": 4,
+                "page": 89,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Linear regression.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 303.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 11,
+                    "exact_examples": [
+                        "page=89, line=63, s=9.0, r=0.9, x=140.0, y=303.0: \"Dependent variable\""
+                    ],
+                    "embedded_examples": [
+                        "page=89, line=50, s=10.0, r=1.0, x=166.0, y=95.0: \"the dependent variable is derived from the presence or absence of a charac-\"",
+                        "page=89, line=53, s=10.0, r=1.0, x=166.0, y=130.0: \"the dependent variable represents the time from a baseline of some type to the\"",
+                        "page=89, line=60, s=10.0, r=1.0, x=140.0, y=254.0: \"linear regression. In all these cases, thedependent variable is a continuous measure\""
+                    ]
+                }
+            },
+            {
+                "title": "Independent variables",
+                "level": 4,
+                "page": 90,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Linear regression.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 85.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=90, line=97, s=9.0, r=0.9, x=55.0, y=85.0: \"Independent variables\""
+                    ],
+                    "embedded_examples": [
+                        "page=90, line=109, s=10.0, r=1.0, x=73.0, y=192.0: \"The situation for independent variables that representcategories is a bit different\"",
+                        "page=90, line=131, s=10.0, r=1.0, x=55.0, y=406.0: \"tion, we need two independent variables – one less than\""
+                    ]
+                }
+            },
+            {
+                "title": "Multiple variables",
+                "level": 4,
+                "page": 90,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Linear regression.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 343.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=90, line=122, s=9.0, r=0.9, x=55.0, y=343.0: \"Multiple variables\""
+                    ]
+                }
+            },
+            {
+                "title": "Two sample t-test",
+                "level": 4,
+                "page": 93,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Sample size issues.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 391.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=93, line=281, s=9.0, r=0.9, x=140.0, y=391.0: \"Two sample t-test\""
+                    ],
+                    "embedded_examples": [
+                        "page=93, line=279, s=10.0, r=1.0, x=158.0, y=356.0: \"• the two sample t-test and\"",
+                        "page=93, line=282, s=10.0, r=1.0, x=140.0, y=403.0: \"For the two sample t-test, the formula is, for (cid:734)= 0.05,\""
+                    ]
+                }
+            },
+            {
+                "title": "Test comparing proportions",
+                "level": 4,
+                "page": 94,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Sample size issues.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 85.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=94, line=308, s=9.0, r=0.9, x=55.0, y=85.0: \"Test comparing proportions\""
+                    ],
+                    "embedded_examples": [
+                        "page=94, line=309, s=10.0, r=1.0, x=55.0, y=96.0: \"For the test comparing proportions, the situation is very similar except that the for-\""
+                    ]
+                }
+            },
+            {
+                "title": "References",
+                "level": 2,
+                "page": 95,
+                "reasons": [
+                    "title itself looks like a case/example/table/figure/problem/reference label",
+                    "source context looks like case/example/table/figure/problem/reference material"
+                ],
+                "level_reason": "Standard end-of-chapter section with font size 20.0 and ratio 2.0.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 371.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=95, line=392, s=20.0, r=2.0, x=140.0, y=371.0: \"References\""
+                    ]
+                }
+            },
+            {
+                "title": "Multiple factors",
+                "level": 4,
+                "page": 97,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Sufficient or necessary.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=97, line=449, s=9.0, r=0.9, x=140.0, y=84.0: \"Multiple factors\""
+                    ]
+                }
+            },
+            {
+                "title": "Attributable fraction",
+                "level": 4,
+                "page": 97,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Sufficient or necessary.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 235.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=97, line=460, s=9.0, r=0.9, x=140.0, y=235.0: \"Attributable fraction\""
+                    ],
+                    "embedded_examples": [
+                        "page=97, line=461, s=10.0, r=1.0, x=140.0, y=246.0: \"The attributable fraction (see chapter 2) can be used to quantify the likely preventive\""
+                    ]
+                }
+            },
+            {
+                "title": "Consistency",
+                "level": 3,
+                "page": 104,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone heading"
+                ],
+                "level_reason": "Subsection title with font size 9.0 and ratio 0.9, nested under Considering causation.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 563.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 3,
+                    "embedded_examples": [
+                        "page=104, line=790, s=9.0, r=0.9, x=55.0, y=563.0: \"Consistency considered to occur has been reduced from 250 ug/l in\"",
+                        "page=104, line=793, s=10.0, r=1.0, x=55.0, y=590.0: \"Consistency is demonstrated by several studies giving the\"",
+                        "page=104, line=800, s=9.5, r=0.95, x=55.0, y=642.0: \"thereby minimized. However, a lack of consistency does income countries, but increasingly...\""
+                    ]
+                }
+            },
+            {
+                "title": "Experimental studies",
+                "level": 4,
+                "page": 108,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Study design.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 303.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=108, line=986, s=9.0, r=0.9, x=55.0, y=303.0: \"Experimental studies\""
+                    ]
+                }
+            },
+            {
+                "title": "Cohort and case control studies",
+                "level": 4,
+                "page": 108,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Study design.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 441.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=108, line=999, s=9.0, r=0.9, x=55.0, y=441.0: \"Cohort and case control studies\""
+                    ]
+                }
+            },
+            {
+                "title": "Cross-sectional studies",
+                "level": 4,
+                "page": 108,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Study design.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 527.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=108, line=1005, s=9.0, r=0.9, x=55.0, y=527.0: \"Cross-sectional studies\""
+                    ],
+                    "embedded_examples": [
+                        "page=108, line=997, s=10.0, r=1.0, x=55.0, y=404.0: \"on the health consequences of smoking comes from ob- Cross-sectional studies Weak\"",
+                        "page=108, line=1006, s=10.0, r=1.0, x=55.0, y=538.0: \"Cross-sectional studies are less able to prove causation as they provide no direct\""
+                    ]
+                }
+            },
+            {
+                "title": "Ecological studies",
+                "level": 4,
+                "page": 108,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Study design.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 626.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=108, line=1012, s=9.0, r=0.9, x=55.0, y=626.0: \"Ecological studies\""
+                    ],
+                    "embedded_examples": [
+                        "page=108, line=998, s=8.0, r=0.8, x=55.0, y=416.0: \"servational studies. Ecological studies Weak\"",
+                        "page=108, line=1013, s=10.0, r=1.0, x=55.0, y=637.0: \"Ecological studies provide the weakest evidence for causality because of the danger\""
+                    ]
+                }
+            },
+            {
+                "title": "References",
+                "level": 2,
+                "page": 110,
+                "reasons": [
+                    "title itself looks like a case/example/table/figure/problem/reference label",
+                    "source context looks like case/example/table/figure/problem/reference material"
+                ],
+                "level_reason": "Standard end-of-chapter section with font size 20.0 and ratio 2.0.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 335.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=110, line=1086, s=20.0, r=2.0, x=55.0, y=335.0: \"References\""
+                    ]
+                }
+            }
+        ]
+    },
+    "toc": {
+        "title": "Basic epidemiology",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "Correlation",
+                "page": 88,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, following the hierarchy of Chapter 4.",
+                "_layout_page": 88,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Correlation",
+                "_source_order": 0
+            },
+            {
+                "level": 3,
+                "chapter": "Regression",
+                "page": 88,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, following the hierarchy of Chapter 4.",
+                "_layout_page": 88,
+                "_layout_x": 55.0,
+                "_layout_y": 369.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Regression",
+                "_source_order": 1
+            },
+            {
+                "level": 4,
+                "chapter": "Using and interpreting regression models",
+                "page": 88,
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Regression.",
+                "_layout_page": 88,
+                "_layout_x": 55.0,
+                "_layout_y": 397.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Using and interpreting regression models",
+                "_source_order": 2
+            },
+            {
+                "level": 4,
+                "chapter": "Different regression models",
+                "page": 88,
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Regression.",
+                "_layout_page": 88,
+                "_layout_x": 55.0,
+                "_layout_y": 482.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Different regression models",
+                "_source_order": 3
+            },
+            {
+                "level": 4,
+                "chapter": "Key concept for regression models",
+                "page": 88,
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Regression.",
+                "_layout_page": 88,
+                "_layout_x": 55.0,
+                "_layout_y": 562.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Key concept for regression models",
+                "_source_order": 4
+            },
+            {
+                "level": 3,
+                "chapter": "Linear regression",
+                "page": 89,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Regression.",
+                "_layout_page": 89,
+                "_layout_x": 140.0,
+                "_layout_y": 200.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Linear regression",
+                "_source_order": 5
+            },
+            {
+                "level": 4,
+                "chapter": "Dependent variable",
+                "page": 89,
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Linear regression.",
+                "_layout_page": 89,
+                "_layout_x": 140.0,
+                "_layout_y": 303.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Dependent variable",
+                "_source_order": 6
+            },
+            {
+                "level": 4,
+                "chapter": "Independent variables",
+                "page": 90,
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Linear regression.",
+                "_layout_page": 90,
+                "_layout_x": 55.0,
+                "_layout_y": 85.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Independent variables",
+                "_source_order": 7
+            },
+            {
+                "level": 4,
+                "chapter": "Multiple variables",
+                "page": 90,
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Linear regression.",
+                "_layout_page": 90,
+                "_layout_x": 55.0,
+                "_layout_y": 343.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Multiple variables",
+                "_source_order": 8
+            },
+            {
+                "level": 3,
+                "chapter": "Logistic regression",
+                "page": 91,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Regression.",
+                "_layout_page": 91,
+                "_layout_x": 140.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Logistic regression",
+                "_source_order": 9
+            },
+            {
+                "level": 3,
+                "chapter": "Survival analyses and Cox proportional hazards models",
+                "page": 92,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Regression.",
+                "_layout_page": 92,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Survival analyses and Cox proportional hazards models",
+                "_source_order": 10
+            },
+            {
+                "level": 3,
+                "chapter": "Kaplan-Meier survival curves",
+                "page": 92,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Survival analyses.",
+                "_layout_page": 92,
+                "_layout_x": 55.0,
+                "_layout_y": 569.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Kaplan-Meier survival curves",
+                "_source_order": 11
+            },
+            {
+                "level": 3,
+                "chapter": "Sample size issues",
+                "page": 93,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, following the hierarchy of Chapter 4.",
+                "_layout_page": 93,
+                "_layout_x": 140.0,
+                "_layout_y": 173.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Sample size issues",
+                "_source_order": 12
+            },
+            {
+                "level": 4,
+                "chapter": "Two sample t-test",
+                "page": 93,
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Sample size issues.",
+                "_layout_page": 93,
+                "_layout_x": 140.0,
+                "_layout_y": 391.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Two sample t-test",
+                "_source_order": 13
+            },
+            {
+                "level": 4,
+                "chapter": "Test comparing proportions",
+                "page": 94,
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Sample size issues.",
+                "_layout_page": 94,
+                "_layout_x": 55.0,
+                "_layout_y": 85.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Test comparing proportions",
+                "_source_order": 14
+            },
+            {
+                "level": 2,
+                "chapter": "Meta-analysis",
+                "page": 94,
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0, following the hierarchy of Chapter 4.",
+                "_layout_page": 94,
+                "_layout_x": 55.0,
+                "_layout_y": 324.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Meta-analysis",
+                "_source_order": 15
+            },
+            {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 95,
+                "level_reason": "Standard end-of-chapter section with font size 20.0 and ratio 2.0.",
+                "_layout_page": 95,
+                "_layout_x": 140.0,
+                "_layout_y": 133.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Study questions",
+                "_source_order": 16
+            },
+            {
+                "level": 2,
+                "chapter": "References",
+                "page": 95,
+                "level_reason": "Standard end-of-chapter section with font size 20.0 and ratio 2.0.",
+                "_layout_page": 95,
+                "_layout_x": 140.0,
+                "_layout_y": 371.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "References",
+                "_source_order": 17
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter 5 Causation in epidemiology",
+                "page": 96,
+                "level_reason": "Chapter title with font size 32.0 and ratio 3.2.",
+                "_layout_page": 96,
+                "_layout_x": 55.0,
+                "_layout_y": 101.0,
+                "_layout_font_size": 32.0,
+                "_layout_size_ratio": 3.2,
+                "_layout_text": "Causation in epidemiology",
+                "_source_order": 18
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 96,
+                "level_reason": "Standard chapter opening section with font size 20.0 and ratio 2.0.",
+                "_layout_page": 96,
+                "_layout_x": 167.0,
+                "_layout_y": 149.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 19
+            },
+            {
+                "level": 2,
+                "chapter": "The concept of cause",
+                "page": 96,
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0.",
+                "_layout_page": 96,
+                "_layout_x": 55.0,
+                "_layout_y": 352.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "The concept of cause",
+                "_source_order": 20
+            },
+            {
+                "level": 3,
+                "chapter": "Sufficient or necessary",
+                "page": 96,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under The concept of cause.",
+                "_layout_page": 96,
+                "_layout_x": 55.0,
+                "_layout_y": 474.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Sufficient or necessary",
+                "_source_order": 21
+            },
+            {
+                "level": 4,
+                "chapter": "Multiple factors",
+                "page": 97,
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Sufficient or necessary.",
+                "_layout_page": 97,
+                "_layout_x": 140.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Multiple factors",
+                "_source_order": 22
+            },
+            {
+                "level": 4,
+                "chapter": "Attributable fraction",
+                "page": 97,
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Sufficient or necessary.",
+                "_layout_page": 97,
+                "_layout_x": 140.0,
+                "_layout_y": 235.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Attributable fraction",
+                "_source_order": 23
+            },
+            {
+                "level": 3,
+                "chapter": "Sufficient and necessary",
+                "page": 97,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under The concept of cause.",
+                "_layout_page": 97,
+                "_layout_x": 140.0,
+                "_layout_y": 348.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Sufficient and necessary",
+                "_source_order": 24
+            },
+            {
+                "level": 3,
+                "chapter": "A causal pathway",
+                "page": 98,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under The concept of cause.",
+                "_layout_page": 98,
+                "_layout_x": 55.0,
+                "_layout_y": 302.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "A causal pathway",
+                "_source_order": 25
+            },
+            {
+                "level": 3,
+                "chapter": "Single and multiple causes",
+                "page": 99,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under The concept of cause.",
+                "_layout_page": 99,
+                "_layout_x": 140.0,
+                "_layout_y": 199.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Single and multiple causes",
+                "_source_order": 26
+            },
+            {
+                "level": 3,
+                "chapter": "Factors in causation",
+                "page": 100,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under The concept of cause.",
+                "_layout_page": 100,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Factors in causation",
+                "_source_order": 27
+            },
+            {
+                "level": 3,
+                "chapter": "Interaction",
+                "page": 101,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under The concept of cause.",
+                "_layout_page": 101,
+                "_layout_x": 140.0,
+                "_layout_y": 147.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Interaction",
+                "_source_order": 28
+            },
+            {
+                "level": 3,
+                "chapter": "A hierarchy of causes",
+                "page": 101,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under The concept of cause.",
+                "_layout_page": 101,
+                "_layout_x": 140.0,
+                "_layout_y": 273.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "A hierarchy of causes",
+                "_source_order": 29
+            },
+            {
+                "level": 2,
+                "chapter": "Establishing the cause of a disease",
+                "page": 102,
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0.",
+                "_layout_page": 102,
+                "_layout_x": 55.0,
+                "_layout_y": 288.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Establishing the cause of a disease",
+                "_source_order": 30
+            },
+            {
+                "level": 3,
+                "chapter": "Considering causation",
+                "page": 102,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Establishing the cause of a disease.",
+                "_layout_page": 102,
+                "_layout_x": 55.0,
+                "_layout_y": 462.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Considering causation",
+                "_source_order": 31
+            },
+            {
+                "level": 3,
+                "chapter": "Temporal relationship",
+                "page": 102,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Considering causation.",
+                "_layout_page": 102,
+                "_layout_x": 55.0,
+                "_layout_y": 579.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Temporal relationship",
+                "_source_order": 32
+            },
+            {
+                "level": 3,
+                "chapter": "Plausibility",
+                "page": 104,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Considering causation.",
+                "_layout_page": 104,
+                "_layout_x": 55.0,
+                "_layout_y": 147.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Plausibility",
+                "_source_order": 33
+            },
+            {
+                "level": 3,
+                "chapter": "Consistency",
+                "page": 104,
+                "level_reason": "Subsection title with font size 9.0 and ratio 0.9, nested under Considering causation.",
+                "_layout_page": 104,
+                "_layout_x": 55.0,
+                "_layout_y": 563.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Consistency",
+                "_source_order": 34
+            },
+            {
+                "level": 3,
+                "chapter": "Strength",
+                "page": 106,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Considering causation.",
+                "_layout_page": 106,
+                "_layout_x": 55.0,
+                "_layout_y": 134.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Strength",
+                "_source_order": 35
+            },
+            {
+                "level": 3,
+                "chapter": "Dose–response relationship",
+                "page": 106,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Considering causation.",
+                "_layout_page": 106,
+                "_layout_x": 55.0,
+                "_layout_y": 550.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Dose–response relationship",
+                "_source_order": 36
+            },
+            {
+                "level": 3,
+                "chapter": "Reversibility",
+                "page": 108,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Considering causation.",
+                "_layout_page": 108,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Reversibility",
+                "_source_order": 37
+            },
+            {
+                "level": 3,
+                "chapter": "Study design",
+                "page": 108,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Considering causation.",
+                "_layout_page": 108,
+                "_layout_x": 55.0,
+                "_layout_y": 213.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Study design",
+                "_source_order": 38
+            },
+            {
+                "level": 4,
+                "chapter": "Experimental studies",
+                "page": 108,
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Study design.",
+                "_layout_page": 108,
+                "_layout_x": 55.0,
+                "_layout_y": 303.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Experimental studies",
+                "_source_order": 39
+            },
+            {
+                "level": 4,
+                "chapter": "Cohort and case control studies",
+                "page": 108,
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Study design.",
+                "_layout_page": 108,
+                "_layout_x": 55.0,
+                "_layout_y": 441.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Cohort and case control studies",
+                "_source_order": 40
+            },
+            {
+                "level": 4,
+                "chapter": "Cross-sectional studies",
+                "page": 108,
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Study design.",
+                "_layout_page": 108,
+                "_layout_x": 55.0,
+                "_layout_y": 527.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Cross-sectional studies",
+                "_source_order": 41
+            },
+            {
+                "level": 4,
+                "chapter": "Ecological studies",
+                "page": 108,
+                "level_reason": "Lower level heading with font size 9.0, bold and italic style, nested under Study design.",
+                "_layout_page": 108,
+                "_layout_x": 55.0,
+                "_layout_y": 626.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Ecological studies",
+                "_source_order": 42
+            },
+            {
+                "level": 3,
+                "chapter": "Judging the evidence",
+                "page": 109,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under Considering causation.",
+                "_layout_page": 109,
+                "_layout_x": 140.0,
+                "_layout_y": 238.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Judging the evidence",
+                "_source_order": 43
+            },
+            {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 109,
+                "level_reason": "Standard end-of-chapter section with font size 20.0 and ratio 2.0.",
+                "_layout_page": 109,
+                "_layout_x": 140.0,
+                "_layout_y": 509.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Study questions",
+                "_source_order": 44
+            },
+            {
+                "level": 2,
+                "chapter": "References",
+                "page": 110,
+                "level_reason": "Standard end-of-chapter section with font size 20.0 and ratio 2.0.",
+                "_layout_page": 110,
+                "_layout_x": 55.0,
+                "_layout_y": 335.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "References",
+                "_source_order": 45
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter 6 Epidemiology and prevention: chronic noncommunicable diseases",
+                "page": 112,
+                "level_reason": "Chapter title with font size 32.0 and ratio 3.2.",
+                "_layout_page": 112,
+                "_layout_x": 55.0,
+                "_layout_y": 101.0,
+                "_layout_font_size": 32.0,
+                "_layout_size_ratio": 3.2,
+                "_layout_text": "Epidemiology and prevention: chronic noncommunicable diseases",
+                "_source_order": 46
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 112,
+                "level_reason": "Standard chapter opening section with font size 20.0 and ratio 2.0.",
+                "_layout_page": 112,
+                "_layout_x": 168.0,
+                "_layout_y": 217.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 47
+            },
+            {
+                "level": 2,
+                "chapter": "The scope of prevention",
+                "page": 112,
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0.",
+                "_layout_page": 112,
+                "_layout_x": 55.0,
+                "_layout_y": 382.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "The scope of prevention",
+                "_source_order": 48
+            },
+            {
+                "level": 3,
+                "chapter": "Recent trends in death rates",
+                "page": 112,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under The scope of prevention.",
+                "_layout_page": 112,
+                "_layout_x": 55.0,
+                "_layout_y": 516.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Recent trends in death rates",
+                "_source_order": 49
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"Basic epidemiology\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"Correlation\",\n      \"page\": 88,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, following the hierarchy of Chapter 4.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Regression\",\n      \"page\": 88,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, following the hierarchy of Chapter 4.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Using and interpreting regression models\",\n      \"page\": 88,\n      \"level_reason\": \"Lower level heading with font size 9.0, bold and italic style, nested under Regression.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Different regression models\",\n      \"page\": 88,\n      \"level_reason\": \"Lower level heading with font size 9.0, bold and italic style, nested under Regression.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Key concept for regression models\",\n      \"page\": 88,\n      \"level_reason\": \"Lower level heading with font size 9.0, bold and italic style, nested under Regression.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Linear regression\",\n      \"page\": 89,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under Regression.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Dependent variable\",\n      \"page\": 89,\n      \"level_reason\": \"Lower level heading with font size 9.0, bold and italic style, nested under Linear regression.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Independent variables\",\n      \"page\": 90,\n      \"level_reason\": \"Lower level heading with font size 9.0, bold and italic style, nested under Linear regression.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Multiple variables\",\n      \"page\": 90,\n      \"level_reason\": \"Lower level heading with font size 9.0, bold and italic style, nested under Linear regression.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Logistic regression\",\n      \"page\": 91,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under Regression.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Survival analyses and Cox proportional hazards models\",\n      \"page\": 92,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under Regression.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Kaplan-Meier survival curves\",\n      \"page\": 92,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under Survival analyses.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Sample size issues\",\n      \"page\": 93,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, following the hierarchy of Chapter 4.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Two sample t-test\",\n      \"page\": 93,\n      \"level_reason\": \"Lower level heading with font size 9.0, bold and italic style, nested under Sample size issues.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Test comparing proportions\",\n      \"page\": 94,\n      \"level_reason\": \"Lower level heading with font size 9.0, bold and italic style, nested under Sample size issues.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Meta-analysis\",\n      \"page\": 94,\n      \"level_reason\": \"Major section title with font size 20.0 and ratio 2.0, following the hierarchy of Chapter 4.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Study questions\",\n      \"page\": 95,\n      \"level_reason\": \"Standard end-of-chapter section with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"References\",\n      \"page\": 95,\n      \"level_reason\": \"Standard end-of-chapter section with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 5 Causation in epidemiology\",\n      \"page\": 96,\n      \"level_reason\": \"Chapter title with font size 32.0 and ratio 3.2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 96,\n      \"level_reason\": \"Standard chapter opening section with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"The concept of cause\",\n      \"page\": 96,\n      \"level_reason\": \"Major section title with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Sufficient or necessary\",\n      \"page\": 96,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under The concept of cause.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Multiple factors\",\n      \"page\": 97,\n      \"level_reason\": \"Lower level heading with font size 9.0, bold and italic style, nested under Sufficient or necessary.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Attributable fraction\",\n      \"page\": 97,\n      \"level_reason\": \"Lower level heading with font size 9.0, bold and italic style, nested under Sufficient or necessary.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Sufficient and necessary\",\n      \"page\": 97,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under The concept of cause.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"A causal pathway\",\n      \"page\": 98,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under The concept of cause.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Single and multiple causes\",\n      \"page\": 99,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under The concept of cause.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Factors in causation\",\n      \"page\": 100,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under The concept of cause.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Interaction\",\n      \"page\": 101,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under The concept of cause.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"A hierarchy of causes\",\n      \"page\": 101,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under The concept of cause.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Establishing the cause of a disease\",\n      \"page\": 102,\n      \"level_reason\": \"Major section title with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Considering causation\",\n      \"page\": 102,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under Establishing the cause of a disease.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Temporal relationship\",\n      \"page\": 102,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under Considering causation.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Plausibility\",\n      \"page\": 104,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under Considering causation.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Consistency\",\n      \"page\": 104,\n      \"level_reason\": \"Subsection title with font size 9.0 and ratio 0.9, nested under Considering causation.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Strength\",\n      \"page\": 106,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under Considering causation.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Dose–response relationship\",\n      \"page\": 106,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under Considering causation.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Reversibility\",\n      \"page\": 108,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under Considering causation.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Study design\",\n      \"page\": 108,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under Considering causation.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Experimental studies\",\n      \"page\": 108,\n      \"level_reason\": \"Lower level heading with font size 9.0, bold and italic style, nested under Study design.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Cohort and case control studies\",\n      \"page\": 108,\n      \"level_reason\": \"Lower level heading with font size 9.0, bold and italic style, nested under Study design.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Cross-sectional studies\",\n      \"page\": 108,\n      \"level_reason\": \"Lower level heading with font size 9.0, bold and italic style, nested under Study design.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Ecological studies\",\n      \"page\": 108,\n      \"level_reason\": \"Lower level heading with font size 9.0, bold and italic style, nested under Study design.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Judging the evidence\",\n      \"page\": 109,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under Considering causation.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Study questions\",\n      \"page\": 109,\n      \"level_reason\": \"Standard end-of-chapter section with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"References\",\n      \"page\": 110,\n      \"level_reason\": \"Standard end-of-chapter section with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 6 Epidemiology and prevention: chronic noncommunicable diseases\",\n      \"page\": 112,\n      \"level_reason\": \"Chapter title with font size 32.0 and ratio 3.2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 112,\n      \"level_reason\": \"Standard chapter opening section with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"The scope of prevention\",\n      \"page\": 112,\n      \"level_reason\": \"Major section title with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Recent trends in death rates\",\n      \"page\": 112,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under The scope of prevention.\"\n    }\n  ]\n}\n```"
+}

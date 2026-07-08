@@ -1,0 +1,46 @@
+Run log saved: data/output/logs/주교재_gemma_20260708_162020_log.txt
+Processing started: 주교재.pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 221 pages, 937307 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/unknown_model_gemma_20260708_162020_parsed_pdf.txt
+  Gemma text chunk processing started: 8 chunks
+  Gemma chunk 1/8 request: pages 2-34
+  Gemma input chunk 1 saved: data/output/input_chunks/unknown_model_gemma_20260708_162020/chunk_1_pages_2-34.json
+  Gemma level review(chunk 1/8) started
+  Gemma level review(chunk 1/8) completed: 34 chapters / level changes 0
+  Gemma chunk 1 completed: 34 chapters
+  Gemma chunk 2/8 request: pages 35-60
+  Gemma input chunk 2 saved: data/output/input_chunks/unknown_model_gemma_20260708_162020/chunk_2_pages_35-60.json
+  Gemma level review(chunk 2/8) started
+  Gemma level review(chunk 2/8) completed: 47 chapters / level changes 10
+  Gemma chunk 2 completed: 47 chapters
+  Gemma chunk 3/8 request: pages 61-87
+  Gemma input chunk 3 saved: data/output/input_chunks/unknown_model_gemma_20260708_162020/chunk_3_pages_61-87.json
+  Gemma level review(chunk 3/8) started
+  Gemma level review(chunk 3/8) completed: 56 chapters / level changes 16
+  Gemma chunk 3 completed: 56 chapters
+  Gemma chunk 4/8 request: pages 88-113
+  Gemma input chunk 4 saved: data/output/input_chunks/unknown_model_gemma_20260708_162020/chunk_4_pages_88-113.json
+  Gemma level review(chunk 4/8) started
+  Gemma level review(chunk 4/8) completed: 50 chapters / level changes 0
+  Gemma chunk 4 completed: 50 chapters
+  Gemma chunk 5/8 request: pages 114-139
+  Gemma input chunk 5 saved: data/output/input_chunks/unknown_model_gemma_20260708_162020/chunk_5_pages_114-139.json
+  Gemma level review(chunk 5/8) started
+  Gemma level review(chunk 5/8) completed: 40 chapters / level changes 0
+  Gemma chunk 5 completed: 40 chapters
+  Gemma chunk 6/8 request: pages 140-166
+  Gemma input chunk 6 saved: data/output/input_chunks/unknown_model_gemma_20260708_162020/chunk_6_pages_140-166.json
+  Gemma level review(chunk 6/8) started
+  Gemma level review(chunk 6/8) completed: 48 chapters / level changes 0
+  Gemma chunk 6 completed: 48 chapters
+  Gemma chunk 7/8 request: pages 167-194
+  Gemma input chunk 7 saved: data/output/input_chunks/unknown_model_gemma_20260708_162020/chunk_7_pages_167-194.json
+  Gemma level review(chunk 7/8) started
+  Gemma level review(chunk 7/8) completed: 43 chapters / level changes 7
+  Gemma chunk 7 completed: 43 chapters
+  Gemma chunk 8/8 request: pages 195-226
+  Gemma input chunk 8 saved: data/output/input_chunks/unknown_model_gemma_20260708_162020/chunk_8_pages_195-226.json
+  Gemma level review(chunk 8/8) started
