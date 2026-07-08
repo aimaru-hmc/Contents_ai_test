@@ -1,0 +1,25 @@
+Run log saved: data/output/logs/부교재3_gemma_20260708_163126_log.txt
+Processing started: 부교재3.PDF
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 572 pages, 2195951 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/3_gemma_20260708_163126_parsed_pdf.txt
+  Gemma text chunk processing started: 19 chunks
+  Gemma chunk 1/19 request: pages 5-35
+  Gemma input chunk 1 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_1_pages_5-35.json
+  Gemma level review(chunk 1/19) started
+  Gemma level review(chunk 1/19) completed: 301 chapters / level changes 0
+  Gemma chunk 1 completed: 301 chapters
+  Gemma chunk 2/19 request: pages 36-71
+  Gemma input chunk 2 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_2_pages_36-71.json
+  Gemma level review(chunk 2/19) started
+  Gemma level review(chunk 2/19) completed: 74 chapters / level changes 0
+  Gemma chunk 2 completed: 74 chapters
+  Gemma chunk 3/19 request: pages 72-109
+  Gemma input chunk 3 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_3_pages_72-109.json
+  Gemma level review(chunk 3/19) started
+  Gemma level review(chunk 3/19) completed: 85 chapters / level changes 0
+  Gemma chunk 3 completed: 85 chapters
+  Gemma chunk 4/19 request: pages 110-144
+  Gemma input chunk 4 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_4_pages_110-144.json
