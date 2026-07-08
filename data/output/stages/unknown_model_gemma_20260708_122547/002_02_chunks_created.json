@@ -1,0 +1,61 @@
+{
+    "timestamp": "2026-07-08 14:24:33",
+    "stage_index": 2,
+    "stage": "02_chunks_created",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk_count": 8,
+    "chunk_chars": 120000,
+    "chunks": [
+        {
+            "index": 1,
+            "start_page": 2,
+            "end_page": 34,
+            "input_chars": 118571
+        },
+        {
+            "index": 2,
+            "start_page": 35,
+            "end_page": 60,
+            "input_chars": 117409
+        },
+        {
+            "index": 3,
+            "start_page": 61,
+            "end_page": 87,
+            "input_chars": 117454
+        },
+        {
+            "index": 4,
+            "start_page": 88,
+            "end_page": 113,
+            "input_chars": 115113
+        },
+        {
+            "index": 5,
+            "start_page": 114,
+            "end_page": 139,
+            "input_chars": 117238
+        },
+        {
+            "index": 6,
+            "start_page": 140,
+            "end_page": 166,
+            "input_chars": 116540
+        },
+        {
+            "index": 7,
+            "start_page": 167,
+            "end_page": 194,
+            "input_chars": 119433
+        },
+        {
+            "index": 8,
+            "start_page": 195,
+            "end_page": 226,
+            "input_chars": 118301
+        }
+    ]
+}
