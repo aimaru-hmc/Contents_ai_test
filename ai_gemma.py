@@ -339,7 +339,8 @@ Output exactly one JSON object in the format below. Do not output explanations, 
 - Preserve original title numbering, but do not invent missing numbering.
 - Preserve original chapter/section titles exactly, including Korean text when the source title is Korean.
 - Exclude body sentences, examples, questions, table/figure captions, and references that are not suitable TOC entries.
-- For every chapter object, include level_reason explaining why that entry has its level. Use numbering, hierarchy, font size/style, indentation, and surrounding context when available.
+- Include every visible heading/subheading that belongs in the document hierarchy up to level {max_depth}. Do not omit lower-level headings merely because their font is smaller than chapter titles.
+- For every chapter object, include level_reason explaining why that entry has its level. Use hierarchy, font size/style, indentation, surrounding context, and title markers only when present.
 - Never output any text outside the JSON object.
 """.strip()
 
@@ -3501,7 +3502,7 @@ def build_level_reason(
     if style_text:
         reason_parts.append(f"현재 줄 layout({style_text})")
     else:
-        reason_parts.append("현재 chunk에서 대응 layout tag를 찾지 못해 번호 체계와 주변 문맥 기준")
+        reason_parts.append("현재 chunk에서 대응 layout tag를 찾지 못해 제목 계층과 주변 문맥 기준")
 
     closest_level, closest_entry = closest_level_reference(layout, level_reference)
     if closest_level is not None:
@@ -3511,7 +3512,7 @@ def build_level_reason(
             reason_parts.append(f"이전 level {level} 예시{suffix}와 가장 가까운 style 패턴")
         else:
             reason_parts.append(
-                f"이전 style 기준으로는 level {closest_level}와 가장 가까우나, 번호/문맥상 level {level}로 유지"
+                f"이전 style 기준으로는 level {closest_level}와 가장 가까우나, 현재 문서의 제목 계층/문맥상 level {level}로 유지"
             )
     else:
         reason_parts.append("이전 level style 기준 없음")
@@ -3792,12 +3793,14 @@ Create the TOC using only the [Extracted PDF Text] below instead of an attached 
 Use each text block's [PAGE n] marker to determine page numbers.
 Some lines may start with compact layout tags:
 - [L s=<font size> r=<size/body ratio> x=<left indent> y=<vertical position> b=<bold 0/1> i=<italic 0/1> f=<font id>]
-- Use larger font size, higher size ratio, bold/italic style, indentation, numbering, and nearby body text to infer TOC levels.
+- Use larger font size, higher size ratio, bold/italic style, indentation, visible title markers when present, and nearby body text to infer TOC levels.
 - Never copy [L ...] tags into chapter titles.
 - Ignore existing table-of-contents pages, dot-leader lines, page-number-only lines, and repeated headers/footers.
-- Before finalizing the JSON, self-check every level against the visible hierarchy in this document. Use the current chunk's layout metadata and any previous level reference; if a candidate's numbering or style conflicts with the observed document convention, correct the level yourself before output.
-- Do not assume a universal mapping from numbering format to level. A format such as "1.", "1.1", "(1)", roman numerals, letters, or Korean markers may represent different levels in different documents. Infer the mapping from this document's repeated visual hierarchy and previous level reference.
-- Include level_reason in every chapter object. Explain the level using numbering, hierarchy, font size/ratio, bold/italic, indentation, and context.
+- Perform a completeness pass over the extracted text before output. Include lower-level visible headings when they use consistent heading-like visual style, indentation, spacing patterns, or title markers. Do not stop after only chapter and major section titles.
+- Do not omit a heading only because it is smaller than nearby headings; smaller visual style usually means a deeper level, not body text, when it repeats as a heading pattern.
+- Before finalizing the JSON, self-check every level against the visible hierarchy in this document. Use the current chunk's layout metadata and any previous level reference; if a candidate's title marker or style conflicts with the observed document convention, correct the level yourself before output.
+- Do not assume a universal mapping from any title marker or numbering style to a level. Infer the mapping from this document's repeated visual hierarchy and previous level reference.
+- Include level_reason in every chapter object. Explain the level using hierarchy, font size/ratio, bold/italic, indentation, context, and title markers only when present.
 - For every chapter object, copy layout metadata from the actual visible body-title line you used:
   "_layout_page" from [PAGE n], "_layout_x" from x=, "_layout_y" from y=, "_layout_font_size" from s=, "_layout_size_ratio" from r=, and "_layout_text" as the exact text after the [L ...] tag.
 - Use layout metadata from the same [PAGE n] as the chapter page. Do not use layout metadata from existing TOC pages, headers, footers, indexes, or repeated running titles.
@@ -3832,12 +3835,14 @@ Use [PAGE n] markers to determine page numbers.
 If a previous TOC level reference is provided, follow its level convention unless the current chunk visibly uses a different hierarchy.
 Some lines may start with compact layout tags:
 - [L s=<font size> r=<size/body ratio> x=<left indent> y=<vertical position> b=<bold 0/1> i=<italic 0/1> f=<font id>]
-- Use larger font size, higher size ratio, bold/italic style, indentation, numbering, and nearby body text to infer TOC levels.
+- Use larger font size, higher size ratio, bold/italic style, indentation, visible title markers when present, and nearby body text to infer TOC levels.
 - Never copy [L ...] tags into chapter titles.
 - Ignore existing table-of-contents pages, dot-leader lines, page-number-only lines, and repeated headers/footers.
-- Before finalizing the JSON, self-check every level against the visible hierarchy in this document. Use the current chunk's layout metadata and any previous level reference; if a candidate's numbering or style conflicts with the observed document convention, correct the level yourself before output.
-- Do not assume a universal mapping from numbering format to level. A format such as "1.", "1.1", "(1)", roman numerals, letters, or Korean markers may represent different levels in different documents. Infer the mapping from this document's repeated visual hierarchy and previous level reference.
-- Include level_reason in every chapter object. Explain the level using numbering, hierarchy, font size/ratio, bold/italic, indentation, and context.
+- Perform a completeness pass over this chunk before output. Include lower-level visible headings when they use consistent heading-like visual style, indentation, spacing patterns, or title markers. Do not stop after only chapter and major section titles.
+- Do not omit a heading only because it is smaller than nearby headings; smaller visual style usually means a deeper level, not body text, when it repeats as a heading pattern.
+- Before finalizing the JSON, self-check every level against the visible hierarchy in this document. Use the current chunk's layout metadata and any previous level reference; if a candidate's title marker or style conflicts with the observed document convention, correct the level yourself before output.
+- Do not assume a universal mapping from any title marker or numbering style to a level. Infer the mapping from this document's repeated visual hierarchy and previous level reference.
+- Include level_reason in every chapter object. Explain the level using hierarchy, font size/ratio, bold/italic, indentation, context, and title markers only when present.
 - For every chapter object, copy layout metadata from the actual visible body-title line you used:
   "_layout_page" from [PAGE n], "_layout_x" from x=, "_layout_y" from y=, "_layout_font_size" from s=, "_layout_size_ratio" from r=, and "_layout_text" as the exact text after the [L ...] tag.
 - Use layout metadata from the same [PAGE n] as the chapter page. Do not use layout metadata from existing TOC pages, headers, footers, indexes, or repeated running titles.
@@ -3882,7 +3887,7 @@ Create one final TOC JSON object using only the [Partial TOC Candidates] below i
 - Do not invent chapter titles.
 - Preserve original chapter/section titles exactly, including Korean text when the source title is Korean.
 - Before finalizing, self-check level consistency across all partial candidates. If the same document convention shows that a candidate level is inconsistent with nearby hierarchy and layout metadata, correct the level in the merged output.
-- Do not use a universal numbering-to-level rule. Infer level conventions from the candidates' repeated title patterns, page order, layout metadata, and previous/nearby hierarchy.
+- Do not use a universal title-marker-to-level rule. Infer level conventions from the candidates' repeated visual patterns, page order, layout metadata, and previous/nearby hierarchy.
 {level_reason_instruction}
 
 [PDF File Name]
@@ -3911,6 +3916,516 @@ def format_style_key(style_key: tuple[float | None, float | None]) -> str:
     if size_ratio is not None:
         parts.append(f"size_ratio={size_ratio}")
     return ", ".join(parts) if parts else "no layout style"
+
+
+def style_font_size(style_key: tuple[float | None, float | None]) -> float:
+    font_size, _ = style_key
+    return float(font_size) if font_size is not None else 0.0
+
+
+def style_size_ratio(style_key: tuple[float | None, float | None]) -> float:
+    _, size_ratio = style_key
+    return float(size_ratio) if size_ratio is not None else 0.0
+
+
+def leading_decimal_number_path(title: Any) -> tuple[int, ...] | None:
+    text = clean_text(title)
+    match = re.match(r"^\s*(\d+(?:\.\d+)+)\.?", text)
+    if not match:
+        return None
+    try:
+        return tuple(int(part) for part in match.group(1).split("."))
+    except Exception:
+        return None
+
+
+def format_number_path(path: tuple[int, ...]) -> str:
+    return ".".join(str(part) for part in path)
+
+
+def format_gemma_numbering_gap_summary(toc: dict[str, Any], max_gaps: int = 20) -> str:
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return ""
+
+    rows_by_prefix: dict[tuple[int, ...], dict[int, dict[str, Any]]] = {}
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        title = clean_text(chapter.get("chapter"))
+        path = leading_decimal_number_path(title)
+        if not path or len(path) < 2:
+            continue
+        try:
+            level = int(chapter.get("level", 1))
+        except Exception:
+            level = 1
+        try:
+            page = int(chapter.get("page", 1))
+        except Exception:
+            page = None
+        prefix = path[:-1]
+        rows_by_prefix.setdefault(prefix, {})[path[-1]] = {
+            "title": title,
+            "path": path,
+            "level": level,
+            "page": page,
+        }
+
+    gaps: list[str] = []
+    for prefix, rows_by_number in sorted(rows_by_prefix.items()):
+        numbers = sorted(rows_by_number)
+        if len(numbers) < 2:
+            continue
+        for previous_number, next_number in zip(numbers, numbers[1:]):
+            if next_number <= previous_number + 1:
+                continue
+            before = rows_by_number[previous_number]
+            after = rows_by_number[next_number]
+            for missing_number in range(previous_number + 1, next_number):
+                missing_path = (*prefix, missing_number)
+                before_page = f", page={before['page']}" if before.get("page") else ""
+                after_page = f", page={after['page']}" if after.get("page") else ""
+                gaps.append(
+                    f'- possible missing numbered heading "{format_number_path(missing_path)}" between "{compact_toc_example_title(before["title"], max_chars=70)}"{before_page} and "{compact_toc_example_title(after["title"], max_chars=70)}"{after_page}. Search Source Text/Layout or Partial TOC Candidates for this grounded heading before finalizing.'
+                )
+                if len(gaps) >= max_gaps:
+                    break
+            if len(gaps) >= max_gaps:
+                break
+        if len(gaps) >= max_gaps:
+            break
+
+    if not gaps:
+        return ""
+    return "\n".join([
+        "[Observed Numbering Sequence Gaps]",
+        "These are not automatic rules. They are completeness-audit clues. Restore a missing numbered heading only if it is grounded in Source Text/Layout or Partial TOC Candidates.",
+        *gaps,
+    ])
+
+
+def toc_decimal_number_paths(toc: dict[str, Any]) -> set[tuple[int, ...]]:
+    paths: set[tuple[int, ...]] = set()
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return paths
+
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        path = leading_decimal_number_path(chapter.get("chapter"))
+        if path:
+            paths.add(path)
+    return paths
+
+
+def toc_normalized_titles(toc: dict[str, Any]) -> set[str]:
+    titles: set[str] = set()
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return titles
+
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        title = normalize_toc_match_text(chapter.get("chapter"))
+        if title:
+            titles.add(title)
+    return titles
+
+
+def is_existing_toc_line_candidate(title: str) -> bool:
+    text = clean_text(title)
+    if not text:
+        return False
+    if re.search(r"\.{3,}\s*\d+\s*$", text):
+        return True
+    if re.search(r"\s[·ㆍ.]{3,}\s*\d+\s*$", text):
+        return True
+    return False
+
+
+def missing_numbered_candidate_layout_text(candidate: dict[str, Any]) -> str:
+    parts: list[str] = []
+    if candidate.get("page"):
+        parts.append(f"page={candidate['page']}")
+    if candidate.get("line_index") is not None:
+        parts.append(f"line={candidate['line_index']}")
+    if candidate.get("font_size") is not None:
+        parts.append(f"s={candidate['font_size']}")
+    if candidate.get("size_ratio") is not None:
+        parts.append(f"r={candidate['size_ratio']}")
+    if candidate.get("left_indent") is not None:
+        parts.append(f"x={candidate['left_indent']}")
+    if candidate.get("vertical_position") is not None:
+        parts.append(f"y={candidate['vertical_position']}")
+    return ", ".join(parts)
+
+
+def is_probable_non_heading_candidate(title: str) -> bool:
+    text = clean_text(title)
+    if not text:
+        return True
+    if is_existing_toc_line_candidate(text):
+        return True
+    if len(text) > 180:
+        return True
+    if re.fullmatch(r"[\d\s.,;:()\-_/]+", text):
+        return True
+    if re.match(r"^[•●▪▫\-–—*]\s+", text):
+        return True
+    if re.match(r"^(table|figure|fig\.|box|표|그림)\s*[\dIVXivx가-힣.:-]", text, re.IGNORECASE):
+        return True
+    if len(text) > 80 and re.search(r"(다|요|니다|였다|한다|있다|된다|\.|;|:)$", text):
+        return True
+    return False
+
+
+def toc_heading_style_profiles(toc: dict[str, Any]) -> list[dict[str, Any]]:
+    profiles: list[dict[str, Any]] = []
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return profiles
+
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        font_size = metadata_float_value(chapter.get("_layout_font_size"))
+        size_ratio = metadata_float_value(chapter.get("_layout_size_ratio"))
+        if font_size is None and size_ratio is None:
+            continue
+        try:
+            level = int(chapter.get("level", 1))
+        except Exception:
+            level = 1
+        profiles.append({
+            "level": level,
+            "font_size": font_size,
+            "size_ratio": size_ratio,
+            "left_indent": metadata_float_value(chapter.get("_layout_x")),
+            "title": clean_text(chapter.get("chapter")),
+        })
+    return profiles
+
+
+def layout_matches_existing_heading_style(layout: dict[str, Any], profiles: list[dict[str, Any]]) -> bool:
+    font_size = metadata_float_value(layout.get("font_size"))
+    size_ratio = metadata_float_value(layout.get("size_ratio"))
+    if font_size is None and size_ratio is None:
+        return False
+
+    for profile in profiles:
+        profile_font = metadata_float_value(profile.get("font_size"))
+        profile_ratio = metadata_float_value(profile.get("size_ratio"))
+        font_match = (
+            font_size is not None
+            and profile_font is not None
+            and abs(font_size - profile_font) <= 1.0
+        )
+        ratio_match = (
+            size_ratio is not None
+            and profile_ratio is not None
+            and abs(size_ratio - profile_ratio) <= 0.12
+        )
+        if font_match and (ratio_match or profile_ratio is None):
+            return True
+        if ratio_match and (font_match or profile_font is None):
+            return True
+    return False
+
+
+def style_heading_candidate_score(layout: dict[str, Any], profiles: list[dict[str, Any]]) -> float:
+    font_size = metadata_float_value(layout.get("font_size")) or 0.0
+    size_ratio = metadata_float_value(layout.get("size_ratio")) or 1.0
+    bold = 1 if metadata_int_value(layout.get("bold")) else 0
+    italic = 1 if metadata_int_value(layout.get("italic")) else 0
+
+    score = 0.0
+    score += max(0.0, size_ratio - 1.0) * 5.0
+    score += 1.4 if bold else 0.0
+    score += 0.5 if italic else 0.0
+    if layout_matches_existing_heading_style(layout, profiles):
+        score += 2.0
+    if font_size >= 14.0:
+        score += 0.5
+    return score
+
+
+def is_style_heading_candidate(title: str, layout: dict[str, Any], profiles: list[dict[str, Any]]) -> bool:
+    if is_probable_non_heading_candidate(title):
+        return False
+    if not layout:
+        return False
+
+    size_ratio = metadata_float_value(layout.get("size_ratio")) or 1.0
+    bold = 1 if metadata_int_value(layout.get("bold")) else 0
+    italic = 1 if metadata_int_value(layout.get("italic")) else 0
+    if layout_matches_existing_heading_style(layout, profiles):
+        return True
+    if size_ratio >= 1.18:
+        return True
+    if bold and size_ratio >= 1.03:
+        return True
+    if italic and size_ratio >= 1.08:
+        return True
+    return False
+
+
+def add_missing_numbered_candidate(
+    candidates_by_path: dict[tuple[int, ...], dict[str, Any]],
+    existing_paths: set[tuple[int, ...]],
+    existing_titles: set[str],
+    source: str,
+    title: Any,
+    page: Any = None,
+    chunk: Any = None,
+    layout: dict[str, Any] | None = None,
+    line_index: int | None = None,
+) -> None:
+    clean_title = clean_text(title)
+    if not clean_title or is_existing_toc_line_candidate(clean_title):
+        return
+
+    path = leading_decimal_number_path(clean_title)
+    if not path:
+        return
+    if path in existing_paths:
+        return
+    if normalize_toc_match_text(clean_title) in existing_titles:
+        return
+
+    candidate = candidates_by_path.get(path)
+    if candidate and candidate.get("source") == "source_text":
+        return
+
+    layout = layout if isinstance(layout, dict) else {}
+    row: dict[str, Any] = {
+        "source": source,
+        "number": format_number_path(path),
+        "title": clean_title,
+    }
+    page_number = metadata_int_value(page)
+    if page_number is not None:
+        row["page"] = page_number
+    if chunk is not None:
+        row["chunk"] = chunk
+    if line_index is not None:
+        row["line_index"] = line_index
+    for source_key, target_key in (
+        ("font_size", "font_size"),
+        ("size_ratio", "size_ratio"),
+        ("left_indent", "left_indent"),
+        ("vertical_position", "vertical_position"),
+        ("bold", "bold"),
+        ("italic", "italic"),
+        ("font_id", "font_id"),
+    ):
+        if source_key in layout:
+            row[target_key] = layout[source_key]
+
+    candidates_by_path[path] = row
+
+
+def source_text_layout_candidates(source_text: str) -> list[dict[str, Any]]:
+    candidates: list[dict[str, Any]] = []
+    current_page: int | None = None
+    for line_index, raw_line in enumerate(str(source_text or "").splitlines()):
+        line = clean_text(raw_line)
+        if not line:
+            continue
+        page_match = re.match(r"^\[PAGE\s+(\d+)\]$", line)
+        if page_match:
+            current_page = metadata_int_value(page_match.group(1))
+            continue
+        layout = parse_layout_line(line)
+        if not layout:
+            continue
+        title = clean_text(layout.get("text"))
+        if not title:
+            continue
+        candidates.append({
+            "source": "source_text",
+            "title": title,
+            "page": current_page,
+            "line_index": line_index,
+            "layout": layout,
+        })
+    return candidates
+
+
+def add_source_text_numbered_candidates(
+    candidates_by_path: dict[tuple[int, ...], dict[str, Any]],
+    existing_paths: set[tuple[int, ...]],
+    existing_titles: set[str],
+    source_text: str,
+) -> None:
+    current_page: int | None = None
+    for line_index, raw_line in enumerate(str(source_text or "").splitlines()):
+        line = clean_text(raw_line)
+        if not line:
+            continue
+        page_match = re.match(r"^\[PAGE\s+(\d+)\]$", line)
+        if page_match:
+            current_page = metadata_int_value(page_match.group(1))
+            continue
+
+        layout = parse_layout_line(line)
+        title = clean_text(layout.get("text")) if layout else line
+        add_missing_numbered_candidate(
+            candidates_by_path=candidates_by_path,
+            existing_paths=existing_paths,
+            existing_titles=existing_titles,
+            source="source_text",
+            title=title,
+            page=current_page,
+            layout=layout,
+            line_index=line_index,
+        )
+
+
+def add_partial_toc_numbered_candidates(
+    candidates_by_path: dict[tuple[int, ...], dict[str, Any]],
+    existing_paths: set[tuple[int, ...]],
+    existing_titles: set[str],
+    partial_tocs: list[dict[str, Any]] | None,
+) -> None:
+    if not partial_tocs:
+        return
+
+    for partial in partial_tocs:
+        if not isinstance(partial, dict):
+            continue
+        toc = partial.get("toc")
+        chapters = toc.get("chapters", []) if isinstance(toc, dict) else []
+        if not isinstance(chapters, list):
+            continue
+        for chapter in chapters:
+            if not isinstance(chapter, dict):
+                continue
+            layout = layout_from_toc_metadata(chapter)
+            add_missing_numbered_candidate(
+                candidates_by_path=candidates_by_path,
+                existing_paths=existing_paths,
+                existing_titles=existing_titles,
+                source="partial_toc",
+                title=chapter.get("chapter"),
+                page=chapter.get("page"),
+                chunk=partial.get("chunk"),
+                layout=layout,
+                line_index=metadata_int_value(chapter.get("_source_order")),
+            )
+
+
+def format_gemma_missing_numbered_heading_candidates(
+    toc: dict[str, Any],
+    source_text: str = "",
+    partial_tocs: list[dict[str, Any]] | None = None,
+    max_candidates: int = 30,
+) -> str:
+    existing_paths = toc_decimal_number_paths(toc)
+    existing_titles = toc_normalized_titles(toc)
+    candidates_by_path: dict[tuple[int, ...], dict[str, Any]] = {}
+
+    if clean_text(source_text):
+        add_source_text_numbered_candidates(
+            candidates_by_path=candidates_by_path,
+            existing_paths=existing_paths,
+            existing_titles=existing_titles,
+            source_text=source_text,
+        )
+    add_partial_toc_numbered_candidates(
+        candidates_by_path=candidates_by_path,
+        existing_paths=existing_paths,
+        existing_titles=existing_titles,
+        partial_tocs=partial_tocs,
+    )
+
+    if not candidates_by_path:
+        return ""
+
+    lines = [
+        "[Observed Missing Numbered Heading Candidates]",
+        "These catch omissions even when the missing heading is the final item in a numbered sequence. They are clues, not automatic additions. Restore a candidate only if it is a real visible heading and not an existing TOC line, body sentence, caption, question, reference, or duplicate.",
+    ]
+    for _, candidate in sorted(candidates_by_path.items())[:max_candidates]:
+        location = missing_numbered_candidate_layout_text(candidate)
+        location_text = f", {location}" if location else ""
+        chunk_text = f", chunk={candidate['chunk']}" if candidate.get("chunk") is not None else ""
+        lines.append(
+            f'- {candidate["source"]}{chunk_text}{location_text}: number="{candidate["number"]}", title="{compact_toc_example_title(candidate["title"], max_chars=100)}"'
+        )
+    return "\n".join(lines)
+
+
+def format_gemma_missing_style_heading_candidates(
+    toc: dict[str, Any],
+    source_text: str = "",
+    max_candidates: int = 40,
+) -> str:
+    if not clean_text(source_text):
+        return ""
+
+    existing_titles = toc_normalized_titles(toc)
+    profiles = toc_heading_style_profiles(toc)
+    candidates: list[dict[str, Any]] = []
+    seen_titles: set[str] = set()
+
+    for candidate in source_text_layout_candidates(source_text):
+        title = clean_text(candidate.get("title"))
+        normalized_title = normalize_toc_match_text(title)
+        if not title or normalized_title in existing_titles or normalized_title in seen_titles:
+            continue
+        layout = candidate.get("layout")
+        if not isinstance(layout, dict):
+            continue
+        if not is_style_heading_candidate(title, layout, profiles):
+            continue
+
+        row = {
+            "source": candidate.get("source"),
+            "title": title,
+            "page": candidate.get("page"),
+            "line_index": candidate.get("line_index"),
+            "score": style_heading_candidate_score(layout, profiles),
+            "font_size": metadata_float_value(layout.get("font_size")),
+            "size_ratio": metadata_float_value(layout.get("size_ratio")),
+            "left_indent": metadata_float_value(layout.get("left_indent")),
+            "vertical_position": metadata_float_value(layout.get("vertical_position")),
+            "bold": metadata_int_value(layout.get("bold")),
+            "italic": metadata_int_value(layout.get("italic")),
+            "font_id": clean_text(layout.get("font_id")),
+        }
+        candidates.append(row)
+        seen_titles.add(normalized_title)
+
+    if not candidates:
+        return ""
+
+    candidates = sorted(
+        candidates,
+        key=lambda item: (
+            -float(item.get("score") or 0.0),
+            int(item.get("page") or 0),
+            int(item.get("line_index") or 0),
+        ),
+    )[:max_candidates]
+    candidates = sorted(candidates, key=lambda item: (int(item.get("page") or 0), int(item.get("line_index") or 0)))
+
+    lines = [
+        "[Observed Missing Style Heading Candidates]",
+        "These catch omissions when headings do not use numbering. They are layout-based clues from Source Text/Layout. Restore a candidate only if its font size/ratio/bold/indent/spacing pattern clearly belongs to this document's heading hierarchy and it is not body text, a caption, question, reference, header/footer, or existing TOC line.",
+    ]
+    for candidate in candidates:
+        location = missing_numbered_candidate_layout_text(candidate)
+        location_text = f", {location}" if location else ""
+        bold_text = f", b={candidate['bold']}" if candidate.get("bold") is not None else ""
+        italic_text = f", i={candidate['italic']}" if candidate.get("italic") is not None else ""
+        font_text = f", f={candidate['font_id']}" if candidate.get("font_id") else ""
+        lines.append(
+            f'- source_text{location_text}{bold_text}{italic_text}{font_text}: title="{compact_toc_example_title(candidate["title"], max_chars=110)}"'
+        )
+    return "\n".join(lines)
 
 
 def format_gemma_level_style_summary(toc: dict[str, Any], max_conflicts: int = 20) -> str:
@@ -3987,7 +4502,46 @@ def format_gemma_level_style_summary(toc: dict[str, Any], max_conflicts: int = 2
             )
 
     conflicts: list[str] = []
+    level_one_styles = by_level_style.get(1, {})
+    if len(level_one_styles) >= 2:
+        dominant_level_one_style, dominant_level_one_info = max(
+            level_one_styles.items(),
+            key=lambda item: (
+                style_font_size(item[0]),
+                style_size_ratio(item[0]),
+                int(item[1].get("count", 0)),
+            ),
+        )
+        dominant_font = style_font_size(dominant_level_one_style)
+        dominant_ratio = style_size_ratio(dominant_level_one_style)
+        dominant_examples = "; ".join(
+            compact_toc_example_title(title, max_chars=60)
+            for title in dominant_level_one_info.get("examples", [])
+        )
+        lines.append(
+            f"Level 1 dominant/highest visual style: {format_style_key(dominant_level_one_style)}, examples={dominant_examples}"
+        )
+        for row in chapter_rows:
+            if int(row["level"]) != 1:
+                continue
+            style_key = row["style_key"]
+            if style_key == dominant_level_one_style:
+                continue
+            font_ratio = style_font_size(style_key) / dominant_font if dominant_font else 1.0
+            size_ratio_ratio = style_size_ratio(style_key) / dominant_ratio if dominant_ratio else 1.0
+            if font_ratio > 0.82 and size_ratio_ratio > 0.82:
+                continue
+            page_text = f", page={row['page']}" if row.get("page") else ""
+            x_text = f", x={row['x']:.1f}" if row.get("x") is not None else ""
+            conflicts.append(
+                f'- title="{compact_toc_example_title(row["title"], max_chars=90)}"{page_text}: current level 1 uses smaller style {format_style_key(style_key)}{x_text}, while true level 1 appears to use {format_style_key(dominant_level_one_style)}. Audit as a likely lower-level heading unless document-specific evidence proves it is a separate top-level title.'
+            )
+            if len(conflicts) >= max_conflicts:
+                break
+
     for row in chapter_rows:
+        if len(conflicts) >= max_conflicts:
+            break
         style_key = row["style_key"]
         current_level = int(row["level"])
         style_counts = by_style_level_count.get(style_key, {})
@@ -4030,6 +4584,19 @@ def build_gemma_level_review_prompt(
     toc_json = json.dumps(compact_toc_for_gemma_level_review(toc), ensure_ascii=False, indent=2)
     style_summary = format_gemma_level_style_summary(toc)
     style_block = f"\n\n{style_summary}" if clean_text(style_summary) else ""
+    numbering_gap_summary = format_gemma_numbering_gap_summary(toc)
+    numbering_gap_block = f"\n\n{numbering_gap_summary}" if clean_text(numbering_gap_summary) else ""
+    missing_numbered_summary = format_gemma_missing_numbered_heading_candidates(
+        toc,
+        source_text=source_text,
+        partial_tocs=partial_tocs,
+    )
+    missing_numbered_block = f"\n\n{missing_numbered_summary}" if clean_text(missing_numbered_summary) else ""
+    missing_style_summary = format_gemma_missing_style_heading_candidates(
+        toc,
+        source_text=source_text,
+    )
+    missing_style_block = f"\n\n{missing_style_summary}" if clean_text(missing_style_summary) else ""
     source_block = f"\n\n[Source Text/Layout]\n{source_text}" if clean_text(source_text) else ""
     partial_block = ""
     if partial_tocs:
@@ -4047,16 +4614,22 @@ def build_gemma_level_review_prompt(
 [Gemma TOC Level Verification and Correction]
 Review the [Current TOC JSON] and return one corrected TOC JSON object.
 This is a verification pass after the first TOC extraction/merge.
+- Also perform a completeness audit. If [Source Text/Layout] is provided, compare the current TOC against visible heading-like lines in the source and add omitted headings/subheadings that belong in the hierarchy. If [Partial TOC Candidates] is provided, restore any candidate heading omitted from the current TOC unless it is a duplicate, header/footer, existing TOC line, reference/index item, question, caption, or body sentence.
+- Add missing entries only when they are grounded in [Source Text/Layout] or [Partial TOC Candidates]. Do not invent titles or pages.
+- When adding a missing heading, place it in source order, assign the level from this document's visual/style hierarchy, copy _layout_* metadata from the visible title line when available, and explain in level_reason that it was restored during completeness audit.
+- If [Observed Numbering Sequence Gaps] is provided, explicitly check each gap as an optional completeness clue. Search the source/partials for a grounded visible heading before restoring anything. If not grounded, do not invent it.
+- If [Observed Missing Numbered Heading Candidates] is provided, explicitly audit each candidate as an optional title-marker clue. Add the candidate only if it is a real heading grounded in the source/partials; reject it if it is an existing TOC line, body sentence, caption, question, reference, or duplicate.
+- If [Observed Missing Style Heading Candidates] is provided, explicitly audit each candidate even when it has no numbering. This list is based on font size, size/body ratio, bold/italic, indentation, and similarity to observed heading styles. Add the candidate only if the layout pattern clearly matches this document's heading hierarchy.
 - Correct wrong "level" values by inferring this document's hierarchy from repeated title patterns, page order, layout metadata, and nearby context.
-- Do not use a universal numbering-to-level rule. Korean chapter markers, "1.", "1.1", "(1)", roman numerals, and letters can mean different levels in different books.
+- Do not use a universal title-marker-to-level rule. Any visible marker or numbering style can mean different levels in different books, and some books have no markers at all.
 - Visual hierarchy is stronger evidence than numbering alone. Font size, size/body ratio, indentation, bold/italic style, and repeated visual patterns must override a superficial numbering interpretation when they conflict.
 - Before deciding levels, internally build a style cluster table for each level using _layout_font_size, _layout_size_ratio, _layout_x, and repeated title patterns. Do not output this table; use it to correct the JSON.
-- A level must be visually coherent within the same document. If one entry assigned to level 1 has a much smaller font/ratio and matches the repeated style of level 2 entries, move it to level 2 even if its title starts with a simple number such as "3.".
-- Do not keep an entry at level 1 merely because it is numbered "1.", "2.", "3.", etc. If true level 1 entries use a larger chapter-title style, a smaller "N." title is usually a lower section level in this document.
+- A level must be visually coherent within the same document. If one entry assigned to level 1 has a much smaller font/ratio and matches the repeated style of lower-level entries, move it to the visually matching lower level even if its title marker looks prominent.
+- If level 1 contains multiple visual style clusters, treat the largest/highest visual cluster as the true top-level chapter style unless the document clearly proves otherwise. Smaller level-1 clusters are likely misclassified lower headings and must be demoted to the level whose style/hierarchy they match.
+- Do not keep an entry at level 1 merely because of its title marker. If true level 1 entries use a larger chapter-title style, a smaller repeated style is usually a lower section level in this document.
 - Audit every "level": 1 entry especially strictly. Level 1 should represent the highest visible hierarchy; entries with section-level typography must be corrected downward.
 - When [Observed TOC Level Style Evidence] lists a potential style-level conflict, explicitly resolve it in the output: either change the level to the visually matching level, or keep it only if there is stronger document-specific evidence and explain that evidence in level_reason.
-- Keep the same title, chapter text, page numbers, and order unless an entry is an exact duplicate or clearly invalid from the given context.
-- Do not invent new chapter titles or pages.
+- Preserve existing correct title text, page numbers, and order. You may add omitted grounded headings, remove exact duplicates, and remove clearly invalid non-heading entries.
 - Use only levels from 1 to {max_depth}.
 - Preserve existing _layout_* metadata when it still describes the visible title line. If a correction uses a better visible line from [Source Text/Layout], update the _layout_* fields from that line.
 - Include level_reason for every chapter. If you changed a level, mention the previous level and the document-specific evidence for the corrected level, including font_size/size_ratio/indent and the matching repeated style cluster.
@@ -4064,6 +4637,9 @@ This is a verification pass after the first TOC extraction/merge.
 - Output compact valid JSON only.
 {reference_block}
 {style_block}
+{numbering_gap_block}
+{missing_numbered_block}
+{missing_style_block}
 
 [PDF File Name]
 {pdf_name}
