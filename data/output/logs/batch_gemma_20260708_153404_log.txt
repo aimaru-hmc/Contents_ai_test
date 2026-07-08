@@ -1,0 +1,31 @@
+Run log saved: data/output/logs/batch_gemma_20260708_153404_log.txt
+Processing started: 1편(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 51 pages, 169770 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/1_2021_gemma_20260708_153404_parsed_pdf.txt
+  Gemma text chunk processing started: 2 chunks
+  Gemma chunk 1/2 request: pages 1-37
+  Gemma input chunk 1 saved: data/output/input_chunks/1_2021_gemma_20260708_153404/chunk_1_pages_1-37.json
+  Gemma level review(chunk 1/2) started
+  Gemma level review(chunk 1/2) completed: 78 chapters / level changes 0
+  Gemma chunk 1 completed: 78 chapters
+  Gemma chunk 2/2 request: pages 38-51
+  Gemma input chunk 2 saved: data/output/input_chunks/1_2021_gemma_20260708_153404/chunk_2_pages_38-51.json
+  Gemma level review(chunk 2/2) started
+  Gemma level review(chunk 2/2) completed: 32 chapters / level changes 0
+  Gemma chunk 2 completed: 32 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) completed: 110 chapters / level changes 0
+Completed: data/output/1_2021_gemma_20260708_153907_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 5m 3.3s (303.311s)
+  title: 건강과 질병
+  chapters: 110
+Processing started: 2편1-4장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
