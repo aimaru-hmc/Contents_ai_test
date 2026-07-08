@@ -88,6 +88,12 @@ DEFAULT_GEMMA_LEVEL_VERIFY_SCOPE = (
     ).strip().lower()
     or ("final" if DEFAULT_GEMMA_LEVEL_VERIFY else "none")
 )
+DEFAULT_GEMMA_DOCUMENT_STYLE_REFERENCE = (
+    os.getenv("GEMMA_DOCUMENT_STYLE_REFERENCE", "true").strip().lower()
+    in {"1", "true", "yes", "on"}
+)
+DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_CLUSTERS = int(os.getenv("GEMMA_DOCUMENT_STYLE_MAX_CLUSTERS", "12"))
+DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_EXAMPLES = int(os.getenv("GEMMA_DOCUMENT_STYLE_MAX_EXAMPLES", "80"))
 DEFAULT_WRITE_PARSED_PDF = (
     os.getenv("WRITE_PARSED_PDF", "true").strip().lower()
     in {"1", "true", "yes", "on"}
@@ -3908,7 +3914,13 @@ def format_toc_level_reference(level_reference: dict[int, list[dict[str, Any]]])
     ])
 
 
-def build_gemma_text_prompt(base_prompt: str, pdf_name: str, text: str) -> str:
+def build_gemma_text_prompt(
+    base_prompt: str,
+    pdf_name: str,
+    text: str,
+    document_style_text: str = "",
+) -> str:
+    document_style_block = f"\n\n{document_style_text}" if clean_text(document_style_text) else ""
     return f"""
 {base_prompt}
 
@@ -3931,6 +3943,7 @@ Some lines may start with compact layout tags:
 - If a title spans multiple layout lines, use the main descriptive title line with the strongest title style, and keep the combined title in "chapter".
 - If no reliable [L ...] line exists for an entry, omit the _layout_* fields instead of guessing.
 - Output compact valid JSON only. Every object property and every array item must be separated with commas.
+{document_style_block}
 
 [PDF File Name]
 {pdf_name}
@@ -3946,8 +3959,10 @@ def build_gemma_chunk_prompt(
     chunk: dict[str, Any],
     total_chunks: int,
     level_reference_text: str = "",
+    document_style_text: str = "",
 ) -> str:
     level_reference_block = f"\n\n{level_reference_text}" if clean_text(level_reference_text) else ""
+    document_style_block = f"\n\n{document_style_text}" if clean_text(document_style_text) else ""
     return f"""
 {base_prompt}
 
@@ -3973,6 +3988,7 @@ Some lines may start with compact layout tags:
 - If a title spans multiple layout lines, use the main descriptive title line with the strongest title style, and keep the combined title in "chapter".
 - If no reliable [L ...] line exists for an entry, omit the _layout_* fields instead of guessing.
 - Output compact valid JSON only. Every object property and every array item must be separated with commas.
+{document_style_block}
 {level_reference_block}
 
 [PDF File Name]
@@ -3992,8 +4008,10 @@ def build_gemma_merge_prompt(
     partial_tocs: list[dict[str, Any]],
     max_depth: int,
     include_level_reason: bool = True,
+    document_style_text: str = "",
 ) -> str:
     partial_json = json.dumps(partial_tocs, ensure_ascii=False, indent=2)
+    document_style_block = f"\n\n{document_style_text}" if clean_text(document_style_text) else ""
     level_reason_instruction = (
         "- Preserve level_reason when it exists. If an entry has no level_reason, add a concise reason based only on the candidate entry and nearby level pattern."
         if include_level_reason
@@ -4013,6 +4031,7 @@ Create one final TOC JSON object using only the [Partial TOC Candidates] below i
 - Before finalizing, self-check level consistency across all partial candidates. If the same document convention shows that a candidate level is inconsistent with nearby hierarchy and layout metadata, correct the level in the merged output.
 - Do not use a universal title-marker-to-level rule. Infer level conventions from the candidates' repeated visual patterns, page order, layout metadata, and previous/nearby hierarchy.
 {level_reason_instruction}
+{document_style_block}
 
 [PDF File Name]
 {pdf_name}
@@ -4405,6 +4424,275 @@ def source_text_layout_candidates(source_text: str) -> list[dict[str, Any]]:
             "layout": layout,
         })
     return candidates
+
+
+def gemma_full_text_from_pages(pages: list[tuple[int, str]]) -> str:
+    return "\n\n".join(f"[PAGE {page_number}]\n{text}" for page_number, text in pages)
+
+
+def document_style_cluster_key(layout: dict[str, Any]) -> tuple[float, float, int, int, str, int]:
+    font_size = metadata_float_value(layout.get("font_size")) or 0.0
+    size_ratio = metadata_float_value(layout.get("size_ratio")) or 1.0
+    left_indent = metadata_float_value(layout.get("left_indent")) or 0.0
+    bold = 1 if metadata_int_value(layout.get("bold")) else 0
+    italic = 1 if metadata_int_value(layout.get("italic")) else 0
+    font_id = clean_text(layout.get("font_id")) or "f?"
+    x_band = int(round(left_indent / 10.0) * 10)
+    return round(font_size, 1), round(size_ratio, 2), bold, italic, font_id, x_band
+
+
+def document_style_page_range(pages: Iterable[Any]) -> str:
+    numbers = sorted({
+        page_number
+        for page in pages
+        if (page_number := metadata_int_value(page)) is not None
+    })
+    if not numbers:
+        return ""
+    if len(numbers) == 1:
+        return str(numbers[0])
+    return f"{numbers[0]}-{numbers[-1]}"
+
+
+def document_style_sample_texts(samples: list[str], max_samples: int = 3) -> list[str]:
+    output: list[str] = []
+    seen: set[str] = set()
+    for sample in samples:
+        text = compact_toc_example_title(sample, max_chars=80)
+        normalized = normalize_toc_match_text(text)
+        if not text or normalized in seen:
+            continue
+        seen.add(normalized)
+        output.append(text)
+        if len(output) >= max_samples:
+            break
+    return output
+
+
+def document_style_cluster_summary(cluster: dict[str, Any]) -> dict[str, Any]:
+    x_values = [metadata_float_value(value) for value in cluster.get("_x_values", [])]
+    x_values = [value for value in x_values if value is not None]
+    y_values = [metadata_float_value(value) for value in cluster.get("_y_values", [])]
+    y_values = [value for value in y_values if value is not None]
+    pages = sorted(cluster.get("_pages", set()))
+    return {
+        "font_size": cluster.get("font_size"),
+        "size_ratio": cluster.get("size_ratio"),
+        "bold": cluster.get("bold"),
+        "italic": cluster.get("italic"),
+        "font_id": cluster.get("font_id"),
+        "left_indent_band": cluster.get("left_indent_band"),
+        "median_left_indent": round(median_float(x_values), 1) if x_values else None,
+        "median_vertical_position": round(median_float(y_values), 1) if y_values else None,
+        "line_count": cluster.get("line_count", 0),
+        "page_count": len(pages),
+        "page_range": document_style_page_range(pages),
+        "samples": document_style_sample_texts(cluster.get("_samples", [])),
+    }
+
+
+def document_style_line_is_title_like(title: str, layout: dict[str, Any]) -> bool:
+    if is_probable_non_heading_candidate(title) or is_ancillary_heading_candidate(title):
+        return False
+    if len(clean_text(title)) > 140:
+        return False
+
+    size_ratio = metadata_float_value(layout.get("size_ratio")) or 1.0
+    font_size = metadata_float_value(layout.get("font_size")) or 0.0
+    bold = 1 if metadata_int_value(layout.get("bold")) else 0
+    italic = 1 if metadata_int_value(layout.get("italic")) else 0
+    return (
+        size_ratio >= 1.12
+        or font_size >= 14.0
+        or bool(bold)
+        or bool(italic)
+        or (has_structural_title_marker(title) and size_ratio >= 1.05)
+    )
+
+
+def build_gemma_document_style_reference(
+    pages: list[tuple[int, str]],
+    *,
+    enabled: bool = True,
+    max_clusters: int = DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_CLUSTERS,
+    max_examples: int = DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_EXAMPLES,
+) -> dict[str, Any]:
+    if not enabled:
+        return {"enabled": False, "prompt_text": ""}
+
+    full_text = gemma_full_text_from_pages(pages)
+    layout_lines = source_text_layout_candidates(full_text)
+    if not layout_lines:
+        return {
+            "enabled": True,
+            "available": False,
+            "reason": "No compact layout-tagged lines were found.",
+            "prompt_text": "",
+        }
+
+    clusters: dict[tuple[float, float, int, int, str, int], dict[str, Any]] = {}
+    title_like_examples: list[dict[str, Any]] = []
+    for candidate in layout_lines:
+        layout = candidate.get("layout") if isinstance(candidate.get("layout"), dict) else {}
+        title = clean_text(candidate.get("title"))
+        if not title:
+            continue
+        key = document_style_cluster_key(layout)
+        font_size, size_ratio, bold, italic, font_id, x_band = key
+        cluster = clusters.setdefault(key, {
+            "font_size": font_size,
+            "size_ratio": size_ratio,
+            "bold": bold,
+            "italic": italic,
+            "font_id": font_id,
+            "left_indent_band": x_band,
+            "line_count": 0,
+            "_pages": set(),
+            "_x_values": [],
+            "_y_values": [],
+            "_samples": [],
+        })
+        cluster["line_count"] += 1
+        page_number = metadata_int_value(candidate.get("page"))
+        if page_number is not None:
+            cluster["_pages"].add(page_number)
+        left_indent = metadata_float_value(layout.get("left_indent"))
+        if left_indent is not None:
+            cluster["_x_values"].append(left_indent)
+        vertical_position = metadata_float_value(layout.get("vertical_position"))
+        if vertical_position is not None:
+            cluster["_y_values"].append(vertical_position)
+        if len(cluster["_samples"]) < 8 and not is_probable_non_heading_candidate(title):
+            cluster["_samples"].append(title)
+
+        if document_style_line_is_title_like(title, layout):
+            title_like_examples.append({
+                "page": page_number,
+                "line_index": metadata_int_value(candidate.get("line_index")),
+                "title": compact_toc_example_title(title, max_chars=90),
+                "font_size": metadata_float_value(layout.get("font_size")),
+                "size_ratio": metadata_float_value(layout.get("size_ratio")),
+                "left_indent": metadata_float_value(layout.get("left_indent")),
+                "vertical_position": metadata_float_value(layout.get("vertical_position")),
+                "bold": 1 if metadata_int_value(layout.get("bold")) else 0,
+                "italic": 1 if metadata_int_value(layout.get("italic")) else 0,
+                "font_id": clean_text(layout.get("font_id")),
+                "has_marker": has_structural_title_marker(title),
+            })
+
+    cluster_summaries = [document_style_cluster_summary(cluster) for cluster in clusters.values()]
+    probable_body_styles = sorted(
+        (
+            cluster
+            for cluster in cluster_summaries
+            if (metadata_float_value(cluster.get("size_ratio")) or 1.0) <= 1.12
+            and not metadata_int_value(cluster.get("bold"))
+            and not metadata_int_value(cluster.get("italic"))
+        ),
+        key=lambda item: int(item.get("line_count") or 0),
+        reverse=True,
+    )[:5]
+    stronger_styles = sorted(
+        (
+            cluster
+            for cluster in cluster_summaries
+            if (metadata_float_value(cluster.get("size_ratio")) or 1.0) > 1.08
+            or metadata_int_value(cluster.get("bold"))
+            or metadata_int_value(cluster.get("italic"))
+        ),
+        key=lambda item: (
+            0 if int(item.get("line_count") or 0) >= 2 or int(item.get("page_count") or 0) >= 2 else 1,
+            -(metadata_float_value(item.get("size_ratio")) or 0.0),
+            -(metadata_float_value(item.get("font_size")) or 0.0),
+            -int(item.get("line_count") or 0),
+        ),
+    )[:max(1, int(max_clusters))]
+
+    title_like_examples = sorted(
+        title_like_examples,
+        key=lambda item: (
+            int(item.get("page") or 0),
+            int(item.get("line_index") or 0),
+        ),
+    )[:max(1, int(max_examples))]
+
+    page_numbers = {
+        page_number
+        for candidate in layout_lines
+        if (page_number := metadata_int_value(candidate.get("page"))) is not None
+    }
+    summary = {
+        "enabled": True,
+        "available": True,
+        "page_count": len(page_numbers),
+        "layout_line_count": len(layout_lines),
+        "style_cluster_count": len(cluster_summaries),
+        "probable_body_styles": probable_body_styles,
+        "stronger_or_marked_style_clusters": stronger_styles,
+        "title_like_examples": title_like_examples,
+    }
+    summary["prompt_text"] = format_gemma_document_style_reference(summary)
+    return summary
+
+
+def format_document_style_cluster_for_prompt(cluster: dict[str, Any]) -> str:
+    samples = cluster.get("samples") if isinstance(cluster.get("samples"), list) else []
+    sample_text = "; ".join(f'"{sample}"' for sample in samples[:3] if clean_text(sample))
+    sample_suffix = f"; samples={sample_text}" if sample_text else ""
+    return (
+        f's={cluster.get("font_size")} r={cluster.get("size_ratio")} '
+        f'x~{cluster.get("median_left_indent")} b={cluster.get("bold")} i={cluster.get("italic")} '
+        f'f={clean_text(cluster.get("font_id"))} lines={cluster.get("line_count")} '
+        f'pages={cluster.get("page_range")}{sample_suffix}'
+    )
+
+
+def format_gemma_document_style_reference(summary: dict[str, Any]) -> str:
+    if not isinstance(summary, dict) or not summary.get("available"):
+        return ""
+
+    body_lines = [
+        f"- {format_document_style_cluster_for_prompt(cluster)}"
+        for cluster in summary.get("probable_body_styles", [])
+        if isinstance(cluster, dict)
+    ]
+    style_lines = [
+        f"- {format_document_style_cluster_for_prompt(cluster)}"
+        for cluster in summary.get("stronger_or_marked_style_clusters", [])
+        if isinstance(cluster, dict)
+    ]
+    example_lines: list[str] = []
+    for example in summary.get("title_like_examples", []):
+        if not isinstance(example, dict):
+            continue
+        location = missing_numbered_candidate_layout_text(example)
+        marker_text = ", marker=1" if example.get("has_marker") else ""
+        example_lines.append(
+            f'- {location}{marker_text}: "{compact_toc_example_title(example.get("title"), max_chars=90)}"'
+        )
+
+    sections = [
+        "[Document-Wide Layout Style Reference]",
+        (
+            "Computed once from the full parsed PDF before chunking. Use this as document-level style evidence; "
+            "do not copy sample titles unless the same title is visible in the current source/chunk."
+        ),
+        f'- layout_lines={summary.get("layout_line_count")} style_clusters={summary.get("style_cluster_count")} pages={summary.get("page_count")}',
+        "- Use this reference to distinguish repeated heading styles from probable body text across the whole document.",
+        "- Body-size lines near r=1.0 without bold/italic or a visible marker are weak TOC candidates unless the document repeatedly proves they are headings.",
+        "- One-off oversized styles on cover/title pages are not automatically document hierarchy styles.",
+        "- No universal marker-to-level rule is implied here; infer levels from repeated visual hierarchy in this document.",
+    ]
+    if body_lines:
+        sections.append("\nProbable body styles:")
+        sections.extend(body_lines)
+    if style_lines:
+        sections.append("\nRepeated stronger/marked style clusters:")
+        sections.extend(style_lines)
+    if example_lines:
+        sections.append("\nPage-order title-like examples:")
+        sections.extend(example_lines)
+    return "\n".join(sections)
 
 
 def source_title_line_evidence(title: str, page: Any, source_text: str, max_examples: int = 3) -> dict[str, Any]:
@@ -4937,6 +5225,7 @@ def build_gemma_level_review_prompt(
     source_text: str = "",
     partial_tocs: list[dict[str, Any]] | None = None,
     level_reference_text: str = "",
+    document_style_text: str = "",
 ) -> str:
     toc_json = json.dumps(compact_toc_for_gemma_level_review(toc), ensure_ascii=False, indent=2)
     style_summary = format_gemma_level_style_summary(toc)
@@ -4969,6 +5258,7 @@ def build_gemma_level_review_prompt(
         )
         partial_block = f"\n\n[Partial TOC Candidates]\n{partial_json}"
     reference_block = f"\n\n{level_reference_text}" if clean_text(level_reference_text) else ""
+    document_style_block = f"\n\n{document_style_text}" if clean_text(document_style_text) else ""
 
     return f"""
 {base_prompt}
@@ -4998,6 +5288,7 @@ This is a verification pass after the first TOC extraction/merge.
 - Include level_reason for every chapter. If you changed a level, mention the previous level and the document-specific evidence for the corrected level, including font_size/size_ratio/indent and the matching repeated style cluster.
 - If the evidence is ambiguous, keep the current level and say why in level_reason.
 - Output compact valid JSON only.
+{document_style_block}
 {reference_block}
 {style_block}
 {numbering_gap_block}
@@ -5334,6 +5625,7 @@ def review_gemma_toc_levels(
     source_text: str = "",
     partial_tocs: list[dict[str, Any]] | None = None,
     level_reference_text: str = "",
+    document_style_text: str = "",
 ) -> tuple[dict[str, Any], str, dict[str, Any]]:
     if normalize_gemma_level_verify_scope(
         getattr(args, "gemma_level_verify_scope", DEFAULT_GEMMA_LEVEL_VERIFY_SCOPE)
@@ -5351,6 +5643,7 @@ def review_gemma_toc_levels(
         source_text=source_text,
         partial_tocs=partial_tocs,
         level_reference_text=level_reference_text,
+        document_style_text=document_style_text,
     )
     print(f"  {label} started", flush=True)
     try:
@@ -5470,6 +5763,7 @@ def merge_gemma_partial_tocs_once(
     prompt: str,
     partial_tocs: list[dict[str, Any]],
     label: str,
+    document_style_text: str = "",
 ) -> tuple[dict[str, Any], str, dict[str, Any]]:
     compact_partials = compact_partial_tocs_for_gemma_merge(partial_tocs)
     merge_prompt = build_gemma_merge_prompt(
@@ -5478,6 +5772,7 @@ def merge_gemma_partial_tocs_once(
         compact_partials,
         args.max_depth,
         include_level_reason=False,
+        document_style_text=document_style_text,
     )
     parsed, raw_text = request_gemma_json_text(
         model=model,
@@ -5532,6 +5827,7 @@ def merge_gemma_partial_tocs_batched(
     args: argparse.Namespace,
     prompt: str,
     partial_tocs: list[dict[str, Any]],
+    document_style_text: str = "",
 ) -> tuple[dict[str, Any], str, dict[str, Any]]:
     batch_chars = max(10000, int(getattr(args, "gemma_merge_batch_chars", DEFAULT_GEMMA_MERGE_BATCH_CHARS)))
     batches = split_partial_tocs_for_gemma_merge(partial_tocs, max_chars=batch_chars)
@@ -5557,6 +5853,7 @@ def merge_gemma_partial_tocs_batched(
                 prompt=prompt,
                 partial_tocs=batch,
                 label=label,
+                document_style_text=document_style_text,
             )
         except Exception as error:
             print(
@@ -5658,6 +5955,7 @@ def process_gemma_text_chunk(
     total_chunks: int,
     raw_parts: list[dict[str, Any]],
     level_reference: dict[int, list[dict[str, Any]]] | None = None,
+    document_style_text: str = "",
     depth: int = 0,
 ) -> list[dict[str, Any]]:
     chunk_label = str(chunk["index"])
@@ -5675,6 +5973,7 @@ def process_gemma_text_chunk(
         chunk,
         total_chunks,
         level_reference_text=level_reference_text,
+        document_style_text=document_style_text,
     )
     print(
         f"  Gemma chunk {chunk_label}/{total_chunks} request: pages {chunk['start_page']}-{chunk['end_page']}",
@@ -5746,6 +6045,7 @@ def process_gemma_text_chunk(
                 stage_label=f"chunk {chunk_label}/{total_chunks}",
                 source_text=str(chunk.get("text") or ""),
                 level_reference_text=level_reference_text,
+                document_style_text=document_style_text,
             )
             write_stage_file(
                 args=args,
@@ -5851,6 +6151,7 @@ def process_gemma_text_chunk(
                     total_chunks=total_chunks,
                     raw_parts=raw_parts,
                     level_reference=level_reference,
+                    document_style_text=document_style_text,
                     depth=depth + 1,
                 )
             )
@@ -5867,6 +6168,14 @@ def generate_toc_from_pdf_gemma_text(
     pages, extraction_metadata = extract_gemma_pdf_pages(pdf_path, args)
     extracted_chars = sum(len(text) for _, text in pages)
     extraction_mode = extraction_metadata.get("gemma_extraction_mode", "text")
+    full_text = gemma_full_text_from_pages(pages)
+    document_style_summary = build_gemma_document_style_reference(
+        pages,
+        enabled=bool(getattr(args, "gemma_document_style_reference", DEFAULT_GEMMA_DOCUMENT_STYLE_REFERENCE)),
+        max_clusters=max(1, int(getattr(args, "gemma_document_style_max_clusters", DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_CLUSTERS))),
+        max_examples=max(1, int(getattr(args, "gemma_document_style_max_examples", DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_EXAMPLES))),
+    )
+    document_style_text = str(document_style_summary.get("prompt_text") or "").strip()
     print(
         f"  Gemma PDF extraction completed: {len(pages)} pages, {extracted_chars} chars, mode={extraction_mode}",
         flush=True,
@@ -5876,6 +6185,10 @@ def generate_toc_from_pdf_gemma_text(
         input_mode="extracted_pdf_layout_text" if extraction_mode == "layout" else "extracted_pdf_text",
         extracted_pages=len(pages),
         extracted_chars=extracted_chars,
+        gemma_document_style_reference=bool(document_style_summary.get("enabled")),
+        gemma_document_style_reference_available=bool(document_style_summary.get("available")),
+        gemma_document_style_cluster_count=document_style_summary.get("style_cluster_count", 0),
+        gemma_document_style_title_like_example_count=len(document_style_summary.get("title_like_examples", []) or []),
         **extraction_metadata,
     )
     update_processing_metadata(
@@ -5904,6 +6217,7 @@ def generate_toc_from_pdf_gemma_text(
             "extracted_pages": len(pages),
             "extracted_chars": extracted_chars,
             "parsed_pdf_file": getattr(args, "_ai_processing_metadata", {}).get("parsed_pdf_file"),
+            "document_style_reference": document_style_summary,
         },
     )
 
@@ -5920,8 +6234,12 @@ def generate_toc_from_pdf_gemma_text(
             gemma_text_single_max_chars=single_max_chars,
             gemma_text_chunk_chars=chunk_chars,
         )
-        full_text = "\n\n".join(f"[PAGE {page_number}]\n{text}" for page_number, text in pages)
-        text_prompt = build_gemma_text_prompt(prompt, pdf_path.name, full_text)
+        text_prompt = build_gemma_text_prompt(
+            prompt,
+            pdf_path.name,
+            full_text,
+            document_style_text=document_style_text,
+        )
         print(f"  Gemma text TOC generation started: {model}", flush=True)
         try:
             parsed, raw_text = request_gemma_json_text(
@@ -5943,6 +6261,7 @@ def generate_toc_from_pdf_gemma_text(
                     "input_chars": len(full_text),
                     "toc": toc,
                     "raw_response": raw_text,
+                    "document_style_reference": document_style_summary,
                 },
             )
             level_review_raw_text = ""
@@ -5958,6 +6277,7 @@ def generate_toc_from_pdf_gemma_text(
                     toc=toc,
                     stage_label="single text",
                     source_text=full_text,
+                    document_style_text=document_style_text,
                 )
                 write_stage_file(
                     args=args,
@@ -5969,6 +6289,7 @@ def generate_toc_from_pdf_gemma_text(
                         "level_review": level_review_status,
                         "toc": toc,
                         "raw_response": level_review_raw_text,
+                        "document_style_reference": document_style_summary,
                     },
                 )
             single_level_reference_enabled = bool(getattr(args, "gemma_level_reference", DEFAULT_GEMMA_LEVEL_REFERENCE))
@@ -5994,6 +6315,7 @@ def generate_toc_from_pdf_gemma_text(
                 payload={
                     "toc": toc,
                     "level_reference": serialize_toc_level_reference(single_level_reference) if single_level_reference_enabled else {},
+                    "document_style_reference": document_style_summary,
                 },
             )
             raw_bundle = {
@@ -6001,6 +6323,7 @@ def generate_toc_from_pdf_gemma_text(
                 "model": model,
                 "pdf": pdf_path.name,
                 "extraction": extraction_metadata,
+                "document_style_reference": document_style_summary,
                 "extracted_pages": len(pages),
                 "extracted_chars": extracted_chars,
                 "raw_response": raw_text,
@@ -6039,6 +6362,7 @@ def generate_toc_from_pdf_gemma_text(
                 }
                 for chunk in chunks
             ],
+            "document_style_reference": document_style_summary,
         },
     )
     update_processing_metadata(
@@ -6085,6 +6409,7 @@ def generate_toc_from_pdf_gemma_text(
                 total_chunks=len(chunks),
                 raw_parts=raw_parts,
                 level_reference=level_reference,
+                document_style_text=document_style_text,
             )
         )
     update_processing_metadata(args, processed_chunk_count=len(raw_parts))
@@ -6100,6 +6425,7 @@ def generate_toc_from_pdf_gemma_text(
             "partial_tocs": partial_tocs,
             "chunk_level_reference": serialize_toc_level_reference(level_reference) if level_reference_enabled else {},
             "chunk_level_reference_source": chunk_level_reference_source,
+            "document_style_reference": document_style_summary,
         },
     )
 
@@ -6140,6 +6466,7 @@ def generate_toc_from_pdf_gemma_text(
                     args=args,
                     prompt=prompt,
                     partial_tocs=partial_tocs,
+                    document_style_text=document_style_text,
                 )
                 update_processing_metadata(args, **merge_metadata)
             else:
@@ -6151,6 +6478,7 @@ def generate_toc_from_pdf_gemma_text(
                     prompt=prompt,
                     partial_tocs=partial_tocs,
                     label=f"Gemma chunked TOC merge({model})",
+                    document_style_text=document_style_text,
                 )
                 update_processing_metadata(
                     args,
@@ -6195,6 +6523,7 @@ def generate_toc_from_pdf_gemma_text(
             "merge_strategy": getattr(args, "gemma_merge_strategy", DEFAULT_GEMMA_MERGE_STRATEGY),
             "toc": toc,
             "raw_response": final_raw_text,
+            "document_style_reference": document_style_summary,
         },
     )
 
@@ -6215,6 +6544,7 @@ def generate_toc_from_pdf_gemma_text(
             stage_label="final merged TOC",
             partial_tocs=partial_tocs,
             level_reference_text=final_level_reference_text,
+            document_style_text=document_style_text,
         )
         restore_level_reasons_from_partials(toc, partial_tocs)
         toc = sort_toc_with_restored_layout(
@@ -6233,6 +6563,7 @@ def generate_toc_from_pdf_gemma_text(
                 "level_review": final_level_review_status,
                 "toc": toc,
                 "raw_response": final_level_review_raw_text,
+                "document_style_reference": document_style_summary,
             },
         )
 
@@ -6256,6 +6587,7 @@ def generate_toc_from_pdf_gemma_text(
             "toc": toc,
             "level_reference": serialize_toc_level_reference(final_level_reference) if level_reference_enabled else {},
             "final_level_review": final_level_review_status,
+            "document_style_reference": document_style_summary,
         },
     )
 
@@ -6267,6 +6599,7 @@ def generate_toc_from_pdf_gemma_text(
         "model": model,
         "pdf": pdf_path.name,
         "extraction": extraction_metadata,
+        "document_style_reference": document_style_summary,
         "extracted_pages": len(pages),
         "extracted_chars": extracted_chars,
         "chunk_count": len(chunks),
@@ -6870,6 +7203,31 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "--gemma-level-verify-scope",
         default=DEFAULT_GEMMA_LEVEL_VERIFY_SCOPE,
         help="Where to run separate Gemma level verification/correction: none, chunk, final, or both. Default: final.",
+    )
+    parser.add_argument(
+        "--gemma-document-style-reference",
+        dest="gemma_document_style_reference",
+        action="store_true",
+        default=DEFAULT_GEMMA_DOCUMENT_STYLE_REFERENCE,
+        help="Pass a compact full-document layout/style reference to Gemma chunk extraction and verification. Enabled by default.",
+    )
+    parser.add_argument(
+        "--no-gemma-document-style-reference",
+        dest="gemma_document_style_reference",
+        action="store_false",
+        help="Disable the full-document layout/style reference in Gemma prompts.",
+    )
+    parser.add_argument(
+        "--gemma-document-style-max-clusters",
+        type=int,
+        default=DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_CLUSTERS,
+        help="Maximum document-wide layout style clusters to include in Gemma prompts.",
+    )
+    parser.add_argument(
+        "--gemma-document-style-max-examples",
+        type=int,
+        default=DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_EXAMPLES,
+        help="Maximum page-order title-like examples to include in the document-wide style reference.",
     )
     parser.add_argument(
         "--gemma-vllm-tensor-parallel-size",
