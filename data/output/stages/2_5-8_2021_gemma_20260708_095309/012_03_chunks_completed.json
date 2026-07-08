@@ -1,0 +1,3169 @@
+{
+    "timestamp": "2026-07-08 10:12:08",
+    "stage_index": 12,
+    "stage": "03_chunks_completed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/2편5-8장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/2_5-8_2021.pdf",
+    "processed_chunk_count": 3,
+    "partial_count": 3,
+    "partial_tocs": [
+        {
+            "chunk": 1,
+            "start_page": 1,
+            "end_page": 69,
+            "toc": {
+                "title": "제2편 역학과 그 응용",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "5 타당도와 신뢰도",
+                        "page": 1,
+                        "level_reason": "Main chapter title with largest font size (31.0) and distinct layout.",
+                        "_layout_page": 1,
+                        "_layout_x": 191.0,
+                        "_layout_y": 126.0,
+                        "_layout_font_size": 31.0,
+                        "_layout_size_ratio": 3.27,
+                        "_layout_text": "타당도와 신뢰도",
+                        "_source_order": 0
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "1. 연구의 타당도",
+                        "page": 1,
+                        "level_reason": "Numbered section title with larger font (18.0) than subsections.",
+                        "_layout_page": 1,
+                        "_layout_x": 77.0,
+                        "_layout_y": 362.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "1. 연구의 타당도",
+                        "_source_order": 1
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.1 연구집단",
+                        "page": 1,
+                        "level_reason": "Subsection numbered 1.1 under section 1.",
+                        "_layout_page": 1,
+                        "_layout_x": 73.0,
+                        "_layout_y": 503.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.1 연구집단",
+                        "_source_order": 2
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 단계별 연구집단의 개념",
+                        "page": 1,
+                        "level_reason": "Lower level numbering (1) under subsection 1.1.",
+                        "_layout_page": 1,
+                        "_layout_x": 65.0,
+                        "_layout_y": 545.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 단계별 연구집단의 개념",
+                        "_source_order": 3
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 연구설계와 목표에 따른 인구집단 적격집단",
+                        "page": 1,
+                        "level_reason": "Lower level numbering (2) under subsection 1.1.",
+                        "_layout_page": 1,
+                        "_layout_x": 65.0,
+                        "_layout_y": 732.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 연구설계와 목표에 따른 인구집단 적격집단",
+                        "_source_order": 4
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.2 내적타당도와 외적타당도의 정의",
+                        "page": 3,
+                        "level_reason": "Subsection numbered 1.2 under section 1.",
+                        "_layout_page": 3,
+                        "_layout_x": 73.0,
+                        "_layout_y": 259.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.2 내적타당도와 외적타당도의 정의",
+                        "_source_order": 5
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.3 내적타당도",
+                        "page": 3,
+                        "level_reason": "Subsection numbered 1.3 under section 1.",
+                        "_layout_page": 3,
+                        "_layout_x": 73.0,
+                        "_layout_y": 496.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.3 내적타당도",
+                        "_source_order": 6
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.4 외적타당도",
+                        "page": 4,
+                        "level_reason": "Subsection numbered 1.4 under section 1.",
+                        "_layout_page": 4,
+                        "_layout_x": 181.0,
+                        "_layout_y": 138.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.4 외적타당도",
+                        "_source_order": 7
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.5 내적타당도 대 외적타당도",
+                        "page": 4,
+                        "level_reason": "Subsection numbered 1.5 under section 1.",
+                        "_layout_page": 4,
+                        "_layout_x": 181.0,
+                        "_layout_y": 435.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.5 내적타당도 대 외적타당도",
+                        "_source_order": 8
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "2. 측정방법의 타당도와 신뢰도",
+                        "page": 5,
+                        "level_reason": "Numbered section title with larger font (18.0).",
+                        "_layout_page": 5,
+                        "_layout_x": 77.0,
+                        "_layout_y": 382.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "2. 측정방법의 타당도와 신뢰도",
+                        "_source_order": 9
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "2.1 정 의",
+                        "page": 5,
+                        "level_reason": "Subsection numbered 2.1 under section 2.",
+                        "_layout_page": 5,
+                        "_layout_x": 73.0,
+                        "_layout_y": 646.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2.1 정 의",
+                        "_source_order": 10
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "2.2 타당도",
+                        "page": 6,
+                        "level_reason": "Subsection numbered 2.2 under section 2.",
+                        "_layout_page": 6,
+                        "_layout_x": 181.0,
+                        "_layout_y": 92.0,
+                        "_layout_font_size": 12.2,
+                        "_layout_size_ratio": 1.29,
+                        "_layout_text": "2.2 타당도",
+                        "_source_order": 11
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 민감도",
+                        "page": 6,
+                        "level_reason": "Lower level numbering (1) under subsection 2.2.",
+                        "_layout_page": 6,
+                        "_layout_x": 60.0,
+                        "_layout_y": 200.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 민감도",
+                        "_source_order": 12
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 특이도",
+                        "page": 6,
+                        "level_reason": "Lower level numbering (2) under subsection 2.2.",
+                        "_layout_page": 6,
+                        "_layout_x": 173.0,
+                        "_layout_y": 444.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 특이도",
+                        "_source_order": 13
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 위음성률과 위양성률",
+                        "page": 6,
+                        "level_reason": "Lower level numbering (3) under subsection 2.2.",
+                        "_layout_page": 6,
+                        "_layout_x": 173.0,
+                        "_layout_y": 556.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 위음성률과 위양성률",
+                        "_source_order": 14
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "4) 양성예측도와 음성예측도",
+                        "page": 6,
+                        "level_reason": "Lower level numbering (4) under subsection 2.2.",
+                        "_layout_page": 6,
+                        "_layout_x": 173.0,
+                        "_layout_y": 745.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 양성예측도와 음성예측도",
+                        "_source_order": 15
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "5) 검사결과가 연속형 변수로 측정될 때 타당도 평가",
+                        "page": 8,
+                        "level_reason": "Lower level numbering (5) under subsection 2.2.",
+                        "_layout_page": 8,
+                        "_layout_x": 173.0,
+                        "_layout_y": 392.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "5) 검사결과가 연속형 변수로 측정될 때 타당도 평가",
+                        "_source_order": 16
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "2.3 신뢰도",
+                        "page": 10,
+                        "level_reason": "Subsection numbered 2.3 under section 2.",
+                        "_layout_page": 10,
+                        "_layout_x": 181.0,
+                        "_layout_y": 425.0,
+                        "_layout_font_size": 12.2,
+                        "_layout_size_ratio": 1.29,
+                        "_layout_text": "2.3 신뢰도",
+                        "_source_order": 17
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 신뢰도에 영향을 미치는 변이",
+                        "page": 10,
+                        "level_reason": "Lower level numbering (1) under subsection 2.3.",
+                        "_layout_page": 10,
+                        "_layout_x": 173.0,
+                        "_layout_y": 563.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 신뢰도에 영향을 미치는 변이",
+                        "_source_order": 18
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 피검자의 생물학적 변이",
+                        "page": 10,
+                        "level_reason": "Further nested numbering (1) under level 4 entry.",
+                        "_layout_page": 10,
+                        "_layout_x": 183.0,
+                        "_layout_y": 599.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(1) 피검자의 생물학적 변이",
+                        "_source_order": 19
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 검사자 내 변이(intra-observer variability)와 검사자 간 변이(inter-observer variability)",
+                        "page": 10,
+                        "level_reason": "Further nested numbering (2) under level 4 entry.",
+                        "_layout_page": 10,
+                        "_layout_x": 183.0,
+                        "_layout_y": 708.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(2) 검사자 내 변이(intra-observer variability)와 검사자 간 변이(inter-observer variability)",
+                        "_source_order": 20
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 신뢰도의 측정방법",
+                        "page": 11,
+                        "level_reason": "Lower level numbering (2) under subsection 2.3.",
+                        "_layout_page": 11,
+                        "_layout_x": 65.0,
+                        "_layout_y": 85.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 신뢰도의 측정방법",
+                        "_source_order": 21
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 일치율(agreement percent)",
+                        "page": 11,
+                        "level_reason": "Further nested numbering (1) under level 4 entry.",
+                        "_layout_page": 11,
+                        "_layout_x": 75.0,
+                        "_layout_y": 121.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(1) 일치율(agreement percent)",
+                        "_source_order": 22
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 카파통계량(kappa statistics, kappa value)",
+                        "page": 11,
+                        "level_reason": "Further nested numbering (2) under level 4 entry.",
+                        "_layout_page": 11,
+                        "_layout_x": 75.0,
+                        "_layout_y": 538.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(2) 카파통계량(kappa statistics, kappa value)",
+                        "_source_order": 23
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(3) 상관계수(correlation coefficient)",
+                        "page": 12,
+                        "level_reason": "Further nested numbering (3) under level 4 entry.",
+                        "_layout_page": 12,
+                        "_layout_x": 183.0,
+                        "_layout_y": 381.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(3) 상관계수(correlation coefficient)",
+                        "_source_order": 24
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "3. 바이어스",
+                        "page": 13,
+                        "level_reason": "Numbered section title with larger font (18.0).",
+                        "_layout_page": 13,
+                        "_layout_x": 77.0,
+                        "_layout_y": 104.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "3. 바이어스",
+                        "_source_order": 25
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.1 무작위 오류와 체계적 오류",
+                        "page": 13,
+                        "level_reason": "Subsection numbered 3.1 under section 3.",
+                        "_layout_page": 13,
+                        "_layout_x": 73.0,
+                        "_layout_y": 261.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "3.1 무작위 오류와 체계적 오류",
+                        "_source_order": 26
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.2 오류, 신뢰도, 타당도 간 관련성",
+                        "page": 13,
+                        "level_reason": "Subsection numbered 3.2 under section 3.",
+                        "_layout_page": 13,
+                        "_layout_x": 73.0,
+                        "_layout_y": 467.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "3.2 오류, 신뢰도, 타당도 간 관련성",
+                        "_source_order": 27
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.3 바이어스와 내적타당도",
+                        "page": 14,
+                        "level_reason": "Subsection numbered 3.3 under section 3.",
+                        "_layout_page": 14,
+                        "_layout_x": 181.0,
+                        "_layout_y": 123.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "3.3 바이어스와 내적타당도",
+                        "_source_order": 28
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.4 바이어스의 분류",
+                        "page": 14,
+                        "level_reason": "Subsection numbered 3.4 under section 3.",
+                        "_layout_page": 14,
+                        "_layout_x": 181.0,
+                        "_layout_y": 314.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "3.4 바이어스의 분류",
+                        "_source_order": 29
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 선택 바이어스",
+                        "page": 14,
+                        "level_reason": "Lower level numbering (1) under subsection 3.4.",
+                        "_layout_page": 14,
+                        "_layout_x": 173.0,
+                        "_layout_y": 450.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 선택 바이어스",
+                        "_source_order": 30
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 무응답 바이어스",
+                        "page": 15,
+                        "level_reason": "Further nested numbering (1) under level 4 entry.",
+                        "_layout_page": 15,
+                        "_layout_x": 75.0,
+                        "_layout_y": 576.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(1) 무응답 바이어스",
+                        "_source_order": 31
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 버크슨 바이어스",
+                        "page": 15,
+                        "level_reason": "Further nested numbering (2) under level 4 entry.",
+                        "_layout_page": 15,
+                        "_layout_x": 75.0,
+                        "_layout_y": 715.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(2) 버크슨 바이어스",
+                        "_source_order": 32
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(3) 선택적 생존 바이어스",
+                        "page": 16,
+                        "level_reason": "Further nested numbering (3) under level 4 entry.",
+                        "_layout_page": 16,
+                        "_layout_x": 183.0,
+                        "_layout_y": 161.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(3) 선택적 생존 바이어스",
+                        "_source_order": 33
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(4) 자발적 참여자 바이어스",
+                        "page": 16,
+                        "level_reason": "Further nested numbering (4) under level 4 entry.",
+                        "_layout_page": 16,
+                        "_layout_x": 183.0,
+                        "_layout_y": 361.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(4) 자발적 참여자 바이어스",
+                        "_source_order": 34
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(5) 탈락 바이어스",
+                        "page": 16,
+                        "level_reason": "Further nested numbering (5) under level 4 entry.",
+                        "_layout_page": 16,
+                        "_layout_x": 183.0,
+                        "_layout_y": 763.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(5) 탈락 바이어스",
+                        "_source_order": 35
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(6) 기간차이 바이어스",
+                        "page": 17,
+                        "level_reason": "Further nested numbering (6) under level 4 entry.",
+                        "_layout_page": 17,
+                        "_layout_x": 75.0,
+                        "_layout_y": 267.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(6) 기간차이 바이어스",
+                        "_source_order": 36
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 정보 바이어스",
+                        "page": 17,
+                        "level_reason": "Lower level numbering (2) under subsection 3.4.",
+                        "_layout_page": 17,
+                        "_layout_x": 65.0,
+                        "_layout_y": 437.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 정보 바이어스",
+                        "_source_order": 37
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 면담자 바이어스",
+                        "page": 17,
+                        "level_reason": "Further nested numbering (1) under level 4 entry.",
+                        "_layout_page": 17,
+                        "_layout_x": 75.0,
+                        "_layout_y": 625.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(1) 면담자 바이어스",
+                        "_source_order": 38
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 측정 바이어스",
+                        "page": 17,
+                        "level_reason": "Further nested numbering (2) under level 4 entry.",
+                        "_layout_page": 17,
+                        "_layout_x": 75.0,
+                        "_layout_y": 765.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(2) 측정 바이어스",
+                        "_source_order": 39
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(3) 기억 소실 바이어스와 회상 바이어스",
+                        "page": 18,
+                        "level_reason": "Further nested numbering (3) under level 4 entry.",
+                        "_layout_page": 18,
+                        "_layout_x": 183.0,
+                        "_layout_y": 161.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(3) 기억 소실 바이어스와 회상 바이어스",
+                        "_source_order": 40
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(4) 호손 효과",
+                        "page": 18,
+                        "level_reason": "Further nested numbering (4) under level 4 entry.",
+                        "_layout_page": 18,
+                        "_layout_x": 183.0,
+                        "_layout_y": 331.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(4) 호손 효과",
+                        "_source_order": 41
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(5) 확인 바이어스",
+                        "page": 18,
+                        "level_reason": "Further nested numbering (5) under level 4 entry.",
+                        "_layout_page": 18,
+                        "_layout_x": 183.0,
+                        "_layout_y": 440.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(5) 확인 바이어스",
+                        "_source_order": 42
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(6) 시간 바이어스",
+                        "page": 18,
+                        "level_reason": "Further nested numbering (6) under level 4 entry.",
+                        "_layout_page": 18,
+                        "_layout_x": 183.0,
+                        "_layout_y": 655.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(6) 시간 바이어스",
+                        "_source_order": 43
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(7) 조기발견 바이어스",
+                        "page": 18,
+                        "level_reason": "Further nested numbering (7) under level 4 entry.",
+                        "_layout_page": 18,
+                        "_layout_y": 764.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(7) 조기발견 바이어스",
+                        "_source_order": 44
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(8) 출판 바이어스",
+                        "page": 19,
+                        "level_reason": "Further nested numbering (8) under level 4 entry.",
+                        "_layout_page": 19,
+                        "_layout_x": 75.0,
+                        "_layout_y": 146.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(8) 출판 바이어스",
+                        "_source_order": 45
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(9) 검출 바이어스 혹은 결과확인 바이어스",
+                        "page": 19,
+                        "level_reason": "Further nested numbering (9) under level 4 entry.",
+                        "_layout_page": 19,
+                        "_layout_x": 75.0,
+                        "_layout_y": 361.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(9) 검출 바이어스 혹은 결과확인 바이어스",
+                        "_source_order": 46
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(10) 실행 바이어스",
+                        "page": 19,
+                        "level_reason": "Further nested numbering (10) under level 4 entry.",
+                        "_layout_page": 19,
+                        "_layout_x": 75.0,
+                        "_layout_y": 531.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(10) 실행 바이어스",
+                        "_source_order": 47
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 오분류 방향에 따른 결과와의 연관성 평가",
+                        "page": 19,
+                        "level_reason": "Lower level numbering (3) under subsection 3.4.",
+                        "_layout_page": 19,
+                        "_layout_x": 65.0,
+                        "_layout_y": 640.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 오분류 방향에 따른 결과와의 연관성 평가",
+                        "_source_order": 48
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 차별적 오분류",
+                        "page": 19,
+                        "level_reason": "Further nested numbering (1) under level 4 entry.",
+                        "_layout_page": 19,
+                        "_layout_x": 75.0,
+                        "_layout_y": 767.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(1) 차별적 오분류",
+                        "_source_order": 49
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 비차별적 오분류",
+                        "page": 21,
+                        "level_reason": "Further nested numbering (2) under level 4 entry.",
+                        "_layout_page": 21,
+                        "_layout_x": 75.0,
+                        "_layout_y": 451.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(2) 비차별적 오분류",
+                        "_source_order": 50
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 교란 바이어스",
+                        "page": 22,
+                        "level_reason": "Lower level numbering (3) under subsection 3.4.",
+                        "_layout_page": 22,
+                        "_layout_x": 173.0,
+                        "_layout_y": 330.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 교란 바이어스",
+                        "_source_order": 51
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.5 바이어스의 제어",
+                        "page": 23,
+                        "level_reason": "Subsection numbered 3.5 under section 3.",
+                        "_layout_page": 23,
+                        "_layout_x": 73.0,
+                        "_layout_y": 568.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "3.5 바이어스의 제어",
+                        "_source_order": 52
+                    },
+                    {
+                        "level": 1,
+                        "chapter": "6 역학연구방법론",
+                        "page": 25,
+                        "level_reason": "Main chapter title with largest font size (31.0).",
+                        "_layout_page": 25,
+                        "_layout_x": 198.0,
+                        "_layout_y": 126.0,
+                        "_layout_font_size": 31.0,
+                        "_layout_size_ratio": 3.27,
+                        "_layout_text": "역학연구방법론",
+                        "_source_order": 53
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "1. 역학연구 방법의 분류",
+                        "page": 25,
+                        "level_reason": "Numbered section title with larger font (18.0).",
+                        "_layout_page": 25,
+                        "_layout_x": 77.0,
+                        "_layout_y": 436.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "1. 역학연구 방법의 분류",
+                        "_source_order": 54
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.1 관찰연구",
+                        "page": 25,
+                        "level_reason": "Subsection numbered 1.1 under section 1.",
+                        "_layout_page": 25,
+                        "_layout_x": 73.0,
+                        "_layout_y": 729.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.1 관찰연구",
+                        "_source_order": 55
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.2 실험연구",
+                        "page": 26,
+                        "level_reason": "Subsection numbered 1.2 under section 1.",
+                        "_layout_page": 26,
+                        "_layout_x": 181.0,
+                        "_layout_y": 320.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.2 실험연구",
+                        "_source_order": 56
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.3 역학연구 설계에 따른 인과성에 대한 근거 수준",
+                        "page": 26,
+                        "level_reason": "Subsection numbered 1.3 under section 1."
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "2. 기술역학의 세 주요 변수",
+                        "page": 27,
+                        "level_reason": "Numbered section title with larger font (18.0)."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "2.1 인적 변수",
+                        "page": 28,
+                        "level_reason": "Subsection numbered 2.1 under section 2."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 연령",
+                        "page": 28,
+                        "level_reason": "Lower level numbering (1) under subsection 2.1."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 성별",
+                        "page": 29,
+                        "level_reason": "Lower level numbering (2) under subsection 2.1."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 결혼 상태",
+                        "page": 29,
+                        "level_reason": "Lower level numbering (3) under subsection 2.1."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "4) 직업과 사회경제적 수준(socioeconomic status, SES)",
+                        "page": 30,
+                        "level_reason": "Lower level numbering (4) under subsection 2.1."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "2.2 시간적 변수",
+                        "page": 30,
+                        "level_reason": "Subsection numbered 2.2 under section 2."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 장기 추세 변동(secular trends over a long period of time)",
+                        "page": 30,
+                        "level_reason": "Lower level numbering (1) under subsection 2.2."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 주기변동(cyclic variation over several years)",
+                        "page": 31,
+                        "level_reason": "Lower level numbering (2) under subsection 2.2."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 계절 변동(seasonal variation)",
+                        "page": 31,
+                        "level_reason": "Lower level numbering (3) under subsection 2.2."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "4) 유행 곡선(epidemic curve)",
+                        "page": 31,
+                        "level_reason": "Lower level numbering (4) under subsection 2.2."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "2.3 지역적 변수",
+                        "page": 31,
+                        "level_reason": "Subsection numbered 2.3 under section 2."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 지역응집성",
+                        "page": 32,
+                        "level_reason": "Lower level numbering (1) under subsection 2.3."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 지역 간 비교 단위",
+                        "page": 32,
+                        "level_reason": "Lower level numbering (2) under subsection 2.3."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 지역 분포 비교",
+                        "page": 32,
+                        "level_reason": "Further nested numbering (1) under level 4 entry."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 지역 간 비교",
+                        "page": 33,
+                        "level_reason": "Further nested numbering (2) under level 4 entry."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(3) 국가 간 비교",
+                        "page": 33,
+                        "level_reason": "Further nested numbering (3) under level 4 entry."
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "3. 생태학적연구와 사례/사례군연구",
+                        "page": 35,
+                        "level_reason": "Numbered section title with larger font (18.0)."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.1 생태학적연구",
+                        "page": 35,
+                        "level_reason": "Subsection numbered 3.1 under section 3."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.2 사례연구와 사례군연구",
+                        "page": 37,
+                        "level_reason": "Subsection numbered 3.2 under section 3."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 사례연구",
+                        "page": 37,
+                        "level_reason": "Lower level numbering (1) under subsection 3.2."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 사례군연구",
+                        "page": 37,
+                        "level_reason": "Lower level numbering (2) under subsection 3.2."
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "4. 단면연구",
+                        "page": 40,
+                        "level_reason": "Numbered section title with larger font (18.0)."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "4.1 단면연구의 기본 개념",
+                        "page": 40,
+                        "level_reason": "Subsection numbered 4.1 under section 4."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "4.2 단면연구의 분석",
+                        "page": 40,
+                        "level_reason": "Subsection numbered 4.2 under section 4."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 질병 유병률과 요인 노출률 측정",
+                        "page": 41,
+                        "level_reason": "Lower level numbering (1) under subsection 4.2."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 유병률비와 유병교차비를 이용한 요인과 질병의 연관성 분석",
+                        "page": 41,
+                        "level_reason": "Lower level numbering (2) under subsection 4.2."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "4.3 단면연구의 장단점과 바이어스",
+                        "page": 42,
+                        "level_reason": "Subsection numbered 4.3 under section 4."
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "5. 환자-대조군연구",
+                        "page": 44,
+                        "level_reason": "Numbered section title with larger font (18.0)."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "5.1 환자-대조군연구의 정의",
+                        "page": 44,
+                        "level_reason": "Subsection numbered 5.1 under section 5."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "5.2 환자-대조군연구의 수행",
+                        "page": 44,
+                        "level_reason": "Subsection numbered 5.2 under section 5."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 대상자의 선별",
+                        "page": 44,
+                        "level_reason": "Lower level numbering (1) under subsection 5.2."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 환자-대조군연구의 종류",
+                        "page": 45,
+                        "level_reason": "Lower level numbering (2) under subsection 5.2."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 짝짓기(matching)",
+                        "page": 46,
+                        "level_reason": "Lower level numbering (3) under subsection 5.2."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "5.3 환자-대조군연구의 분석",
+                        "page": 46,
+                        "level_reason": "Subsection numbered 5.3 under section 5."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "5.4 환자-대조군연구의 장단점과 바이어스",
+                        "page": 47,
+                        "level_reason": "Subsection numbered 5.4 under section 5."
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "6. 코호트연구",
+                        "page": 49,
+                        "level_reason": "Numbered section title with larger font (18.0)."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "6.1 코호트연구의 정의",
+                        "page": 49,
+                        "level_reason": "Subsection numbered 6.1 under section 6."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "6.2 코호트연구의 설계",
+                        "page": 49,
+                        "level_reason": "Subsection numbered 6.2 under section 6."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 코호트 구축",
+                        "page": 49,
+                        "level_reason": "Lower level numbering (1) under subsection 6.2."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 전향적 및 후향적 코호트 설계",
+                        "page": 50,
+                        "level_reason": "Lower level numbering (2) under subsection 6.2."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "6.3 코호트연구에서의 분석",
+                        "page": 51,
+                        "level_reason": "Subsection numbered 6.3 under section 6."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 코호트연구에서의 질병발생률",
+                        "page": 51,
+                        "level_reason": "Lower level numbering (1) under subsection 6.3."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 코호트연구에서의 질병발생률 비교",
+                        "page": 51,
+                        "level_reason": "Lower level numbering (2) under subsection 6.3."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 상대위험도",
+                        "page": 51,
+                        "level_reason": "Further nested numbering (1) under level 4 entry."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 기여위험도",
+                        "page": 52,
+                        "level_reason": "Further nested numbering (2) under level 4 entry."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "6.4 코호트연구의 장단점과 바이어스",
+                        "page": 54,
+                        "level_reason": "Subsection numbered 6.4 under section 6."
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "7. 혼합설계연구",
+                        "page": 56,
+                        "level_reason": "Numbered section title with larger font (18.0)."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "7.1 기술역학의 세 주요변수를 이용한 혼합설계",
+                        "page": 56,
+                        "level_reason": "Subsection numbered 7.1 under section 7."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 이민자연구",
+                        "page": 56,
+                        "level_reason": "Lower level numbering (1) under subsection 7.1."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 쌍둥이연구",
+                        "page": 57,
+                        "level_reason": "Lower level numbering (2) under subsection 7.1."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 유전자발굴 연구에서의 쌍둥이연구의 활용",
+                        "page": 58,
+                        "level_reason": "Further nested numbering (1) under level 4 entry."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 일란성 쌍둥이를 통한 쌍둥이-대조군연구",
+                        "page": 58,
+                        "level_reason": "Further nested numbering (2) under level 4 entry."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 출생코호트연구",
+                        "page": 58,
+                        "level_reason": "Lower level numbering (3) under subsection 7.1."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 출생코호트의 바이어스",
+                        "page": 60,
+                        "level_reason": "Further nested numbering (1) under level 4 entry."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "4) 연령-기간-코호트 분석",
+                        "page": 60,
+                        "level_reason": "Lower level numbering (4) under subsection 7.1."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "7.2 코호트내 환자-대조군연구와 환자-코호트연구",
+                        "page": 62,
+                        "level_reason": "Subsection numbered 7.2 under section 7."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 코호트내 환자-대조군연구",
+                        "page": 62,
+                        "level_reason": "Lower level numbering (1) under subsection 7.2."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 환자-코호트연구",
+                        "page": 64,
+                        "level_reason": "Lower level numbering (2) under subsection 7.2."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 코호트 내 환자-대조군연구와 환자-코호트연구의 비교",
+                        "page": 65,
+                        "level_reason": "Lower level numbering (3) under subsection 7.2."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "7.3 패널연구와 경향연구",
+                        "page": 65,
+                        "level_reason": "Subsection numbered 7.3 under section 7."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "7.4 환자-교차설계연구와 환자-시간대조군연구",
+                        "page": 66,
+                        "level_reason": "Subsection numbered 7.4 under section 7."
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "8. 임상시험",
+                        "page": 69,
+                        "level_reason": "Numbered section title with larger font (18.0)."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "8.1 실험역학의 정의, 방법과 특징",
+                        "page": 69,
+                        "level_reason": "Subsection numbered 8.1 under section 8."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "8.2 임상시험의 단계와 특징",
+                        "page": 69,
+                        "level_reason": "Subsection numbered 8.2 under section 8."
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 2,
+            "start_page": 70,
+            "end_page": 135,
+            "toc": {
+                "title": "제6장 역학연구방법론 및 제7장 분야별 역학연구",
+                "chapters": [
+                    {
+                        "level": 3,
+                        "chapter": "8.3 임상시험의 설계와 방법",
+                        "page": 70,
+                        "level_reason": "Numbered section 8.3, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 70,
+                        "_layout_x": 181.0,
+                        "_layout_y": 330.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "8.3 임상시험의 설계와 방법",
+                        "_source_order": 0
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 임상시험 설계",
+                        "page": 70,
+                        "level_reason": "Numbered subsection 1) under 8.3, font size 12.0.",
+                        "_layout_page": 70,
+                        "_layout_x": 173.0,
+                        "_layout_y": 371.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 임상시험 설계",
+                        "_source_order": 1
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 임상시험에서의 비교군 설정",
+                        "page": 71,
+                        "level_reason": "Numbered subsection 2) under 8.3, font size 12.0.",
+                        "_layout_page": 71,
+                        "_layout_x": 65.0,
+                        "_layout_y": 313.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 임상시험에서의 비교군 설정",
+                        "_source_order": 2
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 비교군 설정이 필요한 경우",
+                        "page": 71,
+                        "level_reason": "Numbered subsection (1) under 2), font size 10.0.",
+                        "_layout_page": 71,
+                        "_layout_x": 75.0,
+                        "_layout_y": 347.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(1) 비교군 설정이 필요한 경우",
+                        "_source_order": 3
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 비교군의 종류",
+                        "page": 71,
+                        "level_reason": "Numbered subsection (2) under 2), font size 10.0.",
+                        "_layout_page": 71,
+                        "_layout_x": 75.0,
+                        "_layout_y": 547.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(2) 비교군의 종류",
+                        "_source_order": 4
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 시험대상자 수 산출",
+                        "page": 72,
+                        "level_reason": "Numbered subsection 3) under 8.3, font size 12.0.",
+                        "_layout_page": 72,
+                        "_layout_x": 173.0,
+                        "_layout_y": 465.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 시험대상자 수 산출",
+                        "_source_order": 5
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "4) 무작위배정법",
+                        "page": 72,
+                        "level_reason": "Numbered subsection 4) under 8.3, font size 12.0.",
+                        "_layout_page": 72,
+                        "_layout_x": 173.0,
+                        "_layout_y": 713.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 무작위배정법",
+                        "_source_order": 6
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "5) 눈가림법",
+                        "page": 73,
+                        "level_reason": "Numbered subsection 5) under 8.3, font size 12.0.",
+                        "_layout_page": 73,
+                        "_layout_x": 65.0,
+                        "_layout_y": 630.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "5) 눈가림법",
+                        "_source_order": 7
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "6) 기초자료 수집",
+                        "page": 74,
+                        "level_reason": "Numbered subsection 6) under 8.3, font size 12.0.",
+                        "_layout_page": 74,
+                        "_layout_x": 173.0,
+                        "_layout_y": 252.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "6) 기초자료 수집",
+                        "_source_order": 8
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "7) 결과 관찰",
+                        "page": 74,
+                        "level_reason": "Numbered subsection 7) under 8.3, font size 12.0.",
+                        "_layout_page": 74,
+                        "_layout_x": 173.0,
+                        "_layout_y": 442.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "7) 결과 관찰",
+                        "_source_order": 9
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "8) 통계분석",
+                        "page": 74,
+                        "level_reason": "Numbered subsection 8) under 8.3, font size 12.0.",
+                        "_layout_page": 74,
+                        "_layout_x": 173.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "8) 통계분석",
+                        "_source_order": 10
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "8.4 임상시험 계획에서 고려할 점",
+                        "page": 75,
+                        "level_reason": "Numbered section 8.4, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 75,
+                        "_layout_x": 73.0,
+                        "_layout_y": 92.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "8.4 임상시험 계획에서 고려할 점",
+                        "_source_order": 11
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "9. 예방시험",
+                        "page": 76,
+                        "level_reason": "Numbered section 9, font size 18.0, consistent with level 2 hierarchy.",
+                        "_layout_page": 76,
+                        "_layout_x": 185.0,
+                        "_layout_y": 165.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "9. 예방시험",
+                        "_source_order": 12
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "9.1 예방시험의 개념과 특성",
+                        "page": 76,
+                        "level_reason": "Numbered section 9.1, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 76,
+                        "_layout_x": 181.0,
+                        "_layout_y": 339.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "9.1 예방시험의 개념과 특성",
+                        "_source_order": 13
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "9.2 예방시험 설계와 방법",
+                        "page": 77,
+                        "level_reason": "Numbered section 9.2, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 77,
+                        "_layout_x": 73.0,
+                        "_layout_y": 183.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "9.2 예방시험 설계와 방법",
+                        "_source_order": 14
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "9.3 예방시험의 장단점과 바이어스",
+                        "page": 79,
+                        "level_reason": "Numbered section 9.3, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 79,
+                        "_layout_x": 73.0,
+                        "_layout_y": 516.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "9.3 예방시험의 장단점과 바이어스",
+                        "_source_order": 15
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "10. 지역사회시험",
+                        "page": 80,
+                        "level_reason": "Numbered section 10, font size 18.0, consistent with level 2 hierarchy.",
+                        "_layout_page": 80,
+                        "_layout_x": 185.0,
+                        "_layout_y": 487.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "10. 지역사회시험",
+                        "_source_order": 16
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "10.1 지역사회시험의 개념과 특징",
+                        "page": 80,
+                        "level_reason": "Numbered section 10.1, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 80,
+                        "_layout_x": 180.0,
+                        "_layout_y": 675.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "10.1 지역사회시험의 개념과 특징",
+                        "_source_order": 17
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "10.2 지역사회시험의 연구수행",
+                        "page": 81,
+                        "level_reason": "Numbered section 10.2, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 81,
+                        "_layout_x": 73.0,
+                        "_layout_y": 330.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "10.2 지역사회시험의 연구수행",
+                        "_source_order": 18
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "10.3 지역사회시험의 활용과 기여",
+                        "page": 82,
+                        "level_reason": "Numbered section 10.3, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 82,
+                        "_layout_x": 180.0,
+                        "_layout_y": 92.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "10.3 지역사회시험의 활용과 기여",
+                        "_source_order": 19
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "11. 체계적 문헌고찰과 메타분석",
+                        "page": 83,
+                        "level_reason": "Numbered section 11, font size 18.0, consistent with level 2 hierarchy.",
+                        "_layout_page": 83,
+                        "_layout_x": 77.0,
+                        "_layout_y": 469.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "11. 체계적 문헌고찰과 메타분석",
+                        "_source_order": 20
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "11.1 체계적 문헌고찰과 메타분석의 정의와 특징",
+                        "page": 83,
+                        "level_reason": "Numbered section 11.1, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 83,
+                        "_layout_x": 73.0,
+                        "_layout_y": 673.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "11.1 체계적 문헌고찰과 메타분석의 정의와 특징",
+                        "_source_order": 21
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "11.2 연구문제의 설정과 문헌선정",
+                        "page": 84,
+                        "level_reason": "Numbered section 11.2, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 84,
+                        "_layout_x": 180.0,
+                        "_layout_y": 441.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "11.2 연구문제의 설정과 문헌선정",
+                        "_source_order": 22
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "11.3 메타분석의 수행",
+                        "page": 86,
+                        "level_reason": "Numbered section 11.3, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 86,
+                        "_layout_x": 180.0,
+                        "_layout_y": 123.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "11.3 메타분석의 수행",
+                        "_source_order": 23
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 자료추출과 개별연구의 바이어스 위험평가",
+                        "page": 86,
+                        "level_reason": "Numbered subsection 1) under 11.3, font size 12.0.",
+                        "_layout_page": 86,
+                        "_layout_x": 173.0,
+                        "_layout_y": 164.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 자료추출과 개별연구의 바이어스 위험평가",
+                        "_source_order": 24
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 통합분석 수행과 이질성 평가",
+                        "page": 87,
+                        "level_reason": "Numbered subsection 2) under 11.3, font size 12.0.",
+                        "_layout_page": 87,
+                        "_layout_x": 65.0,
+                        "_layout_y": 783.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.41,
+                        "_layout_text": "2) 통합분석 수행과 이질성 평가",
+                        "_source_order": 25
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "11.4 바이어스 탐색",
+                        "page": 89,
+                        "level_reason": "Numbered section 11.4, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 89,
+                        "_layout_x": 73.0,
+                        "_layout_y": 728.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "11.4 바이어스 탐색",
+                        "_source_order": 26
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "12. 역학연구에서의 윤리적 문제",
+                        "page": 91,
+                        "level_reason": "Numbered section 12, font size 18.0, consistent with level 2 hierarchy.",
+                        "_layout_page": 91,
+                        "_layout_x": 77.0,
+                        "_layout_y": 562.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "12. 역학연구에서의 윤리적 문제",
+                        "_source_order": 27
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "12.1 인간 대상 연구에 대한 윤리 규정 및 규제",
+                        "page": 91,
+                        "level_reason": "Numbered section 12.1, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 91,
+                        "_layout_x": 73.0,
+                        "_layout_y": 744.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "12.1 인간 대상 연구에 대한 윤리 규정 및 규제",
+                        "_source_order": 28
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "12.2 연구윤리 관련 기관 및 위원회",
+                        "page": 92,
+                        "level_reason": "Numbered section 12.2, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 92,
+                        "_layout_x": 180.0,
+                        "_layout_y": 487.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "12.2 연구윤리 관련 기관 및 위원회",
+                        "_source_order": 29
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "12.3 실험역학연구에서 윤리적 고려사항",
+                        "page": 93,
+                        "level_reason": "Numbered section 12.3, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 93,
+                        "_layout_x": 73.0,
+                        "_layout_y": 502.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "12.3 실험역학연구에서 윤리적 고려사항",
+                        "_source_order": 30
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 역학연구의 윤리적 정당성과 과학적 타당성",
+                        "page": 93,
+                        "level_reason": "Numbered subsection 1) under 12.3, font size 12.0.",
+                        "_layout_page": 93,
+                        "_layout_x": 65.0,
+                        "_layout_y": 543.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 역학연구의 윤리적 정당성과 과학적 타당성",
+                        "_source_order": 31
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 사전 동의(informed consent)",
+                        "page": 93,
+                        "level_reason": "Numbered subsection 2) under 12.3, font size 12.0.",
+                        "_layout_page": 93,
+                        "_layout_x": 65.0,
+                        "_layout_y": 671.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 사전 동의(informed consent)",
+                        "_source_order": 32
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 연구 참여의 이익과 위험",
+                        "page": 94,
+                        "level_reason": "Numbered subsection 3) under 12.3, font size 12.0.",
+                        "_layout_page": 94,
+                        "_layout_x": 173.0,
+                        "_layout_y": 433.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 연구 참여의 이익과 위험",
+                        "_source_order": 33
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "4) 임상시험에서 대조군 선택",
+                        "page": 94,
+                        "level_reason": "Numbered subsection 4) under 12.3, font size 12.0.",
+                        "_layout_page": 94,
+                        "_layout_x": 173.0,
+                        "_layout_y": 545.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 임상시험에서 대조군 선택",
+                        "_source_order": 34
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "5) 연구대상자 모집과 취약한 연구대상자",
+                        "page": 94,
+                        "level_reason": "Numbered subsection 5) under 12.3, font size 12.0.",
+                        "_layout_page": 94,
+                        "_layout_x": 173.0,
+                        "_layout_y": 688.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "5) 연구대상자 모집과 취약한 연구대상자",
+                        "_source_order": 35
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "6) 이해상충의 공개와 관리",
+                        "page": 95,
+                        "level_reason": "Numbered subsection 6) under 12.3, font size 12.0.",
+                        "_layout_page": 95,
+                        "_layout_x": 65.0,
+                        "_layout_y": 297.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "6) 이해상충의 공개와 관리",
+                        "_source_order": 36
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "7) 지역사회시험",
+                        "page": 95,
+                        "level_reason": "Numbered subsection 7) under 12.3, font size 12.0.",
+                        "_layout_page": 95,
+                        "_layout_x": 65.0,
+                        "_layout_y": 531.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "7) 지역사회시험",
+                        "_source_order": 37
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "12.4 관찰역학연구와 역학조사에서의 윤리적 고려사항",
+                        "page": 96,
+                        "level_reason": "Numbered section 12.4, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 96,
+                        "_layout_x": 180.0,
+                        "_layout_y": 92.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "12.4 관찰역학연구와 역학조사에서의 윤리적 고려사항",
+                        "_source_order": 38
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 역학연구와 역학조사의 구분",
+                        "page": 96,
+                        "level_reason": "Numbered subsection 1) under 12.4, font size 12.0.",
+                        "_layout_page": 96,
+                        "_layout_x": 173.0,
+                        "_layout_y": 134.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 역학연구와 역학조사의 구분",
+                        "_source_order": 39
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 관찰역학연구와 개인정보보호",
+                        "page": 96,
+                        "level_reason": "Numbered subsection 2) under 12.4, font size 12.0.",
+                        "_layout_page": 96,
+                        "_layout_x": 173.0,
+                        "_layout_y": 549.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 관찰역학연구와 개인정보보호",
+                        "_source_order": 40
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "12.5 유전자연구와 인체유래물 연구의 윤리적 고려사항",
+                        "page": 97,
+                        "level_reason": "Numbered section 12.5, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 97,
+                        "_layout_x": 73.0,
+                        "_layout_y": 474.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "12.5 유전자연구와 인체유래물 연구의 윤리적 고려사항",
+                        "_source_order": 41
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 인체유래물연구와 생명윤리법",
+                        "page": 97,
+                        "level_reason": "Numbered subsection 1) under 12.5, font size 12.0.",
+                        "_layout_page": 97,
+                        "_layout_x": 65.0,
+                        "_layout_y": 515.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 인체유래물연구와 생명윤리법",
+                        "_source_order": 42
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 유전자연구의 윤리적 고려사항",
+                        "page": 98,
+                        "level_reason": "Numbered subsection 2) under 12.5, font size 12.0.",
+                        "_layout_page": 98,
+                        "_layout_x": 173.0,
+                        "_layout_y": 254.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 유전자연구의 윤리적 고려사항",
+                        "_source_order": 43
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 유전체연구 데이터의 공유의 윤리적 문제",
+                        "page": 98,
+                        "level_reason": "Numbered subsection 3) under 12.5, font size 12.0.",
+                        "_layout_page": 98,
+                        "_layout_x": 173.0,
+                        "_layout_y": 457.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 유전체연구 데이터의 공유의 윤리적 문제",
+                        "_source_order": 44
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "12.6 특수노출집단연구에서 윤리적 고려사항",
+                        "page": 98,
+                        "level_reason": "Numbered section 12.6, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 98,
+                        "_layout_x": 180.0,
+                        "_layout_y": 653.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "12.6 특수노출집단연구에서 윤리적 고려사항",
+                        "_source_order": 45
+                    },
+                    {
+                        "level": 1,
+                        "chapter": "7 분야별 역학연구",
+                        "page": 102,
+                        "level_reason": "Top-level chapter title, font size 31.0, consistent with level 1 hierarchy.",
+                        "_layout_page": 102,
+                        "_layout_x": 191.0,
+                        "_layout_y": 126.0,
+                        "_layout_font_size": 31.0,
+                        "_layout_size_ratio": 3.27,
+                        "_layout_text": "분야별 역학연구",
+                        "_source_order": 46
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "1. 약물역학",
+                        "page": 102,
+                        "level_reason": "Numbered section 1, font size 18.0, consistent with level 2 hierarchy.",
+                        "_layout_page": 102,
+                        "_layout_x": 185.0,
+                        "_layout_y": 407.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "1. 약물역학",
+                        "_source_order": 47
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.1 약물역학의 개념과 발전배경",
+                        "page": 102,
+                        "level_reason": "Numbered section 1.1, font size 12.5, consistent with level 3 hierarchy.",
+                        "_layout_page": 102,
+                        "_layout_x": 181.0,
+                        "_layout_y": 629.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.1 약물역학의 개념과 발전배경",
+                        "_source_order": 48
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 약물역학(pharmacoepidemiology)의 정의",
+                        "page": 102,
+                        "level_reason": "Numbered subsection 1) under 1.1, font size 12.0.",
+                        "_layout_page": 102,
+                        "_layout_x": 60.0,
+                        "_layout_y": 670.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 약물역학(pharmacoepidemiology)의 정의",
+                        "_source_order": 49
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 발전배경",
+                        "page": 102,
+                        "level_reason": "Numbered subsection 2) under 1.1, font size 12.0.",
+                        "_layout_page": 102,
+                        "_layout_x": 173.0,
+                        "_layout_y": 752.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 발전배경",
+                        "_source_order": 50
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 약물역학연구의 필요성과 의의",
+                        "page": 103,
+                        "level_reason": "Numbered subsection 3) under 1.1, font size 12.0.",
+                        "_layout_page": 103,
+                        "_layout_x": 65.0,
+                        "_layout_y": 358.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 약물역학연구의 필요성과 의의",
+                        "_source_order": 51
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.2 약물역학 관련 제도 및 기관",
+                        "page": 104,
+                        "level_reason": "Numbered section 1.2, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 자발적 부작용신고제도(spontaneous adverse event reporting system)",
+                        "page": 104,
+                        "level_reason": "Numbered subsection 1) under 1.2, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 약물역학 관련 기관",
+                        "page": 104,
+                        "level_reason": "Numbered subsection 2) under 1.2, font size 12.0."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.3 약물역학연구의 설계와 방법",
+                        "page": 104,
+                        "level_reason": "Numbered section 1.3, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 데이터마이닝",
+                        "page": 104,
+                        "level_reason": "Numbered subsection 1) under 1.3, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 사례연구",
+                        "page": 105,
+                        "level_reason": "Numbered subsection 2) under 1.3, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 사례군연구",
+                        "page": 105,
+                        "level_reason": "Numbered subsection 3) under 1.3, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "4) 생태학적연구",
+                        "page": 105,
+                        "level_reason": "Numbered subsection 4) under 1.3, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "5) 환자-대조군연구",
+                        "page": 105,
+                        "level_reason": "Numbered subsection 5) under 1.3, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "6) 코호트연구",
+                        "page": 106,
+                        "level_reason": "Numbered subsection 6) under 1.3, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "7) 환자-교차연구(case-crossover design)",
+                        "page": 106,
+                        "level_reason": "Numbered subsection 7) under 1.3, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "8) 환자-자기대조군연구(self-controlled case series study)",
+                        "page": 106,
+                        "level_reason": "Numbered subsection 8) under 1.3, font size 12.0."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.4 약물역학연구에서 발생할 수 있는 바이어스",
+                        "page": 107,
+                        "level_reason": "Numbered section 1.4, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 적응증 교란 바이어스",
+                        "page": 107,
+                        "level_reason": "Numbered subsection 1) under 1.4, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 전조증상 바이어스",
+                        "page": 107,
+                        "level_reason": "Numbered subsection 2) under 1.4, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 불멸시간 바이어스",
+                        "page": 108,
+                        "level_reason": "Numbered subsection 3) under 1.4, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "4) 측정불가시간 바이어스",
+                        "page": 108,
+                        "level_reason": "Numbered subsection 4) under 1.4, font size 12.0."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.5 약물역학연구 공개자료원",
+                        "page": 108,
+                        "level_reason": "Numbered section 1.5, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 건강보험공단 및 건강보험심사평가원 자료",
+                        "page": 108,
+                        "level_reason": "Numbered subsection 1) under 1.5, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 의약품 부작용 보고자료",
+                        "page": 109,
+                        "level_reason": "Numbered subsection 2) under 1.5, font size 12.0."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.6 약물역학의 활용과 기여",
+                        "page": 109,
+                        "level_reason": "Numbered section 1.6, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 규제적 의사결정을 위한 약물역학의 활용",
+                        "page": 109,
+                        "level_reason": "Numbered subsection 1) under 1.6, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 약물역학연구의 임상적 적용 사례",
+                        "page": 109,
+                        "level_reason": "Numbered subsection 2) under 1.6, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 약물역학연구의 지역사회 및 국가 등 공익적 적용 사례",
+                        "page": 109,
+                        "level_reason": "Numbered subsection 3) under 1.6, font size 12.0."
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "2. 영양역학",
+                        "page": 110,
+                        "level_reason": "Numbered section 2, font size 18.0, consistent with level 2 hierarchy."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "2.1 영양역학의 개념과 발전",
+                        "page": 110,
+                        "level_reason": "Numbered section 2.1, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 영양역학의 개념",
+                        "page": 110,
+                        "level_reason": "Numbered subsection 1) under 2.1, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 영양역학의 발전 배경",
+                        "page": 111,
+                        "level_reason": "Numbered subsection 2) under 2.1, font size 12.0."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "2.2 영양역학연구의 영양상태 평가방법",
+                        "page": 111,
+                        "level_reason": "Numbered section 2.2, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 식이섭취(dietary intake) 조사방법",
+                        "page": 111,
+                        "level_reason": "Numbered subsection 1) under 2.2, font size 12.0."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 개방형 영양조사",
+                        "page": 111,
+                        "level_reason": "Numbered subsection (1) under 1), font size 10.0."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 식품섭취빈도조사",
+                        "page": 112,
+                        "level_reason": "Numbered subsection (2) under 1), font size 10.0."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "2.3 영양역학연구의 영양요인 자료 분석",
+                        "page": 112,
+                        "level_reason": "Numbered section 2.3, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 식품 및 영양소 섭취량 분석을 위한 자료",
+                        "page": 112,
+                        "level_reason": "Numbered subsection 1) under 2.3, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 식품섭취량 조사 자료 분석",
+                        "page": 113,
+                        "level_reason": "Numbered subsection 2) under 2.3, font size 12.0."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "2.4 영양역학연구의 공개자료원",
+                        "page": 114,
+                        "level_reason": "Numbered section 2.4, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 국민건강영양조사",
+                        "page": 114,
+                        "level_reason": "Numbered subsection 1) under 2.4, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 한국인유전체역학조사사업",
+                        "page": 114,
+                        "level_reason": "Numbered subsection 2) under 2.4, font size 12.0."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "2.5 영양역학연구에서의 오류와 바이어스",
+                        "page": 114,
+                        "level_reason": "Numbered section 2.5, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 오류",
+                        "page": 115,
+                        "level_reason": "Numbered subsection 1) under 2.5, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 바이어스",
+                        "page": 115,
+                        "level_reason": "Numbered subsection 2) under 2.5, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 오류의 최소화 방안",
+                        "page": 115,
+                        "level_reason": "Numbered subsection 3) under 2.5, font size 12.0."
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "3. 사회역학",
+                        "page": 116,
+                        "level_reason": "Numbered section 3, font size 18.0, consistent with level 2 hierarchy."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.1 사회역학의 개념과 발전",
+                        "page": 117,
+                        "level_reason": "Numbered section 3.1, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 사회역학의 개념",
+                        "page": 117,
+                        "level_reason": "Numbered subsection 1) under 3.1, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 사회역학의 발전과정",
+                        "page": 117,
+                        "level_reason": "Numbered subsection 2) under 3.1, font size 12.0."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.2 사회역학연구의 특징",
+                        "page": 118,
+                        "level_reason": "Numbered section 3.2, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.3 사회역학연구의 설계와 방법",
+                        "page": 118,
+                        "level_reason": "Numbered section 3.3, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 사회역학연구의 설계",
+                        "page": 118,
+                        "level_reason": "Numbered subsection 1) under 3.3, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 사회역학연구 방법론",
+                        "page": 118,
+                        "level_reason": "Numbered subsection 2) under 3.3, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 사회역학연구의 측정 지표들",
+                        "page": 119,
+                        "level_reason": "Numbered subsection 3) under 3.3, font size 12.0."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.4 사회역학연구의 공개자료원",
+                        "page": 120,
+                        "level_reason": "Numbered section 3.4, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.5 사회역학연구에서 고려할 점",
+                        "page": 120,
+                        "level_reason": "Numbered section 3.5, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "4. 분자역학",
+                        "page": 121,
+                        "level_reason": "Numbered section 4, font size 18.0, consistent with level 2 hierarchy."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "4.1 분자역학의 개념",
+                        "page": 121,
+                        "level_reason": "Numbered section 4.1, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "4.2 분자역학의 생체지표(biomarkers)",
+                        "page": 123,
+                        "level_reason": "Numbered section 4.2, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 노출 지표",
+                        "page": 123,
+                        "level_reason": "Numbered subsection 1) under 4.2, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 효과 지표",
+                        "page": 123,
+                        "level_reason": "Numbered subsection 2) under 4.2, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 감수성 지표",
+                        "page": 123,
+                        "level_reason": "Numbered subsection 3) under 4.2, font size 12.0."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "4.3 분자역학의 특성",
+                        "page": 124,
+                        "level_reason": "Numbered section 4.3, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "5. 유전역학",
+                        "page": 125,
+                        "level_reason": "Numbered section 5, font size 18.0, consistent with level 2 hierarchy."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "5.1 개념과 발전",
+                        "page": 126,
+                        "level_reason": "Numbered section 5.1, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "5.2 연구의 설계와 방법",
+                        "page": 126,
+                        "level_reason": "Numbered section 5.2, font size 12.5, consistent with level 3 hierarchy."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 유전자 분포의 안정성 평가",
+                        "page": 127,
+                        "level_reason": "Numbered subsection 1) under 5.2, font size 12.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 유전역학 연구",
+                        "page": 128,
+                        "level_reason": "Numbered subsection 2) under 5.2, font size 12.0."
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 3,
+            "start_page": 136,
+            "end_page": 178,
+            "toc": {
+                "title": "의학연구에서 통계의 활용",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "7. 시스템역학",
+                        "page": 136,
+                        "level_reason": "Major section title with font_size=18.0, size_ratio=1.9, and numbering '7.'",
+                        "_layout_page": 136,
+                        "_layout_x": 185.0,
+                        "_layout_y": 104.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "7. 시스템역학",
+                        "_source_order": 0
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "7.1 시스템역학 개념",
+                        "page": 136,
+                        "level_reason": "Subsection under level 1, indicated by numbering '7.1' and font_size=12.5.",
+                        "_layout_page": 136,
+                        "_layout_x": 181.0,
+                        "_layout_y": 367.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "7.1 시스템역학 개념",
+                        "_source_order": 1
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "7.2 시스템역학의 배경",
+                        "page": 137,
+                        "level_reason": "Subsection under level 1, indicated by numbering '7.2' and font_size=12.5.",
+                        "_layout_page": 137,
+                        "_layout_x": 73.0,
+                        "_layout_y": 92.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "7.2 시스템역학의 배경",
+                        "_source_order": 2
+                    },
+                    {
+                        "level": 1,
+                        "chapter": "8 의학연구에서 통계의 활용",
+                        "page": 138,
+                        "level_reason": "Highest level chapter title with largest font_size=31.0 and size_ratio=3.27.",
+                        "_layout_page": 138,
+                        "_layout_x": 124.0,
+                        "_layout_y": 126.0,
+                        "_layout_font_size": 31.0,
+                        "_layout_size_ratio": 3.27,
+                        "_layout_text": "의학연구에서 통계의 활용",
+                        "_source_order": 3
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "1. 역학연구에서 통계 활용을 위한 기본 개념",
+                        "page": 138,
+                        "level_reason": "Section under level 1, indicated by numbering '1.' and font_size=18.0.",
+                        "_layout_page": 138,
+                        "_layout_x": 185.0,
+                        "_layout_y": 423.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "1. 역학연구에서 통계 활용을 위한 기본 개념",
+                        "_source_order": 4
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.1 통계적 방법론의 중요성",
+                        "page": 138,
+                        "level_reason": "Subsection under level 2, indicated by numbering '1.1' and font_size=12.5.",
+                        "_layout_page": 138,
+                        "_layout_x": 181.0,
+                        "_layout_y": 604.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.1 통계적 방법론의 중요성",
+                        "_source_order": 5
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "1.2 통계적 추론의 기본 개념",
+                        "page": 139,
+                        "level_reason": "Subsection under level 2, indicated by numbering '1.2' and font_size=12.5.",
+                        "_layout_page": 139,
+                        "_layout_x": 73.0,
+                        "_layout_y": 274.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.2 통계적 추론의 기본 개념",
+                        "_source_order": 6
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 기본개념",
+                        "page": 139,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '1)' and font_size=12.0.",
+                        "_layout_page": 139,
+                        "_layout_x": 65.0,
+                        "_layout_y": 316.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 기본개념",
+                        "_source_order": 7
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 조사 변수의 분류",
+                        "page": 139,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(1)' and font_size=10.0.",
+                        "_layout_page": 139,
+                        "_layout_x": 75.0,
+                        "_layout_y": 350.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(1) 조사 변수의 분류",
+                        "_source_order": 8
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 모집단과 통계량의 분포",
+                        "page": 140,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '2)' and font_size=12.0.",
+                        "_layout_page": 140,
+                        "_layout_x": 173.0,
+                        "_layout_y": 131.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 모집단과 통계량의 분포",
+                        "_source_order": 9
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 확률분포",
+                        "page": 141,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '3)' and font_size=12.0.",
+                        "_layout_page": 141,
+                        "_layout_x": 65.0,
+                        "_layout_y": 486.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 확률분포",
+                        "_source_order": 10
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 정규분포(normal distribution)",
+                        "page": 141,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(1)' and font_size=10.0.",
+                        "_layout_page": 141,
+                        "_layout_x": 75.0,
+                        "_layout_y": 553.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(1) 정규분포(normal distribution)",
+                        "_source_order": 11
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 기타 확률분포",
+                        "page": 143,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(2)' and font_size=10.0.",
+                        "_layout_page": 143,
+                        "_layout_x": 75.0,
+                        "_layout_y": 346.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(2) 기타 확률분포",
+                        "_source_order": 12
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "4) 가설검정과 모수추정",
+                        "page": 143,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '4)' and font_size=12.0.",
+                        "_layout_page": 143,
+                        "_layout_x": 65.0,
+                        "_layout_y": 653.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 가설검정과 모수추정",
+                        "_source_order": 13
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 통계적 가설검정의 원리",
+                        "page": 143,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(1)' and font_size=10.0.",
+                        "_layout_page": 143,
+                        "_layout_x": 75.0,
+                        "_layout_y": 689.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(1) 통계적 가설검정의 원리",
+                        "_source_order": 14
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 유의확률(p-value)",
+                        "page": 144,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(2)' and font_size=10.0.",
+                        "_layout_page": 144,
+                        "_layout_x": 183.0,
+                        "_layout_y": 515.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(2) 유의확률(p-value)",
+                        "_source_order": 15
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(3) t-분포를 이용한 의사결정",
+                        "page": 145,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(3)' and font_size=10.0.",
+                        "_layout_page": 145,
+                        "_layout_x": 75.0,
+                        "_layout_y": 479.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(3) t-분포를 이용한 의사결정",
+                        "_source_order": 16
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(4) 신뢰구간(confidence interval)",
+                        "page": 146,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(4)' and font_size=10.0.",
+                        "_layout_page": 146,
+                        "_layout_x": 183.0,
+                        "_layout_y": 285.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(4) 신뢰구간(confidence interval)",
+                        "_source_order": 17
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(5) 가능도(likelihood)",
+                        "page": 146,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(5)' and font_size=10.0.",
+                        "_layout_page": 146,
+                        "_layout_x": 183.0,
+                        "_layout_y": 714.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(5) 가능도(likelihood)",
+                        "_source_order": 18
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "2. 표본수의 추정",
+                        "page": 148,
+                        "level_reason": "Section under level 1, indicated by numbering '2.' and font_size=18.0.",
+                        "_layout_page": 148,
+                        "_layout_x": 185.0,
+                        "_layout_y": 104.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "2. 표본수의 추정",
+                        "_source_order": 19
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "2.1 역학지표 추정 시 필요한 표본크기",
+                        "page": 149,
+                        "level_reason": "Subsection under level 2, indicated by numbering '2.1' and font_size=12.5.",
+                        "_layout_page": 149,
+                        "_layout_x": 73.0,
+                        "_layout_y": 124.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "2.1 역학지표 추정 시 필요한 표본크기",
+                        "_source_order": 20
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "2.2 연관성 연구 시 필요한 표본크기",
+                        "page": 149,
+                        "level_reason": "Subsection under level 2, indicated by numbering '2.2' and font_size=12.5.",
+                        "_layout_page": 149,
+                        "_layout_x": 73.0,
+                        "_layout_y": 609.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "2.2 연관성 연구 시 필요한 표본크기",
+                        "_source_order": 21
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 임상시험에서 필요한 표본크기",
+                        "page": 149,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '1)' and font_size=12.0.",
+                        "_layout_page": 149,
+                        "_layout_x": 65.0,
+                        "_layout_y": 768.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 임상시험에서 필요한 표본크기",
+                        "_source_order": 22
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 관찰연구에서 필요한 표본크기",
+                        "page": 151,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '2)' and font_size=12.0.",
+                        "_layout_page": 151,
+                        "_layout_x": 65.0,
+                        "_layout_y": 467.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 관찰연구에서 필요한 표본크기",
+                        "_source_order": 23
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 환자-대조군연구에서의 표본크기",
+                        "page": 151,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(1)' and font_size=10.0.",
+                        "_layout_page": 151,
+                        "_layout_x": 75.0,
+                        "_layout_y": 534.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(1) 환자-대조군연구에서의 표본크기",
+                        "_source_order": 24
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 코호트연구에서의 표본크기",
+                        "page": 152,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(2)' and font_size=10.0.",
+                        "_layout_page": 152,
+                        "_layout_x": 183.0,
+                        "_layout_y": 287.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(2) 코호트연구에서의 표본크기",
+                        "_source_order": 25
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "3. 연구목적에 맞는 표본추출방법",
+                        "page": 153,
+                        "level_reason": "Section under level 1, indicated by numbering '3.' and font_size=18.0.",
+                        "_layout_page": 153,
+                        "_layout_x": 77.0,
+                        "_layout_y": 549.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "3. 연구목적에 맞는 표본추출방법",
+                        "_source_order": 26
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.1 단면연구에서의 표본추출방법",
+                        "page": 154,
+                        "level_reason": "Subsection under level 2, indicated by numbering '3.1' and font_size=12.5.",
+                        "_layout_page": 154,
+                        "_layout_x": 181.0,
+                        "_layout_y": 92.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "3.1 단면연구에서의 표본추출방법",
+                        "_source_order": 27
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 국민건강영양조사",
+                        "page": 154,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '1)' and font_size=12.0.",
+                        "_layout_page": 154,
+                        "_layout_x": 173.0,
+                        "_layout_y": 134.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 국민건강영양조사",
+                        "_source_order": 28
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 지역사회건강조사",
+                        "page": 154,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '2)' and font_size=12.0.",
+                        "_layout_page": 154,
+                        "_layout_x": 173.0,
+                        "_layout_y": 307.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 지역사회건강조사",
+                        "_source_order": 29
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.2 분석역학연구에서의 표본추출방법",
+                        "page": 154,
+                        "level_reason": "Subsection under level 2, indicated by numbering '3.2' and font_size=12.5.",
+                        "_layout_page": 154,
+                        "_layout_x": 181.0,
+                        "_layout_y": 411.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "3.2 분석역학연구에서의 표본추출방법",
+                        "_source_order": 30
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 환자-대조군연구",
+                        "page": 154,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '1)' and font_size=12.0.",
+                        "_layout_page": 154,
+                        "_layout_x": 173.0,
+                        "_layout_y": 452.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 환자-대조군연구",
+                        "_source_order": 31
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 코호트연구",
+                        "page": 155,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '2)' and font_size=12.0.",
+                        "_layout_page": 155,
+                        "_layout_x": 65.0,
+                        "_layout_y": 320.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 코호트연구",
+                        "_source_order": 32
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "3.3 실험역학연구에서의 표본추출방법",
+                        "page": 155,
+                        "level_reason": "Subsection under level 2, indicated by numbering '3.3' and font_size=12.5.",
+                        "_layout_page": 155,
+                        "_layout_x": 73.0,
+                        "_layout_y": 743.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "3.3 실험역학연구에서의 표본추출방법",
+                        "_source_order": 33
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3.4 요 약",
+                        "page": 156,
+                        "level_reason": "Corrected from level 3 to level 4 based on font_size=12.0 and size_ratio=1.27, matching other level 4 entries.",
+                        "_layout_page": 156,
+                        "_layout_x": 181.0,
+                        "_layout_y": 168.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3.4 요 약",
+                        "_source_order": 34
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "4. 변수 특성에 따른 적절한 통계분석법의 선택",
+                        "page": 156,
+                        "level_reason": "Section under level 1, indicated by numbering '4.' and font_size=18.0.",
+                        "_layout_page": 156,
+                        "_layout_x": 185.0,
+                        "_layout_y": 694.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "4. 변수 특성에 따른 적절한 통계분석법의 선택",
+                        "_source_order": 35
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "5. 연구방법에 따른 통계분석",
+                        "page": 159,
+                        "level_reason": "Section under level 1, indicated by numbering '5.' and font_size=18.0.",
+                        "_layout_page": 159,
+                        "_layout_x": 77.0,
+                        "_layout_y": 749.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "5. 연구방법에 따른 통계분석",
+                        "_source_order": 36
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "5.1 환자-대조군연구",
+                        "page": 160,
+                        "level_reason": "Subsection under level 2, indicated by numbering '5.1' and font_size=12.5.",
+                        "_layout_page": 160,
+                        "_layout_x": 181.0,
+                        "_layout_y": 280.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "5.1 환자-대조군연구",
+                        "_source_order": 37
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "5.2 단면연구",
+                        "page": 160,
+                        "level_reason": "Subsection under level 2, indicated by numbering '5.2' and font_size=12.5.",
+                        "_layout_page": 160,
+                        "_layout_x": 181.0,
+                        "_layout_y": 698.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "5.2 단면연구",
+                        "_source_order": 38
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "5.3 코호트연구",
+                        "page": 161,
+                        "level_reason": "Subsection under level 2, indicated by numbering '5.3' and font_size=12.5.",
+                        "_layout_page": 161,
+                        "_layout_x": 73.0,
+                        "_layout_y": 653.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "5.3 코호트연구",
+                        "_source_order": 39
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "5.4 하이브리드 연구",
+                        "page": 162,
+                        "level_reason": "Subsection under level 2, indicated by numbering '5.4' and font_size=12.5.",
+                        "_layout_page": 162,
+                        "_layout_x": 181.0,
+                        "_layout_y": 168.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "5.4 하이브리드 연구",
+                        "_source_order": 40
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 코호트내 환자-대조군연구",
+                        "page": 162,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '1)' and font_size=12.0.",
+                        "_layout_page": 162,
+                        "_layout_x": 173.0,
+                        "_layout_y": 210.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 코호트내 환자-대조군연구",
+                        "_source_order": 41
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 환자-코호트연구",
+                        "page": 162,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '2)' and font_size=12.0.",
+                        "_layout_page": 162,
+                        "_layout_x": 173.0,
+                        "_layout_y": 398.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 환자-코호트연구",
+                        "_source_order": 42
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 패널연구와 경향연구",
+                        "page": 162,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '3)' and font_size=12.0.",
+                        "_layout_page": 162,
+                        "_layout_x": 183.0,
+                        "_layout_y": 651.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 패널연구와 경향연구",
+                        "_source_order": 43
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "4) 종단자료분석, 다단계분석, 계층모형분석",
+                        "page": 163,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '4)' and font_size=12.0.",
+                        "_layout_page": 163,
+                        "_layout_x": 65.0,
+                        "_layout_y": 266.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 종단자료분석, 다단계분석, 계층모형분석",
+                        "_source_order": 44
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "5.5 기타 연구설계",
+                        "page": 163,
+                        "level_reason": "Subsection under level 2, indicated by numbering '5.5' and font_size=12.5.",
+                        "_layout_page": 163,
+                        "_layout_x": 73.0,
+                        "_layout_y": 658.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "5.5 기타 연구설계",
+                        "_source_order": 45
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "6. 관찰연구에서의 인과성 강화와 추론",
+                        "page": 165,
+                        "level_reason": "Section under level 1, indicated by numbering '6.' and font_size=18.0.",
+                        "_layout_page": 165,
+                        "_layout_x": 77.0,
+                        "_layout_y": 104.0,
+                        "_layout_font_size": 18.0,
+                        "_layout_size_ratio": 1.9,
+                        "_layout_text": "6. 관찰연구에서의 인과성 강화와 추론",
+                        "_source_order": 46
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "6.1 교란 바이어스 개념과 통제",
+                        "page": 165,
+                        "level_reason": "Subsection under level 2, indicated by numbering '6.1' and font_size=12.5.",
+                        "_layout_page": 165,
+                        "_layout_x": 73.0,
+                        "_layout_y": 346.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "6.1 교란 바이어스 개념과 통제",
+                        "_source_order": 47
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 짝짓기",
+                        "page": 165,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '1)' and font_size=12.0.",
+                        "_layout_page": 165,
+                        "_layout_x": 65.0,
+                        "_layout_y": 497.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 짝짓기",
+                        "_source_order": 48
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 층화",
+                        "page": 166,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '2)' and font_size=12.0.",
+                        "_layout_page": 166,
+                        "_layout_x": 173.0,
+                        "_layout_y": 545.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 층화",
+                        "_source_order": 49
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "3) 표준화",
+                        "page": 166,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '3)' and font_size=12.0.",
+                        "_layout_page": 166,
+                        "_layout_x": 173.0,
+                        "_layout_y": 753.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 표준화",
+                        "_source_order": 50
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "4) 다변량 분석",
+                        "page": 167,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '4)' and font_size=12.0."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "6.2 교란 바이어스와 선택 바이어스의 통제",
+                        "page": 168,
+                        "level_reason": "Subsection under level 2, indicated by numbering '6.2' and font_size=12.5."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 무작위배정",
+                        "page": 168,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '1)' and font_size=12.0."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 단순무작위배정",
+                        "page": 168,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(1)' and font_size=10.0."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 블록무작위배정",
+                        "page": 168,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(2)' and font_size=10.0."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(3) 층화무작위배정",
+                        "page": 169,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(3)' and font_size=10.0."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(4) 다이내믹무작위배정",
+                        "page": 169,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(4)' and font_size=10.0."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "2) 성향점수를 이용한 방법",
+                        "page": 169,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '2)' and font_size=12.0."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 성향점수 짝짓기",
+                        "page": 170,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(1)' and font_size=10.0."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 성향점수 가중치",
+                        "page": 171,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(2)' and font_size=10.0."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "6.3 베이즈 정리의 역학적 활용",
+                        "page": 173,
+                        "level_reason": "Subsection under level 2, indicated by numbering '6.3' and font_size=12.5."
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "6.4 유전체 연구의 인과성 추론",
+                        "page": 176,
+                        "level_reason": "Subsection under level 2, indicated by numbering '6.4' and font_size=12.5."
+                    },
+                    {
+                        "level": 4,
+                        "chapter": "1) 멘델식 무작위배정",
+                        "page": 176,
+                        "level_reason": "Sub-subsection under level 3, indicated by numbering '1)' and font_size=12.0."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(1) 기본개념",
+                        "page": 176,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(1)' and font_size=10.0."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(2) 기본가정",
+                        "page": 177,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(2)' and font_size=10.0."
+                    },
+                    {
+                        "level": 5,
+                        "chapter": "(3) 분석방법",
+                        "page": 177,
+                        "level_reason": "Lower level entry under level 4, indicated by numbering '(3)' and font_size=10.0."
+                    }
+                ]
+            }
+        }
+    ],
+    "chunk_level_reference": {
+        "1": [
+            {
+                "title": "5 타당도와 신뢰도",
+                "font_size": 31.0,
+                "size_ratio": 3.27,
+                "left_indent": 191.0
+            },
+            {
+                "title": "6 역학연구방법론",
+                "font_size": 31.0,
+                "size_ratio": 3.27,
+                "left_indent": 198.0
+            },
+            {
+                "title": "7 분야별 역학연구",
+                "font_size": 31.0,
+                "size_ratio": 3.27,
+                "left_indent": 191.0
+            },
+            {
+                "title": "7. 시스템역학",
+                "font_size": 18.0,
+                "size_ratio": 1.9,
+                "left_indent": 185.0
+            },
+            {
+                "title": "8 의학연구에서 통계의 활용",
+                "font_size": 31.0,
+                "size_ratio": 3.27,
+                "left_indent": 124.0
+            }
+        ],
+        "2": [
+            {
+                "title": "1. 연구의 타당도",
+                "font_size": 18.0,
+                "size_ratio": 1.9,
+                "left_indent": 77.0
+            },
+            {
+                "title": "2. 측정방법의 타당도와 신뢰도",
+                "font_size": 18.0,
+                "size_ratio": 1.9,
+                "left_indent": 77.0
+            },
+            {
+                "title": "3. 바이어스",
+                "font_size": 18.0,
+                "size_ratio": 1.9,
+                "left_indent": 77.0
+            },
+            {
+                "title": "1. 역학연구 방법의 분류",
+                "font_size": 18.0,
+                "size_ratio": 1.9,
+                "left_indent": 77.0
+            },
+            {
+                "title": "2. 기술역학의 세 주요 변수",
+                "font_size": 18.0,
+                "size_ratio": 1.9,
+                "left_indent": 77.0,
+                "bold": 0,
+                "italic": 0,
+                "font_id": "f1"
+            }
+        ],
+        "3": [
+            {
+                "title": "1.1 연구집단",
+                "font_size": 12.5,
+                "size_ratio": 1.32,
+                "left_indent": 73.0
+            },
+            {
+                "title": "1.2 내적타당도와 외적타당도의 정의",
+                "font_size": 12.5,
+                "size_ratio": 1.32,
+                "left_indent": 73.0
+            },
+            {
+                "title": "1.3 내적타당도",
+                "font_size": 12.5,
+                "size_ratio": 1.32,
+                "left_indent": 73.0
+            },
+            {
+                "title": "1.4 외적타당도",
+                "font_size": 12.5,
+                "size_ratio": 1.32,
+                "left_indent": 181.0
+            },
+            {
+                "title": "1.5 내적타당도 대 외적타당도",
+                "font_size": 12.5,
+                "size_ratio": 1.32,
+                "left_indent": 181.0
+            }
+        ],
+        "4": [
+            {
+                "title": "1) 단계별 연구집단의 개념",
+                "font_size": 12.0,
+                "size_ratio": 1.27,
+                "left_indent": 65.0
+            },
+            {
+                "title": "2) 연구설계와 목표에 따른 인구집단 적격집단",
+                "font_size": 12.0,
+                "size_ratio": 1.27,
+                "left_indent": 65.0
+            },
+            {
+                "title": "1) 민감도",
+                "font_size": 12.0,
+                "size_ratio": 1.27,
+                "left_indent": 60.0
+            },
+            {
+                "title": "2) 특이도",
+                "font_size": 12.0,
+                "size_ratio": 1.27,
+                "left_indent": 173.0
+            },
+            {
+                "title": "3) 위음성률과 위양성률",
+                "font_size": 12.0,
+                "size_ratio": 1.27,
+                "left_indent": 173.0
+            }
+        ],
+        "5": [
+            {
+                "title": "(1) 피검자의 생물학적 변이",
+                "font_size": 10.0,
+                "size_ratio": 1.05,
+                "left_indent": 183.0
+            },
+            {
+                "title": "(2) 검사자 내 변이(intra-observer variability)와 검사자 간 변이(inter-observer variability)",
+                "font_size": 10.0,
+                "size_ratio": 1.05,
+                "left_indent": 183.0
+            },
+            {
+                "title": "(1) 일치율(agreement percent)",
+                "font_size": 10.0,
+                "size_ratio": 1.05,
+                "left_indent": 75.0
+            },
+            {
+                "title": "(2) 카파통계량(kappa statistics, kappa value)",
+                "font_size": 10.0,
+                "size_ratio": 1.05,
+                "left_indent": 75.0
+            },
+            {
+                "title": "(3) 상관계수(correlation coefficient)",
+                "font_size": 10.0,
+                "size_ratio": 1.05,
+                "left_indent": 183.0
+            }
+        ]
+    },
+    "chunk_level_reference_source": "verified_chunk_toc"
+}

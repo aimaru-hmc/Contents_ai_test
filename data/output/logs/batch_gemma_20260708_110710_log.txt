@@ -1,0 +1,23 @@
+Run log saved: data/output/logs/batch_gemma_20260708_110710_log.txt
+Processing started: 1편(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 51 pages, 169770 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/1_2021_gemma_20260708_110710_parsed_pdf.txt
+  Gemma text chunk processing started: 2 chunks
+  Gemma chunk 1/2 request: pages 1-37
+  Gemma input chunk 1 saved: data/output/input_chunks/1_2021_gemma_20260708_110710/chunk_1_pages_1-37.json
+  Gemma/vLLM model loading started: google/gemma-4-31B-it
+[32mINFO[0m [90m07-08 11:07:24[0m [90m[api_utils.py:273][0m non-default args: {'max_model_len': 131072, 'tensor_parallel_size': 4, 'gpu_memory_utilization': 0.9, 'disable_log_stats': True, 'model': 'google/gemma-4-31B-it'}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[32mINFO[0m [90m07-08 11:07:25[0m [90m[model.py:598][0m Resolved architecture: Gemma4ForConditionalGeneration
+[32mINFO[0m [90m07-08 11:07:25[0m [90m[model.py:1725][0m Using max model len 131072
+[32mINFO[0m [90m07-08 11:07:32[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=16384.
+[32mINFO[0m [90m07-08 11:07:32[0m [90m[config.py:90][0m Gemma4 model has heterogeneous head dimensions (head_dim=256, global_head_dim=512). Using FA4 for all layers to avoid mixed FA3/FA4 penalty.
+[32mINFO[0m [90m07-08 11:07:32[0m [90m[vllm.py:1006][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m07-08 11:07:32[0m [90m[kernel.py:276][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m07-08 11:07:32[0m [90m[cuda.py:322][0m Forcing --disable_chunked_mm_input for models with multimodal-bidirectional attention.
+[32mINFO[0m [90m07-08 11:07:34[0m [90m[compilation.py:310][0m Enabled custom fusions: allreduce_rms
+[33mWARNING[0m [90m07-08 11:07:38[0m [90m[system_utils.py:157][0m We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
+Run log saved: data/output/logs/batch_gemma_20260708_110710_log.txt

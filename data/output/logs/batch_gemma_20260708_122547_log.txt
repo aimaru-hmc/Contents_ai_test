@@ -1,0 +1,52 @@
+Run log saved: data/output/logs/batch_gemma_20260708_122547_log.txt
+Processing started: 1편(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 51 pages, 169770 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/1_2021_gemma_20260708_122547_parsed_pdf.txt
+  Gemma text chunk processing started: 2 chunks
+  Gemma chunk 1/2 request: pages 1-37
+  Gemma input chunk 1 saved: data/output/input_chunks/1_2021_gemma_20260708_122547/chunk_1_pages_1-37.json
+  Gemma level review(chunk 1/2) started
+  Gemma level review(chunk 1/2) completed: 81 chapters / level changes 0
+  Gemma chunk 1 completed: 81 chapters
+  Gemma chunk 2/2 request: pages 38-51
+  Gemma input chunk 2 saved: data/output/input_chunks/1_2021_gemma_20260708_122547/chunk_2_pages_38-51.json
+  Gemma level review(chunk 2/2) started
+  Gemma level review(chunk 2/2) completed: 32 chapters / level changes 2
+  Gemma chunk 2 completed: 32 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) completed: 113 chapters / level changes 1
+Completed: data/output/1_2021_gemma_20260708_123035_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 4m 47.7s (287.747s)
+  title: 건강과 질병
+  chapters: 113
+Processing started: 2편1-4장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 98 pages, 300119 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/2_1-4_2021_gemma_20260708_122547_parsed_pdf.txt
+  Gemma text chunk processing started: 3 chunks
+  Gemma chunk 1/3 request: pages 1-41
+  Gemma input chunk 1 saved: data/output/input_chunks/2_1-4_2021_gemma_20260708_122547/chunk_1_pages_1-41.json
+  Gemma level review(chunk 1/3) started
+  Gemma level review(chunk 1/3) completed: 110 chapters / level changes 0
+  Gemma chunk 1 completed: 110 chapters
+  Gemma chunk 2/3 request: pages 42-82
+  Gemma input chunk 2 saved: data/output/input_chunks/2_1-4_2021_gemma_20260708_122547/chunk_2_pages_42-82.json
+  Gemma level review(chunk 2/3) started
+  Gemma level review(chunk 2/3) completed: 85 chapters / level changes 0
+  Gemma chunk 2 completed: 85 chapters
+  Gemma chunk 3/3 request: pages 83-100
+  Gemma input chunk 3 saved: data/output/input_chunks/2_1-4_2021_gemma_20260708_122547/chunk_3_pages_83-100.json
+  Gemma level review(chunk 3/3) started
+  Gemma level review(chunk 3/3) completed: 30 chapters / level changes 0
+  Gemma chunk 3 completed: 30 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
