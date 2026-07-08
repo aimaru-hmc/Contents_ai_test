@@ -4206,6 +4206,33 @@ def is_probable_non_heading_candidate(title: str) -> bool:
     return False
 
 
+def has_structural_title_marker(title: str) -> bool:
+    text = clean_text(title)
+    if not text:
+        return False
+    patterns = (
+        r"^제\s*\d+\s*[장절편부]\b",
+        r"^\d+(?:\.\d+)+\b",
+        r"^\d+\s*[.)]",
+        r"^\([^)]+\)",
+        r"^[A-Za-z]\s*[.)]",
+        r"^[가-힣]\s*[.)]",
+    )
+    return any(re.search(pattern, text) for pattern in patterns)
+
+
+def is_ancillary_heading_candidate(title: str) -> bool:
+    text = clean_text(title)
+    if not text:
+        return False
+    patterns = (
+        r"^\[?\s*(?:사례|예시|보기|case|example|box)\s*\d*",
+        r"^(?:표|그림|figure|fig\.|table)\s*[\dIVXivx가-힣.:-]",
+        r"^(?:기본\s*문제|심화\s*문제|연습\s*문제|문제|참고문헌|references?)\b",
+    )
+    return any(re.search(pattern, text, flags=re.IGNORECASE) for pattern in patterns)
+
+
 def toc_heading_style_profiles(toc: dict[str, Any]) -> list[dict[str, Any]]:
     profiles: list[dict[str, Any]] = []
     chapters = toc.get("chapters", [])
@@ -4285,6 +4312,8 @@ def is_style_heading_candidate(title: str, layout: dict[str, Any], profiles: lis
     size_ratio = metadata_float_value(layout.get("size_ratio")) or 1.0
     bold = 1 if metadata_int_value(layout.get("bold")) else 0
     italic = 1 if metadata_int_value(layout.get("italic")) else 0
+    if size_ratio <= 1.08 and not bold and not italic and not has_structural_title_marker(title):
+        return False
     if layout_matches_existing_heading_style(layout, profiles):
         return True
     if size_ratio >= 1.18:
@@ -4376,6 +4405,210 @@ def source_text_layout_candidates(source_text: str) -> list[dict[str, Any]]:
             "layout": layout,
         })
     return candidates
+
+
+def source_title_line_evidence(title: str, page: Any, source_text: str, max_examples: int = 3) -> dict[str, Any]:
+    normalized_title = normalize_toc_match_text(title)
+    if not normalized_title or not clean_text(source_text):
+        return {}
+
+    page_number = metadata_int_value(page)
+    exact_examples: list[str] = []
+    embedded_examples: list[str] = []
+    exact_count = 0
+    embedded_count = 0
+    for candidate in source_text_layout_candidates(source_text):
+        candidate_page = metadata_int_value(candidate.get("page"))
+        if page_number is not None and candidate_page is not None and candidate_page != page_number:
+            continue
+        line_title = clean_text(candidate.get("title"))
+        normalized_line = normalize_toc_match_text(line_title)
+        if not normalized_line:
+            continue
+        layout = candidate.get("layout") if isinstance(candidate.get("layout"), dict) else {}
+        location = missing_numbered_candidate_layout_text({
+            "page": candidate_page,
+            "line_index": candidate.get("line_index"),
+            "font_size": metadata_float_value(layout.get("font_size")),
+            "size_ratio": metadata_float_value(layout.get("size_ratio")),
+            "left_indent": metadata_float_value(layout.get("left_indent")),
+            "vertical_position": metadata_float_value(layout.get("vertical_position")),
+        })
+        example = f'{location}: "{compact_toc_example_title(line_title, max_chars=90)}"' if location else f'"{compact_toc_example_title(line_title, max_chars=90)}"'
+        if normalized_line == normalized_title:
+            exact_count += 1
+            if len(exact_examples) < max_examples:
+                exact_examples.append(example)
+        elif normalized_title in normalized_line:
+            embedded_count += 1
+            if len(embedded_examples) < max_examples:
+                embedded_examples.append(example)
+
+    evidence: dict[str, Any] = {
+        "exact_count": exact_count,
+        "embedded_count": embedded_count,
+    }
+    if exact_examples:
+        evidence["exact_examples"] = exact_examples
+    if embedded_examples:
+        evidence["embedded_examples"] = embedded_examples
+    return evidence
+
+
+def source_layout_for_title(title: str, page: Any, source_text: str) -> dict[str, Any]:
+    normalized_title = normalize_toc_match_text(title)
+    if not normalized_title or not clean_text(source_text):
+        return {}
+
+    page_number = metadata_int_value(page)
+    embedded_match: dict[str, Any] = {}
+    for candidate in source_text_layout_candidates(source_text):
+        candidate_page = metadata_int_value(candidate.get("page"))
+        if page_number is not None and candidate_page is not None and candidate_page != page_number:
+            continue
+        line_title = clean_text(candidate.get("title"))
+        normalized_line = normalize_toc_match_text(line_title)
+        if not normalized_line:
+            continue
+        layout = candidate.get("layout") if isinstance(candidate.get("layout"), dict) else {}
+        layout = dict(layout)
+        layout["line_index"] = candidate.get("line_index")
+        layout["page"] = candidate_page
+        if normalized_line == normalized_title:
+            return layout
+        if normalized_title in normalized_line and not embedded_match:
+            embedded_match = layout
+    return embedded_match
+
+
+def source_evidence_has_ancillary_context(evidence: dict[str, Any]) -> bool:
+    examples = list(evidence.get("exact_examples", []) or []) + list(evidence.get("embedded_examples", []) or [])
+    return any(
+        re.search(
+            r"(^|[\s\"':])(?:사례|예시|보기|case|example|box)\s*\d+|"
+            r"(^|[\s\"':])(?:표|그림|figure|fig\.|table)\s*(?:<|\d|[IVXivx]+)[\dIVXivx.:-]*|"
+            r"(?:기본\s*문제|심화\s*문제|연습\s*문제|참고문헌|references?)",
+            clean_text(example),
+            re.IGNORECASE,
+        )
+        for example in examples
+    )
+
+
+def possible_invalid_heading_candidates(
+    toc: dict[str, Any],
+    source_text: str = "",
+    max_candidates: int = 40,
+) -> list[dict[str, Any]]:
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return []
+
+    candidates: list[dict[str, Any]] = []
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        title = clean_text(chapter.get("chapter"))
+        if not title:
+            continue
+        try:
+            level = int(chapter.get("level", 1))
+        except Exception:
+            level = 1
+        layout = layout_from_toc_metadata(chapter)
+        if not layout and clean_text(source_text):
+            layout = source_layout_for_title(title, chapter.get("page"), source_text)
+        size_ratio = metadata_float_value(layout.get("size_ratio"))
+        bold = 1 if metadata_int_value(layout.get("bold")) else 0
+        italic = 1 if metadata_int_value(layout.get("italic")) else 0
+        weak_body_style = size_ratio is not None and size_ratio <= 1.08 and not bold and not italic
+        very_weak_body_style = size_ratio is not None and size_ratio <= 1.05 and not bold and not italic
+        has_marker = has_structural_title_marker(title)
+        level_reason = clean_text(chapter.get("level_reason"))
+        restored = "completeness audit" in level_reason.lower()
+        ancillary = is_ancillary_heading_candidate(title)
+        evidence = source_title_line_evidence(title, chapter.get("page"), source_text) if clean_text(source_text) else {}
+        embedded_only = (
+            int(evidence.get("embedded_count", 0) or 0) > 0
+            and int(evidence.get("exact_count", 0) or 0) == 0
+        )
+        ancillary_context = source_evidence_has_ancillary_context(evidence)
+
+        reasons: list[str] = []
+        if ancillary:
+            reasons.append("title itself looks like a case/example/table/figure/problem/reference label")
+        if ancillary_context:
+            reasons.append("source context looks like case/example/table/figure/problem/reference material")
+        if embedded_only and weak_body_style:
+            reasons.append("title appears embedded in longer body lines, not as a standalone heading")
+        if weak_body_style and not has_marker and level >= 4:
+            reasons.append("body-size or near-body-size style without bold/italic or structural marker at a deep level")
+        if restored and weak_body_style and not has_marker:
+            reasons.append("restored during completeness audit despite weak markerless body-size style")
+        if very_weak_body_style and not has_marker and level >= 5:
+            reasons.append("level 5 markerless entry uses body-size style")
+
+        if not reasons:
+            continue
+
+        page_number = metadata_int_value(chapter.get("page"))
+        row: dict[str, Any] = {
+            "title": title,
+            "level": level,
+            "page": page_number,
+            "reasons": reasons,
+            "level_reason": level_reason,
+            "font_size": metadata_float_value(layout.get("font_size")),
+            "size_ratio": size_ratio,
+            "left_indent": metadata_float_value(layout.get("left_indent")),
+            "vertical_position": metadata_float_value(layout.get("vertical_position")),
+            "bold": bold,
+            "italic": italic,
+            "source_evidence": evidence,
+        }
+        candidates.append(row)
+
+    candidates = sorted(
+        candidates,
+        key=lambda item: (
+            int(item.get("page") or 0),
+            float(item.get("vertical_position") or 0.0),
+            int(item.get("level") or 0),
+        ),
+    )
+    return candidates[:max_candidates]
+
+
+def format_gemma_possible_invalid_heading_candidates(
+    toc: dict[str, Any],
+    source_text: str = "",
+    max_candidates: int = 40,
+) -> str:
+    candidates = possible_invalid_heading_candidates(toc, source_text=source_text, max_candidates=max_candidates)
+    if not candidates:
+        return ""
+
+    lines = [
+        "[Observed Possible Invalid Heading Candidates]",
+        "These are removal-review clues, not automatic removals. Remove a candidate only if it is not a real chapter/section/subsection heading in this document hierarchy.",
+    ]
+    for candidate in candidates:
+        location = missing_numbered_candidate_layout_text(candidate)
+        location_text = f", {location}" if location else ""
+        reason_text = "; ".join(clean_text(reason) for reason in candidate.get("reasons", []) if clean_text(reason))
+        source_evidence = candidate.get("source_evidence") if isinstance(candidate.get("source_evidence"), dict) else {}
+        evidence_parts: list[str] = []
+        if source_evidence:
+            evidence_parts.append(f"source_exact={source_evidence.get('exact_count', 0)}")
+            evidence_parts.append(f"source_embedded={source_evidence.get('embedded_count', 0)}")
+            embedded_examples = source_evidence.get("embedded_examples") or []
+            if embedded_examples:
+                evidence_parts.append(f"embedded_example={compact_toc_example_title(embedded_examples[0], max_chars=120)}")
+        evidence_text = f" / {'; '.join(evidence_parts)}" if evidence_parts else ""
+        lines.append(
+            f'- level={candidate.get("level")}{location_text}: title="{compact_toc_example_title(candidate.get("title"), max_chars=100)}" / reasons={reason_text}{evidence_text}'
+        )
+    return "\n".join(lines)
 
 
 def add_source_text_numbered_candidates(
@@ -4721,6 +4954,11 @@ def build_gemma_level_review_prompt(
         source_text=source_text,
     )
     missing_style_block = f"\n\n{missing_style_summary}" if clean_text(missing_style_summary) else ""
+    invalid_heading_summary = format_gemma_possible_invalid_heading_candidates(
+        toc,
+        source_text=source_text,
+    )
+    invalid_heading_block = f"\n\n{invalid_heading_summary}" if clean_text(invalid_heading_summary) else ""
     source_block = f"\n\n[Source Text/Layout]\n{source_text}" if clean_text(source_text) else ""
     partial_block = ""
     if partial_tocs:
@@ -4744,6 +4982,7 @@ This is a verification pass after the first TOC extraction/merge.
 - If [Observed Numbering Sequence Gaps] is provided, explicitly check each gap as an optional completeness clue. Search the source/partials for a grounded visible heading before restoring anything. If not grounded, do not invent it.
 - If [Observed Missing Numbered Heading Candidates] is provided, explicitly audit each candidate as an optional title-marker clue. Add the candidate only if it is a real heading grounded in the source/partials; reject it if it is an existing TOC line, body sentence, caption, question, reference, or duplicate.
 - If [Observed Missing Style Heading Candidates] is provided, explicitly audit each candidate even when it has no numbering. This list is based on font size, size/body ratio, bold/italic, indentation, and similarity to observed heading styles. Add the candidate only if the layout pattern clearly matches this document's heading hierarchy.
+- If [Observed Possible Invalid Heading Candidates] is provided, audit those current TOC entries first. Remove entries that are body-size text, side notes, case/example/box titles, table/figure captions, question/problem labels, references, or terms embedded inside prose rather than real hierarchy headings. A candidate is not automatically invalid; keep it only when there is strong document-specific hierarchy evidence, and explain that evidence in level_reason.
 - Correct wrong "level" values by inferring this document's hierarchy from repeated title patterns, page order, layout metadata, and nearby context.
 - Do not use a universal title-marker-to-level rule. Any visible marker or numbering style can mean different levels in different books, and some books have no markers at all.
 - Visual hierarchy is stronger evidence than numbering alone. Font size, size/body ratio, indentation, bold/italic style, and repeated visual patterns must override a superficial numbering interpretation when they conflict.
@@ -4764,6 +5003,7 @@ This is a verification pass after the first TOC extraction/merge.
 {numbering_gap_block}
 {missing_numbered_block}
 {missing_style_block}
+{invalid_heading_block}
 
 [PDF File Name]
 {pdf_name}
@@ -5101,6 +5341,7 @@ def review_gemma_toc_levels(
         return toc, "", {"enabled": False, "success": False, "skipped": True}
 
     label = f"Gemma level review({stage_label})"
+    invalid_heading_candidates = possible_invalid_heading_candidates(toc, source_text=source_text)
     review_prompt = build_gemma_level_review_prompt(
         base_prompt=prompt,
         pdf_name=pdf_path.name,
@@ -5129,6 +5370,8 @@ def review_gemma_toc_levels(
             "input_chapters": len(toc.get("chapters", []) or []),
             "output_chapters": len(reviewed_toc.get("chapters", []) or []),
             "level_changes": level_changes,
+            "possible_invalid_heading_candidate_count": len(invalid_heading_candidates),
+            "possible_invalid_heading_candidates": invalid_heading_candidates,
         }
         record_gemma_level_review_status(args, status)
         print(
@@ -5143,6 +5386,8 @@ def review_gemma_toc_levels(
             "stage": stage_label,
             "error": message_of(error),
             "level_changes": 0,
+            "possible_invalid_heading_candidate_count": len(invalid_heading_candidates),
+            "possible_invalid_heading_candidates": invalid_heading_candidates,
         }
         record_gemma_level_review_status(args, status)
         print(f"  {label} failed; keeping previous TOC: {error}", file=sys.stderr, flush=True)
