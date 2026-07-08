@@ -3932,6 +3932,7 @@ Some lines may start with compact layout tags:
 - Use larger font size, higher size ratio, bold/italic style, indentation, visible title markers when present, and nearby body text to infer TOC levels.
 - Never copy [L ...] tags into chapter titles.
 - Ignore existing table-of-contents pages, dot-leader lines, page-number-only lines, and repeated headers/footers.
+- Repeated top/bottom headers or footers are not TOC entries even if they contain structural markers such as 제N편, 제N장, Part, or Chapter.
 - Perform a completeness pass over the extracted text before output. Include lower-level visible headings when they use consistent heading-like visual style, indentation, spacing patterns, or title markers. Do not stop after only chapter and major section titles.
 - Do not omit a heading only because it is smaller than nearby headings; smaller visual style usually means a deeper level, not body text, when it repeats as a heading pattern.
 - Before finalizing the JSON, self-check every level against the visible hierarchy in this document. Use the current chunk's layout metadata and any previous level reference; if a candidate's title marker or style conflicts with the observed document convention, correct the level yourself before output.
@@ -3977,6 +3978,7 @@ Some lines may start with compact layout tags:
 - Use larger font size, higher size ratio, bold/italic style, indentation, visible title markers when present, and nearby body text to infer TOC levels.
 - Never copy [L ...] tags into chapter titles.
 - Ignore existing table-of-contents pages, dot-leader lines, page-number-only lines, and repeated headers/footers.
+- Repeated top/bottom headers or footers are not TOC entries even if they contain structural markers such as 제N편, 제N장, Part, or Chapter.
 - Perform a completeness pass over this chunk before output. Include lower-level visible headings when they use consistent heading-like visual style, indentation, spacing patterns, or title markers. Do not stop after only chapter and major section titles.
 - Do not omit a heading only because it is smaller than nearby headings; smaller visual style usually means a deeper level, not body text, when it repeats as a heading pattern.
 - Before finalizing the JSON, self-check every level against the visible hierarchy in this document. Use the current chunk's layout metadata and any previous level reference; if a candidate's title marker or style conflicts with the observed document convention, correct the level yourself before output.
@@ -4510,6 +4512,145 @@ def document_style_line_is_title_like(title: str, layout: dict[str, Any]) -> boo
     )
 
 
+def strip_running_page_number(text: str) -> str:
+    text = clean_text(text)
+    text = re.sub(r"^\s*\d+\s*[∙·ㆍ.\-–—|:]\s*", "", text)
+    text = re.sub(r"\s*[∙·ㆍ.\-–—|:]\s*\d+\s*$", "", text)
+    text = re.sub(r"^\s*\d+\s+", "", text)
+    text = re.sub(r"\s+\d+\s*$", "", text)
+    return clean_text(text)
+
+
+def normalize_running_header_footer_text(text: Any) -> str:
+    stripped = strip_running_page_number(clean_text(text))
+    stripped = re.sub(r"[∙·ㆍ.\-–—|:()\[\]{}<>]", "", stripped)
+    return normalize_toc_match_text(stripped)
+
+
+def is_running_header_footer_layout(layout: dict[str, Any]) -> bool:
+    y = metadata_float_value(layout.get("vertical_position"))
+    font_size = metadata_float_value(layout.get("font_size"))
+    size_ratio = metadata_float_value(layout.get("size_ratio"))
+    bold = 1 if metadata_int_value(layout.get("bold")) else 0
+    italic = 1 if metadata_int_value(layout.get("italic")) else 0
+    if y is None:
+        return False
+
+    near_page_edge = y <= 75.0 or y >= 760.0
+    weak_style = (
+        (size_ratio is not None and size_ratio <= 1.05)
+        or (font_size is not None and font_size <= 10.5)
+    )
+    return near_page_edge and weak_style and not bold and not italic
+
+
+def build_running_header_footer_styles(
+    layout_lines: list[dict[str, Any]],
+    max_styles: int = 20,
+) -> list[dict[str, Any]]:
+    groups: dict[str, dict[str, Any]] = {}
+    for candidate in layout_lines:
+        layout = candidate.get("layout") if isinstance(candidate.get("layout"), dict) else {}
+        title = clean_text(candidate.get("title"))
+        if not title or not is_running_header_footer_layout(layout):
+            continue
+        normalized = normalize_running_header_footer_text(title)
+        if len(normalized) < 4:
+            continue
+        display_text = strip_running_page_number(title)
+        group = groups.setdefault(normalized, {
+            "normalized_text": normalized,
+            "display_text": display_text,
+            "line_count": 0,
+            "_pages": set(),
+            "_x_values": [],
+            "_y_values": [],
+            "_font_sizes": [],
+            "_size_ratios": [],
+            "_samples": [],
+        })
+        group["line_count"] += 1
+        page_number = metadata_int_value(candidate.get("page"))
+        if page_number is not None:
+            group["_pages"].add(page_number)
+        for layout_key, bucket_key in (
+            ("left_indent", "_x_values"),
+            ("vertical_position", "_y_values"),
+            ("font_size", "_font_sizes"),
+            ("size_ratio", "_size_ratios"),
+        ):
+            value = metadata_float_value(layout.get(layout_key))
+            if value is not None:
+                group[bucket_key].append(value)
+        if len(group["_samples"]) < 5:
+            group["_samples"].append(title)
+
+    styles: list[dict[str, Any]] = []
+    for group in groups.values():
+        pages = sorted(group.get("_pages", set()))
+        if len(pages) < 3 and int(group.get("line_count", 0) or 0) < 3:
+            continue
+        styles.append({
+            "normalized_text": group.get("normalized_text"),
+            "display_text": group.get("display_text"),
+            "font_size": round(median_float(group.get("_font_sizes", [])), 1) if group.get("_font_sizes") else None,
+            "size_ratio": round(median_float(group.get("_size_ratios", [])), 2) if group.get("_size_ratios") else None,
+            "median_left_indent": round(median_float(group.get("_x_values", [])), 1) if group.get("_x_values") else None,
+            "median_vertical_position": round(median_float(group.get("_y_values", [])), 1) if group.get("_y_values") else None,
+            "line_count": group.get("line_count", 0),
+            "page_count": len(pages),
+            "page_range": document_style_page_range(pages),
+            "samples": document_style_sample_texts(group.get("_samples", [])),
+        })
+
+    styles.sort(
+        key=lambda item: (
+            -int(item.get("page_count") or 0),
+            -int(item.get("line_count") or 0),
+            clean_text(item.get("display_text")),
+        )
+    )
+    return styles[:max_styles]
+
+
+def running_header_footer_match(
+    title: Any,
+    layout: dict[str, Any] | None = None,
+    running_header_footer_styles: list[dict[str, Any]] | None = None,
+) -> dict[str, Any] | None:
+    normalized_title = normalize_running_header_footer_text(title)
+    if len(normalized_title) < 4:
+        return None
+
+    styles = running_header_footer_styles if isinstance(running_header_footer_styles, list) else []
+    for style in styles:
+        if not isinstance(style, dict):
+            continue
+        normalized_style = clean_text(style.get("normalized_text"))
+        if len(normalized_style) < 4:
+            continue
+        if (
+            normalized_title == normalized_style
+            or normalized_title in normalized_style
+            or normalized_style in normalized_title
+        ):
+            return style
+
+    if layout and is_running_header_footer_layout(layout):
+        return {
+            "normalized_text": normalized_title,
+            "display_text": strip_running_page_number(clean_text(title)),
+            "font_size": metadata_float_value(layout.get("font_size")),
+            "size_ratio": metadata_float_value(layout.get("size_ratio")),
+            "median_left_indent": metadata_float_value(layout.get("left_indent")),
+            "median_vertical_position": metadata_float_value(layout.get("vertical_position")),
+            "line_count": 1,
+            "page_count": 1,
+            "page_range": str(metadata_int_value(layout.get("page")) or ""),
+        }
+    return None
+
+
 def build_gemma_document_style_reference(
     pages: list[tuple[int, str]],
     *,
@@ -4581,6 +4722,7 @@ def build_gemma_document_style_reference(
             })
 
     cluster_summaries = [document_style_cluster_summary(cluster) for cluster in clusters.values()]
+    running_header_footer_styles = build_running_header_footer_styles(layout_lines)
     probable_body_styles = sorted(
         (
             cluster
@@ -4629,6 +4771,7 @@ def build_gemma_document_style_reference(
         "style_cluster_count": len(cluster_summaries),
         "probable_body_styles": probable_body_styles,
         "stronger_or_marked_style_clusters": stronger_styles,
+        "running_header_footer_styles": running_header_footer_styles,
         "title_like_examples": title_like_examples,
     }
     summary["prompt_text"] = format_gemma_document_style_reference(summary)
@@ -4661,6 +4804,16 @@ def format_gemma_document_style_reference(summary: dict[str, Any]) -> str:
         for cluster in summary.get("stronger_or_marked_style_clusters", [])
         if isinstance(cluster, dict)
     ]
+    header_footer_lines = [
+        (
+            f'- text="{compact_toc_example_title(style.get("display_text"), max_chars=80)}" '
+            f's={style.get("font_size")} r={style.get("size_ratio")} '
+            f'x~{style.get("median_left_indent")} y~{style.get("median_vertical_position")} '
+            f'lines={style.get("line_count")} pages={style.get("page_range")}'
+        )
+        for style in summary.get("running_header_footer_styles", [])
+        if isinstance(style, dict)
+    ]
     example_lines: list[str] = []
     for example in summary.get("title_like_examples", []):
         if not isinstance(example, dict):
@@ -4681,11 +4834,15 @@ def format_gemma_document_style_reference(summary: dict[str, Any]) -> str:
         "- Use this reference to distinguish repeated heading styles from probable body text across the whole document.",
         "- Body-size lines near r=1.0 without bold/italic or a visible marker are weak TOC candidates unless the document repeatedly proves they are headings.",
         "- One-off oversized styles on cover/title pages are not automatically document hierarchy styles.",
+        "- Repeated top/bottom running headers or footers are not TOC entries even when they contain structural markers such as 제N편, 제N장, Part, or Chapter.",
         "- No universal marker-to-level rule is implied here; infer levels from repeated visual hierarchy in this document.",
     ]
     if body_lines:
         sections.append("\nProbable body styles:")
         sections.extend(body_lines)
+    if header_footer_lines:
+        sections.append("\nRepeated running header/footer styles:")
+        sections.extend(header_footer_lines)
     if style_lines:
         sections.append("\nRepeated stronger/marked style clusters:")
         sections.extend(style_lines)
@@ -4787,6 +4944,7 @@ def possible_invalid_heading_candidates(
     toc: dict[str, Any],
     source_text: str = "",
     max_candidates: int = 40,
+    running_header_footer_styles: list[dict[str, Any]] | None = None,
 ) -> list[dict[str, Any]]:
     chapters = toc.get("chapters", [])
     if not isinstance(chapters, list):
@@ -4821,8 +4979,15 @@ def possible_invalid_heading_candidates(
             and int(evidence.get("exact_count", 0) or 0) == 0
         )
         ancillary_context = source_evidence_has_ancillary_context(evidence)
+        header_footer_match = running_header_footer_match(
+            title,
+            layout=layout,
+            running_header_footer_styles=running_header_footer_styles,
+        )
 
         reasons: list[str] = []
+        if header_footer_match:
+            reasons.append("matches repeated top/bottom running header/footer style")
         if ancillary:
             reasons.append("title itself looks like a case/example/table/figure/problem/reference label")
         if ancillary_context:
@@ -4854,6 +5019,8 @@ def possible_invalid_heading_candidates(
             "italic": italic,
             "source_evidence": evidence,
         }
+        if header_footer_match:
+            row["running_header_footer_match"] = header_footer_match
         candidates.append(row)
 
     candidates = sorted(
@@ -4871,8 +5038,14 @@ def format_gemma_possible_invalid_heading_candidates(
     toc: dict[str, Any],
     source_text: str = "",
     max_candidates: int = 40,
+    running_header_footer_styles: list[dict[str, Any]] | None = None,
 ) -> str:
-    candidates = possible_invalid_heading_candidates(toc, source_text=source_text, max_candidates=max_candidates)
+    candidates = possible_invalid_heading_candidates(
+        toc,
+        source_text=source_text,
+        max_candidates=max_candidates,
+        running_header_footer_styles=running_header_footer_styles,
+    )
     if not candidates:
         return ""
 
@@ -4892,6 +5065,13 @@ def format_gemma_possible_invalid_heading_candidates(
             embedded_examples = source_evidence.get("embedded_examples") or []
             if embedded_examples:
                 evidence_parts.append(f"embedded_example={compact_toc_example_title(embedded_examples[0], max_chars=120)}")
+        header_footer_match = candidate.get("running_header_footer_match")
+        if isinstance(header_footer_match, dict):
+            evidence_parts.append(
+                "running_header_footer="
+                + compact_toc_example_title(header_footer_match.get("display_text"), max_chars=90)
+                + f" pages={header_footer_match.get('page_range')}"
+            )
         evidence_text = f" / {'; '.join(evidence_parts)}" if evidence_parts else ""
         lines.append(
             f'- level={candidate.get("level")}{location_text}: title="{compact_toc_example_title(candidate.get("title"), max_chars=100)}" / reasons={reason_text}{evidence_text}'
@@ -5226,6 +5406,7 @@ def build_gemma_level_review_prompt(
     partial_tocs: list[dict[str, Any]] | None = None,
     level_reference_text: str = "",
     document_style_text: str = "",
+    running_header_footer_styles: list[dict[str, Any]] | None = None,
 ) -> str:
     toc_json = json.dumps(compact_toc_for_gemma_level_review(toc), ensure_ascii=False, indent=2)
     style_summary = format_gemma_level_style_summary(toc)
@@ -5246,6 +5427,7 @@ def build_gemma_level_review_prompt(
     invalid_heading_summary = format_gemma_possible_invalid_heading_candidates(
         toc,
         source_text=source_text,
+        running_header_footer_styles=running_header_footer_styles,
     )
     invalid_heading_block = f"\n\n{invalid_heading_summary}" if clean_text(invalid_heading_summary) else ""
     source_block = f"\n\n[Source Text/Layout]\n{source_text}" if clean_text(source_text) else ""
@@ -5273,6 +5455,7 @@ This is a verification pass after the first TOC extraction/merge.
 - If [Observed Missing Numbered Heading Candidates] is provided, explicitly audit each candidate as an optional title-marker clue. Add the candidate only if it is a real heading grounded in the source/partials; reject it if it is an existing TOC line, body sentence, caption, question, reference, or duplicate.
 - If [Observed Missing Style Heading Candidates] is provided, explicitly audit each candidate even when it has no numbering. This list is based on font size, size/body ratio, bold/italic, indentation, and similarity to observed heading styles. Add the candidate only if the layout pattern clearly matches this document's heading hierarchy.
 - If [Observed Possible Invalid Heading Candidates] is provided, audit those current TOC entries first. Remove entries that are body-size text, side notes, case/example/box titles, table/figure captions, question/problem labels, references, or terms embedded inside prose rather than real hierarchy headings. A candidate is not automatically invalid; keep it only when there is strong document-specific hierarchy evidence, and explain that evidence in level_reason.
+- Remove repeated top/bottom running headers or footers even if their text contains a structural marker such as 제N편, 제N장, Part, or Chapter. Header/footer layout evidence overrides the marker.
 - Correct wrong "level" values by inferring this document's hierarchy from repeated title patterns, page order, layout metadata, and nearby context.
 - Do not use a universal title-marker-to-level rule. Any visible marker or numbering style can mean different levels in different books, and some books have no markers at all.
 - Visual hierarchy is stronger evidence than numbering alone. Font size, size/body ratio, indentation, bold/italic style, and repeated visual patterns must override a superficial numbering interpretation when they conflict.
@@ -5543,6 +5726,114 @@ def count_toc_level_changes(before: dict[str, Any], after: dict[str, Any]) -> in
     )
 
 
+def toc_chapter_by_match_key(toc: dict[str, Any]) -> dict[tuple[str, int], dict[str, Any]]:
+    chapter_by_key: dict[tuple[str, int], dict[str, Any]] = {}
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list):
+        return chapter_by_key
+
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        title = normalize_toc_match_text(chapter.get("chapter"))
+        if not title:
+            continue
+        try:
+            page = int(chapter.get("page", 1))
+        except Exception:
+            page = 1
+        chapter_by_key[(title, page)] = chapter
+    return chapter_by_key
+
+
+def toc_review_chapter_snapshot(chapter: dict[str, Any]) -> dict[str, Any]:
+    keys = (
+        "level",
+        "chapter",
+        "page",
+        "level_reason",
+        "_layout_page",
+        "_layout_x",
+        "_layout_y",
+        "_layout_font_size",
+        "_layout_size_ratio",
+        "_layout_text",
+        "_source_order",
+        "_local_merge_order",
+    )
+    snapshot: dict[str, Any] = {}
+    for key in keys:
+        if key not in chapter:
+            continue
+        value = chapter.get(key)
+        if isinstance(value, str):
+            value = clean_text(value)
+        if value is not None and value != "":
+            snapshot[key] = value
+    return snapshot
+
+
+def toc_review_change_sort_key(item: dict[str, Any]) -> tuple[int, int, float, str]:
+    chapter = item.get("after") if isinstance(item.get("after"), dict) else item.get("before")
+    if not isinstance(chapter, dict):
+        chapter = item
+    page = metadata_int_value(chapter.get("page")) or metadata_int_value(item.get("page")) or 0
+    source_order = metadata_int_value(chapter.get("_source_order")) or metadata_int_value(chapter.get("_local_merge_order")) or 0
+    layout_y = metadata_float_value(chapter.get("_layout_y")) or 0.0
+    title = clean_text(chapter.get("chapter") or item.get("chapter"))
+    return page, source_order, layout_y, title
+
+
+def build_toc_review_change_report(before: dict[str, Any], after: dict[str, Any]) -> dict[str, Any]:
+    before_by_key = toc_chapter_by_match_key(before)
+    after_by_key = toc_chapter_by_match_key(after)
+    before_keys = set(before_by_key)
+    after_keys = set(after_by_key)
+
+    level_changes: list[dict[str, Any]] = []
+    for key in sorted(before_keys & after_keys):
+        before_chapter = before_by_key[key]
+        after_chapter = after_by_key[key]
+        try:
+            before_level = int(before_chapter.get("level", 1))
+            after_level = int(after_chapter.get("level", 1))
+        except Exception:
+            continue
+        if before_level == after_level:
+            continue
+        level_changes.append({
+            "chapter": clean_text(after_chapter.get("chapter") or before_chapter.get("chapter")),
+            "page": metadata_int_value(after_chapter.get("page")) or metadata_int_value(before_chapter.get("page")),
+            "before_level": before_level,
+            "after_level": after_level,
+            "before_level_reason": clean_text(before_chapter.get("level_reason")),
+            "after_level_reason": clean_text(after_chapter.get("level_reason")),
+            "before": toc_review_chapter_snapshot(before_chapter),
+            "after": toc_review_chapter_snapshot(after_chapter),
+        })
+
+    added_entries = [
+        {"after": toc_review_chapter_snapshot(after_by_key[key])}
+        for key in after_keys - before_keys
+    ]
+    removed_entries = [
+        {"before": toc_review_chapter_snapshot(before_by_key[key])}
+        for key in before_keys - after_keys
+    ]
+
+    level_changes.sort(key=toc_review_change_sort_key)
+    added_entries.sort(key=toc_review_change_sort_key)
+    removed_entries.sort(key=toc_review_change_sort_key)
+    return {
+        "level_change_count": len(level_changes),
+        "added_count": len(added_entries),
+        "removed_count": len(removed_entries),
+        "level_changes": level_changes,
+        "added_entries": added_entries,
+        "removed_entries": removed_entries,
+    }
+
+
 def restore_missing_toc_metadata_from_source(toc: dict[str, Any], source_toc: dict[str, Any]) -> dict[str, Any]:
     source_by_key: dict[tuple[str, int], dict[str, Any]] = {}
     source_chapters = source_toc.get("chapters", [])
@@ -5615,6 +5906,14 @@ def record_gemma_level_review_status(args: argparse.Namespace, status: dict[str,
     update_processing_metadata(args, gemma_level_review=stats)
 
 
+def gemma_running_header_footer_styles(args: argparse.Namespace) -> list[dict[str, Any]]:
+    summary = getattr(args, "_gemma_document_style_reference", None)
+    if not isinstance(summary, dict):
+        return []
+    styles = summary.get("running_header_footer_styles")
+    return styles if isinstance(styles, list) else []
+
+
 def review_gemma_toc_levels(
     model: str,
     pdf_path: Path,
@@ -5633,7 +5932,12 @@ def review_gemma_toc_levels(
         return toc, "", {"enabled": False, "success": False, "skipped": True}
 
     label = f"Gemma level review({stage_label})"
-    invalid_heading_candidates = possible_invalid_heading_candidates(toc, source_text=source_text)
+    running_header_footer_styles = gemma_running_header_footer_styles(args)
+    invalid_heading_candidates = possible_invalid_heading_candidates(
+        toc,
+        source_text=source_text,
+        running_header_footer_styles=running_header_footer_styles,
+    )
     review_prompt = build_gemma_level_review_prompt(
         base_prompt=prompt,
         pdf_name=pdf_path.name,
@@ -5644,6 +5948,7 @@ def review_gemma_toc_levels(
         partial_tocs=partial_tocs,
         level_reference_text=level_reference_text,
         document_style_text=document_style_text,
+        running_header_footer_styles=running_header_footer_styles,
     )
     print(f"  {label} started", flush=True)
     try:
@@ -5655,7 +5960,28 @@ def review_gemma_toc_levels(
         )
         reviewed_toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
         restore_missing_toc_metadata_from_source(reviewed_toc, toc)
-        level_changes = count_toc_level_changes(toc, reviewed_toc)
+        change_report = build_toc_review_change_report(toc, reviewed_toc)
+        level_changes = int(change_report.get("level_change_count", 0) or 0)
+        level_change_file = None
+        if (
+            int(change_report.get("level_change_count", 0) or 0)
+            or int(change_report.get("added_count", 0) or 0)
+            or int(change_report.get("removed_count", 0) or 0)
+        ):
+            level_change_file = write_stage_file(
+                args=args,
+                pdf_path=pdf_path,
+                provider="gemma",
+                model=model,
+                stage="level_review_changes",
+                chunk=stage_label,
+                payload={
+                    "review_stage": stage_label,
+                    "input_chapters": len(toc.get("chapters", []) or []),
+                    "output_chapters": len(reviewed_toc.get("chapters", []) or []),
+                    **change_report,
+                },
+            )
         status = {
             "enabled": True,
             "success": True,
@@ -5663,6 +5989,9 @@ def review_gemma_toc_levels(
             "input_chapters": len(toc.get("chapters", []) or []),
             "output_chapters": len(reviewed_toc.get("chapters", []) or []),
             "level_changes": level_changes,
+            "added_entries": int(change_report.get("added_count", 0) or 0),
+            "removed_entries": int(change_report.get("removed_count", 0) or 0),
+            "level_change_file": str(level_change_file) if level_change_file is not None else None,
             "possible_invalid_heading_candidate_count": len(invalid_heading_candidates),
             "possible_invalid_heading_candidates": invalid_heading_candidates,
         }
@@ -6175,6 +6504,7 @@ def generate_toc_from_pdf_gemma_text(
         max_clusters=max(1, int(getattr(args, "gemma_document_style_max_clusters", DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_CLUSTERS))),
         max_examples=max(1, int(getattr(args, "gemma_document_style_max_examples", DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_EXAMPLES))),
     )
+    setattr(args, "_gemma_document_style_reference", document_style_summary)
     document_style_text = str(document_style_summary.get("prompt_text") or "").strip()
     print(
         f"  Gemma PDF extraction completed: {len(pages)} pages, {extracted_chars} chars, mode={extraction_mode}",
@@ -6189,6 +6519,7 @@ def generate_toc_from_pdf_gemma_text(
         gemma_document_style_reference_available=bool(document_style_summary.get("available")),
         gemma_document_style_cluster_count=document_style_summary.get("style_cluster_count", 0),
         gemma_document_style_title_like_example_count=len(document_style_summary.get("title_like_examples", []) or []),
+        gemma_running_header_footer_style_count=len(document_style_summary.get("running_header_footer_styles", []) or []),
         **extraction_metadata,
     )
     update_processing_metadata(
