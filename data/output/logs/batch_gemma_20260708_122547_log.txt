@@ -50,3 +50,197 @@ Processing started: 2편1-4장(2021).pdf
   Gemma chunked TOC local merge started
   Gemma chunked TOC local merge completed
   Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) completed: 225 chapters / level changes 0
+Completed: data/output/2_1-4_2021_gemma_20260708_123954_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 9m 19.1s (559.119s)
+  title: 역학과 그 응용
+  chapters: 225
+Processing started: 2편5-8장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 177 pages, 582690 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/2_5-8_2021_gemma_20260708_122547_parsed_pdf.txt
+  Gemma text chunk processing started: 5 chunks
+  Gemma chunk 1/5 request: pages 1-39
+  Gemma input chunk 1 saved: data/output/input_chunks/2_5-8_2021_gemma_20260708_122547/chunk_1_pages_1-39.json
+  Gemma level review(chunk 1/5) started
+  Gemma level review(chunk 1/5) completed: 80 chapters / level changes 52
+  Gemma chunk 1 completed: 80 chapters
+  Gemma chunk 2/5 request: pages 40-74
+  Gemma input chunk 2 saved: data/output/input_chunks/2_5-8_2021_gemma_20260708_122547/chunk_2_pages_40-74.json
+  Gemma level review(chunk 2/5) started
+  Gemma level review(chunk 2/5) completed: 54 chapters / level changes 0
+  Gemma chunk 2 completed: 54 chapters
+  Gemma chunk 3/5 request: pages 75-110
+  Gemma input chunk 3 saved: data/output/input_chunks/2_5-8_2021_gemma_20260708_122547/chunk_3_pages_75-110.json
+  Gemma level review(chunk 3/5) started
+  Gemma level review(chunk 3/5) completed: 68 chapters / level changes 35
+  Gemma chunk 3 completed: 68 chapters
+  Gemma chunk 4/5 request: pages 111-145
+  Gemma input chunk 4 saved: data/output/input_chunks/2_5-8_2021_gemma_20260708_122547/chunk_4_pages_111-145.json
+  Gemma level review(chunk 4/5) started
+  Gemma level review(chunk 4/5) completed: 66 chapters / level changes 40
+  Gemma chunk 4 completed: 66 chapters
+  Gemma chunk 5/5 request: pages 146-178
+  Gemma input chunk 5 saved: data/output/input_chunks/2_5-8_2021_gemma_20260708_122547/chunk_5_pages_146-178.json
+  Gemma level review(chunk 5/5) started
+  Gemma level review(chunk 5/5) completed: 48 chapters / level changes 1
+  Gemma chunk 5 completed: 48 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) completed: 248 chapters / level changes 68
+Completed: data/output/2_5-8_2021_gemma_20260708_125319_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 13m 24.4s (804.431s)
+  title: 제5장 타당도와 신뢰도 및 제6장 역학연구방법론
+  chapters: 248
+Processing started: 2편9-11장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 271 pages, 907916 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/2_9-11_2021_gemma_20260708_122547_parsed_pdf.txt
+  Gemma text chunk processing started: 8 chunks
+  Gemma chunk 1/8 request: pages 1-35
+  Gemma input chunk 1 saved: data/output/input_chunks/2_9-11_2021_gemma_20260708_122547/chunk_1_pages_1-35.json
+  Gemma level review(chunk 1/8) started
+  Gemma level review(chunk 1/8) completed: 50 chapters / level changes 0
+  Gemma chunk 1 completed: 50 chapters
+  Gemma chunk 2/8 request: pages 36-73
+  Gemma input chunk 2 saved: data/output/input_chunks/2_9-11_2021_gemma_20260708_122547/chunk_2_pages_36-73.json
+  Gemma level review(chunk 2/8) started
+  Gemma level review(chunk 2/8) completed: 66 chapters / level changes 60
+  Gemma chunk 2 completed: 66 chapters
+  Gemma chunk 3/8 request: pages 74-111
+  Gemma input chunk 3 saved: data/output/input_chunks/2_9-11_2021_gemma_20260708_122547/chunk_3_pages_74-111.json
+  Gemma level review(chunk 3/8) started
+  Gemma level review(chunk 3/8) completed: 100 chapters / level changes 0
+  Gemma chunk 3 completed: 100 chapters
+  Gemma chunk 4/8 request: pages 112-148
+  Gemma input chunk 4 saved: data/output/input_chunks/2_9-11_2021_gemma_20260708_122547/chunk_4_pages_112-148.json
+  Gemma level review(chunk 4/8) started
+  Gemma level review(chunk 4/8) completed: 78 chapters / level changes 0
+  Gemma chunk 4 completed: 78 chapters
+  Gemma chunk 5/8 request: pages 149-182
+  Gemma input chunk 5 saved: data/output/input_chunks/2_9-11_2021_gemma_20260708_122547/chunk_5_pages_149-182.json
+  Gemma level review(chunk 5/8) started
+  Gemma level review(chunk 5/8) completed: 49 chapters / level changes 45
+  Gemma chunk 5 completed: 49 chapters
+  Gemma chunk 6/8 request: pages 183-214
+  Gemma input chunk 6 saved: data/output/input_chunks/2_9-11_2021_gemma_20260708_122547/chunk_6_pages_183-214.json
+  Gemma level review(chunk 6/8) started
+  Gemma level review(chunk 6/8) completed: 37 chapters / level changes 0
+  Gemma chunk 6 completed: 37 chapters
+  Gemma chunk 7/8 request: pages 215-248
+  Gemma input chunk 7 saved: data/output/input_chunks/2_9-11_2021_gemma_20260708_122547/chunk_7_pages_215-248.json
+  Gemma level review(chunk 7/8) started
+  Gemma level review(chunk 7/8) completed: 41 chapters / level changes 0
+  Gemma chunk 7 completed: 41 chapters
+  Gemma chunk 8/8 request: pages 249-272
+  Gemma input chunk 8 saved: data/output/input_chunks/2_9-11_2021_gemma_20260708_122547/chunk_8_pages_249-272.json
+  Gemma level review(chunk 8/8) started
+  Gemma level review(chunk 8/8) completed: 21 chapters / level changes 0
+  Gemma chunk 8 completed: 21 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) failed; keeping previous TOC: Gemma vLLM server request failed: HTTP 400 Bad Request. URL=http://127.0.0.1:8000/v1/chat/completions. Body: {"error":{"message":"This model's maximum context length is 131072 tokens. However, you requested 16384 output tokens and your prompt contains at least 114689 input tokens, for a total of at least 131073 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=114689)","type":"BadRequestError","param":"input_tokens","code":400}}
+Completed: data/output/2_9-11_2021_gemma_20260708_130901_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 15m 42.1s (942.117s)
+  title: 제9장 근거기반의료와 임상적 의사결정
+  chapters: 442
+Processing started: 3편1,2장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 111 pages, 371441 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/3_1_2_2021_gemma_20260708_122547_parsed_pdf.txt
+  Gemma text chunk processing started: 4 chunks
+  Gemma chunk 1/4 request: pages 1-36
+  Gemma input chunk 1 saved: data/output/input_chunks/3_1_2_2021_gemma_20260708_122547/chunk_1_pages_1-36.json
+  Gemma level review(chunk 1/4) started
+  Gemma level review(chunk 1/4) completed: 56 chapters / level changes 0
+  Gemma chunk 1 completed: 56 chapters
+  Gemma chunk 2/4 request: pages 37-70
+  Gemma input chunk 2 saved: data/output/input_chunks/3_1_2_2021_gemma_20260708_122547/chunk_2_pages_37-70.json
+  Gemma level review(chunk 2/4) started
+  Gemma level review(chunk 2/4) completed: 67 chapters / level changes 0
+  Gemma chunk 2 completed: 67 chapters
+  Gemma chunk 3/4 request: pages 71-106
+  Gemma input chunk 3 saved: data/output/input_chunks/3_1_2_2021_gemma_20260708_122547/chunk_3_pages_71-106.json
+  Gemma level review(chunk 3/4) started
+  Gemma level review(chunk 3/4) completed: 111 chapters / level changes 0
+  Gemma chunk 3 completed: 111 chapters
+  Gemma chunk 4/4 request: pages 107-111
+  Gemma input chunk 4 saved: data/output/input_chunks/3_1_2_2021_gemma_20260708_122547/chunk_4_pages_107-111.json
+  Gemma level review(chunk 4/4) started
+  Gemma level review(chunk 4/4) completed: 10 chapters / level changes 0
+  Gemma chunk 4 completed: 10 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) completed: 229 chapters / level changes 0
+Completed: data/output/3_1_2_2021_gemma_20260708_131953_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 10m 52.2s (652.154s)
+  title: 환경과 건강
+  chapters: 229
+Processing started: 3편3,4장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 103 pages, 343956 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/3_3_4_2021_gemma_20260708_122547_parsed_pdf.txt
+  Gemma text chunk processing started: 3 chunks
+  Gemma chunk 1/3 request: pages 1-35
+  Gemma input chunk 1 saved: data/output/input_chunks/3_3_4_2021_gemma_20260708_122547/chunk_1_pages_1-35.json
+  Gemma level review(chunk 1/3) started
+  Gemma level review(chunk 1/3) completed: 114 chapters / level changes 0
+  Gemma chunk 1 completed: 114 chapters
+  Gemma chunk 2/3 request: pages 36-71
+  Gemma input chunk 2 saved: data/output/input_chunks/3_3_4_2021_gemma_20260708_122547/chunk_2_pages_36-71.json
+  Gemma level review(chunk 2/3) started
+  Gemma level review(chunk 2/3) completed: 59 chapters / level changes 57
+  Gemma chunk 2 completed: 59 chapters
+  Gemma chunk 3/3 request: pages 72-103
+  Gemma input chunk 3 saved: data/output/input_chunks/3_3_4_2021_gemma_20260708_122547/chunk_3_pages_72-103.json
+  Gemma level review(chunk 3/3) started
+  Gemma level review(chunk 3/3) completed: 83 chapters / level changes 0
+  Gemma chunk 3 completed: 83 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) completed: 240 chapters / level changes 182
+Completed: data/output/3_3_4_2021_gemma_20260708_133037_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 10m 44.1s (644.149s)
+  title: 제3장 화학적 요인
+  chapters: 240
+Processing started: 3편5-7장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 138 pages, 450269 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/3_5-7_2021_gemma_20260708_122547_parsed_pdf.txt
+  Gemma text chunk processing started: 4 chunks
+  Gemma chunk 1/4 request: pages 1-34
+  Gemma input chunk 1 saved: data/output/input_chunks/3_5-7_2021_gemma_20260708_122547/chunk_1_pages_1-34.json
+  Gemma level review(chunk 1/4) started
+  Gemma level review(chunk 1/4) completed: 84 chapters / level changes 0
+  Gemma chunk 1 completed: 84 chapters
+  Gemma chunk 2/4 request: pages 35-73
+  Gemma input chunk 2 saved: data/output/input_chunks/3_5-7_2021_gemma_20260708_122547/chunk_2_pages_35-73.json
+  Gemma level review(chunk 2/4) started
+  Gemma level review(chunk 2/4) completed: 82 chapters / level changes 5
+  Gemma chunk 2 completed: 82 chapters
+  Gemma chunk 3/4 request: pages 74-108
+  Gemma input chunk 3 saved: data/output/input_chunks/3_5-7_2021_gemma_20260708_122547/chunk_3_pages_74-108.json
+  Gemma level review(chunk 3/4) started
+  Gemma level review(chunk 3/4) completed: 78 chapters / level changes 0
+  Gemma chunk 3 completed: 78 chapters
+  Gemma chunk 4/4 request: pages 109-139
+  Gemma input chunk 4 saved: data/output/input_chunks/3_5-7_2021_gemma_20260708_122547/chunk_4_pages_109-139.json
