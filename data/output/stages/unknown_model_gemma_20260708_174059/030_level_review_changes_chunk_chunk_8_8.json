@@ -1,0 +1,28 @@
+{
+    "timestamp": "2026-07-08 17:51:52",
+    "stage_index": 30,
+    "stage": "level_review_changes",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "chunk 8/8",
+    "review_stage": "chunk 8/8",
+    "input_chapters": 18,
+    "output_chapters": 19,
+    "level_change_count": 0,
+    "added_count": 1,
+    "removed_count": 0,
+    "level_changes": [],
+    "added_entries": [
+        {
+            "after": {
+                "level": 1,
+                "chapter": "Answers to study questions",
+                "page": 202,
+                "level_reason": "Top-level section for the Annex part of the book, identified by running header and distinct content shift."
+            }
+        }
+    ],
+    "removed_entries": []
+}

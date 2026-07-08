@@ -1,0 +1,729 @@
+{
+    "timestamp": "2026-07-08 17:51:52",
+    "stage_index": 31,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "8",
+    "total_chunks": 8,
+    "start_page": 195,
+    "end_page": 226,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 8/8",
+        "input_chapters": 18,
+        "output_chapters": 19,
+        "level_changes": 0,
+        "added_entries": 1,
+        "removed_entries": 0,
+        "level_change_file": "data/output/stages/unknown_model_gemma_20260708_174059/030_level_review_changes_chunk_chunk_8_8.json",
+        "possible_invalid_heading_candidate_count": 12,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "Study questions",
+                "level": 2,
+                "page": 199,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Major section style (s=20.0, r=2.50) used for chapter review.",
+                "font_size": 20.0,
+                "size_ratio": 2.5,
+                "left_indent": 140.0,
+                "vertical_position": 524.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=199, line=233, s=20.0, r=2.5, x=140.0, y=524.0: \"Study questions\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "answerstostudyquestions",
+                    "display_text": "Answers to study questions",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 354.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 8,
+                    "page_count": 8,
+                    "page_range": "202-216",
+                    "samples": [
+                        "Answers to study questions 189",
+                        "Answers to study questions 191",
+                        "Answers to study questions 193"
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 1",
+                "level": 2,
+                "page": 202,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Section header in the Answers to study questions part of the Annex (s=20.0, r=2.00).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 83.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=202, line=283, s=20.0, r=2.0, x=55.0, y=83.0: \"Chapter 1\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 89,
+                    "page_count": 89,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 2",
+                "level": 2,
+                "page": 203,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Section header in the Answers to study questions part of the Annex (s=20.0, r=2.00).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 83.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=203, line=335, s=20.0, r=2.0, x=140.0, y=83.0: \"Chapter 2\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 89,
+                    "page_count": 89,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 3",
+                "level": 2,
+                "page": 205,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Section header in the Answers to study questions part of the Annex (s=20.0, r=2.00).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 83.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=205, line=398, s=20.0, r=2.0, x=140.0, y=83.0: \"Chapter 3\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 89,
+                    "page_count": 89,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 4",
+                "level": 2,
+                "page": 207,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Section header in the Answers to study questions part of the Annex (s=20.0, r=2.00).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 83.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=207, line=465, s=20.0, r=2.0, x=140.0, y=83.0: \"Chapter 4\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 89,
+                    "page_count": 89,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 5",
+                "level": 2,
+                "page": 208,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Section header in the Answers to study questions part of the Annex (s=20.0, r=2.00).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 83.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=208, line=509, s=20.0, r=2.0, x=55.0, y=83.0: \"Chapter 5\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 89,
+                    "page_count": 89,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 6",
+                "level": 2,
+                "page": 210,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Section header in the Answers to study questions part of the Annex (s=20.0, r=2.00).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 83.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=210, line=587, s=20.0, r=2.0, x=55.0, y=83.0: \"Chapter 6\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 89,
+                    "page_count": 89,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 7",
+                "level": 2,
+                "page": 211,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Section header in the Answers to study questions part of the Annex (s=20.0, r=2.00).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 83.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=211, line=622, s=20.0, r=2.0, x=140.0, y=83.0: \"Chapter 7\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 89,
+                    "page_count": 89,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 8",
+                "level": 2,
+                "page": 213,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Section header in the Answers to study questions part of the Annex (s=20.0, r=2.00).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 83.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=213, line=677, s=20.0, r=2.0, x=140.0, y=83.0: \"Chapter 8\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 89,
+                    "page_count": 89,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 9",
+                "level": 2,
+                "page": 214,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Section header in the Answers to study questions part of the Annex (s=20.0, r=2.00).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 83.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=214, line=720, s=20.0, r=2.0, x=55.0, y=83.0: \"Chapter 9\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 89,
+                    "page_count": 89,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 10",
+                "level": 2,
+                "page": 215,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Section header in the Answers to study questions part of the Annex (s=20.0, r=2.00).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 83.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=215, line=758, s=20.0, r=2.0, x=140.0, y=83.0: \"Chapter 10\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 89,
+                    "page_count": 89,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 11",
+                "level": 2,
+                "page": 217,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Section header in the Answers to study questions part of the Annex (s=20.0, r=2.00).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 83.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=217, line=812, s=20.0, r=2.0, x=140.0, y=83.0: \"Chapter 11\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 89,
+                    "page_count": 89,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            }
+        ]
+    },
+    "toc": {
+        "title": "Basic epidemiology",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "Writing the protocol",
+                "page": 195,
+                "level_reason": "Subsection style (s=14.0, r=1.40) under the implied Chapter 11 structure.",
+                "_layout_page": 195,
+                "_layout_x": 140.0,
+                "_layout_y": 119.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Writing the protocol",
+                "_source_order": 0
+            },
+            {
+                "level": 3,
+                "chapter": "Doing the research",
+                "page": 196,
+                "level_reason": "Subsection style (s=14.0, r=1.40) consistent with previous section.",
+                "_layout_page": 196,
+                "_layout_x": 55.0,
+                "_layout_y": 160.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Doing the research",
+                "_source_order": 1
+            },
+            {
+                "level": 3,
+                "chapter": "Analysing the data",
+                "page": 196,
+                "level_reason": "Subsection style (s=14.0, r=1.40) consistent with previous section.",
+                "_layout_page": 196,
+                "_layout_x": 55.0,
+                "_layout_y": 407.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Analysing the data",
+                "_source_order": 2
+            },
+            {
+                "level": 3,
+                "chapter": "Getting published",
+                "page": 196,
+                "level_reason": "Subsection style (s=14.0, r=1.40) consistent with previous section.",
+                "_layout_page": 196,
+                "_layout_x": 55.0,
+                "_layout_y": 613.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Getting published",
+                "_source_order": 3
+            },
+            {
+                "level": 2,
+                "chapter": "Further reading",
+                "page": 197,
+                "level_reason": "Major section style (s=20.0, r=2.23) used for end-of-chapter materials.",
+                "_layout_page": 197,
+                "_layout_x": 240.0,
+                "_layout_y": 184.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.23,
+                "_layout_text": "Further reading",
+                "_source_order": 4
+            },
+            {
+                "level": 2,
+                "chapter": "Further training",
+                "page": 198,
+                "level_reason": "Major section style (s=20.0, r=2.50) consistent with 'Further reading'.",
+                "_layout_page": 198,
+                "_layout_x": 55.0,
+                "_layout_y": 566.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.5,
+                "_layout_text": "Further training",
+                "_source_order": 5
+            },
+            {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 199,
+                "level_reason": "Major section style (s=20.0, r=2.50) used for chapter review.",
+                "_layout_page": 199,
+                "_layout_x": 140.0,
+                "_layout_y": 524.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.5,
+                "_layout_text": "Study questions",
+                "_source_order": 6
+            },
+            {
+                "level": 1,
+                "chapter": "Answers to study questions",
+                "page": 202,
+                "level_reason": "Top-level section for the Annex part of the book, identified by running header and distinct content shift."
+            },
+            {
+                "level": 2,
+                "chapter": "Chapter 1",
+                "page": 202,
+                "level_reason": "Section header within the Answers to study questions (s=20.0, r=2.00).",
+                "_layout_page": 202,
+                "_layout_x": 55.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chapter 1",
+                "_source_order": 7
+            },
+            {
+                "level": 2,
+                "chapter": "Chapter 2",
+                "page": 203,
+                "level_reason": "Section header within the Answers to study questions (s=20.0, r=2.00).",
+                "_layout_page": 203,
+                "_layout_x": 140.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chapter 2",
+                "_source_order": 8
+            },
+            {
+                "level": 2,
+                "chapter": "Chapter 3",
+                "page": 205,
+                "level_reason": "Section header within the Answers to study questions (s=20.0, r=2.00).",
+                "_layout_page": 205,
+                "_layout_x": 140.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chapter 3",
+                "_source_order": 9
+            },
+            {
+                "level": 2,
+                "chapter": "Chapter 4",
+                "page": 207,
+                "level_reason": "Section header within the Answers to study questions (s=20.0, r=2.00).",
+                "_layout_page": 207,
+                "_layout_x": 140.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chapter 4",
+                "_source_order": 10
+            },
+            {
+                "level": 2,
+                "chapter": "Chapter 5",
+                "page": 208,
+                "level_reason": "Section header within the Answers to study questions (s=20.0, r=2.00).",
+                "_layout_page": 208,
+                "_layout_x": 55.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chapter 5",
+                "_source_order": 11
+            },
+            {
+                "level": 2,
+                "chapter": "Chapter 6",
+                "page": 210,
+                "level_reason": "Section header within the Answers to study questions (s=20.0, r=2.00).",
+                "_layout_page": 210,
+                "_layout_x": 55.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chapter 6",
+                "_source_order": 12
+            },
+            {
+                "level": 2,
+                "chapter": "Chapter 7",
+                "page": 211,
+                "level_reason": "Section header within the Answers to study questions (s=20.0, r=2.00).",
+                "_layout_page": 211,
+                "_layout_x": 140.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chapter 7",
+                "_source_order": 13
+            },
+            {
+                "level": 2,
+                "chapter": "Chapter 8",
+                "page": 213,
+                "level_reason": "Section header within the Answers to study questions (s=20.0, r=2.00).",
+                "_layout_page": 213,
+                "_layout_x": 140.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chapter 8",
+                "_source_order": 14
+            },
+            {
+                "level": 2,
+                "chapter": "Chapter 9",
+                "page": 214,
+                "level_reason": "Section header within the Answers to study questions (s=20.0, r=2.00).",
+                "_layout_page": 214,
+                "_layout_x": 55.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chapter 9",
+                "_source_order": 15
+            },
+            {
+                "level": 2,
+                "chapter": "Chapter 10",
+                "page": 215,
+                "level_reason": "Section header within the Answers to study questions (s=20.0, r=2.00).",
+                "_layout_page": 215,
+                "_layout_x": 140.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chapter 10",
+                "_source_order": 16
+            },
+            {
+                "level": 2,
+                "chapter": "Chapter 11",
+                "page": 217,
+                "level_reason": "Section header within the Answers to study questions (s=20.0, r=2.00).",
+                "_layout_page": 217,
+                "_layout_x": 140.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chapter 11",
+                "_source_order": 17
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"Basic epidemiology\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"Writing the protocol\",\n      \"page\": 195,\n      \"level_reason\": \"Subsection style (s=14.0, r=1.40) under the implied Chapter 11 structure.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Doing the research\",\n      \"page\": 196,\n      \"level_reason\": \"Subsection style (s=14.0, r=1.40) consistent with previous section.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Analysing the data\",\n      \"page\": 196,\n      \"level_reason\": \"Subsection style (s=14.0, r=1.40) consistent with previous section.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Getting published\",\n      \"page\": 196,\n      \"level_reason\": \"Subsection style (s=14.0, r=1.40) consistent with previous section.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Further reading\",\n      \"page\": 197,\n      \"level_reason\": \"Major section style (s=20.0, r=2.23) used for end-of-chapter materials.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Further training\",\n      \"page\": 198,\n      \"level_reason\": \"Major section style (s=20.0, r=2.50) consistent with 'Further reading'.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Study questions\",\n      \"page\": 199,\n      \"level_reason\": \"Major section style (s=20.0, r=2.50) used for chapter review.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Answers to study questions\",\n      \"page\": 202,\n      \"level_reason\": \"Top-level section for the Annex part of the book, identified by running header and distinct content shift.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chapter 1\",\n      \"page\": 202,\n      \"level_reason\": \"Section header within the Answers to study questions (s=20.0, r=2.00).\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chapter 2\",\n      \"page\": 203,\n      \"level_reason\": \"Section header within the Answers to study questions (s=20.0, r=2.00).\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chapter 3\",\n      \"page\": 205,\n      \"level_reason\": \"Section header within the Answers to study questions (s=20.0, r=2.00).\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chapter 4\",\n      \"page\": 207,\n      \"level_reason\": \"Section header within the Answers to study questions (s=20.0, r=2.00).\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chapter 5\",\n      \"page\": 208,\n      \"level_reason\": \"Section header within the Answers to study questions (s=20.0, r=2.00).\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chapter 6\",\n      \"page\": 210,\n      \"level_reason\": \"Section header within the Answers to study questions (s=20.0, r=2.00).\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chapter 7\",\n      \"page\": 211,\n      \"level_reason\": \"Section header within the Answers to study questions (s=20.0, r=2.00).\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chapter 8\",\n      \"page\": 213,\n      \"level_reason\": \"Section header within the Answers to study questions (s=20.0, r=2.00).\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chapter 9\",\n      \"page\": 214,\n      \"level_reason\": \"Section header within the Answers to study questions (s=20.0, r=2.00).\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chapter 10\",\n      \"page\": 215,\n      \"level_reason\": \"Section header within the Answers to study questions (s=20.0, r=2.00).\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chapter 11\",\n      \"page\": 217,\n      \"level_reason\": \"Section header within the Answers to study questions (s=20.0, r=2.00).\"\n    }\n  ]\n}\n```"
+}

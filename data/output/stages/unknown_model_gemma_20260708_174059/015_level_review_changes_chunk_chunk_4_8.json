@@ -1,0 +1,36 @@
+{
+    "timestamp": "2026-07-08 17:47:04",
+    "stage_index": 15,
+    "stage": "level_review_changes",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "chunk 4/8",
+    "review_stage": "chunk 4/8",
+    "input_chapters": 45,
+    "output_chapters": 47,
+    "level_change_count": 0,
+    "added_count": 2,
+    "removed_count": 0,
+    "level_changes": [],
+    "added_entries": [
+        {
+            "after": {
+                "level": 3,
+                "chapter": "Attributable fraction",
+                "page": 97,
+                "level_reason": "Subsection under The concept of cause, indicated by bold italic style s=9.0, r=0.9."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "Multiple factors",
+                "page": 97,
+                "level_reason": "Subsection under The concept of cause, indicated by bold italic style s=9.0, r=0.9."
+            }
+        }
+    ],
+    "removed_entries": []
+}

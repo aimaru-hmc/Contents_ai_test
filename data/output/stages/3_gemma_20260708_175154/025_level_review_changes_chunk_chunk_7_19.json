@@ -1,0 +1,44 @@
+{
+    "timestamp": "2026-07-08 18:11:35",
+    "stage_index": 25,
+    "stage": "level_review_changes",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "chunk 7/19",
+    "review_stage": "chunk 7/19",
+    "input_chapters": 63,
+    "output_chapters": 63,
+    "level_change_count": 0,
+    "added_count": 1,
+    "removed_count": 1,
+    "level_changes": [],
+    "added_entries": [
+        {
+            "after": {
+                "level": 2,
+                "chapter": "제8장 지역사회보건",
+                "page": 207,
+                "level_reason": "Chapter title identified from running headers and structural patterns as a major section of Part 4."
+            }
+        }
+    ],
+    "removed_entries": [
+        {
+            "before": {
+                "level": 2,
+                "chapter": "제8장 지역사회보건",
+                "page": 218,
+                "level_reason": "Running header indicates this is Chapter 8, a major section of Part 4.",
+                "_layout_page": 219,
+                "_layout_x": 470.0,
+                "_layout_y": 53.0,
+                "_layout_font_size": 8.0,
+                "_layout_size_ratio": 0.84,
+                "_layout_text": "제8장 지역사회보건",
+                "_source_order": 0
+            }
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+Run log saved: data/output/logs/주교재_gemma_20260708_174059_log.txt
+Processing started: 주교재.pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 221 pages, 937307 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/unknown_model_gemma_20260708_174059_parsed_pdf.txt
+  Gemma text chunk processing started: 8 chunks
+  Gemma chunk 1/8 request: pages 2-34
+  Gemma input chunk 1 saved: data/output/input_chunks/unknown_model_gemma_20260708_174059/chunk_1_pages_2-34.json
+  Gemma level review(chunk 1/8) started
+  Gemma level review(chunk 1/8) completed: 34 chapters / level changes 0
+  Gemma chunk 1 completed: 34 chapters
+  Gemma chunk 2/8 request: pages 35-60
+  Gemma input chunk 2 saved: data/output/input_chunks/unknown_model_gemma_20260708_174059/chunk_2_pages_35-60.json
+  Gemma level review(chunk 2/8) started
+  Gemma level review(chunk 2/8) completed: 48 chapters / level changes 13
+  Gemma chunk 2 completed: 48 chapters
+  Gemma chunk 3/8 request: pages 61-87
+  Gemma input chunk 3 saved: data/output/input_chunks/unknown_model_gemma_20260708_174059/chunk_3_pages_61-87.json
+  Gemma level review(chunk 3/8) started
+  Gemma level review(chunk 3/8) completed: 58 chapters / level changes 0
+  Gemma chunk 3 completed: 58 chapters
+  Gemma chunk 4/8 request: pages 88-113
+  Gemma input chunk 4 saved: data/output/input_chunks/unknown_model_gemma_20260708_174059/chunk_4_pages_88-113.json
+  Gemma level review(chunk 4/8) started
+  Gemma level review(chunk 4/8) completed: 47 chapters / level changes 0
+  Gemma chunk 4 completed: 47 chapters
+  Gemma chunk 5/8 request: pages 114-139
+  Gemma input chunk 5 saved: data/output/input_chunks/unknown_model_gemma_20260708_174059/chunk_5_pages_114-139.json
+  Gemma level review(chunk 5/8) started
+  Gemma level review(chunk 5/8) completed: 40 chapters / level changes 0
+  Gemma chunk 5 completed: 40 chapters
+  Gemma chunk 6/8 request: pages 140-166
+  Gemma input chunk 6 saved: data/output/input_chunks/unknown_model_gemma_20260708_174059/chunk_6_pages_140-166.json
+  Gemma level review(chunk 6/8) started
+  Gemma level review(chunk 6/8) completed: 48 chapters / level changes 2
+  Gemma chunk 6 completed: 48 chapters
+  Gemma chunk 7/8 request: pages 167-194
+  Gemma input chunk 7 saved: data/output/input_chunks/unknown_model_gemma_20260708_174059/chunk_7_pages_167-194.json
+  Gemma level review(chunk 7/8) started
+  Gemma level review(chunk 7/8) completed: 41 chapters / level changes 7
+  Gemma chunk 7 completed: 41 chapters
+  Gemma chunk 8/8 request: pages 195-226
+  Gemma input chunk 8 saved: data/output/input_chunks/unknown_model_gemma_20260708_174059/chunk_8_pages_195-226.json
+  Gemma level review(chunk 8/8) started
+  Gemma level review(chunk 8/8) completed: 19 chapters / level changes 0
+  Gemma chunk 8 completed: 19 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) failed; keeping previous TOC: Gemma vLLM server request failed: HTTP 400 Bad Request. URL=http://127.0.0.1:8000/v1/chat/completions. Body: {"error":{"message":"This model's maximum context length is 131072 tokens. However, you requested 16384 output tokens and your prompt contains at least 114689 input tokens, for a total of at least 131073 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=114689)","type":"BadRequestError","param":"input_tokens","code":400}}
+Completed: data/output/unknown_model_gemma_20260708_175153_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 10m 53.4s (653.417s)
+  title: Basic epidemiology
+  chapters: 335
+Processing result: success 1 / failed 0
+Run log saved: data/output/logs/주교재_gemma_20260708_174059_log.txt

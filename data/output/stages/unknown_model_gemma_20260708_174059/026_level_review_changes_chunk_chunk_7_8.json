@@ -1,0 +1,319 @@
+{
+    "timestamp": "2026-07-08 17:51:12",
+    "stage_index": 26,
+    "stage": "level_review_changes",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "chunk 7/8",
+    "review_stage": "chunk 7/8",
+    "input_chapters": 45,
+    "output_chapters": 41,
+    "level_change_count": 7,
+    "added_count": 0,
+    "removed_count": 4,
+    "level_changes": [
+        {
+            "chapter": "The planning cycle",
+            "page": 183,
+            "before_level": 3,
+            "after_level": 2,
+            "before_level_reason": "Subsection style (s=20.0, r=2.00) under Health planning.",
+            "after_level_reason": "Corrected from level 3 to level 2 based on style (s=20.0, r=2.00) matching other major sections.",
+            "before": {
+                "level": 3,
+                "chapter": "The planning cycle",
+                "page": 183,
+                "level_reason": "Subsection style (s=20.0, r=2.00) under Health planning.",
+                "_layout_page": 183,
+                "_layout_x": 140.0,
+                "_layout_y": 132.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "The planning cycle",
+                "_source_order": 29
+            },
+            "after": {
+                "level": 2,
+                "chapter": "The planning cycle",
+                "page": 183,
+                "level_reason": "Corrected from level 3 to level 2 based on style (s=20.0, r=2.00) matching other major sections.",
+                "_layout_page": 183,
+                "_layout_x": 140.0,
+                "_layout_y": 132.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "The planning cycle",
+                "_source_order": 29
+            }
+        },
+        {
+            "chapter": "Assessing burden",
+            "page": 184,
+            "before_level": 4,
+            "after_level": 3,
+            "before_level_reason": "Lower level heading style (s=14.0, r=1.56) within The planning cycle.",
+            "after_level_reason": "Subsection style (s=14.0, r=1.56) within The planning cycle.",
+            "before": {
+                "level": 4,
+                "chapter": "Assessing burden",
+                "page": 184,
+                "level_reason": "Lower level heading style (s=14.0, r=1.56) within The planning cycle.",
+                "_layout_page": 184,
+                "_layout_x": 55.0,
+                "_layout_y": 160.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.56,
+                "_layout_text": "Assessing burden",
+                "_source_order": 30
+            },
+            "after": {
+                "level": 3,
+                "chapter": "Assessing burden",
+                "page": 184,
+                "level_reason": "Subsection style (s=14.0, r=1.56) within The planning cycle.",
+                "_layout_page": 184,
+                "_layout_x": 55.0,
+                "_layout_y": 160.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.56,
+                "_layout_text": "Assessing burden",
+                "_source_order": 30
+            }
+        },
+        {
+            "chapter": "Understanding causes",
+            "page": 185,
+            "before_level": 4,
+            "after_level": 3,
+            "before_level_reason": "Lower level heading style (s=14.0, r=1.40) within The planning cycle.",
+            "after_level_reason": "Corrected from level 4 to level 3 based on style (s=14.0, r=1.40) matching other subsections.",
+            "before": {
+                "level": 4,
+                "chapter": "Understanding causes",
+                "page": 185,
+                "level_reason": "Lower level heading style (s=14.0, r=1.40) within The planning cycle.",
+                "_layout_page": 185,
+                "_layout_x": 140.0,
+                "_layout_y": 397.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Understanding causes",
+                "_source_order": 31
+            },
+            "after": {
+                "level": 3,
+                "chapter": "Understanding causes",
+                "page": 185,
+                "level_reason": "Corrected from level 4 to level 3 based on style (s=14.0, r=1.40) matching other subsections.",
+                "_layout_page": 185,
+                "_layout_x": 140.0,
+                "_layout_y": 397.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Understanding causes",
+                "_source_order": 31
+            }
+        },
+        {
+            "chapter": "Measuring effectiveness of interventions",
+            "page": 185,
+            "before_level": 4,
+            "after_level": 3,
+            "before_level_reason": "Lower level heading style (s=14.0, r=1.40) within The planning cycle.",
+            "after_level_reason": "Corrected from level 4 to level 3 based on style (s=14.0, r=1.40) matching other subsections.",
+            "before": {
+                "level": 4,
+                "chapter": "Measuring effectiveness of interventions",
+                "page": 185,
+                "level_reason": "Lower level heading style (s=14.0, r=1.40) within The planning cycle.",
+                "_layout_page": 185,
+                "_layout_x": 140.0,
+                "_layout_y": 527.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Measuring effectiveness of interventions",
+                "_source_order": 32
+            },
+            "after": {
+                "level": 3,
+                "chapter": "Measuring effectiveness of interventions",
+                "page": 185,
+                "level_reason": "Corrected from level 4 to level 3 based on style (s=14.0, r=1.40) matching other subsections.",
+                "_layout_page": 185,
+                "_layout_x": 140.0,
+                "_layout_y": 527.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Measuring effectiveness of interventions",
+                "_source_order": 32
+            }
+        },
+        {
+            "chapter": "Assessing efficiency",
+            "page": 186,
+            "before_level": 4,
+            "after_level": 3,
+            "before_level_reason": "Lower level heading style (s=14.0, r=1.40) within The planning cycle.",
+            "after_level_reason": "Corrected from level 4 to level 3 based on style (s=14.0, r=1.40) matching other subsections.",
+            "before": {
+                "level": 4,
+                "chapter": "Assessing efficiency",
+                "page": 186,
+                "level_reason": "Lower level heading style (s=14.0, r=1.40) within The planning cycle.",
+                "_layout_page": 186,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Assessing efficiency",
+                "_source_order": 33
+            },
+            "after": {
+                "level": 3,
+                "chapter": "Assessing efficiency",
+                "page": 186,
+                "level_reason": "Corrected from level 4 to level 3 based on style (s=14.0, r=1.40) matching other subsections.",
+                "_layout_page": 186,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Assessing efficiency",
+                "_source_order": 33
+            }
+        },
+        {
+            "chapter": "Implementing interventions",
+            "page": 187,
+            "before_level": 4,
+            "after_level": 3,
+            "before_level_reason": "Lower level heading style (s=14.0, r=1.40) within The planning cycle.",
+            "after_level_reason": "Corrected from level 4 to level 3 based on style (s=14.0, r=1.40) matching other subsections.",
+            "before": {
+                "level": 4,
+                "chapter": "Implementing interventions",
+                "page": 187,
+                "level_reason": "Lower level heading style (s=14.0, r=1.40) within The planning cycle.",
+                "_layout_page": 187,
+                "_layout_x": 140.0,
+                "_layout_y": 544.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Implementing interventions",
+                "_source_order": 34
+            },
+            "after": {
+                "level": 3,
+                "chapter": "Implementing interventions",
+                "page": 187,
+                "level_reason": "Corrected from level 4 to level 3 based on style (s=14.0, r=1.40) matching other subsections.",
+                "_layout_page": 187,
+                "_layout_x": 140.0,
+                "_layout_y": 544.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Implementing interventions",
+                "_source_order": 34
+            }
+        },
+        {
+            "chapter": "Monitoring activities and measuring progress",
+            "page": 188,
+            "before_level": 4,
+            "after_level": 3,
+            "before_level_reason": "Lower level heading style (s=14.0, r=1.40) within The planning cycle.",
+            "after_level_reason": "Corrected from level 4 to level 3 based on style (s=14.0, r=1.40) matching other subsections.",
+            "before": {
+                "level": 4,
+                "chapter": "Monitoring activities and measuring progress",
+                "page": 188,
+                "level_reason": "Lower level heading style (s=14.0, r=1.40) within The planning cycle.",
+                "_layout_page": 188,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Monitoring activities and measuring progress",
+                "_source_order": 35
+            },
+            "after": {
+                "level": 3,
+                "chapter": "Monitoring activities and measuring progress",
+                "page": 188,
+                "level_reason": "Corrected from level 4 to level 3 based on style (s=14.0, r=1.40) matching other subsections.",
+                "_layout_page": 188,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Monitoring activities and measuring progress",
+                "_source_order": 35
+            }
+        }
+    ],
+    "added_entries": [],
+    "removed_entries": [
+        {
+            "before": {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 174,
+                "level_reason": "Standard end-of-chapter section style (s=20.0, r=2.00).",
+                "_layout_page": 174,
+                "_layout_x": 55.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Study questions",
+                "_source_order": 16
+            }
+        },
+        {
+            "before": {
+                "level": 2,
+                "chapter": "References",
+                "page": 174,
+                "level_reason": "Standard end-of-chapter section style (s=20.0, r=2.00).",
+                "_layout_page": 174,
+                "_layout_x": 55.0,
+                "_layout_y": 415.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "References",
+                "_source_order": 17
+            }
+        },
+        {
+            "before": {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 188,
+                "level_reason": "Standard end-of-chapter section style (s=20.0, r=2.00).",
+                "_layout_page": 188,
+                "_layout_x": 55.0,
+                "_layout_y": 599.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Study questions",
+                "_source_order": 36
+            }
+        },
+        {
+            "before": {
+                "level": 2,
+                "chapter": "References",
+                "page": 189,
+                "level_reason": "Standard end-of-chapter section style (s=20.0, r=2.00).",
+                "_layout_page": 189,
+                "_layout_x": 140.0,
+                "_layout_y": 153.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "References",
+                "_source_order": 37
+            }
+        }
+    ]
+}

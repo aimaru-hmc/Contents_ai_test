@@ -1,0 +1,88 @@
+{
+    "timestamp": "2026-07-08 17:49:48",
+    "stage_index": 22,
+    "stage": "level_review_changes",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "chunk 6/8",
+    "review_stage": "chunk 6/8",
+    "input_chapters": 48,
+    "output_chapters": 48,
+    "level_change_count": 2,
+    "added_count": 0,
+    "removed_count": 0,
+    "level_changes": [
+        {
+            "chapter": "Quality of life",
+            "page": 151,
+            "before_level": 4,
+            "after_level": 3,
+            "before_level_reason": "Sub-subsection under Prognosis, indicated by s=14.0 and x=140.",
+            "after_level_reason": "Subsection under Prognosis, indicated by s=14.0 and x=140.",
+            "before": {
+                "level": 4,
+                "chapter": "Quality of life",
+                "page": 151,
+                "level_reason": "Sub-subsection under Prognosis, indicated by s=14.0 and x=140.",
+                "_layout_page": 151,
+                "_layout_x": 140.0,
+                "_layout_y": 303.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Quality of life",
+                "_source_order": 18
+            },
+            "after": {
+                "level": 3,
+                "chapter": "Quality of life",
+                "page": 151,
+                "level_reason": "Subsection under Prognosis, indicated by s=14.0 and x=140.",
+                "_layout_page": 151,
+                "_layout_x": 140.0,
+                "_layout_y": 303.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Quality of life",
+                "_source_order": 18
+            }
+        },
+        {
+            "chapter": "Quantity of life",
+            "page": 151,
+            "before_level": 4,
+            "after_level": 3,
+            "before_level_reason": "Sub-subsection under Prognosis, indicated by s=14.0 and x=140.",
+            "after_level_reason": "Subsection under Prognosis, indicated by s=14.0 and x=140.",
+            "before": {
+                "level": 4,
+                "chapter": "Quantity of life",
+                "page": 151,
+                "level_reason": "Sub-subsection under Prognosis, indicated by s=14.0 and x=140.",
+                "_layout_page": 151,
+                "_layout_x": 140.0,
+                "_layout_y": 433.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Quantity of life",
+                "_source_order": 19
+            },
+            "after": {
+                "level": 3,
+                "chapter": "Quantity of life",
+                "page": 151,
+                "level_reason": "Subsection under Prognosis, indicated by s=14.0 and x=140.",
+                "_layout_page": 151,
+                "_layout_x": 140.0,
+                "_layout_y": 433.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Quantity of life",
+                "_source_order": 19
+            }
+        }
+    ],
+    "added_entries": [],
+    "removed_entries": []
+}

@@ -1,0 +1,1476 @@
+{
+    "timestamp": "2026-07-08 17:57:42",
+    "stage_index": 5,
+    "stage": "level_review_changes",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "chunk 1/19",
+    "review_stage": "chunk 1/19",
+    "input_chapters": 121,
+    "output_chapters": 303,
+    "level_change_count": 0,
+    "added_count": 182,
+    "removed_count": 0,
+    "level_changes": [],
+    "added_entries": [
+        {
+            "after": {
+                "level": 3,
+                "chapter": "1. 역학연구 방법의 분류",
+                "page": 7,
+                "level_reason": "Section title under Chapter 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.1 관찰연구",
+                "page": 7,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.2 실험연구",
+                "page": 7,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.3 역학연구 설계에 따른 인과성에 대한 근거 수준",
+                "page": 7,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "2. 기술역학의 세 주요 변수",
+                "page": 7,
+                "level_reason": "Section title under Chapter 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.1 인적 변수",
+                "page": 7,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.2 시간적 변수",
+                "page": 7,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.3 지역적 변수",
+                "page": 7,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "3. 생태학적연구와 사례/사례군연구",
+                "page": 7,
+                "level_reason": "Section title under Chapter 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.1 생태학적연구",
+                "page": 7,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.2 사례연구와 사례군연구",
+                "page": 7,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.5 바이어스의 제어",
+                "page": 7,
+                "level_reason": "Subsection under Section 3. Restored during completeness audit."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "4. 단면연구",
+                "page": 7,
+                "level_reason": "Section title under Chapter 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "4.1 단면연구의 기본 개념",
+                "page": 7,
+                "level_reason": "Subsection under Section 4."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "4.2 단면연구의 분석",
+                "page": 7,
+                "level_reason": "Subsection under Section 4."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "4.3 단면연구의 장단점과 바이어스",
+                "page": 7,
+                "level_reason": "Subsection under Section 4."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "5. 환자-대조군연구",
+                "page": 7,
+                "level_reason": "Section title under Chapter 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.1 환자-대조군연구의 정의",
+                "page": 7,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.2 환자-대조군연구의 수행",
+                "page": 7,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.3 환자-대조군연구의 분석",
+                "page": 7,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.4 환자-대조군연구의 장단점과 바이어스",
+                "page": 7,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "6. 코호트연구",
+                "page": 7,
+                "level_reason": "Section title under Chapter 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.1 코호트연구의 정의",
+                "page": 7,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.2 코호트연구의 설계",
+                "page": 7,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.3 코호트연구에서의 분석",
+                "page": 7,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.4 코호트연구의 장단점과 바이어스",
+                "page": 7,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "7. 혼합설계연구",
+                "page": 7,
+                "level_reason": "Section title under Chapter 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "7.1 기술역학의 세 주요변수를 이용한 혼합설계",
+                "page": 7,
+                "level_reason": "Subsection under Section 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "7.2코호트내환자-대조군연구와환자-코호트연구",
+                "page": 7,
+                "level_reason": "Subsection under Section 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "7.3 패널연구와 경향연구",
+                "page": 7,
+                "level_reason": "Subsection under Section 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "7.4 환자-교차설계연구와 환자-시간대조군연구",
+                "page": 7,
+                "level_reason": "Subsection under Section 7."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "8. 임상시험",
+                "page": 7,
+                "level_reason": "Section title under Chapter 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "8.1 실험역학의 정의, 방법과 특징",
+                "page": 7,
+                "level_reason": "Subsection under Section 8."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "8.2 임상시험의 단계와 특징",
+                "page": 7,
+                "level_reason": "Subsection under Section 8."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "8.3 임상시험의 설계와 방법",
+                "page": 7,
+                "level_reason": "Subsection under Section 8."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "8.4 임상시험 계획에서 고려할 점",
+                "page": 7,
+                "level_reason": "Subsection under Section 8."
+            }
+        },
+        {
+            "after": {
+                "level": 2,
+                "chapter": "제6장 역학연구방법론",
+                "page": 7,
+                "level_reason": "Chapter title under Part 2."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "1. 약물역학",
+                "page": 8,
+                "level_reason": "Section title under Chapter 7."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "1. 역학연구에서 통계 활용을 위한 기본 개념",
+                "page": 8,
+                "level_reason": "Section title under Chapter 8."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.1 약물역학의 개념과 발전배경",
+                "page": 8,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.1 통계적 방법론의 중요성",
+                "page": 8,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.2 약물역학 관련 제도 및 기관",
+                "page": 8,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.2 통계적 추론의 기본 개념",
+                "page": 8,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.3 약물역학연구의 설계와 방법",
+                "page": 8,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.4 약물역학연구에서 발생할 수 있는 바이어스",
+                "page": 8,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.5 약물역학연구 공개자료원",
+                "page": 8,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.6 약물역학의 활용과 기여",
+                "page": 8,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "10. 지역사회시험",
+                "page": 8,
+                "level_reason": "Section title under Chapter 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "10.1 지역사회시험의 개념과 특징",
+                "page": 8,
+                "level_reason": "Subsection under Section 10."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "10.2 지역사회시험의 연구수행",
+                "page": 8,
+                "level_reason": "Subsection under Section 10."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "10.3 지역사회시험의 활용과 기여",
+                "page": 8,
+                "level_reason": "Subsection under Section 10."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "11. 체계적 문헌고찰과 메타분석",
+                "page": 8,
+                "level_reason": "Section title under Chapter 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "11.1 체계적 문헌고찰과 메타분석의 정의와 특징",
+                "page": 8,
+                "level_reason": "Subsection under Section 11."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "11.2 연구문제의 설정과 문헌선정",
+                "page": 8,
+                "level_reason": "Subsection under Section 11."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "11.3 메타분석의 수행",
+                "page": 8,
+                "level_reason": "Subsection under Section 11."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "11.4 바이어스 탐색",
+                "page": 8,
+                "level_reason": "Subsection under Section 11."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "12. 역학연구에서의 윤리적 문제",
+                "page": 8,
+                "level_reason": "Section title under Chapter 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "12.1 인간 대상 연구에 대한 윤리 규정 및 규제",
+                "page": 8,
+                "level_reason": "Subsection under Section 12."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "12.2 연구윤리 관련 기관 및 위원회",
+                "page": 8,
+                "level_reason": "Subsection under Section 12."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "12.3 실험역학연구에서 윤리적 고려사항",
+                "page": 8,
+                "level_reason": "Subsection under Section 12."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "12.4관찰역학연구와역학조사에서의윤리적고려사항",
+                "page": 8,
+                "level_reason": "Subsection under Section 12."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "12.5 유전자연구와 인체유래물 연구의 윤리적 고려사항",
+                "page": 8,
+                "level_reason": "Subsection under Section 12."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "12.6 특수노출집단연구에서의 윤리적 고려사항",
+                "page": 8,
+                "level_reason": "Subsection under Section 12."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "2. 영양역학",
+                "page": 8,
+                "level_reason": "Section title under Chapter 7."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "2. 표본수의 추정",
+                "page": 8,
+                "level_reason": "Section title under Chapter 8."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.1 역학지표 추정 시 필요한 표본크기",
+                "page": 8,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.1 영양역학의 개념과 발전",
+                "page": 8,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.2 연관성 연구 시 필요한 표본크기",
+                "page": 8,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.2 영양역학연구의 영양상태 평가 방법",
+                "page": 8,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.3 영양역학연구의 영양요인 자료 분석",
+                "page": 8,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.4 영양역학연구의 공개자료원",
+                "page": 8,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.5 영양역학연구에서의 오류와 바이어스",
+                "page": 8,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "3. 사회역학",
+                "page": 8,
+                "level_reason": "Section title under Chapter 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.1 사회역학의 개념과 발전",
+                "page": 8,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.2 사회역학연구의 특징",
+                "page": 8,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.3 사회역학연구의 설계와 방법",
+                "page": 8,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.4 사회역학연구의 공개자료원",
+                "page": 8,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.5 사회역학연구에서 고려할 점",
+                "page": 8,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "4. 분자역학",
+                "page": 8,
+                "level_reason": "Section title under Chapter 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "4.1 분자역학의 개념",
+                "page": 8,
+                "level_reason": "Subsection under Section 4."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "4.2 분자역학의 생체지표",
+                "page": 8,
+                "level_reason": "Subsection under Section 4."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "4.3 분자역학의 특성",
+                "page": 8,
+                "level_reason": "Subsection under Section 4."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "5. 유전역학",
+                "page": 8,
+                "level_reason": "Section title under Chapter 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.1 개념과 발전",
+                "page": 8,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.2 연구의 설계와 방법",
+                "page": 8,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.3 활용과 기여",
+                "page": 8,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "6. 정밀의료와 역학",
+                "page": 8,
+                "level_reason": "Section title under Chapter 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.1 정밀의료의 개념과 발전",
+                "page": 8,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.2 정밀의료와 역학의 접목",
+                "page": 8,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.3 정밀예방의료의 활용",
+                "page": 8,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "7. 시스템역학",
+                "page": 8,
+                "level_reason": "Section title under Chapter 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "7.1 시스템역학 개념",
+                "page": 8,
+                "level_reason": "Subsection under Section 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "7.2 시스템역학의 배경",
+                "page": 8,
+                "level_reason": "Subsection under Section 7."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "9. 예방시험",
+                "page": 8,
+                "level_reason": "Section title under Chapter 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "9.1 예방시험의 개념과 특성",
+                "page": 8,
+                "level_reason": "Subsection under Section 9."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "9.2 예방시험 설계와 방법",
+                "page": 8,
+                "level_reason": "Subsection under Section 9."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "9.3 예방시험의 장단점과 바이어스",
+                "page": 8,
+                "level_reason": "Subsection under Section 9."
+            }
+        },
+        {
+            "after": {
+                "level": 2,
+                "chapter": "제7장 분야별 역학연구",
+                "page": 8,
+                "level_reason": "Chapter title under Part 2."
+            }
+        },
+        {
+            "after": {
+                "level": 2,
+                "chapter": "제8장 의학연구에서 통계의 활용",
+                "page": 8,
+                "level_reason": "Chapter title under Part 2."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "1. 감염병의 특성",
+                "page": 9,
+                "level_reason": "Section title under Chapter 10."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "1. 개념과 발전배경",
+                "page": 9,
+                "level_reason": "Section title under Chapter 9."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.1 근거기반의료의 개념",
+                "page": 9,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.1 정의와 개념",
+                "page": 9,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.2 감염병의 감염 경과",
+                "page": 9,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.2 근거기반의료의 배경",
+                "page": 9,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.3 감염병의 임상경과",
+                "page": 9,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "1.4 감염병에서의 감염지표",
+                "page": 9,
+                "level_reason": "Subsection under Section 1."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "2. 감염병의 생성과 전파",
+                "page": 9,
+                "level_reason": "Section title under Chapter 10."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "2. 접근과정과 전략",
+                "page": 9,
+                "level_reason": "Section title under Chapter 9."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.1 근거기반의료를 이용한 임상문제 해결 과정",
+                "page": 9,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.1 병원체",
+                "page": 9,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.2 병원소",
+                "page": 9,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.2 임상문제의 핵심질문 선정",
+                "page": 9,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.3 병원소에서 병원체 탈출",
+                "page": 9,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.3 임상문제에 대한 정보 검색",
+                "page": 9,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.4 근거의 수준과 평가",
+                "page": 9,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.4 전파",
+                "page": 9,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.5 근거의 적용과 자가 평가",
+                "page": 9,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.5 새로운 숙주로 침입",
+                "page": 9,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "2.6 숙주의 감수성과 면역",
+                "page": 9,
+                "level_reason": "Subsection under Section 2."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "3. 감염병 관리와 예방",
+                "page": 9,
+                "level_reason": "Section title under Chapter 10."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "3. 근거기반 임상적 의사결정 방법",
+                "page": 9,
+                "level_reason": "Section title under Chapter 9."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "3. 연구목적에 맞는 표본추출방법",
+                "page": 9,
+                "level_reason": "Section title under Chapter 8."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.1 감염병 관리",
+                "page": 9,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.1 과학적 근거기반 임상적 의사결정 방법",
+                "page": 9,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.1 단면연구에서의 표본추출방법",
+                "page": 9,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.2 경제성 및 효용성 기반 임상적 의사결정",
+                "page": 9,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.2 분석역학연구에서의 표본추출방법",
+                "page": 9,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.2 예방접종의 의미와 역학적 효과 판정",
+                "page": 9,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.3 법정감염병과 감염병 관리",
+                "page": 9,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.3 실험역학연구에서의 표본추출방법",
+                "page": 9,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.3 임상적 의사결정에 도움이 되는 통계분석",
+                "page": 9,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.4 국제적 감염병 관리 수준",
+                "page": 9,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "3.4 요약",
+                "page": 9,
+                "level_reason": "Subsection under Section 3."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "4. 감염병의 유행과 유행조사",
+                "page": 9,
+                "level_reason": "Section title under Chapter 10."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "4. 근거기반의 활용",
+                "page": 9,
+                "level_reason": "Section title under Chapter 9."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "4. 변수 특성에 따른 적절한 통계분석법의 선택",
+                "page": 9,
+                "level_reason": "Section title under Chapter 8."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "4.1 감염병 유행의 원리와 의미",
+                "page": 9,
+                "level_reason": "Subsection under Section 4."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "4.1 의학논문의 비판적 검토",
+                "page": 9,
+                "level_reason": "Subsection under Section 4."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "4.2 감염병 유행과 유행조사",
+                "page": 9,
+                "level_reason": "Subsection under Section 4."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "4.2 임상진료지침",
+                "page": 9,
+                "level_reason": "Subsection under Section 4."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "4.3 유행조사의 목적",
+                "page": 9,
+                "level_reason": "Subsection under Section 4."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "4.3 의료기술 평가",
+                "page": 9,
+                "level_reason": "Subsection under Section 4."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "4.4 근거기반 예방의학 및 근거기반 공중보건",
+                "page": 9,
+                "level_reason": "Subsection under Section 4."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "4.4 유행조사의 기본 단계",
+                "page": 9,
+                "level_reason": "Subsection under Section 4."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "5. 새로이 출현하는 감염병",
+                "page": 9,
+                "level_reason": "Section title under Chapter 10."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "5. 연구방법에 따른 통계분석",
+                "page": 9,
+                "level_reason": "Section title under Chapter 8."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.1 출현 배경과 특성",
+                "page": 9,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.1 환자-대조군연구",
+                "page": 9,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.2 감염병의 출현에 기여하는 요인",
+                "page": 9,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.2 단면연구",
+                "page": 9,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.3 신종감염병 이해를 위한 원헬스 모형",
+                "page": 9,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.3 코호트연구",
+                "page": 9,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.4 하이브리드 연구",
+                "page": 9,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.4 한국의 신종감염병과 재출현 감염병",
+                "page": 9,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.5 기타 연구설계",
+                "page": 9,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "5.5 대비와 대응",
+                "page": 9,
+                "level_reason": "Subsection under Section 5."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "6. 관찰연구에서의 인과성 강화와 추론",
+                "page": 9,
+                "level_reason": "Section title under Chapter 8."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.1 교란 바이어스 개념과 통제",
+                "page": 9,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.2 교란 바이어스와 선택 바이어스의 통제",
+                "page": 9,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.3 베이즈 정리의 역학적 활용",
+                "page": 9,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.4 유전체 연구의 인과성 추론",
+                "page": 9,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 2,
+                "chapter": "제10장 감염병의 역학",
+                "page": 9,
+                "level_reason": "Chapter title under Part 2."
+            }
+        },
+        {
+            "after": {
+                "level": 2,
+                "chapter": "제9장 근거기반의료와 임상적 의사결정",
+                "page": 9,
+                "level_reason": "Chapter title under Part 2."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "6. 수인성 및 식품매개감염병",
+                "page": 10,
+                "level_reason": "Section title under Chapter 10."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.1 예방과 관리",
+                "page": 10,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.2 콜레라",
+                "page": 10,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.3 장티푸스",
+                "page": 10,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.4 세균성이질",
+                "page": 10,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.5 장출혈성대장균감염증",
+                "page": 10,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "6.6 A형간염",
+                "page": 10,
+                "level_reason": "Subsection under Section 6."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "7. 예방접종 대상 감염병",
+                "page": 10,
+                "level_reason": "Section title under Chapter 10."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "7.1 예방과 관리",
+                "page": 10,
+                "level_reason": "Subsection under Section 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "7.2 홍역",
+                "page": 10,
+                "level_reason": "Subsection under Section 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "7.3 볼거리",
+                "page": 10,
+                "level_reason": "Subsection under Section 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "7.4 수두",
+                "page": 10,
+                "level_reason": "Subsection under Section 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "7.5 파상풍",
+                "page": 10,
+                "level_reason": "Subsection under Section 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "7.6 백일해",
+                "page": 10,
+                "level_reason": "Subsection under Section 7."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "7.7 일본뇌염",
+                "page": 10,
+                "level_reason": "Subsection under Section 7."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "8. 사람 간 접촉에 의한 감염병",
+                "page": 10,
+                "level_reason": "Section title under Chapter 10."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "8.1 예방과 관리",
+                "page": 10,
+                "level_reason": "Subsection under Section 8."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "8.2 인플루엔자",
+                "page": 10,
+                "level_reason": "Subsection under Section 8."
+            }
+        }
+    ],
+    "removed_entries": []
+}

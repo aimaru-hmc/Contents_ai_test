@@ -1,0 +1,767 @@
+{
+    "timestamp": "2026-07-08 17:42:23",
+    "stage_index": 5,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "1",
+    "total_chunks": 8,
+    "start_page": 2,
+    "end_page": 34,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 1/8",
+        "input_chapters": 34,
+        "output_chapters": 34,
+        "level_changes": 0,
+        "added_entries": 0,
+        "removed_entries": 0,
+        "level_change_file": null,
+        "possible_invalid_heading_candidate_count": 10,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "Chapter 1 What is epidemiology?",
+                "level": 1,
+                "page": 14,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Chapter title with largest font size and explicit 'Chapter 1' marker.",
+                "font_size": 32.0,
+                "size_ratio": 3.2,
+                "left_indent": 55.0,
+                "vertical_position": 101.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 89,
+                    "page_count": 89,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Health status of populations",
+                "level": 3,
+                "page": 18,
+                "reasons": [
+                    "source context looks like case/example/table/figure/problem/reference material"
+                ],
+                "level_reason": "Subsection under 'Epidemiology and public health' with smaller font size.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 190.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=18, line=620, s=14.0, r=1.4, x=55.0, y=190.0: \"Health status of populations\""
+                    ],
+                    "embedded_examples": [
+                        "page=18, line=627, s=8.0, r=0.8, x=55.0, y=308.0: \"Figure 1.5. Describing the health status of populations\""
+                    ]
+                }
+            },
+            {
+                "title": "Evaluating interventions",
+                "level": 3,
+                "page": 18,
+                "reasons": [
+                    "source context looks like case/example/table/figure/problem/reference material"
+                ],
+                "level_reason": "Subsection under 'Epidemiology and public health' with smaller font size.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 436.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=18, line=634, s=14.0, r=1.4, x=55.0, y=436.0: \"Evaluating interventions\""
+                    ],
+                    "embedded_examples": [
+                        "page=18, line=640, s=8.0, r=0.8, x=55.0, y=546.0: \"Figure 1.6. Evaluating interventions\""
+                    ]
+                }
+            },
+            {
+                "title": "Study questions",
+                "level": 2,
+                "page": 24,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Section heading under Chapter 1 with distinct bold style and larger font than body text.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 474.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=24, line=942, s=20.0, r=2.0, x=55.0, y=474.0: \"Study questions\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "answerstostudyquestions",
+                    "display_text": "Answers to study questions",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 354.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 8,
+                    "page_count": 8,
+                    "page_range": "202-216",
+                    "samples": [
+                        "Answers to study questions 189",
+                        "Answers to study questions 191",
+                        "Answers to study questions 193"
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 2 Measuring health and disease",
+                "level": 1,
+                "page": 28,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Chapter title with largest font size and explicit 'Chapter 2' marker.",
+                "font_size": 31.9,
+                "size_ratio": 3.2,
+                "left_indent": 55.0,
+                "vertical_position": 102.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 89,
+                    "page_count": 89,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Population at risk",
+                "level": 3,
+                "page": 30,
+                "reasons": [
+                    "source context looks like case/example/table/figure/problem/reference material"
+                ],
+                "level_reason": "Subsection under 'Measuring disease frequency' with smaller font size.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 280.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 3,
+                    "exact_examples": [
+                        "page=30, line=1141, s=14.0, r=1.4, x=55.0, y=280.0: \"Population at risk\""
+                    ],
+                    "embedded_examples": [
+                        "page=30, line=1147, s=8.0, r=0.8, x=55.0, y=389.0: \"Figure 2.1. Population at risk in a study of carcinoma of the cervix\"",
+                        "page=30, line=1148, s=8.0, r=0.8, x=100.0, y=402.0: \"Total population All women Population at risk\"",
+                        "page=30, line=1159, s=10.0, r=1.0, x=55.0, y=618.0: \"handling infected animals, so the population at risk consists of those working on\""
+                    ]
+                }
+            },
+            {
+                "title": "Incidence and prevalence",
+                "level": 3,
+                "page": 31,
+                "reasons": [
+                    "source context looks like case/example/table/figure/problem/reference material"
+                ],
+                "level_reason": "Subsection under 'Measuring disease frequency' with smaller font size.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=31, line=1164, s=14.0, r=1.4, x=140.0, y=84.0: \"Incidence and prevalence\""
+                    ],
+                    "embedded_examples": [
+                        "page=31, line=1169, s=10.0, r=1.0, x=140.0, y=164.0: \"incidence and prevalence varies among diseases. There may be low incidence and a\"",
+                        "page=31, line=1173, s=8.0, r=0.8, x=140.0, y=232.0: \"Table 2.2. Differences between incidence and prevalence\""
+                    ]
+                }
+            },
+            {
+                "title": "Prevalence",
+                "level": 4,
+                "page": 32,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading under 'Incidence and prevalence' with distinct style.",
+                "font_size": 9.0,
+                "size_ratio": 1.0,
+                "left_indent": 55.0,
+                "vertical_position": 121.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 14,
+                    "exact_examples": [
+                        "page=32, line=1215, s=9.0, r=0.9, x=55.0, y=121.0: \"Prevalence\""
+                    ],
+                    "embedded_examples": [
+                        "page=32, line=1216, s=10.0, r=1.0, x=55.0, y=131.0: \"Prevalence(P))of a disease is calculated as follows:\"",
+                        "page=32, line=1224, s=10.0, r=1.0, x=73.0, y=250.0: \"Prevalence is often expressed as cases per 100 (percentage), or per 1000 popu-\"",
+                        "page=32, line=1226, s=10.0, r=1.0, x=55.0, y=276.0: \"have been collected for one point in time, PPis the “point prevalence rate.” It is\""
+                    ]
+                }
+            },
+            {
+                "title": "Incidence",
+                "level": 4,
+                "page": 33,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading under 'Incidence and prevalence' with distinct style.",
+                "font_size": 9.0,
+                "size_ratio": 1.0,
+                "left_indent": 140.0,
+                "vertical_position": 412.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 6,
+                    "exact_examples": [
+                        "page=33, line=1280, s=9.0, r=0.9, x=140.0, y=412.0: \"Incidence\""
+                    ],
+                    "embedded_examples": [
+                        "page=33, line=1281, s=10.0, r=1.0, x=140.0, y=423.0: \"Incidence refers to the rate at which new events occur in a population. Incidence\"",
+                        "page=33, line=1284, s=10.0, r=1.0, x=158.0, y=462.0: \"In the calculation of incidence, the numerator is the number of new events that\"",
+                        "page=33, line=1287, s=10.0, r=1.0, x=140.0, y=501.0: \"cidence is to calculate what Last calls the “person-time incidence rate.”11 Each person\""
+                    ]
+                }
+            },
+            {
+                "title": "Cumulative incidence",
+                "level": 4,
+                "page": 34,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading under 'Incidence and prevalence' with distinct style.",
+                "font_size": 9.0,
+                "size_ratio": 1.0,
+                "left_indent": 55.0,
+                "vertical_position": 374.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 7,
+                    "exact_examples": [
+                        "page=34, line=1324, s=9.0, r=0.9, x=55.0, y=374.0: \"Cumulative incidence\""
+                    ],
+                    "embedded_examples": [
+                        "page=34, line=1325, s=10.0, r=1.0, x=55.0, y=385.0: \"Cumulative incidence is a simpler measure of the occurrence of a disease or health\"",
+                        "page=34, line=1328, s=10.0, r=1.0, x=73.0, y=424.0: \"The cumulative incidence canbe calculated as follows:\"",
+                        "page=34, line=1331, s=10.0, r=1.0, x=54.0, y=471.0: \"CumulativeIncidence=\""
+                    ]
+                }
+            }
+        ]
+    },
+    "toc": {
+        "title": "Basic epidemiology",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "Chapter 1 What is epidemiology?",
+                "page": 14,
+                "level_reason": "Chapter title with largest font size and explicit 'Chapter 1' marker.",
+                "_layout_page": 14,
+                "_layout_x": 55.0,
+                "_layout_y": 101.0,
+                "_layout_font_size": 32.0,
+                "_layout_size_ratio": 3.2,
+                "_layout_text": "What is epidemiology?",
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 14,
+                "level_reason": "Section heading under Chapter 1 with distinct bold style and larger font than body text.",
+                "_layout_page": 14,
+                "_layout_x": 168.0,
+                "_layout_y": 149.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 1
+            },
+            {
+                "level": 2,
+                "chapter": "The historical context",
+                "page": 14,
+                "level_reason": "Section heading under Chapter 1 with distinct bold style and larger font than body text.",
+                "_layout_page": 14,
+                "_layout_x": 55.0,
+                "_layout_y": 268.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "The historical context",
+                "_source_order": 2
+            },
+            {
+                "level": 3,
+                "chapter": "Origins",
+                "page": 14,
+                "level_reason": "Subsection under 'The historical context' with smaller font size than level 2 headings.",
+                "_layout_page": 14,
+                "_layout_x": 55.0,
+                "_layout_y": 300.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Origins",
+                "_source_order": 3
+            },
+            {
+                "level": 3,
+                "chapter": "Recent developments in epidemiology",
+                "page": 14,
+                "level_reason": "Subsection under 'The historical context' with smaller font size than level 2 headings.",
+                "_layout_page": 14,
+                "_layout_x": 55.0,
+                "_layout_y": 559.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Recent developments in epidemiology",
+                "_source_order": 4
+            },
+            {
+                "level": 2,
+                "chapter": "Definition, scope, and uses of epidemiology",
+                "page": 15,
+                "level_reason": "Section heading under Chapter 1 with distinct bold style and larger font than body text.",
+                "_layout_page": 15,
+                "_layout_x": 140.0,
+                "_layout_y": 575.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.23,
+                "_layout_text": "Definition, scope, and uses of epidemiology",
+                "_source_order": 5
+            },
+            {
+                "level": 3,
+                "chapter": "Definition",
+                "page": 15,
+                "level_reason": "Subsection under 'Definition, scope, and uses of epidemiology' with smaller font size.",
+                "_layout_page": 15,
+                "_layout_x": 140.0,
+                "_layout_y": 607.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.56,
+                "_layout_text": "Definition",
+                "_source_order": 6
+            },
+            {
+                "level": 3,
+                "chapter": "Scope",
+                "page": 16,
+                "level_reason": "Subsection under 'Definition, scope, and uses of epidemiology' with smaller font size.",
+                "_layout_page": 16,
+                "_layout_x": 55.0,
+                "_layout_y": 385.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.75,
+                "_layout_text": "Scope",
+                "_source_order": 7
+            },
+            {
+                "level": 2,
+                "chapter": "Epidemiology and public health",
+                "page": 17,
+                "level_reason": "Section heading under Chapter 1 with distinct bold style and larger font than body text.",
+                "_layout_page": 17,
+                "_layout_x": 140.0,
+                "_layout_y": 341.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Epidemiology and public health",
+                "_source_order": 8
+            },
+            {
+                "level": 3,
+                "chapter": "Causation of disease",
+                "page": 17,
+                "level_reason": "Subsection under 'Epidemiology and public health' with smaller font size.",
+                "_layout_page": 17,
+                "_layout_x": 140.0,
+                "_layout_y": 476.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Causation of disease",
+                "_source_order": 9
+            },
+            {
+                "level": 3,
+                "chapter": "Good health Ill health Natural history of disease",
+                "page": 17,
+                "level_reason": "Subsection under 'Epidemiology and public health' with smaller font size.",
+                "_layout_page": 17,
+                "_layout_x": 45.0,
+                "_layout_y": 618.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Good health Ill health Natural history of disease",
+                "_source_order": 10
+            },
+            {
+                "level": 3,
+                "chapter": "Health status of populations",
+                "page": 18,
+                "level_reason": "Subsection under 'Epidemiology and public health' with smaller font size.",
+                "_layout_page": 18,
+                "_layout_x": 55.0,
+                "_layout_y": 190.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Health status of populations",
+                "_source_order": 11
+            },
+            {
+                "level": 3,
+                "chapter": "Evaluating interventions",
+                "page": 18,
+                "level_reason": "Subsection under 'Epidemiology and public health' with smaller font size.",
+                "_layout_page": 18,
+                "_layout_x": 55.0,
+                "_layout_y": 436.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Evaluating interventions",
+                "_source_order": 12
+            },
+            {
+                "level": 2,
+                "chapter": "Achievements in epidemiology",
+                "page": 19,
+                "level_reason": "Section heading under Chapter 1 with distinct bold style and larger font than body text.",
+                "_layout_page": 19,
+                "_layout_x": 140.0,
+                "_layout_y": 382.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Achievements in epidemiology",
+                "_source_order": 13
+            },
+            {
+                "level": 3,
+                "chapter": "Smallpox",
+                "page": 19,
+                "level_reason": "Subsection under 'Achievements in epidemiology' with smaller font size.",
+                "_layout_page": 19,
+                "_layout_x": 140.0,
+                "_layout_y": 414.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Smallpox",
+                "_source_order": 14
+            },
+            {
+                "level": 3,
+                "chapter": "Methyl mercury poisoning",
+                "page": 20,
+                "level_reason": "Subsection under 'Achievements in epidemiology' with smaller font size.",
+                "_layout_page": 20,
+                "_layout_x": 55.0,
+                "_layout_y": 342.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Methyl mercury poisoning",
+                "_source_order": 15
+            },
+            {
+                "level": 3,
+                "chapter": "Rheumatic fever and rheumatic heart disease",
+                "page": 20,
+                "level_reason": "Subsection under 'Achievements in epidemiology' with smaller font size.",
+                "_layout_page": 20,
+                "_layout_x": 55.0,
+                "_layout_y": 576.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Rheumatic fever and rheumatic heart disease",
+                "_source_order": 16
+            },
+            {
+                "level": 3,
+                "chapter": "Iodine deficiency diseases",
+                "page": 21,
+                "level_reason": "Subsection under 'Achievements in epidemiology' with smaller font size.",
+                "_layout_page": 21,
+                "_layout_x": 140.0,
+                "_layout_y": 447.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Iodine deficiency diseases",
+                "_source_order": 17
+            },
+            {
+                "level": 3,
+                "chapter": "Tobacco use, asbestos and lung cancer",
+                "page": 22,
+                "level_reason": "Subsection under 'Achievements in epidemiology' with smaller font size.",
+                "_layout_page": 22,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Tobacco use, asbestos and lung cancer",
+                "_source_order": 18
+            },
+            {
+                "level": 3,
+                "chapter": "Hip fractures",
+                "page": 22,
+                "level_reason": "Subsection under 'Achievements in epidemiology' with smaller font size.",
+                "_layout_page": 22,
+                "_layout_x": 55.0,
+                "_layout_y": 473.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Hip fractures",
+                "_source_order": 19
+            },
+            {
+                "level": 3,
+                "chapter": "HIV/AIDS",
+                "page": 23,
+                "level_reason": "Subsection under 'Achievements in epidemiology' with smaller font size.",
+                "_layout_page": 23,
+                "_layout_x": 140.0,
+                "_layout_y": 160.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "HIV/AIDS",
+                "_source_order": 20
+            },
+            {
+                "level": 3,
+                "chapter": "SARS",
+                "page": 23,
+                "level_reason": "Subsection under 'Achievements in epidemiology' with smaller font size.",
+                "_layout_page": 23,
+                "_layout_x": 140.0,
+                "_layout_y": 619.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "SARS",
+                "_source_order": 21
+            },
+            {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 24,
+                "level_reason": "Section heading under Chapter 1 with distinct bold style and larger font than body text.",
+                "_layout_page": 24,
+                "_layout_x": 55.0,
+                "_layout_y": 474.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Study questions",
+                "_source_order": 22
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter 2 Measuring health and disease",
+                "page": 28,
+                "level_reason": "Chapter title with largest font size and explicit 'Chapter 2' marker.",
+                "_layout_page": 28,
+                "_layout_x": 55.0,
+                "_layout_y": 102.0,
+                "_layout_font_size": 31.9,
+                "_layout_size_ratio": 3.2,
+                "_layout_text": "Measuring health and disease",
+                "_source_order": 23
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 28,
+                "level_reason": "Section heading under Chapter 2 with distinct bold style and larger font than body text.",
+                "_layout_page": 28,
+                "_layout_x": 168.0,
+                "_layout_y": 184.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 24
+            },
+            {
+                "level": 2,
+                "chapter": "Defining health and disease",
+                "page": 28,
+                "level_reason": "Section heading under Chapter 2 with distinct bold style and larger font than body text.",
+                "_layout_page": 28,
+                "_layout_x": 55.0,
+                "_layout_y": 290.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Defining health and disease",
+                "_source_order": 25
+            },
+            {
+                "level": 3,
+                "chapter": "Definitions",
+                "page": 28,
+                "level_reason": "Subsection under 'Defining health and disease' with smaller font size.",
+                "_layout_page": 28,
+                "_layout_x": 55.0,
+                "_layout_y": 322.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Definitions",
+                "_source_order": 26
+            },
+            {
+                "level": 3,
+                "chapter": "Diagnostic criteria",
+                "page": 29,
+                "level_reason": "Subsection under 'Defining health and disease' with smaller font size.",
+                "_layout_page": 29,
+                "_layout_x": 140.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Diagnostic criteria",
+                "_source_order": 27
+            },
+            {
+                "level": 2,
+                "chapter": "Measuring disease frequency",
+                "page": 30,
+                "level_reason": "Section heading under Chapter 2 with distinct bold style and larger font than body text.",
+                "_layout_page": 30,
+                "_layout_x": 55.0,
+                "_layout_y": 185.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Measuring disease frequency",
+                "_source_order": 28
+            },
+            {
+                "level": 3,
+                "chapter": "Population at risk",
+                "page": 30,
+                "level_reason": "Subsection under 'Measuring disease frequency' with smaller font size.",
+                "_layout_page": 30,
+                "_layout_x": 55.0,
+                "_layout_y": 280.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Population at risk",
+                "_source_order": 29
+            },
+            {
+                "level": 3,
+                "chapter": "Incidence and prevalence",
+                "page": 31,
+                "level_reason": "Subsection under 'Measuring disease frequency' with smaller font size.",
+                "_layout_page": 31,
+                "_layout_x": 140.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Incidence and prevalence",
+                "_source_order": 30
+            },
+            {
+                "level": 4,
+                "chapter": "Prevalence",
+                "page": 32,
+                "level_reason": "Lower level heading under 'Incidence and prevalence' with distinct style.",
+                "_layout_page": 32,
+                "_layout_x": 55.0,
+                "_layout_y": 121.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "Prevalence",
+                "_source_order": 31
+            },
+            {
+                "level": 4,
+                "chapter": "Incidence",
+                "page": 33,
+                "level_reason": "Lower level heading under 'Incidence and prevalence' with distinct style.",
+                "_layout_page": 33,
+                "_layout_x": 140.0,
+                "_layout_y": 412.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "Incidence",
+                "_source_order": 32
+            },
+            {
+                "level": 4,
+                "chapter": "Cumulative incidence",
+                "page": 34,
+                "level_reason": "Lower level heading under 'Incidence and prevalence' with distinct style.",
+                "_layout_page": 34,
+                "_layout_x": 55.0,
+                "_layout_y": 374.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "Cumulative incidence",
+                "_source_order": 33
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"Basic epidemiology\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 1 What is epidemiology?\",\n      \"page\": 14,\n      \"level_reason\": \"Chapter title with largest font size and explicit 'Chapter 1' marker.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 14,\n      \"level_reason\": \"Section heading under Chapter 1 with distinct bold style and larger font than body text.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"The historical context\",\n      \"page\": 14,\n      \"level_reason\": \"Section heading under Chapter 1 with distinct bold style and larger font than body text.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Origins\",\n      \"page\": 14,\n      \"level_reason\": \"Subsection under 'The historical context' with smaller font size than level 2 headings.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Recent developments in epidemiology\",\n      \"page\": 14,\n      \"level_reason\": \"Subsection under 'The historical context' with smaller font size than level 2 headings.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Definition, scope, and uses of epidemiology\",\n      \"page\": 15,\n      \"level_reason\": \"Section heading under Chapter 1 with distinct bold style and larger font than body text.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Definition\",\n      \"page\": 15,\n      \"level_reason\": \"Subsection under 'Definition, scope, and uses of epidemiology' with smaller font size.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Scope\",\n      \"page\": 16,\n      \"level_reason\": \"Subsection under 'Definition, scope, and uses of epidemiology' with smaller font size.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Epidemiology and public health\",\n      \"page\": 17,\n      \"level_reason\": \"Section heading under Chapter 1 with distinct bold style and larger font than body text.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Causation of disease\",\n      \"page\": 17,\n      \"level_reason\": \"Subsection under 'Epidemiology and public health' with smaller font size.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Good health Ill health Natural history of disease\",\n      \"page\": 17,\n      \"level_reason\": \"Subsection under 'Epidemiology and public health' with smaller font size.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Health status of populations\",\n      \"page\": 18,\n      \"level_reason\": \"Subsection under 'Epidemiology and public health' with smaller font size.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Evaluating interventions\",\n      \"page\": 18,\n      \"level_reason\": \"Subsection under 'Epidemiology and public health' with smaller font size.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Achievements in epidemiology\",\n      \"page\": 19,\n      \"level_reason\": \"Section heading under Chapter 1 with distinct bold style and larger font than body text.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Smallpox\",\n      \"page\": 19,\n      \"level_reason\": \"Subsection under 'Achievements in epidemiology' with smaller font size.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Methyl mercury poisoning\",\n      \"page\": 20,\n      \"level_reason\": \"Subsection under 'Achievements in epidemiology' with smaller font size.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Rheumatic fever and rheumatic heart disease\",\n      \"page\": 20,\n      \"level_reason\": \"Subsection under 'Achievements in epidemiology' with smaller font size.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Iodine deficiency diseases\",\n      \"page\": 21,\n      \"level_reason\": \"Subsection under 'Achievements in epidemiology' with smaller font size.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Tobacco use, asbestos and lung cancer\",\n      \"page\": 22,\n      \"level_reason\": \"Subsection under 'Achievements in epidemiology' with smaller font size.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Hip fractures\",\n      \"page\": 22,\n      \"level_reason\": \"Subsection under 'Achievements in epidemiology' with smaller font size.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"HIV/AIDS\",\n      \"page\": 23,\n      \"level_reason\": \"Subsection under 'Achievements in epidemiology' with smaller font size.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"SARS\",\n      \"page\": 23,\n      \"level_reason\": \"Subsection under 'Achievements in epidemiology' with smaller font size.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Study questions\",\n      \"page\": 24,\n      \"level_reason\": \"Section heading under Chapter 1 with distinct bold style and larger font than body text.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 2 Measuring health and disease\",\n      \"page\": 28,\n      \"level_reason\": \"Chapter title with largest font size and explicit 'Chapter 2' marker.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 28,\n      \"level_reason\": \"Section heading under Chapter 2 with distinct bold style and larger font than body text.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Defining health and disease\",\n      \"page\": 28,\n      \"level_reason\": \"Section heading under Chapter 2 with distinct bold style and larger font than body text.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Definitions\",\n      \"page\": 28,\n      \"level_reason\": \"Subsection under 'Defining health and disease' with smaller font size.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Diagnostic criteria\",\n      \"page\": 29,\n      \"level_reason\": \"Subsection under 'Defining health and disease' with smaller font size.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Measuring disease frequency\",\n      \"page\": 30,\n      \"level_reason\": \"Section heading under Chapter 2 with distinct bold style and larger font than body text.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Population at risk\",\n      \"page\": 30,\n      \"level_reason\": \"Subsection under 'Measuring disease frequency' with smaller font size.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Incidence and prevalence\",\n      \"page\": 31,\n      \"level_reason\": \"Subsection under 'Measuring disease frequency' with smaller font size.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Prevalence\",\n      \"page\": 32,\n      \"level_reason\": \"Lower level heading under 'Incidence and prevalence' with distinct style.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Incidence\",\n      \"page\": 33,\n      \"level_reason\": \"Lower level heading under 'Incidence and prevalence' with distinct style.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Cumulative incidence\",\n      \"page\": 34,\n      \"level_reason\": \"Lower level heading under 'Incidence and prevalence' with distinct style.\"\n    }\n  ]\n}\n```"
+}

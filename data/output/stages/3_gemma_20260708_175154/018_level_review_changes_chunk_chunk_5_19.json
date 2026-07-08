@@ -1,0 +1,197 @@
+{
+    "timestamp": "2026-07-08 18:07:26",
+    "stage_index": 18,
+    "stage": "level_review_changes",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "chunk 5/19",
+    "review_stage": "chunk 5/19",
+    "input_chapters": 75,
+    "output_chapters": 77,
+    "level_change_count": 4,
+    "added_count": 3,
+    "removed_count": 1,
+    "level_changes": [
+        {
+            "chapter": "(1) 계획",
+            "page": 145,
+            "before_level": 6,
+            "after_level": 5,
+            "before_level_reason": "Numbered list item under a larger section, small font size (s=10.0).",
+            "after_level_reason": "Step 1 of PDSA cycle, small font size (s=10.0).",
+            "before": {
+                "level": 6,
+                "chapter": "(1) 계획",
+                "page": 145,
+                "level_reason": "Numbered list item under a larger section, small font size (s=10.0).",
+                "_layout_page": 145,
+                "_layout_x": 75.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 계획",
+                "_source_order": 1
+            },
+            "after": {
+                "level": 5,
+                "chapter": "(1) 계획",
+                "page": 145,
+                "level_reason": "Step 1 of PDSA cycle, small font size (s=10.0).",
+                "_layout_page": 145,
+                "_layout_x": 75.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 계획",
+                "_source_order": 1
+            }
+        },
+        {
+            "chapter": "(2) 실행",
+            "page": 145,
+            "before_level": 6,
+            "after_level": 5,
+            "before_level_reason": "Numbered list item under a larger section, small font size (s=10.0).",
+            "after_level_reason": "Step 2 of PDSA cycle, small font size (s=10.0).",
+            "before": {
+                "level": 6,
+                "chapter": "(2) 실행",
+                "page": 145,
+                "level_reason": "Numbered list item under a larger section, small font size (s=10.0).",
+                "_layout_page": 145,
+                "_layout_x": 75.0,
+                "_layout_y": 488.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 실행",
+                "_source_order": 2
+            },
+            "after": {
+                "level": 5,
+                "chapter": "(2) 실행",
+                "page": 145,
+                "level_reason": "Step 2 of PDSA cycle, small font size (s=10.0).",
+                "_layout_page": 145,
+                "_layout_x": 75.0,
+                "_layout_y": 488.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 실행",
+                "_source_order": 2
+            }
+        },
+        {
+            "chapter": "(3) 분석",
+            "page": 145,
+            "before_level": 6,
+            "after_level": 5,
+            "before_level_reason": "Numbered list item under a larger section, small font size (s=10.0).",
+            "after_level_reason": "Step 3 of PDSA cycle, small font size (s=10.0).",
+            "before": {
+                "level": 6,
+                "chapter": "(3) 분석",
+                "page": 145,
+                "level_reason": "Numbered list item under a larger section, small font size (s=10.0).",
+                "_layout_page": 145,
+                "_layout_x": 75.0,
+                "_layout_y": 566.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(3) 분석",
+                "_source_order": 3
+            },
+            "after": {
+                "level": 5,
+                "chapter": "(3) 분석",
+                "page": 145,
+                "level_reason": "Step 3 of PDSA cycle, small font size (s=10.0).",
+                "_layout_page": 145,
+                "_layout_x": 75.0,
+                "_layout_y": 566.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(3) 분석",
+                "_source_order": 3
+            }
+        },
+        {
+            "chapter": "(4) 적용",
+            "page": 146,
+            "before_level": 6,
+            "after_level": 5,
+            "before_level_reason": "Numbered list item under a larger section, small font size (s=10.0).",
+            "after_level_reason": "Step 4 of PDSA cycle, small font size (s=10.0).",
+            "before": {
+                "level": 6,
+                "chapter": "(4) 적용",
+                "page": 146,
+                "level_reason": "Numbered list item under a larger section, small font size (s=10.0).",
+                "_layout_page": 146,
+                "_layout_x": 183.0,
+                "_layout_y": 320.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(4) 적용",
+                "_source_order": 4
+            },
+            "after": {
+                "level": 5,
+                "chapter": "(4) 적용",
+                "page": 146,
+                "level_reason": "Step 4 of PDSA cycle, small font size (s=10.0).",
+                "_layout_page": 146,
+                "_layout_x": 183.0,
+                "_layout_y": 320.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(4) 적용",
+                "_source_order": 4
+            }
+        }
+    ],
+    "added_entries": [
+        {
+            "after": {
+                "level": 2,
+                "chapter": "제6장 의료의 질과 환자안전",
+                "page": 137,
+                "level_reason": "Chapter title identified by repeated running header and layout style (s=31.0, r=3.27)."
+            }
+        },
+        {
+            "after": {
+                "level": 3,
+                "chapter": "1. 의료의 질 향상 활동",
+                "page": 145,
+                "level_reason": "Section title based on the content of PDSA cycle and layout pattern (s=18.0, r=1.9)."
+            }
+        },
+        {
+            "after": {
+                "level": 4,
+                "chapter": "PDSA 사이클",
+                "page": 145,
+                "level_reason": "Subsection describing the PDSA model steps, inferred from the numbered list (1)-(4)."
+            }
+        }
+    ],
+    "removed_entries": [
+        {
+            "before": {
+                "level": 2,
+                "chapter": "제6장 의료의 질과 환자안전",
+                "page": 145,
+                "level_reason": "Chapter title identified by repeated running header and layout style (s=31.0, r=3.27).",
+                "_layout_page": 145,
+                "_layout_x": 443.0,
+                "_layout_y": 53.0,
+                "_layout_font_size": 8.0,
+                "_layout_size_ratio": 0.84,
+                "_layout_text": "제6장 의료의 질과 환자안전",
+                "_source_order": 0
+            }
+        }
+    ]
+}

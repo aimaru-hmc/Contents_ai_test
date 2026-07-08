@@ -1,0 +1,54 @@
+{
+    "timestamp": "2026-07-08 18:13:15",
+    "stage_index": 29,
+    "stage": "level_review_changes",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "chunk 8/19",
+    "review_stage": "chunk 8/19",
+    "input_chapters": 45,
+    "output_chapters": 45,
+    "level_change_count": 1,
+    "added_count": 0,
+    "removed_count": 0,
+    "level_changes": [
+        {
+            "chapter": "2) 생태학적 모형",
+            "page": 252,
+            "before_level": 2,
+            "after_level": 5,
+            "before_level_reason": "Subsection under a previous level 1 chapter, indicated by numbering '2)' and font style.",
+            "after_level_reason": "Corrected from level 2 to level 5 based on visual style (s=12.0, r=1.27) and numbering '2)', matching the observed level 5 style cluster.",
+            "before": {
+                "level": 2,
+                "chapter": "2) 생태학적 모형",
+                "page": 252,
+                "level_reason": "Subsection under a previous level 1 chapter, indicated by numbering '2)' and font style.",
+                "_layout_page": 252,
+                "_layout_x": 173.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 생태학적 모형",
+                "_source_order": 0
+            },
+            "after": {
+                "level": 5,
+                "chapter": "2) 생태학적 모형",
+                "page": 252,
+                "level_reason": "Corrected from level 2 to level 5 based on visual style (s=12.0, r=1.27) and numbering '2)', matching the observed level 5 style cluster.",
+                "_layout_page": 252,
+                "_layout_x": 173.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 생태학적 모형",
+                "_source_order": 0
+            }
+        }
+    ],
+    "added_entries": [],
+    "removed_entries": []
+}
