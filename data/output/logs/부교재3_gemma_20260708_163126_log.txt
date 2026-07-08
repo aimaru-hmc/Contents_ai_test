@@ -23,3 +23,92 @@ Processing started: 부교재3.PDF
   Gemma chunk 3 completed: 85 chapters
   Gemma chunk 4/19 request: pages 110-144
   Gemma input chunk 4 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_4_pages_110-144.json
+  Gemma level review(chunk 4/19) started
+  Gemma level review(chunk 4/19) completed: 65 chapters / level changes 0
+  Gemma chunk 4 completed: 65 chapters
+  Gemma chunk 5/19 request: pages 145-182
+  Gemma input chunk 5 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_5_pages_145-182.json
+  Gemma level review(chunk 5/19) started
+  Gemma level review(chunk 5/19) completed: 71 chapters / level changes 0
+  Gemma chunk 5 completed: 71 chapters
+  Gemma chunk 6/19 request: pages 183-217
+  Gemma input chunk 6 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_6_pages_183-217.json
+  Gemma level review(chunk 6/19) started
+  Gemma level review(chunk 6/19) completed: 60 chapters / level changes 0
+  Gemma chunk 6 completed: 60 chapters
+  Gemma chunk 7/19 request: pages 218-250
+  Gemma input chunk 7 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_7_pages_218-250.json
+  Gemma level review(chunk 7/19) started
+  Gemma level review(chunk 7/19) completed: 61 chapters / level changes 0
+  Gemma chunk 7 completed: 61 chapters
+  Gemma chunk 8/19 request: pages 251-280
+  Gemma input chunk 8 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_8_pages_251-280.json
+  Gemma level review(chunk 8/19) started
+  Gemma level review(chunk 8/19) completed: 45 chapters / level changes 1
+  Gemma chunk 8 completed: 45 chapters
+  Gemma chunk 9/19 request: pages 281-314
+  Gemma input chunk 9 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_9_pages_281-314.json
+  Gemma level review(chunk 9/19) started
+  Gemma level review(chunk 9/19) completed: 82 chapters / level changes 0
+  Gemma chunk 9 completed: 82 chapters
+  Gemma chunk 10/19 request: pages 315-333
+  Gemma input chunk 10 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_10_pages_315-333.json
+  Gemma level review(chunk 10/19) started
+  Gemma level review(chunk 10/19) completed: 32 chapters / level changes 0
+  Gemma chunk 10 completed: 32 chapters
+  Gemma chunk 11/19 request: pages 334-352
+  Gemma input chunk 11 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_11_pages_334-352.json
+  Gemma level review(chunk 11/19) started
+  Gemma level review(chunk 11/19) completed: 28 chapters / level changes 0
+  Gemma chunk 11 completed: 28 chapters
+  Gemma chunk 12/19 request: pages 353-386
+  Gemma input chunk 12 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_12_pages_353-386.json
+  Gemma level review(chunk 12/19) started
+  Gemma level review(chunk 12/19) completed: 71 chapters / level changes 0
+  Gemma chunk 12 completed: 71 chapters
+  Gemma chunk 13/19 request: pages 387-421
+  Gemma input chunk 13 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_13_pages_387-421.json
+  Gemma level review(chunk 13/19) started
+  Gemma level review(chunk 13/19) failed; keeping previous TOC: Gemma vLLM server request failed: HTTP 400 Bad Request. URL=http://127.0.0.1:8000/v1/chat/completions. Body: {"error":{"message":"This model's maximum context length is 131072 tokens. However, you requested 16384 output tokens and your prompt contains at least 114689 input tokens, for a total of at least 131073 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=114689)","type":"BadRequestError","param":"input_tokens","code":400}}
+  Gemma chunk 13 completed: 92 chapters
+  Gemma chunk 14/19 request: pages 422-449
+  Gemma input chunk 14 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_14_pages_422-449.json
+  Gemma level review(chunk 14/19) started
+  Gemma level review(chunk 14/19) completed: 52 chapters / level changes 0
+  Gemma chunk 14 completed: 52 chapters
+  Gemma chunk 15/19 request: pages 450-478
+  Gemma input chunk 15 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_15_pages_450-478.json
+  Gemma level review(chunk 15/19) started
+  Gemma level review(chunk 15/19) completed: 47 chapters / level changes 0
+  Gemma chunk 15 completed: 47 chapters
+  Gemma chunk 16/19 request: pages 479-496
+  Gemma input chunk 16 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_16_pages_479-496.json
+  Gemma level review(chunk 16/19) started
+  Gemma level review(chunk 16/19) completed: 37 chapters / level changes 0
+  Gemma chunk 16 completed: 37 chapters
+  Gemma chunk 17/19 request: pages 497-521
+  Gemma input chunk 17 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_17_pages_497-521.json
+  Gemma level review(chunk 17/19) started
+  Gemma level review(chunk 17/19) completed: 62 chapters / level changes 0
+  Gemma chunk 17 completed: 62 chapters
+  Gemma chunk 18/19 request: pages 522-557
+  Gemma input chunk 18 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_18_pages_522-557.json
+  Gemma level review(chunk 18/19) started
+  Gemma level review(chunk 18/19) completed: 36 chapters / level changes 0
+  Gemma chunk 18 completed: 36 chapters
+  Gemma chunk 19/19 request: pages 558-583
+  Gemma input chunk 19 saved: data/output/input_chunks/3_gemma_20260708_163126/chunk_19_pages_558-583.json
+  Gemma level review(chunk 19/19) started
+  Gemma level review(chunk 19/19) completed: 0 chapters / level changes 0
+  Gemma chunk 19 completed: 0 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) failed; keeping previous TOC: Gemma vLLM server request failed: HTTP 400 Bad Request. URL=http://127.0.0.1:8000/v1/chat/completions. Body: {"error":{"message":"This model's maximum context length is 131072 tokens. However, you requested 16384 output tokens and your prompt contains at least 114689 input tokens, for a total of at least 131073 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=114689)","type":"BadRequestError","param":"input_tokens","code":400}}
+Completed: data/output/3_gemma_20260708_171256_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 41m 29.9s (2489.943s)
+  title: 예방의학과 공중보건학
+  chapters: 1301
+Processing result: success 1 / failed 0
+Run log saved: data/output/logs/부교재3_gemma_20260708_163126_log.txt
