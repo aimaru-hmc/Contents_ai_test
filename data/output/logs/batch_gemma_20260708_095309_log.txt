@@ -1,0 +1,45 @@
+Run log saved: data/output/logs/batch_gemma_20260708_095309_log.txt
+Processing started: 1편(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 51 pages, 169770 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/1_2021_gemma_20260708_095309_parsed_pdf.txt
+  Gemma text TOC generation started: google/gemma-4-31B-it
+  Gemma/vLLM model loading started: google/gemma-4-31B-it
+[32mINFO[0m [90m07-08 09:53:22[0m [90m[api_utils.py:273][0m non-default args: {'max_model_len': -1, 'tensor_parallel_size': 4, 'gpu_memory_utilization': 0.95, 'disable_log_stats': True, 'model': 'google/gemma-4-31B-it'}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[32mINFO[0m [90m07-08 09:53:23[0m [90m[model.py:598][0m Resolved architecture: Gemma4ForConditionalGeneration
+[32mINFO[0m [90m07-08 09:53:23[0m [90m[model.py:1725][0m Using max model len 262144
+[32mINFO[0m [90m07-08 09:53:28[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=16384.
+[32mINFO[0m [90m07-08 09:53:28[0m [90m[config.py:90][0m Gemma4 model has heterogeneous head dimensions (head_dim=256, global_head_dim=512). Using FA4 for all layers to avoid mixed FA3/FA4 penalty.
+[32mINFO[0m [90m07-08 09:53:28[0m [90m[vllm.py:1006][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m07-08 09:53:28[0m [90m[kernel.py:276][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m07-08 09:53:28[0m [90m[cuda.py:322][0m Forcing --disable_chunked_mm_input for models with multimodal-bidirectional attention.
+[32mINFO[0m [90m07-08 09:53:30[0m [90m[compilation.py:310][0m Enabled custom fusions: allreduce_rms
+[33mWARNING[0m [90m07-08 09:53:34[0m [90m[system_utils.py:157][0m We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
+  Gemma/vLLM model loading completed: google/gemma-4-31B-it
+  Gemma/vLLM config: tensor_parallel_size=4 / dtype=auto / gpu_memory_utilization=0.95
+  Gemma text TOC generation completed: google/gemma-4-31B-it
+  Gemma level review(single text) started
+  Gemma level review(single text) completed: 85 chapters / level changes 0
+Completed: data/output/1_2021_gemma_20260708_095832_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 5m 18.3s (318.306s)
+  title: 건강과 질병
+  chapters: 85
+Processing started: 2편1-4장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 98 pages, 300119 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/2_1-4_2021_gemma_20260708_095309_parsed_pdf.txt
+  Gemma text chunk processing started: 2 chunks
+  Gemma chunk 1/2 request: pages 1-76
+  Gemma input chunk 1 saved: data/output/input_chunks/2_1-4_2021_gemma_20260708_095309/chunk_1_pages_1-76.json
+  Gemma level review(chunk 1/2) started
+  Gemma level review(chunk 1/2) completed: 120 chapters / level changes 0
+  Gemma chunk 1 completed: 120 chapters
+  Gemma chunk 2/2 request: pages 77-100
+  Gemma input chunk 2 saved: data/output/input_chunks/2_1-4_2021_gemma_20260708_095309/chunk_2_pages_77-100.json
+  Gemma level review(chunk 2/2) started

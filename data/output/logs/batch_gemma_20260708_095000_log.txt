@@ -1,0 +1,55 @@
+Run log saved: data/output/logs/batch_gemma_20260708_095000_log.txt
+Processing started: 1편(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 51 pages, 169770 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/1_2021_gemma_20260708_095000_parsed_pdf.txt
+  Gemma text TOC generation started: google/gemma-4-31B-it
+Gemma model failed: google/gemma-4-31B-it / invalid literal for int() with base 10: 'auto'
+Failed: 1편(2021).pdf / invalid literal for int() with base 10: 'auto'
+  elapsed: 8.2s (8.154s)
+  Error log saved: data/output/error_logs/20260708_095013_1_2021_gemma_google_gemma-4-31B-it_PDF_processing_failed_error.json
+Processing started: 2편1-4장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 98 pages, 300119 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/2_1-4_2021_gemma_20260708_095000_parsed_pdf.txt
+  Gemma text chunk processing started: 2 chunks
+  Gemma chunk 1/2 request: pages 1-76
+  Gemma input chunk 1 saved: data/output/input_chunks/2_1-4_2021_gemma_20260708_095000/chunk_1_pages_1-76.json
+  Gemma chunk 1 failed; retrying with 3 subchunks: invalid literal for int() with base 10: 'auto'
+  Gemma chunk 1.1/2 request: pages 1-39
+  Gemma input chunk 1.1 saved: data/output/input_chunks/2_1-4_2021_gemma_20260708_095000/chunk_1.1_pages_1-39.json
+  Gemma chunk 1.1 failed; retrying with 2 subchunks: invalid literal for int() with base 10: 'auto'
+  Gemma chunk 1.1.1/2 request: pages 1-35
+  Gemma input chunk 1.1.1 saved: data/output/input_chunks/2_1-4_2021_gemma_20260708_095000/chunk_1.1.1_pages_1-35.json
+Gemma model failed: google/gemma-4-31B-it / invalid literal for int() with base 10: 'auto'
+Failed: 2편1-4장(2021).pdf / invalid literal for int() with base 10: 'auto'
+  elapsed: 16.2s (16.198s)
+  Error log saved: data/output/error_logs/20260708_095029_2_1-4_2021_gemma_google_gemma-4-31B-it_PDF_processing_failed_error.json
+Processing started: 2편5-8장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 177 pages, 582690 chars, mode=layout
+  Parsed PDF text saved: data/output/parsed_pdfs/2_5-8_2021_gemma_20260708_095000_parsed_pdf.txt
+  Gemma text chunk processing started: 3 chunks
+  Gemma chunk 1/3 request: pages 1-69
+  Gemma input chunk 1 saved: data/output/input_chunks/2_5-8_2021_gemma_20260708_095000/chunk_1_pages_1-69.json
+  Gemma chunk 1 failed; retrying with 3 subchunks: invalid literal for int() with base 10: 'auto'
+  Gemma chunk 1.1/3 request: pages 1-35
+  Gemma input chunk 1.1 saved: data/output/input_chunks/2_5-8_2021_gemma_20260708_095000/chunk_1.1_pages_1-35.json
+  Gemma chunk 1.1 failed; retrying with 2 subchunks: invalid literal for int() with base 10: 'auto'
+  Gemma chunk 1.1.1/3 request: pages 1-31
+  Gemma input chunk 1.1.1 saved: data/output/input_chunks/2_5-8_2021_gemma_20260708_095000/chunk_1.1.1_pages_1-31.json
+Gemma model failed: google/gemma-4-31B-it / invalid literal for int() with base 10: 'auto'
+Failed: 2편5-8장(2021).pdf / invalid literal for int() with base 10: 'auto'
+  elapsed: 28.0s (27.999s)
+  Error log saved: data/output/error_logs/20260708_095057_2_5-8_2021_gemma_google_gemma-4-31B-it_PDF_processing_failed_error.json
+Processing started: 2편9-11장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+Run log saved: data/output/logs/batch_gemma_20260708_095000_log.txt
