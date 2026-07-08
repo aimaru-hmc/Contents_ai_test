@@ -10,6 +10,8 @@ import sys
 import tempfile
 import time
 import traceback
+import urllib.error
+import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from threading import Lock
@@ -105,6 +107,15 @@ DEFAULT_GEMMA_VLLM_TRUST_REMOTE_CODE = (
     os.getenv("GEMMA_VLLM_TRUST_REMOTE_CODE", os.getenv("VLLM_TRUST_REMOTE_CODE", "false")).strip().lower()
     in {"1", "true", "yes", "on"}
 )
+DEFAULT_GEMMA_VLLM_SERVER_BASE_URL = (
+    os.getenv("GEMMA_VLLM_SERVER_BASE_URL", os.getenv("VLLM_SERVER_BASE_URL", "http://127.0.0.1:8000/v1")).strip()
+    or "http://127.0.0.1:8000/v1"
+)
+DEFAULT_GEMMA_VLLM_SERVER_API_KEY = (
+    os.getenv("GEMMA_VLLM_SERVER_API_KEY", os.getenv("VLLM_API_KEY", "EMPTY")).strip()
+    or "EMPTY"
+)
+DEFAULT_GEMMA_VLLM_SERVER_TIMEOUT = int(os.getenv("GEMMA_VLLM_SERVER_TIMEOUT", "3600"))
 
 TOC_SCHEMA: dict[str, Any] = {
     "type": "object",
@@ -2487,6 +2498,7 @@ def generate_toc_from_pdf_claude(pdf_path: Path, args: argparse.Namespace, promp
 
 _GEMMA_TRANSFORMERS_CACHE: dict[tuple[str, str, str], dict[str, Any]] = {}
 _GEMMA_VLLM_CACHE: dict[tuple[str, str, int, float, str, bool], dict[str, Any]] = {}
+GEMMA_RUNTIMES = {"transformers", "vllm", "vllm-server"}
 
 GEMMA_SYSTEM_PROMPT = (
     "You are an expert at creating tables of contents for PDF textbooks and lecture materials. "
@@ -2503,10 +2515,16 @@ def normalize_gemma_runtime(runtime: str | None) -> str:
         "transformer": "transformers",
         "vllm-offline": "vllm",
         "vllm_offline": "vllm",
+        "server": "vllm-server",
+        "vllm_server": "vllm-server",
+        "vllm-openai": "vllm-server",
+        "vllm_openai": "vllm-server",
+        "openai-compatible": "vllm-server",
+        "openai_compatible": "vllm-server",
     }
     runtime = aliases.get(runtime, runtime)
-    if runtime not in {"transformers", "vllm"}:
-        raise ValueError("--gemma-runtime must be either transformers or vllm.")
+    if runtime not in GEMMA_RUNTIMES:
+        raise ValueError("--gemma-runtime must be transformers, vllm, or vllm-server.")
     return runtime
 
 
@@ -2724,6 +2742,12 @@ def preflight_gemma_vllm() -> None:
     import_gemma_vllm_dependencies()
 
 
+def preflight_gemma_vllm_server(args: argparse.Namespace) -> None:
+    base_url = clean_text(getattr(args, "gemma_vllm_server_base_url", DEFAULT_GEMMA_VLLM_SERVER_BASE_URL))
+    if not base_url:
+        raise RuntimeError("--gemma-vllm-server-base-url is required for --gemma-runtime vllm-server.")
+
+
 def preflight_gemma_provider(args: argparse.Namespace) -> None:
     provider_args = build_provider_args(args, "gemma")
     preflight_pdf_text_extraction()
@@ -2734,6 +2758,8 @@ def preflight_gemma_provider(args: argparse.Namespace) -> None:
     runtime = normalize_gemma_runtime(getattr(provider_args, "gemma_runtime", DEFAULT_GEMMA_RUNTIME))
     if runtime == "vllm":
         preflight_gemma_vllm()
+    elif runtime == "vllm-server":
+        preflight_gemma_vllm_server(provider_args)
     else:
         preflight_gemma_transformers(models=models)
 
@@ -3212,6 +3238,98 @@ def generate_gemma_once_vllm(
     return {"response": text, "_runtime": runtime_metadata}
 
 
+def gemma_vllm_server_chat_url(base_url: str) -> str:
+    url = clean_text(base_url).rstrip("/")
+    if not url:
+        raise ValueError("--gemma-vllm-server-base-url is empty.")
+    if url.endswith("/chat/completions"):
+        return url
+    if url.endswith("/v1"):
+        return f"{url}/chat/completions"
+    return f"{url}/v1/chat/completions"
+
+
+def generate_gemma_once_vllm_server(
+    model: str,
+    prompt: str,
+    args: argparse.Namespace,
+) -> dict[str, Any]:
+    base_url = clean_text(getattr(args, "gemma_vllm_server_base_url", DEFAULT_GEMMA_VLLM_SERVER_BASE_URL))
+    api_key = clean_text(getattr(args, "gemma_vllm_server_api_key", DEFAULT_GEMMA_VLLM_SERVER_API_KEY))
+    timeout = max(1, int(getattr(args, "gemma_vllm_server_timeout", DEFAULT_GEMMA_VLLM_SERVER_TIMEOUT)))
+    max_tokens = max(1, int(args.max_output_tokens or DEFAULT_MAX_OUTPUT_TOKENS_BY_PROVIDER["gemma"]))
+    temperature = max(0.0, float(args.temperature))
+
+    payload = {
+        "model": model,
+        "messages": build_gemma_chat_messages(prompt),
+        "temperature": temperature,
+        "max_tokens": max_tokens,
+    }
+    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+    }
+    if api_key:
+        headers["Authorization"] = f"Bearer {api_key}"
+
+    url = gemma_vllm_server_chat_url(base_url)
+    request = urllib.request.Request(url, data=body, headers=headers, method="POST")
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            response_text = response.read().decode("utf-8", errors="replace")
+    except urllib.error.HTTPError as error:
+        error_body = error.read().decode("utf-8", errors="replace")
+        raise RuntimeError(
+            f"Gemma vLLM server request failed: HTTP {error.code} {error.reason}. "
+            f"URL={url}. Body: {error_body[:1000]}"
+        ) from error
+    except urllib.error.URLError as error:
+        raise RuntimeError(
+            f"Gemma vLLM server is not reachable at {url}. "
+            "Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. "
+            f"Cause: {error}"
+        ) from error
+
+    try:
+        data = json.loads(response_text)
+    except Exception as error:
+        raise RuntimeError(
+            f"Gemma vLLM server returned non-JSON response from {url}: {response_text[:1000]}"
+        ) from error
+
+    choices = data.get("choices") if isinstance(data, dict) else None
+    if not isinstance(choices, list) or not choices:
+        raise RuntimeError(f"Gemma vLLM server returned no choices: {response_text[:1000]}")
+
+    first_choice = choices[0] if isinstance(choices[0], dict) else {}
+    message = first_choice.get("message") if isinstance(first_choice, dict) else {}
+    text = ""
+    if isinstance(message, dict):
+        content = message.get("content")
+        if isinstance(content, list):
+            text = "\n".join(
+                clean_text(part.get("text") if isinstance(part, dict) else part)
+                for part in content
+                if clean_text(part.get("text") if isinstance(part, dict) else part)
+            )
+        else:
+            text = str(content or "")
+    if not text:
+        text = str(first_choice.get("text") or "")
+    if not text:
+        raise RuntimeError(f"Gemma vLLM server returned an empty response: {response_text[:1000]}")
+
+    runtime_metadata = {
+        "gemma_runtime": "vllm-server",
+        "gemma_model": model,
+        "gemma_vllm_server_base_url": base_url,
+        "gemma_vllm_server_timeout": timeout,
+    }
+    return {"response": text, "_runtime": runtime_metadata}
+
+
 def generate_gemma_once(
     model: str,
     prompt: str,
@@ -3221,6 +3339,12 @@ def generate_gemma_once(
     update_processing_metadata(args, gemma_runtime=runtime)
     if runtime == "vllm":
         return generate_gemma_once_vllm(
+            model=model,
+            prompt=prompt,
+            args=args,
+        )
+    if runtime == "vllm-server":
+        return generate_gemma_once_vllm_server(
             model=model,
             prompt=prompt,
             args=args,
@@ -5935,7 +6059,12 @@ def generate_toc_from_pdf_gemma(pdf_path: Path, args: argparse.Namespace, prompt
 
         try:
             runtime = normalize_gemma_runtime(getattr(args, "gemma_runtime", DEFAULT_GEMMA_RUNTIME))
-            runtime_label = "vLLM" if runtime == "vllm" else "Transformers"
+            runtime_labels = {
+                "vllm": "vLLM",
+                "vllm-server": "vLLM server",
+                "transformers": "Transformers",
+            }
+            runtime_label = runtime_labels.get(runtime, runtime)
             print(f"  Using Gemma/{runtime_label}: {model}", flush=True)
             return generate_toc_from_pdf_gemma_text(
                 model=model,
@@ -6446,7 +6575,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--gemma-runtime",
         default=DEFAULT_GEMMA_RUNTIME,
-        help="Gemma inference runtime: transformers or vllm.",
+        help="Gemma inference runtime: transformers, vllm, or vllm-server.",
     )
     parser.add_argument(
         "--gemma-merge-mode",
@@ -6519,6 +6648,22 @@ def build_arg_parser() -> argparse.ArgumentParser:
         action="store_true",
         default=DEFAULT_GEMMA_VLLM_TRUST_REMOTE_CODE,
         help="Pass trust_remote_code=True when loading Gemma with vLLM.",
+    )
+    parser.add_argument(
+        "--gemma-vllm-server-base-url",
+        default=DEFAULT_GEMMA_VLLM_SERVER_BASE_URL,
+        help="OpenAI-compatible vLLM server base URL for --gemma-runtime vllm-server.",
+    )
+    parser.add_argument(
+        "--gemma-vllm-server-api-key",
+        default=DEFAULT_GEMMA_VLLM_SERVER_API_KEY,
+        help="Bearer API key for --gemma-runtime vllm-server. vLLM usually accepts any value unless configured otherwise.",
+    )
+    parser.add_argument(
+        "--gemma-vllm-server-timeout",
+        type=int,
+        default=DEFAULT_GEMMA_VLLM_SERVER_TIMEOUT,
+        help="HTTP timeout in seconds for --gemma-runtime vllm-server requests.",
     )
     parser.add_argument(
         "--gemma-extraction-mode",
