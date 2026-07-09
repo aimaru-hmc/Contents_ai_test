@@ -1,0 +1,1715 @@
+{
+    "timestamp": "2026-07-09 10:12:02",
+    "stage_index": 14,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "4",
+    "total_chunks": 8,
+    "start_page": 90,
+    "end_page": 118,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 4/8",
+        "input_chapters": 47,
+        "output_chapters": 47,
+        "level_changes": 0,
+        "added_entries": 0,
+        "removed_entries": 0,
+        "level_change_report_recorded": false,
+        "possible_invalid_heading_candidate_count": 30,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "Chapter 4 Basic biostatistics: concepts and tools",
+                "level": 1,
+                "page": 77,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Chapter title with largest font size and distinct numbering.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 319.0,
+                "vertical_position": 54.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 84,
+                    "page_count": 84,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Independent variables",
+                "level": 2,
+                "page": 90,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Section heading with bold and italic style, indented from the left.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 85.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=90, line=2, s=9.0, r=0.9, x=55.0, y=85.0: \"Independent variables\""
+                    ],
+                    "embedded_examples": [
+                        "page=90, line=14, s=10.0, r=1.0, x=73.0, y=192.0: \"The situation for independent variables that representcategories is a bit different\"",
+                        "page=90, line=36, s=10.0, r=1.0, x=55.0, y=406.0: \"tion, we need two independent variables – one less than\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=90, line=1, s=9.0, r=0.9, x=319.0, y=54.0: \"Basic biostatistics: concepts and tools 77\"",
+                        "page=90, line=4, s=7.0, r=0.7, x=283.0, y=100.0: \"ii\"",
+                        "page=90, line=6, s=7.0, r=0.7, x=110.0, y=114.0: \"ii\"",
+                        "page=90, line=8, s=7.0, r=0.7, x=337.0, y=129.0: \"ii\""
+                    ]
+                }
+            },
+            {
+                "title": "Multiple variables",
+                "level": 3,
+                "page": 90,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection heading with bold and italic style, same indentation as previous level 2.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 343.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=90, line=27, s=9.0, r=0.9, x=55.0, y=343.0: \"Multiple variables\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=90, line=19, s=7.0, r=0.7, x=145.0, y=237.0: \"1\"",
+                        "page=90, line=21, s=7.0, r=0.7, x=145.0, y=251.0: \"1\"",
+                        "page=90, line=24, s=6.0, r=0.6, x=180.0, y=288.0: \"1 mmaallleess females\"",
+                        "page=90, line=29, s=5.6, r=0.56, x=431.0, y=359.0: \"1 2\""
+                    ]
+                }
+            },
+            {
+                "title": "Logistic regression",
+                "level": 2,
+                "page": 91,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Section heading with larger font size (14.0) and distinct indentation.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=91, line=61, s=14.0, r=1.4, x=140.0, y=84.0: \"Logistic regression\""
+                    ],
+                    "embedded_examples": [
+                        "page=91, line=68, s=10.0, r=1.0, x=158.0, y=190.0: \"The logistic regression model, as shown below, is ideal for this purpose. The\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 3,
+                    "small_label_examples": [
+                        "page=91, line=60, s=9.0, r=0.9, x=27.0, y=54.0: \"78 Chapter 4\"",
+                        "page=91, line=60, s=9.0, r=0.9, x=27.0, y=54.0: \"78 Chapter 4\"",
+                        "page=91, line=76, s=6.0, r=0.6, x=267.0, y=313.0: \"00 11 11 22 22 k k\""
+                    ]
+                }
+            },
+            {
+                "title": "Kaplan-Meier survival curves",
+                "level": 3,
+                "page": 92,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection heading with larger font size (14.0) under survival analyses section.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 569.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=92, line=156, s=14.0, r=1.4, x=55.0, y=569.0: \"Kaplan-Meier survival curves\""
+                    ],
+                    "embedded_examples": [
+                        "page=92, line=157, s=10.0, r=1.0, x=55.0, y=596.0: \"Kaplan-Meier survival curves are commonly used to display survival data (see\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=92, line=158, s=10.0, r=1.0, x=55.0, y=609.0: \"Figure 8.4). They can be used to display any type of time-to-event data. If the event\"",
+                        "page=92, line=158, s=10.0, r=1.0, x=55.0, y=609.0: \"Figure 8.4). They can be used to display any type of time-to-event data. If the event\""
+                    ],
+                    "small_label_examples": [
+                        "page=92, line=149, s=6.3, r=0.63, x=342.0, y=477.0: \"1\"",
+                        "page=92, line=151, s=6.3, r=0.63, x=293.0, y=489.0: \"1\"",
+                        "page=92, line=153, s=7.0, r=0.7, x=155.0, y=512.0: \"per year increment males / females\"",
+                        "page=92, line=149, s=6.3, r=0.63, x=342.0, y=477.0: \"1\""
+                    ]
+                }
+            },
+            {
+                "title": "Two sample t-test",
+                "level": 3,
+                "page": 93,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection heading with bold and italic style under sample size issues.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 391.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=93, line=186, s=9.0, r=0.9, x=140.0, y=391.0: \"Two sample t-test\""
+                    ],
+                    "embedded_examples": [
+                        "page=93, line=184, s=10.0, r=1.0, x=158.0, y=356.0: \"• the two sample t-test and\"",
+                        "page=93, line=187, s=10.0, r=1.0, x=140.0, y=403.0: \"For the two sample t-test, the formula is, for (cid:734)= 0.05,\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=93, line=186, s=9.0, r=0.9, x=140.0, y=391.0: \"Two sample t-test\"",
+                        "page=93, line=188, s=8.0, r=0.8, x=285.0, y=424.0: \"4 22( )2\"",
+                        "page=93, line=189, s=6.0, r=0.6, x=230.0, y=431.0: \"N nnn nn = 000.999777555 11 ß .\"",
+                        "page=93, line=190, s=6.0, r=0.6, x=253.0, y=439.0: \"111 22 (d )2\""
+                    ]
+                }
+            },
+            {
+                "title": "Test comparing proportions",
+                "level": 3,
+                "page": 94,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection heading with bold and italic style under sample size issues.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 85.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=94, line=213, s=9.0, r=0.9, x=55.0, y=85.0: \"Test comparing proportions\""
+                    ],
+                    "embedded_examples": [
+                        "page=94, line=214, s=10.0, r=1.0, x=55.0, y=96.0: \"For the test comparing proportions, the situation is very similar except that the for-\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=94, line=219, s=6.0, r=0.6, x=132.0, y=156.0: \"111 22 ( )2\"",
+                        "page=94, line=223, s=6.0, r=0.6, x=174.0, y=136.0: \"z z )2 0 1 ß\"",
+                        "page=94, line=242, s=9.0, r=0.9, x=319.0, y=54.0: \"Basic biostatistics: concepts and tools 81\"",
+                        "page=94, line=213, s=9.0, r=0.9, x=55.0, y=85.0: \"Test comparing proportions\""
+                    ]
+                }
+            },
+            {
+                "title": "Meta-analysis",
+                "level": 2,
+                "page": 94,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Section heading with larger font size (20.0) and distinct indentation.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 324.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 7,
+                    "exact_examples": [
+                        "page=94, line=246, s=20.0, r=2.0, x=55.0, y=324.0: \"Meta-analysis\""
+                    ],
+                    "embedded_examples": [
+                        "page=94, line=247, s=10.0, r=1.0, x=55.0, y=356.0: \"Meta-analysis is defined as the statistical synthesis of the data from separate but\"",
+                        "page=94, line=250, s=10.0, r=1.0, x=73.0, y=395.0: \"Meta-analysis differs frommost medical andepidemiological studies in that no\"",
+                        "page=94, line=252, s=10.0, r=1.0, x=55.0, y=421.0: \"carrying out meta-analysis include:\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=94, line=233, s=8.0, r=0.8, x=85.0, y=258.0: \"111 22 (((\"",
+                        "page=94, line=234, s=8.4, r=0.84, x=193.0, y=264.0: \"d\"",
+                        "page=94, line=242, s=9.0, r=0.9, x=319.0, y=54.0: \"Basic biostatistics: concepts and tools 81\"",
+                        "page=94, line=245, s=7.0, r=0.7, x=228.0, y=304.0: \"1 2\""
+                    ]
+                }
+            },
+            {
+                "title": "Study questions",
+                "level": 2,
+                "page": 95,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Standard end-of-chapter section with larger font size (20.0).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 133.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=95, line=277, s=20.0, r=2.0, x=140.0, y=133.0: \"Study questions\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=95, line=273, s=9.0, r=0.9, x=27.0, y=54.0: \"82 Chapter 4\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "answerstostudyquestions",
+                    "display_text": "Answers to study questions",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 354.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 8,
+                    "page_count": 8,
+                    "page_range": "202-216",
+                    "samples": [
+                        "Answers to study questions 189",
+                        "Answers to study questions 191",
+                        "Answers to study questions 193"
+                    ]
+                }
+            },
+            {
+                "title": "References",
+                "level": 2,
+                "page": 95,
+                "reasons": [
+                    "title itself looks like a case/example/table/figure/problem/reference label",
+                    "source context looks like case/example/table/figure/problem/reference material",
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Standard end-of-chapter section with larger font size (20.0).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 371.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=95, line=297, s=20.0, r=2.0, x=140.0, y=371.0: \"References\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=95, line=290, s=7.0, r=0.7, x=252.0, y=292.0: \"1 1\"",
+                        "page=95, line=294, s=7.0, r=0.7, x=346.0, y=330.0: \"1\""
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 5 Causation in epidemiology",
+                "level": 1,
+                "page": 96,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Chapter title with largest font size and distinct numbering.",
+                "font_size": 32.0,
+                "size_ratio": 3.2,
+                "left_indent": 55.0,
+                "vertical_position": 101.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 84,
+                    "page_count": 84,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Multiple factors",
+                "level": 4,
+                "page": 97,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with bold and italic style under sufficient or necessary.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=97, line=354, s=9.0, r=0.9, x=140.0, y=84.0: \"Multiple factors\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=97, line=353, s=9.0, r=0.9, x=27.0, y=53.0: \"84 Chapter 5\""
+                    ]
+                }
+            },
+            {
+                "title": "Attributable fraction",
+                "level": 4,
+                "page": 97,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with bold and italic style under sufficient or necessary.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 235.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=97, line=365, s=9.0, r=0.9, x=140.0, y=235.0: \"Attributable fraction\""
+                    ],
+                    "embedded_examples": [
+                        "page=97, line=366, s=10.0, r=1.0, x=140.0, y=246.0: \"The attributable fraction (see chapter 2) can be used to quantify the likely preventive\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=97, line=365, s=9.0, r=0.9, x=140.0, y=235.0: \"Attributable fraction\""
+                    ]
+                }
+            },
+            {
+                "title": "A causal pathway",
+                "level": 3,
+                "page": 98,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection heading with larger font size (14.0) under concept of cause.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 302.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=98, line=406, s=14.0, r=1.4, x=55.0, y=302.0: \"A causal pathway\""
+                    ],
+                    "embedded_examples": [
+                        "page=98, line=412, s=10.0, r=1.0, x=55.0, y=395.0: \"a causal pathway where one factor leads to another until eventually the specific\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=98, line=416, s=8.0, r=0.8, x=55.0, y=474.0: \"Figure 5.2. Infant mortality rate and socioeconomic status in Islamic Republic of\""
+                    ],
+                    "small_label_examples": [
+                        "page=98, line=398, s=8.0, r=0.8, x=166.0, y=109.0: \"to bacteria invasion\"",
+                        "page=98, line=399, s=8.0, r=0.8, x=93.0, y=121.0: \"Genetic factors\"",
+                        "page=98, line=400, s=8.0, r=0.8, x=55.0, y=135.0: \"Malnutrition\"",
+                        "page=98, line=402, s=8.0, r=0.8, x=56.0, y=233.0: \"Crowded\""
+                    ]
+                }
+            },
+            {
+                "title": "Interaction",
+                "level": 3,
+                "page": 101,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection heading with larger font size (14.0) under factors in causation.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 147.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=101, line=529, s=14.0, r=1.4, x=140.0, y=147.0: \"Interaction\""
+                    ],
+                    "embedded_examples": [
+                        "page=101, line=532, s=10.0, r=1.0, x=140.0, y=199.0: \"interaction, is illustrated by the particularly high risk of lung cancer in people who\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=101, line=524, s=9.0, r=0.9, x=27.0, y=53.0: \"88 Chapter 5\"",
+                        "page=101, line=524, s=9.0, r=0.9, x=27.0, y=53.0: \"88 Chapter 5\""
+                    ]
+                }
+            },
+            {
+                "title": "Plausibility",
+                "level": 4,
+                "page": 104,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Lower level heading with larger font size (14.0) under considering causation.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 147.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 3,
+                    "exact_examples": [
+                        "page=104, line=648, s=14.0, r=1.4, x=55.0, y=147.0: \"Plausibility\""
+                    ],
+                    "embedded_examples": [
+                        "page=104, line=656, s=10.0, r=1.0, x=55.0, y=227.0: \"the effect measured. However, biological plausibility is a\"",
+                        "page=104, line=668, s=10.0, r=1.0, x=55.0, y=318.0: \"the causative agent. Lack of plausibility may simply reflect use of ruminant proteins as...\"",
+                        "page=104, line=674, s=10.0, r=1.0, x=55.0, y=370.0: \"biological mechanism. A recent example of plausibility\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=104, line=650, s=8.0, r=0.8, x=289.0, y=182.0: \"Box 5.1. BSE and vCJD\"",
+                        "page=104, line=650, s=8.0, r=0.8, x=289.0, y=182.0: \"Box 5.1. BSE and vCJD\""
+                    ],
+                    "small_label_examples": [
+                        "page=104, line=643, s=9.0, r=0.9, x=358.0, y=53.0: \"Causation in epidemiology 91\"",
+                        "page=104, line=652, s=9.0, r=0.9, x=55.0, y=198.0: \"laboratory experiments may have shown how exposure to Variant Creutzfeldt–Jakob disease (...\"",
+                        "page=104, line=653, s=9.0, r=0.9, x=289.0, y=209.0: \"form of “mad cow disease” or bovine spongiform en-\"",
+                        "page=104, line=655, s=9.0, r=0.9, x=289.0, y=220.0: \"cephalopathy (BSE). There was an epidemic of BSE in\""
+                    ]
+                }
+            },
+            {
+                "title": "Consistency",
+                "level": 4,
+                "page": 104,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "title appears embedded in longer body lines, not as a standalone heading",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with larger font size (9.0) under considering causation.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 563.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 3,
+                    "embedded_examples": [
+                        "page=104, line=695, s=9.0, r=0.9, x=55.0, y=563.0: \"Consistency considered to occur has been reduced from 250 ug/l in\"",
+                        "page=104, line=698, s=10.0, r=1.0, x=55.0, y=590.0: \"Consistency is demonstrated by several studies giving the\"",
+                        "page=104, line=705, s=9.5, r=0.95, x=55.0, y=642.0: \"thereby minimized. However, a lack of consistency does income countries, but increasingly...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=104, line=684, s=8.0, r=0.8, x=289.0, y=483.0: \"Box 5.2. Lead exposure in children\""
+                    ],
+                    "small_label_examples": [
+                        "page=104, line=687, s=9.0, r=0.9, x=289.0, y=509.0: \"lead exposure in hundreds of thousands of children’s\"",
+                        "page=104, line=689, s=9.0, r=0.9, x=289.0, y=520.0: \"blood samples has shown that, while average levels are\"",
+                        "page=104, line=691, s=9.0, r=0.9, x=289.0, y=531.0: \"decreasing since lead was banned from motor-fuels,\"",
+                        "page=104, line=693, s=9.0, r=0.9, x=289.0, y=542.0: \"many children still have elevated levels.15 The blood lead\""
+                    ]
+                }
+            },
+            {
+                "title": "Reversibility",
+                "level": 4,
+                "page": 108,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Lower level heading with larger font size (14.0) under considering causation.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=108, line=758, s=14.0, r=1.4, x=55.0, y=84.0: \"Reversibility\""
+                    ],
+                    "embedded_examples": [
+                        "page=108, line=765, s=10.0, r=1.0, x=55.0, y=189.0: \"sure, then reversibility cannot be a condition for causality.\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 3,
+                    "visual_caption_examples": [
+                        "page=108, line=768, s=10.0, r=1.0, x=55.0, y=254.0: \"Table 5.3 outlines the different types of study and relative strengths in establishing\"",
+                        "page=108, line=772, s=8.0, r=0.8, x=282.0, y=310.0: \"Table 5.3. Relative ability of different types of study\""
+                    ],
+                    "small_label_examples": [
+                        "page=108, line=757, s=9.0, r=0.9, x=358.0, y=53.0: \"Causation in epidemiology 95\"",
+                        "page=108, line=757, s=9.0, r=0.9, x=358.0, y=53.0: \"Causation in epidemiology 95\"",
+                        "page=108, line=771, s=9.0, r=0.9, x=55.0, y=303.0: \"Experimental studies\""
+                    ]
+                }
+            },
+            {
+                "title": "Study design",
+                "level": 4,
+                "page": 108,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Lower level heading with larger font size (14.0) under considering causation.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 213.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=108, line=766, s=14.0, r=1.4, x=55.0, y=213.0: \"Study design\""
+                    ],
+                    "embedded_examples": [
+                        "page=108, line=767, s=10.0, r=1.0, x=55.0, y=241.0: \"The ability of a study design to prove causation is an important consideration.\"",
+                        "page=108, line=769, s=10.0, r=1.0, x=55.0, y=267.0: \"causality. These study designs were introduced in Chapter 3; their use in providing\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 4,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=108, line=768, s=10.0, r=1.0, x=55.0, y=254.0: \"Table 5.3 outlines the different types of study and relative strengths in establishing\"",
+                        "page=108, line=772, s=8.0, r=0.8, x=282.0, y=310.0: \"Table 5.3. Relative ability of different types of study\"",
+                        "page=108, line=768, s=10.0, r=1.0, x=55.0, y=254.0: \"Table 5.3 outlines the different types of study and relative strengths in establishing\"",
+                        "page=108, line=772, s=8.0, r=0.8, x=282.0, y=310.0: \"Table 5.3. Relative ability of different types of study\""
+                    ],
+                    "small_label_examples": [
+                        "page=108, line=771, s=9.0, r=0.9, x=55.0, y=303.0: \"Experimental studies\"",
+                        "page=108, line=774, s=8.0, r=0.8, x=282.0, y=321.0: \"to “prove” causation\"",
+                        "page=108, line=771, s=9.0, r=0.9, x=55.0, y=303.0: \"Experimental studies\"",
+                        "page=108, line=774, s=8.0, r=0.8, x=282.0, y=321.0: \"to “prove” causation\""
+                    ]
+                }
+            },
+            {
+                "title": "Experimental studies",
+                "level": 5,
+                "page": 108,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Deepest level heading with bold and italic style under study design.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 303.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=108, line=771, s=9.0, r=0.9, x=55.0, y=303.0: \"Experimental studies\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 2,
+                    "visual_caption_examples": [
+                        "page=108, line=768, s=10.0, r=1.0, x=55.0, y=254.0: \"Table 5.3 outlines the different types of study and relative strengths in establishing\"",
+                        "page=108, line=772, s=8.0, r=0.8, x=282.0, y=310.0: \"Table 5.3. Relative ability of different types of study\""
+                    ],
+                    "small_label_examples": [
+                        "page=108, line=774, s=8.0, r=0.8, x=282.0, y=321.0: \"to “prove” causation\"",
+                        "page=108, line=777, s=8.0, r=0.8, x=282.0, y=343.0: \"Type of study Ability to “prove”\""
+                    ]
+                }
+            },
+            {
+                "title": "Cohort and case control studies",
+                "level": 5,
+                "page": 108,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Deepest level heading with bold and italic style under study design.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 441.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=108, line=784, s=9.0, r=0.9, x=55.0, y=441.0: \"Cohort and case control studies\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 3,
+                    "small_label_examples": [
+                        "page=108, line=777, s=8.0, r=0.8, x=282.0, y=343.0: \"Type of study Ability to “prove”\"",
+                        "page=108, line=783, s=8.0, r=0.8, x=55.0, y=416.0: \"servational studies. Ecological studies Weak\"",
+                        "page=108, line=790, s=9.0, r=0.9, x=55.0, y=527.0: \"Cross-sectional studies\""
+                    ]
+                }
+            },
+            {
+                "title": "Cross-sectional studies",
+                "level": 5,
+                "page": 108,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Deepest level heading with bold and italic style under study design.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 527.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=108, line=790, s=9.0, r=0.9, x=55.0, y=527.0: \"Cross-sectional studies\""
+                    ],
+                    "embedded_examples": [
+                        "page=108, line=782, s=10.0, r=1.0, x=55.0, y=404.0: \"on the health consequences of smoking comes from ob- Cross-sectional studies Weak\"",
+                        "page=108, line=791, s=10.0, r=1.0, x=55.0, y=538.0: \"Cross-sectional studies are less able to prove causation as they provide no direct\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=108, line=774, s=8.0, r=0.8, x=282.0, y=321.0: \"to “prove” causation\"",
+                        "page=108, line=777, s=8.0, r=0.8, x=282.0, y=343.0: \"Type of study Ability to “prove”\"",
+                        "page=108, line=783, s=8.0, r=0.8, x=55.0, y=416.0: \"servational studies. Ecological studies Weak\"",
+                        "page=108, line=784, s=9.0, r=0.9, x=55.0, y=441.0: \"Cohort and case control studies\""
+                    ]
+                }
+            },
+            {
+                "title": "Ecological studies",
+                "level": 5,
+                "page": 108,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Deepest level heading with bold and italic style under study design.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 626.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=108, line=797, s=9.0, r=0.9, x=55.0, y=626.0: \"Ecological studies\""
+                    ],
+                    "embedded_examples": [
+                        "page=108, line=783, s=8.0, r=0.8, x=55.0, y=416.0: \"servational studies. Ecological studies Weak\"",
+                        "page=108, line=798, s=10.0, r=1.0, x=55.0, y=637.0: \"Ecological studies provide the weakest evidence for causality because of the danger\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=108, line=777, s=8.0, r=0.8, x=282.0, y=343.0: \"Type of study Ability to “prove”\"",
+                        "page=108, line=784, s=9.0, r=0.9, x=55.0, y=441.0: \"Cohort and case control studies\"",
+                        "page=108, line=790, s=9.0, r=0.9, x=55.0, y=527.0: \"Cross-sectional studies\"",
+                        "page=108, line=790, s=9.0, r=0.9, x=55.0, y=527.0: \"Cross-sectional studies\""
+                    ]
+                }
+            },
+            {
+                "title": "Study questions",
+                "level": 2,
+                "page": 109,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Standard end-of-chapter section with larger font size (20.0).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 509.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=109, line=835, s=20.0, r=2.0, x=140.0, y=509.0: \"Study questions\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "answerstostudyquestions",
+                    "display_text": "Answers to study questions",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 354.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 8,
+                    "page_count": 8,
+                    "page_range": "202-216",
+                    "samples": [
+                        "Answers to study questions 189",
+                        "Answers to study questions 191",
+                        "Answers to study questions 193"
+                    ]
+                }
+            },
+            {
+                "title": "References",
+                "level": 2,
+                "page": 110,
+                "reasons": [
+                    "title itself looks like a case/example/table/figure/problem/reference label",
+                    "source context looks like case/example/table/figure/problem/reference material"
+                ],
+                "level_reason": "Standard end-of-chapter section with larger font size (20.0).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 335.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=110, line=871, s=20.0, r=2.0, x=55.0, y=335.0: \"References\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "Chapter 6 Epidemiology and prevention: chronic noncommunicable diseases",
+                "level": 1,
+                "page": 112,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Chapter title with largest font size and distinct numbering.",
+                "font_size": 32.0,
+                "size_ratio": 3.2,
+                "left_indent": 55.0,
+                "vertical_position": 101.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 84,
+                    "page_count": 84,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "The scope of prevention",
+                "level": 2,
+                "page": 112,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Section heading with larger font size (20.0).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 382.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=112, line=966, s=20.0, r=2.0, x=55.0, y=382.0: \"The scope of prevention\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 0,
+                    "visual_caption_examples": [
+                        "page=112, line=969, s=10.0, r=1.0, x=73.0, y=440.0: \"Figure 6.1 shows tuberculosis death rates in England and Wales for the period\""
+                    ]
+                }
+            },
+            {
+                "title": "Recent trends in death rates",
+                "level": 3,
+                "page": 112,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection heading with larger font size (14.0) under scope of prevention.",
+                "font_size": 14.0,
+                "size_ratio": 1.56,
+                "left_indent": 55.0,
+                "vertical_position": 516.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=112, line=974, s=14.0, r=1.4, x=55.0, y=516.0: \"Recent trends in death rates\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 0,
+                    "visual_caption_examples": [
+                        "page=112, line=969, s=10.0, r=1.0, x=73.0, y=440.0: \"Figure 6.1 shows tuberculosis death rates in England and Wales for the period\""
+                    ]
+                }
+            },
+            {
+                "title": "Levels of prevention",
+                "level": 2,
+                "page": 116,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Section heading with larger font size (20.0).",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 319.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=116, line=1108, s=20.0, r=2.0, x=55.0, y=319.0: \"Levels of prevention\""
+                    ],
+                    "embedded_examples": [
+                        "page=116, line=1109, s=10.0, r=1.0, x=55.0, y=352.0: \"The four levels of prevention, corresponding to different phases in the development\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=116, line=1100, s=8.0, r=0.8, x=162.0, y=192.0: \"- Age\"",
+                        "page=116, line=1101, s=8.0, r=0.8, x=162.0, y=201.0: \"- Sex\"",
+                        "page=116, line=1102, s=8.0, r=0.8, x=162.0, y=210.0: \"- Heredity\"",
+                        "page=116, line=1101, s=8.0, r=0.8, x=162.0, y=201.0: \"- Sex\""
+                    ]
+                }
+            },
+            {
+                "title": "Primary prevention",
+                "level": 3,
+                "page": 118,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection heading with larger font size (20.0) under levels of prevention.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 361.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=118, line=1198, s=20.0, r=2.0, x=55.0, y=361.0: \"Primary prevention\""
+                    ],
+                    "embedded_examples": [
+                        "page=118, line=1199, s=10.0, r=1.0, x=55.0, y=393.0: \"The purpose of primary prevention is to limit the incidence of disease by controlling\"",
+                        "page=118, line=1200, s=10.0, r=1.0, x=55.0, y=406.0: \"specific causes and risk factors. Primary prevention efforts can be directed at:\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 3,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=118, line=1196, s=8.0, r=0.8, x=55.0, y=87.0: \"Figure 6.5. Inverse relation between real price of cigarettes and cigarette consumption,...\"",
+                        "page=118, line=1196, s=8.0, r=0.8, x=55.0, y=87.0: \"Figure 6.5. Inverse relation between real price of cigarettes and cigarette consumption,...\"",
+                        "page=118, line=1196, s=8.0, r=0.8, x=55.0, y=87.0: \"Figure 6.5. Inverse relation between real price of cigarettes and cigarette consumption,...\""
+                    ],
+                    "small_label_examples": [
+                        "page=118, line=1197, s=8.0, r=0.8, x=55.0, y=97.0: \"1961–20013\"",
+                        "page=118, line=1224, s=9.0, r=0.9, x=260.0, y=333.0: \"Period\"",
+                        "page=118, line=1251, s=8.9, r=0.89, x=87.0, y=303.0: \"0 0\"",
+                        "page=118, line=1252, s=4.7, r=0.47, x=96.0, y=310.0: \"1691 5691 9691 3791 7791 1891 5891 9891 3991 7991 1002\""
+                    ]
+                }
+            }
+        ]
+    },
+    "toc": {
+        "title": "Basic epidemiology",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "Chapter 4 Basic biostatistics: concepts and tools",
+                "page": 77,
+                "level_reason": "Chapter title with largest font size (31.9) and distinct numbering.",
+                "_layout_page": 90,
+                "_layout_x": 319.0,
+                "_layout_y": 54.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Basic biostatistics: concepts and tools 77",
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "Independent variables",
+                "page": 90,
+                "level_reason": "Section heading with bold and italic style, matching the visual pattern for level 2 sections in this chapter.",
+                "_layout_page": 90,
+                "_layout_x": 55.0,
+                "_layout_y": 85.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Independent variables",
+                "_source_order": 1
+            },
+            {
+                "level": 3,
+                "chapter": "Multiple variables",
+                "page": 90,
+                "level_reason": "Subsection heading with bold and italic style, appearing under Independent variables.",
+                "_layout_page": 90,
+                "_layout_x": 55.0,
+                "_layout_y": 343.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Multiple variables",
+                "_source_order": 2
+            },
+            {
+                "level": 2,
+                "chapter": "Logistic regression",
+                "page": 91,
+                "level_reason": "Section heading with font size 14.0 and distinct indentation.",
+                "_layout_page": 91,
+                "_layout_x": 140.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Logistic regression",
+                "_source_order": 3
+            },
+            {
+                "level": 2,
+                "chapter": "Survival analyses and Cox proportional hazards models",
+                "page": 92,
+                "level_reason": "Section heading with font size 14.0 and distinct indentation.",
+                "_layout_page": 92,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Survival analyses and Cox proportional hazards models",
+                "_source_order": 4
+            },
+            {
+                "level": 3,
+                "chapter": "Kaplan-Meier survival curves",
+                "page": 92,
+                "level_reason": "Subsection heading with font size 14.0 under survival analyses section.",
+                "_layout_page": 92,
+                "_layout_x": 55.0,
+                "_layout_y": 569.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Kaplan-Meier survival curves",
+                "_source_order": 5
+            },
+            {
+                "level": 2,
+                "chapter": "Sample size issues",
+                "page": 93,
+                "level_reason": "Section heading with font size 14.0 and distinct indentation.",
+                "_layout_page": 93,
+                "_layout_x": 140.0,
+                "_layout_y": 173.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Sample size issues",
+                "_source_order": 6
+            },
+            {
+                "level": 3,
+                "chapter": "Two sample t-test",
+                "page": 93,
+                "level_reason": "Subsection heading with bold and italic style under sample size issues.",
+                "_layout_page": 93,
+                "_layout_x": 140.0,
+                "_layout_y": 391.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Two sample t-test",
+                "_source_order": 7
+            },
+            {
+                "level": 3,
+                "chapter": "Test comparing proportions",
+                "page": 94,
+                "level_reason": "Subsection heading with bold and italic style under sample size issues.",
+                "_layout_page": 94,
+                "_layout_x": 55.0,
+                "_layout_y": 85.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Test comparing proportions",
+                "_source_order": 8
+            },
+            {
+                "level": 2,
+                "chapter": "Meta-analysis",
+                "page": 94,
+                "level_reason": "Section heading with larger font size (20.0) and distinct indentation.",
+                "_layout_page": 94,
+                "_layout_x": 55.0,
+                "_layout_y": 324.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Meta-analysis",
+                "_source_order": 9
+            },
+            {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 95,
+                "level_reason": "Standard end-of-chapter section with font size 20.0.",
+                "_layout_page": 95,
+                "_layout_x": 140.0,
+                "_layout_y": 133.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Study questions",
+                "_source_order": 10
+            },
+            {
+                "level": 2,
+                "chapter": "References",
+                "page": 95,
+                "level_reason": "Standard end-of-chapter section with font size 20.0.",
+                "_layout_page": 95,
+                "_layout_x": 140.0,
+                "_layout_y": 371.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "References",
+                "_source_order": 11
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter 5 Causation in epidemiology",
+                "page": 96,
+                "level_reason": "Chapter title with largest font size (32.0) and distinct numbering.",
+                "_layout_page": 96,
+                "_layout_x": 55.0,
+                "_layout_y": 101.0,
+                "_layout_font_size": 32.0,
+                "_layout_size_ratio": 3.2,
+                "_layout_text": "Causation in epidemiology",
+                "_source_order": 12
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 96,
+                "level_reason": "Standard chapter opening section with font size 20.0.",
+                "_layout_page": 96,
+                "_layout_x": 167.0,
+                "_layout_y": 149.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 13
+            },
+            {
+                "level": 2,
+                "chapter": "The concept of cause",
+                "page": 96,
+                "level_reason": "Section heading with font size 20.0.",
+                "_layout_page": 96,
+                "_layout_x": 55.0,
+                "_layout_y": 352.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "The concept of cause",
+                "_source_order": 14
+            },
+            {
+                "level": 3,
+                "chapter": "Sufficient or necessary",
+                "page": 96,
+                "level_reason": "Subsection heading with font size 14.0 under concept of cause.",
+                "_layout_page": 96,
+                "_layout_x": 55.0,
+                "_layout_y": 474.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Sufficient or necessary",
+                "_source_order": 15
+            },
+            {
+                "level": 4,
+                "chapter": "Multiple factors",
+                "page": 97,
+                "level_reason": "Lower level heading with bold and italic style under sufficient or necessary.",
+                "_layout_page": 97,
+                "_layout_x": 140.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Multiple factors",
+                "_source_order": 16
+            },
+            {
+                "level": 4,
+                "chapter": "Attributable fraction",
+                "page": 97,
+                "level_reason": "Lower level heading with bold and italic style under sufficient or necessary.",
+                "_layout_page": 97,
+                "_layout_x": 140.0,
+                "_layout_y": 235.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Attributable fraction",
+                "_source_order": 17
+            },
+            {
+                "level": 3,
+                "chapter": "Sufficient and necessary",
+                "page": 97,
+                "level_reason": "Subsection heading with font size 14.0 under concept of cause.",
+                "_layout_page": 97,
+                "_layout_x": 140.0,
+                "_layout_y": 348.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Sufficient and necessary",
+                "_source_order": 18
+            },
+            {
+                "level": 3,
+                "chapter": "A causal pathway",
+                "page": 98,
+                "level_reason": "Subsection heading with font size 14.0 under concept of cause.",
+                "_layout_page": 98,
+                "_layout_x": 55.0,
+                "_layout_y": 302.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "A causal pathway",
+                "_source_order": 19
+            },
+            {
+                "level": 3,
+                "chapter": "Single and multiple causes",
+                "page": 99,
+                "level_reason": "Subsection heading with font size 14.0 under concept of cause.",
+                "_layout_page": 99,
+                "_layout_x": 140.0,
+                "_layout_y": 199.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Single and multiple causes",
+                "_source_order": 20
+            },
+            {
+                "level": 2,
+                "chapter": "Factors in causation",
+                "page": 100,
+                "level_reason": "Section heading with font size 14.0 and distinct indentation.",
+                "_layout_page": 100,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Factors in causation",
+                "_source_order": 21
+            },
+            {
+                "level": 3,
+                "chapter": "Interaction",
+                "page": 101,
+                "level_reason": "Subsection heading with font size 14.0 under factors in causation.",
+                "_layout_page": 101,
+                "_layout_x": 140.0,
+                "_layout_y": 147.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Interaction",
+                "_source_order": 22
+            },
+            {
+                "level": 3,
+                "chapter": "A hierarchy of causes",
+                "page": 101,
+                "level_reason": "Subsection heading with font size 14.0 under factors in causation.",
+                "_layout_page": 101,
+                "_layout_x": 140.0,
+                "_layout_y": 273.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "A hierarchy of causes",
+                "_source_order": 23
+            },
+            {
+                "level": 2,
+                "chapter": "Establishing the cause of a disease",
+                "page": 102,
+                "level_reason": "Section heading with font size 20.0.",
+                "_layout_page": 102,
+                "_layout_x": 55.0,
+                "_layout_y": 288.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Establishing the cause of a disease",
+                "_source_order": 24
+            },
+            {
+                "level": 3,
+                "chapter": "Considering causation",
+                "page": 102,
+                "level_reason": "Subsection heading with font size 14.0 under establishing the cause.",
+                "_layout_page": 102,
+                "_layout_x": 55.0,
+                "_layout_y": 462.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Considering causation",
+                "_source_order": 25
+            },
+            {
+                "level": 4,
+                "chapter": "Temporal relationship",
+                "page": 102,
+                "level_reason": "Lower level heading with font size 14.0 under considering causation.",
+                "_layout_page": 102,
+                "_layout_x": 55.0,
+                "_layout_y": 579.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Temporal relationship",
+                "_source_order": 26
+            },
+            {
+                "level": 4,
+                "chapter": "Plausibility",
+                "page": 104,
+                "level_reason": "Lower level heading with font size 14.0 under considering causation.",
+                "_layout_page": 104,
+                "_layout_x": 55.0,
+                "_layout_y": 147.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Plausibility",
+                "_source_order": 27
+            },
+            {
+                "level": 4,
+                "chapter": "Consistency",
+                "page": 104,
+                "level_reason": "Lower level heading with font size 9.0 under considering causation.",
+                "_layout_page": 104,
+                "_layout_x": 55.0,
+                "_layout_y": 563.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Consistency",
+                "_source_order": 28
+            },
+            {
+                "level": 4,
+                "chapter": "Reversibility",
+                "page": 108,
+                "level_reason": "Lower level heading with font size 14.0 under considering causation.",
+                "_layout_page": 108,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Reversibility",
+                "_source_order": 29
+            },
+            {
+                "level": 4,
+                "chapter": "Study design",
+                "page": 108,
+                "level_reason": "Lower level heading with font size 14.0 under considering causation.",
+                "_layout_page": 108,
+                "_layout_x": 55.0,
+                "_layout_y": 213.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Study design",
+                "_source_order": 30
+            },
+            {
+                "level": 5,
+                "chapter": "Experimental studies",
+                "page": 108,
+                "level_reason": "Deepest level heading with bold and italic style under study design.",
+                "_layout_page": 108,
+                "_layout_x": 55.0,
+                "_layout_y": 303.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Experimental studies",
+                "_source_order": 31
+            },
+            {
+                "level": 5,
+                "chapter": "Cohort and case control studies",
+                "page": 108,
+                "level_reason": "Deepest level heading with bold and italic style under study design.",
+                "_layout_page": 108,
+                "_layout_x": 55.0,
+                "_layout_y": 441.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Cohort and case control studies",
+                "_source_order": 32
+            },
+            {
+                "level": 5,
+                "chapter": "Cross-sectional studies",
+                "page": 108,
+                "level_reason": "Deepest level heading with bold and italic style under study design.",
+                "_layout_page": 108,
+                "_layout_x": 55.0,
+                "_layout_y": 527.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Cross-sectional studies",
+                "_source_order": 33
+            },
+            {
+                "level": 5,
+                "chapter": "Ecological studies",
+                "page": 108,
+                "level_reason": "Deepest level heading with bold and italic style under study design.",
+                "_layout_page": 108,
+                "_layout_x": 55.0,
+                "_layout_y": 626.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Ecological studies",
+                "_source_order": 34
+            },
+            {
+                "level": 3,
+                "chapter": "Judging the evidence",
+                "page": 109,
+                "level_reason": "Subsection heading with font size 14.0 under establishing the cause.",
+                "_layout_page": 109,
+                "_layout_x": 140.0,
+                "_layout_y": 238.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Judging the evidence",
+                "_source_order": 35
+            },
+            {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 109,
+                "level_reason": "Standard end-of-chapter section with font size 20.0.",
+                "_layout_page": 109,
+                "_layout_x": 140.0,
+                "_layout_y": 509.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Study questions",
+                "_source_order": 36
+            },
+            {
+                "level": 2,
+                "chapter": "References",
+                "page": 110,
+                "level_reason": "Standard end-of-chapter section with font size 20.0.",
+                "_layout_page": 110,
+                "_layout_x": 55.0,
+                "_layout_y": 335.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "References",
+                "_source_order": 37
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter 6 Epidemiology and prevention: chronic noncommunicable diseases",
+                "page": 112,
+                "level_reason": "Chapter title with largest font size (32.0) and distinct numbering.",
+                "_layout_page": 112,
+                "_layout_x": 55.0,
+                "_layout_y": 101.0,
+                "_layout_font_size": 32.0,
+                "_layout_size_ratio": 3.2,
+                "_layout_text": "Epidemiology and prevention: chronic noncommunicable diseases",
+                "_source_order": 38
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 112,
+                "level_reason": "Standard chapter opening section with font size 20.0.",
+                "_layout_page": 112,
+                "_layout_x": 168.0,
+                "_layout_y": 217.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 39
+            },
+            {
+                "level": 2,
+                "chapter": "The scope of prevention",
+                "page": 112,
+                "level_reason": "Section heading with font size 20.0.",
+                "_layout_page": 112,
+                "_layout_x": 55.0,
+                "_layout_y": 382.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "The scope of prevention",
+                "_source_order": 40
+            },
+            {
+                "level": 3,
+                "chapter": "Recent trends in death rates",
+                "page": 112,
+                "level_reason": "Subsection heading with font size 14.0 under scope of prevention.",
+                "_layout_page": 112,
+                "_layout_x": 55.0,
+                "_layout_y": 516.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.56,
+                "_layout_text": "Recent trends in death rates",
+                "_source_order": 41
+            },
+            {
+                "level": 3,
+                "chapter": "Preventive potential",
+                "page": 114,
+                "level_reason": "Subsection heading with font size 14.0 under scope of prevention.",
+                "_layout_page": 114,
+                "_layout_x": 55.0,
+                "_layout_y": 134.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.56,
+                "_layout_text": "Preventive potential",
+                "_source_order": 42
+            },
+            {
+                "level": 2,
+                "chapter": "Levels of prevention",
+                "page": 116,
+                "level_reason": "Section heading with font size 20.0.",
+                "_layout_page": 116,
+                "_layout_x": 55.0,
+                "_layout_y": 319.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Levels of prevention",
+                "_source_order": 43
+            },
+            {
+                "level": 3,
+                "chapter": "Primordial prevention",
+                "page": 116,
+                "level_reason": "Subsection heading with font size 20.0 under levels of prevention.",
+                "_layout_page": 116,
+                "_layout_x": 55.0,
+                "_layout_y": 517.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Primordial prevention",
+                "_source_order": 44
+            },
+            {
+                "level": 3,
+                "chapter": "Primary prevention",
+                "page": 118,
+                "level_reason": "Subsection heading with font size 20.0 under levels of prevention.",
+                "_layout_page": 118,
+                "_layout_x": 55.0,
+                "_layout_y": 361.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Primary prevention",
+                "_source_order": 45
+            },
+            {
+                "level": 4,
+                "chapter": "Population strategy",
+                "page": 118,
+                "level_reason": "Lower level heading with font size 14.0 under primary prevention.",
+                "_layout_page": 118,
+                "_layout_x": 55.0,
+                "_layout_y": 486.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Population strategy",
+                "_source_order": 46
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"Basic epidemiology\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 4 Basic biostatistics: concepts and tools\",\n      \"page\": 77,\n      \"level_reason\": \"Chapter title with largest font size (31.9) and distinct numbering.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Independent variables\",\n      \"page\": 90,\n      \"level_reason\": \"Section heading with bold and italic style, matching the visual pattern for level 2 sections in this chapter.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Multiple variables\",\n      \"page\": 90,\n      \"level_reason\": \"Subsection heading with bold and italic style, appearing under Independent variables.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Logistic regression\",\n      \"page\": 91,\n      \"level_reason\": \"Section heading with font size 14.0 and distinct indentation.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Survival analyses and Cox proportional hazards models\",\n      \"page\": 92,\n      \"level_reason\": \"Section heading with font size 14.0 and distinct indentation.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Kaplan-Meier survival curves\",\n      \"page\": 92,\n      \"level_reason\": \"Subsection heading with font size 14.0 under survival analyses section.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Sample size issues\",\n      \"page\": 93,\n      \"level_reason\": \"Section heading with font size 14.0 and distinct indentation.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Two sample t-test\",\n      \"page\": 93,\n      \"level_reason\": \"Subsection heading with bold and italic style under sample size issues.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Test comparing proportions\",\n      \"page\": 94,\n      \"level_reason\": \"Subsection heading with bold and italic style under sample size issues.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Meta-analysis\",\n      \"page\": 94,\n      \"level_reason\": \"Section heading with larger font size (20.0) and distinct indentation.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Study questions\",\n      \"page\": 95,\n      \"level_reason\": \"Standard end-of-chapter section with font size 20.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"References\",\n      \"page\": 95,\n      \"level_reason\": \"Standard end-of-chapter section with font size 20.0.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 5 Causation in epidemiology\",\n      \"page\": 96,\n      \"level_reason\": \"Chapter title with largest font size (32.0) and distinct numbering.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 96,\n      \"level_reason\": \"Standard chapter opening section with font size 20.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"The concept of cause\",\n      \"page\": 96,\n      \"level_reason\": \"Section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Sufficient or necessary\",\n      \"page\": 96,\n      \"level_reason\": \"Subsection heading with font size 14.0 under concept of cause.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Multiple factors\",\n      \"page\": 97,\n      \"level_reason\": \"Lower level heading with bold and italic style under sufficient or necessary.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Attributable fraction\",\n      \"page\": 97,\n      \"level_reason\": \"Lower level heading with bold and italic style under sufficient or necessary.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Sufficient and necessary\",\n      \"page\": 97,\n      \"level_reason\": \"Subsection heading with font size 14.0 under concept of cause.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"A causal pathway\",\n      \"page\": 98,\n      \"level_reason\": \"Subsection heading with font size 14.0 under concept of cause.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Single and multiple causes\",\n      \"page\": 99,\n      \"level_reason\": \"Subsection heading with font size 14.0 under concept of cause.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Factors in causation\",\n      \"page\": 100,\n      \"level_reason\": \"Section heading with font size 14.0 and distinct indentation.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Interaction\",\n      \"page\": 101,\n      \"level_reason\": \"Subsection heading with font size 14.0 under factors in causation.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"A hierarchy of causes\",\n      \"page\": 101,\n      \"level_reason\": \"Subsection heading with font size 14.0 under factors in causation.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Establishing the cause of a disease\",\n      \"page\": 102,\n      \"level_reason\": \"Section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Considering causation\",\n      \"page\": 102,\n      \"level_reason\": \"Subsection heading with font size 14.0 under establishing the cause.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Temporal relationship\",\n      \"page\": 102,\n      \"level_reason\": \"Lower level heading with font size 14.0 under considering causation.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Plausibility\",\n      \"page\": 104,\n      \"level_reason\": \"Lower level heading with font size 14.0 under considering causation.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Consistency\",\n      \"page\": 104,\n      \"level_reason\": \"Lower level heading with font size 9.0 under considering causation.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Reversibility\",\n      \"page\": 108,\n      \"level_reason\": \"Lower level heading with font size 14.0 under considering causation.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Study design\",\n      \"page\": 108,\n      \"level_reason\": \"Lower level heading with font size 14.0 under considering causation.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"Experimental studies\",\n      \"page\": 108,\n      \"level_reason\": \"Deepest level heading with bold and italic style under study design.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"Cohort and case control studies\",\n      \"page\": 108,\n      \"level_reason\": \"Deepest level heading with bold and italic style under study design.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"Cross-sectional studies\",\n      \"page\": 108,\n      \"level_reason\": \"Deepest level heading with bold and italic style under study design.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"Ecological studies\",\n      \"page\": 108,\n      \"level_reason\": \"Deepest level heading with bold and italic style under study design.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Judging the evidence\",\n      \"page\": 109,\n      \"level_reason\": \"Subsection heading with font size 14.0 under establishing the cause.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Study questions\",\n      \"page\": 109,\n      \"level_reason\": \"Standard end-of-chapter section with font size 20.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"References\",\n      \"page\": 110,\n      \"level_reason\": \"Standard end-of-chapter section with font size 20.0.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 6 Epidemiology and prevention: chronic noncommunicable diseases\",\n      \"page\": 112,\n      \"level_reason\": \"Chapter title with largest font size (32.0) and distinct numbering.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 112,\n      \"level_reason\": \"Standard chapter opening section with font size 20.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"The scope of prevention\",\n      \"page\": 112,\n      \"level_reason\": \"Section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Recent trends in death rates\",\n      \"page\": 112,\n      \"level_reason\": \"Subsection heading with font size 14.0 under scope of prevention.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Preventive potential\",\n      \"page\": 114,\n      \"level_reason\": \"Subsection heading with font size 14.0 under scope of prevention.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Levels of prevention\",\n      \"page\": 116,\n      \"level_reason\": \"Section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Primordial prevention\",\n      \"page\": 116,\n      \"level_reason\": \"Subsection heading with font size 20.0 under levels of prevention.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Primary prevention\",\n      \"page\": 118,\n      \"level_reason\": \"Subsection heading with font size 20.0 under levels of prevention.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Population strategy\",\n      \"page\": 118,\n      \"level_reason\": \"Lower level heading with font size 14.0 under primary prevention.\"\n    }\n  ]\n}\n```"
+}

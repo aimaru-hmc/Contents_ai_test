@@ -1,0 +1,1641 @@
+{
+    "timestamp": "2026-07-09 10:15:13",
+    "stage_index": 20,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "6",
+    "total_chunks": 8,
+    "start_page": 147,
+    "end_page": 174,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 6/8",
+        "input_chapters": 49,
+        "output_chapters": 49,
+        "level_changes": 4,
+        "added_entries": 0,
+        "removed_entries": 0,
+        "level_change_report_recorded": true,
+        "possible_invalid_heading_candidate_count": 29,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "Value of a test",
+                "level": 2,
+                "page": 149,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 581.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=149, line=146, s=14.0, r=1.4, x=140.0, y=581.0: \"Value of a test\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=149, line=139, s=9.0, r=0.9, x=34.0, y=498.0: \"history, systolic blood pressure and total cholesterol.\"",
+                        "page=149, line=141, s=9.0, r=0.9, x=34.0, y=509.0: \"An individual’s overall cardiovascular risk can be\""
+                    ]
+                }
+            },
+            {
+                "title": "Effectiveness of treatment",
+                "level": 2,
+                "page": 152,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section indicated by font size s=20.0 and r=2.00.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 319.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=152, line=255, s=20.0, r=2.0, x=55.0, y=319.0: \"Effectiveness of treatment\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=152, line=260, s=8.0, r=0.8, x=289.0, y=399.0: \"Box 8.2. More good than harm?\""
+                    ],
+                    "small_label_examples": [
+                        "page=152, line=249, s=8.0, r=0.8, x=129.0, y=209.0: \"1991—92\"",
+                        "page=152, line=250, s=8.0, r=0.8, x=129.0, y=219.0: \"1987—88\"",
+                        "page=152, line=251, s=8.0, r=0.8, x=129.0, y=229.0: \"1983—84\"",
+                        "page=152, line=253, s=8.0, r=0.8, x=98.0, y=281.0: \"0 0.5 1 1.5 2.0 2.5 3.0\""
+                    ]
+                }
+            },
+            {
+                "title": "Reducing risks",
+                "level": 3,
+                "page": 154,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Prevention in clinical practice, indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=154, line=346, s=14.0, r=1.4, x=55.0, y=84.0: \"Reducing risks\""
+                    ],
+                    "embedded_examples": [
+                        "page=154, line=379, s=14.0, r=1.4, x=55.0, y=587.0: \"Reducing risks in patients with established disease\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=154, line=364, s=9.0, r=0.9, x=375.0, y=53.0: \"Clinical epidemiology 141\"",
+                        "page=154, line=371, s=6.8, r=0.68, x=302.0, y=464.0: \"Never smoked\"",
+                        "page=154, line=372, s=6.8, r=0.68, x=100.0, y=477.0: \"0\"",
+                        "page=154, line=373, s=6.8, r=0.68, x=110.0, y=489.0: \"45 55 65 75\""
+                    ]
+                }
+            },
+            {
+                "title": "Reducing risks in patients with established disease",
+                "level": 3,
+                "page": 154,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Prevention in clinical practice, indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 587.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=154, line=379, s=14.0, r=1.4, x=55.0, y=587.0: \"Reducing risks in patients with established disease\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=154, line=371, s=6.8, r=0.68, x=302.0, y=464.0: \"Never smoked\"",
+                        "page=154, line=372, s=6.8, r=0.68, x=100.0, y=477.0: \"0\"",
+                        "page=154, line=373, s=6.8, r=0.68, x=110.0, y=489.0: \"45 55 65 75\"",
+                        "page=154, line=374, s=6.8, r=0.68, x=201.0, y=499.0: \"Age\""
+                    ]
+                }
+            },
+            {
+                "title": "Behavioural interventions",
+                "level": 4,
+                "page": 155,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Subsection under Reducing risks in patients with established disease, indicated by font size s=9.0 and r=0.90 and italic style.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=155, line=389, s=9.0, r=0.9, x=140.0, y=84.0: \"Behavioural interventions\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 3,
+                    "visual_caption_examples": [
+                        "page=155, line=395, s=10.0, r=1.0, x=34.0, y=168.0: \"Box 8.4. Fixed-dose combination therapy For people with established cardiovascular diseas...\""
+                    ],
+                    "small_label_examples": [
+                        "page=155, line=388, s=9.0, r=0.9, x=27.0, y=53.0: \"142 Chapter 8\"",
+                        "page=155, line=394, s=9.0, r=0.9, x=240.0, y=157.0: \"Pharmacological interventions\"",
+                        "page=155, line=397, s=9.0, r=0.9, x=34.0, y=185.0: \"Fixed-dose combinations are a standard part of treat-\""
+                    ]
+                }
+            },
+            {
+                "title": "Pharmacological interventions",
+                "level": 4,
+                "page": 155,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Subsection under Reducing risks in patients with established disease, indicated by font size s=9.0 and r=0.90 and italic style.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 240.0,
+                "vertical_position": 157.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=155, line=394, s=9.0, r=0.9, x=240.0, y=157.0: \"Pharmacological interventions\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=155, line=395, s=10.0, r=1.0, x=34.0, y=168.0: \"Box 8.4. Fixed-dose combination therapy For people with established cardiovascular diseas...\""
+                    ],
+                    "small_label_examples": [
+                        "page=155, line=388, s=9.0, r=0.9, x=27.0, y=53.0: \"142 Chapter 8\"",
+                        "page=155, line=389, s=9.0, r=0.9, x=140.0, y=84.0: \"Behavioural interventions\"",
+                        "page=155, line=397, s=9.0, r=0.9, x=34.0, y=185.0: \"Fixed-dose combinations are a standard part of treat-\"",
+                        "page=155, line=400, s=9.0, r=0.9, x=34.0, y=218.0: \"outcomes, and to simplify distribution and storage. Like- converting enzyme inhibitors an...\""
+                    ]
+                }
+            },
+            {
+                "title": "Other interventions",
+                "level": 4,
+                "page": 155,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Subsection under Reducing risks in patients with established disease, indicated by font size s=9.0 and r=0.90 and italic style.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 387.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=155, line=418, s=9.0, r=0.9, x=140.0, y=387.0: \"Other interventions\""
+                    ],
+                    "embedded_examples": [
+                        "page=155, line=419, s=10.0, r=1.0, x=140.0, y=397.0: \"Many other interventions are available for the management of high risk patients and\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=155, line=411, s=9.0, r=0.9, x=34.0, y=306.0: \"group stands to gain most from a cheap and convenient\"",
+                        "page=155, line=413, s=9.0, r=0.9, x=34.0, y=317.0: \"formulation.\"",
+                        "page=155, line=411, s=9.0, r=0.9, x=34.0, y=306.0: \"group stands to gain most from a cheap and convenient\"",
+                        "page=155, line=413, s=9.0, r=0.9, x=34.0, y=317.0: \"formulation.\""
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 9 Environmental and occupational epidemiology",
+                "level": 1,
+                "page": 158,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Top-level chapter indicated by font size s=32.0 and r=3.20.",
+                "font_size": 32.0,
+                "size_ratio": 3.2,
+                "left_indent": 55.0,
+                "vertical_position": 101.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 84,
+                    "page_count": 84,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Impact of exposure to environmental factors",
+                "level": 3,
+                "page": 159,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Environment and health, indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=159, line=537, s=14.0, r=1.4, x=140.0, y=84.0: \"Impact of exposure to environmental factors\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 1,
+                    "visual_caption_examples": [
+                        "page=159, line=542, s=8.0, r=0.8, x=27.0, y=154.0: \"Table 9.1. Environmental factors that may affect\""
+                    ],
+                    "small_label_examples": [
+                        "page=159, line=536, s=9.0, r=0.9, x=27.0, y=53.0: \"146 Chapter 9\""
+                    ]
+                }
+            },
+            {
+                "title": "Value of prevention",
+                "level": 4,
+                "page": 160,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Subsection under Evaluation of preventive measures, indicated by font size s=9.0 and r=0.90 and italic style.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 445.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=160, line=620, s=9.0, r=0.9, x=55.0, y=445.0: \"Value of prevention\""
+                    ],
+                    "embedded_examples": [
+                        "page=160, line=622, s=10.0, r=1.0, x=55.0, y=469.0: \"tential value of prevention.7 In three “pollution diseases” that occurred in the 1960s\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 3,
+                    "small_label_examples": [
+                        "page=160, line=628, s=9.0, r=0.9, x=55.0, y=557.0: \"Future challenges\"",
+                        "page=160, line=620, s=9.0, r=0.9, x=55.0, y=445.0: \"Value of prevention\"",
+                        "page=160, line=628, s=9.0, r=0.9, x=55.0, y=557.0: \"Future challenges\""
+                    ]
+                }
+            },
+            {
+                "title": "Future challenges",
+                "level": 4,
+                "page": 160,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Subsection under Evaluation of preventive measures, indicated by font size s=9.0 and r=0.90 and italic style.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 557.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=160, line=628, s=9.0, r=0.9, x=55.0, y=557.0: \"Future challenges\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=160, line=620, s=9.0, r=0.9, x=55.0, y=445.0: \"Value of prevention\""
+                    ]
+                }
+            },
+            {
+                "title": "Exposure and dose",
+                "level": 2,
+                "page": 162,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section under Chapter 9, indicated by font size s=20.0 and r=2.00.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 83.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=162, line=688, s=20.0, r=2.0, x=55.0, y=83.0: \"Exposure and dose\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 2,
+                    "visual_caption_examples": [
+                        "page=162, line=691, s=8.0, r=0.8, x=289.0, y=153.0: \"Box 9.2. Epidemiological research on the health\""
+                    ],
+                    "small_label_examples": [
+                        "page=162, line=687, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 149\"",
+                        "page=162, line=693, s=8.0, r=0.8, x=289.0, y=164.0: \"effects of climate change\""
+                    ]
+                }
+            },
+            {
+                "title": "General concepts",
+                "level": 3,
+                "page": 162,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Exposure and dose, indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 115.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=162, line=689, s=14.0, r=1.4, x=55.0, y=115.0: \"General concepts\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 2,
+                    "visual_caption_examples": [
+                        "page=162, line=691, s=8.0, r=0.8, x=289.0, y=153.0: \"Box 9.2. Epidemiological research on the health\""
+                    ],
+                    "small_label_examples": [
+                        "page=162, line=687, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 149\"",
+                        "page=162, line=693, s=8.0, r=0.8, x=289.0, y=164.0: \"effects of climate change\""
+                    ]
+                }
+            },
+            {
+                "title": "Biological monitoring",
+                "level": 3,
+                "page": 163,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Exposure and dose, indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 597.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=163, line=757, s=14.0, r=1.4, x=140.0, y=597.0: \"Biological monitoring\""
+                    ],
+                    "embedded_examples": [
+                        "page=163, line=760, s=10.0, r=1.0, x=140.0, y=651.0: \"This approach is called biological monitoring. Blood and urine are most commonly\"",
+                        "page=163, line=761, s=10.0, r=1.0, x=140.0, y=664.0: \"used for biological monitoring, but for certain chemicals other body tissues and fluids\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=163, line=746, s=8.0, r=0.8, x=166.0, y=550.0: \"1\"",
+                        "page=163, line=747, s=8.0, r=0.8, x=340.0, y=559.0: \"2000 3000\"",
+                        "page=163, line=749, s=3.9, r=0.39, x=149.0, y=443.0: \"evitaleR\"",
+                        "page=163, line=750, s=9.0, r=0.9, x=27.0, y=53.0: \"150 Chapter 9\""
+                    ]
+                }
+            },
+            {
+                "title": "Individual versus group measurements",
+                "level": 4,
+                "page": 164,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Biological monitoring, indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 615.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=164, line=813, s=14.0, r=1.4, x=55.0, y=615.0: \"Individual versus group measurements\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=164, line=791, s=8.0, r=0.8, x=93.0, y=574.0: \"July Aug Sep Oct Nov Dec Jan Feb Mar Apr May June\"",
+                        "page=164, line=792, s=8.0, r=0.8, x=146.0, y=583.0: \"1973 1974\"",
+                        "page=164, line=793, s=8.0, r=0.8, x=211.0, y=589.0: \"Time\"",
+                        "page=164, line=801, s=2.7, r=0.27, x=61.0, y=536.0: \"g/gm(\""
+                    ]
+                }
+            },
+            {
+                "title": "Variation in time",
+                "level": 5,
+                "page": 164,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Subsection under Individual versus group measurements, indicated by font size s=9.0 and r=0.90 and italic style.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 643.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=164, line=814, s=9.0, r=0.9, x=55.0, y=643.0: \"Variation in time\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=164, line=791, s=8.0, r=0.8, x=93.0, y=574.0: \"July Aug Sep Oct Nov Dec Jan Feb Mar Apr May June\"",
+                        "page=164, line=792, s=8.0, r=0.8, x=146.0, y=583.0: \"1973 1974\"",
+                        "page=164, line=793, s=8.0, r=0.8, x=211.0, y=589.0: \"Time\"",
+                        "page=164, line=804, s=2.7, r=0.27, x=61.0, y=566.0: \"dC\""
+                    ]
+                }
+            },
+            {
+                "title": "Variation in exposure",
+                "level": 5,
+                "page": 165,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Subsection under Individual versus group measurements, indicated by font size s=9.0 and r=0.90 and italic style.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 120.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=165, line=823, s=9.0, r=0.9, x=140.0, y=120.0: \"Variation in exposure\""
+                    ],
+                    "embedded_examples": [
+                        "page=165, line=824, s=10.0, r=1.0, x=140.0, y=131.0: \"There is also variation in exposure or dose between individuals. Even people working\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=165, line=820, s=9.0, r=0.9, x=27.0, y=53.0: \"152 Chapter 9\"",
+                        "page=165, line=831, s=9.0, r=0.9, x=140.0, y=232.0: \"Distribution issues\"",
+                        "page=165, line=820, s=9.0, r=0.9, x=27.0, y=53.0: \"152 Chapter 9\"",
+                        "page=165, line=823, s=9.0, r=0.9, x=140.0, y=120.0: \"Variation in exposure\""
+                    ]
+                }
+            },
+            {
+                "title": "Distribution issues",
+                "level": 5,
+                "page": 165,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Subsection under Individual versus group measurements, indicated by font size s=9.0 and r=0.90 and italic style.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 232.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=165, line=831, s=9.0, r=0.9, x=140.0, y=232.0: \"Distribution issues\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=165, line=823, s=9.0, r=0.9, x=140.0, y=120.0: \"Variation in exposure\""
+                    ]
+                }
+            },
+            {
+                "title": "Measures of effect",
+                "level": 5,
+                "page": 165,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Subsection under Individual versus group measurements, indicated by font size s=9.0 and r=0.90 and italic style.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 435.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=165, line=846, s=9.0, r=0.9, x=140.0, y=435.0: \"Measures of effect\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "Dose-effect relationships",
+                "level": 3,
+                "page": 166,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Exposure and dose, indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 415.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=166, line=891, s=14.0, r=1.4, x=55.0, y=415.0: \"Dose-effect relationships\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=166, line=883, s=8.0, r=0.8, x=55.0, y=307.0: \"Performance IQ 108.7 104.9 0.08\"",
+                        "page=166, line=884, s=8.0, r=0.8, x=58.0, y=319.0: \"Picture completion 12.2 11.3 0.03\"",
+                        "page=166, line=885, s=8.0, r=0.8, x=58.0, y=331.0: \"Picture 11.3 10.8 0.38\"",
+                        "page=166, line=886, s=8.0, r=0.8, x=58.0, y=340.0: \"arrangement\""
+                    ]
+                }
+            },
+            {
+                "title": "Dose–response relationships",
+                "level": 3,
+                "page": 167,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Exposure and dose, indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 394.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=167, line=931, s=14.0, r=1.4, x=140.0, y=394.0: \"Dose–response relationships\""
+                    ],
+                    "embedded_examples": [
+                        "page=167, line=946, s=10.0, r=1.0, x=140.0, y=604.0: \"strated (Table 5.2). Dose–response relationships can be produced for any environ-\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 3,
+                    "small_label_examples": [
+                        "page=167, line=923, s=7.2, r=0.72, x=177.0, y=252.0: \"headache\"",
+                        "page=167, line=924, s=7.2, r=0.72, x=229.0, y=281.0: \"10 20 30 40 50 60 70 80\"",
+                        "page=167, line=925, s=7.2, r=0.72, x=265.0, y=293.0: \"Carboxyhaemoglobin in blood (%)\""
+                    ]
+                }
+            },
+            {
+                "title": "Risk assessment",
+                "level": 3,
+                "page": 168,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Assessing risk, indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 115.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 3,
+                    "exact_examples": [
+                        "page=168, line=953, s=14.0, r=1.4, x=55.0, y=115.0: \"Risk assessment\""
+                    ],
+                    "embedded_examples": [
+                        "page=168, line=954, s=10.0, r=1.0, x=55.0, y=143.0: \"Risk assessment is a term with a variety of definitions, but the intuitive interpretation\"",
+                        "page=168, line=959, s=10.0, r=1.0, x=55.0, y=234.0: \"Health impact assessment can be considered as a risk assessment focused on a spe-\"",
+                        "page=168, line=960, s=10.0, r=1.0, x=55.0, y=247.0: \"cific population or exposure situation, while risk assessment has a more general\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 3,
+                    "small_label_examples": [
+                        "page=168, line=951, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 155\"",
+                        "page=168, line=951, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 155\"",
+                        "page=168, line=951, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 155\""
+                    ]
+                }
+            },
+            {
+                "title": "Health impact assessment",
+                "level": 3,
+                "page": 168,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Assessing risk, indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 206.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 4,
+                    "exact_examples": [
+                        "page=168, line=958, s=14.0, r=1.4, x=55.0, y=206.0: \"Health impact assessment\""
+                    ],
+                    "embedded_examples": [
+                        "page=168, line=959, s=10.0, r=1.0, x=55.0, y=234.0: \"Health impact assessment can be considered as a risk assessment focused on a spe-\"",
+                        "page=168, line=962, s=10.0, r=1.0, x=55.0, y=273.0: \"potentially cause in certain exposure situations?” Health impact assessment is now\"",
+                        "page=168, line=968, s=14.0, r=1.4, x=55.0, y=388.0: \"Environmental health impact assessment\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=168, line=951, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 155\"",
+                        "page=168, line=951, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 155\""
+                    ]
+                }
+            },
+            {
+                "title": "Injury epidemiology",
+                "level": 2,
+                "page": 170,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section under Chapter 9, indicated by font size s=20.0 and r=2.00.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 83.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=170, line=1044, s=20.0, r=2.0, x=55.0, y=83.0: \"Injury epidemiology\""
+                    ],
+                    "embedded_examples": [
+                        "page=170, line=1058, s=10.0, r=1.0, x=56.0, y=128.0: \"mental and occupational health is accident and injury epidemiology. Traffic accident\"",
+                        "page=170, line=1067, s=10.0, r=1.0, x=55.0, y=462.0: \"A classic example of practical injury epidemiology for traffic crashes is the demon-\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=170, line=1052, s=8.0, r=0.8, x=55.0, y=236.0: \"Figure 9.6. Pedestrian fatality risk as a function of the impact speed of the car22\"",
+                        "page=170, line=1052, s=8.0, r=0.8, x=55.0, y=236.0: \"Figure 9.6. Pedestrian fatality risk as a function of the impact speed of the car22\""
+                    ],
+                    "small_label_examples": [
+                        "page=170, line=1057, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 157\"",
+                        "page=170, line=1053, s=7.6, r=0.76, x=87.0, y=384.0: \"0\"",
+                        "page=170, line=1054, s=3.8, r=0.38, x=68.0, y=286.0: \"htaed\"",
+                        "page=170, line=1055, s=3.3, r=0.33, x=68.0, y=306.0: \"fo\""
+                    ]
+                }
+            },
+            {
+                "title": "Traffic crash injuries",
+                "level": 3,
+                "page": 170,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Injury epidemiology, indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 434.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=170, line=1066, s=14.0, r=1.4, x=55.0, y=434.0: \"Traffic crash injuries\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=170, line=1053, s=7.6, r=0.76, x=87.0, y=384.0: \"0\"",
+                        "page=170, line=1059, s=7.6, r=0.76, x=91.0, y=250.0: \"1\"",
+                        "page=170, line=1064, s=7.6, r=0.76, x=95.0, y=398.0: \"0 20 40 60 80 100\"",
+                        "page=170, line=1065, s=7.6, r=0.76, x=191.0, y=408.0: \"Impact speed (km/h)\""
+                    ]
+                }
+            },
+            {
+                "title": "Workplace injury",
+                "level": 3,
+                "page": 170,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Injury epidemiology, indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 538.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=170, line=1072, s=14.0, r=1.4, x=55.0, y=538.0: \"Workplace injury\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=170, line=1064, s=7.6, r=0.76, x=95.0, y=398.0: \"0 20 40 60 80 100\"",
+                        "page=170, line=1065, s=7.6, r=0.76, x=191.0, y=408.0: \"Impact speed (km/h)\""
+                    ]
+                }
+            },
+            {
+                "title": "Violence",
+                "level": 3,
+                "page": 171,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Injury epidemiology, indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 408.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=171, line=1104, s=14.0, r=1.4, x=140.0, y=408.0: \"Violence\""
+                    ],
+                    "embedded_examples": [
+                        "page=171, line=1105, s=10.0, r=1.0, x=140.0, y=436.0: \"Violence is another public health problem that has been highlighted through epide-\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=171, line=1091, s=7.2, r=0.72, x=198.0, y=333.0: \"5\"",
+                        "page=171, line=1092, s=7.2, r=0.72, x=198.0, y=364.0: \"0\"",
+                        "page=171, line=1093, s=7.2, r=0.72, x=202.0, y=372.0: \"0 25 50 75 100 112\"",
+                        "page=171, line=1094, s=7.2, r=0.72, x=286.0, y=383.0: \"Speed (km/h)\""
+                    ]
+                }
+            },
+            {
+                "title": "Suicides",
+                "level": 3,
+                "page": 171,
+                "reasons": [
+                    "source context looks like case/example/table/figure/problem/reference material"
+                ],
+                "level_reason": "Subsection under Injury epidemiology, indicated by font size s=14.0 and r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 538.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=171, line=1112, s=14.0, r=1.4, x=140.0, y=538.0: \"Suicides\""
+                    ],
+                    "embedded_examples": [
+                        "page=171, line=1114, s=10.0, r=1.0, x=140.0, y=579.0: \"cidal intent are primarily social or economic,24 but completed suicides are also\"",
+                        "page=171, line=1116, s=10.0, r=1.0, x=140.0, y=605.0: \"factor. Figure 9.8 shows the dramatic increase of suicides in Western Samoa after the\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "Special features of environmental and occupational epidemiology",
+                "level": 2,
+                "page": 172,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Major section under Chapter 9, indicated by font size s=20.0 and r=2.00.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 239.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "environmentalandoccupationalepidemiology",
+                    "display_text": "Environmental and occupational epidemiology",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 294.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 9,
+                    "page_count": 9,
+                    "page_range": "160-176",
+                    "samples": [
+                        "Environmental and occupational epidemiology 147",
+                        "Environmental and occupational epidemiology 149",
+                        "Environmental and occupational epidemiology 151"
+                    ]
+                }
+            }
+        ]
+    },
+    "toc": {
+        "title": "Basic epidemiology",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "Normal as common",
+                "page": 147,
+                "level_reason": "Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.",
+                "_layout_page": 147,
+                "_layout_x": 140.0,
+                "_layout_y": 178.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Normal as common",
+                "_source_order": 0
+            },
+            {
+                "level": 3,
+                "chapter": "Abnormality associated with disease",
+                "page": 148,
+                "level_reason": "Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.",
+                "_layout_page": 148,
+                "_layout_x": 55.0,
+                "_layout_y": 121.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Abnormality associated with disease",
+                "_source_order": 1
+            },
+            {
+                "level": 3,
+                "chapter": "Abnormal as treatable",
+                "page": 148,
+                "level_reason": "Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.",
+                "_layout_page": 148,
+                "_layout_x": 55.0,
+                "_layout_y": 357.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Abnormal as treatable",
+                "_source_order": 2
+            },
+            {
+                "level": 3,
+                "chapter": "Value of a test",
+                "page": 149,
+                "level_reason": "Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.",
+                "_layout_page": 149,
+                "_layout_x": 140.0,
+                "_layout_y": 581.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Value of a test",
+                "_source_order": 3
+            },
+            {
+                "level": 2,
+                "chapter": "Natural history and prognosis",
+                "page": 150,
+                "level_reason": "Major section indicated by font size s=20.0 and r=2.00.",
+                "_layout_page": 150,
+                "_layout_x": 55.0,
+                "_layout_y": 444.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Natural history and prognosis",
+                "_source_order": 4
+            },
+            {
+                "level": 3,
+                "chapter": "Prognosis",
+                "page": 150,
+                "level_reason": "Subsection under Natural history and prognosis, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 150,
+                "_layout_x": 55.0,
+                "_layout_y": 618.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Prognosis",
+                "_source_order": 5
+            },
+            {
+                "level": 3,
+                "chapter": "Quality of life",
+                "page": 151,
+                "level_reason": "Subsection under Natural history and prognosis, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 151,
+                "_layout_x": 140.0,
+                "_layout_y": 303.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Quality of life",
+                "_source_order": 6
+            },
+            {
+                "level": 3,
+                "chapter": "Quantity of life",
+                "page": 151,
+                "level_reason": "Subsection under Natural history and prognosis, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 151,
+                "_layout_x": 140.0,
+                "_layout_y": 433.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Quantity of life",
+                "_source_order": 7
+            },
+            {
+                "level": 2,
+                "chapter": "Effectiveness of treatment",
+                "page": 152,
+                "level_reason": "Major section indicated by font size s=20.0 and r=2.00.",
+                "_layout_page": 152,
+                "_layout_x": 55.0,
+                "_layout_y": 319.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Effectiveness of treatment",
+                "_source_order": 8
+            },
+            {
+                "level": 2,
+                "chapter": "Use of evidence-based guidelines",
+                "page": 153,
+                "level_reason": "Major section indicated by font size s=20.0 and r=2.00.",
+                "_layout_page": 153,
+                "_layout_x": 240.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Use of evidence-based guidelines",
+                "_source_order": 9
+            },
+            {
+                "level": 2,
+                "chapter": "Prevention in clinical practice",
+                "page": 153,
+                "level_reason": "Major section indicated by font size s=20.0 and r=2.00.",
+                "_layout_page": 153,
+                "_layout_x": 140.0,
+                "_layout_y": 525.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Prevention in clinical practice",
+                "_source_order": 10
+            },
+            {
+                "level": 3,
+                "chapter": "Reducing risks",
+                "page": 154,
+                "level_reason": "Subsection under Prevention in clinical practice, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 154,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Reducing risks",
+                "_source_order": 11
+            },
+            {
+                "level": 3,
+                "chapter": "Reducing risks in patients with established disease",
+                "page": 154,
+                "level_reason": "Subsection under Prevention in clinical practice, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 154,
+                "_layout_x": 55.0,
+                "_layout_y": 587.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Reducing risks in patients with established disease",
+                "_source_order": 12
+            },
+            {
+                "level": 4,
+                "chapter": "Behavioural interventions",
+                "page": 155,
+                "level_reason": "Subsection under Reducing risks in patients with established disease, indicated by font size s=9.0 and r=0.90.",
+                "_layout_page": 155,
+                "_layout_x": 140.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Behavioural interventions",
+                "_source_order": 13
+            },
+            {
+                "level": 4,
+                "chapter": "Pharmacological interventions",
+                "page": 155,
+                "level_reason": "Subsection under Reducing risks in patients with established disease, indicated by font size s=9.0 and r=0.90.",
+                "_layout_page": 155,
+                "_layout_x": 240.0,
+                "_layout_y": 157.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Pharmacological interventions",
+                "_source_order": 14
+            },
+            {
+                "level": 4,
+                "chapter": "Other interventions",
+                "page": 155,
+                "level_reason": "Subsection under Reducing risks in patients with established disease, indicated by font size s=9.0 and r=0.90.",
+                "_layout_page": 155,
+                "_layout_x": 140.0,
+                "_layout_y": 387.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Other interventions",
+                "_source_order": 15
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter 9 Environmental and occupational epidemiology",
+                "page": 158,
+                "level_reason": "Top-level chapter indicated by font size s=32.0 and r=3.20.",
+                "_layout_page": 158,
+                "_layout_x": 55.0,
+                "_layout_y": 101.0,
+                "_layout_font_size": 32.0,
+                "_layout_size_ratio": 3.2,
+                "_layout_text": "Environmental and occupational epidemiology",
+                "_source_order": 16
+            },
+            {
+                "level": 2,
+                "chapter": "Environment and health",
+                "page": 158,
+                "level_reason": "Major section under Chapter 9, indicated by font size s=20.0 and r=2.00.",
+                "_layout_page": 158,
+                "_layout_x": 55.0,
+                "_layout_y": 325.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Environment and health",
+                "_source_order": 17
+            },
+            {
+                "level": 3,
+                "chapter": "Impact of exposure to environmental factors",
+                "page": 159,
+                "level_reason": "Subsection under Environment and health, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 159,
+                "_layout_x": 140.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Impact of exposure to environmental factors",
+                "_source_order": 18
+            },
+            {
+                "level": 3,
+                "chapter": "Evaluation of preventive measures",
+                "page": 160,
+                "level_reason": "Subsection under Environment and health, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 160,
+                "_layout_x": 55.0,
+                "_layout_y": 277.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Evaluation of preventive measures",
+                "_source_order": 19
+            },
+            {
+                "level": 4,
+                "chapter": "Value of prevention",
+                "page": 160,
+                "level_reason": "Subsection under Evaluation of preventive measures, indicated by font size s=9.0 and r=0.90.",
+                "_layout_page": 160,
+                "_layout_x": 55.0,
+                "_layout_y": 445.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Value of prevention",
+                "_source_order": 20
+            },
+            {
+                "level": 4,
+                "chapter": "Future challenges",
+                "page": 160,
+                "level_reason": "Subsection under Evaluation of preventive measures, indicated by font size s=9.0 and r=0.90.",
+                "_layout_page": 160,
+                "_layout_x": 55.0,
+                "_layout_y": 557.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Future challenges",
+                "_source_order": 21
+            },
+            {
+                "level": 2,
+                "chapter": "Exposure and dose",
+                "page": 162,
+                "level_reason": "Major section under Chapter 9, indicated by font size s=20.0 and r=2.00.",
+                "_layout_page": 162,
+                "_layout_x": 55.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Exposure and dose",
+                "_source_order": 22
+            },
+            {
+                "level": 3,
+                "chapter": "General concepts",
+                "page": 162,
+                "level_reason": "Subsection under Exposure and dose, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 162,
+                "_layout_x": 55.0,
+                "_layout_y": 115.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "General concepts",
+                "_source_order": 23
+            },
+            {
+                "level": 3,
+                "chapter": "Biological monitoring",
+                "page": 163,
+                "level_reason": "Subsection under Exposure and dose, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 163,
+                "_layout_x": 140.0,
+                "_layout_y": 597.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Biological monitoring",
+                "_source_order": 24
+            },
+            {
+                "level": 4,
+                "chapter": "Interpreting biological data",
+                "page": 164,
+                "level_reason": "Corrected from level 4 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.",
+                "_layout_page": 164,
+                "_layout_x": 55.0,
+                "_layout_y": 173.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Interpreting biological data",
+                "_source_order": 25
+            },
+            {
+                "level": 4,
+                "chapter": "Individual versus group measurements",
+                "page": 164,
+                "level_reason": "Corrected from level 4 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.",
+                "_layout_page": 164,
+                "_layout_x": 55.0,
+                "_layout_y": 615.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Individual versus group measurements",
+                "_source_order": 26
+            },
+            {
+                "level": 5,
+                "chapter": "Variation in time",
+                "page": 164,
+                "level_reason": "Corrected from level 5 to level 4; font size s=9.0 and r=0.9 matches the observed style cluster for level 4 subsections.",
+                "_layout_page": 164,
+                "_layout_x": 55.0,
+                "_layout_y": 643.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Variation in time",
+                "_source_order": 27
+            },
+            {
+                "level": 5,
+                "chapter": "Variation in exposure",
+                "page": 165,
+                "level_reason": "Corrected from level 5 to level 4; font size s=9.0 and r=0.9 matches the observed style cluster for level 4 subsections.",
+                "_layout_page": 165,
+                "_layout_x": 140.0,
+                "_layout_y": 120.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Variation in exposure",
+                "_source_order": 28
+            },
+            {
+                "level": 5,
+                "chapter": "Distribution issues",
+                "page": 165,
+                "level_reason": "Corrected from level 5 to level 4; font size s=9.0 and r=0.9 matches the observed style cluster for level 4 subsections.",
+                "_layout_page": 165,
+                "_layout_x": 140.0,
+                "_layout_y": 232.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Distribution issues",
+                "_source_order": 29
+            },
+            {
+                "level": 5,
+                "chapter": "Measures of effect",
+                "page": 165,
+                "level_reason": "Corrected from level 5 to level 4; font size s=9.0 and r=0.9 matches the observed style cluster for level 4 subsections.",
+                "_layout_page": 165,
+                "_layout_x": 140.0,
+                "_layout_y": 435.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Measures of effect",
+                "_source_order": 30
+            },
+            {
+                "level": 3,
+                "chapter": "Population dose",
+                "page": 165,
+                "level_reason": "Subsection under Exposure and dose, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 165,
+                "_layout_x": 140.0,
+                "_layout_y": 574.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Population dose",
+                "_source_order": 31
+            },
+            {
+                "level": 3,
+                "chapter": "Dose-effect relationships",
+                "page": 166,
+                "level_reason": "Subsection under Exposure and dose, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 166,
+                "_layout_x": 55.0,
+                "_layout_y": 415.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Dose-effect relationships",
+                "_source_order": 32
+            },
+            {
+                "level": 3,
+                "chapter": "Dose–response relationships",
+                "page": 167,
+                "level_reason": "Subsection under Exposure and dose, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 167,
+                "_layout_x": 140.0,
+                "_layout_y": 394.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Dose–response relationships",
+                "_source_order": 33
+            },
+            {
+                "level": 2,
+                "chapter": "Assessing risk",
+                "page": 168,
+                "level_reason": "Major section under Chapter 9, indicated by font size s=20.0 and r=2.00.",
+                "_layout_page": 168,
+                "_layout_x": 55.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Assessing risk",
+                "_source_order": 34
+            },
+            {
+                "level": 3,
+                "chapter": "Risk assessment",
+                "page": 168,
+                "level_reason": "Subsection under Assessing risk, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 168,
+                "_layout_x": 55.0,
+                "_layout_y": 115.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Risk assessment",
+                "_source_order": 35
+            },
+            {
+                "level": 3,
+                "chapter": "Health impact assessment",
+                "page": 168,
+                "level_reason": "Subsection under Assessing risk, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 168,
+                "_layout_x": 55.0,
+                "_layout_y": 206.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Health impact assessment",
+                "_source_order": 36
+            },
+            {
+                "level": 3,
+                "chapter": "Risk management",
+                "page": 168,
+                "level_reason": "Subsection under Assessing risk, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 168,
+                "_layout_x": 55.0,
+                "_layout_y": 323.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Risk management",
+                "_source_order": 37
+            },
+            {
+                "level": 3,
+                "chapter": "Environmental health impact assessment",
+                "page": 168,
+                "level_reason": "Subsection under Assessing risk, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 168,
+                "_layout_x": 55.0,
+                "_layout_y": 388.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Environmental health impact assessment",
+                "_source_order": 38
+            },
+            {
+                "level": 2,
+                "chapter": "Injury epidemiology",
+                "page": 170,
+                "level_reason": "Major section under Chapter 9, indicated by font size s=20.0 and r=2.00.",
+                "_layout_page": 170,
+                "_layout_x": 55.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Injury epidemiology",
+                "_source_order": 39
+            },
+            {
+                "level": 3,
+                "chapter": "Traffic crash injuries",
+                "page": 170,
+                "level_reason": "Subsection under Injury epidemiology, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 170,
+                "_layout_x": 55.0,
+                "_layout_y": 434.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Traffic crash injuries",
+                "_source_order": 40
+            },
+            {
+                "level": 3,
+                "chapter": "Workplace injury",
+                "page": 170,
+                "level_reason": "Subsection under Injury epidemiology, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 170,
+                "_layout_x": 55.0,
+                "_layout_y": 538.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Workplace injury",
+                "_source_order": 41
+            },
+            {
+                "level": 3,
+                "chapter": "Violence",
+                "page": 171,
+                "level_reason": "Subsection under Injury epidemiology, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 171,
+                "_layout_x": 140.0,
+                "_layout_y": 408.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Violence",
+                "_source_order": 42
+            },
+            {
+                "level": 3,
+                "chapter": "Suicides",
+                "page": 171,
+                "level_reason": "Subsection under Injury epidemiology, indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 171,
+                "_layout_x": 140.0,
+                "_layout_y": 538.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Suicides",
+                "_source_order": 43
+            },
+            {
+                "level": 2,
+                "chapter": "Special features of environmental and occupational epidemiology",
+                "page": 172,
+                "level_reason": "Major section under Chapter 9, indicated by font size s=20.0 and r=2.00.",
+                "_layout_page": 172,
+                "_layout_x": 55.0,
+                "_layout_y": 239.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Special features of environmental and occupational epidemiology",
+                "_source_order": 44
+            },
+            {
+                "level": 3,
+                "chapter": "Setting safety standards",
+                "page": 172,
+                "level_reason": "Subsection under Special features..., indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 172,
+                "_layout_x": 55.0,
+                "_layout_y": 528.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Setting safety standards",
+                "_source_order": 45
+            },
+            {
+                "level": 3,
+                "chapter": "Measuring past exposure",
+                "page": 173,
+                "level_reason": "Subsection under Special features..., indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 173,
+                "_layout_x": 140.0,
+                "_layout_y": 134.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Measuring past exposure",
+                "_source_order": 46
+            },
+            {
+                "level": 3,
+                "chapter": "Healthy worker effect in occupational studies",
+                "page": 173,
+                "level_reason": "Subsection under Special features..., indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 173,
+                "_layout_x": 140.0,
+                "_layout_y": 238.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Healthy worker effect in occupational studies",
+                "_source_order": 47
+            },
+            {
+                "level": 3,
+                "chapter": "Continuing challenges for epidemiologists",
+                "page": 173,
+                "level_reason": "Subsection under Special features..., indicated by font size s=14.0 and r=1.40.",
+                "_layout_page": 173,
+                "_layout_x": 140.0,
+                "_layout_y": 380.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Continuing challenges for epidemiologists",
+                "_source_order": 48
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"Basic epidemiology\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"Normal as common\",\n      \"page\": 147,\n      \"level_reason\": \"Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Abnormality associated with disease\",\n      \"page\": 148,\n      \"level_reason\": \"Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Abnormal as treatable\",\n      \"page\": 148,\n      \"level_reason\": \"Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Value of a test\",\n      \"page\": 149,\n      \"level_reason\": \"Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Natural history and prognosis\",\n      \"page\": 150,\n      \"level_reason\": \"Major section indicated by font size s=20.0 and r=2.00.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Prognosis\",\n      \"page\": 150,\n      \"level_reason\": \"Subsection under Natural history and prognosis, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Quality of life\",\n      \"page\": 151,\n      \"level_reason\": \"Subsection under Natural history and prognosis, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Quantity of life\",\n      \"page\": 151,\n      \"level_reason\": \"Subsection under Natural history and prognosis, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Effectiveness of treatment\",\n      \"page\": 152,\n      \"level_reason\": \"Major section indicated by font size s=20.0 and r=2.00.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Use of evidence-based guidelines\",\n      \"page\": 153,\n      \"level_reason\": \"Major section indicated by font size s=20.0 and r=2.00.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Prevention in clinical practice\",\n      \"page\": 153,\n      \"level_reason\": \"Major section indicated by font size s=20.0 and r=2.00.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Reducing risks\",\n      \"page\": 154,\n      \"level_reason\": \"Subsection under Prevention in clinical practice, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Reducing risks in patients with established disease\",\n      \"page\": 154,\n      \"level_reason\": \"Subsection under Prevention in clinical practice, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Behavioural interventions\",\n      \"page\": 155,\n      \"level_reason\": \"Subsection under Reducing risks in patients with established disease, indicated by font size s=9.0 and r=0.90.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Pharmacological interventions\",\n      \"page\": 155,\n      \"level_reason\": \"Subsection under Reducing risks in patients with established disease, indicated by font size s=9.0 and r=0.90.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Other interventions\",\n      \"page\": 155,\n      \"level_reason\": \"Subsection under Reducing risks in patients with established disease, indicated by font size s=9.0 and r=0.90.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 9 Environmental and occupational epidemiology\",\n      \"page\": 158,\n      \"level_reason\": \"Top-level chapter indicated by font size s=32.0 and r=3.20.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Environment and health\",\n      \"page\": 158,\n      \"level_reason\": \"Major section under Chapter 9, indicated by font size s=20.0 and r=2.00.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Impact of exposure to environmental factors\",\n      \"page\": 159,\n      \"level_reason\": \"Subsection under Environment and health, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Evaluation of preventive measures\",\n      \"page\": 160,\n      \"level_reason\": \"Subsection under Environment and health, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Value of prevention\",\n      \"page\": 160,\n      \"level_reason\": \"Subsection under Evaluation of preventive measures, indicated by font size s=9.0 and r=0.90.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Future challenges\",\n      \"page\": 160,\n      \"level_reason\": \"Subsection under Evaluation of preventive measures, indicated by font size s=9.0 and r=0.90.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Exposure and dose\",\n      \"page\": 162,\n      \"level_reason\": \"Major section under Chapter 9, indicated by font size s=20.0 and r=2.00.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"General concepts\",\n      \"page\": 162,\n      \"level_reason\": \"Subsection under Exposure and dose, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Biological monitoring\",\n      \"page\": 163,\n      \"level_reason\": \"Subsection under Exposure and dose, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Interpreting biological data\",\n      \"page\": 164,\n      \"level_reason\": \"Corrected from level 4 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Individual versus group measurements\",\n      \"page\": 164,\n      \"level_reason\": \"Corrected from level 4 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"Variation in time\",\n      \"page\": 164,\n      \"level_reason\": \"Corrected from level 5 to level 4; font size s=9.0 and r=0.9 matches the observed style cluster for level 4 subsections.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"Variation in exposure\",\n      \"page\": 165,\n      \"level_reason\": \"Corrected from level 5 to level 4; font size s=9.0 and r=0.9 matches the observed style cluster for level 4 subsections.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"Distribution issues\",\n      \"page\": 165,\n      \"level_reason\": \"Corrected from level 5 to level 4; font size s=9.0 and r=0.9 matches the observed style cluster for level 4 subsections.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"Measures of effect\",\n      \"page\": 165,\n      \"level_reason\": \"Corrected from level 5 to level 4; font size s=9.0 and r=0.9 matches the observed style cluster for level 4 subsections.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Population dose\",\n      \"page\": 165,\n      \"level_reason\": \"Subsection under Exposure and dose, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Dose-effect relationships\",\n      \"page\": 166,\n      \"level_reason\": \"Subsection under Exposure and dose, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Dose–response relationships\",\n      \"page\": 167,\n      \"level_reason\": \"Subsection under Exposure and dose, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Assessing risk\",\n      \"page\": 168,\n      \"level_reason\": \"Major section under Chapter 9, indicated by font size s=20.0 and r=2.00.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Risk assessment\",\n      \"page\": 168,\n      \"level_reason\": \"Subsection under Assessing risk, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Health impact assessment\",\n      \"page\": 168,\n      \"level_reason\": \"Subsection under Assessing risk, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Risk management\",\n      \"page\": 168,\n      \"level_reason\": \"Subsection under Assessing risk, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Environmental health impact assessment\",\n      \"page\": 168,\n      \"level_reason\": \"Subsection under Assessing risk, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Injury epidemiology\",\n      \"page\": 170,\n      \"level_reason\": \"Major section under Chapter 9, indicated by font size s=20.0 and r=2.00.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Traffic crash injuries\",\n      \"page\": 170,\n      \"level_reason\": \"Subsection under Injury epidemiology, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Workplace injury\",\n      \"page\": 170,\n      \"level_reason\": \"Subsection under Injury epidemiology, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Violence\",\n      \"page\": 171,\n      \"level_reason\": \"Subsection under Injury epidemiology, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Suicides\",\n      \"page\": 171,\n      \"level_reason\": \"Subsection under Injury epidemiology, indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Special features of environmental and occupational epidemiology\",\n      \"page\": 172,\n      \"level_reason\": \"Major section under Chapter 9, indicated by font size s=20.0 and r=2.00.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Setting safety standards\",\n      \"page\": 172,\n      \"level_reason\": \"Subsection under Special features..., indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Measuring past exposure\",\n      \"page\": 173,\n      \"level_reason\": \"Subsection under Special features..., indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Healthy worker effect in occupational studies\",\n      \"page\": 173,\n      \"level_reason\": \"Subsection under Special features..., indicated by font size s=14.0 and r=1.40.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Continuing challenges for epidemiologists\",\n      \"page\": 173,\n      \"level_reason\": \"Subsection under Special features..., indicated by font size s=14.0 and r=1.40.\"\n    }\n  ]\n}"
+}

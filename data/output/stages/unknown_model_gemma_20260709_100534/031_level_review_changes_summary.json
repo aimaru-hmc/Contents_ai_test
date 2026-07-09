@@ -1,0 +1,297 @@
+{
+    "timestamp": "2026-07-09 10:17:04",
+    "stage_index": 31,
+    "stage": "level_review_changes_summary",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "review_count": 3,
+    "level_change_count": 7,
+    "added_count": 1,
+    "removed_count": 0,
+    "reviews": [
+        {
+            "review_stage": "chunk 2/8",
+            "input_chapters": 45,
+            "output_chapters": 45,
+            "level_change_count": 3,
+            "added_count": 0,
+            "removed_count": 0,
+            "level_changes": [
+                {
+                    "chapter": "Age-specific death rates",
+                    "page": 38,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection title with s=9.0, r=0.9, x=55, bold/italic style under Death rates.",
+                    "after_level_reason": "Corrected to level 4 based on visual style (s=9.0, r=0.9, x=55) matching other low-level entries.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Age-specific death rates",
+                        "page": 38,
+                        "level_reason": "Subsection title with s=9.0, r=0.9, x=55, bold/italic style under Death rates.",
+                        "_layout_page": 38,
+                        "_layout_x": 55.0,
+                        "_layout_y": 469.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Age-specific death rates",
+                        "_source_order": 6
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Age-specific death rates",
+                        "page": 38,
+                        "level_reason": "Corrected to level 4 based on visual style (s=9.0, r=0.9, x=55) matching other low-level entries.",
+                        "_layout_page": 38,
+                        "_layout_x": 55.0,
+                        "_layout_y": 469.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Age-specific death rates",
+                        "_source_order": 6
+                    }
+                },
+                {
+                    "chapter": "Proportionate mortality",
+                    "page": 38,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection title with s=9.0, r=0.9, x=55, bold/italic style under Death rates.",
+                    "after_level_reason": "Corrected to level 4 based on visual style (s=9.0, r=0.9, x=55) matching other low-level entries.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Proportionate mortality",
+                        "page": 38,
+                        "level_reason": "Subsection title with s=9.0, r=0.9, x=55, bold/italic style under Death rates.",
+                        "_layout_page": 38,
+                        "_layout_x": 55.0,
+                        "_layout_y": 601.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Proportionate mortality",
+                        "_source_order": 7
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Proportionate mortality",
+                        "page": 38,
+                        "level_reason": "Corrected to level 4 based on visual style (s=9.0, r=0.9, x=55) matching other low-level entries.",
+                        "_layout_page": 38,
+                        "_layout_x": 55.0,
+                        "_layout_y": 601.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Proportionate mortality",
+                        "_source_order": 7
+                    }
+                },
+                {
+                    "chapter": "Ecological fallacy",
+                    "page": 56,
+                    "before_level": 4,
+                    "after_level": 3,
+                    "before_level_reason": "Lower level heading with s=14.0, r=1.4, x=55, under Ecological studies.",
+                    "after_level_reason": "Corrected to level 3 based on visual hierarchy (s=14.0, r=1.4, x=55) as a distinct subsection under Ecological studies.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "Ecological fallacy",
+                        "page": 56,
+                        "level_reason": "Lower level heading with s=14.0, r=1.4, x=55, under Ecological studies.",
+                        "_layout_page": 56,
+                        "_layout_x": 55.0,
+                        "_layout_y": 251.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Ecological fallacy",
+                        "_source_order": 38
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "Ecological fallacy",
+                        "page": 56,
+                        "level_reason": "Corrected to level 3 based on visual hierarchy (s=14.0, r=1.4, x=55) as a distinct subsection under Ecological studies.",
+                        "_layout_page": 56,
+                        "_layout_x": 55.0,
+                        "_layout_y": 251.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Ecological fallacy",
+                        "_source_order": 38
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": []
+        },
+        {
+            "review_stage": "chunk 6/8",
+            "input_chapters": 49,
+            "output_chapters": 49,
+            "level_change_count": 4,
+            "added_count": 0,
+            "removed_count": 0,
+            "level_changes": [
+                {
+                    "chapter": "Normal as common",
+                    "page": 147,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Subsection under a larger clinical epidemiology discussion, indicated by font size s=14.0 and r=1.40.",
+                    "after_level_reason": "Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "Normal as common",
+                        "page": 147,
+                        "level_reason": "Subsection under a larger clinical epidemiology discussion, indicated by font size s=14.0 and r=1.40.",
+                        "_layout_page": 147,
+                        "_layout_x": 140.0,
+                        "_layout_y": 178.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Normal as common",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "Normal as common",
+                        "page": 147,
+                        "level_reason": "Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.",
+                        "_layout_page": 147,
+                        "_layout_x": 140.0,
+                        "_layout_y": 178.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Normal as common",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Abnormality associated with disease",
+                    "page": 148,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Subsection indicated by font size s=14.0 and r=1.40.",
+                    "after_level_reason": "Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "Abnormality associated with disease",
+                        "page": 148,
+                        "level_reason": "Subsection indicated by font size s=14.0 and r=1.40.",
+                        "_layout_page": 148,
+                        "_layout_x": 55.0,
+                        "_layout_y": 121.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Abnormality associated with disease",
+                        "_source_order": 1
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "Abnormality associated with disease",
+                        "page": 148,
+                        "level_reason": "Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.",
+                        "_layout_page": 148,
+                        "_layout_x": 55.0,
+                        "_layout_y": 121.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Abnormality associated with disease",
+                        "_source_order": 1
+                    }
+                },
+                {
+                    "chapter": "Abnormal as treatable",
+                    "page": 148,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Subsection indicated by font size s=14.0 and r=1.40.",
+                    "after_level_reason": "Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "Abnormal as treatable",
+                        "page": 148,
+                        "level_reason": "Subsection indicated by font size s=14.0 and r=1.40.",
+                        "_layout_page": 148,
+                        "_layout_x": 55.0,
+                        "_layout_y": 357.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Abnormal as treatable",
+                        "_source_order": 2
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "Abnormal as treatable",
+                        "page": 148,
+                        "level_reason": "Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.",
+                        "_layout_page": 148,
+                        "_layout_x": 55.0,
+                        "_layout_y": 357.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Abnormal as treatable",
+                        "_source_order": 2
+                    }
+                },
+                {
+                    "chapter": "Value of a test",
+                    "page": 149,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Subsection indicated by font size s=14.0 and r=1.40.",
+                    "after_level_reason": "Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "Value of a test",
+                        "page": 149,
+                        "level_reason": "Subsection indicated by font size s=14.0 and r=1.40.",
+                        "_layout_page": 149,
+                        "_layout_x": 140.0,
+                        "_layout_y": 581.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Value of a test",
+                        "_source_order": 3
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "Value of a test",
+                        "page": 149,
+                        "level_reason": "Corrected from level 2 to level 3; font size s=14.0 and r=1.4 matches the observed style cluster for level 3 subsections.",
+                        "_layout_page": 149,
+                        "_layout_x": 140.0,
+                        "_layout_y": 581.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Value of a test",
+                        "_source_order": 3
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": []
+        },
+        {
+            "review_stage": "chunk 8/8",
+            "input_chapters": 11,
+            "output_chapters": 12,
+            "level_change_count": 0,
+            "added_count": 1,
+            "removed_count": 0,
+            "level_changes": [],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 1,
+                        "chapter": "Index",
+                        "page": 218,
+                        "level_reason": "Major document section title with large font size (32.0) and distinct layout."
+                    }
+                }
+            ],
+            "removed_entries": []
+        }
+    ]
+}

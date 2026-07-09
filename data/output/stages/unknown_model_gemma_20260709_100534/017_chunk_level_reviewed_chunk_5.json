@@ -1,0 +1,1734 @@
+{
+    "timestamp": "2026-07-09 10:13:32",
+    "stage_index": 17,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "5",
+    "total_chunks": 8,
+    "start_page": 120,
+    "end_page": 146,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 5/8",
+        "input_chapters": 46,
+        "output_chapters": 46,
+        "level_changes": 0,
+        "added_entries": 0,
+        "removed_entries": 0,
+        "level_change_report_recorded": false,
+        "possible_invalid_heading_candidate_count": 29,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "High-risk individual strategy",
+                "level": 3,
+                "page": 120,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under primary prevention context.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 411.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=120, line=29, s=14.0, r=1.4, x=55.0, y=411.0: \"High-risk individual strategy\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=120, line=34, s=8.0, r=0.8, x=289.0, y=486.0: \"Box 6.4. High-risk strategy: smoking cessation\""
+                    ],
+                    "small_label_examples": [
+                        "page=120, line=20, s=8.0, r=0.8, x=73.0, y=361.0: \"0\"",
+                        "page=120, line=22, s=8.0, r=0.8, x=178.0, y=387.0: \"Total cholesterol (mml/l)\"",
+                        "page=120, line=23, s=7.2, r=0.72, x=57.0, y=281.0: \"%\"",
+                        "page=120, line=24, s=9.0, r=0.9, x=231.0, y=53.0: \"Epidemiology and prevention: chronic noncommunicable diseases 107\""
+                    ]
+                }
+            },
+            {
+                "title": "Tertiary prevention",
+                "level": 2,
+                "page": 122,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0, parallel to secondary prevention.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 573.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=122, line=142, s=20.0, r=2.0, x=55.0, y=573.0: \"Tertiary prevention\""
+                    ],
+                    "embedded_examples": [
+                        "page=122, line=143, s=10.0, r=1.0, x=55.0, y=605.0: \"Tertiary prevention is aimed at reducing the progress or complications of established\"",
+                        "page=122, line=147, s=10.0, r=1.0, x=55.0, y=655.0: \"conditions. Tertiary prevention is often difficult to separate from treatment, since\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=122, line=134, s=8.0, r=0.8, x=77.0, y=419.0: \"1\"",
+                        "page=122, line=135, s=8.0, r=0.8, x=77.0, y=462.0: \"0\"",
+                        "page=122, line=136, s=8.0, r=0.8, x=85.0, y=472.0: \"0 100 200 300 400\"",
+                        "page=122, line=137, s=8.0, r=0.8, x=156.0, y=485.0: \"Average screen rate (per 1000 women)\""
+                    ]
+                }
+            },
+            {
+                "title": "Types of screening",
+                "level": 3,
+                "page": 123,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Screening.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 240.0,
+                "vertical_position": 423.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=123, line=174, s=14.0, r=1.4, x=240.0, y=423.0: \"Types of screening\""
+                    ],
+                    "embedded_examples": [
+                        "page=123, line=176, s=10.0, r=1.0, x=34.0, y=449.0: \"When targeted screening is done in groups with occu- There are different types of screeni...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=123, line=175, s=8.0, r=0.8, x=34.0, y=433.0: \"Box 6.5. Targeted screening\"",
+                        "page=123, line=175, s=8.0, r=0.8, x=34.0, y=433.0: \"Box 6.5. Targeted screening\""
+                    ],
+                    "small_label_examples": [
+                        "page=123, line=177, s=9.0, r=0.9, x=34.0, y=460.0: \"pational exposures, the criteria for screening are not aims:\"",
+                        "page=123, line=178, s=9.0, r=0.9, x=34.0, y=471.0: \"necessarily as strict as those for general population\"",
+                        "page=123, line=180, s=9.0, r=0.9, x=34.0, y=493.0: \"minor (nausea or headache), but screening may be a\"",
+                        "page=123, line=182, s=9.0, r=0.9, x=34.0, y=504.0: \"high priority if the effect reduces the patient’s ability to\""
+                    ]
+                }
+            },
+            {
+                "title": "Criteria for screening",
+                "level": 3,
+                "page": 123,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Screening.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 635.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=123, line=199, s=14.0, r=1.4, x=140.0, y=635.0: \"Criteria for screening\""
+                    ],
+                    "embedded_examples": [
+                        "page=123, line=177, s=9.0, r=0.9, x=34.0, y=460.0: \"pational exposures, the criteria for screening are not aims:\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=123, line=175, s=8.0, r=0.8, x=34.0, y=433.0: \"Box 6.5. Targeted screening\"",
+                        "page=123, line=200, s=10.0, r=1.0, x=140.0, y=663.0: \"Table 6.4 lists the main criteria for establishing a screening programme.27 These relate\""
+                    ],
+                    "small_label_examples": [
+                        "page=123, line=178, s=9.0, r=0.9, x=34.0, y=471.0: \"necessarily as strict as those for general population\"",
+                        "page=123, line=180, s=9.0, r=0.9, x=34.0, y=493.0: \"minor (nausea or headache), but screening may be a\"",
+                        "page=123, line=182, s=9.0, r=0.9, x=34.0, y=504.0: \"high priority if the effect reduces the patient’s ability to\"",
+                        "page=123, line=184, s=9.0, r=0.9, x=34.0, y=515.0: \"work. Many health effects from exposure to environ-\""
+                    ]
+                }
+            },
+            {
+                "title": "Costs",
+                "level": 4,
+                "page": 124,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Criteria for screening.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 360.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=124, line=224, s=9.0, r=0.9, x=55.0, y=360.0: \"Costs\""
+                    ],
+                    "embedded_examples": [
+                        "page=124, line=225, s=10.0, r=1.0, x=55.0, y=371.0: \"The costs of a screening programme must be balanced against the number of cases\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=124, line=216, s=8.0, r=0.8, x=55.0, y=243.0: \"Financial Cost-effective\"",
+                        "page=124, line=217, s=8.0, r=0.8, x=55.0, y=255.0: \"Facilities Available or easily provided\"",
+                        "page=124, line=218, s=8.0, r=0.8, x=55.0, y=267.0: \"Acceptability Procedures following a positive result are generally agreed upon and\"",
+                        "page=124, line=219, s=8.0, r=0.8, x=122.0, y=276.0: \"acceptable to both the screening authorities and to those screened.\""
+                    ]
+                }
+            },
+            {
+                "title": "Lead time",
+                "level": 4,
+                "page": 124,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Criteria for screening.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 511.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=124, line=235, s=9.0, r=0.9, x=55.0, y=511.0: \"Lead time\""
+                    ],
+                    "embedded_examples": [
+                        "page=124, line=236, s=10.0, r=1.0, x=55.0, y=522.0: \"The disease must have a reasonably long lead time; that is, the interval between the\"",
+                        "page=124, line=239, s=10.0, r=1.0, x=55.0, y=561.0: \"very long lead time; pancreatic cancer usually has a short one. A short lead time\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=124, line=242, s=9.0, r=0.9, x=55.0, y=610.0: \"Length bias\"",
+                        "page=124, line=235, s=9.0, r=0.9, x=55.0, y=511.0: \"Lead time\"",
+                        "page=124, line=242, s=9.0, r=0.9, x=55.0, y=610.0: \"Length bias\"",
+                        "page=124, line=235, s=9.0, r=0.9, x=55.0, y=511.0: \"Lead time\""
+                    ]
+                }
+            },
+            {
+                "title": "Length bias",
+                "level": 4,
+                "page": 124,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Criteria for screening.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 610.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=124, line=242, s=9.0, r=0.9, x=55.0, y=610.0: \"Length bias\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=124, line=235, s=9.0, r=0.9, x=55.0, y=511.0: \"Lead time\""
+                    ]
+                }
+            },
+            {
+                "title": "Screening test",
+                "level": 4,
+                "page": 125,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Criteria for screening.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 120.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 7,
+                    "exact_examples": [
+                        "page=125, line=252, s=9.0, r=0.9, x=140.0, y=120.0: \"Screening test\""
+                    ],
+                    "embedded_examples": [
+                        "page=125, line=253, s=10.0, r=1.0, x=140.0, y=131.0: \"The screening test itself must be cheap, easy to apply, acceptable to the public, reliable\"",
+                        "page=125, line=258, s=10.0, r=1.0, x=166.0, y=204.0: \"lation who are identified as ill by the screening test. (When the disease is\"",
+                        "page=125, line=261, s=10.0, r=1.0, x=166.0, y=238.0: \"screening test. (When the disease is absent, how often does the test provide\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=125, line=249, s=9.0, r=0.9, x=27.0, y=53.0: \"112 Chapter 6\"",
+                        "page=125, line=249, s=9.0, r=0.9, x=27.0, y=53.0: \"112 Chapter 6\"",
+                        "page=125, line=252, s=9.0, r=0.9, x=140.0, y=120.0: \"Screening test\"",
+                        "page=125, line=252, s=9.0, r=0.9, x=140.0, y=120.0: \"Screening test\""
+                    ]
+                }
+            },
+            {
+                "title": "Natural history",
+                "level": 4,
+                "page": 126,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Criteria for screening.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 159.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=126, line=300, s=9.0, r=0.9, x=55.0, y=159.0: \"Natural history\""
+                    ],
+                    "embedded_examples": [
+                        "page=126, line=302, s=10.0, r=1.0, x=55.0, y=183.0: \"natural history of the disease in question and of the benefits and costs of treatment.\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=126, line=309, s=8.0, r=0.8, x=289.0, y=277.0: \"Box 6.6. Breast cancer screening: a case study\""
+                    ],
+                    "small_label_examples": [
+                        "page=126, line=294, s=9.0, r=0.9, x=231.0, y=53.0: \"Epidemiology and prevention: chronic noncommunicable diseases 113\"",
+                        "page=126, line=307, s=9.0, r=0.9, x=55.0, y=258.0: \"Impact\"",
+                        "page=126, line=294, s=9.0, r=0.9, x=231.0, y=53.0: \"Epidemiology and prevention: chronic noncommunicable diseases 113\"",
+                        "page=126, line=300, s=9.0, r=0.9, x=55.0, y=159.0: \"Natural history\""
+                    ]
+                }
+            },
+            {
+                "title": "Impact",
+                "level": 4,
+                "page": 126,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Criteria for screening.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 258.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=126, line=307, s=9.0, r=0.9, x=55.0, y=258.0: \"Impact\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=126, line=309, s=8.0, r=0.8, x=289.0, y=277.0: \"Box 6.6. Breast cancer screening: a case study\""
+                    ],
+                    "small_label_examples": [
+                        "page=126, line=300, s=9.0, r=0.9, x=55.0, y=159.0: \"Natural history\"",
+                        "page=126, line=312, s=9.0, r=0.9, x=289.0, y=303.0: \"aged 40–64 who were followed for up to 23 years found\"",
+                        "page=126, line=314, s=9.0, r=0.9, x=289.0, y=314.0: \"that mammography was effective in reducing mortality\"",
+                        "page=126, line=316, s=9.0, r=0.9, x=289.0, y=325.0: \"from breast cancer (Table 6.6). Ten years after entry into\""
+                    ]
+                }
+            },
+            {
+                "title": "Study questions",
+                "level": 2,
+                "page": 127,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Standard end-of-chapter section with font size 20.0 and ratio 2.0.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 132.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=127, line=348, s=20.0, r=2.0, x=140.0, y=132.0: \"Study questions\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=127, line=344, s=9.0, r=0.9, x=27.0, y=53.0: \"114 Chapter 6\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "answerstostudyquestions",
+                    "display_text": "Answers to study questions",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 354.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 8,
+                    "page_count": 8,
+                    "page_range": "202-216",
+                    "samples": [
+                        "Answers to study questions 189",
+                        "Answers to study questions 191",
+                        "Answers to study questions 193"
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 7 Communicable diseases: epidemiology surveillance and response",
+                "level": 1,
+                "page": 130,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Top-level chapter title with font size 32.0 and ratio 3.2.",
+                "font_size": 32.0,
+                "size_ratio": 3.2,
+                "left_indent": 55.0,
+                "vertical_position": 101.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 84,
+                    "page_count": 84,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Role of epidemiology",
+                "level": 3,
+                "page": 131,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Introduction.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 238.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=131, line=470, s=14.0, r=1.4, x=238.0, y=84.0: \"Role of epidemiology\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 3,
+                    "visual_caption_examples": [
+                        "page=131, line=472, s=8.0, r=0.8, x=34.0, y=120.0: \"Box 7.1. Global burden of communicable disease\""
+                    ],
+                    "small_label_examples": [
+                        "page=131, line=469, s=9.0, r=0.9, x=27.0, y=53.0: \"118 Chapter 7\"",
+                        "page=131, line=476, s=9.0, r=0.9, x=34.0, y=158.0: \"attributable to maternal and perinatal conditions and\"",
+                        "page=131, line=478, s=9.0, r=0.9, x=34.0, y=169.0: \"nutritional deficiencies. Together these account for 30%\""
+                    ]
+                }
+            },
+            {
+                "title": "Epidemic and endemic disease",
+                "level": 2,
+                "page": 132,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 145.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=132, line=535, s=20.0, r=2.0, x=55.0, y=145.0: \"Epidemic and endemic disease\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 1,
+                    "visual_caption_examples": [
+                        "page=132, line=543, s=8.0, r=0.8, x=282.0, y=274.0: \"Figure 7.2. Projected main causes of burden of\""
+                    ],
+                    "small_label_examples": [
+                        "page=132, line=530, s=9.0, r=0.9, x=232.0, y=53.0: \"Communicable diseases: epidemiology surveillance and response 119\""
+                    ]
+                }
+            },
+            {
+                "title": "Epidemics",
+                "level": 3,
+                "page": 132,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Epidemic and endemic disease.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 177.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=132, line=536, s=14.0, r=1.4, x=55.0, y=177.0: \"Epidemics\""
+                    ],
+                    "embedded_examples": [
+                        "page=132, line=537, s=10.0, r=1.0, x=55.0, y=205.0: \"Epidemics are defined as the occurrence of cases in excess of what is normally\"",
+                        "page=132, line=570, s=10.0, r=1.0, x=55.0, y=530.0: \"of bacteria, viruses and parasites cause most epidemics, and a thorough understand-\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 3,
+                    "visual_caption_examples": [
+                        "page=132, line=543, s=8.0, r=0.8, x=282.0, y=274.0: \"Figure 7.2. Projected main causes of burden of\"",
+                        "page=132, line=543, s=8.0, r=0.8, x=282.0, y=274.0: \"Figure 7.2. Projected main causes of burden of\""
+                    ],
+                    "small_label_examples": [
+                        "page=132, line=530, s=9.0, r=0.9, x=232.0, y=53.0: \"Communicable diseases: epidemiology surveillance and response 119\"",
+                        "page=132, line=530, s=9.0, r=0.9, x=232.0, y=53.0: \"Communicable diseases: epidemiology surveillance and response 119\"",
+                        "page=132, line=565, s=7.0, r=0.7, x=333.0, y=472.0: \"Injuries including mental disorders\""
+                    ]
+                }
+            },
+            {
+                "title": "Endemic diseases",
+                "level": 3,
+                "page": 134,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Epidemic and endemic disease.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 350.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=134, line=629, s=14.0, r=1.4, x=55.0, y=350.0: \"Endemic diseases\""
+                    ],
+                    "embedded_examples": [
+                        "page=134, line=632, s=10.0, r=1.0, x=55.0, y=404.0: \"high prevalence and incidence. Endemic diseases such as malaria are among the major\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=134, line=637, s=8.0, r=0.8, x=55.0, y=486.0: \"Table 7.1. Deaths from smallpox in selected European countries, 1900–1919\"",
+                        "page=134, line=637, s=8.0, r=0.8, x=55.0, y=486.0: \"Table 7.1. Deaths from smallpox in selected European countries, 1900–1919\""
+                    ],
+                    "small_label_examples": [
+                        "page=134, line=621, s=8.0, r=0.8, x=77.0, y=149.0: \"120\"",
+                        "page=134, line=622, s=8.0, r=0.8, x=77.0, y=174.0: \"100\"",
+                        "page=134, line=623, s=8.0, r=0.8, x=81.0, y=198.0: \"80\"",
+                        "page=134, line=624, s=8.0, r=0.8, x=81.0, y=223.0: \"60\""
+                    ]
+                }
+            },
+            {
+                "title": "Chain of infection",
+                "level": 2,
+                "page": 136,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 132.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=136, line=722, s=20.0, r=2.0, x=55.0, y=132.0: \"Chain of infection\""
+                    ],
+                    "embedded_examples": [
+                        "page=136, line=746, s=10.0, r=1.0, x=55.0, y=363.0: \"Knowledge of each factor in a chain of infection may be\"",
+                        "page=136, line=751, s=10.0, r=1.0, x=55.0, y=415.0: \"cific chain of infection. For example, improvement of the\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=136, line=724, s=8.0, r=0.8, x=289.0, y=174.0: \"Box 7.4. Epidemiology and avian influenza\""
+                    ],
+                    "small_label_examples": [
+                        "page=136, line=718, s=9.0, r=0.9, x=232.0, y=53.0: \"Communicable diseases: epidemiology surveillance and response 123\"",
+                        "page=136, line=726, s=9.0, r=0.9, x=289.0, y=190.0: \"Poultry farms were affected by the highly pathogenic\"",
+                        "page=136, line=737, s=9.0, r=0.9, x=289.0, y=289.0: \"case-fatality rate: 50% of these confirmed cases died.\"",
+                        "page=136, line=739, s=9.0, r=0.9, x=55.0, y=311.0: \"no signs or symptoms – to severe illness and death. causes a high fever leading to pneumo...\""
+                    ]
+                }
+            },
+            {
+                "title": "The infectious agent",
+                "level": 3,
+                "page": 136,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Chain of infection.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 491.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=136, line=756, s=14.0, r=1.4, x=55.0, y=491.0: \"The infectious agent\""
+                    ],
+                    "embedded_examples": [
+                        "page=136, line=727, s=9.0, r=0.9, x=73.0, y=200.0: \"(cid:120) the infectious agent H5N1 virus in 2003 in Asia, and outbreaks spread to\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=136, line=724, s=8.0, r=0.8, x=289.0, y=174.0: \"Box 7.4. Epidemiology and avian influenza\""
+                    ],
+                    "small_label_examples": [
+                        "page=136, line=726, s=9.0, r=0.9, x=289.0, y=190.0: \"Poultry farms were affected by the highly pathogenic\"",
+                        "page=136, line=731, s=9.0, r=0.9, x=289.0, y=245.0: \"human cases confirmed by November 2006 had a his-\"",
+                        "page=136, line=733, s=9.0, r=0.9, x=289.0, y=267.0: \"poultry or domestic ducks.14 However, this low trans-\"",
+                        "page=136, line=735, s=9.0, r=0.9, x=289.0, y=278.0: \"missibility has to be seen in the context of a very high\""
+                    ]
+                }
+            },
+            {
+                "title": "Transmission",
+                "level": 3,
+                "page": 137,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Chain of infection.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 221.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 14,
+                    "exact_examples": [
+                        "page=137, line=783, s=14.0, r=1.4, x=140.0, y=221.0: \"Transmission\""
+                    ],
+                    "embedded_examples": [
+                        "page=137, line=782, s=10.0, r=1.0, x=168.0, y=198.0: \"tent sexual transmission during the long asymptomatic period.\"",
+                        "page=137, line=784, s=10.0, r=1.0, x=140.0, y=249.0: \"The second link in the chain of infection is the transmission or spread of an infectious\"",
+                        "page=137, line=785, s=10.0, r=1.0, x=140.0, y=262.0: \"agent through the environment or to another person. Transmission may be direct or\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 3,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=137, line=787, s=8.0, r=0.8, x=140.0, y=305.0: \"Table 7.2. Modes of transmission of an infectious agent\"",
+                        "page=137, line=787, s=8.0, r=0.8, x=140.0, y=305.0: \"Table 7.2. Modes of transmission of an infectious agent\"",
+                        "page=137, line=787, s=8.0, r=0.8, x=140.0, y=305.0: \"Table 7.2. Modes of transmission of an infectious agent\""
+                    ],
+                    "small_label_examples": [
+                        "page=137, line=788, s=8.0, r=0.8, x=140.0, y=327.0: \"Direct transmission Indirect transmission\"",
+                        "page=137, line=789, s=8.0, r=0.8, x=140.0, y=343.0: \"Touching Vehicle-borne (contaminated food, water,\"",
+                        "page=137, line=790, s=8.0, r=0.8, x=140.0, y=352.0: \"Kissing towels, farm tools, etc.)\"",
+                        "page=137, line=788, s=8.0, r=0.8, x=140.0, y=327.0: \"Direct transmission Indirect transmission\""
+                    ]
+                }
+            },
+            {
+                "title": "Direct transmission",
+                "level": 4,
+                "page": 137,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Transmission.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 467.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 4,
+                    "exact_examples": [
+                        "page=137, line=799, s=9.0, r=0.9, x=140.0, y=467.0: \"Direct transmission\""
+                    ],
+                    "embedded_examples": [
+                        "page=137, line=788, s=8.0, r=0.8, x=140.0, y=327.0: \"Direct transmission Indirect transmission\"",
+                        "page=137, line=800, s=10.0, r=1.0, x=140.0, y=477.0: \"Direct transmission is the immediate transfer of the infectious agent from an infected\"",
+                        "page=137, line=806, s=9.0, r=0.9, x=140.0, y=566.0: \"Indirect transmission\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=137, line=787, s=8.0, r=0.8, x=140.0, y=305.0: \"Table 7.2. Modes of transmission of an infectious agent\""
+                    ],
+                    "small_label_examples": [
+                        "page=137, line=789, s=8.0, r=0.8, x=140.0, y=343.0: \"Touching Vehicle-borne (contaminated food, water,\"",
+                        "page=137, line=790, s=8.0, r=0.8, x=140.0, y=352.0: \"Kissing towels, farm tools, etc.)\"",
+                        "page=137, line=791, s=8.0, r=0.8, x=140.0, y=364.0: \"Sexual intercourse Vector-borne (insects, animals)\"",
+                        "page=137, line=792, s=8.0, r=0.8, x=140.0, y=376.0: \"Other contact (e.g. childbirth, medical Airborne, long-distance (dust, droplets)\""
+                    ]
+                }
+            },
+            {
+                "title": "Indirect transmission",
+                "level": 4,
+                "page": 137,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+                ],
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Transmission.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 566.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=137, line=806, s=9.0, r=0.9, x=140.0, y=566.0: \"Indirect transmission\""
+                    ],
+                    "embedded_examples": [
+                        "page=137, line=788, s=8.0, r=0.8, x=140.0, y=327.0: \"Direct transmission Indirect transmission\"",
+                        "page=137, line=807, s=10.0, r=1.0, x=140.0, y=576.0: \"Indirect transmission may be vehicle-borne, vector-borne or airborne. Vehicle-borne\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=137, line=787, s=8.0, r=0.8, x=140.0, y=305.0: \"Table 7.2. Modes of transmission of an infectious agent\""
+                    ],
+                    "small_label_examples": [
+                        "page=137, line=789, s=8.0, r=0.8, x=140.0, y=343.0: \"Touching Vehicle-borne (contaminated food, water,\"",
+                        "page=137, line=790, s=8.0, r=0.8, x=140.0, y=352.0: \"Kissing towels, farm tools, etc.)\"",
+                        "page=137, line=791, s=8.0, r=0.8, x=140.0, y=364.0: \"Sexual intercourse Vector-borne (insects, animals)\"",
+                        "page=137, line=792, s=8.0, r=0.8, x=140.0, y=376.0: \"Other contact (e.g. childbirth, medical Airborne, long-distance (dust, droplets)\""
+                    ]
+                }
+            },
+            {
+                "title": "Host",
+                "level": 3,
+                "page": 138,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Chain of infection.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 160.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 5,
+                    "exact_examples": [
+                        "page=138, line=822, s=14.0, r=1.4, x=55.0, y=160.0: \"Host\""
+                    ],
+                    "embedded_examples": [
+                        "page=138, line=823, s=10.0, r=1.0, x=55.0, y=187.0: \"The host is the third link in the chain of infection and is defined as the person or\"",
+                        "page=138, line=825, s=10.0, r=1.0, x=55.0, y=213.0: \"under natural conditions. The points of entry to the host vary with the agent and\"",
+                        "page=138, line=827, s=10.0, r=1.0, x=73.0, y=239.0: \"The reaction of the host to infection is extremely variable, being determined by\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=138, line=816, s=9.0, r=0.9, x=232.0, y=53.0: \"Communicable diseases: epidemiology surveillance and response 125\"",
+                        "page=138, line=816, s=9.0, r=0.9, x=232.0, y=53.0: \"Communicable diseases: epidemiology surveillance and response 125\""
+                    ]
+                }
+            },
+            {
+                "title": "Environment",
+                "level": 3,
+                "page": 138,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Chain of infection.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 566.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=138, line=850, s=14.0, r=1.4, x=55.0, y=566.0: \"Environment\""
+                    ],
+                    "embedded_examples": [
+                        "page=138, line=851, s=10.0, r=1.0, x=55.0, y=593.0: \"The environment plays a critical role in the development of communicable diseases.\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "environmentalandoccupationalepidemiology",
+                    "display_text": "Environmental and occupational epidemiology",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 294.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 9,
+                    "page_count": 9,
+                    "page_range": "160-176",
+                    "samples": [
+                        "Environmental and occupational epidemiology 147",
+                        "Environmental and occupational epidemiology 149",
+                        "Environmental and occupational epidemiology 151"
+                    ]
+                }
+            },
+            {
+                "title": "Investigation",
+                "level": 3,
+                "page": 139,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Investigation and control of epidemics.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 236.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 5,
+                    "exact_examples": [
+                        "page=139, line=868, s=14.0, r=1.4, x=140.0, y=236.0: \"Investigation\""
+                    ],
+                    "embedded_examples": [
+                        "page=139, line=859, s=20.0, r=2.0, x=140.0, y=83.0: \"Investigation and control of epidemics\"",
+                        "page=139, line=863, s=10.0, r=1.0, x=158.0, y=164.0: \"(cid:120) undertaking preliminary investigation\"",
+                        "page=139, line=869, s=10.0, r=1.0, x=140.0, y=263.0: \"The initial stage of investigation should verify the diagnoses of suspected cases and\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=139, line=858, s=9.0, r=0.9, x=27.0, y=53.0: \"126 Chapter 7\"",
+                        "page=139, line=858, s=9.0, r=0.9, x=27.0, y=53.0: \"126 Chapter 7\""
+                    ]
+                }
+            },
+            {
+                "title": "Surveillance and response",
+                "level": 2,
+                "page": 140,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style",
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section title with font size 14.0 and ratio 1.4, but functions as a primary section in this chapter.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 446.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=140, line=934, s=14.0, r=1.4, x=55.0, y=446.0: \"Surveillance and response\""
+                    ],
+                    "embedded_examples": [
+                        "page=140, line=900, s=9.0, r=0.9, x=232.0, y=53.0: \"Communicable diseases: epidemiology surveillance and response 127\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 2,
+                    "visual_caption_examples": [
+                        "page=140, line=906, s=8.0, r=0.8, x=289.0, y=145.0: \"Box 7.5. Immunization: key to prevention and\""
+                    ],
+                    "small_label_examples": [
+                        "page=140, line=908, s=8.0, r=0.8, x=289.0, y=156.0: \"control\"",
+                        "page=140, line=935, s=9.0, r=0.9, x=55.0, y=474.0: \"Definition\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "communicablediseasesepidemiologysurveillanceandresponse",
+                    "display_text": "Communicable diseases: epidemiology surveillance and response",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 232.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 7,
+                    "page_count": 7,
+                    "page_range": "132-144",
+                    "samples": [
+                        "Communicable diseases: epidemiology surveillance and response 119",
+                        "Communicable diseases: epidemiology surveillance and response 121",
+                        "Communicable diseases: epidemiology surveillance and response 123"
+                    ]
+                }
+            },
+            {
+                "title": "The scope of surveillance",
+                "level": 3,
+                "page": 140,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with font size 9.0 and italic style under Surveillance and response.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 586.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=140, line=943, s=9.0, r=0.9, x=55.0, y=586.0: \"The scope of surveillance\""
+                    ],
+                    "embedded_examples": [
+                        "page=140, line=944, s=10.0, r=1.0, x=55.0, y=597.0: \"The scope of surveillance is broad, from early warning systems for rapid response in\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=140, line=935, s=9.0, r=0.9, x=55.0, y=474.0: \"Definition\"",
+                        "page=140, line=943, s=9.0, r=0.9, x=55.0, y=586.0: \"The scope of surveillance\""
+                    ]
+                }
+            },
+            {
+                "title": "Analysis and interpretation of surveillance data",
+                "level": 3,
+                "page": 142,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "title appears embedded in longer body lines, not as a standalone heading"
+                ],
+                "level_reason": "Subsection title with font size 9.0 and italic style under Surveillance and response.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 302.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=142, line=1031, s=9.0, r=1.0, x=55.0, y=302.0: \"Analysis and interpretation of surveillance data data can be used to reinforce each other.\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 0,
+                    "visual_caption_examples": [
+                        "page=142, line=1037, s=10.0, r=1.11, x=73.0, y=378.0: \"Table 7.3 outlines Millennium Development Goal 6,\""
+                    ]
+                }
+            },
+            {
+                "title": "Study questions",
+                "level": 2,
+                "page": 143,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style",
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Standard end-of-chapter section with font size 20.0 and ratio 2.23.",
+                "font_size": 20.0,
+                "size_ratio": 2.23,
+                "left_indent": 140.0,
+                "vertical_position": 592.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=143, line=1102, s=20.0, r=2.23, x=140.0, y=592.0: \"Study questions\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=143, line=1094, s=8.0, r=0.89, x=140.0, y=494.0: \"serious but common goals and make decisions\"",
+                        "page=143, line=1095, s=8.0, r=0.89, x=140.0, y=503.0: \"conditions\"",
+                        "page=143, line=1096, s=8.0, r=0.89, x=140.0, y=515.0: \"Usefulness of data locally High Low\"",
+                        "page=143, line=1097, s=8.0, r=0.89, x=140.0, y=527.0: \"Use is limited to analysis Data are well used Limited use of data\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "answerstostudyquestions",
+                    "display_text": "Answers to study questions",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 354.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 8,
+                    "page_count": 8,
+                    "page_range": "202-216",
+                    "samples": [
+                        "Answers to study questions 189",
+                        "Answers to study questions 191",
+                        "Answers to study questions 193"
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 8 Clinical epidemiology",
+                "level": 1,
+                "page": 146,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Top-level chapter title with font size 32.0 and ratio 3.2.",
+                "font_size": 32.0,
+                "size_ratio": 3.2,
+                "left_indent": 55.0,
+                "vertical_position": 101.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 84,
+                    "page_count": 84,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            }
+        ]
+    },
+    "toc": {
+        "title": "Basic epidemiology",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "High-risk individual strategy",
+                "page": 120,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4, nested under primary prevention context.",
+                "_layout_page": 120,
+                "_layout_x": 55.0,
+                "_layout_y": 411.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "High-risk individual strategy",
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "Secondary prevention",
+                "page": 121,
+                "level_reason": "Major section title with font size 20.0 and ratio 2.5, following the primary prevention discussion.",
+                "_layout_page": 121,
+                "_layout_x": 140.0,
+                "_layout_y": 536.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.5,
+                "_layout_text": "Secondary prevention",
+                "_source_order": 1
+            },
+            {
+                "level": 2,
+                "chapter": "Tertiary prevention",
+                "page": 122,
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0, parallel to secondary prevention.",
+                "_layout_page": 122,
+                "_layout_x": 55.0,
+                "_layout_y": 573.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Tertiary prevention",
+                "_source_order": 2
+            },
+            {
+                "level": 2,
+                "chapter": "Screening",
+                "page": 123,
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0, introducing a new core topic.",
+                "_layout_page": 123,
+                "_layout_x": 140.0,
+                "_layout_y": 210.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Screening",
+                "_source_order": 3
+            },
+            {
+                "level": 3,
+                "chapter": "Definition",
+                "page": 123,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Screening.",
+                "_layout_page": 123,
+                "_layout_x": 140.0,
+                "_layout_y": 280.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Definition",
+                "_source_order": 4
+            },
+            {
+                "level": 3,
+                "chapter": "Types of screening",
+                "page": 123,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Screening.",
+                "_layout_page": 123,
+                "_layout_x": 240.0,
+                "_layout_y": 423.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Types of screening",
+                "_source_order": 5
+            },
+            {
+                "level": 3,
+                "chapter": "Criteria for screening",
+                "page": 123,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Screening.",
+                "_layout_page": 123,
+                "_layout_x": 140.0,
+                "_layout_y": 635.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Criteria for screening",
+                "_source_order": 6
+            },
+            {
+                "level": 4,
+                "chapter": "Costs",
+                "page": 124,
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Criteria for screening.",
+                "_layout_page": 124,
+                "_layout_x": 55.0,
+                "_layout_y": 360.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Costs",
+                "_source_order": 7
+            },
+            {
+                "level": 4,
+                "chapter": "Lead time",
+                "page": 124,
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Criteria for screening.",
+                "_layout_page": 124,
+                "_layout_x": 55.0,
+                "_layout_y": 511.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Lead time",
+                "_source_order": 8
+            },
+            {
+                "level": 4,
+                "chapter": "Length bias",
+                "page": 124,
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Criteria for screening.",
+                "_layout_page": 124,
+                "_layout_x": 55.0,
+                "_layout_y": 610.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Length bias",
+                "_source_order": 9
+            },
+            {
+                "level": 4,
+                "chapter": "Screening test",
+                "page": 125,
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Criteria for screening.",
+                "_layout_page": 125,
+                "_layout_x": 140.0,
+                "_layout_y": 120.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Screening test",
+                "_source_order": 10
+            },
+            {
+                "level": 4,
+                "chapter": "Natural history",
+                "page": 126,
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Criteria for screening.",
+                "_layout_page": 126,
+                "_layout_x": 55.0,
+                "_layout_y": 159.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Natural history",
+                "_source_order": 11
+            },
+            {
+                "level": 4,
+                "chapter": "Impact",
+                "page": 126,
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Criteria for screening.",
+                "_layout_page": 126,
+                "_layout_x": 55.0,
+                "_layout_y": 258.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Impact",
+                "_source_order": 12
+            },
+            {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 127,
+                "level_reason": "Standard end-of-chapter section with font size 20.0 and ratio 2.0.",
+                "_layout_page": 127,
+                "_layout_x": 140.0,
+                "_layout_y": 132.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Study questions",
+                "_source_order": 13
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter 7 Communicable diseases: epidemiology surveillance and response",
+                "page": 130,
+                "level_reason": "Top-level chapter title with font size 32.0 and ratio 3.2.",
+                "_layout_page": 130,
+                "_layout_x": 55.0,
+                "_layout_y": 101.0,
+                "_layout_font_size": 32.0,
+                "_layout_size_ratio": 3.2,
+                "_layout_text": "Communicable diseases: epidemiology surveillance and response",
+                "_source_order": 14
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 130,
+                "level_reason": "Standard chapter opening section with font size 20.0 and ratio 2.0.",
+                "_layout_page": 130,
+                "_layout_x": 168.0,
+                "_layout_y": 217.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 15
+            },
+            {
+                "level": 2,
+                "chapter": "Introduction",
+                "page": 130,
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0.",
+                "_layout_page": 130,
+                "_layout_x": 55.0,
+                "_layout_y": 359.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Introduction",
+                "_source_order": 16
+            },
+            {
+                "level": 3,
+                "chapter": "Definitions",
+                "page": 130,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Introduction.",
+                "_layout_page": 130,
+                "_layout_x": 55.0,
+                "_layout_y": 391.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Definitions",
+                "_source_order": 17
+            },
+            {
+                "level": 3,
+                "chapter": "Role of epidemiology",
+                "page": 131,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Introduction.",
+                "_layout_page": 131,
+                "_layout_x": 238.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Role of epidemiology",
+                "_source_order": 18
+            },
+            {
+                "level": 3,
+                "chapter": "Threats to human security and health systems",
+                "page": 131,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Introduction.",
+                "_layout_page": 131,
+                "_layout_x": 238.0,
+                "_layout_y": 397.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Threats to human security and health systems",
+                "_source_order": 19
+            },
+            {
+                "level": 2,
+                "chapter": "Epidemic and endemic disease",
+                "page": 132,
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0.",
+                "_layout_page": 132,
+                "_layout_x": 55.0,
+                "_layout_y": 145.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Epidemic and endemic disease",
+                "_source_order": 20
+            },
+            {
+                "level": 3,
+                "chapter": "Epidemics",
+                "page": 132,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Epidemic and endemic disease.",
+                "_layout_page": 132,
+                "_layout_x": 55.0,
+                "_layout_y": 177.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Epidemics",
+                "_source_order": 21
+            },
+            {
+                "level": 3,
+                "chapter": "Endemic diseases",
+                "page": 134,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Epidemic and endemic disease.",
+                "_layout_page": 134,
+                "_layout_x": 55.0,
+                "_layout_y": 350.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Endemic diseases",
+                "_source_order": 22
+            },
+            {
+                "level": 3,
+                "chapter": "Emerging and re-emerging infections",
+                "page": 135,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Epidemic and endemic disease.",
+                "_layout_page": 135,
+                "_layout_x": 240.0,
+                "_layout_y": 215.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Emerging and re-emerging infections",
+                "_source_order": 23
+            },
+            {
+                "level": 2,
+                "chapter": "Chain of infection",
+                "page": 136,
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0.",
+                "_layout_page": 136,
+                "_layout_x": 55.0,
+                "_layout_y": 132.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chain of infection",
+                "_source_order": 24
+            },
+            {
+                "level": 3,
+                "chapter": "The infectious agent",
+                "page": 136,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Chain of infection.",
+                "_layout_page": 136,
+                "_layout_x": 55.0,
+                "_layout_y": 491.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "The infectious agent",
+                "_source_order": 25
+            },
+            {
+                "level": 3,
+                "chapter": "Transmission",
+                "page": 137,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Chain of infection.",
+                "_layout_page": 137,
+                "_layout_x": 140.0,
+                "_layout_y": 221.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Transmission",
+                "_source_order": 26
+            },
+            {
+                "level": 4,
+                "chapter": "Direct transmission",
+                "page": 137,
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Transmission.",
+                "_layout_page": 137,
+                "_layout_x": 140.0,
+                "_layout_y": 467.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Direct transmission",
+                "_source_order": 27
+            },
+            {
+                "level": 4,
+                "chapter": "Indirect transmission",
+                "page": 137,
+                "level_reason": "Lower level heading with font size 9.0 and italic style under Transmission.",
+                "_layout_page": 137,
+                "_layout_x": 140.0,
+                "_layout_y": 566.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Indirect transmission",
+                "_source_order": 28
+            },
+            {
+                "level": 3,
+                "chapter": "Host",
+                "page": 138,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Chain of infection.",
+                "_layout_page": 138,
+                "_layout_x": 55.0,
+                "_layout_y": 160.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Host",
+                "_source_order": 29
+            },
+            {
+                "level": 3,
+                "chapter": "Environment",
+                "page": 138,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Chain of infection.",
+                "_layout_page": 138,
+                "_layout_x": 55.0,
+                "_layout_y": 566.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Environment",
+                "_source_order": 30
+            },
+            {
+                "level": 2,
+                "chapter": "Investigation and control of epidemics",
+                "page": 139,
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0.",
+                "_layout_page": 139,
+                "_layout_x": 140.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Investigation and control of epidemics",
+                "_source_order": 31
+            },
+            {
+                "level": 3,
+                "chapter": "Investigation",
+                "page": 139,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Investigation and control of epidemics.",
+                "_layout_page": 139,
+                "_layout_x": 140.0,
+                "_layout_y": 236.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Investigation",
+                "_source_order": 32
+            },
+            {
+                "level": 3,
+                "chapter": "Identifying cases",
+                "page": 139,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Investigation and control of epidemics.",
+                "_layout_page": 139,
+                "_layout_x": 140.0,
+                "_layout_y": 378.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Identifying cases",
+                "_source_order": 33
+            },
+            {
+                "level": 3,
+                "chapter": "Management and control",
+                "page": 139,
+                "level_reason": "Subsection title with font size 14.0 and ratio 1.4 under Investigation and control of epidemics.",
+                "_layout_page": 139,
+                "_layout_x": 140.0,
+                "_layout_y": 534.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Management and control",
+                "_source_order": 34
+            },
+            {
+                "level": 2,
+                "chapter": "Surveillance and response",
+                "page": 140,
+                "level_reason": "Major section title with font size 14.0 and ratio 1.4, but functions as a primary section in this chapter.",
+                "_layout_page": 140,
+                "_layout_x": 55.0,
+                "_layout_y": 446.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Surveillance and response",
+                "_source_order": 35
+            },
+            {
+                "level": 3,
+                "chapter": "Definition",
+                "page": 140,
+                "level_reason": "Subsection title with font size 9.0 and italic style under Surveillance and response.",
+                "_layout_page": 140,
+                "_layout_x": 55.0,
+                "_layout_y": 474.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Definition",
+                "_source_order": 36
+            },
+            {
+                "level": 3,
+                "chapter": "The scope of surveillance",
+                "page": 140,
+                "level_reason": "Subsection title with font size 9.0 and italic style under Surveillance and response.",
+                "_layout_page": 140,
+                "_layout_x": 55.0,
+                "_layout_y": 586.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "The scope of surveillance",
+                "_source_order": 37
+            },
+            {
+                "level": 3,
+                "chapter": "Sources of data",
+                "page": 141,
+                "level_reason": "Subsection title with font size 9.0 and italic style under Surveillance and response.",
+                "_layout_page": 141,
+                "_layout_x": 140.0,
+                "_layout_y": 361.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Sources of data",
+                "_source_order": 38
+            },
+            {
+                "level": 3,
+                "chapter": "Surveillance in practice",
+                "page": 141,
+                "level_reason": "Subsection title with font size 9.0 and italic style under Surveillance and response.",
+                "_layout_page": 141,
+                "_layout_x": 140.0,
+                "_layout_y": 550.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Surveillance in practice",
+                "_source_order": 39
+            },
+            {
+                "level": 3,
+                "chapter": "Analysis and interpretation of surveillance data",
+                "page": 142,
+                "level_reason": "Subsection title with font size 9.0 and italic style under Surveillance and response.",
+                "_layout_page": 142,
+                "_layout_x": 55.0,
+                "_layout_y": 302.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Analysis and interpretation of surveillance data",
+                "_source_order": 40
+            },
+            {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 143,
+                "level_reason": "Standard end-of-chapter section with font size 20.0 and ratio 2.23.",
+                "_layout_page": 143,
+                "_layout_x": 140.0,
+                "_layout_y": 592.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.23,
+                "_layout_text": "Study questions",
+                "_source_order": 41
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter 8 Clinical epidemiology",
+                "page": 146,
+                "level_reason": "Top-level chapter title with font size 32.0 and ratio 3.2.",
+                "_layout_page": 146,
+                "_layout_x": 55.0,
+                "_layout_y": 101.0,
+                "_layout_font_size": 32.0,
+                "_layout_size_ratio": 3.2,
+                "_layout_text": "Clinical epidemiology",
+                "_source_order": 42
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 146,
+                "level_reason": "Standard chapter opening section with font size 20.0 and ratio 2.0.",
+                "_layout_page": 146,
+                "_layout_x": 168.0,
+                "_layout_y": 149.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 43
+            },
+            {
+                "level": 2,
+                "chapter": "Introduction",
+                "page": 146,
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0.",
+                "_layout_page": 146,
+                "_layout_x": 55.0,
+                "_layout_y": 279.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Introduction",
+                "_source_order": 44
+            },
+            {
+                "level": 2,
+                "chapter": "Definitions of normality and abnormality",
+                "page": 146,
+                "level_reason": "Major section title with font size 20.0 and ratio 2.0.",
+                "_layout_page": 146,
+                "_layout_x": 55.0,
+                "_layout_y": 560.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Definitions of normality and abnormality",
+                "_source_order": 45
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"Basic epidemiology\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"High-risk individual strategy\",\n      \"page\": 120,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4, nested under primary prevention context.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Secondary prevention\",\n      \"page\": 121,\n      \"level_reason\": \"Major section title with font size 20.0 and ratio 2.5, following the primary prevention discussion.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Tertiary prevention\",\n      \"page\": 122,\n      \"level_reason\": \"Major section title with font size 20.0 and ratio 2.0, parallel to secondary prevention.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Screening\",\n      \"page\": 123,\n      \"level_reason\": \"Major section title with font size 20.0 and ratio 2.0, introducing a new core topic.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Definition\",\n      \"page\": 123,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Screening.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Types of screening\",\n      \"page\": 123,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Screening.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Criteria for screening\",\n      \"page\": 123,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Screening.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Costs\",\n      \"page\": 124,\n      \"level_reason\": \"Lower level heading with font size 9.0 and italic style under Criteria for screening.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Lead time\",\n      \"page\": 124,\n      \"level_reason\": \"Lower level heading with font size 9.0 and italic style under Criteria for screening.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Length bias\",\n      \"page\": 124,\n      \"level_reason\": \"Lower level heading with font size 9.0 and italic style under Criteria for screening.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Screening test\",\n      \"page\": 125,\n      \"level_reason\": \"Lower level heading with font size 9.0 and italic style under Criteria for screening.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Natural history\",\n      \"page\": 126,\n      \"level_reason\": \"Lower level heading with font size 9.0 and italic style under Criteria for screening.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Impact\",\n      \"page\": 126,\n      \"level_reason\": \"Lower level heading with font size 9.0 and italic style under Criteria for screening.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Study questions\",\n      \"page\": 127,\n      \"level_reason\": \"Standard end-of-chapter section with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 7 Communicable diseases: epidemiology surveillance and response\",\n      \"page\": 130,\n      \"level_reason\": \"Top-level chapter title with font size 32.0 and ratio 3.2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 130,\n      \"level_reason\": \"Standard chapter opening section with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Introduction\",\n      \"page\": 130,\n      \"level_reason\": \"Major section title with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Definitions\",\n      \"page\": 130,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Introduction.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Role of epidemiology\",\n      \"page\": 131,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Introduction.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Threats to human security and health systems\",\n      \"page\": 131,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Introduction.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Epidemic and endemic disease\",\n      \"page\": 132,\n      \"level_reason\": \"Major section title with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Epidemics\",\n      \"page\": 132,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Epidemic and endemic disease.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Endemic diseases\",\n      \"page\": 134,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Epidemic and endemic disease.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Emerging and re-emerging infections\",\n      \"page\": 135,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Epidemic and endemic disease.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chain of infection\",\n      \"page\": 136,\n      \"level_reason\": \"Major section title with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"The infectious agent\",\n      \"page\": 136,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Chain of infection.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Transmission\",\n      \"page\": 137,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Chain of infection.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Direct transmission\",\n      \"page\": 137,\n      \"level_reason\": \"Lower level heading with font size 9.0 and italic style under Transmission.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Indirect transmission\",\n      \"page\": 137,\n      \"level_reason\": \"Lower level heading with font size 9.0 and italic style under Transmission.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Host\",\n      \"page\": 138,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Chain of infection.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Environment\",\n      \"page\": 138,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Chain of infection.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Investigation and control of epidemics\",\n      \"page\": 139,\n      \"level_reason\": \"Major section title with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Investigation\",\n      \"page\": 139,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Investigation and control of epidemics.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Identifying cases\",\n      \"page\": 139,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Investigation and control of epidemics.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Management and control\",\n      \"page\": 139,\n      \"level_reason\": \"Subsection title with font size 14.0 and ratio 1.4 under Investigation and control of epidemics.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Surveillance and response\",\n      \"page\": 140,\n      \"level_reason\": \"Major section title with font size 14.0 and ratio 1.4, but functions as a primary section in this chapter.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Definition\",\n      \"page\": 140,\n      \"level_reason\": \"Subsection title with font size 9.0 and italic style under Surveillance and response.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"The scope of surveillance\",\n      \"page\": 140,\n      \"level_reason\": \"Subsection title with font size 9.0 and italic style under Surveillance and response.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Sources of data\",\n      \"page\": 141,\n      \"level_reason\": \"Subsection title with font size 9.0 and italic style under Surveillance and response.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Surveillance in practice\",\n      \"page\": 141,\n      \"level_reason\": \"Subsection title with font size 9.0 and italic style under Surveillance and response.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Analysis and interpretation of surveillance data\",\n      \"page\": 142,\n      \"level_reason\": \"Subsection title with font size 9.0 and italic style under Surveillance and response.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Study questions\",\n      \"page\": 143,\n      \"level_reason\": \"Standard end-of-chapter section with font size 20.0 and ratio 2.23.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 8 Clinical epidemiology\",\n      \"page\": 146,\n      \"level_reason\": \"Top-level chapter title with font size 32.0 and ratio 3.2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 146,\n      \"level_reason\": \"Standard chapter opening section with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Introduction\",\n      \"page\": 146,\n      \"level_reason\": \"Major section title with font size 20.0 and ratio 2.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Definitions of normality and abnormality\",\n      \"page\": 146,\n      \"level_reason\": \"Major section title with font size 20.0 and ratio 2.0.\"\n    }\n  ]\n}\n```"
+}

@@ -1,0 +1,1500 @@
+{
+    "timestamp": "2026-07-09 10:16:38",
+    "stage_index": 23,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "7",
+    "total_chunks": 8,
+    "start_page": 175,
+    "end_page": 200,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 7/8",
+        "input_chapters": 46,
+        "output_chapters": 46,
+        "level_changes": 0,
+        "added_entries": 0,
+        "removed_entries": 0,
+        "level_change_report_recorded": false,
+        "possible_invalid_heading_candidate_count": 25,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "Chapter 10 Epidemiology, health policy and planning",
+                "level": 1,
+                "page": 178,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Major chapter title with largest font size and distinct numbering.",
+                "font_size": 32.0,
+                "size_ratio": 3.2,
+                "left_indent": 55.0,
+                "vertical_position": 101.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 84,
+                    "page_count": 84,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "Health policy",
+                "level": 3,
+                "page": 178,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Subsection under Introduction with font size 14.0.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 436.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 9,
+                    "exact_examples": [
+                        "page=178, line=83, s=14.0, r=1.4, x=55.0, y=436.0: \"Health policy\""
+                    ],
+                    "embedded_examples": [
+                        "page=178, line=66, s=32.0, r=3.2, x=55.0, y=101.0: \"Epidemiology, health policy\"",
+                        "page=178, line=70, s=10.0, r=1.0, x=74.0, y=228.0: \"health policy and planning.\"",
+                        "page=178, line=71, s=10.0, r=1.0, x=66.0, y=239.0: \"(cid:120) Epidemiologists can be usefully involved in health policy issues.\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "epidemiology,healthpolicyandplanning",
+                    "display_text": "Epidemiology, health policy and planning",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 311.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 5,
+                    "page_count": 5,
+                    "page_range": "180-188",
+                    "samples": [
+                        "Epidemiology, health policy and planning 167",
+                        "Epidemiology, health policy and planning 169",
+                        "Epidemiology, health policy and planning 171"
+                    ]
+                }
+            },
+            {
+                "title": "Health policy",
+                "level": 2,
+                "page": 179,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style",
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section heading with font size 20.0.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 171.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=179, line=106, s=20.0, r=2.0, x=140.0, y=171.0: \"Health policy\""
+                    ],
+                    "embedded_examples": [
+                        "page=179, line=113, s=10.0, r=1.0, x=257.0, y=282.0: \"H ealth policy is often considered in a narrow sense,\"",
+                        "page=179, line=118, s=9.0, r=0.9, x=46.0, y=334.0: \"(cid:120)a high-level political mandate to develop a national in the medical or health fi...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=179, line=115, s=8.0, r=0.8, x=34.0, y=303.0: \"Box 10.1. Success factors in policy formulation2\"",
+                        "page=179, line=115, s=8.0, r=0.8, x=34.0, y=303.0: \"Box 10.1. Success factors in policy formulation2\""
+                    ],
+                    "small_label_examples": [
+                        "page=179, line=99, s=9.0, r=0.9, x=27.0, y=53.0: \"166 Chapter 10\"",
+                        "page=179, line=121, s=9.0, r=0.9, x=52.0, y=368.0: \"needs, advocate for action, and develop a national\"",
+                        "page=179, line=121, s=9.0, r=0.9, x=52.0, y=368.0: \"needs, advocate for action, and develop a national\"",
+                        "page=179, line=123, s=9.0, r=0.9, x=52.0, y=380.0: \"policy and plan;\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "epidemiology,healthpolicyandplanning",
+                    "display_text": "Epidemiology, health policy and planning",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 311.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 5,
+                    "page_count": 5,
+                    "page_range": "180-188",
+                    "samples": [
+                        "Epidemiology, health policy and planning 167",
+                        "Epidemiology, health policy and planning 169",
+                        "Epidemiology, health policy and planning 171"
+                    ]
+                }
+            },
+            {
+                "title": "The influence of epidemiology",
+                "level": 3,
+                "page": 179,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Health policy with font size 14.0.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 240.0,
+                "vertical_position": 397.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=179, line=125, s=14.0, r=1.4, x=240.0, y=397.0: \"The influence of epidemiology\""
+                    ],
+                    "embedded_examples": [
+                        "page=179, line=140, s=10.0, r=1.0, x=52.0, y=515.0: \"objectives. T he influence of epidemiology is often mediated by\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=179, line=121, s=9.0, r=0.9, x=52.0, y=368.0: \"needs, advocate for action, and develop a national\"",
+                        "page=179, line=123, s=9.0, r=0.9, x=52.0, y=380.0: \"policy and plan;\"",
+                        "page=179, line=126, s=9.0, r=0.9, x=52.0, y=403.0: \"technical support;\"",
+                        "page=179, line=131, s=9.0, r=0.9, x=52.0, y=460.0: \"and ownership;\""
+                    ]
+                }
+            },
+            {
+                "title": "Health policy in practice",
+                "level": 3,
+                "page": 181,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Health policy with font size 14.0.",
+                "font_size": 14.0,
+                "size_ratio": 1.56,
+                "left_indent": 140.0,
+                "vertical_position": 312.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=181, line=213, s=14.0, r=1.56, x=140.0, y=312.0: \"Health policy in practice\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 0,
+                    "visual_caption_examples": [
+                        "page=181, line=217, s=8.0, r=0.89, x=34.0, y=401.0: \"Box 10.3. Evolution of national policy:coronary heart disease\""
+                    ]
+                }
+            },
+            {
+                "title": "Health planning",
+                "level": 2,
+                "page": 182,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section heading with font size 20.0.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 457.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=182, line=290, s=20.0, r=2.0, x=55.0, y=457.0: \"Health planning\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=182, line=282, s=9.0, r=0.9, x=289.0, y=373.0: \"developing a regulatory strategy to address addictive\"",
+                        "page=182, line=283, s=9.0, r=0.9, x=55.0, y=383.0: \"development of alert and response mechanisms, and the substances. In contrast to previous...\"",
+                        "page=182, line=286, s=9.0, r=0.9, x=289.0, y=417.0: \"the Framework Convention will help to save millions of\"",
+                        "page=182, line=288, s=9.0, r=0.9, x=289.0, y=428.0: \"lives.\""
+                    ]
+                }
+            },
+            {
+                "title": "The planning cycle",
+                "level": 3,
+                "page": 183,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Health planning with font size 20.0 and indentation.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 132.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=183, line=311, s=20.0, r=2.0, x=140.0, y=132.0: \"The planning cycle\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 1,
+                    "visual_caption_examples": [
+                        "page=183, line=312, s=10.0, r=1.0, x=140.0, y=165.0: \"Fig. 10.1 outlines the stages involved in the health planning process and provides a\""
+                    ],
+                    "small_label_examples": [
+                        "page=183, line=307, s=9.0, r=0.9, x=27.0, y=53.0: \"170 Chapter 10\""
+                    ]
+                }
+            },
+            {
+                "title": "Assessing burden",
+                "level": 4,
+                "page": 184,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Lower level heading within the planning cycle section.",
+                "font_size": 14.0,
+                "size_ratio": 1.56,
+                "left_indent": 55.0,
+                "vertical_position": 160.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=184, line=357, s=14.0, r=1.56, x=55.0, y=160.0: \"Assessing burden\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 1,
+                    "visual_caption_examples": [
+                        "page=184, line=348, s=8.0, r=0.89, x=289.0, y=94.0: \"Box 10.5. A word of caution: the reality of\""
+                    ],
+                    "small_label_examples": [
+                        "page=184, line=350, s=8.0, r=0.89, x=289.0, y=105.0: \"planning\""
+                    ]
+                }
+            },
+            {
+                "title": "Mortality and morbidity",
+                "level": 5,
+                "page": 184,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Sub-point of Assessing burden with bold style.",
+                "font_size": 9.0,
+                "size_ratio": 1.0,
+                "left_indent": 55.0,
+                "vertical_position": 302.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=184, line=375, s=9.0, r=1.0, x=55.0, y=302.0: \"Mortality and morbidity\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "Summary population measures",
+                "level": 5,
+                "page": 185,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Sub-point of Assessing burden with bold style.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 240.0,
+                "vertical_position": 172.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=185, line=417, s=9.0, r=0.9, x=240.0, y=172.0: \"Summary population measures\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=185, line=406, s=8.0, r=0.8, x=34.0, y=94.0: \"Box 10.6. Estimating burden of risk factors for\""
+                    ],
+                    "small_label_examples": [
+                        "page=185, line=408, s=8.0, r=0.8, x=34.0, y=105.0: \"chronic disease\"",
+                        "page=185, line=411, s=9.0, r=0.9, x=34.0, y=131.0: \"risk factor profiles – the STEPwise approach to Surveil-\"",
+                        "page=185, line=413, s=9.0, r=0.9, x=34.0, y=142.0: \"lance (STEPS).\"",
+                        "page=185, line=415, s=9.0, r=0.9, x=46.0, y=153.0: \"WHO STEPS focuses on building capacity in low-\""
+                    ]
+                }
+            },
+            {
+                "title": "Rapid assessment",
+                "level": 5,
+                "page": 185,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "title appears embedded in longer body lines, not as a standalone heading",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Sub-point of Assessing burden with bold style.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 34.0,
+                "vertical_position": 271.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 3,
+                    "embedded_examples": [
+                        "page=185, line=429, s=9.0, r=0.9, x=34.0, y=271.0: \"Although most countries have the resources for Steps 1 Rapid assessment\"",
+                        "page=185, line=430, s=10.0, r=1.0, x=34.0, y=282.0: \"and 2, Step 3 is expensive and not suitable for all set- Rapid assessment is a defined fi...\"",
+                        "page=185, line=434, s=10.0, r=1.0, x=240.0, y=321.0: \"countries as efficiently as possible. Rapid assessment in-\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=185, line=422, s=9.0, r=0.9, x=52.0, y=201.0: \"cohol consumption, diet and physical activity by\"",
+                        "page=185, line=424, s=9.0, r=0.9, x=52.0, y=213.0: \"questionnaires;\"",
+                        "page=185, line=428, s=9.0, r=0.9, x=52.0, y=259.0: \"and glucose.\"",
+                        "page=185, line=433, s=9.0, r=0.9, x=34.0, y=317.0: \"example) while encouraging collection of standardized\""
+                    ]
+                }
+            },
+            {
+                "title": "Understanding causes",
+                "level": 4,
+                "page": 185,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Lower level heading within the planning cycle section.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 397.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=185, line=441, s=14.0, r=1.4, x=140.0, y=397.0: \"Understanding causes\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 3,
+                    "small_label_examples": [
+                        "page=185, line=433, s=9.0, r=0.9, x=34.0, y=317.0: \"example) while encouraging collection of standardized\"",
+                        "page=185, line=435, s=9.0, r=0.9, x=34.0, y=328.0: \"data, to facilitate comparisons between and within\"",
+                        "page=185, line=437, s=9.0, r=0.9, x=34.0, y=339.0: \"countries, and over time.\""
+                    ]
+                }
+            },
+            {
+                "title": "Assessing efficiency",
+                "level": 4,
+                "page": 186,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Lower level heading within the planning cycle section.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=186, line=462, s=14.0, r=1.4, x=55.0, y=84.0: \"Assessing efficiency\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=186, line=463, s=8.0, r=0.8, x=289.0, y=94.0: \"Box 10.7. Factors determining effectiveness of\""
+                    ],
+                    "small_label_examples": [
+                        "page=186, line=461, s=9.0, r=0.9, x=311.0, y=53.0: \"Epidemiology, health policy and planning 173\"",
+                        "page=186, line=464, s=8.0, r=0.8, x=289.0, y=105.0: \"interventions\"",
+                        "page=186, line=466, s=9.0, r=0.9, x=289.0, y=120.0: \"The effectiveness of interventions in the community is\"",
+                        "page=186, line=468, s=9.0, r=0.9, x=289.0, y=131.0: \"determined by many factors.\""
+                    ]
+                }
+            },
+            {
+                "title": "Implementing interventions",
+                "level": 4,
+                "page": 187,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Lower level heading within the planning cycle section.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 544.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=187, line=562, s=14.0, r=1.4, x=140.0, y=544.0: \"Implementing interventions\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 3,
+                    "small_label_examples": [
+                        "page=187, line=554, s=9.0, r=0.9, x=34.0, y=448.0: \"of key health interventions. It also provides a tool for\"",
+                        "page=187, line=556, s=9.0, r=0.9, x=34.0, y=459.0: \"adapting regional results to countries. WHO-CHOICE\"",
+                        "page=187, line=558, s=9.0, r=0.9, x=34.0, y=481.0: \"efficiency – in a particular setting – of current and pro- become more widely disseminate...\""
+                    ]
+                }
+            },
+            {
+                "title": "Monitoring activities and measuring progress",
+                "level": 4,
+                "page": 188,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Lower level heading within the planning cycle section.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=188, line=575, s=14.0, r=1.4, x=55.0, y=84.0: \"Monitoring activities and measuring progress\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 3,
+                    "visual_caption_examples": [
+                        "page=188, line=580, s=10.0, r=1.0, x=55.0, y=163.0: \"Table 10.2 provides a specific example of all the planning steps.\"",
+                        "page=188, line=581, s=8.0, r=0.8, x=55.0, y=193.0: \"Table 10.2. Health planning: the case of raised blood pressure\""
+                    ],
+                    "small_label_examples": [
+                        "page=188, line=574, s=9.0, r=0.9, x=311.0, y=53.0: \"Epidemiology, health policy and planning 175\"",
+                        "page=188, line=582, s=8.0, r=0.8, x=55.0, y=215.0: \"Concept to assess Means of assessment\"",
+                        "page=188, line=583, s=8.0, r=0.8, x=55.0, y=232.0: \"Burden Population surveys of blood pressure and control of hypertension\""
+                    ]
+                }
+            },
+            {
+                "title": "Study questions",
+                "level": 2,
+                "page": 188,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Standard end-of-chapter section heading.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 599.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=188, line=610, s=20.0, r=2.0, x=55.0, y=599.0: \"Study questions\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "answerstostudyquestions",
+                    "display_text": "Answers to study questions",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 354.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 8,
+                    "page_count": 8,
+                    "page_range": "202-216",
+                    "samples": [
+                        "Answers to study questions 189",
+                        "Answers to study questions 191",
+                        "Answers to study questions 193"
+                    ]
+                }
+            },
+            {
+                "title": "References",
+                "level": 2,
+                "page": 189,
+                "reasons": [
+                    "title itself looks like a case/example/table/figure/problem/reference label",
+                    "source context looks like case/example/table/figure/problem/reference material"
+                ],
+                "level_reason": "Standard end-of-chapter section heading.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 153.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=189, line=621, s=20.0, r=2.0, x=140.0, y=153.0: \"References\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=189, line=616, s=9.0, r=0.9, x=27.0, y=53.0: \"176 Chapter 10\""
+                    ]
+                }
+            },
+            {
+                "title": "Chapter 11 First steps in practical epidemiology",
+                "level": 1,
+                "page": 190,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Major chapter title with largest font size and distinct numbering.",
+                "font_size": 32.0,
+                "size_ratio": 3.2,
+                "left_indent": 55.0,
+                "vertical_position": 101.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "chapter",
+                    "display_text": "Chapter",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 27.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 84,
+                    "page_count": 84,
+                    "page_range": "15-199",
+                    "samples": [
+                        "2 Chapter 1",
+                        "4 Chapter 1",
+                        "6 Chapter 1"
+                    ]
+                }
+            },
+            {
+                "title": "What is the research question?",
+                "level": 3,
+                "page": 192,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection within Critical reading with bold style.",
+                "font_size": 9.0,
+                "size_ratio": 1.0,
+                "left_indent": 55.0,
+                "vertical_position": 322.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=192, line=759, s=9.0, r=0.9, x=55.0, y=322.0: \"What is the research question?\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=192, line=751, s=8.0, r=0.8, x=55.0, y=220.0: \"Factors influencing the level of human Health effects\"",
+                        "page=192, line=752, s=8.0, r=0.8, x=55.0, y=229.0: \"exposure\"",
+                        "page=192, line=753, s=8.0, r=0.8, x=55.0, y=241.0: \"age, sex, ethnic group differences mechanism of causation\"",
+                        "page=192, line=754, s=8.0, r=0.8, x=55.0, y=253.0: \"diet, physical activity, climate factors early biochemical or physiological indicators\""
+                    ]
+                }
+            },
+            {
+                "title": "If valid, are the results relevant to my work?",
+                "level": 3,
+                "page": 192,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection within Critical reading with bold style.",
+                "font_size": 9.0,
+                "size_ratio": 1.0,
+                "left_indent": 55.0,
+                "vertical_position": 376.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=192, line=762, s=9.0, r=0.9, x=55.0, y=376.0: \"If valid, are the results relevant to my work?\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=192, line=754, s=8.0, r=0.8, x=55.0, y=253.0: \"diet, physical activity, climate factors early biochemical or physiological indicators\"",
+                        "page=192, line=755, s=8.0, r=0.8, x=210.0, y=262.0: \"of damage\"",
+                        "page=192, line=756, s=8.0, r=0.8, x=55.0, y=274.0: \"work activities means to prevent exposure and health\"",
+                        "page=192, line=757, s=8.0, r=0.8, x=210.0, y=283.0: \"effects\""
+                    ]
+                }
+            },
+            {
+                "title": "What kind of study is this?",
+                "level": 3,
+                "page": 192,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection within Critical reading with bold style.",
+                "font_size": 9.0,
+                "size_ratio": 1.0,
+                "left_indent": 55.0,
+                "vertical_position": 431.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=192, line=765, s=9.0, r=0.9, x=55.0, y=431.0: \"What kind of study is this?\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=192, line=757, s=8.0, r=0.8, x=210.0, y=283.0: \"effects\"",
+                        "page=192, line=758, s=8.0, r=0.8, x=55.0, y=295.0: \"other behavioural factors\"",
+                        "page=192, line=759, s=9.0, r=0.9, x=55.0, y=322.0: \"What is the research question?\"",
+                        "page=192, line=762, s=9.0, r=0.9, x=55.0, y=376.0: \"If valid, are the results relevant to my work?\""
+                    ]
+                }
+            },
+            {
+                "title": "How are the data presented?",
+                "level": 3,
+                "page": 193,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection within Critical reading with bold style.",
+                "font_size": 9.0,
+                "size_ratio": 1.0,
+                "left_indent": 140.0,
+                "vertical_position": 334.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=193, line=803, s=9.0, r=0.9, x=140.0, y=334.0: \"How are the data presented?\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=193, line=797, s=9.0, r=0.9, x=140.0, y=244.0: \"For observational studies, are the methods well described?\"",
+                        "page=193, line=808, s=9.0, r=0.9, x=140.0, y=412.0: \"Evaluating and interpreting the results\""
+                    ]
+                }
+            },
+            {
+                "title": "Further reading",
+                "level": 2,
+                "page": 197,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section heading with font size 20.0.",
+                "font_size": 20.0,
+                "size_ratio": 2.23,
+                "left_indent": 240.0,
+                "vertical_position": 184.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=197, line=970, s=20.0, r=2.23, x=240.0, y=184.0: \"Further reading\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 1,
+                    "visual_caption_examples": [
+                        "page=197, line=972, s=8.0, r=0.89, x=34.0, y=226.0: \"Box 11.1. The Health InterNetwork Access to\"",
+                        "page=197, line=973, s=10.0, r=1.11, x=240.0, y=230.0: \"Table 11.4 contains a list of relevant peer-reviewed jour-\""
+                    ],
+                    "small_label_examples": [
+                        "page=197, line=974, s=8.0, r=0.89, x=34.0, y=237.0: \"Research Initiative (HINARI)\""
+                    ]
+                }
+            },
+            {
+                "title": "Further training",
+                "level": 2,
+                "page": 198,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section heading with font size 20.0.",
+                "font_size": 20.0,
+                "size_ratio": 2.5,
+                "left_indent": 55.0,
+                "vertical_position": 566.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=198, line=1057, s=20.0, r=2.5, x=55.0, y=566.0: \"Further training\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 0,
+                    "visual_caption_examples": [
+                        "page=198, line=1059, s=10.0, r=1.25, x=55.0, y=612.0: \"Table 11.6 for useful links). Short summer courses, such as the 3-week “Epidemiology\""
+                    ]
+                }
+            },
+            {
+                "title": "Study questions",
+                "level": 2,
+                "page": 199,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Standard end-of-chapter section heading.",
+                "font_size": 20.0,
+                "size_ratio": 2.5,
+                "left_indent": 140.0,
+                "vertical_position": 524.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=199, line=1103, s=20.0, r=2.5, x=140.0, y=524.0: \"Study questions\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "answerstostudyquestions",
+                    "display_text": "Answers to study questions",
+                    "font_size": 9.0,
+                    "size_ratio": 0.9,
+                    "median_left_indent": 354.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 8,
+                    "page_count": 8,
+                    "page_range": "202-216",
+                    "samples": [
+                        "Answers to study questions 189",
+                        "Answers to study questions 191",
+                        "Answers to study questions 193"
+                    ]
+                }
+            }
+        ]
+    },
+    "toc": {
+        "title": "Basic epidemiology",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "Chapter 10 Epidemiology, health policy and planning",
+                "page": 178,
+                "level_reason": "Major chapter title with largest font size (32.0) and distinct numbering.",
+                "_layout_page": 178,
+                "_layout_x": 55.0,
+                "_layout_y": 101.0,
+                "_layout_font_size": 32.0,
+                "_layout_size_ratio": 3.2,
+                "_layout_text": "Epidemiology, health policy and planning",
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 178,
+                "level_reason": "Standard section heading following the chapter title with font size 20.0.",
+                "_layout_page": 178,
+                "_layout_x": 168.0,
+                "_layout_y": 183.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 1
+            },
+            {
+                "level": 2,
+                "chapter": "Introduction",
+                "page": 178,
+                "level_reason": "Major section heading with font size 20.0.",
+                "_layout_page": 178,
+                "_layout_x": 55.0,
+                "_layout_y": 302.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Introduction",
+                "_source_order": 2
+            },
+            {
+                "level": 3,
+                "chapter": "Health policy",
+                "page": 178,
+                "level_reason": "Subsection under Introduction with font size 14.0.",
+                "_layout_page": 178,
+                "_layout_x": 55.0,
+                "_layout_y": 436.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Health policy",
+                "_source_order": 3
+            },
+            {
+                "level": 3,
+                "chapter": "Health planning",
+                "page": 178,
+                "level_reason": "Subsection under Introduction with font size 14.0.",
+                "_layout_page": 178,
+                "_layout_x": 55.0,
+                "_layout_y": 553.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Health planning",
+                "_source_order": 4
+            },
+            {
+                "level": 3,
+                "chapter": "Evaluation",
+                "page": 178,
+                "level_reason": "Subsection under Introduction with font size 14.0.",
+                "_layout_page": 178,
+                "_layout_x": 55.0,
+                "_layout_y": 630.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Evaluation",
+                "_source_order": 5
+            },
+            {
+                "level": 2,
+                "chapter": "Health policy",
+                "page": 179,
+                "level_reason": "Major section heading with font size 20.0.",
+                "_layout_page": 179,
+                "_layout_x": 140.0,
+                "_layout_y": 171.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Health policy",
+                "_source_order": 6
+            },
+            {
+                "level": 3,
+                "chapter": "The influence of epidemiology",
+                "page": 179,
+                "level_reason": "Subsection under Health policy with font size 14.0.",
+                "_layout_page": 179,
+                "_layout_x": 240.0,
+                "_layout_y": 397.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "The influence of epidemiology",
+                "_source_order": 7
+            },
+            {
+                "level": 3,
+                "chapter": "Framing health policy",
+                "page": 180,
+                "level_reason": "Subsection under Health policy with font size 14.0.",
+                "_layout_page": 180,
+                "_layout_x": 55.0,
+                "_layout_y": 199.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Framing health policy",
+                "_source_order": 8
+            },
+            {
+                "level": 3,
+                "chapter": "Health policy in practice",
+                "page": 181,
+                "level_reason": "Subsection under Health policy with font size 14.0.",
+                "_layout_page": 181,
+                "_layout_x": 140.0,
+                "_layout_y": 312.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.56,
+                "_layout_text": "Health policy in practice",
+                "_source_order": 9
+            },
+            {
+                "level": 2,
+                "chapter": "Health planning",
+                "page": 182,
+                "level_reason": "Major section heading with font size 20.0.",
+                "_layout_page": 182,
+                "_layout_x": 55.0,
+                "_layout_y": 457.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Health planning",
+                "_source_order": 10
+            },
+            {
+                "level": 3,
+                "chapter": "The planning cycle",
+                "page": 183,
+                "level_reason": "Subsection under Health planning with font size 20.0 and indentation.",
+                "_layout_page": 183,
+                "_layout_x": 140.0,
+                "_layout_y": 132.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "The planning cycle",
+                "_source_order": 11
+            },
+            {
+                "level": 4,
+                "chapter": "Assessing burden",
+                "page": 184,
+                "level_reason": "Lower level heading within the planning cycle section with font size 14.0.",
+                "_layout_page": 184,
+                "_layout_x": 55.0,
+                "_layout_y": 160.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.56,
+                "_layout_text": "Assessing burden",
+                "_source_order": 12
+            },
+            {
+                "level": 5,
+                "chapter": "Mortality and morbidity",
+                "page": 184,
+                "level_reason": "Sub-point of Assessing burden with bold style and font size 9.0.",
+                "_layout_page": 184,
+                "_layout_x": 55.0,
+                "_layout_y": 302.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "Mortality and morbidity",
+                "_source_order": 13
+            },
+            {
+                "level": 5,
+                "chapter": "Summary population measures",
+                "page": 185,
+                "level_reason": "Sub-point of Assessing burden with bold style and font size 9.0.",
+                "_layout_page": 185,
+                "_layout_x": 240.0,
+                "_layout_y": 172.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Summary population measures",
+                "_source_order": 14
+            },
+            {
+                "level": 5,
+                "chapter": "Rapid assessment",
+                "page": 185,
+                "level_reason": "Sub-point of Assessing burden with bold style and font size 9.0.",
+                "_layout_page": 185,
+                "_layout_x": 34.0,
+                "_layout_y": 271.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Rapid assessment",
+                "_source_order": 15
+            },
+            {
+                "level": 4,
+                "chapter": "Understanding causes",
+                "page": 185,
+                "level_reason": "Lower level heading within the planning cycle section with font size 14.0.",
+                "_layout_page": 185,
+                "_layout_x": 140.0,
+                "_layout_y": 397.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Understanding causes",
+                "_source_order": 16
+            },
+            {
+                "level": 4,
+                "chapter": "Measuring effectiveness of interventions",
+                "page": 185,
+                "level_reason": "Lower level heading within the planning cycle section with font size 14.0.",
+                "_layout_page": 185,
+                "_layout_x": 140.0,
+                "_layout_y": 527.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Measuring effectiveness of interventions",
+                "_source_order": 17
+            },
+            {
+                "level": 4,
+                "chapter": "Assessing efficiency",
+                "page": 186,
+                "level_reason": "Lower level heading within the planning cycle section with font size 14.0.",
+                "_layout_page": 186,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Assessing efficiency",
+                "_source_order": 18
+            },
+            {
+                "level": 4,
+                "chapter": "Implementing interventions",
+                "page": 187,
+                "level_reason": "Lower level heading within the planning cycle section with font size 14.0.",
+                "_layout_page": 187,
+                "_layout_x": 140.0,
+                "_layout_y": 544.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Implementing interventions",
+                "_source_order": 19
+            },
+            {
+                "level": 4,
+                "chapter": "Monitoring activities and measuring progress",
+                "page": 188,
+                "level_reason": "Lower level heading within the planning cycle section with font size 14.0.",
+                "_layout_page": 188,
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Monitoring activities and measuring progress",
+                "_source_order": 20
+            },
+            {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 188,
+                "level_reason": "Standard end-of-chapter section heading with font size 20.0.",
+                "_layout_page": 188,
+                "_layout_x": 55.0,
+                "_layout_y": 599.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Study questions",
+                "_source_order": 21
+            },
+            {
+                "level": 2,
+                "chapter": "References",
+                "page": 189,
+                "level_reason": "Standard end-of-chapter section heading with font size 20.0.",
+                "_layout_page": 189,
+                "_layout_x": 140.0,
+                "_layout_y": 153.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "References",
+                "_source_order": 22
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter 11 First steps in practical epidemiology",
+                "page": 190,
+                "level_reason": "Major chapter title with largest font size (32.0) and distinct numbering.",
+                "_layout_page": 190,
+                "_layout_x": 55.0,
+                "_layout_y": 101.0,
+                "_layout_font_size": 32.0,
+                "_layout_size_ratio": 3.2,
+                "_layout_text": "First steps in practical epidemiology",
+                "_source_order": 23
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 190,
+                "level_reason": "Standard section heading following the chapter title with font size 20.0.",
+                "_layout_page": 190,
+                "_layout_x": 168.0,
+                "_layout_y": 183.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 24
+            },
+            {
+                "level": 2,
+                "chapter": "Introduction",
+                "page": 190,
+                "level_reason": "Major section heading with font size 20.0.",
+                "_layout_page": 190,
+                "_layout_x": 55.0,
+                "_layout_y": 348.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Introduction",
+                "_source_order": 25
+            },
+            {
+                "level": 2,
+                "chapter": "Specific diseases",
+                "page": 190,
+                "level_reason": "Major section heading with font size 20.0.",
+                "_layout_page": 190,
+                "_layout_x": 55.0,
+                "_layout_y": 467.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Specific diseases",
+                "_source_order": 26
+            },
+            {
+                "level": 2,
+                "chapter": "Critical reading",
+                "page": 191,
+                "level_reason": "Major section heading with font size 20.0.",
+                "_layout_page": 191,
+                "_layout_x": 140.0,
+                "_layout_y": 410.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Critical reading",
+                "_source_order": 27
+            },
+            {
+                "level": 3,
+                "chapter": "What is the research question?",
+                "page": 192,
+                "level_reason": "Subsection within Critical reading with bold style and font size 9.0.",
+                "_layout_page": 192,
+                "_layout_x": 55.0,
+                "_layout_y": 322.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "What is the research question?",
+                "_source_order": 28
+            },
+            {
+                "level": 3,
+                "chapter": "If valid, are the results relevant to my work?",
+                "page": 192,
+                "level_reason": "Subsection within Critical reading with bold style and font size 9.0.",
+                "_layout_page": 192,
+                "_layout_x": 55.0,
+                "_layout_y": 376.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "If valid, are the results relevant to my work?",
+                "_source_order": 29
+            },
+            {
+                "level": 3,
+                "chapter": "What kind of study is this?",
+                "page": 192,
+                "level_reason": "Subsection within Critical reading with bold style and font size 9.0.",
+                "_layout_page": 192,
+                "_layout_x": 55.0,
+                "_layout_y": 431.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "What kind of study is this?",
+                "_source_order": 30
+            },
+            {
+                "level": 3,
+                "chapter": "What is the study population?",
+                "page": 192,
+                "level_reason": "Subsection within Critical reading with bold style and font size 9.0.",
+                "_layout_page": 192,
+                "_layout_x": 55.0,
+                "_layout_y": 543.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "What is the study population?",
+                "_source_order": 31
+            },
+            {
+                "level": 3,
+                "chapter": "For experimental studies, are the methods well described?",
+                "page": 193,
+                "level_reason": "Subsection within Critical reading with bold style and font size 9.0.",
+                "_layout_page": 193,
+                "_layout_x": 140.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "For experimental studies, are the methods well described?",
+                "_source_order": 32
+            },
+            {
+                "level": 3,
+                "chapter": "For observational studies, are the methods well described?",
+                "page": 193,
+                "level_reason": "Subsection within Critical reading with bold style and font size 9.0.",
+                "_layout_page": 193,
+                "_layout_x": 140.0,
+                "_layout_y": 244.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "For observational studies, are the methods well described?",
+                "_source_order": 33
+            },
+            {
+                "level": 3,
+                "chapter": "How are the data presented?",
+                "page": 193,
+                "level_reason": "Subsection within Critical reading with bold style and font size 9.0.",
+                "_layout_page": 193,
+                "_layout_x": 140.0,
+                "_layout_y": 334.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "How are the data presented?",
+                "_source_order": 34
+            },
+            {
+                "level": 3,
+                "chapter": "Evaluating and interpreting the results",
+                "page": 193,
+                "level_reason": "Subsection within Critical reading with bold style and font size 9.0.",
+                "_layout_page": 193,
+                "_layout_x": 140.0,
+                "_layout_y": 412.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "Evaluating and interpreting the results",
+                "_source_order": 35
+            },
+            {
+                "level": 3,
+                "chapter": "Final evaluation",
+                "page": 194,
+                "level_reason": "Subsection within Critical reading with bold style and font size 9.0.",
+                "_layout_page": 194,
+                "_layout_x": 55.0,
+                "_layout_y": 129.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "Final evaluation",
+                "_source_order": 36
+            },
+            {
+                "level": 2,
+                "chapter": "Planning a research project",
+                "page": 194,
+                "level_reason": "Major section heading with font size 20.0.",
+                "_layout_page": 194,
+                "_layout_x": 55.0,
+                "_layout_y": 304.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Planning a research project",
+                "_source_order": 37
+            },
+            {
+                "level": 3,
+                "chapter": "Choosing a project",
+                "page": 194,
+                "level_reason": "Subsection under Planning a research project with font size 14.0.",
+                "_layout_page": 194,
+                "_layout_x": 55.0,
+                "_layout_y": 521.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Choosing a project",
+                "_source_order": 38
+            },
+            {
+                "level": 3,
+                "chapter": "Writing the protocol",
+                "page": 195,
+                "level_reason": "Subsection under Planning a research project with font size 14.0.",
+                "_layout_page": 195,
+                "_layout_x": 140.0,
+                "_layout_y": 119.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Writing the protocol",
+                "_source_order": 39
+            },
+            {
+                "level": 3,
+                "chapter": "Doing the research",
+                "page": 196,
+                "level_reason": "Subsection under Planning a research project with font size 14.0.",
+                "_layout_page": 196,
+                "_layout_x": 55.0,
+                "_layout_y": 160.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Doing the research",
+                "_source_order": 40
+            },
+            {
+                "level": 3,
+                "chapter": "Analysing the data",
+                "page": 196,
+                "level_reason": "Subsection under Planning a research project with font size 14.0.",
+                "_layout_page": 196,
+                "_layout_x": 55.0,
+                "_layout_y": 407.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Analysing the data",
+                "_source_order": 41
+            },
+            {
+                "level": 3,
+                "chapter": "Getting published",
+                "page": 196,
+                "level_reason": "Subsection under Planning a research project with font size 14.0.",
+                "_layout_page": 196,
+                "_layout_x": 55.0,
+                "_layout_y": 613.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Getting published",
+                "_source_order": 42
+            },
+            {
+                "level": 2,
+                "chapter": "Further reading",
+                "page": 197,
+                "level_reason": "Major section heading with font size 20.0.",
+                "_layout_page": 197,
+                "_layout_x": 240.0,
+                "_layout_y": 184.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.23,
+                "_layout_text": "Further reading",
+                "_source_order": 43
+            },
+            {
+                "level": 2,
+                "chapter": "Further training",
+                "page": 198,
+                "level_reason": "Major section heading with font size 20.0.",
+                "_layout_page": 198,
+                "_layout_x": 55.0,
+                "_layout_y": 566.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.5,
+                "_layout_text": "Further training",
+                "_source_order": 44
+            },
+            {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 199,
+                "level_reason": "Standard end-of-chapter section heading with font size 20.0.",
+                "_layout_page": 199,
+                "_layout_x": 140.0,
+                "_layout_y": 524.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.5,
+                "_layout_text": "Study questions",
+                "_source_order": 45
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"Basic epidemiology\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 10 Epidemiology, health policy and planning\",\n      \"page\": 178,\n      \"level_reason\": \"Major chapter title with largest font size (32.0) and distinct numbering.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 178,\n      \"level_reason\": \"Standard section heading following the chapter title with font size 20.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Introduction\",\n      \"page\": 178,\n      \"level_reason\": \"Major section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Health policy\",\n      \"page\": 178,\n      \"level_reason\": \"Subsection under Introduction with font size 14.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Health planning\",\n      \"page\": 178,\n      \"level_reason\": \"Subsection under Introduction with font size 14.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Evaluation\",\n      \"page\": 178,\n      \"level_reason\": \"Subsection under Introduction with font size 14.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Health policy\",\n      \"page\": 179,\n      \"level_reason\": \"Major section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"The influence of epidemiology\",\n      \"page\": 179,\n      \"level_reason\": \"Subsection under Health policy with font size 14.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Framing health policy\",\n      \"page\": 180,\n      \"level_reason\": \"Subsection under Health policy with font size 14.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Health policy in practice\",\n      \"page\": 181,\n      \"level_reason\": \"Subsection under Health policy with font size 14.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Health planning\",\n      \"page\": 182,\n      \"level_reason\": \"Major section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"The planning cycle\",\n      \"page\": 183,\n      \"level_reason\": \"Subsection under Health planning with font size 20.0 and indentation.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Assessing burden\",\n      \"page\": 184,\n      \"level_reason\": \"Lower level heading within the planning cycle section with font size 14.0.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"Mortality and morbidity\",\n      \"page\": 184,\n      \"level_reason\": \"Sub-point of Assessing burden with bold style and font size 9.0.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"Summary population measures\",\n      \"page\": 185,\n      \"level_reason\": \"Sub-point of Assessing burden with bold style and font size 9.0.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"Rapid assessment\",\n      \"page\": 185,\n      \"level_reason\": \"Sub-point of Assessing burden with bold style and font size 9.0.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Understanding causes\",\n      \"page\": 185,\n      \"level_reason\": \"Lower level heading within the planning cycle section with font size 14.0.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Measuring effectiveness of interventions\",\n      \"page\": 185,\n      \"level_reason\": \"Lower level heading within the planning cycle section with font size 14.0.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Assessing efficiency\",\n      \"page\": 186,\n      \"level_reason\": \"Lower level heading within the planning cycle section with font size 14.0.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Implementing interventions\",\n      \"page\": 187,\n      \"level_reason\": \"Lower level heading within the planning cycle section with font size 14.0.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Monitoring activities and measuring progress\",\n      \"page\": 188,\n      \"level_reason\": \"Lower level heading within the planning cycle section with font size 14.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Study questions\",\n      \"page\": 188,\n      \"level_reason\": \"Standard end-of-chapter section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"References\",\n      \"page\": 189,\n      \"level_reason\": \"Standard end-of-chapter section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 11 First steps in practical epidemiology\",\n      \"page\": 190,\n      \"level_reason\": \"Major chapter title with largest font size (32.0) and distinct numbering.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 190,\n      \"level_reason\": \"Standard section heading following the chapter title with font size 20.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Introduction\",\n      \"page\": 190,\n      \"level_reason\": \"Major section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Specific diseases\",\n      \"page\": 190,\n      \"level_reason\": \"Major section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Critical reading\",\n      \"page\": 191,\n      \"level_reason\": \"Major section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"What is the research question?\",\n      \"page\": 192,\n      \"level_reason\": \"Subsection within Critical reading with bold style and font size 9.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"If valid, are the results relevant to my work?\",\n      \"page\": 192,\n      \"level_reason\": \"Subsection within Critical reading with bold style and font size 9.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"What kind of study is this?\",\n      \"page\": 192,\n      \"level_reason\": \"Subsection within Critical reading with bold style and font size 9.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"What is the study population?\",\n      \"page\": 192,\n      \"level_reason\": \"Subsection within Critical reading with bold style and font size 9.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"For experimental studies, are the methods well described?\",\n      \"page\": 193,\n      \"level_reason\": \"Subsection within Critical reading with bold style and font size 9.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"For observational studies, are the methods well described?\",\n      \"page\": 193,\n      \"level_reason\": \"Subsection within Critical reading with bold style and font size 9.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"How are the data presented?\",\n      \"page\": 193,\n      \"level_reason\": \"Subsection within Critical reading with bold style and font size 9.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Evaluating and interpreting the results\",\n      \"page\": 193,\n      \"level_reason\": \"Subsection within Critical reading with bold style and font size 9.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Final evaluation\",\n      \"page\": 194,\n      \"level_reason\": \"Subsection within Critical reading with bold style and font size 9.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Planning a research project\",\n      \"page\": 194,\n      \"level_reason\": \"Major section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Choosing a project\",\n      \"page\": 194,\n      \"level_reason\": \"Subsection under Planning a research project with font size 14.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Writing the protocol\",\n      \"page\": 195,\n      \"level_reason\": \"Subsection under Planning a research project with font size 14.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Doing the research\",\n      \"page\": 196,\n      \"level_reason\": \"Subsection under Planning a research project with font size 14.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Analysing the data\",\n      \"page\": 196,\n      \"level_reason\": \"Subsection under Planning a research project with font size 14.0.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Getting published\",\n      \"page\": 196,\n      \"level_reason\": \"Subsection under Planning a research project with font size 14.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Further reading\",\n      \"page\": 197,\n      \"level_reason\": \"Major section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Further training\",\n      \"page\": 198,\n      \"level_reason\": \"Major section heading with font size 20.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Study questions\",\n      \"page\": 199,\n      \"level_reason\": \"Standard end-of-chapter section heading with font size 20.0.\"\n    }\n  ]\n}\n```"
+}

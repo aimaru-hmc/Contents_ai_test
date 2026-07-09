@@ -1,0 +1,35 @@
+{
+    "timestamp": "2026-07-09 09:42:13",
+    "stage_index": 15,
+    "stage": "level_review_changes",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재2/2권-한글/3편3,4장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_3_4_2021.pdf",
+    "chunk": "final merged TOC",
+    "review_stage": "final merged TOC",
+    "input_chapters": 256,
+    "output_chapters": 255,
+    "level_change_count": 0,
+    "added_count": 0,
+    "removed_count": 1,
+    "level_changes": [],
+    "added_entries": [],
+    "removed_entries": [
+        {
+            "before": {
+                "level": 2,
+                "chapter": "7.4 다환방향족탄화수소(polycyclic aromatic hydrocarbons, PAHs)",
+                "page": 102,
+                "level_reason": "Subsection under 7, indicated by numbering 7.4 and font size s=12.5.",
+                "_layout_page": 102,
+                "_layout_x": 181.0,
+                "_layout_y": 229.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "7.4 다환방향족탄화수소(polycyclic aromatic hydrocarbons, PAHs)",
+                "_source_order": 82
+            }
+        }
+    ]
+}
