@@ -1,0 +1,18 @@
+{
+    "timestamp": "2026-07-09 14:29:00",
+    "stage_index": 58,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "19",
+    "total_chunks": 19,
+    "start_page": 558,
+    "end_page": 583,
+    "toc": {
+        "title": "예방의학과 공중보건학",
+        "chapters": []
+    },
+    "raw_response": "```json\n{\n  \"title\": \"예방의학과 공중보건학\",\n  \"chapters\": []\n}\n```"
+}

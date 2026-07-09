@@ -1,0 +1,1613 @@
+{
+    "timestamp": "2026-07-09 14:05:19",
+    "stage_index": 5,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "1",
+    "total_chunks": 19,
+    "start_page": 5,
+    "end_page": 35,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 1/19",
+        "input_chapters": 239,
+        "output_chapters": 43,
+        "level_changes": 0,
+        "added_entries": 0,
+        "removed_entries": 196,
+        "level_change_report_recorded": true,
+        "possible_invalid_heading_candidate_count": 40,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "1. 건강상태와 질병상태의 개념",
+                "level": 3,
+                "page": 5,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 1.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 311.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=5, line=6, s=9.5, r=1.0, x=94.0, y=311.0: \"1. 건강상태와 질병상태의 개념········································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "2. 건강과 질병의 결정요인 및 건강모형",
+                "level": 3,
+                "page": 5,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 1.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 373.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=5, line=10, s=9.5, r=1.0, x=94.0, y=373.0: \"2. 건강과 질병의 결정요인 및 건강모형···································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "1. 예방의학과 공중보건학의 개념",
+                "level": 3,
+                "page": 5,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 2.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 455.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=5, line=14, s=9.5, r=1.0, x=94.0, y=455.0: \"1. 예방의학과 공중보건학의 개념·······································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "2. 예방의학과 공중보건학의 내용과 적용",
+                "level": 3,
+                "page": 5,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 2.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 487.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=5, line=16, s=9.5, r=1.0, x=94.0, y=487.0: \"2. 예방의학과 공중보건학의 내용과 적용···································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "1. 서양의 예방의학과 공중보건학의 역사",
+                "level": 3,
+                "page": 5,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 3.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 569.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=5, line=20, s=9.5, r=1.0, x=94.0, y=569.0: \"1. 서양의 예방의학과 공중보건학의 역사···································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "2. 한국의 예방의학과 공중보건학의 역사",
+                "level": 3,
+                "page": 5,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 3.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 647.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=5, line=25, s=9.5, r=1.0, x=94.0, y=647.0: \"2. 한국의 예방의학과 공중보건학의 역사···································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "3. 예방의학과 공중보건학의 미래",
+                "level": 3,
+                "page": 5,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 3.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 709.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=5, line=29, s=9.5, r=1.0, x=94.0, y=709.0: \"3. 예방의학과 공중보건학의 미래·······································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "1. 역학의 정의와 발전과정",
+                "level": 3,
+                "page": 6,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 1.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 154.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=6, line=37, s=9.5, r=1.0, x=94.0, y=154.0: \"1. 역학의 정의와 발전과정··········································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=6, line=34, s=8.0, r=0.84, x=77.0, y=53.0: \"iv∙차 례\""
+                    ]
+                }
+            },
+            {
+                "title": "2. 질병발생 모형과 원인적 연관성",
+                "level": 3,
+                "page": 6,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 1.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 202.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=6, line=40, s=9.5, r=1.0, x=94.0, y=202.0: \"2. 질병발생 모형과 원인적 연관성······································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=6, line=34, s=8.0, r=0.84, x=77.0, y=53.0: \"iv∙차 례\""
+                    ]
+                }
+            },
+            {
+                "title": "1. 일차 자료의 수집 방법과 활용",
+                "level": 3,
+                "page": 6,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 2.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 283.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=6, line=44, s=9.5, r=1.0, x=94.0, y=283.0: \"1. 일차 자료의 수집 방법과 활용······································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "2. 이차 자료의 종류와 활용",
+                "level": 3,
+                "page": 6,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 2.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 331.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=6, line=47, s=9.5, r=1.0, x=94.0, y=331.0: \"2. 이차 자료의 종류와 활용·········································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "3. 공중보건감시",
+                "level": 3,
+                "page": 6,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 2.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 378.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=6, line=50, s=9.5, r=1.0, x=94.0, y=378.0: \"3. 공중보건감시················································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "4. 질병과 사망원인의 분류와 사망진단서",
+                "level": 3,
+                "page": 6,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 2.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 426.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=6, line=53, s=9.5, r=1.0, x=94.0, y=426.0: \"4. 질병과 사망원인의 분류와 사망진단서···································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "1. 보건지표",
+                "level": 3,
+                "page": 6,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 3.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 507.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=6, line=57, s=9.5, r=1.0, x=94.0, y=507.0: \"1. 보건지표··················································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "2. 이환지표",
+                "level": 3,
+                "page": 6,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 3.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 555.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=6, line=60, s=9.5, r=1.0, x=94.0, y=555.0: \"2. 이환지표··················································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "3. 사망 및 출생지표",
+                "level": 3,
+                "page": 6,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 3.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 587.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=6, line=62, s=9.5, r=1.0, x=94.0, y=587.0: \"3. 사망 및 출생지표·············································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "4. 주관적 건강지표",
+                "level": 3,
+                "page": 6,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 3.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 620.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=6, line=64, s=9.5, r=1.0, x=94.0, y=620.0: \"4. 주관적 건강지표··············································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "1. 역학적 변천설과 한국의 역학적 변천",
+                "level": 3,
+                "page": 6,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 4.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 701.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=6, line=68, s=9.5, r=1.0, x=94.0, y=701.0: \"1. 역학적 변천설과 한국의 역학적 변천···································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "2.. 인구구조 변화와 그에 따른 보건문제",
+                "level": 3,
+                "page": 6,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 4.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 734.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=6, line=70, s=9.5, r=1.0, x=94.0, y=734.0: \"2.. 인구구조 변화와 그에 따른 보건문제··································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "3.. 건강수준의 시간변화",
+                "level": 3,
+                "page": 6,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 4.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 766.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=6, line=72, s=9.5, r=1.0, x=94.0, y=766.0: \"3.. 건강수준의 시간변화···········································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "4. 공간에 따른 건강수준 차이",
+                "level": 3,
+                "page": 7,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 4.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 87.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=7, line=77, s=9.5, r=1.0, x=94.0, y=87.0: \"4. 공간에 따른 건강수준 차이········································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=7, line=76, s=8.0, r=0.84, x=519.0, y=53.0: \"차 례∙v\""
+                    ]
+                }
+            },
+            {
+                "title": "5. 집단별 건강수준 차이",
+                "level": 3,
+                "page": 7,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 4.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 134.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=7, line=80, s=9.5, r=1.0, x=94.0, y=134.0: \"5. 집단별 건강수준 차이···········································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=7, line=76, s=8.0, r=0.84, x=519.0, y=53.0: \"차 례∙v\""
+                    ]
+                }
+            },
+            {
+                "title": "1. 연구의 타당도",
+                "level": 3,
+                "page": 7,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 5.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 216.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=7, line=84, s=9.5, r=1.0, x=94.0, y=216.0: \"1. 연구의 타당도···············································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=7, line=76, s=8.0, r=0.84, x=519.0, y=53.0: \"차 례∙v\""
+                    ]
+                }
+            },
+            {
+                "title": "2. 측정방법의 타당도와 신뢰도",
+                "level": 3,
+                "page": 7,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 5.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 278.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=7, line=88, s=9.5, r=1.0, x=94.0, y=278.0: \"2. 측정방법의 타당도와 신뢰도········································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "3. 바이어스",
+                "level": 3,
+                "page": 7,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 5.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 326.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=7, line=91, s=9.5, r=1.0, x=94.0, y=326.0: \"3. 바이어스··················································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "1. 역학연구 방법의 분류",
+                "level": 3,
+                "page": 7,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 6.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 423.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=7, line=96, s=9.5, r=1.0, x=94.0, y=423.0: \"1. 역학연구 방법의 분류···········································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "2. 기술역학의 세 주요 변수",
+                "level": 3,
+                "page": 7,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 6.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 470.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=7, line=99, s=9.5, r=1.0, x=94.0, y=470.0: \"2. 기술역학의 세 주요 변수·········································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "3. 생태학적연구와 사례/사례군연구",
+                "level": 3,
+                "page": 7,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 6.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 518.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=7, line=102, s=9.5, r=1.0, x=94.0, y=518.0: \"3. 생태학적연구와 사례/사례군연구······································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "4. 단면연구",
+                "level": 3,
+                "page": 7,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 6.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 550.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=7, line=104, s=9.5, r=1.0, x=94.0, y=550.0: \"4. 단면연구··················································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "5. 환자-대조군연구",
+                "level": 3,
+                "page": 7,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 6.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 598.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=7, line=107, s=9.5, r=1.0, x=94.0, y=598.0: \"5. 환자-대조군연구··············································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "6. 코호트연구",
+                "level": 3,
+                "page": 7,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 6.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 645.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=7, line=110, s=9.5, r=1.0, x=94.0, y=645.0: \"6. 코호트연구·················································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "7. 혼합설계연구",
+                "level": 3,
+                "page": 7,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 6.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 693.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=7, line=113, s=9.5, r=1.0, x=94.0, y=693.0: \"7. 혼합설계연구················································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "8. 임상시험",
+                "level": 3,
+                "page": 7,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 6.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 740.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=7, line=116, s=9.5, r=1.0, x=94.0, y=740.0: \"8. 임상시험··················································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "9. 예방시험",
+                "level": 3,
+                "page": 8,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 6.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 90.0,
+                "vertical_position": 87.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=8, line=122, s=9.5, r=1.0, x=90.0, y=87.0: \"9. 예방시험··················································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=8, line=121, s=8.0, r=0.84, x=77.0, y=53.0: \"vi∙차 례\""
+                    ]
+                }
+            },
+            {
+                "title": "10. 지역사회시험",
+                "level": 3,
+                "page": 8,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 6.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 90.0,
+                "vertical_position": 134.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=8, line=125, s=9.5, r=1.0, x=90.0, y=134.0: \"10. 지역사회시험 ··············································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=8, line=121, s=8.0, r=0.84, x=77.0, y=53.0: \"vi∙차 례\""
+                    ]
+                }
+            },
+            {
+                "title": "11. 체계적 문헌고찰과 메타분석",
+                "level": 3,
+                "page": 8,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 6.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 90.0,
+                "vertical_position": 182.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=8, line=128, s=9.5, r=1.0, x=90.0, y=182.0: \"11. 체계적 문헌고찰과 메타분석·······································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=8, line=121, s=8.0, r=0.84, x=77.0, y=53.0: \"vi∙차 례\""
+                    ]
+                }
+            },
+            {
+                "title": "12. 역학연구에서의 윤리적 문제",
+                "level": 3,
+                "page": 8,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 6.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 90.0,
+                "vertical_position": 229.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=8, line=131, s=9.5, r=1.0, x=90.0, y=229.0: \"12. 역학연구에서의 윤리적 문제·······································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "1. 약물역학",
+                "level": 3,
+                "page": 8,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 7.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 326.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=8, line=136, s=9.5, r=1.0, x=94.0, y=326.0: \"1. 약물역학··················································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "2. 영양역학",
+                "level": 3,
+                "page": 8,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 7.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 389.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=8, line=140, s=9.5, r=1.0, x=94.0, y=389.0: \"2. 영양역학··················································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "3. 사회역학",
+                "level": 3,
+                "page": 8,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Section under Chapter 7.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 94.0,
+                "vertical_position": 451.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=8, line=144, s=9.5, r=1.0, x=94.0, y=451.0: \"3. 사회역학··················································································...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            }
+        ]
+    },
+    "toc": {
+        "title": "예방의학과 공중보건학",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "제 1 편 건강과 질병",
+                "page": 5,
+                "level_reason": "Top-level part designation.",
+                "_layout_x": 254.0,
+                "_layout_y": 246.0,
+                "_layout_font_size": 15.0,
+                "_layout_size_ratio": 1.58,
+                "_layout_text": "제 1 편 건강과 질병",
+                "_source_order": 4
+            },
+            {
+                "level": 2,
+                "chapter": "제1장 건강과 질병의 정의 및 결정요인",
+                "page": 5,
+                "level_reason": "Chapter under Part 1.",
+                "_layout_x": 77.0,
+                "_layout_y": 291.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제1장 건강과 질병의 정의 및 결정요인···············································································································3",
+                "_source_order": 5
+            },
+            {
+                "level": 2,
+                "chapter": "제2장 예방의학과 공중보건학의 개념과 활용",
+                "page": 5,
+                "level_reason": "Chapter under Part 1.",
+                "_layout_x": 77.0,
+                "_layout_y": 435.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제2장 예방의학과 공중보건학의 개념과 활용····································································································19",
+                "_source_order": 13
+            },
+            {
+                "level": 2,
+                "chapter": "제3장 예방의학과 공중보건학의 발전과 미래",
+                "page": 5,
+                "level_reason": "Chapter under Part 1.",
+                "_layout_x": 77.0,
+                "_layout_y": 549.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제3장 예방의학과 공중보건학의 발전과 미래···································································································33",
+                "_source_order": 19
+            },
+            {
+                "level": 1,
+                "chapter": "제 2 편 역학과 그 응용",
+                "page": 6,
+                "level_reason": "Top-level part designation.",
+                "_layout_x": 246.0,
+                "_layout_y": 90.0,
+                "_layout_font_size": 15.0,
+                "_layout_size_ratio": 1.58,
+                "_layout_text": "제 2 편 역학과 그 응용",
+                "_source_order": 35
+            },
+            {
+                "level": 2,
+                "chapter": "제1장 역학의 기본원리",
+                "page": 6,
+                "level_reason": "Chapter under Part 2.",
+                "_layout_x": 77.0,
+                "_layout_y": 135.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제1장 역학의 기본원리········································································································································53",
+                "_source_order": 36
+            },
+            {
+                "level": 2,
+                "chapter": "제2장 역학연구의 자료",
+                "page": 6,
+                "level_reason": "Chapter under Part 2.",
+                "_layout_x": 77.0,
+                "_layout_y": 264.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제2장 역학연구의 자료·······································································································································69",
+                "_source_order": 43
+            },
+            {
+                "level": 2,
+                "chapter": "제3장 질병 및 사망, 건강수준의 측정",
+                "page": 6,
+                "level_reason": "Chapter under Part 2.",
+                "_layout_x": 77.0,
+                "_layout_y": 488.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제3장 질병 및 사망, 건강수준의 측정··············································································································93",
+                "_source_order": 56
+            },
+            {
+                "level": 2,
+                "chapter": "제4장 한국인의 건강수준",
+                "page": 6,
+                "level_reason": "Chapter under Part 2.",
+                "_layout_x": 77.0,
+                "_layout_y": 681.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제4장 한국인의 건강수준···································································································································113",
+                "_source_order": 67
+            },
+            {
+                "level": 2,
+                "chapter": "제5장 타당도와 신뢰도",
+                "page": 7,
+                "level_reason": "Chapter under Part 2.",
+                "_layout_x": 77.0,
+                "_layout_y": 196.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제5장 타당도와 신뢰도······································································································································147",
+                "_source_order": 83
+            },
+            {
+                "level": 2,
+                "chapter": "제6장 역학연구방법론",
+                "page": 7,
+                "level_reason": "Chapter under Part 2.",
+                "_layout_x": 77.0,
+                "_layout_y": 403.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제6장 역학연구방법론·······································································································································169",
+                "_source_order": 95
+            },
+            {
+                "level": 2,
+                "chapter": "제7장 분야별 역학연구",
+                "page": 8,
+                "level_reason": "Chapter under Part 2.",
+                "_layout_x": 77.0,
+                "_layout_y": 306.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제7장 분야별 역학연구······································································································································241",
+                "_source_order": 135
+            },
+            {
+                "level": 2,
+                "chapter": "제8장 의학연구에서 통계의 활용",
+                "page": 8,
+                "level_reason": "Chapter under Part 2.",
+                "_layout_x": 77.0,
+                "_layout_y": 703.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제8장 의학연구에서 통계의 활용·····················································································································275",
+                "_source_order": 159
+            },
+            {
+                "level": 2,
+                "chapter": "제9장 근거기반의료와 임상적 의사결정",
+                "page": 9,
+                "level_reason": "Chapter under Part 2.",
+                "_layout_x": 77.0,
+                "_layout_y": 274.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제9장 근거기반의료와 임상적 의사결정···········································································································313",
+                "_source_order": 178
+            },
+            {
+                "level": 2,
+                "chapter": "제10장 감염병의 역학",
+                "page": 9,
+                "level_reason": "Chapter under Part 2.",
+                "_layout_x": 77.0,
+                "_layout_y": 498.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제10장 감염병의 역학·······································································································································351",
+                "_source_order": 191
+            },
+            {
+                "level": 2,
+                "chapter": "제11장 만성질환의 역학",
+                "page": 10,
+                "level_reason": "Chapter under Part 2.",
+                "_layout_x": 77.0,
+                "_layout_y": 587.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제11장 만성질환의 역학····································································································································455",
+                "_source_order": 243
+            },
+            {
+                "level": 1,
+                "chapter": "제 3 편 환경과 건강",
+                "page": 12,
+                "level_reason": "Top-level part designation.",
+                "_layout_x": 254.0,
+                "_layout_y": 246.0,
+                "_layout_font_size": 15.0,
+                "_layout_size_ratio": 1.58,
+                "_layout_text": "제 3 편 환경과 건강",
+                "_source_order": 306
+            },
+            {
+                "level": 2,
+                "chapter": "제1장 환경과 건강",
+                "page": 12,
+                "level_reason": "Chapter under Part 3.",
+                "_layout_x": 77.0,
+                "_layout_y": 291.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제1장 환경과 건강·············································································································································567",
+                "_source_order": 307
+            },
+            {
+                "level": 2,
+                "chapter": "제2장 물리적 요인",
+                "page": 12,
+                "level_reason": "Chapter under Part 3.",
+                "_layout_x": 77.0,
+                "_layout_y": 768.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제2장 물리적 요인············································································································································627",
+                "_source_order": 336
+            },
+            {
+                "level": 2,
+                "chapter": "제3장 화학적 요인",
+                "page": 13,
+                "level_reason": "Chapter under Part 3.",
+                "_layout_x": 77.0,
+                "_layout_y": 399.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제3장 화학적 요인·············································································································································671",
+                "_source_order": 360
+            },
+            {
+                "level": 2,
+                "chapter": "제4장 생활오염",
+                "page": 14,
+                "level_reason": "Chapter under Part 3.",
+                "_layout_x": 77.0,
+                "_layout_y": 148.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제4장 생활오염··················································································································································719",
+                "_source_order": 391
+            },
+            {
+                "level": 2,
+                "chapter": "제5장 직업보건",
+                "page": 14,
+                "level_reason": "Chapter under Part 3.",
+                "_layout_x": 77.0,
+                "_layout_y": 576.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제5장 직업보건··················································································································································769",
+                "_source_order": 417
+            },
+            {
+                "level": 2,
+                "chapter": "제6장 산업재해",
+                "page": 15,
+                "level_reason": "Chapter under Part 3.",
+                "_layout_x": 77.0,
+                "_layout_y": 259.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제6장 산업재해·················································································································································807",
+                "_source_order": 443
+            },
+            {
+                "level": 2,
+                "chapter": "제7장 환경 및 직업요인에 의한 질환",
+                "page": 15,
+                "level_reason": "Chapter under Part 3.",
+                "_layout_x": 77.0,
+                "_layout_y": 452.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제7장 환경 및 직업요인에 의한 질환··············································································································829",
+                "_source_order": 454
+            },
+            {
+                "level": 1,
+                "chapter": "제 4 편 보건의료와 건강관리",
+                "page": 17,
+                "level_reason": "Top-level part designation.",
+                "_layout_x": 230.0,
+                "_layout_y": 246.0,
+                "_layout_font_size": 15.0,
+                "_layout_size_ratio": 1.58,
+                "_layout_text": "제 4 편 보건의료와 건강관리",
+                "_source_order": 502
+            },
+            {
+                "level": 2,
+                "chapter": "제1장 보건의료에 대한 이해",
+                "page": 17,
+                "level_reason": "Chapter under Part 4.",
+                "_layout_x": 349.0,
+                "_layout_y": 421.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "제1장 보건의료에 대한 이해",
+                "_source_order": 731
+            },
+            {
+                "level": 3,
+                "chapter": "1. 보건의료의 개념",
+                "page": 17,
+                "level_reason": "Section under Chapter 1.",
+                "_layout_x": 77.0,
+                "_layout_y": 393.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "1. 보건의료의 개념",
+                "_source_order": 753
+            },
+            {
+                "level": 3,
+                "chapter": "2. 보건의료체계",
+                "page": 17,
+                "level_reason": "Section under Chapter 1.",
+                "_layout_x": 185.0,
+                "_layout_y": 258.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "2. 보건의료체계",
+                "_source_order": 1045
+            },
+            {
+                "level": 2,
+                "chapter": "제2장 보건의료정책",
+                "page": 17,
+                "level_reason": "Chapter under Part 4.",
+                "_layout_x": 349.0,
+                "_layout_y": 443.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "제2장 보건의료정책",
+                "_source_order": 732
+            },
+            {
+                "level": 2,
+                "chapter": "제3장 보건의료자원과 조직의 관리",
+                "page": 17,
+                "level_reason": "Chapter under Part 4.",
+                "_layout_x": 349.0,
+                "_layout_y": 465.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "제3장 보건의료자원과 조직의 관리",
+                "_source_order": 733
+            },
+            {
+                "level": 2,
+                "chapter": "제4장 건강관련행태",
+                "page": 18,
+                "level_reason": "Chapter under Part 4.",
+                "_layout_x": 349.0,
+                "_layout_y": 486.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "제4장 건강관련행태",
+                "_source_order": 734
+            },
+            {
+                "level": 2,
+                "chapter": "제5장 의료이용",
+                "page": 18,
+                "level_reason": "Chapter under Part 4.",
+                "_layout_x": 349.0,
+                "_layout_y": 508.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "제5장 의료이용",
+                "_source_order": 735
+            },
+            {
+                "level": 2,
+                "chapter": "제6장 의료의 질과 환자안전",
+                "page": 18,
+                "level_reason": "Chapter under Part 4.",
+                "_layout_x": 349.0,
+                "_layout_y": 529.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "제6장 의료의 질과 환자안전",
+                "_source_order": 736
+            },
+            {
+                "level": 2,
+                "chapter": "제7장 건강보장",
+                "page": 18,
+                "level_reason": "Chapter under Part 4.",
+                "_layout_x": 349.0,
+                "_layout_y": 551.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "제7장 건강보장",
+                "_source_order": 737
+            },
+            {
+                "level": 2,
+                "chapter": "제8장 지역사회보건",
+                "page": 19,
+                "level_reason": "Chapter under Part 4.",
+                "_layout_x": 349.0,
+                "_layout_y": 573.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "제8장 지역사회보건",
+                "_source_order": 738
+            },
+            {
+                "level": 2,
+                "chapter": "제9장 건강증진과 보건교육",
+                "page": 19,
+                "level_reason": "Chapter under Part 4.",
+                "_layout_x": 349.0,
+                "_layout_y": 594.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "제9장 건강증진과 보건교육",
+                "_source_order": 739
+            },
+            {
+                "level": 1,
+                "chapter": "제 5 편 임상예방의학과 지역사회예방서비스",
+                "page": 20,
+                "level_reason": "Top-level part designation.",
+                "_layout_x": 188.0,
+                "_layout_y": 90.0,
+                "_layout_font_size": 15.0,
+                "_layout_size_ratio": 1.58,
+                "_layout_text": "제 5 편 임상예방의학과 지역사회예방서비스",
+                "_source_order": 608
+            },
+            {
+                "level": 2,
+                "chapter": "제1장 임상예방의학과 임상예방서비스",
+                "page": 20,
+                "level_reason": "Chapter under Part 5.",
+                "_layout_x": 77.0,
+                "_layout_y": 135.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제1장 임상예방의학과 임상예방서비스············································································································1149",
+                "_source_order": 609
+            },
+            {
+                "level": 2,
+                "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                "page": 20,
+                "level_reason": "Chapter under Part 5.",
+                "_layout_x": 77.0,
+                "_layout_y": 279.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제2장 예방의료수준에 따른 임상예방서비스··································································································1159",
+                "_source_order": 617
+            },
+            {
+                "level": 2,
+                "chapter": "제3장 직업관련질환에 대한 예방의료서비스",
+                "page": 20,
+                "level_reason": "Chapter under Part 5.",
+                "_layout_x": 77.0,
+                "_layout_y": 643.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제3장 직업관련질환에 대한 예방의료서비스··································································································1247",
+                "_source_order": 639
+            },
+            {
+                "level": 2,
+                "chapter": "제4장 지역사회 보건사업과 예방서비스",
+                "page": 21,
+                "level_reason": "Chapter under Part 5.",
+                "_layout_x": 77.0,
+                "_layout_y": 164.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제4장 지역사회 보건사업과 예방서비스·········································································································1287",
+                "_source_order": 655
+            },
+            {
+                "level": 2,
+                "chapter": "제5장 재난과 공중보건위기의 대비와 대응",
+                "page": 21,
+                "level_reason": "Chapter under Part 5.",
+                "_layout_x": 77.0,
+                "_layout_y": 546.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제5장 재난과 공중보건위기의 대비와 대응····································································································1321",
+                "_source_order": 678
+            },
+            {
+                "level": 2,
+                "chapter": "제6장 국제보건과 북한의료",
+                "page": 22,
+                "level_reason": "Chapter under Part 5.",
+                "_layout_x": 77.0,
+                "_layout_y": 257.0,
+                "_layout_font_size": 10.5,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "제6장 국제보건과 북한의료·····························································································································1351",
+                "_source_order": 707
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"예방의학과 공중보건학\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"제 1 편 건강과 질병\",\n      \"page\": 5,\n      \"level_reason\": \"Top-level part designation.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제1장 건강과 질병의 정의 및 결정요인\",\n      \"page\": 5,\n      \"level_reason\": \"Chapter under Part 1.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제2장 예방의학과 공중보건학의 개념과 활용\",\n      \"page\": 5,\n      \"level_reason\": \"Chapter under Part 1.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제3장 예방의학과 공중보건학의 발전과 미래\",\n      \"page\": 5,\n      \"level_reason\": \"Chapter under Part 1.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"제 2 편 역학과 그 응용\",\n      \"page\": 6,\n      \"level_reason\": \"Top-level part designation.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제1장 역학의 기본원리\",\n      \"page\": 6,\n      \"level_reason\": \"Chapter under Part 2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제2장 역학연구의 자료\",\n      \"page\": 6,\n      \"level_reason\": \"Chapter under Part 2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제3장 질병 및 사망, 건강수준의 측정\",\n      \"page\": 6,\n      \"level_reason\": \"Chapter under Part 2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제4장 한국인의 건강수준\",\n      \"page\": 6,\n      \"level_reason\": \"Chapter under Part 2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제5장 타당도와 신뢰도\",\n      \"page\": 7,\n      \"level_reason\": \"Chapter under Part 2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제6장 역학연구방법론\",\n      \"page\": 7,\n      \"level_reason\": \"Chapter under Part 2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제7장 분야별 역학연구\",\n      \"page\": 8,\n      \"level_reason\": \"Chapter under Part 2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제8장 의학연구에서 통계의 활용\",\n      \"page\": 8,\n      \"level_reason\": \"Chapter under Part 2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제9장 근거기반의료와 임상적 의사결정\",\n      \"page\": 9,\n      \"level_reason\": \"Chapter under Part 2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제10장 감염병의 역학\",\n      \"page\": 9,\n      \"level_reason\": \"Chapter under Part 2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제11장 만성질환의 역학\",\n      \"page\": 10,\n      \"level_reason\": \"Chapter under Part 2.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"제 3 편 환경과 건강\",\n      \"page\": 12,\n      \"level_reason\": \"Top-level part designation.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제1장 환경과 건강\",\n      \"page\": 12,\n      \"level_reason\": \"Chapter under Part 3.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제2장 물리적 요인\",\n      \"page\": 12,\n      \"level_reason\": \"Chapter under Part 3.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제3장 화학적 요인\",\n      \"page\": 13,\n      \"level_reason\": \"Chapter under Part 3.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제4장 생활오염\",\n      \"page\": 14,\n      \"level_reason\": \"Chapter under Part 3.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제5장 직업보건\",\n      \"page\": 14,\n      \"level_reason\": \"Chapter under Part 3.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제6장 산업재해\",\n      \"page\": 15,\n      \"level_reason\": \"Chapter under Part 3.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제7장 환경 및 직업요인에 의한 질환\",\n      \"page\": 15,\n      \"level_reason\": \"Chapter under Part 3.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"제 4 편 보건의료와 건강관리\",\n      \"page\": 17,\n      \"level_reason\": \"Top-level part designation.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제1장 보건의료에 대한 이해\",\n      \"page\": 17,\n      \"level_reason\": \"Chapter under Part 4.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1. 보건의료의 개념\",\n      \"page\": 17,\n      \"level_reason\": \"Section under Chapter 1.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2. 보건의료체계\",\n      \"page\": 17,\n      \"level_reason\": \"Section under Chapter 1.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제2장 보건의료정책\",\n      \"page\": 17,\n      \"level_reason\": \"Chapter under Part 4.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제3장 보건의료자원과 조직의 관리\",\n      \"page\": 17,\n      \"level_reason\": \"Chapter under Part 4.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제4장 건강관련행태\",\n      \"page\": 18,\n      \"level_reason\": \"Chapter under Part 4.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제5장 의료이용\",\n      \"page\": 18,\n      \"level_reason\": \"Chapter under Part 4.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제6장 의료의 질과 환자안전\",\n      \"page\": 18,\n      \"level_reason\": \"Chapter under Part 4.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제7장 건강보장\",\n      \"page\": 18,\n      \"level_reason\": \"Chapter under Part 4.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제8장 지역사회보건\",\n      \"page\": 19,\n      \"level_reason\": \"Chapter under Part 4.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제9장 건강증진과 보건교육\",\n      \"page\": 19,\n      \"level_reason\": \"Chapter under Part 4.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"제 5 편 임상예방의학과 지역사회예방서비스\",\n      \"page\": 20,\n      \"level_reason\": \"Top-level part designation.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제1장 임상예방의학과 임상예방서비스\",\n      \"page\": 20,\n      \"level_reason\": \"Chapter under Part 5.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제2장 예방의료수준에 따른 임상예방서비스\",\n      \"page\": 20,\n      \"level_reason\": \"Chapter under Part 5.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제3장 직업관련질환에 대한 예방의료서비스\",\n      \"page\": 20,\n      \"level_reason\": \"Chapter under Part 5.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제4장 지역사회 보건사업과 예방서비스\",\n      \"page\": 21,\n      \"level_reason\": \"Chapter under Part 5.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제5장 재난과 공중보건위기의 대비와 대응\",\n      \"page\": 21,\n      \"level_reason\": \"Chapter under Part 5.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"제6장 국제보건과 북한의료\",\n      \"page\": 22,\n      \"level_reason\": \"Chapter under Part 5.\"\n    }\n  ]\n}"
+}

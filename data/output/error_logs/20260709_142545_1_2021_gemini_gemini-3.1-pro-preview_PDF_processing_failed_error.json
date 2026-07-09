@@ -1,0 +1,16 @@
+{
+    "timestamp": "2026-07-09 14:25:45",
+    "fatal": true,
+    "stage": "PDF processing failed",
+    "source_pdf": "data/input/부교재1/1권-한글/1편(2021).pdf",
+    "source_pdf_name": "1편(2021).pdf",
+    "provider": "gemini",
+    "model": "gemini-3.1-pro-preview",
+    "error_type": "RuntimeError",
+    "error_message": "GEMINI_API_KEY is required. Add GEMINI_API_KEY=... to your .env file.",
+    "error": "RuntimeError: GEMINI_API_KEY is required. Add GEMINI_API_KEY=... to your .env file.",
+    "debug": {},
+    "traceback": "Traceback (most recent call last):\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma.py\", line 7560, in process_pdf\n    toc, raw_text, used_model = generate_toc_from_pdf(pdf_path=processing_pdf_path, args=args, user_prompt=user_prompt)\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma.py\", line 7289, in generate_toc_from_pdf\n    return generate_toc_from_pdf_gemini(pdf_path=pdf_path, args=args, prompt=prompt)\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma.py\", line 1312, in generate_toc_from_pdf_gemini\n    client, types = create_gemini_client(api_key=get_api_key(\"gemini\"))\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma.py\", line 384, in get_api_key\n    raise RuntimeError(f\"{env_name} is required. Add {env_name}=... to your .env file.\")\nRuntimeError: GEMINI_API_KEY is required. Add GEMINI_API_KEY=... to your .env file.\n",
+    "elapsed_seconds": 0.0,
+    "elapsed": "0.0s"
+}
