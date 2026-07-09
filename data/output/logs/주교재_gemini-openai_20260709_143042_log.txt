@@ -1,0 +1,36 @@
+Run log saved: data/output/logs/주교재_gemini-openai_20260709_143042_log.txt
+Processing started: 주교재.pdf
+  Running providers concurrently: gemini, openai
+Processing started: 주교재.pdf
+Processing started: 주교재.pdf
+  provider: openai
+  provider: gemini
+/home/hmc2/work/development/eunsoo/.venv/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/home/hmc2/work/development/eunsoo/.venv/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+  Gemini PDF upload started...
+  OpenAI PDF upload started...
+  OpenAI PDF upload completed
+  OpenAI TOC generation started: gpt-5.5
+  Gemini PDF upload completed
+  Gemini TOC generation started: gemini-3.1-pro-preview
+  OpenAI TOC generation completed: gpt-5.5
+Completed: data/output/unknown_model_openai_20260709_143219_toc.json
+  model: gpt-5.5
+  elapsed: 1m 37.1s (97.135s)
+  title: Basic epidemiology
+  chapters: 244
+Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated parsed result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+  Gemini TOC generation completed: gemini-3.1-pro-preview
+  Retrying Gemini generation after JSON parse failure 2/5: gemini-3.1-pro-preview
+  Gemini TOC generation started: gemini-3.1-pro-preview
+Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated parsed result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+  Gemini TOC generation completed: gemini-3.1-pro-preview
+Completed: data/output/unknown_model_gemini_20260709_143434_toc.json
+  model: gemini-3.1-pro-preview
+  elapsed: 3m 52.2s (232.169s)
+  title: Basic epidemiology
+  chapters: 227
+Processing result: success 2 / failed 0
+Run log saved: data/output/logs/주교재_gemini-openai_20260709_143042_log.txt

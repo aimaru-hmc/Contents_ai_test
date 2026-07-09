@@ -1,0 +1,498 @@
+{
+    "title": "예방의학과 공중보건학 III",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "제 4 편 보건의료와 건강관리",
+            "page": 17,
+            "level_reason": "Part title, highest level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제1장 보건의료에 대한 이해",
+            "page": 17,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 보건의료의 개념",
+            "page": 17,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 보건의료체계",
+            "page": 17,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 외국의 보건의료체계",
+            "page": 17,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 한국의 보건의료체계",
+            "page": 17,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제2장 보건의료정책",
+            "page": 17,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 보건의료정책의 결정과정",
+            "page": 17,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 보건의료정책 환경과 참여자",
+            "page": 17,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 한국의 보건의료정책",
+            "page": 17,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제3장 보건의료자원과 조직의 관리",
+            "page": 17,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 보건의료자원의 구성",
+            "page": 17,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 보건의료자원의 현황",
+            "page": 17,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 병원관리",
+            "page": 17,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제4장 건강관련행태",
+            "page": 18,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 건강관련행태의 정의와 개념",
+            "page": 18,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 개인, 개인 간, 집단 및 지역사회의 건강행태 이론 및 모형",
+            "page": 18,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 질병행태의 정의 및 결정모형",
+            "page": 18,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 환자역할행태의 정의와 개념",
+            "page": 18,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "5. 치료충실",
+            "page": 18,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제5장 의료이용",
+            "page": 18,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 보건의료서비스 이용에 영향을 미치는 요인과 경제학적 수요 모형",
+            "page": 18,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 한국의 의료이용",
+            "page": 18,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 의료이용의 불평등과 과제",
+            "page": 18,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제6장 의료의 질과 환자안전",
+            "page": 18,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 의료의 질",
+            "page": 18,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 환자안전",
+            "page": 18,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 의료의 질과 환자안전 향상의 실제",
+            "page": 18,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제7장 건강보장",
+            "page": 18,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 사회보장과 건강보장",
+            "page": 18,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 진료비 지불제도와 경상의료비",
+            "page": 18,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 한국의 건강보장제도",
+            "page": 18,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제8장 지역사회보건",
+            "page": 19,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 지역사회의학과 일차보건의료",
+            "page": 19,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 지역사회보건사업",
+            "page": 19,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 지역사회보건사업 기획과 평가",
+            "page": 19,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 지역사회 참여와 홍보전략",
+            "page": 19,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "5. 지역사회보건사업과 의사의 역할",
+            "page": 19,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제9장 건강증진과 보건교육",
+            "page": 19,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 건강증진",
+            "page": 19,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 건강도시와 건강중심정책",
+            "page": 19,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 한국의 건강증진사업",
+            "page": 19,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 보건교육",
+            "page": 19,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 1,
+            "chapter": "제 5 편 임상예방의학과 지역사회예방서비스",
+            "page": 20,
+            "level_reason": "Part title, highest level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제1장 임상예방의학과 임상예방서비스",
+            "page": 20,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 임상예방의학과 임상예방서비스",
+            "page": 20,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 임상예방서비스의 분류와 술기",
+            "page": 20,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+            "page": 20,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 일차 예방과 건강증진",
+            "page": 20,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 일차 예방과 예방접종",
+            "page": 20,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 일차 예방과 예방화학요법",
+            "page": 20,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 이차 예방과 선별검사",
+            "page": 20,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "5. 삼차 예방과 삼차 예방서비스",
+            "page": 20,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "6. 여행의학과 임상예방서비스",
+            "page": 20,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제3장 직업관련질환에 대한 예방의료서비스",
+            "page": 20,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 일차 예방과 직업보건",
+            "page": 20,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 이차 예방과 직업보건",
+            "page": 20,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 삼차 예방과 직업보건",
+            "page": 20,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제4장 지역사회 보건사업과 예방서비스",
+            "page": 21,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 모자보건과 예방서비스",
+            "page": 21,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 청소년·학교보건과 예방서비스",
+            "page": 21,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 노인보건과 예방서비스",
+            "page": 21,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 저소득층 및 취약계층 보건사업",
+            "page": 21,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "5. 정신보건과 예방서비스",
+            "page": 21,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "6. 장애와 공중보건서비스",
+            "page": 21,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "7. 디지털헬스",
+            "page": 21,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제5장 재난과 공중보건위기의 대비와 대응",
+            "page": 21,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 재난과 공중보건기위기 정의와 개념",
+            "page": 21,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 재난 공중보건감시와 역학조사",
+            "page": 21,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 재난에 의한 공중보건위기의 대비와 대응",
+            "page": 21,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 기상변화 등에 의한 자연재난",
+            "page": 21,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "5. 물리적 요인에 의한 사회재난",
+            "page": 21,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "6. 환경오염에 의한 사회재난",
+            "page": 22,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "7. 감염병으로 인한 재난과 공중보건위기",
+            "page": 22,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 2,
+            "chapter": "제6장 국제보건과 북한의료",
+            "page": 22,
+            "level_reason": "Chapter title, second level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 국제보건의 개요",
+            "page": 22,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 국제보건에 대한 접근",
+            "page": 22,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 국제보건의 주요 현안",
+            "page": 22,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 국제보건의 실천",
+            "page": 22,
+            "level_reason": "Section title, third level in the hierarchy."
+        },
+        {
+            "level": 3,
+            "chapter": "5. 북한의 보건의료 현황과 과제",
+            "page": 22,
+            "level_reason": "Section title, third level in the hierarchy."
+        }
+    ],
+    "_meta": {
+        "source_pdf": "부교재3.PDF",
+        "provider": "gemini",
+        "model": "gemini-3.1-pro-preview",
+        "generated_timestamp": "20260709_143717",
+        "generated_at": "2026-07-09 14:37:17",
+        "generation_started_at": "2026-07-09 14:34:35",
+        "generation_completed_at": "2026-07-09 14:37:17",
+        "elapsed_seconds": 162.067,
+        "elapsed": "2m 42.1s",
+        "run_timestamp": "20260709_143435",
+        "run_log_file": "data/output/logs/부교재3_gemini-openai_20260709_143435_log.txt"
+    }
+}

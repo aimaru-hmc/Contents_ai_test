@@ -1,0 +1,1710 @@
+{
+    "title": "예방의학과 공중보건학 III",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "제 4편 보건의료와 건강관리",
+            "page": 23,
+            "level_reason": "편 표제."
+        },
+        {
+            "level": 2,
+            "chapter": "제1장 보건의료에 대한 이해",
+            "page": 25,
+            "level_reason": "제4편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 보건의료의 개념",
+            "page": 25,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 보건의료의 개념과 구성요소",
+            "page": 25,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 보건의료의 사회경제적 특성",
+            "page": 27,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.3 바람직한 보건의료의 특성",
+            "page": 31,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 보건의료체계",
+            "page": 32,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 보건의료체계 개념과 구성요소",
+            "page": 32,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 의료전달체계",
+            "page": 34,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.3 재원조달방식",
+            "page": 35,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.4 보건의료체계의 관리",
+            "page": 36,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 외국의 보건의료체계",
+            "page": 36,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1 보건의료체계의 분류",
+            "page": 36,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2 외국의 보건의료체계",
+            "page": 38,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.3 보건의료체계의 변화 경향",
+            "page": 42,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 한국의 보건의료체계",
+            "page": 43,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.1 보건의료체계",
+            "page": 43,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2 보건행정체계",
+            "page": 46,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.3 도전과 과제",
+            "page": 48,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 2,
+            "chapter": "제2장 보건의료정책",
+            "page": 51,
+            "level_reason": "제4편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 보건의료정책의 결정과정",
+            "page": 51,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 보건의료정책의 개요",
+            "page": 51,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 보건의료정책의 특성",
+            "page": 52,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.3 정책과정",
+            "page": 53,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 보건의료정책 환경과 참여자",
+            "page": 55,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 보건의료정책 환경",
+            "page": 55,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 보건의료정책 참여자",
+            "page": 56,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 한국의 보건의료정책",
+            "page": 58,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1 한국 보건의료정책의 변천",
+            "page": 59,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2 보건의료정책과 의사의 역할",
+            "page": 63,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 2,
+            "chapter": "제3장 보건의료자원과 조직의 관리",
+            "page": 65,
+            "level_reason": "제4편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 보건의료자원의 구성",
+            "page": 65,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 보건의료자원의 종류",
+            "page": 65,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 보건의료자원의 구성원리",
+            "page": 67,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 보건의료자원의 현황",
+            "page": 68,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 보건의료인력",
+            "page": 68,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 보건의료시설",
+            "page": 74,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.3 보건의료기술",
+            "page": 79,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.4 보건의료정보",
+            "page": 81,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 병원관리",
+            "page": 85,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1 병원의 기능과 조직적 특성",
+            "page": 86,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2 병원관리의 주요 영역",
+            "page": 89,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.3 병원관리의 주요 지표",
+            "page": 93,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 2,
+            "chapter": "제4장 건강관련행태",
+            "page": 99,
+            "level_reason": "제4편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 건강관련행태의 정의와 개념",
+            "page": 99,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 건강관련행태의 정의",
+            "page": 99,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 건강관련행태의 중요성",
+            "page": 100,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.3 한국인의 생활습관과 건강행태",
+            "page": 100,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 개인, 개인 간, 집단 및 지역사회의 건강행태 이론 및 모형",
+            "page": 104,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 생태학적 관점과 개인, 개인 간, 집단 및 지역사회 수준의 건강행태 이론의 개요",
+            "page": 105,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 개인 수준의 건강행태 모형",
+            "page": 106,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.3 개인 간 수준의 건강행태 모형",
+            "page": 112,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.4 집단 및 지역사회 수준의 건강행태 모형",
+            "page": 114,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 질병행태의 정의 및 결정모형",
+            "page": 116,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1 Suchman 모형",
+            "page": 116,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2 Andersen 모형",
+            "page": 118,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 환자역할행태의 정의와 개념",
+            "page": 120,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 3,
+            "chapter": "5. 치료충실",
+            "page": 122,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 2,
+            "chapter": "제5장 의료이용",
+            "page": 125,
+            "level_reason": "제4편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 보건의료서비스 이용에 영향을 미치는 요인과 경제학적 수요 모형",
+            "page": 125,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 의료이용의 지표",
+            "page": 126,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 의학적 필요",
+            "page": 126,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.3 인구학적 요인",
+            "page": 127,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.4 사회 ⋅ 문화 ⋅ 경제학적 요인",
+            "page": 127,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.5 공급자 요인",
+            "page": 127,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.6 경제학적 수요 모형",
+            "page": 128,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 한국의 의료이용",
+            "page": 130,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 의료이용의 현황",
+            "page": 130,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 치료자 선택의 양상",
+            "page": 132,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 의료이용의 불평등과 과제",
+            "page": 133,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 2,
+            "chapter": "제6장 의료의 질과 환자안전",
+            "page": 135,
+            "level_reason": "제4편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 의료의 질",
+            "page": 135,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 의료의 질 이해를 위한 기본개념",
+            "page": 135,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 의료의 질 정의와 구성요소",
+            "page": 139,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.3 의료의 질 향상 접근방안",
+            "page": 142,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 환자안전",
+            "page": 147,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 환자안전의 이해",
+            "page": 148,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 환자안전 향상을 위한 접근법",
+            "page": 151,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.3 의료기관의 환자안전 향상 활동",
+            "page": 153,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 의료의 질과 환자안전 향상의 실제",
+            "page": 157,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1 의료의 질과 환자안전의 공통점과 차이점",
+            "page": 157,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2 의료의 질과 환자안전 향상을 위한 국가 수준의 전략",
+            "page": 158,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.3 한국의 의료의 질과 환자안전 향상 정책",
+            "page": 160,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 2,
+            "chapter": "제7장 건강보장",
+            "page": 165,
+            "level_reason": "제4편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 사회보장과 건강보장",
+            "page": 165,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 사회보장",
+            "page": 165,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 건강보장",
+            "page": 168,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 진료비 지불제도와 경상의료비",
+            "page": 177,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 진료비 지불제도",
+            "page": 177,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 보건의료재원과 의료비 관리",
+            "page": 184,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 한국의 건강보장제도",
+            "page": 192,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1 한국 건강보장제도의 전개과정",
+            "page": 192,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2 건강보장 현황",
+            "page": 195,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.3 한국 건강보장제도의 과제",
+            "page": 202,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 2,
+            "chapter": "제8장 지역사회보건",
+            "page": 205,
+            "level_reason": "제4편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 지역사회의학과 일차보건의료",
+            "page": 205,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 지역사회의학의 개념과 기본 원리",
+            "page": 205,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 일차보건의료의 개념과 배경",
+            "page": 207,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 지역사회보건사업",
+            "page": 212,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 지역사회보건사업의 분류 및 종류",
+            "page": 212,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 한국 지역사회보건사업의 변천 과정",
+            "page": 213,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.3 한국 지역사회보건사업의 현황",
+            "page": 220,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 지역사회보건사업 기획과 평가",
+            "page": 226,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1 지역사회보건사업 기획의 정의와 과정",
+            "page": 226,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2 지역사회 현황분석과 우선순위 결정",
+            "page": 228,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.3 지역사회보건사업의 목표와 전략",
+            "page": 230,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.4 지역사회보건사업 평가의 필요성, 원칙 및 방법",
+            "page": 232,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 지역사회 참여와 홍보전략",
+            "page": 235,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.1 지역사회 참여",
+            "page": 235,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2 홍보전략",
+            "page": 237,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "5. 지역사회보건사업과 의사의 역할",
+            "page": 238,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "5.1 의사의 책임과 의무",
+            "page": 239,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "5.2 지역사회에서 의사의 역할",
+            "page": 239,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 2,
+            "chapter": "제9장 건강증진과 보건교육",
+            "page": 241,
+            "level_reason": "제4편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 건강증진",
+            "page": 241,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 건강증진의 개념",
+            "page": 241,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 건강증진의 접근방법",
+            "page": 248,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.3 건강증진사업 모형",
+            "page": 250,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 건강도시와 건강중심정책",
+            "page": 253,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 건강도시",
+            "page": 253,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 건강중심정책과 건강영향평가",
+            "page": 258,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 한국의 건강증진사업",
+            "page": 260,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1 한국 건강증진사업의 발전과정",
+            "page": 260,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2 한국 건강증진사업의 현황",
+            "page": 261,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.3 한국 건강증진사업의 문제점 및 발전방안",
+            "page": 263,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.4 국가 및 지역사회 건강증진사업을 위한 의사의 역할",
+            "page": 264,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 보건교육",
+            "page": 265,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.1 보건교육의 개념과 정의",
+            "page": 265,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2 보건교육의 중요성과 목표",
+            "page": 266,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.3 보건교육을 위한 이론적 근거",
+            "page": 266,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.4 보건교육의 실제",
+            "page": 268,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 1,
+            "chapter": "제 5편 임상예방의학과 지역사회예방서비스",
+            "page": 271,
+            "level_reason": "편 표제."
+        },
+        {
+            "level": 2,
+            "chapter": "제1장 임상예방의학과 임상예방서비스",
+            "page": 273,
+            "level_reason": "제5편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 임상예방의학과 임상예방서비스",
+            "page": 273,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 임상예방의학의 정의와 개념",
+            "page": 273,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 임상예방의학의 근거와 전개",
+            "page": 274,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.3 임상예방의학의 발전을 위한 조건과 교육",
+            "page": 276,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 임상예방서비스의 분류와 술기",
+            "page": 278,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 임상예방서비스의 제공과 예방클리닉",
+            "page": 278,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 예방상담과 교육",
+            "page": 279,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.3 예방접종",
+            "page": 280,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.4 예방화학요법",
+            "page": 281,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.5 선별검사",
+            "page": 281,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 2,
+            "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+            "page": 283,
+            "level_reason": "제5편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 일차 예방과 건강증진",
+            "page": 283,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 예방상담과 교육",
+            "page": 283,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 흡연",
+            "page": 285,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.3 음주",
+            "page": 295,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.4 영양과 식이",
+            "page": 295,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.5 신체활동",
+            "page": 299,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.6 스트레스 관리",
+            "page": 302,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.7 비 만",
+            "page": 304,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 예방과 예방접종 일차",
+            "page": 314,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 소아 예방접종",
+            "page": 314,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 성인 예방접종",
+            "page": 317,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 예방과 예방화학요법 일차",
+            "page": 321,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1 심혈관질환 예방을 위한 예방화학요법",
+            "page": 321,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2 암 예방을 위한 예방화학요법",
+            "page": 323,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.3 임산부와 여성을 위한 예방접종과 예방화학요법",
+            "page": 326,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 이차 예방과 선별검사",
+            "page": 331,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.1 선별검사의 역학적 기초",
+            "page": 331,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2 생의 주기별 선별검사",
+            "page": 334,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.3 선별검사 결과의 평가와 사후관리",
+            "page": 336,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.4 암의 선별검사",
+            "page": 337,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.5 신경 및 정신질환을 위한 선별검사",
+            "page": 340,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.6 심혈관계 질환의 선별검사",
+            "page": 344,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.7 비뇨기과 질환을 위한 선별검사",
+            "page": 350,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "5. 삼차 예방과 삼차 예방서비스",
+            "page": 355,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "5.1 삼차 예방의 정의와 개념",
+            "page": 355,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "6. 여행의학과 임상예방서비스",
+            "page": 358,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "6.1 여행의학과 예방의료서비스",
+            "page": 358,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "6.2 여행관련 질환의 역학",
+            "page": 359,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "6.3 여행관련 건강위험별 예방원칙과 예방의료서비스",
+            "page": 360,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "6.4 여행의학의 최신 정보와 근거제공 사이트",
+            "page": 367,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "6.5 여행자 건강을 위한 여행의학 클리닉의 발전방향",
+            "page": 368,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 2,
+            "chapter": "제3장 직업관련질환에 대한 예방의료서비스",
+            "page": 371,
+            "level_reason": "제5편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 일차 예방과 직업보건",
+            "page": 371,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 직장 건강증진",
+            "page": 371,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 보건관리전문기관 위탁 사업",
+            "page": 375,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.3 작업환경측정",
+            "page": 377,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 예방과 직업보건 이차",
+            "page": 384,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 건강진단",
+            "page": 384,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 근로자건강센터",
+            "page": 387,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 삼차 예방과 직업보건",
+            "page": 392,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1 직업재활",
+            "page": 392,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2 직장복귀",
+            "page": 396,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.3 산업재해와 보상",
+            "page": 399,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 직업성 질환관리",
+            "page": 402,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.1 직업성질환의 정의와 범위",
+            "page": 403,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2 직업성질환의 종류",
+            "page": 404,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.3 직업성질환의 발생 현황",
+            "page": 407,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.4 직업성질환의 진단",
+            "page": 408,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.5 직업성질환의 예방 및 관리",
+            "page": 409,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 2,
+            "chapter": "제4장 지역사회 보건사업과 예방서비스",
+            "page": 411,
+            "level_reason": "제5편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 모자보건과 예방서비스",
+            "page": 411,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 모자보건 총론",
+            "page": 411,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 모자보건의 접근 원칙과 사례",
+            "page": 414,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.3 지역사회 모자보건사업의 현황",
+            "page": 415,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 청소년 ⋅ 학교보건과 예방서비스",
+            "page": 416,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 청소년 인구 구조의 변화",
+            "page": 416,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 청소년 건강의 중요성",
+            "page": 417,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.3 한국의 청소년 보건정책",
+            "page": 417,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.4 학교보건사업과 건강증진학교",
+            "page": 418,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 노인보건과 예방서비스",
+            "page": 421,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1 고령인구의 보건학적 특성",
+            "page": 421,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2 노인보건의 접근 원칙과 사례",
+            "page": 422,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.3 지역사회 노인보건사업의 현황",
+            "page": 423,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 저소득층 및 취약계층 보건사업",
+            "page": 426,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.1 저소득층 및 취약계층의 정의 및 사업대상",
+            "page": 426,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2 저소득층 및 취약계층 보건사업의 접근 원칙 및 사례",
+            "page": 427,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.3 지역사회 저소득층 및 취약계층 보건사업의 현황",
+            "page": 429,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "5. 정신보건과 예방서비스",
+            "page": 432,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "5.1 지역사회 정신보건",
+            "page": 432,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "5.2 지역사회 정신보건의 접근 원칙과 사례",
+            "page": 432,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "5.3 한국의 지역사회 정신보건사업 현황",
+            "page": 435,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "6. 장애와 공중보건서비스",
+            "page": 437,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "6.1 공중보건 측면에서의 장애 개념의 변천",
+            "page": 437,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "6.2 장애인보건의 접근 원칙과 사례",
+            "page": 438,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "6.3 장애인을 위한 보건관리 영역",
+            "page": 439,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "7. 디지털헬스",
+            "page": 441,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "7.1 디지털헬스의 개념",
+            "page": 441,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "7.2 디지털헬스의 내용",
+            "page": 441,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "7.3 디지털헬스의 향후 방향",
+            "page": 443,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 2,
+            "chapter": "제5장 재난과 공중보건위기의 대비와 대응",
+            "page": 445,
+            "level_reason": "제5편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 재난과 공중보건기위기 정의와 개념",
+            "page": 445,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 정의와 분류 개념,",
+            "page": 445,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 재난 발생 기전과 공중보건위기",
+            "page": 446,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.3 지구적 재난 발생 양상",
+            "page": 447,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 재난 공중보건감시와 역학조사",
+            "page": 448,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 공중보건감시와 역학조사의 역할",
+            "page": 448,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 공중보건감시와 역학조사의 자료원",
+            "page": 449,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.3 재난 공중보건감시",
+            "page": 449,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.4 재난 역학조사",
+            "page": 449,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 재난에 의한 공중보건위기의 대비와 대응",
+            "page": 451,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1 재난 진행의 단계와 위기경보 수준 4",
+            "page": 451,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2 재난과 공중보건위기 관리의 원칙",
+            "page": 452,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 기상변화 등에 의한 자연재난",
+            "page": 456,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.1 자연재난의 개념",
+            "page": 456,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2 자연재난의 분류",
+            "page": 456,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.3 자연재난의 국내 발생 현황",
+            "page": 457,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.4 주요한 국내 자연재난",
+            "page": 458,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "5. 사회재난 물리적 요인에 의한",
+            "page": 460,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "5.1 물리적 요인에 의한 사회재난의 분류",
+            "page": 461,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "5.2 물리적 요인에 의한 주요 사회재난의 발생 양상",
+            "page": 461,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "5.3 물리적 요인에 의한 사회재난과 공중보건",
+            "page": 462,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "5.4 물리적 요인에 의한 사회재난 시 지역사회 공중보건의 역할과 대응",
+            "page": 463,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "5.5 물리적 요인에 의한 재난의 역학조사 사례; 2000 산불에 의한 재난 역학조사 년도",
+            "page": 464,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "6. 환경오염에 의한 사회재난",
+            "page": 465,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "6.1 환경오염에 의한 사회재난",
+            "page": 466,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "6.2 환경오염에 의한 사회재난 사례",
+            "page": 466,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "6.3 환경오염에 의한 사회재난의 대비와 대응의 원칙과 방법",
+            "page": 467,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "7. 감염병으로 인한 재난과 공중보건위기",
+            "page": 468,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "7.1 감염병과 재난 공중보건위기,",
+            "page": 468,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "7.2 재난과 공중보건위기를 일으키는 감염병 유행 사례",
+            "page": 469,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "7.3 감염병에 의한 재난과 공중보건위기의 대비와 대응",
+            "page": 471,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "7.4 향후 과제",
+            "page": 474,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 2,
+            "chapter": "제6장 국제보건과 북한의료",
+            "page": 475,
+            "level_reason": "제5편의 장 표제."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 국제보건의 개요",
+            "page": 475,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 국제보건의 개념과 역사",
+            "page": 475,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 국제보건의 이론",
+            "page": 477,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "1.3 새천년개발목표와 지속가능한 개발목표",
+            "page": 478,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 국제보건에 대한 접근",
+            "page": 481,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 세계의 질병부담",
+            "page": 481,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 국제보건과 인권 건강권,",
+            "page": 485,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.3 보건의료체계의 강화",
+            "page": 487,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.4 보편적 건강보장",
+            "page": 489,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "2.5 문화와 건강",
+            "page": 491,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 국제보건의 주요 현안",
+            "page": 493,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1 감염성 질환",
+            "page": 493,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2 비감염성 질환",
+            "page": 495,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.3 모자보건",
+            "page": 497,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.4 안전한 식수 위생과 건강,",
+            "page": 499,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "3.5 영양 및 식량 문제와 건강",
+            "page": 500,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 국제보건의 실천",
+            "page": 505,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.1 국제개발협력과 국제보건사업",
+            "page": 505,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2 한국의 국제보건 활동",
+            "page": 512,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.3 국제보건사업의 기획과 평가",
+            "page": 516,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "4.4 국제보건의 경향 한계와 향후 과제,",
+            "page": 523,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 3,
+            "chapter": "5. 북한의 보건의료 현황과 과제",
+            "page": 525,
+            "level_reason": "번호가 붙은 장 내 대절."
+        },
+        {
+            "level": 4,
+            "chapter": "5.1 북한의 질병부담과 과제",
+            "page": 525,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "5.2 북한 보건의료제도의 현황과 과제",
+            "page": 537,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        },
+        {
+            "level": 4,
+            "chapter": "5.3 대북 보건의료지원과 남북보건의료 교류 협력",
+            "page": 539,
+            "level_reason": "소수 번호가 붙은 하위 절."
+        }
+    ],
+    "_meta": {
+        "source_pdf": "부교재3.PDF",
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "generated_timestamp": "20260709_143649",
+        "generated_at": "2026-07-09 14:36:49",
+        "generation_started_at": "2026-07-09 14:34:35",
+        "generation_completed_at": "2026-07-09 14:36:49",
+        "elapsed_seconds": 134.094,
+        "elapsed": "2m 14.1s",
+        "run_timestamp": "20260709_143435",
+        "run_log_file": "data/output/logs/부교재3_gemini-openai_20260709_143435_log.txt"
+    }
+}

@@ -1,0 +1,32 @@
+Run log saved: data/output/logs/3편3,4장(2021)_gemini-openai_20260709_142828_log.txt
+Processing started: 3편3,4장(2021).pdf
+  Running providers concurrently: gemini, openai
+Processing started: 3편3,4장(2021).pdf
+  provider: gemini
+Processing started: 3편3,4장(2021).pdf
+  provider: openai
+/home/hmc2/work/development/eunsoo/.venv/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/home/hmc2/work/development/eunsoo/.venv/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+  Gemini PDF upload started...
+  OpenAI PDF upload started...
+  OpenAI PDF upload completed
+  OpenAI TOC generation started: gpt-5.5
+  Gemini PDF upload completed
+  Gemini TOC generation started: gemini-3.1-pro-preview
+Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated parsed result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+  Gemini TOC generation completed: gemini-3.1-pro-preview
+Completed: data/output/3_3_4_2021_gemini_20260709_143021_toc.json
+  model: gemini-3.1-pro-preview
+  elapsed: 1m 53.5s (113.494s)
+  title: 제3장 화학적 요인
+  chapters: 79
+  OpenAI TOC generation completed: gpt-5.5
+Completed: data/output/3_3_4_2021_openai_20260709_143042_toc.json
+  model: gpt-5.5
+  elapsed: 2m 14.0s (134.046s)
+  title: 제3장 화학적 요인 / 제4장 생활오염
+  chapters: 253
+Processing result: success 2 / failed 0
+Run log saved: data/output/logs/3편3,4장(2021)_gemini-openai_20260709_142828_log.txt

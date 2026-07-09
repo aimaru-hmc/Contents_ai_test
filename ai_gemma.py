@@ -159,8 +159,8 @@ LAYOUT_METADATA_FIELD_ALIASES: dict[str, tuple[str, ...]] = {
 }
 
 DEFAULT_USER_PROMPT = """
-Create a table of contents from real body hierarchy titles only.
-Exclude covers, prefaces, existing TOC pages/listings, indexes, references, page numbers, repeated headers/footers, captions, questions, and body sentences.
+Create a table of contents from real document hierarchy titles, including titles visible on existing TOC/Contents pages when present.
+Exclude covers, prefaces, indexes, references, standalone page numbers, repeated headers/footers, captions, questions, and body sentences.
 Keep exact source titles/numbering and actual PDF viewer page numbers.
 """.strip()
 
@@ -344,8 +344,8 @@ Output exactly one JSON object in the format below. Do not output explanations, 
 }}
 
 [Required Rules]
-- Include only real body hierarchy titles, sorted in PDF page order.
-- Exclude body sentences, examples, questions, captions, references, existing TOC pages/listings, and repeated headers/footers.
+- Include real document hierarchy titles, including entries visible on existing TOC/Contents pages, sorted in PDF page order.
+- Exclude body sentences, examples, questions, captions, references, and repeated headers/footers.
 - Use exact source titles and existing numbering only. Do not invent titles or numbering.
 - Use levels 1 to {max_depth}; page is the actual PDF viewer page number.
 - Include a concise level_reason for every entry.
@@ -361,8 +361,9 @@ def build_attached_pdf_prompt(base_prompt: str, pdf_name: str) -> str:
 Create the TOC using only the attached PDF.
 Use actual PDF viewer page numbers.
 Rules:
-- Output only body hierarchy titles: chapters, sections, subsections.
-- Ignore existing TOC/Contents pages and listings, repeated headers/footers, body sentences, captions, questions, and references.
+- Output document hierarchy titles: chapters, sections, subsections.
+- Existing TOC/Contents pages and listings are valid source candidates; do not remove entries solely because they came from a TOC page.
+- Ignore repeated headers/footers, body sentences, captions, questions, and references.
 - Use PDF visual layout and source hierarchy only for level inference.
 - Include level_reason for every entry when possible.
 - Return compact valid JSON only.
@@ -2186,7 +2187,8 @@ def build_claude_merge_prompt(
 Create one final TOC JSON object using only the [Partial TOC Candidates] below instead of the attached PDF.
 - Keep only one copy of duplicate entries.
 - Preserve ascending page order and source appearance order.
-- Remove covers, prefaces, existing TOC pages, indexes, references, and repeated headers/footers.
+- Existing TOC/Contents page entries are valid candidates; do not remove entries solely because they came from a TOC page.
+- Remove covers, prefaces, indexes, references, and repeated headers/footers.
 - Use only levels from 1 to {max_depth}.
 - Do not invent chapter titles.
 - Preserve original chapter/section titles exactly, including Korean text when the source title is Korean.
@@ -4159,8 +4161,9 @@ def build_gemma_text_prompt(
 Create the TOC using only the [Extracted PDF Text] below instead of an attached PDF.
 Use each text block's [PAGE n] marker to determine page numbers.
 Rules:
-- Output only body hierarchy titles: chapters, sections, subsections.
-- Ignore existing TOC/Contents pages and listings, repeated headers/footers, body sentences, captions, questions, and references.
+- Output document hierarchy titles: chapters, sections, subsections.
+- Existing TOC/Contents pages and listings are valid source candidates; do not remove entries solely because they came from a TOC page.
+- Ignore repeated headers/footers, body sentences, captions, questions, and references.
 - Layout tags may appear as [L s=... r=... x=... y=... b=... i=... f=...]. Use them only for level inference; never copy the tag.
 - Include level_reason and copy _layout_page/_layout_x/_layout_y/_layout_font_size/_layout_size_ratio/_layout_text when a reliable [L] title line exists.
 - Return compact valid JSON only.
@@ -4191,8 +4194,9 @@ def build_gemma_chunk_prompt(
 The text below is one part of the full PDF.
 Use [PAGE n] markers to determine page numbers.
 Rules:
-- Include only body hierarchy titles visible in this chunk. Do not infer entries outside this page range.
-- Ignore existing TOC/Contents pages and listings, repeated headers/footers, body sentences, captions, questions, and references.
+- Include document hierarchy titles visible in this chunk. Do not infer entries outside this page range.
+- Existing TOC/Contents pages and listings are valid source candidates; do not remove entries solely because they came from a TOC page.
+- Ignore repeated headers/footers, body sentences, captions, questions, and references.
 - Use [L s/r/x/y/b/i/f] layout only for level inference; never copy the tag.
 - Include level_reason and copy _layout_page/_layout_x/_layout_y/_layout_font_size/_layout_size_ratio/_layout_text when reliable.
 - Return compact valid JSON only.
@@ -4230,10 +4234,11 @@ def build_gemma_merge_prompt(
 
 [Chunked TOC Merge Instruction]
 Create one final TOC JSON object using only the [Partial TOC Candidates] below instead of the attached PDF.
-- Keep one copy of duplicates; remove cover, TOC, index, reference, repeated header/footer, caption, question, and body-sentence entries.
+- Keep one copy of duplicates; existing TOC/Contents page entries are valid candidates.
+- Remove cover, index, reference, repeated header/footer, caption, question, and body-sentence entries.
 - Preserve source page/order and use only levels 1 to {max_depth}.
 - Do not invent chapter titles.
-- Preserve original body hierarchy titles exactly.
+- Preserve original document hierarchy titles exactly.
 - Correct obvious level inconsistencies using layout metadata and nearby hierarchy.
 {level_reason_instruction}
 {document_style_block}
@@ -4383,17 +4388,6 @@ def toc_normalized_titles(toc: dict[str, Any]) -> set[str]:
     return titles
 
 
-def is_existing_toc_line_candidate(title: str) -> bool:
-    text = clean_text(title)
-    if not text:
-        return False
-    if re.search(r"\.{3,}\s*\d+\s*$", text):
-        return True
-    if re.search(r"\s[·ㆍ.]{3,}\s*\d+\s*$", text):
-        return True
-    return False
-
-
 def missing_numbered_candidate_layout_text(candidate: dict[str, Any]) -> str:
     parts: list[str] = []
     if candidate.get("page"):
@@ -4414,8 +4408,6 @@ def missing_numbered_candidate_layout_text(candidate: dict[str, Any]) -> str:
 def is_probable_non_heading_candidate(title: str) -> bool:
     text = clean_text(title)
     if not text:
-        return True
-    if is_existing_toc_line_candidate(text):
         return True
     if len(text) > 180:
         return True
@@ -4572,7 +4564,7 @@ def add_missing_numbered_candidate(
     line_index: int | None = None,
 ) -> None:
     clean_title = clean_text(title)
-    if not clean_title or is_existing_toc_line_candidate(clean_title):
+    if not clean_title:
         return
 
     path = leading_decimal_number_path(clean_title)
@@ -5353,7 +5345,7 @@ def format_gemma_missing_numbered_heading_candidates(
 
     lines = [
         "[Observed Missing Numbered Heading Candidates]",
-        "These catch omissions even when the missing body hierarchy title is the final item in a numbered sequence. They are clues, not automatic additions. Restore a candidate only if it is a real visible chapter/section/subsection title and not an existing TOC line, running header/footer, body sentence, caption, question, reference, or duplicate.",
+        "These catch omissions even when the missing hierarchy title is the final item in a numbered sequence. They are clues, not automatic additions. Restore a candidate only if it is a real visible chapter/section/subsection title or TOC listing and not a running header/footer, body sentence, caption, question, reference, or duplicate.",
     ]
     for _, candidate in sorted(candidates_by_path.items())[:max_candidates]:
         location = missing_numbered_candidate_layout_text(candidate)
@@ -5421,7 +5413,7 @@ def format_gemma_missing_style_heading_candidates(
 
     lines = [
         "[Observed Missing Style Heading Candidates]",
-        "These catch omissions when body hierarchy titles do not use numbering. They are layout-based clues from Source Text/Layout. Restore a candidate only if its font size/ratio/bold/indent/spacing pattern clearly belongs to this document's body title hierarchy and it is not body text, a caption, question, reference, running header/footer, duplicate, or existing TOC line.",
+        "These catch omissions when hierarchy titles do not use numbering. They are layout-based clues from Source Text/Layout. Restore a candidate only if its font size/ratio/bold/indent/spacing pattern clearly belongs to this document's title hierarchy or TOC listing style and it is not body text, a caption, question, reference, running header/footer, or duplicate.",
     ]
     for candidate in candidates:
         location = missing_numbered_candidate_layout_text(candidate)
@@ -5609,7 +5601,8 @@ Rules:
 - Correct level values using visible hierarchy and _layout_* metadata.
 - Remove duplicates and clearly invalid non-title entries.
 - Do not add new entries unless the current JSON already contains a clear duplicate/merge error.
-- Keep only body hierarchy titles; remove any remaining existing TOC listing, repeated header/footer, caption, question, reference, or body sentence.
+- Keep real document hierarchy titles, including entries from existing TOC/Contents pages when present.
+- Remove repeated header/footer, caption, question, reference, body sentence, and other clearly invalid non-title entries.
 - Preserve correct title text, page, order, and _layout_* metadata.
 - Use only levels 1 to {max_depth}. Return compact valid JSON only.
 {document_style_block}
