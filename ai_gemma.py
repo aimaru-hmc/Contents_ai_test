@@ -160,7 +160,7 @@ LAYOUT_METADATA_FIELD_ALIASES: dict[str, tuple[str, ...]] = {
 
 DEFAULT_USER_PROMPT = """
 Create a table of contents from real body hierarchy titles only.
-Exclude covers, existing TOC listings, indexes, references, page numbers, headers, footers, captions, questions, and body sentences.
+Exclude covers, prefaces, existing TOC pages/listings, indexes, references, page numbers, repeated headers/footers, captions, questions, and body sentences.
 Keep exact source titles/numbering and actual PDF viewer page numbers.
 """.strip()
 
@@ -345,7 +345,7 @@ Output exactly one JSON object in the format below. Do not output explanations, 
 
 [Required Rules]
 - Include only real body hierarchy titles, sorted in PDF page order.
-- Exclude body sentences, examples, questions, captions, references, existing TOC listings, headers, and footers.
+- Exclude body sentences, examples, questions, captions, references, existing TOC pages/listings, and repeated headers/footers.
 - Use exact source titles and existing numbering only. Do not invent titles or numbering.
 - Use levels 1 to {max_depth}; page is the actual PDF viewer page number.
 - Include a concise level_reason for every entry.
@@ -1884,90 +1884,6 @@ def extract_gemma_pdf_pages(pdf_path: Path, args: argparse.Namespace) -> tuple[l
         }
 
     return extract_pdf_layout_pages(pdf_path)
-
-
-def page_text_lines_for_toc_detection(page_text: str) -> list[str]:
-    lines: list[str] = []
-    for raw_line in str(page_text or "").splitlines():
-        line = clean_text(raw_line)
-        if not line or re.match(r"^\[PAGE\s+\d+\]$", line):
-            continue
-        layout = parse_layout_line(line)
-        text = clean_text(layout.get("text")) if layout else line
-        if text:
-            lines.append(text)
-    return lines
-
-
-def is_probable_existing_toc_page(page_number: int, page_text: str) -> bool:
-    lines = page_text_lines_for_toc_detection(page_text)
-    if not lines:
-        return False
-
-    compact_lines = [re.sub(r"\s+", "", line).lower() for line in lines]
-    top_compact = " ".join(compact_lines[:8])
-    has_toc_label = (
-        "차례" in top_compact
-        or "목차" in top_compact
-        or any(re.search(r"\bcontents\b", clean_text(line), re.IGNORECASE) for line in lines[:8])
-    )
-    dot_leader_count = sum(
-        1
-        for line in lines
-        if re.search(r"[·ㆍ.]{4,}.*\d+\s*$", line)
-    )
-    slash_page_count = sum(
-        len(re.findall(r"/\s*\d{1,4}\b", line))
-        for line in lines
-    )
-    structured_entry_count = sum(
-        1
-        for line in lines
-        if (
-            re.search(r"^(?:제\s*\d+\s*[장절편부]|\d+(?:\.\d+)*[.)]?)\s+", line)
-            and (
-                re.search(r"[·ㆍ.]{4,}", line)
-                or re.search(r"/\s*\d{1,4}\b", line)
-                or re.search(r"\s\d{1,4}\s*$", line)
-            )
-        )
-    )
-
-    if has_toc_label and (dot_leader_count >= 1 or slash_page_count >= 2 or structured_entry_count >= 2):
-        return True
-    if dot_leader_count >= 4 or structured_entry_count >= 5:
-        return True
-    return slash_page_count >= 8 and page_number <= 40
-
-
-def exclude_gemma_existing_toc_pages(
-    pages: list[tuple[int, str]],
-) -> tuple[list[tuple[int, str]], dict[str, Any]]:
-    toc_page_numbers = [
-        page_number
-        for page_number, page_text in pages
-        if is_probable_existing_toc_page(page_number, page_text)
-    ]
-    toc_page_set = set(toc_page_numbers)
-    fallback_reason = ""
-
-    selected_pages = [(page_number, text) for page_number, text in pages if page_number not in toc_page_set]
-    if not selected_pages:
-        selected_pages = list(pages)
-        fallback_reason = "all_pages_detected_as_existing_toc_pages"
-
-    selected_page_numbers = [page_number for page_number, _ in selected_pages]
-    metadata: dict[str, Any] = {
-        "gemma_detected_toc_page_count": len(toc_page_numbers),
-        "gemma_detected_toc_pages": toc_page_numbers,
-        "gemma_selected_page_count": len(selected_pages),
-        "gemma_selected_pages": selected_page_numbers,
-        "gemma_excluded_toc_page_count": len(toc_page_numbers) if not fallback_reason else 0,
-        "gemma_excluded_toc_pages": toc_page_numbers if not fallback_reason else [],
-    }
-    if fallback_reason:
-        metadata["gemma_toc_page_filter_fallback"] = fallback_reason
-    return selected_pages, metadata
 
 
 def split_page_text_for_claude(page_number: int, text: str, max_chars: int) -> list[str]:
@@ -4217,10 +4133,9 @@ def build_gemma_text_prompt(
 [Gemma Text/Layout Mode]
 Create the TOC using only the [Extracted PDF Text] below instead of an attached PDF.
 Use each text block's [PAGE n] marker to determine page numbers.
-Detected existing TOC/Contents pages were removed before input when found.
 Rules:
 - Output only body hierarchy titles: chapters, sections, subsections.
-- Ignore body sentences, captions, questions, references, existing TOC listings, and any remaining repeated page header/footer text.
+- Ignore existing TOC/Contents pages and listings, repeated headers/footers, body sentences, captions, questions, and references.
 - Layout tags may appear as [L s=... r=... x=... y=... b=... i=... f=...]. Use them only for level inference; never copy the tag.
 - Include level_reason and copy _layout_page/_layout_x/_layout_y/_layout_font_size/_layout_size_ratio/_layout_text when a reliable [L] title line exists.
 - Return compact valid JSON only.
@@ -4250,10 +4165,9 @@ def build_gemma_chunk_prompt(
 [Gemma Text/Layout Chunk Mode]
 The text below is one part of the full PDF.
 Use [PAGE n] markers to determine page numbers.
-Detected existing TOC/Contents pages were removed before input when found.
 Rules:
 - Include only body hierarchy titles visible in this chunk. Do not infer entries outside this page range.
-- Ignore body sentences, captions, questions, references, existing TOC listings, and any remaining repeated page header/footer text.
+- Ignore existing TOC/Contents pages and listings, repeated headers/footers, body sentences, captions, questions, and references.
 - Use [L s/r/x/y/b/i/f] layout only for level inference; never copy the tag.
 - Include level_reason and copy _layout_page/_layout_x/_layout_y/_layout_font_size/_layout_size_ratio/_layout_text when reliable.
 - Return compact valid JSON only.
@@ -4291,7 +4205,7 @@ def build_gemma_merge_prompt(
 
 [Chunked TOC Merge Instruction]
 Create one final TOC JSON object using only the [Partial TOC Candidates] below instead of the attached PDF.
-- Keep one copy of duplicates; remove repeated header/footer, cover, TOC, index, reference, caption, question, and body-sentence entries.
+- Keep one copy of duplicates; remove cover, TOC, index, reference, repeated header/footer, caption, question, and body-sentence entries.
 - Preserve source page/order and use only levels 1 to {max_depth}.
 - Do not invent chapter titles.
 - Preserve original body hierarchy titles exactly.
@@ -4787,333 +4701,6 @@ def document_style_line_is_title_like(title: str, layout: dict[str, Any]) -> boo
     )
 
 
-def strip_running_page_number(text: str) -> str:
-    text = clean_text(text)
-    text = re.sub(r"^\s*\d+\s*[∙·ㆍ.\-–—|:]\s*", "", text)
-    text = re.sub(r"\s*[∙·ㆍ.\-–—|:]\s*\d+\s*$", "", text)
-    text = re.sub(r"^\s*\d+\s+", "", text)
-    text = re.sub(r"\s+\d+\s*$", "", text)
-    return clean_text(text)
-
-
-def normalize_running_header_footer_text(text: Any) -> str:
-    stripped = strip_running_page_number(clean_text(text))
-    stripped = re.sub(r"[∙·ㆍ.\-–—|:()\[\]{}<>]", "", stripped)
-    return normalize_toc_match_text(stripped)
-
-
-def is_running_header_footer_layout(layout: dict[str, Any]) -> bool:
-    y = metadata_float_value(layout.get("vertical_position"))
-    font_size = metadata_float_value(layout.get("font_size"))
-    size_ratio = metadata_float_value(layout.get("size_ratio"))
-    bold = 1 if metadata_int_value(layout.get("bold")) else 0
-    italic = 1 if metadata_int_value(layout.get("italic")) else 0
-    if y is None:
-        return False
-
-    near_page_edge = y <= 75.0 or y >= 760.0
-    weak_style = (
-        (size_ratio is not None and size_ratio <= 1.05)
-        or (font_size is not None and font_size <= 10.5)
-    )
-    return near_page_edge and weak_style and not bold and not italic
-
-
-def layout_is_near_page_edge(layout: dict[str, Any], *, top: float = 130.0, bottom: float = 720.0) -> bool:
-    y = metadata_float_value(layout.get("vertical_position"))
-    return y is not None and (y <= top or y >= bottom)
-
-
-def is_edge_marker_only_layout(title: Any, layout: dict[str, Any]) -> bool:
-    return is_marker_only_toc_title(title) and layout_is_near_page_edge(layout, top=125.0, bottom=720.0)
-
-
-def is_running_header_footer_style_candidate(title: Any, layout: dict[str, Any]) -> bool:
-    normalized = normalize_running_header_footer_text(title)
-    if len(normalized) < 4:
-        return False
-    return is_running_header_footer_layout(layout) or layout_is_near_page_edge(layout)
-
-
-def build_running_header_footer_styles(
-    layout_lines: list[dict[str, Any]],
-    max_styles: int = 20,
-) -> list[dict[str, Any]]:
-    groups: dict[str, dict[str, Any]] = {}
-    for candidate in layout_lines:
-        layout = candidate.get("layout") if isinstance(candidate.get("layout"), dict) else {}
-        title = clean_text(candidate.get("title"))
-        if not title or not is_running_header_footer_style_candidate(title, layout):
-            continue
-        normalized = normalize_running_header_footer_text(title)
-        if len(normalized) < 4:
-            continue
-        display_text = strip_running_page_number(title)
-        group = groups.setdefault(normalized, {
-            "normalized_text": normalized,
-            "display_text": display_text,
-            "line_count": 0,
-            "_pages": set(),
-            "_x_values": [],
-            "_y_values": [],
-            "_font_sizes": [],
-            "_size_ratios": [],
-            "_samples": [],
-        })
-        group["line_count"] += 1
-        page_number = metadata_int_value(candidate.get("page"))
-        if page_number is not None:
-            group["_pages"].add(page_number)
-        for layout_key, bucket_key in (
-            ("left_indent", "_x_values"),
-            ("vertical_position", "_y_values"),
-            ("font_size", "_font_sizes"),
-            ("size_ratio", "_size_ratios"),
-        ):
-            value = metadata_float_value(layout.get(layout_key))
-            if value is not None:
-                group[bucket_key].append(value)
-        if len(group["_samples"]) < 5:
-            group["_samples"].append(title)
-
-    styles: list[dict[str, Any]] = []
-    for group in groups.values():
-        pages = sorted(group.get("_pages", set()))
-        if len(pages) < 3 and int(group.get("line_count", 0) or 0) < 3:
-            continue
-        styles.append({
-            "normalized_text": group.get("normalized_text"),
-            "display_text": group.get("display_text"),
-            "font_size": round(median_float(group.get("_font_sizes", [])), 1) if group.get("_font_sizes") else None,
-            "size_ratio": round(median_float(group.get("_size_ratios", [])), 2) if group.get("_size_ratios") else None,
-            "median_left_indent": round(median_float(group.get("_x_values", [])), 1) if group.get("_x_values") else None,
-            "median_vertical_position": round(median_float(group.get("_y_values", [])), 1) if group.get("_y_values") else None,
-            "line_count": group.get("line_count", 0),
-            "page_count": len(pages),
-            "page_range": document_style_page_range(pages),
-            "samples": document_style_sample_texts(group.get("_samples", [])),
-        })
-
-    styles.sort(
-        key=lambda item: (
-            -int(item.get("page_count") or 0),
-            -int(item.get("line_count") or 0),
-            clean_text(item.get("display_text")),
-        )
-    )
-    return styles[:max_styles]
-
-
-def running_header_footer_match(
-    title: Any,
-    layout: dict[str, Any] | None = None,
-    running_header_footer_styles: list[dict[str, Any]] | None = None,
-) -> dict[str, Any] | None:
-    normalized_title = normalize_running_header_footer_text(title)
-    if len(normalized_title) < 4:
-        return None
-
-    styles = running_header_footer_styles if isinstance(running_header_footer_styles, list) else []
-    for style in styles:
-        if not isinstance(style, dict):
-            continue
-        normalized_style = clean_text(style.get("normalized_text"))
-        if len(normalized_style) < 4:
-            continue
-        if (
-            normalized_title == normalized_style
-            or normalized_title in normalized_style
-            or normalized_style in normalized_title
-        ):
-            return style
-
-    if layout and is_running_header_footer_layout(layout):
-        return {
-            "normalized_text": normalized_title,
-            "display_text": strip_running_page_number(clean_text(title)),
-            "font_size": metadata_float_value(layout.get("font_size")),
-            "size_ratio": metadata_float_value(layout.get("size_ratio")),
-            "median_left_indent": metadata_float_value(layout.get("left_indent")),
-            "median_vertical_position": metadata_float_value(layout.get("vertical_position")),
-            "line_count": 1,
-            "page_count": 1,
-            "page_range": str(metadata_int_value(layout.get("page")) or ""),
-        }
-    return None
-
-
-def layout_line_matches_running_header_footer(
-    title: Any,
-    layout: dict[str, Any] | None,
-    running_header_footer_styles: list[dict[str, Any]] | None = None,
-) -> bool:
-    title_text = clean_text(title)
-    layout = layout if isinstance(layout, dict) else {}
-    if not title_text or not layout:
-        return False
-
-    if is_running_header_footer_layout(layout):
-        return True
-    if is_edge_marker_only_layout(title_text, layout):
-        return True
-
-    normalized_title = normalize_running_header_footer_text(title_text)
-    if len(normalized_title) < 4:
-        return False
-
-    layout_y = metadata_float_value(layout.get("vertical_position"))
-    layout_x = metadata_float_value(layout.get("left_indent"))
-    styles = running_header_footer_styles if isinstance(running_header_footer_styles, list) else []
-    for style in styles:
-        if not isinstance(style, dict):
-            continue
-        normalized_style = clean_text(style.get("normalized_text"))
-        if len(normalized_style) < 4:
-            continue
-        if normalized_title != normalized_style:
-            continue
-
-        style_y = metadata_float_value(style.get("median_vertical_position"))
-        style_x = metadata_float_value(style.get("median_left_indent"))
-        y_matches = layout_y is not None and style_y is not None and abs(layout_y - style_y) <= 35.0
-        x_matches = layout_x is not None and style_x is not None and abs(layout_x - style_x) <= 90.0
-        if y_matches or (x_matches and (layout_y is not None and (layout_y <= 130.0 or layout_y >= 720.0))):
-            return True
-
-    return False
-
-
-def plain_running_header_footer_texts(
-    pages: list[tuple[int, str]],
-    *,
-    edge_line_count: int = 3,
-) -> set[str]:
-    total_pages = len(pages)
-    if total_pages < 3:
-        return set()
-
-    page_sets: dict[str, set[int]] = {}
-    for page_number, page_text in pages:
-        page_lines: list[str] = []
-        for raw_line in str(page_text or "").splitlines():
-            layout = parse_layout_line(raw_line)
-            text = clean_text(layout.get("text")) if layout else clean_text(raw_line)
-            if text:
-                page_lines.append(text)
-        edge_lines = page_lines[:edge_line_count] + page_lines[-edge_line_count:]
-        for text in edge_lines:
-            normalized = normalize_running_header_footer_text(text)
-            if len(normalized) < 4:
-                continue
-            page_sets.setdefault(normalized, set()).add(page_number)
-
-    min_pages = max(3, min(8, int(total_pages * 0.05) or 3))
-    return {
-        normalized
-        for normalized, page_numbers in page_sets.items()
-        if len(page_numbers) >= min_pages
-    }
-
-
-def page_edge_line_indexes(page_text: str, *, edge_line_count: int = 3) -> set[int]:
-    content_indexes: list[int] = []
-    for index, raw_line in enumerate(str(page_text or "").splitlines()):
-        layout = parse_layout_line(raw_line)
-        text = clean_text(layout.get("text")) if layout else clean_text(raw_line)
-        if text:
-            content_indexes.append(index)
-    return set(content_indexes[:edge_line_count] + content_indexes[-edge_line_count:])
-
-
-def strip_gemma_running_header_footer_pages(
-    pages: list[tuple[int, str]],
-    running_header_footer_styles: list[dict[str, Any]] | None = None,
-) -> tuple[list[tuple[int, str]], dict[str, Any]]:
-    cleaned_pages: list[tuple[int, str]] = []
-    removed_count = 0
-    removed_pages: set[int] = set()
-    samples: list[dict[str, Any]] = []
-    repeated_edge_texts = plain_running_header_footer_texts(pages)
-
-    for page_number, page_text in pages:
-        kept_lines: list[str] = []
-        edge_indexes = page_edge_line_indexes(page_text)
-        for line_index, raw_line in enumerate(str(page_text or "").splitlines()):
-            line = str(raw_line)
-            layout = parse_layout_line(line)
-            text = clean_text(layout.get("text")) if layout else clean_text(line)
-            normalized = normalize_running_header_footer_text(text)
-            remove_reason = ""
-            if layout and layout_line_matches_running_header_footer(
-                text,
-                layout,
-                running_header_footer_styles=running_header_footer_styles,
-            ):
-                remove_reason = "layout_header_footer"
-            elif line_index in edge_indexes and normalized in repeated_edge_texts:
-                remove_reason = "repeated_edge_text"
-
-            if remove_reason:
-                removed_count += 1
-                removed_pages.add(page_number)
-                if len(samples) < 20:
-                    samples.append({
-                        "page": page_number,
-                        "text": text,
-                        "reason": remove_reason,
-                        "y": metadata_float_value(layout.get("vertical_position")) if layout else None,
-                        "x": metadata_float_value(layout.get("left_indent")) if layout else None,
-                        "font_size": metadata_float_value(layout.get("font_size")) if layout else None,
-                        "size_ratio": metadata_float_value(layout.get("size_ratio")) if layout else None,
-                    })
-                continue
-            kept_lines.append(line)
-
-        cleaned_text = "\n".join(kept_lines).strip()
-        if cleaned_text:
-            cleaned_pages.append((page_number, cleaned_text))
-
-    metadata = {
-        "gemma_removed_header_footer_line_count": removed_count,
-        "gemma_removed_header_footer_page_count": len(removed_pages),
-        "gemma_removed_header_footer_pages": sorted(removed_pages),
-        "gemma_removed_header_footer_samples": samples,
-    }
-    return cleaned_pages, metadata
-
-
-def remove_toc_running_header_footer_entries(
-    toc: dict[str, Any],
-    running_header_footer_styles: list[dict[str, Any]] | None = None,
-) -> dict[str, Any]:
-    chapters = toc.get("chapters", [])
-    if not isinstance(chapters, list):
-        return toc
-
-    kept: list[dict[str, Any]] = []
-    for chapter in chapters:
-        if not isinstance(chapter, dict):
-            continue
-        layout = layout_from_toc_metadata(chapter)
-        if layout_line_matches_running_header_footer(
-            chapter.get("chapter"),
-            layout,
-            running_header_footer_styles=running_header_footer_styles,
-        ):
-            continue
-        kept.append(chapter)
-
-    toc["chapters"] = dedupe_toc_chapters(kept)
-    return toc
-
-
-def clean_gemma_toc_output(toc: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
-    styles = getattr(args, "_gemma_running_header_footer_styles", None)
-    if not isinstance(styles, list):
-        styles = gemma_running_header_footer_styles(args)
-    return remove_toc_running_header_footer_entries(toc, styles)
-
-
 def layout_candidate_has_visual_material_context(
     candidate: dict[str, Any],
     candidates: list[dict[str, Any]],
@@ -5221,7 +4808,6 @@ def build_gemma_document_style_reference(
             })
 
     cluster_summaries = [document_style_cluster_summary(cluster) for cluster in clusters.values()]
-    running_header_footer_styles = build_running_header_footer_styles(layout_lines)
     probable_body_styles = sorted(
         (
             cluster
@@ -5270,7 +4856,6 @@ def build_gemma_document_style_reference(
         "style_cluster_count": len(cluster_summaries),
         "probable_body_styles": probable_body_styles,
         "stronger_or_marked_style_clusters": stronger_styles,
-        "running_header_footer_styles": running_header_footer_styles,
         "title_like_examples": title_like_examples,
     }
     summary["prompt_text"] = format_gemma_document_style_reference(summary)
@@ -5510,7 +5095,6 @@ def possible_invalid_heading_candidates(
     toc: dict[str, Any],
     source_text: str = "",
     max_candidates: int = 40,
-    running_header_footer_styles: list[dict[str, Any]] | None = None,
 ) -> list[dict[str, Any]]:
     chapters = toc.get("chapters", [])
     if not isinstance(chapters, list):
@@ -5553,15 +5137,7 @@ def possible_invalid_heading_candidates(
                 and not has_marker
             )
         )
-        header_footer_match = running_header_footer_match(
-            title,
-            layout=layout,
-            running_header_footer_styles=running_header_footer_styles,
-        )
-
         reasons: list[str] = []
-        if header_footer_match:
-            reasons.append("matches repeated top/bottom running header/footer style")
         if ancillary:
             reasons.append("title itself looks like a case/example/table/figure/problem/reference label")
         if ancillary_context:
@@ -5597,8 +5173,6 @@ def possible_invalid_heading_candidates(
         }
         if visual_context:
             row["source_visual_context"] = visual_context
-        if header_footer_match:
-            row["running_header_footer_match"] = header_footer_match
         candidates.append(row)
 
     candidates = sorted(
@@ -5616,13 +5190,11 @@ def format_gemma_possible_invalid_heading_candidates(
     toc: dict[str, Any],
     source_text: str = "",
     max_candidates: int = 40,
-    running_header_footer_styles: list[dict[str, Any]] | None = None,
 ) -> str:
     candidates = possible_invalid_heading_candidates(
         toc,
         source_text=source_text,
         max_candidates=max_candidates,
-        running_header_footer_styles=running_header_footer_styles,
     )
     if not candidates:
         return ""
@@ -5657,13 +5229,6 @@ def format_gemma_possible_invalid_heading_candidates(
                     "nearby_small_label="
                     + compact_toc_example_title(small_label_examples[0], max_chars=120)
                 )
-        header_footer_match = candidate.get("running_header_footer_match")
-        if isinstance(header_footer_match, dict):
-            evidence_parts.append(
-                "running_header_footer="
-                + compact_toc_example_title(header_footer_match.get("display_text"), max_chars=90)
-                + f" pages={header_footer_match.get('page_range')}"
-            )
         evidence_text = f" / {'; '.join(evidence_parts)}" if evidence_parts else ""
         lines.append(
             f'- level={candidate.get("level")}{location_text}: title="{compact_toc_example_title(candidate.get("title"), max_chars=100)}" / reasons={reason_text}{evidence_text}'
@@ -5763,7 +5328,7 @@ def format_gemma_missing_numbered_heading_candidates(
 
     lines = [
         "[Observed Missing Numbered Heading Candidates]",
-        "These catch omissions even when the missing body hierarchy title is the final item in a numbered sequence. They are clues, not automatic additions. Restore a candidate only if it is a real visible chapter/section/subsection title and not a running header/footer, existing TOC line, body sentence, caption, question, reference, or duplicate.",
+        "These catch omissions even when the missing body hierarchy title is the final item in a numbered sequence. They are clues, not automatic additions. Restore a candidate only if it is a real visible chapter/section/subsection title and not an existing TOC line, running header/footer, body sentence, caption, question, reference, or duplicate.",
     ]
     for _, candidate in sorted(candidates_by_path.items())[:max_candidates]:
         location = missing_numbered_candidate_layout_text(candidate)
@@ -5998,7 +5563,6 @@ def build_gemma_level_review_prompt(
     partial_tocs: list[dict[str, Any]] | None = None,
     level_reference_text: str = "",
     document_style_text: str = "",
-    running_header_footer_styles: list[dict[str, Any]] | None = None,
 ) -> str:
     toc_json = json.dumps(compact_toc_for_gemma_level_review(toc), ensure_ascii=False, indent=2)
     style_summary = format_gemma_level_style_summary(toc)
@@ -6006,7 +5570,6 @@ def build_gemma_level_review_prompt(
     invalid_heading_summary = format_gemma_possible_invalid_heading_candidates(
         toc,
         source_text=source_text,
-        running_header_footer_styles=running_header_footer_styles,
     )
     invalid_heading_block = f"\n\n{invalid_heading_summary}" if clean_text(invalid_heading_summary) else ""
     reference_block = f"\n\n{level_reference_text}" if clean_text(level_reference_text) else ""
@@ -6021,7 +5584,7 @@ Rules:
 - Correct level values using visible hierarchy and _layout_* metadata.
 - Remove duplicates and clearly invalid non-title entries.
 - Do not add new entries unless the current JSON already contains a clear duplicate/merge error.
-- Keep only body hierarchy titles; remove any remaining header/footer, caption, question, reference, body sentence, or existing TOC listing.
+- Keep only body hierarchy titles; remove any remaining existing TOC listing, repeated header/footer, caption, question, reference, or body sentence.
 - Preserve correct title text, page, order, and _layout_* metadata.
 - Use only levels 1 to {max_depth}. Return compact valid JSON only.
 {document_style_block}
@@ -6541,14 +6104,6 @@ def record_gemma_level_review_status(args: argparse.Namespace, status: dict[str,
     update_processing_metadata(args, gemma_level_review=stats)
 
 
-def gemma_running_header_footer_styles(args: argparse.Namespace) -> list[dict[str, Any]]:
-    summary = getattr(args, "_gemma_document_style_reference", None)
-    if not isinstance(summary, dict):
-        return []
-    styles = summary.get("running_header_footer_styles")
-    return styles if isinstance(styles, list) else []
-
-
 def review_gemma_toc_levels(
     model: str,
     pdf_path: Path,
@@ -6567,11 +6122,9 @@ def review_gemma_toc_levels(
         return toc, "", {"enabled": False, "success": False, "skipped": True}
 
     label = f"Gemma level review({stage_label})"
-    running_header_footer_styles = gemma_running_header_footer_styles(args)
     invalid_heading_candidates = possible_invalid_heading_candidates(
         toc,
         source_text=source_text,
-        running_header_footer_styles=running_header_footer_styles,
     )
     review_prompt = build_gemma_level_review_prompt(
         base_prompt=prompt,
@@ -6583,7 +6136,6 @@ def review_gemma_toc_levels(
         partial_tocs=partial_tocs,
         level_reference_text=level_reference_text,
         document_style_text=document_style_text,
-        running_header_footer_styles=running_header_footer_styles,
     )
     print(f"  {label} started", flush=True)
     try:
@@ -6595,7 +6147,6 @@ def review_gemma_toc_levels(
         )
         reviewed_toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
         restore_missing_toc_metadata_from_source(reviewed_toc, toc)
-        reviewed_toc = clean_gemma_toc_output(reviewed_toc, args)
         change_report = build_toc_review_change_report(toc, reviewed_toc)
         level_changes = int(change_report.get("level_change_count", 0) or 0)
         input_chapters = len(toc.get("chapters", []) or [])
@@ -6742,7 +6293,6 @@ def merge_gemma_partial_tocs_once(
         fallback_title=pdf_path.stem,
         max_depth=args.max_depth,
     )
-    toc = clean_gemma_toc_output(toc, args)
 
     source_min_page, source_max_page = partial_toc_page_bounds(partial_tocs)
     output_pages = toc_chapter_pages(toc)
@@ -6765,7 +6315,6 @@ def merge_gemma_partial_tocs_once(
         )
         toc = merge_partial_tocs_locally(partial_tocs, fallback_title=pdf_path.stem, max_depth=args.max_depth)
         restore_level_reasons_from_partials(toc, partial_tocs)
-        toc = clean_gemma_toc_output(toc, args)
         output_pages = toc_chapter_pages(toc)
         status.update({
             "output_chapters": len(toc.get("chapters", []) or []),
@@ -6819,7 +6368,6 @@ def merge_gemma_partial_tocs_batched(
             )
             batch_toc = merge_partial_tocs_locally(batch, fallback_title=pdf_path.stem, max_depth=args.max_depth)
             restore_level_reasons_from_partials(batch_toc, batch)
-            batch_toc = clean_gemma_toc_output(batch_toc, args)
             raw_text = json.dumps(
                 {
                     "mode": "local_merge_after_gemma_batch_failure",
@@ -6880,7 +6428,6 @@ def merge_gemma_partial_tocs_batched(
         final_toc = merge_partial_tocs_locally(batch_partials, fallback_title=pdf_path.stem, max_depth=args.max_depth)
         restore_level_reasons_from_partials(final_toc, batch_partials)
         restore_level_reasons_from_partials(final_toc, partial_tocs)
-        final_toc = clean_gemma_toc_output(final_toc, args)
 
     final_raw_text = json.dumps(
         {
@@ -6976,7 +6523,6 @@ def process_gemma_text_chunk(
             chunk_text=str(chunk.get("text") or ""),
             level_reference=level_reference if use_level_reference else None,
         )
-        partial_toc = clean_gemma_toc_output(partial_toc, args)
         write_stage_file(
             args=args,
             pdf_path=pdf_path,
@@ -7006,7 +6552,6 @@ def process_gemma_text_chunk(
                 level_reference_text=level_reference_text,
                 document_style_text=document_style_text,
             )
-            partial_toc = clean_gemma_toc_output(partial_toc, args)
             write_stage_file(
                 args=args,
                 pdf_path=pdf_path,
@@ -7128,29 +6673,7 @@ def generate_toc_from_pdf_gemma_text(
     raw_pages, extraction_metadata = extract_gemma_pdf_pages(pdf_path, args)
     raw_extracted_chars = sum(len(text) for _, text in raw_pages)
     extraction_mode = extraction_metadata.get("gemma_extraction_mode", "text")
-    pages, toc_page_metadata = exclude_gemma_existing_toc_pages(raw_pages)
-    document_style_summary = build_gemma_document_style_reference(
-        pages,
-        enabled=bool(getattr(args, "gemma_document_style_reference", DEFAULT_GEMMA_DOCUMENT_STYLE_REFERENCE)),
-        max_clusters=max(1, int(getattr(args, "gemma_document_style_max_clusters", DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_CLUSTERS))),
-        max_examples=max(1, int(getattr(args, "gemma_document_style_max_examples", DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_EXAMPLES))),
-    )
-    running_header_footer_styles = (
-        document_style_summary.get("running_header_footer_styles")
-        if isinstance(document_style_summary.get("running_header_footer_styles"), list)
-        else []
-    )
-    setattr(args, "_gemma_running_header_footer_styles", running_header_footer_styles)
-    pages_before_header_footer_filter = len(pages)
-    chars_before_header_footer_filter = sum(len(text) for _, text in pages)
-    filtered_pages, header_footer_filter_metadata = strip_gemma_running_header_footer_pages(
-        pages,
-        running_header_footer_styles=running_header_footer_styles,
-    )
-    if filtered_pages:
-        pages = filtered_pages
-    else:
-        header_footer_filter_metadata["gemma_header_footer_filter_fallback"] = "all_pages_removed"
+    pages = list(raw_pages)
     extracted_chars = sum(len(text) for _, text in pages)
     full_text = gemma_full_text_from_pages(pages)
     document_style_summary = build_gemma_document_style_reference(
@@ -7159,16 +6682,12 @@ def generate_toc_from_pdf_gemma_text(
         max_clusters=max(1, int(getattr(args, "gemma_document_style_max_clusters", DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_CLUSTERS))),
         max_examples=max(1, int(getattr(args, "gemma_document_style_max_examples", DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_EXAMPLES))),
     )
-    if isinstance(running_header_footer_styles, list):
-        document_style_summary["running_header_footer_styles"] = running_header_footer_styles
     setattr(args, "_gemma_document_style_reference", document_style_summary)
     document_style_text = str(document_style_summary.get("prompt_text") or "").strip()
     print(
         (
             f"  Gemma PDF extraction completed: {len(raw_pages)} pages, {raw_extracted_chars} chars, "
-            f"mode={extraction_mode}, selected_pages={len(pages)}, "
-            f"excluded_toc_pages={toc_page_metadata.get('gemma_excluded_toc_page_count', 0)}, "
-            f"removed_header_footer_lines={header_footer_filter_metadata.get('gemma_removed_header_footer_line_count', 0)}"
+            f"mode={extraction_mode}, selected_pages={len(pages)}"
         ),
         flush=True,
     )
@@ -7177,17 +6696,12 @@ def generate_toc_from_pdf_gemma_text(
         input_mode="extracted_pdf_layout_text" if extraction_mode == "layout" else "extracted_pdf_text",
         raw_extracted_pages=len(raw_pages),
         raw_extracted_chars=raw_extracted_chars,
-        pages_before_header_footer_filter=pages_before_header_footer_filter,
-        chars_before_header_footer_filter=chars_before_header_footer_filter,
         extracted_pages=len(pages),
         extracted_chars=extracted_chars,
         gemma_document_style_reference=bool(document_style_summary.get("enabled")),
         gemma_document_style_reference_available=bool(document_style_summary.get("available")),
         gemma_document_style_cluster_count=document_style_summary.get("style_cluster_count", 0),
         gemma_document_style_title_like_example_count=len(document_style_summary.get("title_like_examples", []) or []),
-        gemma_running_header_footer_style_count=len(document_style_summary.get("running_header_footer_styles", []) or []),
-        **toc_page_metadata,
-        **header_footer_filter_metadata,
         **extraction_metadata,
     )
     update_processing_metadata(
@@ -7213,12 +6727,8 @@ def generate_toc_from_pdf_gemma_text(
         stage="01_pdf_extracted",
         payload={
             "extraction": extraction_metadata,
-            "toc_page_filter": toc_page_metadata,
-            "header_footer_filter": header_footer_filter_metadata,
             "raw_extracted_pages": len(raw_pages),
             "raw_extracted_chars": raw_extracted_chars,
-            "pages_before_header_footer_filter": pages_before_header_footer_filter,
-            "chars_before_header_footer_filter": chars_before_header_footer_filter,
             "extracted_pages": len(pages),
             "extracted_chars": extracted_chars,
             "parsed_pdf_file": getattr(args, "_ai_processing_metadata", {}).get("parsed_pdf_file"),
@@ -7256,7 +6766,6 @@ def generate_toc_from_pdf_gemma_text(
             print(f"  Gemma text TOC generation completed: {model}", flush=True)
             toc = validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth)
             add_level_reasons_to_toc(toc, chunk_text=full_text)
-            toc = clean_gemma_toc_output(toc, args)
             write_stage_file(
                 args=args,
                 pdf_path=pdf_path,
@@ -7285,7 +6794,6 @@ def generate_toc_from_pdf_gemma_text(
                     source_text=full_text,
                     document_style_text=document_style_text,
                 )
-                toc = clean_gemma_toc_output(toc, args)
                 write_stage_file(
                     args=args,
                     pdf_path=pdf_path,
@@ -7336,13 +6844,9 @@ def generate_toc_from_pdf_gemma_text(
                 "model": model,
                 "pdf": pdf_path.name,
                 "extraction": extraction_metadata,
-                "toc_page_filter": toc_page_metadata,
-                "header_footer_filter": header_footer_filter_metadata,
                 "document_style_reference": document_style_summary,
                 "raw_extracted_pages": len(raw_pages),
                 "raw_extracted_chars": raw_extracted_chars,
-                "pages_before_header_footer_filter": pages_before_header_footer_filter,
-                "chars_before_header_footer_filter": chars_before_header_footer_filter,
                 "extracted_pages": len(pages),
                 "extracted_chars": extracted_chars,
                 "raw_response": raw_text,
@@ -7373,12 +6877,8 @@ def generate_toc_from_pdf_gemma_text(
         payload={
             "chunk_count": len(chunks),
             "chunk_chars": chunk_chars,
-            "toc_page_filter": toc_page_metadata,
-            "header_footer_filter": header_footer_filter_metadata,
             "raw_extracted_pages": len(raw_pages),
             "raw_extracted_chars": raw_extracted_chars,
-            "pages_before_header_footer_filter": pages_before_header_footer_filter,
-            "chars_before_header_footer_filter": chars_before_header_footer_filter,
             "extracted_pages": len(pages),
             "extracted_chars": extracted_chars,
             "chunks": [
@@ -7464,7 +6964,6 @@ def generate_toc_from_pdf_gemma_text(
         print("  Gemma chunked TOC local merge started", flush=True)
         toc = merge_partial_tocs_locally(partial_tocs, fallback_title=pdf_path.stem, max_depth=args.max_depth)
         restore_level_reasons_from_partials(toc, partial_tocs)
-        toc = clean_gemma_toc_output(toc, args)
         final_raw_text = json.dumps(
             {
                 "mode": "local_merge",
@@ -7530,7 +7029,6 @@ def generate_toc_from_pdf_gemma_text(
                 print(f"  Merge error log saved: {merge_error_log}", file=sys.stderr, flush=True)
             toc = merge_partial_tocs_locally(partial_tocs, fallback_title=pdf_path.stem, max_depth=args.max_depth)
             restore_level_reasons_from_partials(toc, partial_tocs)
-            toc = clean_gemma_toc_output(toc, args)
             final_raw_text = json.dumps(
                 {
                     "mode": "local_merge_after_gemma_merge_failure",
@@ -7583,7 +7081,6 @@ def generate_toc_from_pdf_gemma_text(
             fallback_title=pdf_path.stem,
             max_depth=args.max_depth,
         )
-        toc = clean_gemma_toc_output(toc, args)
         write_stage_file(
             args=args,
             pdf_path=pdf_path,
@@ -7636,13 +7133,9 @@ def generate_toc_from_pdf_gemma_text(
         "model": model,
         "pdf": pdf_path.name,
         "extraction": extraction_metadata,
-        "toc_page_filter": toc_page_metadata,
-        "header_footer_filter": header_footer_filter_metadata,
         "document_style_reference": document_style_summary,
         "raw_extracted_pages": len(raw_pages),
         "raw_extracted_chars": raw_extracted_chars,
-        "pages_before_header_footer_filter": pages_before_header_footer_filter,
-        "chars_before_header_footer_filter": chars_before_header_footer_filter,
         "extracted_pages": len(pages),
         "extracted_chars": extracted_chars,
         "chunk_count": len(chunks),
