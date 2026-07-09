@@ -1,0 +1,8 @@
+Run log saved: data/output/logs/1편(2021)_gemini_20260709_145254_log.txt
+Processing started: 1편(2021).pdf
+  provider: gemini
+Failed: 1편(2021).pdf / GEMINI_API_KEY is required. Add GEMINI_API_KEY=... to your .env file.
+  elapsed: 0.0s (0.000s)
+  Error log saved: data/output/error_logs/20260709_145254_1_2021_gemini_gemini-3.1-pro-preview_PDF_processing_failed_error.json
+Processing result: success 0 / failed 1
+Run log saved: data/output/logs/1편(2021)_gemini_20260709_145254_log.txt

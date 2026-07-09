@@ -1,0 +1,46 @@
+{
+    "timestamp": "2026-07-09 15:04:59",
+    "stage_index": 5,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재2/2권-한글/3편3,4장(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_3_4_2021.pdf",
+    "chunk": "chunk 1/3",
+    "review_stage": "chunk 1/3",
+    "input_chapters": 81,
+    "candidate_count": 1,
+    "candidates": [
+        {
+            "title": "1) 일산화탄소(carbon monoxide, CO)",
+            "level": 3,
+            "page": 33,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Third-level detail under 3.3 질식제.",
+            "font_size": 8.5,
+            "size_ratio": 0.9,
+            "left_indent": 78.0,
+            "vertical_position": 367.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=33, line=1363, s=12.0, r=1.27, x=65.0, y=449.0: \"1) 일산화탄소(carbon monoxide, CO) 전신적으로 산소의 운반과\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 3,
+                "small_label_examples": [
+                    "page=33, line=1360, s=8.5, r=0.9, x=482.0, y=414.0: \"식상태를 야기하는 가스\"",
+                    "page=33, line=1362, s=8.5, r=0.9, x=482.0, y=439.0: \"화학적 질식제\"",
+                    "page=33, line=1364, s=8.5, r=0.9, x=482.0, y=465.0: \"사용을 방해하는 가스\""
+                ]
+            }
+        }
+    ]
+}

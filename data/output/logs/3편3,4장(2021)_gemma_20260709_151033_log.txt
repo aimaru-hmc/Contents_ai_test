@@ -1,0 +1,26 @@
+Run log saved: data/output/logs/3편3,4장(2021)_gemma_20260709_151033_log.txt
+Processing started: 3편3,4장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 103 pages, 343956 chars, mode=layout, selected_pages=103
+  Parsed PDF text saved: data/output/parsed_pdfs/3_3_4_2021_gemma_20260709_151033_parsed_pdf.txt
+  Gemma text chunk processing started: 3 chunks
+  Gemma chunk 1/3 request: pages 1-35
+  Gemma input chunk 1 saved: data/output/input_chunks/3_3_4_2021_gemma_20260709_151033/chunk_1_pages_1-35.json
+  Gemma level review(chunk 1/3) started
+  Gemma level review(chunk 1/3) completed: 80 chapters / level changes 0
+  Gemma chunk 1 completed: 80 chapters
+  Gemma chunk 2/3 request: pages 36-71
+  Gemma input chunk 2 saved: data/output/input_chunks/3_3_4_2021_gemma_20260709_151033/chunk_2_pages_36-71.json
+  Gemma level review(chunk 2/3) started
+  Gemma level review(chunk 2/3) completed: 59 chapters / level changes 57
+  Gemma chunk 2 completed: 59 chapters
+  Gemma chunk 3/3 request: pages 72-103
+  Gemma input chunk 3 saved: data/output/input_chunks/3_3_4_2021_gemma_20260709_151033/chunk_3_pages_72-103.json
+  Gemma level review(chunk 3/3) started
+  Gemma level review(chunk 3/3) completed: 55 chapters / level changes 0
+  Gemma chunk 3 completed: 55 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
