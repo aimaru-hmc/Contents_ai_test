@@ -19,3 +19,41 @@ Processing started: 주교재.pdf
   Gemma chunk 3/8 request: pages 61-87
   Gemma input chunk 3 saved: data/output/input_chunks/unknown_model_gemma_20260709_151735/chunk_3_pages_61-87.json
   Gemma level review(chunk 3/8) started
+  Gemma level review(chunk 3/8) completed: 53 chapters / level changes 16
+  Gemma chunk 3 completed: 53 chapters
+  Gemma chunk 4/8 request: pages 88-113
+  Gemma input chunk 4 saved: data/output/input_chunks/unknown_model_gemma_20260709_151735/chunk_4_pages_88-113.json
+  Gemma level review(chunk 4/8) started
+  Gemma level review(chunk 4/8) completed: 43 chapters / level changes 0
+  Gemma chunk 4 completed: 43 chapters
+  Gemma chunk 5/8 request: pages 114-139
+  Gemma input chunk 5 saved: data/output/input_chunks/unknown_model_gemma_20260709_151735/chunk_5_pages_114-139.json
+  Gemma level review(chunk 5/8) started
+  Gemma level review(chunk 5/8) completed: 32 chapters / level changes 0
+  Gemma chunk 5 completed: 32 chapters
+  Gemma chunk 6/8 request: pages 140-166
+  Gemma input chunk 6 saved: data/output/input_chunks/unknown_model_gemma_20260709_151735/chunk_6_pages_140-166.json
+  Gemma level review(chunk 6/8) started
+  Gemma level review(chunk 6/8) completed: 40 chapters / level changes 9
+  Gemma chunk 6 completed: 40 chapters
+  Gemma chunk 7/8 request: pages 167-194
+  Gemma input chunk 7 saved: data/output/input_chunks/unknown_model_gemma_20260709_151735/chunk_7_pages_167-194.json
+  Gemma level review(chunk 7/8) started
+  Gemma level review(chunk 7/8) completed: 40 chapters / level changes 7
+  Gemma chunk 7 completed: 40 chapters
+  Gemma chunk 8/8 request: pages 195-226
+  Gemma input chunk 8 saved: data/output/input_chunks/unknown_model_gemma_20260709_151735/chunk_8_pages_195-226.json
+  Gemma level review(chunk 8/8) started
+  Gemma level review(chunk 8/8) completed: 18 chapters / level changes 0
+  Gemma chunk 8 completed: 18 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) completed: 232 chapters / level changes 0
+Completed: data/output/unknown_model_gemma_20260709_152712_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 9m 37.4s (577.389s)
+  title: Basic epidemiology
+  chapters: 232
+Processing result: success 1 / failed 0
+Run log saved: data/output/logs/주교재_gemma_20260709_151735_log.txt

@@ -1,0 +1,585 @@
+{
+    "timestamp": "2026-07-09 15:24:36",
+    "stage_index": 29,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "chunk 7/8",
+    "review_stage": "chunk 7/8",
+    "input_chapters": 40,
+    "candidate_count": 17,
+    "candidates": [
+        {
+            "title": "Risk assessment",
+            "level": 3,
+            "page": 168,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under Assessing risk with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 115.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 3,
+                "exact_examples": [
+                    "page=168, line=42, s=14.0, r=1.4, x=55.0, y=115.0: \"Risk assessment\""
+                ],
+                "embedded_examples": [
+                    "page=168, line=43, s=10.0, r=1.0, x=55.0, y=143.0: \"Risk assessment is a term with a variety of definitions, but the intuitive interpretation\"",
+                    "page=168, line=48, s=10.0, r=1.0, x=55.0, y=234.0: \"Health impact assessment can be considered as a risk assessment focused on a spe-\"",
+                    "page=168, line=49, s=10.0, r=1.0, x=55.0, y=247.0: \"cific population or exposure situation, while risk assessment has a more general\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 3,
+                "small_label_examples": [
+                    "page=168, line=40, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 155\"",
+                    "page=168, line=40, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 155\"",
+                    "page=168, line=40, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 155\""
+                ]
+            }
+        },
+        {
+            "title": "Health impact assessment",
+            "level": 3,
+            "page": 168,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under Assessing risk with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 206.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 4,
+                "exact_examples": [
+                    "page=168, line=47, s=14.0, r=1.4, x=55.0, y=206.0: \"Health impact assessment\""
+                ],
+                "embedded_examples": [
+                    "page=168, line=48, s=10.0, r=1.0, x=55.0, y=234.0: \"Health impact assessment can be considered as a risk assessment focused on a spe-\"",
+                    "page=168, line=51, s=10.0, r=1.0, x=55.0, y=273.0: \"potentially cause in certain exposure situations?” Health impact assessment is now\"",
+                    "page=168, line=57, s=14.0, r=1.4, x=55.0, y=388.0: \"Environmental health impact assessment\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 2,
+                "small_label_examples": [
+                    "page=168, line=40, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 155\"",
+                    "page=168, line=40, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 155\""
+                ]
+            }
+        },
+        {
+            "title": "Injury epidemiology",
+            "level": 2,
+            "page": 170,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Major section title with style s=20.0, r=2.00, x=55.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 55.0,
+            "vertical_position": 83.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=170, line=133, s=20.0, r=2.0, x=55.0, y=83.0: \"Injury epidemiology\""
+                ],
+                "embedded_examples": [
+                    "page=170, line=147, s=10.0, r=1.0, x=56.0, y=128.0: \"mental and occupational health is accident and injury epidemiology. Traffic accident\"",
+                    "page=170, line=156, s=10.0, r=1.0, x=55.0, y=462.0: \"A classic example of practical injury epidemiology for traffic crashes is the demon-\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=170, line=141, s=8.0, r=0.8, x=55.0, y=236.0: \"Figure 9.6. Pedestrian fatality risk as a function of the impact speed of the car22\"",
+                    "page=170, line=141, s=8.0, r=0.8, x=55.0, y=236.0: \"Figure 9.6. Pedestrian fatality risk as a function of the impact speed of the car22\""
+                ],
+                "small_label_examples": [
+                    "page=170, line=146, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 157\"",
+                    "page=170, line=142, s=7.6, r=0.76, x=87.0, y=384.0: \"0\"",
+                    "page=170, line=143, s=3.8, r=0.38, x=68.0, y=286.0: \"htaed\"",
+                    "page=170, line=144, s=3.3, r=0.33, x=68.0, y=306.0: \"fo\""
+                ]
+            }
+        },
+        {
+            "title": "Traffic crash injuries",
+            "level": 3,
+            "page": 170,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under Injury epidemiology with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 434.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=170, line=155, s=14.0, r=1.4, x=55.0, y=434.0: \"Traffic crash injuries\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=170, line=142, s=7.6, r=0.76, x=87.0, y=384.0: \"0\"",
+                    "page=170, line=148, s=7.6, r=0.76, x=91.0, y=250.0: \"1\"",
+                    "page=170, line=153, s=7.6, r=0.76, x=95.0, y=398.0: \"0 20 40 60 80 100\"",
+                    "page=170, line=154, s=7.6, r=0.76, x=191.0, y=408.0: \"Impact speed (km/h)\""
+                ]
+            }
+        },
+        {
+            "title": "Workplace injury",
+            "level": 3,
+            "page": 170,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under Injury epidemiology with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 538.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=170, line=161, s=14.0, r=1.4, x=55.0, y=538.0: \"Workplace injury\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 2,
+                "small_label_examples": [
+                    "page=170, line=153, s=7.6, r=0.76, x=95.0, y=398.0: \"0 20 40 60 80 100\"",
+                    "page=170, line=154, s=7.6, r=0.76, x=191.0, y=408.0: \"Impact speed (km/h)\""
+                ]
+            }
+        },
+        {
+            "title": "Violence",
+            "level": 3,
+            "page": 171,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under Injury epidemiology with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 408.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=171, line=193, s=14.0, r=1.4, x=140.0, y=408.0: \"Violence\""
+                ],
+                "embedded_examples": [
+                    "page=171, line=194, s=10.0, r=1.0, x=140.0, y=436.0: \"Violence is another public health problem that has been highlighted through epide-\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=171, line=180, s=7.2, r=0.72, x=198.0, y=333.0: \"5\"",
+                    "page=171, line=181, s=7.2, r=0.72, x=198.0, y=364.0: \"0\"",
+                    "page=171, line=182, s=7.2, r=0.72, x=202.0, y=372.0: \"0 25 50 75 100 112\"",
+                    "page=171, line=183, s=7.2, r=0.72, x=286.0, y=383.0: \"Speed (km/h)\""
+                ]
+            }
+        },
+        {
+            "title": "Suicides",
+            "level": 3,
+            "page": 171,
+            "reasons": [
+                "source context looks like case/example/table/figure/problem/reference material"
+            ],
+            "level_reason": "Subsection under Injury epidemiology with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 538.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=171, line=201, s=14.0, r=1.4, x=140.0, y=538.0: \"Suicides\""
+                ],
+                "embedded_examples": [
+                    "page=171, line=203, s=10.0, r=1.0, x=140.0, y=579.0: \"cidal intent are primarily social or economic,24 but completed suicides are also\"",
+                    "page=171, line=205, s=10.0, r=1.0, x=140.0, y=605.0: \"factor. Figure 9.8 shows the dramatic increase of suicides in Western Samoa after the\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "The influence of epidemiology",
+            "level": 3,
+            "page": 179,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under Health policy with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 240.0,
+            "vertical_position": 397.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=179, line=472, s=14.0, r=1.4, x=240.0, y=397.0: \"The influence of epidemiology\""
+                ],
+                "embedded_examples": [
+                    "page=179, line=487, s=10.0, r=1.0, x=52.0, y=515.0: \"objectives. T he influence of epidemiology is often mediated by\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=179, line=468, s=9.0, r=0.9, x=52.0, y=368.0: \"needs, advocate for action, and develop a national\"",
+                    "page=179, line=470, s=9.0, r=0.9, x=52.0, y=380.0: \"policy and plan;\"",
+                    "page=179, line=473, s=9.0, r=0.9, x=52.0, y=403.0: \"technical support;\"",
+                    "page=179, line=478, s=9.0, r=0.9, x=52.0, y=460.0: \"and ownership;\""
+                ]
+            }
+        },
+        {
+            "title": "Health policy",
+            "level": 2,
+            "page": 179,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Major section title with style s=20.0, r=2.00.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 436.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=179, line=453, s=20.0, r=2.0, x=140.0, y=171.0: \"Health policy\""
+                ],
+                "embedded_examples": [
+                    "page=179, line=460, s=10.0, r=1.0, x=257.0, y=282.0: \"H ealth policy is often considered in a narrow sense,\"",
+                    "page=179, line=465, s=9.0, r=0.9, x=46.0, y=334.0: \"(cid:120)a high-level political mandate to develop a national in the medical or health fi...\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=179, line=462, s=8.0, r=0.8, x=34.0, y=303.0: \"Box 10.1. Success factors in policy formulation2\"",
+                    "page=179, line=462, s=8.0, r=0.8, x=34.0, y=303.0: \"Box 10.1. Success factors in policy formulation2\""
+                ],
+                "small_label_examples": [
+                    "page=179, line=446, s=9.0, r=0.9, x=27.0, y=53.0: \"166 Chapter 10\"",
+                    "page=179, line=468, s=9.0, r=0.9, x=52.0, y=368.0: \"needs, advocate for action, and develop a national\"",
+                    "page=179, line=468, s=9.0, r=0.9, x=52.0, y=368.0: \"needs, advocate for action, and develop a national\"",
+                    "page=179, line=470, s=9.0, r=0.9, x=52.0, y=380.0: \"policy and plan;\""
+                ]
+            }
+        },
+        {
+            "title": "Health policy in practice",
+            "level": 3,
+            "page": 181,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under Health policy with style s=14.0, r=1.56.",
+            "font_size": 14.0,
+            "size_ratio": 1.56,
+            "left_indent": 140.0,
+            "vertical_position": 312.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=181, line=560, s=14.0, r=1.56, x=140.0, y=312.0: \"Health policy in practice\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 0,
+                "visual_caption_examples": [
+                    "page=181, line=564, s=8.0, r=0.89, x=34.0, y=401.0: \"Box 10.3. Evolution of national policy:coronary heart disease\""
+                ]
+            }
+        },
+        {
+            "title": "Health planning",
+            "level": 2,
+            "page": 182,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Major section title with style s=20.0, r=2.00.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 553.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=182, line=637, s=20.0, r=2.0, x=55.0, y=457.0: \"Health planning\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=182, line=629, s=9.0, r=0.9, x=289.0, y=373.0: \"developing a regulatory strategy to address addictive\"",
+                    "page=182, line=630, s=9.0, r=0.9, x=55.0, y=383.0: \"development of alert and response mechanisms, and the substances. In contrast to previous...\"",
+                    "page=182, line=633, s=9.0, r=0.9, x=289.0, y=417.0: \"the Framework Convention will help to save millions of\"",
+                    "page=182, line=635, s=9.0, r=0.9, x=289.0, y=428.0: \"lives.\""
+                ]
+            }
+        },
+        {
+            "title": "The planning cycle",
+            "level": 3,
+            "page": 183,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under Health planning with style s=20.0, r=2.00.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 140.0,
+            "vertical_position": 132.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=183, line=658, s=20.0, r=2.0, x=140.0, y=132.0: \"The planning cycle\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 1,
+                "visual_caption_examples": [
+                    "page=183, line=659, s=10.0, r=1.0, x=140.0, y=165.0: \"Fig. 10.1 outlines the stages involved in the health planning process and provides a\""
+                ],
+                "small_label_examples": [
+                    "page=183, line=654, s=9.0, r=0.9, x=27.0, y=53.0: \"170 Chapter 10\""
+                ]
+            }
+        },
+        {
+            "title": "Assessing burden",
+            "level": 4,
+            "page": 184,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Step in planning cycle with style s=14.0, r=1.56.",
+            "font_size": 14.0,
+            "size_ratio": 1.56,
+            "left_indent": 55.0,
+            "vertical_position": 160.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=184, line=704, s=14.0, r=1.56, x=55.0, y=160.0: \"Assessing burden\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 1,
+                "visual_caption_examples": [
+                    "page=184, line=695, s=8.0, r=0.89, x=289.0, y=94.0: \"Box 10.5. A word of caution: the reality of\""
+                ],
+                "small_label_examples": [
+                    "page=184, line=697, s=8.0, r=0.89, x=289.0, y=105.0: \"planning\""
+                ]
+            }
+        },
+        {
+            "title": "Understanding causes",
+            "level": 4,
+            "page": 185,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Step in planning cycle with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 397.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=185, line=788, s=14.0, r=1.4, x=140.0, y=397.0: \"Understanding causes\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 3,
+                "small_label_examples": [
+                    "page=185, line=780, s=9.0, r=0.9, x=34.0, y=317.0: \"example) while encouraging collection of standardized\"",
+                    "page=185, line=782, s=9.0, r=0.9, x=34.0, y=328.0: \"data, to facilitate comparisons between and within\"",
+                    "page=185, line=784, s=9.0, r=0.9, x=34.0, y=339.0: \"countries, and over time.\""
+                ]
+            }
+        },
+        {
+            "title": "Assessing efficiency",
+            "level": 4,
+            "page": 186,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Step in planning cycle with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 84.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=186, line=809, s=14.0, r=1.4, x=55.0, y=84.0: \"Assessing efficiency\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=186, line=810, s=8.0, r=0.8, x=289.0, y=94.0: \"Box 10.7. Factors determining effectiveness of\""
+                ],
+                "small_label_examples": [
+                    "page=186, line=808, s=9.0, r=0.9, x=311.0, y=53.0: \"Epidemiology, health policy and planning 173\"",
+                    "page=186, line=811, s=8.0, r=0.8, x=289.0, y=105.0: \"interventions\"",
+                    "page=186, line=813, s=9.0, r=0.9, x=289.0, y=120.0: \"The effectiveness of interventions in the community is\"",
+                    "page=186, line=815, s=9.0, r=0.9, x=289.0, y=131.0: \"determined by many factors.\""
+                ]
+            }
+        },
+        {
+            "title": "Implementing interventions",
+            "level": 4,
+            "page": 187,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Step in planning cycle with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 544.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=187, line=909, s=14.0, r=1.4, x=140.0, y=544.0: \"Implementing interventions\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 3,
+                "small_label_examples": [
+                    "page=187, line=901, s=9.0, r=0.9, x=34.0, y=448.0: \"of key health interventions. It also provides a tool for\"",
+                    "page=187, line=903, s=9.0, r=0.9, x=34.0, y=459.0: \"adapting regional results to countries. WHO-CHOICE\"",
+                    "page=187, line=905, s=9.0, r=0.9, x=34.0, y=481.0: \"efficiency – in a particular setting – of current and pro- become more widely disseminate...\""
+                ]
+            }
+        },
+        {
+            "title": "Monitoring activities and measuring progress",
+            "level": 4,
+            "page": 188,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Step in planning cycle with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 84.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=188, line=922, s=14.0, r=1.4, x=55.0, y=84.0: \"Monitoring activities and measuring progress\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 3,
+                "visual_caption_examples": [
+                    "page=188, line=927, s=10.0, r=1.0, x=55.0, y=163.0: \"Table 10.2 provides a specific example of all the planning steps.\"",
+                    "page=188, line=928, s=8.0, r=0.8, x=55.0, y=193.0: \"Table 10.2. Health planning: the case of raised blood pressure\""
+                ],
+                "small_label_examples": [
+                    "page=188, line=921, s=9.0, r=0.9, x=311.0, y=53.0: \"Epidemiology, health policy and planning 175\"",
+                    "page=188, line=929, s=8.0, r=0.8, x=55.0, y=215.0: \"Concept to assess Means of assessment\"",
+                    "page=188, line=930, s=8.0, r=0.8, x=55.0, y=232.0: \"Burden Population surveys of blood pressure and control of hypertension\""
+                ]
+            }
+        }
+    ]
+}

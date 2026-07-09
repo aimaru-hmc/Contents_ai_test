@@ -1,0 +1,1181 @@
+{
+    "timestamp": "2026-07-09 15:24:09",
+    "stage_index": 26,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "6",
+    "total_chunks": 8,
+    "start_page": 140,
+    "end_page": 166,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 6/8",
+        "input_chapters": 46,
+        "output_chapters": 40,
+        "level_changes": 9,
+        "added_entries": 1,
+        "removed_entries": 7,
+        "level_change_report_recorded": true,
+        "possible_invalid_heading_candidate_count": 20,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "Surveillance and response",
+                "level": 2,
+                "page": 140,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection within Chapter 7 based on font size and layout.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 446.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=140, line=35, s=14.0, r=1.4, x=55.0, y=446.0: \"Surveillance and response\""
+                    ],
+                    "embedded_examples": [
+                        "page=140, line=1, s=9.0, r=0.9, x=232.0, y=53.0: \"Communicable diseases: epidemiology surveillance and response 127\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 2,
+                    "visual_caption_examples": [
+                        "page=140, line=7, s=8.0, r=0.8, x=289.0, y=145.0: \"Box 7.5. Immunization: key to prevention and\""
+                    ],
+                    "small_label_examples": [
+                        "page=140, line=9, s=8.0, r=0.8, x=289.0, y=156.0: \"control\"",
+                        "page=140, line=36, s=9.0, r=0.9, x=55.0, y=474.0: \"Definition\""
+                    ]
+                }
+            },
+            {
+                "title": "The scope of surveillance",
+                "level": 3,
+                "page": 140,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Surveillance and response.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 586.0,
+                "bold": 1,
+                "italic": 1,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=140, line=44, s=9.0, r=0.9, x=55.0, y=586.0: \"The scope of surveillance\""
+                    ],
+                    "embedded_examples": [
+                        "page=140, line=45, s=10.0, r=1.0, x=55.0, y=597.0: \"The scope of surveillance is broad, from early warning systems for rapid response in\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=140, line=36, s=9.0, r=0.9, x=55.0, y=474.0: \"Definition\"",
+                        "page=140, line=44, s=9.0, r=0.9, x=55.0, y=586.0: \"The scope of surveillance\""
+                    ]
+                }
+            },
+            {
+                "title": "Analysis and interpretation of surveillance data",
+                "level": 3,
+                "page": 142,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Surveillance and response.",
+                "font_size": 8.0,
+                "size_ratio": 0.89,
+                "left_indent": 289.0,
+                "vertical_position": 156.0,
+                "bold": 1,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=142, line=132, s=9.0, r=1.0, x=55.0, y=302.0: \"Analysis and interpretation of surveillance data data can be used to reinforce each other.\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 0,
+                    "visual_caption_examples": [
+                        "page=142, line=138, s=10.0, r=1.11, x=73.0, y=378.0: \"Table 7.3 outlines Millennium Development Goal 6,\""
+                    ]
+                }
+            },
+            {
+                "title": "Diagnostic tests",
+                "level": 2,
+                "page": 149,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Standard chapter subsection.",
+                "font_size": 10.0,
+                "size_ratio": 1.0,
+                "left_indent": 73.0,
+                "vertical_position": 502.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 2,
+                    "embedded_examples": [
+                        "page=149, line=441, s=9.0, r=0.9, x=34.0, y=432.0: \"lute measures of the effects of treatment and assists Diagnostic tests\"",
+                        "page=149, line=450, s=10.0, r=1.0, x=240.0, y=505.0: \"signs and symptoms. While diagnostic tests usually in-\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=149, line=437, s=8.0, r=0.8, x=34.0, y=394.0: \"Box 8.1. Risk prediction\""
+                    ],
+                    "small_label_examples": [
+                        "page=149, line=439, s=9.0, r=0.9, x=34.0, y=410.0: \"Risk prediction (defining absolute risk of an event over icians communicate with patients...\"",
+                        "page=149, line=440, s=9.0, r=0.9, x=34.0, y=421.0: \"a specified time period) provides clinicians with abso-\"",
+                        "page=149, line=442, s=9.0, r=0.9, x=34.0, y=443.0: \"them in helping individuals with treatment decisions.\"",
+                        "page=149, line=443, s=9.0, r=0.9, x=34.0, y=454.0: \"Risk prediction charts can be used to account for mul-\""
+                    ]
+                }
+            },
+            {
+                "title": "Value of a test",
+                "level": 3,
+                "page": 149,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Diagnostic tests.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 581.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=149, line=456, s=14.0, r=1.4, x=140.0, y=581.0: \"Value of a test\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=149, line=449, s=9.0, r=0.9, x=34.0, y=498.0: \"history, systolic blood pressure and total cholesterol.\"",
+                        "page=149, line=451, s=9.0, r=0.9, x=34.0, y=509.0: \"An individual’s overall cardiovascular risk can be\""
+                    ]
+                }
+            },
+            {
+                "title": "Effectiveness of treatment",
+                "level": 2,
+                "page": 152,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Standard chapter subsection.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 319.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=152, line=565, s=20.0, r=2.0, x=55.0, y=319.0: \"Effectiveness of treatment\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=152, line=570, s=8.0, r=0.8, x=289.0, y=399.0: \"Box 8.2. More good than harm?\""
+                    ],
+                    "small_label_examples": [
+                        "page=152, line=559, s=8.0, r=0.8, x=129.0, y=209.0: \"1991—92\"",
+                        "page=152, line=560, s=8.0, r=0.8, x=129.0, y=219.0: \"1987—88\"",
+                        "page=152, line=561, s=8.0, r=0.8, x=129.0, y=229.0: \"1983—84\"",
+                        "page=152, line=563, s=8.0, r=0.8, x=98.0, y=281.0: \"0 0.5 1 1.5 2.0 2.5 3.0\""
+                    ]
+                }
+            },
+            {
+                "title": "Reducing risks",
+                "level": 3,
+                "page": 154,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Prevention in clinical practice.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=154, line=656, s=14.0, r=1.4, x=55.0, y=84.0: \"Reducing risks\""
+                    ],
+                    "embedded_examples": [
+                        "page=154, line=689, s=14.0, r=1.4, x=55.0, y=587.0: \"Reducing risks in patients with established disease\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=154, line=674, s=9.0, r=0.9, x=375.0, y=53.0: \"Clinical epidemiology 141\"",
+                        "page=154, line=681, s=6.8, r=0.68, x=302.0, y=464.0: \"Never smoked\"",
+                        "page=154, line=682, s=6.8, r=0.68, x=100.0, y=477.0: \"0\"",
+                        "page=154, line=683, s=6.8, r=0.68, x=110.0, y=489.0: \"45 55 65 75\""
+                    ]
+                }
+            },
+            {
+                "title": "Reducing risks in patients with established disease",
+                "level": 3,
+                "page": 154,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Prevention in clinical practice.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 587.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=154, line=689, s=14.0, r=1.4, x=55.0, y=587.0: \"Reducing risks in patients with established disease\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=154, line=681, s=6.8, r=0.68, x=302.0, y=464.0: \"Never smoked\"",
+                        "page=154, line=682, s=6.8, r=0.68, x=100.0, y=477.0: \"0\"",
+                        "page=154, line=683, s=6.8, r=0.68, x=110.0, y=489.0: \"45 55 65 75\"",
+                        "page=154, line=684, s=6.8, r=0.68, x=201.0, y=499.0: \"Age\""
+                    ]
+                }
+            },
+            {
+                "title": "Behavioural interventions",
+                "level": 4,
+                "page": 155,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Reducing risks in patients with established disease.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 84.0,
+                "bold": 1,
+                "italic": 1,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=155, line=699, s=9.0, r=0.9, x=140.0, y=84.0: \"Behavioural interventions\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 3,
+                    "visual_caption_examples": [
+                        "page=155, line=705, s=10.0, r=1.0, x=34.0, y=168.0: \"Box 8.4. Fixed-dose combination therapy For people with established cardiovascular diseas...\""
+                    ],
+                    "small_label_examples": [
+                        "page=155, line=698, s=9.0, r=0.9, x=27.0, y=53.0: \"142 Chapter 8\"",
+                        "page=155, line=704, s=9.0, r=0.9, x=240.0, y=157.0: \"Pharmacological interventions\"",
+                        "page=155, line=707, s=9.0, r=0.9, x=34.0, y=185.0: \"Fixed-dose combinations are a standard part of treat-\""
+                    ]
+                }
+            },
+            {
+                "title": "Pharmacological interventions",
+                "level": 4,
+                "page": 155,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Reducing risks in patients with established disease.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 240.0,
+                "vertical_position": 157.0,
+                "bold": 1,
+                "italic": 1,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=155, line=704, s=9.0, r=0.9, x=240.0, y=157.0: \"Pharmacological interventions\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=155, line=705, s=10.0, r=1.0, x=34.0, y=168.0: \"Box 8.4. Fixed-dose combination therapy For people with established cardiovascular diseas...\""
+                    ],
+                    "small_label_examples": [
+                        "page=155, line=698, s=9.0, r=0.9, x=27.0, y=53.0: \"142 Chapter 8\"",
+                        "page=155, line=699, s=9.0, r=0.9, x=140.0, y=84.0: \"Behavioural interventions\"",
+                        "page=155, line=707, s=9.0, r=0.9, x=34.0, y=185.0: \"Fixed-dose combinations are a standard part of treat-\"",
+                        "page=155, line=710, s=9.0, r=0.9, x=34.0, y=218.0: \"outcomes, and to simplify distribution and storage. Like- converting enzyme inhibitors an...\""
+                    ]
+                }
+            },
+            {
+                "title": "Other interventions",
+                "level": 4,
+                "page": 155,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Reducing risks in patients with established disease.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 387.0,
+                "bold": 1,
+                "italic": 1,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=155, line=728, s=9.0, r=0.9, x=140.0, y=387.0: \"Other interventions\""
+                    ],
+                    "embedded_examples": [
+                        "page=155, line=729, s=10.0, r=1.0, x=140.0, y=397.0: \"Many other interventions are available for the management of high risk patients and\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=155, line=721, s=9.0, r=0.9, x=34.0, y=306.0: \"group stands to gain most from a cheap and convenient\"",
+                        "page=155, line=723, s=9.0, r=0.9, x=34.0, y=317.0: \"formulation.\"",
+                        "page=155, line=721, s=9.0, r=0.9, x=34.0, y=306.0: \"group stands to gain most from a cheap and convenient\"",
+                        "page=155, line=723, s=9.0, r=0.9, x=34.0, y=317.0: \"formulation.\""
+                    ]
+                }
+            },
+            {
+                "title": "Impact of exposure to environmental factors",
+                "level": 3,
+                "page": 159,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Environment and health.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=159, line=847, s=14.0, r=1.4, x=140.0, y=84.0: \"Impact of exposure to environmental factors\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 1,
+                    "visual_caption_examples": [
+                        "page=159, line=852, s=8.0, r=0.8, x=27.0, y=154.0: \"Table 9.1. Environmental factors that may affect\""
+                    ],
+                    "small_label_examples": [
+                        "page=159, line=846, s=9.0, r=0.9, x=27.0, y=53.0: \"146 Chapter 9\""
+                    ]
+                }
+            },
+            {
+                "title": "Multi-causality",
+                "level": 3,
+                "page": 159,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Environment and health.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 239.0,
+                "vertical_position": 364.0,
+                "bold": 1,
+                "italic": 1,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=159, line=871, s=9.0, r=0.9, x=239.0, y=364.0: \"Multi-causality\""
+                    ],
+                    "embedded_examples": [
+                        "page=159, line=876, s=10.0, r=1.0, x=46.0, y=426.0: \"•Population dynamics Multi-causality and a clear hierarchy of causes (see\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=159, line=872, s=10.0, r=1.0, x=34.0, y=374.0: \"Box 9.1. Hierarchy of causes in environmental In epidemiological studies of environmental...\"",
+                        "page=159, line=872, s=10.0, r=1.0, x=34.0, y=374.0: \"Box 9.1. Hierarchy of causes in environmental In epidemiological studies of environmental...\""
+                    ],
+                    "small_label_examples": [
+                        "page=159, line=863, s=8.0, r=0.8, x=27.0, y=270.0: \"Chemical Tobacco, chemicals, dust, skin irritants,\"",
+                        "page=159, line=865, s=8.0, r=0.8, x=79.0, y=279.0: \"food additives\"",
+                        "page=159, line=879, s=9.0, r=0.9, x=46.0, y=460.0: \"•Science and technology\"",
+                        "page=159, line=871, s=9.0, r=0.9, x=239.0, y=364.0: \"Multi-causality\""
+                    ]
+                }
+            },
+            {
+                "title": "Value of prevention",
+                "level": 4,
+                "page": 160,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Evaluation of preventive measures.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 445.0,
+                "bold": 1,
+                "italic": 1,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=160, line=930, s=9.0, r=0.9, x=55.0, y=445.0: \"Value of prevention\""
+                    ],
+                    "embedded_examples": [
+                        "page=160, line=932, s=10.0, r=1.0, x=55.0, y=469.0: \"tential value of prevention.7 In three “pollution diseases” that occurred in the 1960s\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 3,
+                    "small_label_examples": [
+                        "page=160, line=938, s=9.0, r=0.9, x=55.0, y=557.0: \"Future challenges\"",
+                        "page=160, line=930, s=9.0, r=0.9, x=55.0, y=445.0: \"Value of prevention\"",
+                        "page=160, line=938, s=9.0, r=0.9, x=55.0, y=557.0: \"Future challenges\""
+                    ]
+                }
+            },
+            {
+                "title": "Exposure and dose",
+                "level": 2,
+                "page": 162,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Standard chapter subsection.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 83.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=162, line=998, s=20.0, r=2.0, x=55.0, y=83.0: \"Exposure and dose\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 2,
+                    "visual_caption_examples": [
+                        "page=162, line=1001, s=8.0, r=0.8, x=289.0, y=153.0: \"Box 9.2. Epidemiological research on the health\""
+                    ],
+                    "small_label_examples": [
+                        "page=162, line=997, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 149\"",
+                        "page=162, line=1003, s=8.0, r=0.8, x=289.0, y=164.0: \"effects of climate change\""
+                    ]
+                }
+            },
+            {
+                "title": "General concepts",
+                "level": 3,
+                "page": 162,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Exposure and dose.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 115.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=162, line=999, s=14.0, r=1.4, x=55.0, y=115.0: \"General concepts\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 2,
+                    "visual_caption_examples": [
+                        "page=162, line=1001, s=8.0, r=0.8, x=289.0, y=153.0: \"Box 9.2. Epidemiological research on the health\""
+                    ],
+                    "small_label_examples": [
+                        "page=162, line=997, s=9.0, r=0.9, x=294.0, y=53.0: \"Environmental and occupational epidemiology 149\"",
+                        "page=162, line=1003, s=8.0, r=0.8, x=289.0, y=164.0: \"effects of climate change\""
+                    ]
+                }
+            },
+            {
+                "title": "Individual versus group measurements",
+                "level": 4,
+                "page": 164,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Biological monitoring.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 615.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=164, line=1123, s=14.0, r=1.4, x=55.0, y=615.0: \"Individual versus group measurements\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=164, line=1101, s=8.0, r=0.8, x=93.0, y=574.0: \"July Aug Sep Oct Nov Dec Jan Feb Mar Apr May June\"",
+                        "page=164, line=1102, s=8.0, r=0.8, x=146.0, y=583.0: \"1973 1974\"",
+                        "page=164, line=1103, s=8.0, r=0.8, x=211.0, y=589.0: \"Time\"",
+                        "page=164, line=1111, s=2.7, r=0.27, x=61.0, y=536.0: \"g/gm(\""
+                    ]
+                }
+            },
+            {
+                "title": "Variation in time",
+                "level": 5,
+                "page": 164,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Individual versus group measurements.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 643.0,
+                "bold": 1,
+                "italic": 1,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=164, line=1124, s=9.0, r=0.9, x=55.0, y=643.0: \"Variation in time\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=164, line=1101, s=8.0, r=0.8, x=93.0, y=574.0: \"July Aug Sep Oct Nov Dec Jan Feb Mar Apr May June\"",
+                        "page=164, line=1102, s=8.0, r=0.8, x=146.0, y=583.0: \"1973 1974\"",
+                        "page=164, line=1103, s=8.0, r=0.8, x=211.0, y=589.0: \"Time\"",
+                        "page=164, line=1114, s=2.7, r=0.27, x=61.0, y=566.0: \"dC\""
+                    ]
+                }
+            },
+            {
+                "title": "Variation in exposure",
+                "level": 5,
+                "page": 165,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Individual versus group measurements.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 120.0,
+                "bold": 1,
+                "italic": 1,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=165, line=1133, s=9.0, r=0.9, x=140.0, y=120.0: \"Variation in exposure\""
+                    ],
+                    "embedded_examples": [
+                        "page=165, line=1134, s=10.0, r=1.0, x=140.0, y=131.0: \"There is also variation in exposure or dose between individuals. Even people working\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=165, line=1130, s=9.0, r=0.9, x=27.0, y=53.0: \"152 Chapter 9\"",
+                        "page=165, line=1141, s=9.0, r=0.9, x=140.0, y=232.0: \"Distribution issues\"",
+                        "page=165, line=1130, s=9.0, r=0.9, x=27.0, y=53.0: \"152 Chapter 9\"",
+                        "page=165, line=1133, s=9.0, r=0.9, x=140.0, y=120.0: \"Variation in exposure\""
+                    ]
+                }
+            },
+            {
+                "title": "Dose-effect relationships",
+                "level": 3,
+                "page": 166,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Sub-topic under Exposure and dose.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 415.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=166, line=1201, s=14.0, r=1.4, x=55.0, y=415.0: \"Dose-effect relationships\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=166, line=1193, s=8.0, r=0.8, x=55.0, y=307.0: \"Performance IQ 108.7 104.9 0.08\"",
+                        "page=166, line=1194, s=8.0, r=0.8, x=58.0, y=319.0: \"Picture completion 12.2 11.3 0.03\"",
+                        "page=166, line=1195, s=8.0, r=0.8, x=58.0, y=331.0: \"Picture 11.3 10.8 0.38\"",
+                        "page=166, line=1196, s=8.0, r=0.8, x=58.0, y=340.0: \"arrangement\""
+                    ]
+                }
+            }
+        ],
+        "possible_invalid_heading_candidates_file": "data/output/stages/unknown_model_gemma_20260709_151735/025_possible_invalid_heading_candidates_chunk_chunk_6_8.json"
+    },
+    "toc": {
+        "title": "input_pdf.pdf",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "Surveillance and response",
+                "page": 140,
+                "level_reason": "Consistent with observed level 3 style (s=14.0, r=1.4, x=55.0).",
+                "_layout_x": 55.0,
+                "_layout_y": 446.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Surveillance and response",
+                "_source_order": 35
+            },
+            {
+                "level": 3,
+                "chapter": "Definition",
+                "page": 140,
+                "level_reason": "Consistent with observed level 3 style (s=9.0, r=0.9, x=55.0).",
+                "_layout_x": 55.0,
+                "_layout_y": 474.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Definition",
+                "_source_order": 36
+            },
+            {
+                "level": 3,
+                "chapter": "The scope of surveillance",
+                "page": 140,
+                "level_reason": "Consistent with observed level 3 style (s=9.0, r=0.9, x=55.0).",
+                "_layout_x": 55.0,
+                "_layout_y": 586.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "The scope of surveillance",
+                "_source_order": 44
+            },
+            {
+                "level": 3,
+                "chapter": "Sources of data",
+                "page": 141,
+                "level_reason": "Consistent with observed level 3 style (s=9.0, r=0.9, x=140.0).",
+                "_layout_x": 140.0,
+                "_layout_y": 361.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Sources of data",
+                "_source_order": 79
+            },
+            {
+                "level": 3,
+                "chapter": "Surveillance in practice",
+                "page": 141,
+                "level_reason": "Consistent with observed level 3 style (s=9.0, r=0.9, x=140.0).",
+                "_layout_x": 140.0,
+                "_layout_y": 550.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Surveillance in practice",
+                "_source_order": 92
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter 8 Clinical epidemiology",
+                "page": 146,
+                "level_reason": "Major chapter heading.",
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chapter 8",
+                "_source_order": 271
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 146,
+                "level_reason": "Standard chapter subsection.",
+                "_layout_x": 168.0,
+                "_layout_y": 149.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 273
+            },
+            {
+                "level": 2,
+                "chapter": "Introduction",
+                "page": 146,
+                "level_reason": "Standard chapter subsection.",
+                "_layout_x": 55.0,
+                "_layout_y": 279.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Introduction",
+                "_source_order": 281
+            },
+            {
+                "level": 2,
+                "chapter": "Definitions of normality and abnormality",
+                "page": 146,
+                "level_reason": "Standard chapter subsection.",
+                "_layout_x": 55.0,
+                "_layout_y": 560.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Definitions of normality and abnormality",
+                "_source_order": 300
+            },
+            {
+                "level": 3,
+                "chapter": "Normal as common",
+                "page": 147,
+                "level_reason": "Sub-topic under Definitions of normality and abnormality.",
+                "_layout_x": 140.0,
+                "_layout_y": 178.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Normal as common",
+                "_source_order": 317
+            },
+            {
+                "level": 3,
+                "chapter": "Abnormality associated with disease",
+                "page": 148,
+                "level_reason": "Sub-topic under Definitions of normality and abnormality.",
+                "_layout_x": 55.0,
+                "_layout_y": 121.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Abnormality associated with disease",
+                "_source_order": 364
+            },
+            {
+                "level": 3,
+                "chapter": "Abnormal as treatable",
+                "page": 148,
+                "level_reason": "Sub-topic under Definitions of normality and abnormality.",
+                "_layout_x": 55.0,
+                "_layout_y": 357.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Abnormal as treatable",
+                "_source_order": 380
+            },
+            {
+                "level": 2,
+                "chapter": "Natural history and prognosis",
+                "page": 150,
+                "level_reason": "Standard chapter subsection.",
+                "_layout_x": 55.0,
+                "_layout_y": 444.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Natural history and prognosis",
+                "_source_order": 495
+            },
+            {
+                "level": 3,
+                "chapter": "Prognosis",
+                "page": 150,
+                "level_reason": "Sub-topic under Natural history and prognosis.",
+                "_layout_x": 55.0,
+                "_layout_y": 618.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Prognosis",
+                "_source_order": 505
+            },
+            {
+                "level": 3,
+                "chapter": "Quality of life",
+                "page": 151,
+                "level_reason": "Sub-topic under Natural history and prognosis.",
+                "_layout_x": 140.0,
+                "_layout_y": 303.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Quality of life",
+                "_source_order": 528
+            },
+            {
+                "level": 3,
+                "chapter": "Quantity of life",
+                "page": 151,
+                "level_reason": "Sub-topic under Natural history and prognosis.",
+                "_layout_x": 140.0,
+                "_layout_y": 433.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Quantity of life",
+                "_source_order": 536
+            },
+            {
+                "level": 2,
+                "chapter": "Effectiveness of treatment",
+                "page": 152,
+                "level_reason": "Standard chapter subsection.",
+                "_layout_x": 55.0,
+                "_layout_y": 319.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Effectiveness of treatment",
+                "_source_order": 565
+            },
+            {
+                "level": 2,
+                "chapter": "Use of evidence-based guidelines",
+                "page": 153,
+                "level_reason": "Standard chapter subsection.",
+                "_layout_x": 240.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Use of evidence-based",
+                "_source_order": 604
+            },
+            {
+                "level": 2,
+                "chapter": "Prevention in clinical practice",
+                "page": 153,
+                "level_reason": "Standard chapter subsection.",
+                "_layout_x": 140.0,
+                "_layout_y": 525.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Prevention in clinical practice",
+                "_source_order": 646
+            },
+            {
+                "level": 3,
+                "chapter": "Reducing risks",
+                "page": 154,
+                "level_reason": "Sub-topic under Prevention in clinical practice.",
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Reducing risks",
+                "_source_order": 656
+            },
+            {
+                "level": 3,
+                "chapter": "Reducing risks in patients with established disease",
+                "page": 154,
+                "level_reason": "Sub-topic under Prevention in clinical practice.",
+                "_layout_x": 55.0,
+                "_layout_y": 587.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Reducing risks in patients with established disease",
+                "_source_order": 689
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter 9 Environmental and occupational epidemiology",
+                "page": 158,
+                "level_reason": "Major chapter heading.",
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chapter 9",
+                "_source_order": 809
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 158,
+                "level_reason": "Standard chapter subsection.",
+                "_layout_x": 168.0,
+                "_layout_y": 149.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 273
+            },
+            {
+                "level": 2,
+                "chapter": "Environment and health",
+                "page": 158,
+                "level_reason": "Standard chapter subsection.",
+                "_layout_x": 55.0,
+                "_layout_y": 325.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Environment and health",
+                "_source_order": 821
+            },
+            {
+                "level": 3,
+                "chapter": "Impact of exposure to environmental factors",
+                "page": 159,
+                "level_reason": "Sub-topic under Environment and health.",
+                "_layout_x": 140.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Impact of exposure to environmental factors",
+                "_source_order": 847
+            },
+            {
+                "level": 3,
+                "chapter": "Multi-causality",
+                "page": 159,
+                "level_reason": "Consistent with observed level 3 style (s=9.0, r=0.9, x=239.0).",
+                "_layout_x": 239.0,
+                "_layout_y": 364.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Multi-causality",
+                "_source_order": 871
+            },
+            {
+                "level": 3,
+                "chapter": "Evaluation of preventive measures",
+                "page": 160,
+                "level_reason": "Sub-topic under Environment and health.",
+                "_layout_x": 55.0,
+                "_layout_y": 277.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Evaluation of preventive measures",
+                "_source_order": 919
+            },
+            {
+                "level": 3,
+                "chapter": "Value of prevention",
+                "page": 160,
+                "level_reason": "Consistent with observed level 3 style (s=9.0, r=0.9, x=55.0).",
+                "_layout_x": 55.0,
+                "_layout_y": 445.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Value of prevention",
+                "_source_order": 930
+            },
+            {
+                "level": 3,
+                "chapter": "Future challenges",
+                "page": 160,
+                "level_reason": "Consistent with observed level 3 style (s=9.0, r=0.9, x=55.0).",
+                "_layout_x": 55.0,
+                "_layout_y": 557.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Future challenges",
+                "_source_order": 938
+            },
+            {
+                "level": 2,
+                "chapter": "Exposure and dose",
+                "page": 162,
+                "level_reason": "Standard chapter subsection.",
+                "_layout_x": 55.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Exposure and dose",
+                "_source_order": 998
+            },
+            {
+                "level": 3,
+                "chapter": "General concepts",
+                "page": 162,
+                "level_reason": "Sub-topic under Exposure and dose.",
+                "_layout_x": 55.0,
+                "_layout_y": 115.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "General concepts",
+                "_source_order": 999
+            },
+            {
+                "level": 3,
+                "chapter": "Biological monitoring",
+                "page": 163,
+                "level_reason": "Sub-topic under Exposure and dose."
+            },
+            {
+                "level": 3,
+                "chapter": "Interpreting biological data",
+                "page": 164,
+                "level_reason": "Consistent with observed level 3 style (s=14.0, r=1.4, x=55.0).",
+                "_layout_x": 55.0,
+                "_layout_y": 173.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Interpreting biological data",
+                "_source_order": 1081
+            },
+            {
+                "level": 3,
+                "chapter": "Individual versus group measurements",
+                "page": 164,
+                "level_reason": "Consistent with observed level 3 style (s=14.0, r=1.4, x=55.0).",
+                "_layout_x": 55.0,
+                "_layout_y": 615.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Individual versus group measurements",
+                "_source_order": 1123
+            },
+            {
+                "level": 3,
+                "chapter": "Variation in time",
+                "page": 164,
+                "level_reason": "Consistent with observed level 3 style (s=9.0, r=0.9, x=55.0).",
+                "_layout_x": 55.0,
+                "_layout_y": 643.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Variation in time",
+                "_source_order": 1124
+            },
+            {
+                "level": 3,
+                "chapter": "Variation in exposure",
+                "page": 165,
+                "level_reason": "Consistent with observed level 3 style (s=9.0, r=0.9, x=140.0).",
+                "_layout_x": 140.0,
+                "_layout_y": 120.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Variation in exposure",
+                "_source_order": 1133
+            },
+            {
+                "level": 3,
+                "chapter": "Distribution issues",
+                "page": 165,
+                "level_reason": "Consistent with observed level 3 style (s=9.0, r=0.9, x=140.0).",
+                "_layout_x": 140.0,
+                "_layout_y": 232.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Distribution issues",
+                "_source_order": 1141
+            },
+            {
+                "level": 3,
+                "chapter": "Measures of effect",
+                "page": 165,
+                "level_reason": "Consistent with observed level 3 style (s=9.0, r=0.9, x=140.0).",
+                "_layout_x": 140.0,
+                "_layout_y": 435.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Measures of effect",
+                "_source_order": 1156
+            },
+            {
+                "level": 3,
+                "chapter": "Population dose",
+                "page": 165,
+                "level_reason": "Sub-topic under Exposure and dose.",
+                "_layout_x": 140.0,
+                "_layout_y": 574.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Population dose",
+                "_source_order": 1166
+            },
+            {
+                "level": 3,
+                "chapter": "Dose-effect relationships",
+                "page": 166,
+                "level_reason": "Sub-topic under Exposure and dose.",
+                "_layout_x": 55.0,
+                "_layout_y": 415.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Dose-effect relationships",
+                "_source_order": 1201
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"input_pdf.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"Surveillance and response\",\n      \"page\": 140,\n      \"level_reason\": \"Consistent with observed level 3 style (s=14.0, r=1.4, x=55.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Definition\",\n      \"page\": 140,\n      \"level_reason\": \"Consistent with observed level 3 style (s=9.0, r=0.9, x=55.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"The scope of surveillance\",\n      \"page\": 140,\n      \"level_reason\": \"Consistent with observed level 3 style (s=9.0, r=0.9, x=55.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Sources of data\",\n      \"page\": 141,\n      \"level_reason\": \"Consistent with observed level 3 style (s=9.0, r=0.9, x=140.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Surveillance in practice\",\n      \"page\": 141,\n      \"level_reason\": \"Consistent with observed level 3 style (s=9.0, r=0.9, x=140.0).\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 8 Clinical epidemiology\",\n      \"page\": 146,\n      \"level_reason\": \"Major chapter heading.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 146,\n      \"level_reason\": \"Standard chapter subsection.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Introduction\",\n      \"page\": 146,\n      \"level_reason\": \"Standard chapter subsection.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Definitions of normality and abnormality\",\n      \"page\": 146,\n      \"level_reason\": \"Standard chapter subsection.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Normal as common\",\n      \"page\": 147,\n      \"level_reason\": \"Sub-topic under Definitions of normality and abnormality.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Abnormality associated with disease\",\n      \"page\": 148,\n      \"level_reason\": \"Sub-topic under Definitions of normality and abnormality.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Abnormal as treatable\",\n      \"page\": 148,\n      \"level_reason\": \"Sub-topic under Definitions of normality and abnormality.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Natural history and prognosis\",\n      \"page\": 150,\n      \"level_reason\": \"Standard chapter subsection.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Prognosis\",\n      \"page\": 150,\n      \"level_reason\": \"Sub-topic under Natural history and prognosis.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Quality of life\",\n      \"page\": 151,\n      \"level_reason\": \"Sub-topic under Natural history and prognosis.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Quantity of life\",\n      \"page\": 151,\n      \"level_reason\": \"Sub-topic under Natural history and prognosis.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Effectiveness of treatment\",\n      \"page\": 152,\n      \"level_reason\": \"Standard chapter subsection.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Use of evidence-based guidelines\",\n      \"page\": 153,\n      \"level_reason\": \"Standard chapter subsection.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Prevention in clinical practice\",\n      \"page\": 153,\n      \"level_reason\": \"Standard chapter subsection.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Reducing risks\",\n      \"page\": 154,\n      \"level_reason\": \"Sub-topic under Prevention in clinical practice.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Reducing risks in patients with established disease\",\n      \"page\": 154,\n      \"level_reason\": \"Sub-topic under Prevention in clinical practice.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 9 Environmental and occupational epidemiology\",\n      \"page\": 158,\n      \"level_reason\": \"Major chapter heading.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 158,\n      \"level_reason\": \"Standard chapter subsection.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Environment and health\",\n      \"page\": 158,\n      \"level_reason\": \"Standard chapter subsection.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Impact of exposure to environmental factors\",\n      \"page\": 159,\n      \"level_reason\": \"Sub-topic under Environment and health.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Multi-causality\",\n      \"page\": 159,\n      \"level_reason\": \"Consistent with observed level 3 style (s=9.0, r=0.9, x=239.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Evaluation of preventive measures\",\n      \"page\": 160,\n      \"level_reason\": \"Sub-topic under Environment and health.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Value of prevention\",\n      \"page\": 160,\n      \"level_reason\": \"Consistent with observed level 3 style (s=9.0, r=0.9, x=55.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Future challenges\",\n      \"page\": 160,\n      \"level_reason\": \"Consistent with observed level 3 style (s=9.0, r=0.9, x=55.0).\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Exposure and dose\",\n      \"page\": 162,\n      \"level_reason\": \"Standard chapter subsection.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"General concepts\",\n      \"page\": 162,\n      \"level_reason\": \"Sub-topic under Exposure and dose.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Biological monitoring\",\n      \"page\": 163,\n      \"level_reason\": \"Sub-topic under Exposure and dose.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Interpreting biological data\",\n      \"page\": 164,\n      \"level_reason\": \"Consistent with observed level 3 style (s=14.0, r=1.4, x=55.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Individual versus group measurements\",\n      \"page\": 164,\n      \"level_reason\": \"Consistent with observed level 3 style (s=14.0, r=1.4, x=55.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Variation in time\",\n      \"page\": 164,\n      \"level_reason\": \"Consistent with observed level 3 style (s=9.0, r=0.9, x=55.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Variation in exposure\",\n      \"page\": 165,\n      \"level_reason\": \"Consistent with observed level 3 style (s=9.0, r=0.9, x=140.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Distribution issues\",\n      \"page\": 165,\n      \"level_reason\": \"Consistent with observed level 3 style (s=9.0, r=0.9, x=140.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Measures of effect\",\n      \"page\": 165,\n      \"level_reason\": \"Consistent with observed level 3 style (s=9.0, r=0.9, x=140.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Population dose\",\n      \"page\": 165,\n      \"level_reason\": \"Sub-topic under Exposure and dose.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Dose-effect relationships\",\n      \"page\": 166,\n      \"level_reason\": \"Sub-topic under Exposure and dose.\"\n    }\n  ]\n}"
+}

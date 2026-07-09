@@ -1,0 +1,1406 @@
+{
+    "timestamp": "2026-07-09 15:22:38",
+    "stage_index": 18,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "4",
+    "total_chunks": 8,
+    "start_page": 88,
+    "end_page": 113,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 4/8",
+        "input_chapters": 44,
+        "output_chapters": 43,
+        "level_changes": 0,
+        "added_entries": 0,
+        "removed_entries": 1,
+        "level_change_report_recorded": true,
+        "possible_invalid_heading_candidate_count": 24,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "Correlation",
+                "level": 3,
+                "page": 88,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 4,
+                    "exact_examples": [
+                        "page=88, line=2, s=14.0, r=1.4, x=55.0, y=84.0: \"Correlation\""
+                    ],
+                    "embedded_examples": [
+                        "page=88, line=3, s=10.0, r=1.0, x=55.0, y=112.0: \"In general, correlation quantifies the degree to which two\"",
+                        "page=88, line=12, s=10.0, r=1.0, x=55.0, y=190.0: \"are several tools available for measuring correlation. The\"",
+                        "page=88, line=13, s=9.0, r=0.9, x=288.0, y=194.0: \"line may well imply that the correlation coefficient is not\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 3,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=88, line=9, s=9.0, r=0.9, x=288.0, y=172.0: \"Figure 1.1). Plots with groups of dots in more than one\"",
+                        "page=88, line=9, s=9.0, r=0.9, x=288.0, y=172.0: \"Figure 1.1). Plots with groups of dots in more than one\"",
+                        "page=88, line=9, s=9.0, r=0.9, x=288.0, y=172.0: \"Figure 1.1). Plots with groups of dots in more than one\""
+                    ],
+                    "small_label_examples": [
+                        "page=88, line=1, s=9.0, r=0.9, x=319.0, y=54.0: \"Basic biostatistics: concepts and tools 75\"",
+                        "page=88, line=5, s=8.0, r=0.8, x=288.0, y=134.0: \"two variables\"",
+                        "page=88, line=1, s=9.0, r=0.9, x=319.0, y=54.0: \"Basic biostatistics: concepts and tools 75\"",
+                        "page=88, line=5, s=8.0, r=0.8, x=288.0, y=134.0: \"two variables\""
+                    ]
+                }
+            },
+            {
+                "title": "Regression",
+                "level": 3,
+                "page": 88,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 369.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 9,
+                    "exact_examples": [
+                        "page=88, line=25, s=14.0, r=1.4, x=55.0, y=369.0: \"Regression\""
+                    ],
+                    "embedded_examples": [
+                        "page=88, line=26, s=9.0, r=0.9, x=55.0, y=397.0: \"Using and interpreting regression models\"",
+                        "page=88, line=27, s=10.0, r=1.0, x=55.0, y=408.0: \"Regression models are vital tools for data analysis and are used extensively in epi-\"",
+                        "page=88, line=32, s=9.0, r=0.9, x=55.0, y=482.0: \"Different regression models\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=88, line=26, s=9.0, r=0.9, x=55.0, y=397.0: \"Using and interpreting regression models\"",
+                        "page=88, line=32, s=9.0, r=0.9, x=55.0, y=482.0: \"Different regression models\"",
+                        "page=88, line=32, s=9.0, r=0.9, x=55.0, y=482.0: \"Different regression models\"",
+                        "page=88, line=26, s=9.0, r=0.9, x=55.0, y=397.0: \"Using and interpreting regression models\""
+                    ]
+                }
+            },
+            {
+                "title": "Different regression models",
+                "level": 4,
+                "page": 88,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Lower level title with style s=9.0, r=0.90, x=55.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 482.0,
+                "bold": 1,
+                "italic": 1,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=88, line=32, s=9.0, r=0.9, x=55.0, y=482.0: \"Different regression models\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=88, line=26, s=9.0, r=0.9, x=55.0, y=397.0: \"Using and interpreting regression models\"",
+                        "page=88, line=37, s=9.0, r=0.9, x=55.0, y=562.0: \"Key concept for regression models\""
+                    ]
+                }
+            },
+            {
+                "title": "Linear regression",
+                "level": 3,
+                "page": 89,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 200.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 3,
+                    "exact_examples": [
+                        "page=89, line=57, s=14.0, r=1.4, x=140.0, y=200.0: \"Linear regression\""
+                    ],
+                    "embedded_examples": [
+                        "page=89, line=58, s=10.0, r=1.0, x=140.0, y=228.0: \"We can use the linear regression tool to address a broad set of issues, ranging from\"",
+                        "page=89, line=59, s=10.0, r=1.0, x=140.0, y=241.0: \"standard Analysis of Variance (ANOVA), to simple linear regression, and multiple\"",
+                        "page=89, line=60, s=10.0, r=1.0, x=140.0, y=254.0: \"linear regression. In all these cases, thedependent variable is a continuous measure\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=89, line=63, s=9.0, r=0.9, x=140.0, y=303.0: \"Dependent variable\"",
+                        "page=89, line=63, s=9.0, r=0.9, x=140.0, y=303.0: \"Dependent variable\"",
+                        "page=89, line=63, s=9.0, r=0.9, x=140.0, y=303.0: \"Dependent variable\"",
+                        "page=89, line=67, s=6.0, r=0.6, x=248.0, y=354.0: \"00 1 1 2 2 k k\""
+                    ]
+                }
+            },
+            {
+                "title": "Dependent variable",
+                "level": 4,
+                "page": 89,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Lower level title with style s=9.0, r=0.90, x=140.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 303.0,
+                "bold": 1,
+                "italic": 1,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 11,
+                    "exact_examples": [
+                        "page=89, line=63, s=9.0, r=0.9, x=140.0, y=303.0: \"Dependent variable\""
+                    ],
+                    "embedded_examples": [
+                        "page=89, line=50, s=10.0, r=1.0, x=166.0, y=95.0: \"the dependent variable is derived from the presence or absence of a charac-\"",
+                        "page=89, line=53, s=10.0, r=1.0, x=166.0, y=130.0: \"the dependent variable represents the time from a baseline of some type to the\"",
+                        "page=89, line=60, s=10.0, r=1.0, x=140.0, y=254.0: \"linear regression. In all these cases, thedependent variable is a continuous measure\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=89, line=48, s=9.0, r=0.9, x=27.0, y=54.0: \"76 Chapter 4\"",
+                        "page=89, line=48, s=9.0, r=0.9, x=27.0, y=54.0: \"76 Chapter 4\"",
+                        "page=89, line=63, s=9.0, r=0.9, x=140.0, y=303.0: \"Dependent variable\"",
+                        "page=89, line=67, s=6.0, r=0.6, x=248.0, y=354.0: \"00 1 1 2 2 k k\""
+                    ]
+                }
+            },
+            {
+                "title": "Independent variables",
+                "level": 4,
+                "page": 90,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Lower level title with style s=9.0, r=0.90, x=55.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 85.0,
+                "bold": 1,
+                "italic": 1,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=90, line=97, s=9.0, r=0.9, x=55.0, y=85.0: \"Independent variables\""
+                    ],
+                    "embedded_examples": [
+                        "page=90, line=109, s=10.0, r=1.0, x=73.0, y=192.0: \"The situation for independent variables that representcategories is a bit different\"",
+                        "page=90, line=131, s=10.0, r=1.0, x=55.0, y=406.0: \"tion, we need two independent variables – one less than\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=90, line=96, s=9.0, r=0.9, x=319.0, y=54.0: \"Basic biostatistics: concepts and tools 77\"",
+                        "page=90, line=99, s=7.0, r=0.7, x=283.0, y=100.0: \"ii\"",
+                        "page=90, line=101, s=7.0, r=0.7, x=110.0, y=114.0: \"ii\"",
+                        "page=90, line=103, s=7.0, r=0.7, x=337.0, y=129.0: \"ii\""
+                    ]
+                }
+            },
+            {
+                "title": "Multiple variables",
+                "level": 4,
+                "page": 90,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Lower level title with style s=9.0, r=0.90, x=55.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 343.0,
+                "bold": 1,
+                "italic": 1,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=90, line=122, s=9.0, r=0.9, x=55.0, y=343.0: \"Multiple variables\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=90, line=114, s=7.0, r=0.7, x=145.0, y=237.0: \"1\"",
+                        "page=90, line=116, s=7.0, r=0.7, x=145.0, y=251.0: \"1\"",
+                        "page=90, line=119, s=6.0, r=0.6, x=180.0, y=288.0: \"1 mmaallleess females\"",
+                        "page=90, line=124, s=5.6, r=0.56, x=431.0, y=359.0: \"1 2\""
+                    ]
+                }
+            },
+            {
+                "title": "Logistic regression",
+                "level": 3,
+                "page": 91,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=91, line=156, s=14.0, r=1.4, x=140.0, y=84.0: \"Logistic regression\""
+                    ],
+                    "embedded_examples": [
+                        "page=91, line=163, s=10.0, r=1.0, x=158.0, y=190.0: \"The logistic regression model, as shown below, is ideal for this purpose. The\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 3,
+                    "small_label_examples": [
+                        "page=91, line=155, s=9.0, r=0.9, x=27.0, y=54.0: \"78 Chapter 4\"",
+                        "page=91, line=155, s=9.0, r=0.9, x=27.0, y=54.0: \"78 Chapter 4\"",
+                        "page=91, line=171, s=6.0, r=0.6, x=267.0, y=313.0: \"00 11 11 22 22 k k\""
+                    ]
+                }
+            },
+            {
+                "title": "Kaplan-Meier survival curves",
+                "level": 3,
+                "page": 92,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 569.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=92, line=251, s=14.0, r=1.4, x=55.0, y=569.0: \"Kaplan-Meier survival curves\""
+                    ],
+                    "embedded_examples": [
+                        "page=92, line=252, s=10.0, r=1.0, x=55.0, y=596.0: \"Kaplan-Meier survival curves are commonly used to display survival data (see\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=92, line=253, s=10.0, r=1.0, x=55.0, y=609.0: \"Figure 8.4). They can be used to display any type of time-to-event data. If the event\"",
+                        "page=92, line=253, s=10.0, r=1.0, x=55.0, y=609.0: \"Figure 8.4). They can be used to display any type of time-to-event data. If the event\""
+                    ],
+                    "small_label_examples": [
+                        "page=92, line=244, s=6.3, r=0.63, x=342.0, y=477.0: \"1\"",
+                        "page=92, line=246, s=6.3, r=0.63, x=293.0, y=489.0: \"1\"",
+                        "page=92, line=248, s=7.0, r=0.7, x=155.0, y=512.0: \"per year increment males / females\"",
+                        "page=92, line=244, s=6.3, r=0.63, x=342.0, y=477.0: \"1\""
+                    ]
+                }
+            },
+            {
+                "title": "Two sample t-test",
+                "level": 4,
+                "page": 93,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Lower level title with style s=9.0, r=0.90, x=140.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 140.0,
+                "vertical_position": 391.0,
+                "bold": 1,
+                "italic": 1,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=93, line=281, s=9.0, r=0.9, x=140.0, y=391.0: \"Two sample t-test\""
+                    ],
+                    "embedded_examples": [
+                        "page=93, line=279, s=10.0, r=1.0, x=158.0, y=356.0: \"• the two sample t-test and\"",
+                        "page=93, line=282, s=10.0, r=1.0, x=140.0, y=403.0: \"For the two sample t-test, the formula is, for (cid:734)= 0.05,\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=93, line=281, s=9.0, r=0.9, x=140.0, y=391.0: \"Two sample t-test\"",
+                        "page=93, line=283, s=8.0, r=0.8, x=285.0, y=424.0: \"4 22( )2\"",
+                        "page=93, line=284, s=6.0, r=0.6, x=230.0, y=431.0: \"N nnn nn = 000.999777555 11 ß .\"",
+                        "page=93, line=285, s=6.0, r=0.6, x=253.0, y=439.0: \"111 22 (d )2\""
+                    ]
+                }
+            },
+            {
+                "title": "Test comparing proportions",
+                "level": 4,
+                "page": 94,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Lower level title with style s=9.0, r=0.90, x=55.",
+                "font_size": 9.0,
+                "size_ratio": 0.9,
+                "left_indent": 55.0,
+                "vertical_position": 85.0,
+                "bold": 1,
+                "italic": 1,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=94, line=308, s=9.0, r=0.9, x=55.0, y=85.0: \"Test comparing proportions\""
+                    ],
+                    "embedded_examples": [
+                        "page=94, line=309, s=10.0, r=1.0, x=55.0, y=96.0: \"For the test comparing proportions, the situation is very similar except that the for-\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=94, line=314, s=6.0, r=0.6, x=132.0, y=156.0: \"111 22 ( )2\"",
+                        "page=94, line=318, s=6.0, r=0.6, x=174.0, y=136.0: \"z z )2 0 1 ß\"",
+                        "page=94, line=337, s=9.0, r=0.9, x=319.0, y=54.0: \"Basic biostatistics: concepts and tools 81\"",
+                        "page=94, line=308, s=9.0, r=0.9, x=55.0, y=85.0: \"Test comparing proportions\""
+                    ]
+                }
+            },
+            {
+                "title": "Meta-analysis",
+                "level": 2,
+                "page": 94,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section title with style s=20.0, r=2.00, x=55.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 324.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 7,
+                    "exact_examples": [
+                        "page=94, line=341, s=20.0, r=2.0, x=55.0, y=324.0: \"Meta-analysis\""
+                    ],
+                    "embedded_examples": [
+                        "page=94, line=342, s=10.0, r=1.0, x=55.0, y=356.0: \"Meta-analysis is defined as the statistical synthesis of the data from separate but\"",
+                        "page=94, line=345, s=10.0, r=1.0, x=73.0, y=395.0: \"Meta-analysis differs frommost medical andepidemiological studies in that no\"",
+                        "page=94, line=347, s=10.0, r=1.0, x=55.0, y=421.0: \"carrying out meta-analysis include:\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=94, line=328, s=8.0, r=0.8, x=85.0, y=258.0: \"111 22 (((\"",
+                        "page=94, line=329, s=8.4, r=0.84, x=193.0, y=264.0: \"d\"",
+                        "page=94, line=337, s=9.0, r=0.9, x=319.0, y=54.0: \"Basic biostatistics: concepts and tools 81\"",
+                        "page=94, line=340, s=7.0, r=0.7, x=228.0, y=304.0: \"1 2\""
+                    ]
+                }
+            },
+            {
+                "title": "References",
+                "level": 2,
+                "page": 95,
+                "reasons": [
+                    "title itself looks like a case/example/table/figure/problem/reference label",
+                    "source context looks like case/example/table/figure/problem/reference material",
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Standard section title with style s=20.0, r=2.00, x=140.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 371.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=95, line=392, s=20.0, r=2.0, x=140.0, y=371.0: \"References\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=95, line=385, s=7.0, r=0.7, x=252.0, y=292.0: \"1 1\"",
+                        "page=95, line=389, s=7.0, r=0.7, x=346.0, y=330.0: \"1\""
+                    ]
+                }
+            },
+            {
+                "title": "A causal pathway",
+                "level": 3,
+                "page": 98,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 302.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=98, line=501, s=14.0, r=1.4, x=55.0, y=302.0: \"A causal pathway\""
+                    ],
+                    "embedded_examples": [
+                        "page=98, line=507, s=10.0, r=1.0, x=55.0, y=395.0: \"a causal pathway where one factor leads to another until eventually the specific\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=98, line=511, s=8.0, r=0.8, x=55.0, y=474.0: \"Figure 5.2. Infant mortality rate and socioeconomic status in Islamic Republic of\""
+                    ],
+                    "small_label_examples": [
+                        "page=98, line=493, s=8.0, r=0.8, x=166.0, y=109.0: \"to bacteria invasion\"",
+                        "page=98, line=494, s=8.0, r=0.8, x=93.0, y=121.0: \"Genetic factors\"",
+                        "page=98, line=495, s=8.0, r=0.8, x=55.0, y=135.0: \"Malnutrition\"",
+                        "page=98, line=497, s=8.0, r=0.8, x=56.0, y=233.0: \"Crowded\""
+                    ]
+                }
+            },
+            {
+                "title": "Interaction",
+                "level": 3,
+                "page": 101,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 147.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=101, line=624, s=14.0, r=1.4, x=140.0, y=147.0: \"Interaction\""
+                    ],
+                    "embedded_examples": [
+                        "page=101, line=627, s=10.0, r=1.0, x=140.0, y=199.0: \"interaction, is illustrated by the particularly high risk of lung cancer in people who\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=101, line=619, s=9.0, r=0.9, x=27.0, y=53.0: \"88 Chapter 5\"",
+                        "page=101, line=619, s=9.0, r=0.9, x=27.0, y=53.0: \"88 Chapter 5\""
+                    ]
+                }
+            },
+            {
+                "title": "Plausibility",
+                "level": 3,
+                "page": 104,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 147.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 3,
+                    "exact_examples": [
+                        "page=104, line=743, s=14.0, r=1.4, x=55.0, y=147.0: \"Plausibility\""
+                    ],
+                    "embedded_examples": [
+                        "page=104, line=751, s=10.0, r=1.0, x=55.0, y=227.0: \"the effect measured. However, biological plausibility is a\"",
+                        "page=104, line=763, s=10.0, r=1.0, x=55.0, y=318.0: \"the causative agent. Lack of plausibility may simply reflect use of ruminant proteins as...\"",
+                        "page=104, line=769, s=10.0, r=1.0, x=55.0, y=370.0: \"biological mechanism. A recent example of plausibility\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=104, line=745, s=8.0, r=0.8, x=289.0, y=182.0: \"Box 5.1. BSE and vCJD\"",
+                        "page=104, line=745, s=8.0, r=0.8, x=289.0, y=182.0: \"Box 5.1. BSE and vCJD\""
+                    ],
+                    "small_label_examples": [
+                        "page=104, line=738, s=9.0, r=0.9, x=358.0, y=53.0: \"Causation in epidemiology 91\"",
+                        "page=104, line=747, s=9.0, r=0.9, x=55.0, y=198.0: \"laboratory experiments may have shown how exposure to Variant Creutzfeldt–Jakob disease (...\"",
+                        "page=104, line=748, s=9.0, r=0.9, x=289.0, y=209.0: \"form of “mad cow disease” or bovine spongiform en-\"",
+                        "page=104, line=750, s=9.0, r=0.9, x=289.0, y=220.0: \"cephalopathy (BSE). There was an epidemic of BSE in\""
+                    ]
+                }
+            },
+            {
+                "title": "Consistency",
+                "level": 3,
+                "page": 104,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Subsection title with style s=9.0, r=0.90, x=55.",
+                "font_size": 10.0,
+                "size_ratio": 1.0,
+                "left_indent": 74.0,
+                "vertical_position": 251.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 3,
+                    "embedded_examples": [
+                        "page=104, line=790, s=9.0, r=0.9, x=55.0, y=563.0: \"Consistency considered to occur has been reduced from 250 ug/l in\"",
+                        "page=104, line=793, s=10.0, r=1.0, x=55.0, y=590.0: \"Consistency is demonstrated by several studies giving the\"",
+                        "page=104, line=800, s=9.5, r=0.95, x=55.0, y=642.0: \"thereby minimized. However, a lack of consistency does income countries, but increasingly...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=104, line=779, s=8.0, r=0.8, x=289.0, y=483.0: \"Box 5.2. Lead exposure in children\""
+                    ],
+                    "small_label_examples": [
+                        "page=104, line=782, s=9.0, r=0.9, x=289.0, y=509.0: \"lead exposure in hundreds of thousands of children’s\"",
+                        "page=104, line=784, s=9.0, r=0.9, x=289.0, y=520.0: \"blood samples has shown that, while average levels are\"",
+                        "page=104, line=786, s=9.0, r=0.9, x=289.0, y=531.0: \"decreasing since lead was banned from motor-fuels,\"",
+                        "page=104, line=788, s=9.0, r=0.9, x=289.0, y=542.0: \"many children still have elevated levels.15 The blood lead\""
+                    ]
+                }
+            },
+            {
+                "title": "Strength",
+                "level": 3,
+                "page": 106,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 134.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=106, line=856, s=14.0, r=1.4, x=55.0, y=134.0: \"Strength\""
+                    ],
+                    "embedded_examples": [
+                        "page=106, line=866, s=10.0, r=1.0, x=55.0, y=226.0: \"cigarette smokers have a twofold increase in the risk of was observed.21 This strengthens...\"",
+                        "page=106, line=877, s=10.0, r=1.0, x=55.0, y=317.0: \"it from being causal; the strength of an association de-\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=106, line=858, s=8.0, r=0.8, x=289.0, y=169.0: \"Box 5.3. Air pollution and total mortality\"",
+                        "page=106, line=858, s=8.0, r=0.8, x=289.0, y=169.0: \"Box 5.3. Air pollution and total mortality\""
+                    ],
+                    "small_label_examples": [
+                        "page=106, line=852, s=9.0, r=0.9, x=358.0, y=53.0: \"Causation in epidemiology 93\"",
+                        "page=106, line=861, s=9.0, r=0.9, x=289.0, y=196.0: \"different cities in the USA were combined; although\"",
+                        "page=106, line=863, s=9.0, r=0.9, x=289.0, y=207.0: \"some of the studies had conflicting results, a statistically\"",
+                        "page=106, line=861, s=9.0, r=0.9, x=289.0, y=196.0: \"different cities in the USA were combined; although\""
+                    ]
+                }
+            },
+            {
+                "title": "Dose–response relationship",
+                "level": 3,
+                "page": 106,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 550.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 3,
+                    "exact_examples": [
+                        "page=106, line=901, s=14.0, r=1.4, x=55.0, y=550.0: \"Dose–response relationship\""
+                    ],
+                    "embedded_examples": [
+                        "page=106, line=904, s=10.0, r=1.0, x=55.0, y=577.0: \"A dose–response relationship occurs when changes in\"",
+                        "page=106, line=908, s=10.0, r=1.0, x=55.0, y=616.0: \"illustrates the dose–response relationship between noise and hearing loss: the preva-\"",
+                        "page=106, line=910, s=10.0, r=1.0, x=73.0, y=642.0: \"The demonstration of such a clear dose–response relationship in unbiased stud-\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=106, line=892, s=8.0, r=0.8, x=402.0, y=481.0: \"5 10 40\"",
+                        "page=106, line=895, s=8.0, r=0.8, x=330.0, y=509.0: \"85 1 3 10\"",
+                        "page=106, line=897, s=8.0, r=0.8, x=330.0, y=521.0: \"90 4 10 21\"",
+                        "page=106, line=899, s=8.0, r=0.8, x=330.0, y=533.0: \"95 7 17 29\""
+                    ]
+                }
+            },
+            {
+                "title": "Reversibility",
+                "level": 3,
+                "page": 108,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=108, line=973, s=14.0, r=1.4, x=55.0, y=84.0: \"Reversibility\""
+                    ],
+                    "embedded_examples": [
+                        "page=108, line=980, s=10.0, r=1.0, x=55.0, y=189.0: \"sure, then reversibility cannot be a condition for causality.\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 3,
+                    "visual_caption_examples": [
+                        "page=108, line=983, s=10.0, r=1.0, x=55.0, y=254.0: \"Table 5.3 outlines the different types of study and relative strengths in establishing\"",
+                        "page=108, line=987, s=8.0, r=0.8, x=282.0, y=310.0: \"Table 5.3. Relative ability of different types of study\""
+                    ],
+                    "small_label_examples": [
+                        "page=108, line=972, s=9.0, r=0.9, x=358.0, y=53.0: \"Causation in epidemiology 95\"",
+                        "page=108, line=972, s=9.0, r=0.9, x=358.0, y=53.0: \"Causation in epidemiology 95\"",
+                        "page=108, line=986, s=9.0, r=0.9, x=55.0, y=303.0: \"Experimental studies\""
+                    ]
+                }
+            },
+            {
+                "title": "Study design",
+                "level": 3,
+                "page": 108,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 213.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=108, line=981, s=14.0, r=1.4, x=55.0, y=213.0: \"Study design\""
+                    ],
+                    "embedded_examples": [
+                        "page=108, line=982, s=10.0, r=1.0, x=55.0, y=241.0: \"The ability of a study design to prove causation is an important consideration.\"",
+                        "page=108, line=984, s=10.0, r=1.0, x=55.0, y=267.0: \"causality. These study designs were introduced in Chapter 3; their use in providing\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 4,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=108, line=983, s=10.0, r=1.0, x=55.0, y=254.0: \"Table 5.3 outlines the different types of study and relative strengths in establishing\"",
+                        "page=108, line=987, s=8.0, r=0.8, x=282.0, y=310.0: \"Table 5.3. Relative ability of different types of study\"",
+                        "page=108, line=983, s=10.0, r=1.0, x=55.0, y=254.0: \"Table 5.3 outlines the different types of study and relative strengths in establishing\"",
+                        "page=108, line=987, s=8.0, r=0.8, x=282.0, y=310.0: \"Table 5.3. Relative ability of different types of study\""
+                    ],
+                    "small_label_examples": [
+                        "page=108, line=986, s=9.0, r=0.9, x=55.0, y=303.0: \"Experimental studies\"",
+                        "page=108, line=989, s=8.0, r=0.8, x=282.0, y=321.0: \"to “prove” causation\"",
+                        "page=108, line=986, s=9.0, r=0.9, x=55.0, y=303.0: \"Experimental studies\"",
+                        "page=108, line=989, s=8.0, r=0.8, x=282.0, y=321.0: \"to “prove” causation\""
+                    ]
+                }
+            },
+            {
+                "title": "References",
+                "level": 2,
+                "page": 110,
+                "reasons": [
+                    "title itself looks like a case/example/table/figure/problem/reference label",
+                    "source context looks like case/example/table/figure/problem/reference material"
+                ],
+                "level_reason": "Standard section title with style s=20.0, r=2.00, x=55.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 140.0,
+                "vertical_position": 371.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=110, line=1086, s=20.0, r=2.0, x=55.0, y=335.0: \"References\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "The scope of prevention",
+                "level": 2,
+                "page": 112,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section title with style s=20.0, r=2.00, x=55.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 382.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=112, line=1181, s=20.0, r=2.0, x=55.0, y=382.0: \"The scope of prevention\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 0,
+                    "visual_caption_examples": [
+                        "page=112, line=1184, s=10.0, r=1.0, x=73.0, y=440.0: \"Figure 6.1 shows tuberculosis death rates in England and Wales for the period\""
+                    ]
+                }
+            },
+            {
+                "title": "Recent trends in death rates",
+                "level": 3,
+                "page": 112,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 516.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=112, line=1189, s=14.0, r=1.4, x=55.0, y=516.0: \"Recent trends in death rates\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 0,
+                    "visual_caption_examples": [
+                        "page=112, line=1184, s=10.0, r=1.0, x=73.0, y=440.0: \"Figure 6.1 shows tuberculosis death rates in England and Wales for the period\""
+                    ]
+                }
+            }
+        ],
+        "possible_invalid_heading_candidates_file": "data/output/stages/unknown_model_gemma_20260709_151735/017_possible_invalid_heading_candidates_chunk_chunk_4_8.json"
+    },
+    "toc": {
+        "title": "input_pdf.pdf",
+        "chapters": [
+            {
+                "level": 3,
+                "chapter": "Correlation",
+                "page": 88,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Correlation",
+                "_source_order": 2
+            },
+            {
+                "level": 3,
+                "chapter": "Regression",
+                "page": 88,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 369.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Regression",
+                "_source_order": 25
+            },
+            {
+                "level": 4,
+                "chapter": "Using and interpreting regression models",
+                "page": 88,
+                "level_reason": "Lower level title with style s=9.0, r=0.90, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 397.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Using and interpreting regression models",
+                "_source_order": 26
+            },
+            {
+                "level": 4,
+                "chapter": "Different regression models",
+                "page": 88,
+                "level_reason": "Lower level title with style s=9.0, r=0.90, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 482.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Different regression models",
+                "_source_order": 32
+            },
+            {
+                "level": 4,
+                "chapter": "Key concept for regression models",
+                "page": 88,
+                "level_reason": "Lower level title with style s=9.0, r=0.90, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 562.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Key concept for regression models",
+                "_source_order": 37
+            },
+            {
+                "level": 3,
+                "chapter": "Linear regression",
+                "page": 89,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                "_layout_x": 140.0,
+                "_layout_y": 200.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Linear regression",
+                "_source_order": 57
+            },
+            {
+                "level": 4,
+                "chapter": "Dependent variable",
+                "page": 89,
+                "level_reason": "Lower level title with style s=9.0, r=0.90, x=140.",
+                "_layout_x": 140.0,
+                "_layout_y": 303.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Dependent variable",
+                "_source_order": 63
+            },
+            {
+                "level": 4,
+                "chapter": "Independent variables",
+                "page": 90,
+                "level_reason": "Lower level title with style s=9.0, r=0.90, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 85.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Independent variables",
+                "_source_order": 97
+            },
+            {
+                "level": 4,
+                "chapter": "Multiple variables",
+                "page": 90,
+                "level_reason": "Lower level title with style s=9.0, r=0.90, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 343.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Multiple variables",
+                "_source_order": 122
+            },
+            {
+                "level": 3,
+                "chapter": "Logistic regression",
+                "page": 91,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                "_layout_x": 140.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Logistic regression",
+                "_source_order": 156
+            },
+            {
+                "level": 3,
+                "chapter": "Survival analyses and Cox proportional hazards models",
+                "page": 92,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Survival analyses and Cox proportional hazards",
+                "_source_order": 202
+            },
+            {
+                "level": 3,
+                "chapter": "Kaplan-Meier survival curves",
+                "page": 92,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 569.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Kaplan-Meier survival curves",
+                "_source_order": 251
+            },
+            {
+                "level": 3,
+                "chapter": "Sample size issues",
+                "page": 93,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                "_layout_x": 140.0,
+                "_layout_y": 173.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Sample size issues",
+                "_source_order": 268
+            },
+            {
+                "level": 4,
+                "chapter": "Two sample t-test",
+                "page": 93,
+                "level_reason": "Lower level title with style s=9.0, r=0.90, x=140.",
+                "_layout_x": 140.0,
+                "_layout_y": 391.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Two sample t-test",
+                "_source_order": 281
+            },
+            {
+                "level": 4,
+                "chapter": "Test comparing proportions",
+                "page": 94,
+                "level_reason": "Lower level title with style s=9.0, r=0.90, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 85.0,
+                "_layout_font_size": 9.0,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "Test comparing proportions",
+                "_source_order": 308
+            },
+            {
+                "level": 2,
+                "chapter": "Meta-analysis",
+                "page": 94,
+                "level_reason": "Major section title with style s=20.0, r=2.00, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 324.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Meta-analysis",
+                "_source_order": 341
+            },
+            {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 95,
+                "level_reason": "Standard section title with style s=20.0, r=2.00, x=140.",
+                "_layout_x": 140.0,
+                "_layout_y": 133.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Study questions",
+                "_source_order": 372
+            },
+            {
+                "level": 2,
+                "chapter": "References",
+                "page": 95,
+                "level_reason": "Standard section title with style s=20.0, r=2.00, x=140.",
+                "_layout_x": 140.0,
+                "_layout_y": 371.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "References",
+                "_source_order": 392
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter 5 Causation in epidemiology",
+                "page": 96,
+                "level_reason": "Top-level chapter title with style s=32.0, r=3.20, x=55.",
+                "_layout_x": 193.0,
+                "_layout_y": 264.0,
+                "_layout_font_size": 8.4,
+                "_layout_size_ratio": 0.84,
+                "_layout_text": "d",
+                "_source_order": 329
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 96,
+                "level_reason": "Standard section title with style s=20.0, r=2.00, x=167.",
+                "_layout_x": 167.0,
+                "_layout_y": 149.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 415
+            },
+            {
+                "level": 2,
+                "chapter": "The concept of cause",
+                "page": 96,
+                "level_reason": "Major section title with style s=20.0, r=2.00, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 352.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "The concept of cause",
+                "_source_order": 428
+            },
+            {
+                "level": 3,
+                "chapter": "Sufficient or necessary",
+                "page": 96,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 474.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Sufficient or necessary",
+                "_source_order": 435
+            },
+            {
+                "level": 3,
+                "chapter": "Sufficient and necessary",
+                "page": 97,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                "_layout_x": 140.0,
+                "_layout_y": 348.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Sufficient and necessary",
+                "_source_order": 468
+            },
+            {
+                "level": 3,
+                "chapter": "A causal pathway",
+                "page": 98,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 302.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "A causal pathway",
+                "_source_order": 501
+            },
+            {
+                "level": 3,
+                "chapter": "Single and multiple causes",
+                "page": 99,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                "_layout_x": 140.0,
+                "_layout_y": 199.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Single and multiple causes",
+                "_source_order": 537
+            },
+            {
+                "level": 3,
+                "chapter": "Factors in causation",
+                "page": 100,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Factors in causation",
+                "_source_order": 569
+            },
+            {
+                "level": 3,
+                "chapter": "Interaction",
+                "page": 101,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                "_layout_x": 140.0,
+                "_layout_y": 147.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Interaction",
+                "_source_order": 624
+            },
+            {
+                "level": 3,
+                "chapter": "A hierarchy of causes",
+                "page": 101,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                "_layout_x": 140.0,
+                "_layout_y": 273.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "A hierarchy of causes",
+                "_source_order": 632
+            },
+            {
+                "level": 2,
+                "chapter": "Establishing the cause of a disease",
+                "page": 102,
+                "level_reason": "Major section title with style s=20.0, r=2.00, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 288.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Establishing the cause of a disease",
+                "_source_order": 681
+            },
+            {
+                "level": 3,
+                "chapter": "Considering causation",
+                "page": 102,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 462.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Considering causation",
+                "_source_order": 692
+            },
+            {
+                "level": 3,
+                "chapter": "Temporal relationship",
+                "page": 102,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 579.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Temporal relationship",
+                "_source_order": 699
+            },
+            {
+                "level": 3,
+                "chapter": "Plausibility",
+                "page": 104,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 147.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Plausibility",
+                "_source_order": 743
+            },
+            {
+                "level": 3,
+                "chapter": "Strength",
+                "page": 106,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 134.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Strength",
+                "_source_order": 856
+            },
+            {
+                "level": 3,
+                "chapter": "Dose–response relationship",
+                "page": 106,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 550.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Dose–response relationship",
+                "_source_order": 901
+            },
+            {
+                "level": 3,
+                "chapter": "Reversibility",
+                "page": 108,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 84.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Reversibility",
+                "_source_order": 973
+            },
+            {
+                "level": 3,
+                "chapter": "Study design",
+                "page": 108,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 213.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Study design",
+                "_source_order": 981
+            },
+            {
+                "level": 3,
+                "chapter": "Judging the evidence",
+                "page": 109,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                "_layout_x": 140.0,
+                "_layout_y": 238.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Judging the evidence",
+                "_source_order": 1031
+            },
+            {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 109,
+                "level_reason": "Standard section title with style s=20.0, r=2.00, x=140.",
+                "_layout_x": 140.0,
+                "_layout_y": 133.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Study questions",
+                "_source_order": 372
+            },
+            {
+                "level": 2,
+                "chapter": "References",
+                "page": 110,
+                "level_reason": "Standard section title with style s=20.0, r=2.00, x=55.",
+                "_layout_x": 140.0,
+                "_layout_y": 371.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "References",
+                "_source_order": 392
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter 6 Epidemiology and prevention: chronic noncommunicable diseases",
+                "page": 112,
+                "level_reason": "Top-level chapter title with style s=32.0, r=3.20, x=55.",
+                "_layout_x": 193.0,
+                "_layout_y": 264.0,
+                "_layout_font_size": 8.4,
+                "_layout_size_ratio": 0.84,
+                "_layout_text": "d",
+                "_source_order": 329
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 112,
+                "level_reason": "Standard section title with style s=20.0, r=2.00, x=168.",
+                "_layout_x": 167.0,
+                "_layout_y": 149.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 415
+            },
+            {
+                "level": 2,
+                "chapter": "The scope of prevention",
+                "page": 112,
+                "level_reason": "Major section title with style s=20.0, r=2.00, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 382.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "The scope of prevention",
+                "_source_order": 1181
+            },
+            {
+                "level": 3,
+                "chapter": "Recent trends in death rates",
+                "page": 112,
+                "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                "_layout_x": 55.0,
+                "_layout_y": 516.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Recent trends in death rates",
+                "_source_order": 1189
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"input_pdf.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 3,\n      \"chapter\": \"Correlation\",\n      \"page\": 88,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 84.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Correlation\",\n      \"_source_order\": 2\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Regression\",\n      \"page\": 88,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 369.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Regression\",\n      \"_source_order\": 25\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Using and interpreting regression models\",\n      \"page\": 88,\n      \"level_reason\": \"Lower level title with style s=9.0, r=0.90, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 397.0,\n      \"_layout_font_size\": 9.0,\n      \"_layout_size_ratio\": 0.9,\n      \"_layout_text\": \"Using and interpreting regression models\",\n      \"_source_order\": 26\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Different regression models\",\n      \"page\": 88,\n      \"level_reason\": \"Lower level title with style s=9.0, r=0.90, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 482.0,\n      \"_layout_font_size\": 9.0,\n      \"_layout_size_ratio\": 0.9,\n      \"_layout_text\": \"Different regression models\",\n      \"_source_order\": 32\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Key concept for regression models\",\n      \"page\": 88,\n      \"level_reason\": \"Lower level title with style s=9.0, r=0.90, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 562.0,\n      \"_layout_font_size\": 9.0,\n      \"_layout_size_ratio\": 0.9,\n      \"_layout_text\": \"Key concept for regression models\",\n      \"_source_order\": 37\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Linear regression\",\n      \"page\": 89,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=140.\",\n      \"_layout_x\": 140.0,\n      \"_layout_y\": 200.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Linear regression\",\n      \"_source_order\": 57\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Dependent variable\",\n      \"page\": 89,\n      \"level_reason\": \"Lower level title with style s=9.0, r=0.90, x=140.\",\n      \"_layout_x\": 140.0,\n      \"_layout_y\": 303.0,\n      \"_layout_font_size\": 9.0,\n      \"_layout_size_ratio\": 0.9,\n      \"_layout_text\": \"Dependent variable\",\n      \"_source_order\": 63\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Independent variables\",\n      \"page\": 90,\n      \"level_reason\": \"Lower level title with style s=9.0, r=0.90, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 85.0,\n      \"_layout_font_size\": 9.0,\n      \"_layout_size_ratio\": 0.9,\n      \"_layout_text\": \"Independent variables\",\n      \"_source_order\": 97\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Multiple variables\",\n      \"page\": 90,\n      \"level_reason\": \"Lower level title with style s=9.0, r=0.90, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 343.0,\n      \"_layout_font_size\": 9.0,\n      \"_layout_size_ratio\": 0.9,\n      \"_layout_text\": \"Multiple variables\",\n      \"_source_order\": 122\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Logistic regression\",\n      \"page\": 91,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=140.\",\n      \"_layout_x\": 140.0,\n      \"_layout_y\": 84.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Logistic regression\",\n      \"_source_order\": 156\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Survival analyses and Cox proportional hazards models\",\n      \"page\": 92,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 84.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Survival analyses and Cox proportional hazards\",\n      \"_source_order\": 202\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Kaplan-Meier survival curves\",\n      \"page\": 92,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 569.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Kaplan-Meier survival curves\",\n      \"_source_order\": 251\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Sample size issues\",\n      \"page\": 93,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=140.\",\n      \"_layout_x\": 140.0,\n      \"_layout_y\": 173.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Sample size issues\",\n      \"_source_order\": 268\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Two sample t-test\",\n      \"page\": 93,\n      \"level_reason\": \"Lower level title with style s=9.0, r=0.90, x=140.\",\n      \"_layout_x\": 140.0,\n      \"_layout_y\": 391.0,\n      \"_layout_font_size\": 9.0,\n      \"_layout_size_ratio\": 0.9,\n      \"_layout_text\": \"Two sample t-test\",\n      \"_source_order\": 281\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Test comparing proportions\",\n      \"page\": 94,\n      \"level_reason\": \"Lower level title with style s=9.0, r=0.90, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 85.0,\n      \"_layout_font_size\": 9.0,\n      \"_layout_size_ratio\": 0.9,\n      \"_layout_text\": \"Test comparing proportions\",\n      \"_source_order\": 308\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Meta-analysis\",\n      \"page\": 94,\n      \"level_reason\": \"Major section title with style s=20.0, r=2.00, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 324.0,\n      \"_layout_font_size\": 20.0,\n      \"_layout_size_ratio\": 2.0,\n      \"_layout_text\": \"Meta-analysis\",\n      \"_source_order\": 341\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Study questions\",\n      \"page\": 95,\n      \"level_reason\": \"Standard section title with style s=20.0, r=2.00, x=140.\",\n      \"_layout_x\": 140.0,\n      \"_layout_y\": 133.0,\n      \"_layout_font_size\": 20.0,\n      \"_layout_size_ratio\": 2.0,\n      \"_layout_text\": \"Study questions\",\n      \"_source_order\": 372\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"References\",\n      \"page\": 95,\n      \"level_reason\": \"Standard section title with style s=20.0, r=2.00, x=140.\",\n      \"_layout_x\": 140.0,\n      \"_layout_y\": 371.0,\n      \"_layout_font_size\": 20.0,\n      \"_layout_size_ratio\": 2.0,\n      \"_layout_text\": \"References\",\n      \"_source_order\": 392\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 5 Causation in epidemiology\",\n      \"page\": 96,\n      \"level_reason\": \"Top-level chapter title with style s=32.0, r=3.20, x=55.\",\n      \"_layout_x\": 193.0,\n      \"_layout_y\": 264.0,\n      \"_layout_font_size\": 8.4,\n      \"_layout_size_ratio\": 0.84,\n      \"_layout_text\": \"d\",\n      \"_source_order\": 329\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 96,\n      \"level_reason\": \"Standard section title with style s=20.0, r=2.00, x=167.\",\n      \"_layout_x\": 167.0,\n      \"_layout_y\": 149.0,\n      \"_layout_font_size\": 20.0,\n      \"_layout_size_ratio\": 2.0,\n      \"_layout_text\": \"Key messages\",\n      \"_source_order\": 415\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"The concept of cause\",\n      \"page\": 96,\n      \"level_reason\": \"Major section title with style s=20.0, r=2.00, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 352.0,\n      \"_layout_font_size\": 20.0,\n      \"_layout_size_ratio\": 2.0,\n      \"_layout_text\": \"The concept of cause\",\n      \"_source_order\": 428\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Sufficient or necessary\",\n      \"page\": 96,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 474.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Sufficient or necessary\",\n      \"_source_order\": 435\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Sufficient and necessary\",\n      \"page\": 97,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=140.\",\n      \"_layout_x\": 140.0,\n      \"_layout_y\": 348.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Sufficient and necessary\",\n      \"_source_order\": 468\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"A causal pathway\",\n      \"page\": 98,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 302.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"A causal pathway\",\n      \"_source_order\": 501\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Single and multiple causes\",\n      \"page\": 99,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=140.\",\n      \"_layout_x\": 140.0,\n      \"_layout_y\": 199.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Single and multiple causes\",\n      \"_source_order\": 537\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Factors in causation\",\n      \"page\": 100,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 84.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Factors in causation\",\n      \"_source_order\": 569\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Interaction\",\n      \"page\": 101,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=140.\",\n      \"_layout_x\": 140.0,\n      \"_layout_y\": 147.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Interaction\",\n      \"_source_order\": 624\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"A hierarchy of causes\",\n      \"page\": 101,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=140.\",\n      \"_layout_x\": 140.0,\n      \"_layout_y\": 273.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"A hierarchy of causes\",\n      \"_source_order\": 632\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Establishing the cause of a disease\",\n      \"page\": 102,\n      \"level_reason\": \"Major section title with style s=20.0, r=2.00, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 288.0,\n      \"_layout_font_size\": 20.0,\n      \"_layout_size_ratio\": 2.0,\n      \"_layout_text\": \"Establishing the cause of a disease\",\n      \"_source_order\": 681\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Considering causation\",\n      \"page\": 102,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 462.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Considering causation\",\n      \"_source_order\": 692\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Temporal relationship\",\n      \"page\": 102,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 579.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Temporal relationship\",\n      \"_source_order\": 699\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Plausibility\",\n      \"page\": 104,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 147.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Plausibility\",\n      \"_source_order\": 743\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Strength\",\n      \"page\": 106,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 134.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Strength\",\n      \"_source_order\": 856\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Dose–response relationship\",\n      \"page\": 106,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 550.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Dose–response relationship\",\n      \"_source_order\": 901\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Reversibility\",\n      \"page\": 108,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 84.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Reversibility\",\n      \"_source_order\": 973\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Study design\",\n      \"page\": 108,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 213.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Study design\",\n      \"_source_order\": 981\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Judging the evidence\",\n      \"page\": 109,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=140.\",\n      \"_layout_x\": 140.0,\n      \"_layout_y\": 238.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Judging the evidence\",\n      \"_source_order\": 1031\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Study questions\",\n      \"page\": 109,\n      \"level_reason\": \"Standard section title with style s=20.0, r=2.00, x=140.\",\n      \"_layout_x\": 140.0,\n      \"_layout_y\": 133.0,\n      \"_layout_font_size\": 20.0,\n      \"_layout_size_ratio\": 2.0,\n      \"_layout_text\": \"Study questions\",\n      \"_source_order\": 372\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"References\",\n      \"page\": 110,\n      \"level_reason\": \"Standard section title with style s=20.0, r=2.00, x=55.\",\n      \"_layout_x\": 140.0,\n      \"_layout_y\": 371.0,\n      \"_layout_font_size\": 20.0,\n      \"_layout_size_ratio\": 2.0,\n      \"_layout_text\": \"References\",\n      \"_source_order\": 392\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 6 Epidemiology and prevention: chronic noncommunicable diseases\",\n      \"page\": 112,\n      \"level_reason\": \"Top-level chapter title with style s=32.0, r=3.20, x=55.\",\n      \"_layout_x\": 193.0,\n      \"_layout_y\": 264.0,\n      \"_layout_font_size\": 8.4,\n      \"_layout_size_ratio\": 0.84,\n      \"_layout_text\": \"d\",\n      \"_source_order\": 329\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 112,\n      \"level_reason\": \"Standard section title with style s=20.0, r=2.00, x=168.\",\n      \"_layout_x\": 167.0,\n      \"_layout_y\": 149.0,\n      \"_layout_font_size\": 20.0,\n      \"_layout_size_ratio\": 2.0,\n      \"_layout_text\": \"Key messages\",\n      \"_source_order\": 415\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"The scope of prevention\",\n      \"page\": 112,\n      \"level_reason\": \"Major section title with style s=20.0, r=2.00, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 382.0,\n      \"_layout_font_size\": 20.0,\n      \"_layout_size_ratio\": 2.0,\n      \"_layout_text\": \"The scope of prevention\",\n      \"_source_order\": 1181\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Recent trends in death rates\",\n      \"page\": 112,\n      \"level_reason\": \"Subsection title with style s=14.0, r=1.40, x=55.\",\n      \"_layout_x\": 55.0,\n      \"_layout_y\": 516.0,\n      \"_layout_font_size\": 14.0,\n      \"_layout_size_ratio\": 1.4,\n      \"_layout_text\": \"Recent trends in death rates\",\n      \"_source_order\": 1189\n    }\n  ]\n}"
+}
