@@ -154,6 +154,8 @@ LAYOUT_METADATA_FIELD_ALIASES: dict[str, tuple[str, ...]] = {
     "_layout_size_ratio": ("_layout_size_ratio", "layout_size_ratio", "size_ratio", "r"),
     "_layout_text": ("_layout_text", "layout_text", "source_text"),
     "_layout_page": ("_layout_page", "layout_page"),
+    "_layout_bold": ("_layout_bold", "layout_bold", "bold", "b"),
+    "_layout_italic": ("_layout_italic", "layout_italic", "italic", "i"),
     "_source_order": ("_source_order", "source_order"),
 }
 
@@ -357,7 +359,7 @@ Output exactly one JSON object in the format below. Do not output explanations, 
 - Preserve original title numbering, but do not invent missing numbering.
 - Preserve original chapter/section titles exactly, including Korean text when the source title is Korean.
 - Exclude body sentences, examples, questions, table/figure captions, and references that are not suitable TOC entries.
-- Include every visible heading/subheading that belongs in the document hierarchy up to level {max_depth}. Do not omit lower-level headings merely because their font is smaller than chapter titles.
+- Include every visible body hierarchy title that belongs in the document hierarchy up to level {max_depth}. Do not omit lower-level section/subsection titles merely because their font is smaller than chapter titles.
 - For every chapter object, include level_reason explaining why that entry has its level. Use hierarchy, font size/style, indentation, surrounding context, and title markers only when present.
 - Never output any text outside the JSON object.
 """.strip()
@@ -924,6 +926,123 @@ def metadata_int_value(value: Any) -> int | None:
         return None
 
 
+def normalize_toc_duplicate_title(value: Any) -> str:
+    text = clean_text(value)
+    text = re.sub(r"^\s*\d{2,}\s*[∙·ㆍ.\-–—|:]\s*", "", text)
+    text = re.sub(r"\s*[∙·ㆍ.\-–—|:]\s*\d+\s*$", "", text)
+    if len(text.split()) >= 3:
+        text = re.sub(r"^\s*\d{2,}\s+", "", text)
+        text = re.sub(r"\s+\d+\s*$", "", text)
+    return re.sub(r"\s+", "", text).lower()
+
+
+def is_marker_only_toc_title(title: Any) -> bool:
+    text = clean_text(title)
+    if not text:
+        return False
+    return bool(re.fullmatch(
+        r"(?:chapter|part|section|unit)\s*\d+[A-Za-z]?|"
+        r"제\s*\d+\s*[장절편부]|"
+        r"\d+(?:\.\d+)*[.)]?",
+        text,
+        re.IGNORECASE,
+    ))
+
+
+def is_repeated_running_title_candidate(chapter: dict[str, Any]) -> bool:
+    title = clean_text(chapter.get("chapter"))
+    y = metadata_float_value(chapter.get("_layout_y"))
+    font_size = metadata_float_value(chapter.get("_layout_font_size"))
+    size_ratio = metadata_float_value(chapter.get("_layout_size_ratio"))
+    bold = metadata_int_value(chapter.get("_layout_bold")) or 0
+    italic = metadata_int_value(chapter.get("_layout_italic")) or 0
+    if y is None:
+        return False
+
+    near_page_edge = y <= 110.0 or y >= 740.0
+    weak_style = (
+        (size_ratio is not None and size_ratio <= 1.12)
+        or (font_size is not None and font_size <= 11.0)
+    )
+    return near_page_edge and ((weak_style and not bold and not italic) or is_marker_only_toc_title(title))
+
+
+def toc_duplicate_keep_key(chapter: dict[str, Any]) -> tuple[int, float, float, int, int]:
+    running_like = 1 if is_repeated_running_title_candidate(chapter) else 0
+    font_size = metadata_float_value(chapter.get("_layout_font_size")) or 0.0
+    size_ratio = metadata_float_value(chapter.get("_layout_size_ratio")) or 0.0
+    page = metadata_int_value(chapter.get("page")) or 999999
+    source_order = metadata_int_value(chapter.get("_source_order")) or metadata_int_value(chapter.get("_local_merge_order")) or 999999
+    return running_like, -font_size, -size_ratio, page, source_order
+
+
+def dedupe_toc_chapters(chapters: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    by_title: dict[str, list[int]] = {}
+    for index, chapter in enumerate(chapters):
+        normalized = normalize_toc_duplicate_title(chapter.get("chapter"))
+        if normalized:
+            by_title.setdefault(normalized, []).append(index)
+
+    remove_indexes: set[int] = set()
+    for indexes in by_title.values():
+        if len(indexes) < 2:
+            continue
+
+        ordered = sorted(
+            indexes,
+            key=lambda index: (
+                metadata_int_value(chapters[index].get("page")) or 999999,
+                metadata_int_value(chapters[index].get("_source_order")) or index,
+                index,
+            ),
+        )
+
+        running_like_indexes = [index for index in ordered if is_repeated_running_title_candidate(chapters[index])]
+        marker_only_repeated = any(is_marker_only_toc_title(chapters[index].get("chapter")) for index in ordered)
+        if len(running_like_indexes) >= 2:
+            non_running = [index for index in ordered if index not in running_like_indexes]
+            if non_running:
+                keep_index = min(non_running, key=lambda index: toc_duplicate_keep_key(chapters[index]))
+                remove_indexes.update(index for index in running_like_indexes if index != keep_index)
+            else:
+                remove_indexes.update(running_like_indexes)
+
+        if marker_only_repeated:
+            keep_index = min(ordered, key=lambda index: toc_duplicate_keep_key(chapters[index]))
+            remove_indexes.update(index for index in ordered if index != keep_index)
+
+        kept_for_close_pages: list[int] = []
+        for index in ordered:
+            if index in remove_indexes:
+                continue
+            chapter = chapters[index]
+            page = metadata_int_value(chapter.get("page"))
+            level = metadata_int_value(chapter.get("level"))
+            duplicate_of: int | None = None
+            for kept_index in kept_for_close_pages:
+                kept = chapters[kept_index]
+                kept_page = metadata_int_value(kept.get("page"))
+                kept_level = metadata_int_value(kept.get("level"))
+                if page is None or kept_page is None or level != kept_level:
+                    continue
+                if abs(page - kept_page) <= 1:
+                    duplicate_of = kept_index
+                    break
+
+            if duplicate_of is None:
+                kept_for_close_pages.append(index)
+                continue
+
+            better_index = min((duplicate_of, index), key=lambda item: toc_duplicate_keep_key(chapters[item]))
+            worse_index = index if better_index == duplicate_of else duplicate_of
+            remove_indexes.add(worse_index)
+            if better_index == index:
+                kept_for_close_pages = [item for item in kept_for_close_pages if item != duplicate_of]
+                kept_for_close_pages.append(index)
+
+    return [chapter for index, chapter in enumerate(chapters) if index not in remove_indexes]
+
+
 def copy_toc_layout_metadata(source: dict[str, Any], target: dict[str, Any]) -> None:
     for target_key, aliases in LAYOUT_METADATA_FIELD_ALIASES.items():
         value = first_present_metadata_value(source, aliases)
@@ -936,7 +1055,7 @@ def copy_toc_layout_metadata(source: dict[str, Any], target: dict[str, Any]) -> 
                 target[target_key] = number
             continue
 
-        if target_key in {"_layout_page", "_source_order"}:
+        if target_key in {"_layout_page", "_source_order", "_layout_bold", "_layout_italic"}:
             number = metadata_int_value(value)
             if number is not None:
                 target[target_key] = number
@@ -993,6 +1112,7 @@ def validate_toc(data: dict[str, Any], fallback_title: str, max_depth: int) -> d
         copy_toc_layout_metadata(item, chapter_item)
         chapters.append(chapter_item)
 
+    chapters = dedupe_toc_chapters(chapters)
     return {
         "title": title,
         "chapters": chapters,
@@ -4051,7 +4171,10 @@ def gemma_toc_page_prompt_rule(mode: str) -> str:
             "- Detected existing table-of-contents pages were removed before this input. "
             "Use the remaining body pages only; still ignore dot-leader remnants, page-number-only lines, and repeated headers/footers."
         )
-    return "- Ignore existing table-of-contents pages, dot-leader lines, page-number-only lines, and repeated headers/footers."
+    return (
+        "- All parsed pages are included in this input. Existing table-of-contents/Contents pages may appear; "
+        "ignore those existing TOC pages, dot-leader lines, page-number-only lines, and repeated headers/footers yourself."
+    )
 
 
 def build_gemma_text_prompt(
@@ -4076,9 +4199,10 @@ Some lines may start with compact layout tags:
 {toc_page_rule}
 - Repeated top/bottom headers or footers are not TOC entries even if they contain structural markers such as 제N편, 제N장, Part, or Chapter.
 - If [Document-Wide Layout Style Reference] lists repeated running header/footer styles, treat their texts as a strict blocklist. Do not output those texts as TOC entries, even if they look like an annex, part, chapter, or section title.
-- Ignore figure/table/chart/diagram internal labels and captions. A line near a Figure/Table/Box caption is not a TOC heading unless it clearly functions as a document hierarchy title.
-- Perform a completeness pass over the extracted text before output. Include lower-level visible headings when they use consistent heading-like visual style, indentation, spacing patterns, or title markers. Do not stop after only chapter and major section titles.
-- Do not omit a heading only because it is smaller than nearby headings; smaller visual style usually means a deeper level, not body text, when it repeats as a heading pattern.
+- Ignore figure/table/chart/diagram internal labels and captions. A line near a Figure/Table/Box caption is not a TOC body hierarchy title unless it clearly functions as a document hierarchy title.
+- Perform a completeness pass over the extracted text before output. Include lower-level visible body hierarchy titles when they use consistent title-like visual style, indentation, spacing patterns, or title markers. Do not stop after only chapter and major section titles.
+- Do not omit a body hierarchy title only because it is smaller than nearby titles; smaller visual style usually means a deeper level, not body text, when it repeats as a body title pattern.
+- Do not restore repeated running page headers/footers during the completeness pass. Repeated top/bottom text is negative evidence even if it looks title-like.
 - Before finalizing the JSON, self-check every level against the visible hierarchy in this document. Use the current chunk's layout metadata and any previous level reference; if a candidate's title marker or style conflicts with the observed document convention, correct the level yourself before output.
 - Do not assume a universal mapping from any title marker or numbering style to a level. Infer the mapping from this document's repeated visual hierarchy and previous level reference.
 - Include level_reason in every chapter object. Explain the level using hierarchy, font size/ratio, bold/italic, indentation, context, and title markers only when present.
@@ -4126,9 +4250,10 @@ Some lines may start with compact layout tags:
 {toc_page_rule}
 - Repeated top/bottom headers or footers are not TOC entries even if they contain structural markers such as 제N편, 제N장, Part, or Chapter.
 - If [Document-Wide Layout Style Reference] lists repeated running header/footer styles, treat their texts as a strict blocklist. Do not output those texts as TOC entries, even if they look like an annex, part, chapter, or section title.
-- Ignore figure/table/chart/diagram internal labels and captions. A line near a Figure/Table/Box caption is not a TOC heading unless it clearly functions as a document hierarchy title.
-- Perform a completeness pass over this chunk before output. Include lower-level visible headings when they use consistent heading-like visual style, indentation, spacing patterns, or title markers. Do not stop after only chapter and major section titles.
-- Do not omit a heading only because it is smaller than nearby headings; smaller visual style usually means a deeper level, not body text, when it repeats as a heading pattern.
+- Ignore figure/table/chart/diagram internal labels and captions. A line near a Figure/Table/Box caption is not a TOC body hierarchy title unless it clearly functions as a document hierarchy title.
+- Perform a completeness pass over this chunk before output. Include lower-level visible body hierarchy titles when they use consistent title-like visual style, indentation, spacing patterns, or title markers. Do not stop after only chapter and major section titles.
+- Do not omit a body hierarchy title only because it is smaller than nearby titles; smaller visual style usually means a deeper level, not body text, when it repeats as a body title pattern.
+- Do not restore repeated running page headers/footers during the completeness pass. Repeated top/bottom text is negative evidence even if it looks title-like.
 - Before finalizing the JSON, self-check every level against the visible hierarchy in this document. Use the current chunk's layout metadata and any previous level reference; if a candidate's title marker or style conflicts with the observed document convention, correct the level yourself before output.
 - Do not assume a universal mapping from any title marker or numbering style to a level. Infer the mapping from this document's repeated visual hierarchy and previous level reference.
 - Include level_reason in every chapter object. Explain the level using hierarchy, font size/ratio, bold/italic, indentation, context, and title markers only when present.
@@ -4172,7 +4297,7 @@ def build_gemma_merge_prompt(
 
 [Chunked TOC Merge Instruction]
 Create one final TOC JSON object using only the [Partial TOC Candidates] below instead of the attached PDF.
-- Keep only one copy of duplicate entries.
+- Keep only one copy of duplicate entries. If the same normalized title appears multiple times because of chunk overlap or running headers/footers, keep the strongest non-header body-title occurrence and remove the repeated copies.
 - Preserve ascending page order and source appearance order.
 - Remove covers, prefaces, existing TOC pages, indexes, references, and repeated headers/footers.
 - If [Document-Wide Layout Style Reference] lists repeated running header/footer styles, treat those texts as a strict blocklist and remove matching partial candidates even when they contain words like Annex, Part, Chapter, or 제N장.
@@ -4281,7 +4406,7 @@ def format_gemma_numbering_gap_summary(toc: dict[str, Any], max_gaps: int = 20) 
                 before_page = f", page={before['page']}" if before.get("page") else ""
                 after_page = f", page={after['page']}" if after.get("page") else ""
                 gaps.append(
-                    f'- possible missing numbered heading "{format_number_path(missing_path)}" between "{compact_toc_example_title(before["title"], max_chars=70)}"{before_page} and "{compact_toc_example_title(after["title"], max_chars=70)}"{after_page}. Search Source Text/Layout or Partial TOC Candidates for this grounded heading before finalizing.'
+                    f'- possible missing numbered body hierarchy title "{format_number_path(missing_path)}" between "{compact_toc_example_title(before["title"], max_chars=70)}"{before_page} and "{compact_toc_example_title(after["title"], max_chars=70)}"{after_page}. Search Source Text/Layout or Partial TOC Candidates for this grounded body title before finalizing.'
                 )
                 if len(gaps) >= max_gaps:
                     break
@@ -4294,7 +4419,7 @@ def format_gemma_numbering_gap_summary(toc: dict[str, Any], max_gaps: int = 20) 
         return ""
     return "\n".join([
         "[Observed Numbering Sequence Gaps]",
-        "These are not automatic rules. They are completeness-audit clues. Restore a missing numbered heading only if it is grounded in Source Text/Layout or Partial TOC Candidates.",
+        "These are not automatic rules. They are completeness-audit clues. Restore a missing numbered body hierarchy title only if it is grounded in Source Text/Layout or Partial TOC Candidates.",
         *gaps,
     ])
 
@@ -5027,8 +5152,8 @@ def format_gemma_document_style_reference(summary: dict[str, Any]) -> str:
             "do not copy sample titles unless the same title is visible in the current source/chunk."
         ),
         f'- layout_lines={summary.get("layout_line_count")} style_clusters={summary.get("style_cluster_count")} pages={summary.get("page_count")}',
-        "- Use this reference to distinguish repeated heading styles from probable body text across the whole document.",
-        "- Body-size lines near r=1.0 without bold/italic or a visible marker are weak TOC candidates unless the document repeatedly proves they are headings.",
+        "- Use this reference to distinguish repeated body title styles from probable body text across the whole document.",
+        "- Body-size lines near r=1.0 without bold/italic or a visible marker are weak TOC candidates unless the document repeatedly proves they are body hierarchy titles.",
         "- One-off oversized styles on cover/title pages are not automatically document hierarchy styles.",
         "- Repeated top/bottom running headers or footers are not TOC entries even when they contain structural markers such as 제N편, 제N장, Part, or Chapter.",
         "- Treat the repeated running header/footer styles below as a strict blocklist. If a candidate title matches one of these texts exactly or after removing page numbers, remove it.",
@@ -5302,7 +5427,7 @@ def possible_invalid_heading_candidates(
         if visual_material_context and not has_marker:
             reasons.append("nearby source layout looks like figure/table/diagram material, not hierarchy")
         if embedded_only and weak_body_style:
-            reasons.append("title appears embedded in longer body lines, not as a standalone heading")
+            reasons.append("title appears embedded in longer body lines, not as a standalone body hierarchy title")
         if weak_body_style and not has_marker and level >= 4:
             reasons.append("body-size or near-body-size style without bold/italic or structural marker at a deep level")
         if restored and weak_body_style and not has_marker:
@@ -5362,7 +5487,7 @@ def format_gemma_possible_invalid_heading_candidates(
 
     lines = [
         "[Observed Possible Invalid Heading Candidates]",
-        "These are removal-review clues, not automatic removals. Remove a candidate only if it is not a real chapter/section/subsection heading in this document hierarchy.",
+        "These are removal-review clues, not automatic removals. Remove a candidate only if it is not a real chapter/section/subsection title in this document hierarchy.",
     ]
     for candidate in candidates:
         location = missing_numbered_candidate_layout_text(candidate)
@@ -5496,7 +5621,7 @@ def format_gemma_missing_numbered_heading_candidates(
 
     lines = [
         "[Observed Missing Numbered Heading Candidates]",
-        "These catch omissions even when the missing heading is the final item in a numbered sequence. They are clues, not automatic additions. Restore a candidate only if it is a real visible heading and not an existing TOC line, body sentence, caption, question, reference, or duplicate.",
+        "These catch omissions even when the missing body hierarchy title is the final item in a numbered sequence. They are clues, not automatic additions. Restore a candidate only if it is a real visible chapter/section/subsection title and not a running header/footer, existing TOC line, body sentence, caption, question, reference, or duplicate.",
     ]
     for _, candidate in sorted(candidates_by_path.items())[:max_candidates]:
         location = missing_numbered_candidate_layout_text(candidate)
@@ -5564,7 +5689,7 @@ def format_gemma_missing_style_heading_candidates(
 
     lines = [
         "[Observed Missing Style Heading Candidates]",
-        "These catch omissions when headings do not use numbering. They are layout-based clues from Source Text/Layout. Restore a candidate only if its font size/ratio/bold/indent/spacing pattern clearly belongs to this document's heading hierarchy and it is not body text, a caption, question, reference, header/footer, or existing TOC line.",
+        "These catch omissions when body hierarchy titles do not use numbering. They are layout-based clues from Source Text/Layout. Restore a candidate only if its font size/ratio/bold/indent/spacing pattern clearly belongs to this document's body title hierarchy and it is not body text, a caption, question, reference, running header/footer, duplicate, or existing TOC line.",
     ]
     for candidate in candidates:
         location = missing_numbered_candidate_layout_text(candidate)
@@ -5684,7 +5809,7 @@ def format_gemma_level_style_summary(toc: dict[str, Any], max_conflicts: int = 2
             page_text = f", page={row['page']}" if row.get("page") else ""
             x_text = f", x={row['x']:.1f}" if row.get("x") is not None else ""
             conflicts.append(
-                f'- title="{compact_toc_example_title(row["title"], max_chars=90)}"{page_text}: current level 1 uses smaller style {format_style_key(style_key)}{x_text}, while true level 1 appears to use {format_style_key(dominant_level_one_style)}. Audit as a likely lower-level heading unless document-specific evidence proves it is a separate top-level title.'
+                f'- title="{compact_toc_example_title(row["title"], max_chars=90)}"{page_text}: current level 1 uses smaller style {format_style_key(style_key)}{x_text}, while true level 1 appears to use {format_style_key(dominant_level_one_style)}. Audit as a likely lower-level body hierarchy title unless document-specific evidence proves it is a separate top-level title.'
             )
             if len(conflicts) >= max_conflicts:
                 break
@@ -5773,27 +5898,28 @@ def build_gemma_level_review_prompt(
 [Gemma TOC Level Verification and Correction]
 Review the [Current TOC JSON] and return one corrected TOC JSON object.
 This is a verification pass after the first TOC extraction/merge.
-- Also perform a completeness audit. If [Source Text/Layout] is provided, compare the current TOC against visible heading-like lines in the source and add omitted headings/subheadings that belong in the hierarchy. If [Partial TOC Candidates] is provided, restore any candidate heading omitted from the current TOC unless it is a duplicate, header/footer, existing TOC line, reference/index item, question, caption, or body sentence.
-- Add missing entries only when they are grounded in [Source Text/Layout] or [Partial TOC Candidates]. Do not invent titles or pages.
-- When adding a missing heading, place it in source order, assign the level from this document's visual/style hierarchy, copy _layout_* metadata from the visible title line when available, and explain in level_reason that it was restored during completeness audit.
-- If [Observed Numbering Sequence Gaps] is provided, explicitly check each gap as an optional completeness clue. Search the source/partials for a grounded visible heading before restoring anything. If not grounded, do not invent it.
-- If [Observed Missing Numbered Heading Candidates] is provided, explicitly audit each candidate as an optional title-marker clue. Add the candidate only if it is a real heading grounded in the source/partials; reject it if it is an existing TOC line, body sentence, caption, question, reference, or duplicate.
-- If [Observed Missing Style Heading Candidates] is provided, explicitly audit each candidate even when it has no numbering. This list is based on font size, size/body ratio, bold/italic, indentation, and similarity to observed heading styles. Add the candidate only if the layout pattern clearly matches this document's heading hierarchy.
-- If [Observed Possible Invalid Heading Candidates] is provided, audit those current TOC entries first. Remove entries that are body-size text, side notes, case/example/box titles, table/figure captions, question/problem labels, references, or terms embedded inside prose rather than real hierarchy headings. A candidate is not automatically invalid; keep it only when there is strong document-specific hierarchy evidence, and explain that evidence in level_reason.
-- Remove repeated top/bottom running headers or footers even if their text contains a structural marker such as 제N편, 제N장, Part, or Chapter. Header/footer layout evidence overrides the marker.
-- The repeated running header/footer styles in [Document-Wide Layout Style Reference] are a strict blocklist. If a current TOC entry matches one of those texts exactly or after removing page numbers, remove it unless [Source Text/Layout] shows a separate non-header body title line with stronger title layout.
-- Do not reinterpret a running header/footer blocklist match as an annex, part, chapter, section, answer-title, or other hierarchy entry.
-- Remove figure/table/chart/diagram internal labels and concatenated visual labels even when their font size resembles a subsection style. Nearby Figure/Table/Box captions or clusters of small graphic labels are negative evidence.
+	- Also perform a completeness audit. If [Source Text/Layout] is provided, compare the current TOC against visible body hierarchy title lines in the source and add omitted chapter/section/subsection titles that belong in the hierarchy. If [Partial TOC Candidates] is provided, restore any candidate body hierarchy title omitted from the current TOC unless it is a duplicate, running header/footer, existing TOC line, reference/index item, question, caption, or body sentence.
+	- Add missing entries only when they are grounded in [Source Text/Layout] or [Partial TOC Candidates]. Do not invent titles or pages.
+	- When adding a missing body hierarchy title, place it in source order, assign the level from this document's visual/style hierarchy, copy _layout_* metadata from the visible body title line when available, and explain in level_reason that it was restored during completeness audit.
+	- If [Observed Numbering Sequence Gaps] is provided, explicitly check each gap as an optional completeness clue. Search the source/partials for a grounded visible body hierarchy title before restoring anything. If not grounded, do not invent it.
+	- If [Observed Missing Numbered Heading Candidates] is provided, explicitly audit each candidate as an optional title-marker clue. Add the candidate only if it is a real body hierarchy title grounded in the source/partials; reject it if it is a running header/footer, existing TOC line, body sentence, caption, question, reference, or duplicate.
+	- If [Observed Missing Style Heading Candidates] is provided, explicitly audit each candidate even when it has no numbering. This list is based on font size, size/body ratio, bold/italic, indentation, and similarity to observed body title styles. Add the candidate only if the layout pattern clearly matches this document's body hierarchy title system.
+	- If [Observed Possible Invalid Heading Candidates] is provided, audit those current TOC entries first. Remove entries that are body-size text, side notes, case/example/box titles, table/figure captions, question/problem labels, references, or terms embedded inside prose rather than real hierarchy titles. A candidate is not automatically invalid; keep it only when there is strong document-specific hierarchy evidence, and explain that evidence in level_reason.
+	- Remove repeated top/bottom running headers or footers even if their text contains a structural marker such as 제N편, 제N장, Part, or Chapter. Header/footer layout evidence overrides the marker.
+	- The repeated running header/footer styles in [Document-Wide Layout Style Reference] are a strict blocklist. If a current TOC entry matches one of those texts exactly or after removing page numbers, remove it unless [Source Text/Layout] shows a separate non-header body title line with stronger title layout.
+	- Do not reinterpret a running header/footer blocklist match as an annex, part, chapter, section, answer-title, or other hierarchy entry.
+	- Remove duplicate TOC entries. Treat same normalized title on the same page, same normalized title on adjacent pages from chunk overlap, and repeated same-title running headers/footers across pages as duplicates. Keep the strongest non-header body-title occurrence and remove repeated copies.
+	- Remove figure/table/chart/diagram internal labels and concatenated visual labels even when their font size resembles a subsection style. Nearby Figure/Table/Box captions or clusters of small graphic labels are negative evidence.
 - Correct wrong "level" values by inferring this document's hierarchy from repeated title patterns, page order, layout metadata, and nearby context.
 - Do not use a universal title-marker-to-level rule. Any visible marker or numbering style can mean different levels in different books, and some books have no markers at all.
 - Visual hierarchy is stronger evidence than numbering alone. Font size, size/body ratio, indentation, bold/italic style, and repeated visual patterns must override a superficial numbering interpretation when they conflict.
 - Before deciding levels, internally build a style cluster table for each level using _layout_font_size, _layout_size_ratio, _layout_x, and repeated title patterns. Do not output this table; use it to correct the JSON.
 - A level must be visually coherent within the same document. If one entry assigned to level 1 has a much smaller font/ratio and matches the repeated style of lower-level entries, move it to the visually matching lower level even if its title marker looks prominent.
-- If level 1 contains multiple visual style clusters, treat the largest/highest visual cluster as the true top-level chapter style unless the document clearly proves otherwise. Smaller level-1 clusters are likely misclassified lower headings and must be demoted to the level whose style/hierarchy they match.
+	- If level 1 contains multiple visual style clusters, treat the largest/highest visual cluster as the true top-level chapter style unless the document clearly proves otherwise. Smaller level-1 clusters are likely misclassified lower-level body titles and must be demoted to the level whose style/hierarchy they match.
 - Do not keep an entry at level 1 merely because of its title marker. If true level 1 entries use a larger chapter-title style, a smaller repeated style is usually a lower section level in this document.
 - Audit every "level": 1 entry especially strictly. Level 1 should represent the highest visible hierarchy; entries with section-level typography must be corrected downward.
 - When [Observed TOC Level Style Evidence] lists a potential style-level conflict, explicitly resolve it in the output: either change the level to the visually matching level, or keep it only if there is stronger document-specific evidence and explain that evidence in level_reason.
-- Preserve existing correct title text, page numbers, and order. You may add omitted grounded headings, remove exact duplicates, and remove clearly invalid non-heading entries.
+	- Preserve existing correct title text, page numbers, and order. You may add omitted grounded body hierarchy titles, remove duplicates, and remove clearly invalid non-title entries.
 - Use only levels from 1 to {max_depth}.
 - Preserve existing _layout_* metadata when it still describes the visible title line. If a correction uses a better visible line from [Source Text/Layout], update the _layout_* fields from that line.
 - Include level_reason for every chapter. If you changed a level, mention the previous level and the document-specific evidence for the corrected level, including font_size/size_ratio/indent and the matching repeated style cluster.
@@ -7117,8 +7243,8 @@ def generate_toc_from_pdf_gemma_text(
             "toc_page_filter": toc_page_metadata,
             "raw_extracted_pages": len(raw_pages),
             "raw_extracted_chars": raw_extracted_chars,
-            "selected_pages": len(pages),
-            "selected_chars": extracted_chars,
+            "extracted_pages": len(pages),
+            "extracted_chars": extracted_chars,
             "chunks": [
                 {
                     "index": chunk.get("index"),
@@ -8062,7 +8188,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help=(
             "How Gemma handles detected existing TOC/Contents pages after PDF parsing: "
             "exclude removes them before Gemma input chunks(default), only sends only detected TOC pages, "
-            "include keeps the previous unfiltered behavior."
+            "include sends all parsed pages and asks Gemma to ignore existing TOC pages."
         ),
     )
     parser.add_argument(
