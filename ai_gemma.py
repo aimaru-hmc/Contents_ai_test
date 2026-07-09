@@ -70,7 +70,6 @@ DEFAULT_GEMMA_RUNTIME = os.getenv("GEMMA_RUNTIME", "transformers").strip().lower
 DEFAULT_GEMMA_DEVICE_MAP = os.getenv("GEMMA_DEVICE_MAP", "auto").strip() or "auto"
 DEFAULT_GEMMA_TORCH_DTYPE = os.getenv("GEMMA_TORCH_DTYPE", os.getenv("GEMMA_DTYPE", "auto")).strip() or "auto"
 DEFAULT_GEMMA_EXTRACTION_MODE = os.getenv("GEMMA_EXTRACTION_MODE", "layout").strip().lower() or "layout"
-DEFAULT_GEMMA_TOC_PAGE_MODE = os.getenv("GEMMA_TOC_PAGE_MODE", "exclude").strip().lower() or "exclude"
 DEFAULT_GEMMA_MERGE_MODE = os.getenv("GEMMA_MERGE_MODE", "local").strip().lower() or "local"
 DEFAULT_GEMMA_MERGE_STRATEGY = os.getenv("GEMMA_MERGE_STRATEGY", "batched").strip().lower() or "batched"
 DEFAULT_GEMMA_MERGE_BATCH_CHARS = int(os.getenv("GEMMA_MERGE_BATCH_CHARS", "60000"))
@@ -1941,11 +1940,9 @@ def is_probable_existing_toc_page(page_number: int, page_text: str) -> bool:
     return slash_page_count >= 8 and page_number <= 40
 
 
-def apply_gemma_toc_page_mode(
+def exclude_gemma_existing_toc_pages(
     pages: list[tuple[int, str]],
-    mode: str,
 ) -> tuple[list[tuple[int, str]], dict[str, Any]]:
-    mode = normalize_gemma_toc_page_mode(mode)
     toc_page_numbers = [
         page_number
         for page_number, page_text in pages
@@ -1954,31 +1951,22 @@ def apply_gemma_toc_page_mode(
     toc_page_set = set(toc_page_numbers)
     fallback_reason = ""
 
-    if mode == "include":
+    selected_pages = [(page_number, text) for page_number, text in pages if page_number not in toc_page_set]
+    if not selected_pages:
         selected_pages = list(pages)
-    elif mode == "only":
-        selected_pages = [(page_number, text) for page_number, text in pages if page_number in toc_page_set]
-        if not selected_pages:
-            selected_pages = list(pages)
-            fallback_reason = "no_existing_toc_pages_detected"
-    else:
-        selected_pages = [(page_number, text) for page_number, text in pages if page_number not in toc_page_set]
-        if not selected_pages:
-            selected_pages = list(pages)
-            fallback_reason = "all_pages_detected_as_existing_toc_pages"
+        fallback_reason = "all_pages_detected_as_existing_toc_pages"
 
     selected_page_numbers = [page_number for page_number, _ in selected_pages]
     metadata: dict[str, Any] = {
-        "gemma_toc_page_mode": mode,
         "gemma_detected_toc_page_count": len(toc_page_numbers),
         "gemma_detected_toc_pages": toc_page_numbers,
         "gemma_selected_page_count": len(selected_pages),
         "gemma_selected_pages": selected_page_numbers,
-        "gemma_excluded_toc_page_count": len(toc_page_numbers) if mode == "exclude" and not fallback_reason else 0,
-        "gemma_excluded_toc_pages": toc_page_numbers if mode == "exclude" and not fallback_reason else [],
+        "gemma_excluded_toc_page_count": len(toc_page_numbers) if not fallback_reason else 0,
+        "gemma_excluded_toc_pages": toc_page_numbers if not fallback_reason else [],
     }
     if fallback_reason:
-        metadata["gemma_toc_page_mode_fallback"] = fallback_reason
+        metadata["gemma_toc_page_filter_fallback"] = fallback_reason
     return selected_pages, metadata
 
 
@@ -2516,12 +2504,33 @@ def local_merge_sort_key(item: dict[str, Any]) -> tuple[int, int, float, float, 
     level = int_sort_value(item.get("level"), default=1)
     y = first_float_sort_value(item, ("_layout_y", "layout_y", "vertical_position"))
     x = first_float_sort_value(item, ("_layout_x", "layout_x", "left_indent"))
-    source_order = int_sort_value(item.get("_source_order", item.get("_local_merge_order")), default=0)
+    source_order = metadata_int_value(item.get("_source_order"))
+    local_merge_order = metadata_int_value(item.get("_local_merge_order"))
+
+    if source_order is not None:
+        return (
+            page,
+            0,
+            float(source_order),
+            y if y is not None else 999999.0,
+            x if x is not None else 999999.0,
+            level,
+        )
+
+    if local_merge_order is not None:
+        return (
+            page,
+            1,
+            float(local_merge_order),
+            y if y is not None else 999999.0,
+            x if x is not None else 999999.0,
+            level,
+        )
 
     if y is None:
-        return (page, 1, float(source_order), x if x is not None else 999999.0, source_order, level)
+        return (page, 3, 999999.0, x if x is not None else 999999.0, 999999.0, level)
 
-    return (page, 0, y, x if x is not None else 999999.0, source_order, level)
+    return (page, 2, y, x if x is not None else 999999.0, 999999.0, level)
 
 
 def merge_partial_tocs_locally(partial_tocs: list[dict[str, Any]], fallback_title: str, max_depth: int) -> dict[str, Any]:
@@ -2826,34 +2835,6 @@ def normalize_gemma_extraction_mode(mode: str | None) -> str:
     mode = aliases.get(mode, mode)
     if mode not in {"layout", "text"}:
         raise ValueError("--gemma-extraction-mode must be either layout or text.")
-    return mode
-
-
-def normalize_gemma_toc_page_mode(mode: str | None) -> str:
-    mode = clean_text(mode).lower() or DEFAULT_GEMMA_TOC_PAGE_MODE
-    aliases = {
-        "drop": "exclude",
-        "remove": "exclude",
-        "skip": "exclude",
-        "without": "exclude",
-        "body": "exclude",
-        "body-only": "exclude",
-        "body_only": "exclude",
-        "toc": "only",
-        "toc-only": "only",
-        "toc_only": "only",
-        "contents": "only",
-        "contents-only": "only",
-        "contents_only": "only",
-        "all": "include",
-        "full": "include",
-        "none": "include",
-        "off": "include",
-        "disabled": "include",
-    }
-    mode = aliases.get(mode, mode)
-    if mode not in {"exclude", "only", "include"}:
-        raise ValueError("--gemma-toc-page-mode must be one of: exclude, only, include.")
     return mode
 
 
@@ -3690,6 +3671,63 @@ def toc_level_reference_entry(
     return entry
 
 
+def toc_level_reference_style_outlier(
+    entry: dict[str, Any],
+    median_font_size: float,
+    median_size_ratio: float,
+) -> bool:
+    font_size = metadata_float_value(entry.get("font_size"))
+    size_ratio = metadata_float_value(entry.get("size_ratio"))
+    if font_size is None or size_ratio is None:
+        return False
+
+    much_smaller_font = median_font_size >= 12.0 and font_size < median_font_size * 0.70
+    much_smaller_ratio = median_size_ratio >= 1.25 and size_ratio < median_size_ratio * 0.75
+    body_style_in_title_level = (
+        median_size_ratio >= 1.50
+        and size_ratio <= 1.12
+        and font_size < median_font_size * 0.90
+    )
+    much_larger_cover_like = (
+        median_font_size >= 8.0
+        and median_size_ratio >= 0.8
+        and font_size > median_font_size * 1.80
+        and size_ratio > median_size_ratio * 1.80
+    )
+    return body_style_in_title_level or (much_smaller_font and much_smaller_ratio) or much_larger_cover_like
+
+
+def filter_toc_level_reference_examples(
+    examples: list[dict[str, Any]],
+    max_examples_per_level: int,
+) -> list[dict[str, Any]]:
+    styled_examples = [
+        example
+        for example in examples
+        if metadata_float_value(example.get("font_size")) is not None
+        and metadata_float_value(example.get("size_ratio")) is not None
+    ]
+    if len(styled_examples) < 3:
+        return examples[:max_examples_per_level]
+
+    median_font_size = median_float(
+        metadata_float_value(example.get("font_size"))
+        for example in styled_examples
+    )
+    median_size_ratio = median_float(
+        metadata_float_value(example.get("size_ratio"))
+        for example in styled_examples
+    )
+    filtered = [
+        example
+        for example in examples
+        if not toc_level_reference_style_outlier(example, median_font_size, median_size_ratio)
+    ]
+    if not filtered:
+        filtered = examples
+    return filtered[:max_examples_per_level]
+
+
 def format_toc_level_reference_entry(entry: dict[str, Any]) -> str:
     title = clean_text(entry.get("title"))
     style_parts: list[str] = []
@@ -4112,8 +4150,11 @@ def update_toc_level_reference(
         normalized = re.sub(r"\s+", "", title).lower()
         if any(normalize_toc_match_text(existing.get("title")) == normalized for existing in examples):
             continue
-        if len(examples) < max_examples_per_level:
-            examples.append(entry)
+        examples.append(entry)
+        level_reference[level] = filter_toc_level_reference_examples(
+            examples,
+            max_examples_per_level=max_examples_per_level,
+        )
 
 
 def build_toc_level_reference(
@@ -4163,37 +4204,20 @@ def format_toc_level_reference(level_reference: dict[int, list[dict[str, Any]]])
     ])
 
 
-def gemma_toc_page_prompt_rule(mode: str) -> str:
-    mode = normalize_gemma_toc_page_mode(mode)
-    if mode == "only":
-        return (
-            "- TOC-page mode: use detected existing TOC pages only; prefer listed destination page numbers."
-        )
-    if mode == "exclude":
-        return (
-            "- TOC-page mode: existing TOC pages were removed before input."
-        )
-    return (
-        "- TOC-page mode: all pages included; ignore existing TOC listing lines."
-    )
-
-
 def build_gemma_text_prompt(
     base_prompt: str,
     pdf_name: str,
     text: str,
     document_style_text: str = "",
-    toc_page_mode: str = DEFAULT_GEMMA_TOC_PAGE_MODE,
 ) -> str:
     document_style_block = f"\n\n{document_style_text}" if clean_text(document_style_text) else ""
-    toc_page_rule = gemma_toc_page_prompt_rule(toc_page_mode)
     return f"""
 {base_prompt}
 
 [Gemma Text/Layout Mode]
 Create the TOC using only the [Extracted PDF Text] below instead of an attached PDF.
 Use each text block's [PAGE n] marker to determine page numbers.
-{toc_page_rule}
+Detected existing TOC/Contents pages were removed before input when found.
 Rules:
 - Output only body hierarchy titles: chapters, sections, subsections.
 - Ignore body sentences, captions, questions, references, existing TOC listings, and any remaining repeated page header/footer text.
@@ -4217,18 +4241,16 @@ def build_gemma_chunk_prompt(
     total_chunks: int,
     level_reference_text: str = "",
     document_style_text: str = "",
-    toc_page_mode: str = DEFAULT_GEMMA_TOC_PAGE_MODE,
 ) -> str:
     level_reference_block = f"\n\n{level_reference_text}" if clean_text(level_reference_text) else ""
     document_style_block = f"\n\n{document_style_text}" if clean_text(document_style_text) else ""
-    toc_page_rule = gemma_toc_page_prompt_rule(toc_page_mode)
     return f"""
 {base_prompt}
 
 [Gemma Text/Layout Chunk Mode]
 The text below is one part of the full PDF.
 Use [PAGE n] markers to determine page numbers.
-{toc_page_rule}
+Detected existing TOC/Contents pages were removed before input when found.
 Rules:
 - Include only body hierarchy titles visible in this chunk. Do not infer entries outside this page range.
 - Ignore body sentences, captions, questions, references, existing TOC listings, and any remaining repeated page header/footer text.
@@ -6910,7 +6932,6 @@ def process_gemma_text_chunk(
         total_chunks,
         level_reference_text=level_reference_text,
         document_style_text=document_style_text,
-        toc_page_mode=getattr(args, "gemma_toc_page_mode", DEFAULT_GEMMA_TOC_PAGE_MODE),
     )
     print(
         f"  Gemma chunk {chunk_label}/{total_chunks} request: pages {chunk['start_page']}-{chunk['end_page']}",
@@ -7107,8 +7128,7 @@ def generate_toc_from_pdf_gemma_text(
     raw_pages, extraction_metadata = extract_gemma_pdf_pages(pdf_path, args)
     raw_extracted_chars = sum(len(text) for _, text in raw_pages)
     extraction_mode = extraction_metadata.get("gemma_extraction_mode", "text")
-    toc_page_mode = normalize_gemma_toc_page_mode(getattr(args, "gemma_toc_page_mode", DEFAULT_GEMMA_TOC_PAGE_MODE))
-    pages, toc_page_metadata = apply_gemma_toc_page_mode(raw_pages, toc_page_mode)
+    pages, toc_page_metadata = exclude_gemma_existing_toc_pages(raw_pages)
     document_style_summary = build_gemma_document_style_reference(
         pages,
         enabled=bool(getattr(args, "gemma_document_style_reference", DEFAULT_GEMMA_DOCUMENT_STYLE_REFERENCE)),
@@ -7146,7 +7166,8 @@ def generate_toc_from_pdf_gemma_text(
     print(
         (
             f"  Gemma PDF extraction completed: {len(raw_pages)} pages, {raw_extracted_chars} chars, "
-            f"mode={extraction_mode}, toc_page_mode={toc_page_mode}, selected_pages={len(pages)}, "
+            f"mode={extraction_mode}, selected_pages={len(pages)}, "
+            f"excluded_toc_pages={toc_page_metadata.get('gemma_excluded_toc_page_count', 0)}, "
             f"removed_header_footer_lines={header_footer_filter_metadata.get('gemma_removed_header_footer_line_count', 0)}"
         ),
         flush=True,
@@ -7223,7 +7244,6 @@ def generate_toc_from_pdf_gemma_text(
             pdf_path.name,
             full_text,
             document_style_text=document_style_text,
-            toc_page_mode=toc_page_mode,
         )
         print(f"  Gemma text TOC generation started: {model}", flush=True)
         try:
@@ -8300,18 +8320,6 @@ def build_arg_parser() -> argparse.ArgumentParser:
         default=DEFAULT_GEMMA_EXTRACTION_MODE,
         choices=("layout", "text"),
         help="Gemma PDF extraction mode. layout includes compact font size/style/position tags; text uses plain extracted text.",
-    )
-    parser.add_argument(
-        "--gemma-toc-page-mode",
-        "--toc-page-mode",
-        dest="gemma_toc_page_mode",
-        default=DEFAULT_GEMMA_TOC_PAGE_MODE,
-        choices=("exclude", "only", "include"),
-        help=(
-            "How Gemma handles detected existing TOC/Contents pages after PDF parsing: "
-            "exclude removes them before Gemma input chunks(default), only sends only detected TOC pages, "
-            "include sends all parsed pages and asks Gemma to ignore existing TOC pages."
-        ),
     )
     parser.add_argument(
         "--gemma-text-single-max-chars",
