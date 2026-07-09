@@ -1,0 +1,8 @@
+Run log saved: data/output/logs/부교재3_gemini_20260709_174202_log.txt
+Processing started: 부교재3.PDF
+  provider: gemini
+Failed: 부교재3.PDF / Gemini API requires `pip install google-genai`.
+  elapsed: 0.0s (0.000s)
+  Error log saved: data/output/error_logs/20260709_174202_3_gemini_gemini-3.1-pro-preview_PDF_processing_failed_error.json
+Processing result: success 0 / failed 1
+Run log saved: data/output/logs/부교재3_gemini_20260709_174202_log.txt

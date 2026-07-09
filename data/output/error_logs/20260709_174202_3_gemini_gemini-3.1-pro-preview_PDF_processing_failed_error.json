@@ -1,0 +1,16 @@
+{
+    "timestamp": "2026-07-09 17:42:02",
+    "fatal": true,
+    "stage": "PDF processing failed",
+    "source_pdf": "data/input/부교재3.PDF",
+    "source_pdf_name": "부교재3.PDF",
+    "provider": "gemini",
+    "model": "gemini-3.1-pro-preview",
+    "error_type": "RuntimeError",
+    "error_message": "Gemini API requires `pip install google-genai`.",
+    "error": "RuntimeError: Gemini API requires `pip install google-genai`.",
+    "debug": {},
+    "traceback": "Traceback (most recent call last):\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_gemma.py\", line 1451, in import_gemini\n    from google import genai\nImportError: cannot import name 'genai' from 'google' (unknown location)\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_gemma.py\", line 8265, in process_pdf\n    toc, raw_text, used_model = generate_toc_from_pdf(pdf_path=processing_pdf_path, args=args, user_prompt=user_prompt)\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_gemma.py\", line 7994, in generate_toc_from_pdf\n    return generate_toc_from_pdf_gemini(pdf_path=pdf_path, args=args, prompt=prompt)\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_gemma.py\", line 1630, in generate_toc_from_pdf_gemini\n    client, types = create_gemini_client(api_key=get_api_key(\"gemini\"))\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_gemma.py\", line 1460, in create_gemini_client\n    genai, types = import_gemini()\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_gemma.py\", line 1454, in import_gemini\n    raise RuntimeError(\"Gemini API requires `pip install google-genai`.\") from error\nRuntimeError: Gemini API requires `pip install google-genai`.\n",
+    "elapsed_seconds": 0.0,
+    "elapsed": "0.0s"
+}

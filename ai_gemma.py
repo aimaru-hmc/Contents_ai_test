@@ -92,6 +92,10 @@ DEFAULT_GEMMA_DOCUMENT_STYLE_REFERENCE = (
     os.getenv("GEMMA_DOCUMENT_STYLE_REFERENCE", "true").strip().lower()
     in {"1", "true", "yes", "on"}
 )
+DEFAULT_STYLE_LEVEL_CORRECTION = (
+    os.getenv("STYLE_LEVEL_CORRECTION", "false").strip().lower()
+    in {"1", "true", "yes", "on"}
+)
 DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_CLUSTERS = int(os.getenv("GEMMA_DOCUMENT_STYLE_MAX_CLUSTERS", "12"))
 DEFAULT_GEMMA_DOCUMENT_STYLE_MAX_EXAMPLES = int(os.getenv("GEMMA_DOCUMENT_STYLE_MAX_EXAMPLES", "80"))
 DEFAULT_WRITE_PARSED_PDF = (
@@ -336,7 +340,7 @@ Return a compact table-of-contents JSON object using only the source document.
 Output exactly one JSON object in the format below. Do not output explanations, Markdown, or code fences.
 
 {{
-  "title": "Document title",
+  "title": "PDF file name without extension",
   "chapters": [
     {{"level": 1, "chapter": "Major section title", "page": 1, "level_reason": "Concise reason this is a top-level section."}},
     {{"level": 2, "chapter": "Subsection title", "page": 3, "level_reason": "Concise reason this is a subsection under the previous level 1 entry."}}
@@ -347,23 +351,52 @@ Output exactly one JSON object in the format below. Do not output explanations, 
 - Include real document hierarchy titles, including entries visible on existing TOC/Contents pages, sorted in PDF page order.
 - Exclude body sentences, examples, questions, captions, references, and repeated headers/footers.
 - Use exact source titles and existing numbering only. Do not invent titles or numbering.
+- Do not put a chapter/section title only in the top-level title field; include hierarchy titles in chapters.
 - Use levels 1 to {max_depth}; page is the actual PDF viewer page number.
 - Include a concise level_reason for every entry.
 - Output JSON only.
 """.strip()
 
 
+def build_api_base_prompt(base_prompt: str) -> str:
+    prompt = str(base_prompt)
+    replacements = (
+        (
+            "Create a table of contents from real document hierarchy titles, including titles visible on existing TOC/Contents pages when present.",
+            "Create a table of contents from real body hierarchy titles only.",
+        ),
+        (
+            "Exclude covers, prefaces, indexes, references, standalone page numbers, repeated headers/footers, captions, questions, and body sentences.",
+            "Exclude covers, prefaces, existing TOC pages/listings, indexes, references, page numbers, repeated headers/footers, captions, questions, and body sentences.",
+        ),
+        (
+            "- Include real document hierarchy titles, including entries visible on existing TOC/Contents pages, sorted in PDF page order.",
+            "- Include only real body hierarchy titles, sorted in PDF page order.",
+        ),
+        (
+            "- Exclude body sentences, examples, questions, captions, references, and repeated headers/footers.",
+            "- Exclude body sentences, examples, questions, captions, references, existing TOC pages/listings, and repeated headers/footers.",
+        ),
+    )
+    for old, new in replacements:
+        prompt = prompt.replace(old, new)
+    return prompt
+
+
 def build_attached_pdf_prompt(base_prompt: str, pdf_name: str) -> str:
+    api_base_prompt = build_api_base_prompt(base_prompt)
+    pdf_title = Path(pdf_name).stem
     return f"""
-{base_prompt}
+{api_base_prompt}
 
 [PDF Attachment Mode]
 Create the TOC using only the attached PDF.
 Use actual PDF viewer page numbers.
 Rules:
-- Output document hierarchy titles: chapters, sections, subsections.
-- Existing TOC/Contents pages and listings are valid source candidates; do not remove entries solely because they came from a TOC page.
-- Ignore repeated headers/footers, body sentences, captions, questions, and references.
+- Set the top-level JSON title exactly to "{pdf_title}".
+- If a chapter/section title looks like the document title, still include it as a chapters entry.
+- Output only body hierarchy titles: chapters, sections, subsections.
+- Ignore existing TOC/Contents pages and listings, repeated headers/footers, body sentences, captions, questions, and references.
 - Use PDF visual layout and source hierarchy only for level inference.
 - Include level_reason for every entry when possible.
 - Return compact valid JSON only.
@@ -766,6 +799,55 @@ def repair_json_text(text: str) -> str:
     return "".join(output)
 
 
+def escape_unescaped_inner_json_quotes(text: str) -> str:
+    """Escape likely inner quotes inside JSON strings without changing structural quotes."""
+    output: list[str] = []
+    in_string = False
+    escape = False
+    index = 0
+
+    while index < len(text):
+        char = text[index]
+
+        if not in_string:
+            output.append(char)
+            if char == '"':
+                in_string = True
+                escape = False
+            index += 1
+            continue
+
+        if escape:
+            output.append(char)
+            escape = False
+            index += 1
+            continue
+
+        if char == "\\":
+            output.append(char)
+            escape = True
+            index += 1
+            continue
+
+        if char == '"':
+            next_index = index + 1
+            while next_index < len(text) and text[next_index].isspace():
+                next_index += 1
+            next_char = text[next_index] if next_index < len(text) else ""
+            if next_char in {":", ",", "}", "]", ""}:
+                output.append(char)
+                in_string = False
+            else:
+                output.append('\\"')
+            index += 1
+            continue
+
+        output.append(char)
+        index += 1
+
+    return "".join(output)
+
+
 def parse_json_response_text(text: str, provider: str) -> dict[str, Any]:
     text = strip_json_fence(text)
     if not text:
@@ -777,9 +859,16 @@ def parse_json_response_text(text: str, provider: str) -> dict[str, Any]:
         candidates.append(extracted)
 
     for candidate in list(candidates):
+        escaped = escape_unescaped_inner_json_quotes(candidate)
+        if escaped and escaped not in candidates:
+            candidates.append(escaped)
         repaired = repair_json_text(candidate)
         if repaired and repaired not in candidates:
             candidates.append(repaired)
+        if escaped:
+            escaped_repaired = repair_json_text(escaped)
+            if escaped_repaired and escaped_repaired not in candidates:
+                candidates.append(escaped_repaired)
 
     last_error: Exception | None = None
     data: Any = None
@@ -791,10 +880,9 @@ def parse_json_response_text(text: str, provider: str) -> dict[str, Any]:
         except json.JSONDecodeError as error:
             last_error = error
     else:
-        if provider == "gemma":
-            loose_data = parse_loose_toc_json_text(text)
-            if loose_data is not None:
-                return loose_data
+        loose_data = parse_loose_toc_json_text(text)
+        if loose_data is not None:
+            return loose_data
         if last_error:
             raise last_error
         raise ValueError(f"Could not find a JSON object in the {provider} response.")
@@ -813,7 +901,7 @@ def json_string_value(value: str) -> str:
 
 
 def parse_loose_toc_json_text(text: str) -> dict[str, Any] | None:
-    """Best-effort recovery for Gemma responses with missing commas between flat TOC objects."""
+    """Best-effort recovery for model responses with invalid JSON syntax."""
     title = "Document title"
     title_match = re.search(r'"title"\s*:\s*"((?:\\.|[^"\\])*)"', text)
     if title_match:
@@ -1074,14 +1162,166 @@ def copy_toc_layout_metadata(source: dict[str, Any], target: dict[str, Any]) -> 
             target[target_key] = text
 
 
+def simple_title_key(value: Any) -> str:
+    return re.sub(r"\s+", "", clean_text(value)).lower()
+
+
+def parsed_int_value(value: Any, default: int | None = None) -> int | None:
+    try:
+        return int(value)
+    except Exception:
+        return default
+
+
+def model_title_is_generic_or_filename(model_title: str, fallback_title: str) -> bool:
+    title_key = simple_title_key(model_title)
+    fallback_key = simple_title_key(fallback_title)
+    generic_titles = {
+        "documenttitle",
+        "tableofcontents",
+        "toc",
+        "contents",
+        "목차",
+        "차례",
+    }
+    return not title_key or title_key == fallback_key or title_key in generic_titles
+
+
+def model_title_has_heading_marker(model_title: str) -> bool:
+    title = clean_text(model_title)
+    return bool(re.search(
+        r"^(?:chapter|part|section|unit)\s*\d+[A-Za-z]?\b|"
+        r"^제\s*\d+\s*[장절편부]\b|"
+        r"^\d+(?:\.\d+)*\s*[.)]\s*|"
+        r"^\d+\s+제\s*장\b",
+        title,
+        flags=re.IGNORECASE,
+    ))
+
+
+def model_title_already_in_chapters(model_title: str, raw_chapters: list[Any]) -> bool:
+    title_key = simple_title_key(model_title)
+    for item in raw_chapters:
+        if not isinstance(item, dict):
+            continue
+        if simple_title_key(item.get("chapter")) == title_key:
+            return True
+    return False
+
+
+def first_raw_chapter_level_and_page(raw_chapters: list[Any]) -> tuple[int | None, int]:
+    for item in raw_chapters:
+        if not isinstance(item, dict):
+            continue
+        chapter = clean_text(item.get("chapter"))
+        if not chapter:
+            continue
+        level = parsed_int_value(item.get("level"))
+        page = parsed_int_value(item.get("page"), 1) or 1
+        return level, max(1, page)
+    return None, 1
+
+
+def promote_model_title_to_chapter_if_needed(
+    model_title: str,
+    fallback_title: str,
+    raw_chapters: list[Any],
+) -> list[Any]:
+    title = clean_text(model_title)
+    if model_title_is_generic_or_filename(title, fallback_title):
+        return raw_chapters
+    if len(title) > 140 or model_title_already_in_chapters(title, raw_chapters):
+        return raw_chapters
+
+    first_level, first_page = first_raw_chapter_level_and_page(raw_chapters)
+    should_promote = model_title_has_heading_marker(title) or (first_level is not None and first_level > 1)
+    if not should_promote:
+        return raw_chapters
+
+    promoted = {
+        "level": 1,
+        "chapter": title,
+        "page": first_page,
+        "level_reason": "Promoted from model title because output title is forced to the PDF file name.",
+    }
+    return [promoted, *raw_chapters]
+
+
+def normalize_markerless_levels_by_style(chapters: list[dict[str, Any]], max_depth: int) -> list[dict[str, Any]]:
+    title_counts: dict[str, int] = {}
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        title_key = normalize_toc_match_text(chapter.get("chapter"))
+        if title_key:
+            title_counts[title_key] = title_counts.get(title_key, 0) + 1
+
+    style_level_counts: dict[tuple[float | None, float | None], dict[int, int]] = {}
+    for chapter in chapters:
+        title = clean_text(chapter.get("chapter"))
+        title_key = normalize_toc_match_text(title)
+        if not title or has_structural_title_marker(title) or title_counts.get(title_key, 0) > 1:
+            continue
+        layout = layout_from_toc_metadata(chapter)
+        if (
+            not layout
+            or layout_text_is_toc_listing(layout.get("text"))
+            or layout_is_running_header_footer(layout)
+            or layout_match_score_for_title(title, layout) is None
+        ):
+            continue
+        style_key = toc_chapter_style_key(chapter)
+        if style_key == (None, None):
+            continue
+        level = metadata_int_value(chapter.get("level"))
+        if level is None:
+            continue
+        level = max(1, min(level, max_depth))
+        counts = style_level_counts.setdefault(style_key, {})
+        counts[level] = counts.get(level, 0) + 1
+
+    dominant_level_by_style: dict[tuple[float | None, float | None], int] = {}
+    for style_key, counts in style_level_counts.items():
+        total = sum(counts.values())
+        if total < 4:
+            continue
+        dominant_level, dominant_count = max(counts.items(), key=lambda item: (item[1], -item[0]))
+        if dominant_count / max(1, total) >= 0.70:
+            dominant_level_by_style[style_key] = dominant_level
+
+    for chapter in chapters:
+        title = clean_text(chapter.get("chapter"))
+        title_key = normalize_toc_match_text(title)
+        if not title or has_structural_title_marker(title) or title_counts.get(title_key, 0) > 1:
+            continue
+        style_key = toc_chapter_style_key(chapter)
+        dominant_level = dominant_level_by_style.get(style_key)
+        if dominant_level is None:
+            continue
+        current_level = metadata_int_value(chapter.get("level"))
+        if current_level is None or current_level == dominant_level:
+            continue
+        chapter["level"] = dominant_level
+        reason = clean_text(chapter.get("level_reason"))
+        correction = f"Markerless title level normalized to level {dominant_level} based on dominant matching layout style."
+        chapter["level_reason"] = f"{reason} {correction}".strip() if reason else correction
+    return chapters
+
+
 def validate_toc(data: dict[str, Any], fallback_title: str, max_depth: int) -> dict[str, Any]:
-    title = clean_text(data.get("title")) or fallback_title
+    model_title = clean_text(data.get("title"))
+    title = clean_text(fallback_title) or model_title or "Document title"
     chapters: list[dict[str, Any]] = []
     seen: set[tuple[str, int]] = set()
 
     raw_chapters = data.get("chapters", [])
     if not isinstance(raw_chapters, list):
         raw_chapters = []
+    raw_chapters = promote_model_title_to_chapter_if_needed(
+        model_title=model_title,
+        fallback_title=title,
+        raw_chapters=raw_chapters,
+    )
 
     for item in raw_chapters:
         if not isinstance(item, dict):
@@ -1121,6 +1361,7 @@ def validate_toc(data: dict[str, Any], fallback_title: str, max_depth: int) -> d
         chapters.append(chapter_item)
 
     chapters = dedupe_toc_chapters(chapters)
+    chapters = normalize_markerless_levels_by_style(chapters, max_depth=max_depth)
     return {
         "title": title,
         "chapters": chapters,
@@ -1350,7 +1591,8 @@ def generate_toc_from_pdf_gemini(pdf_path: Path, args: argparse.Namespace, promp
                             + "\n\n[Important Retry Instruction]\n"
                             + "The previous response failed JSON parsing due to invalid JSON syntax. "
                             + "This time, output exactly one valid JSON object that Python json.loads() can parse directly. "
-                            + "Do not omit commas. Do not output Markdown, explanations, or code fences."
+                            + "Do not omit commas. Escape any double quote inside a string value as \\\". "
+                            + "Do not output Markdown, explanations, or code fences."
                         )
                     else:
                         parse_retry_prompt = pdf_prompt
@@ -1376,9 +1618,32 @@ def generate_toc_from_pdf_gemini(pdf_path: Path, args: argparse.Namespace, promp
 
                     raw_text = extract_gemini_text(response)
                     try:
-                        parsed = parse_json_response_text(raw_text, provider="gemini")
+                        parsed_direct = parsed_response_to_dict(getattr(response, "parsed", None))
+                        parsed = parsed_direct if parsed_direct is not None else parse_json_response_text(raw_text, provider="gemini")
                     except Exception as parse_error:
+                        parse_error = attach_error_debug(
+                            parse_error,
+                            provider="gemini",
+                            model=model,
+                            parse_attempt=parse_attempt,
+                            raw_response=raw_text,
+                            raw_response_chars=len(raw_text),
+                        )
                         last_error = parse_error
+                        write_stage_file(
+                            args=args,
+                            pdf_path=pdf_path,
+                            provider="gemini",
+                            model=model,
+                            stage="gemini_json_parse_failed",
+                            chunk=parse_attempt,
+                            payload={
+                                "parse_attempt": parse_attempt,
+                                "error": message_of(parse_error),
+                                "raw_response": raw_text,
+                                "raw_response_chars": len(raw_text),
+                            },
+                        )
                         if args.write_raw:
                             model_name_for_file = safe_filename_part(model)
                             raw_file = (
@@ -1566,6 +1831,7 @@ def generate_toc_from_pdf_openai(pdf_path: Path, args: argparse.Namespace, promp
                             + "The previous response failed JSON parsing due to invalid JSON syntax. "
                             + "This time, output exactly one valid JSON object that Python json.loads() can parse directly. "
                             + "Do not omit commas between array items, and close the JSON object completely even if the output is long. "
+                            + "Escape any double quote inside a string value as \\\". "
                             + "Do not output Markdown, explanations, or code fences."
                         )
                     else:
@@ -2137,12 +2403,16 @@ def write_stage_file(
 
 
 def build_claude_text_prompt(base_prompt: str, pdf_name: str, text: str) -> str:
+    api_base_prompt = build_api_base_prompt(base_prompt)
+    pdf_title = Path(pdf_name).stem
     return f"""
-{base_prompt}
+{api_base_prompt}
 
 [Claude Long PDF Text Mode]
 Create the TOC using only the [Extracted PDF Text] below instead of an attached PDF.
 Use each text block's [PAGE n] marker to determine page numbers.
+Set the top-level JSON title exactly to "{pdf_title}".
+If a chapter/section title looks like the document title, still include it as a chapters entry.
 
 [PDF File Name]
 {pdf_name}
@@ -2153,14 +2423,18 @@ Use each text block's [PAGE n] marker to determine page numbers.
 
 
 def build_claude_chunk_prompt(base_prompt: str, pdf_name: str, chunk: dict[str, Any], total_chunks: int) -> str:
+    api_base_prompt = build_api_base_prompt(base_prompt)
+    pdf_title = Path(pdf_name).stem
     return f"""
-{base_prompt}
+{api_base_prompt}
 
 [Claude Long PDF Chunk Mode]
 The text below is one part of the full PDF.
 Include only chapter, section, and subsection titles that are actually visible within this range.
 Do not infer TOC entries outside this range.
 Use [PAGE n] markers to determine page numbers.
+Set the top-level JSON title exactly to "{pdf_title}".
+If a chapter/section title looks like the document title, still include it as a chapters entry.
 
 [PDF File Name]
 {pdf_name}
@@ -2180,15 +2454,18 @@ def build_claude_merge_prompt(
     max_depth: int,
 ) -> str:
     partial_json = json.dumps(partial_tocs, ensure_ascii=False, indent=2)
+    api_base_prompt = build_api_base_prompt(base_prompt)
+    pdf_title = Path(pdf_name).stem
     return f"""
-{base_prompt}
+{api_base_prompt}
 
 [Chunked TOC Merge Instruction]
 Create one final TOC JSON object using only the [Partial TOC Candidates] below instead of the attached PDF.
+- Set the top-level JSON title exactly to "{pdf_title}".
+- If a chapter/section title looks like the document title, still include it as a chapters entry.
 - Keep only one copy of duplicate entries.
 - Preserve ascending page order and source appearance order.
-- Existing TOC/Contents page entries are valid candidates; do not remove entries solely because they came from a TOC page.
-- Remove covers, prefaces, indexes, references, and repeated headers/footers.
+- Remove covers, prefaces, existing TOC pages, indexes, references, and repeated headers/footers.
 - Use only levels from 1 to {max_depth}.
 - Do not invent chapter titles.
 - Preserve original chapter/section titles exactly, including Korean text when the source title is Korean.
@@ -3566,30 +3843,117 @@ def parse_layout_line(line: str) -> dict[str, Any] | None:
     return metadata
 
 
-def find_layout_for_chapter_title(chunk_text: str, title: str) -> dict[str, Any]:
+def layout_text_is_toc_listing(text: Any) -> bool:
+    line = clean_text(text)
+    if not line:
+        return False
+    if re.search(r"[·ㆍ.]{3,}\s*\d+\s*$", line):
+        return True
+    return bool(re.search(r"\s+\d{1,4}$", line) and len(line.split()) >= 2)
+
+
+def layout_is_running_header_footer(layout: dict[str, Any]) -> bool:
+    y = metadata_float_value(layout.get("vertical_position"))
+    font_size = metadata_float_value(layout.get("font_size"))
+    size_ratio = metadata_float_value(layout.get("size_ratio"))
+    if y is None:
+        return False
+    weak_style = (
+        (font_size is not None and font_size <= 10.5)
+        or (size_ratio is not None and size_ratio <= 1.05)
+    )
+    return weak_style and (y <= 65.0 or y >= 735.0)
+
+
+def layout_match_score_for_title(title: str, layout: dict[str, Any]) -> float | None:
+    normalized_title = normalize_toc_match_text(title)
+    line_title = clean_text(layout.get("text"))
+    normalized_line = normalize_toc_match_text(line_title)
+    if not normalized_title or not normalized_line:
+        return None
+
+    if normalized_line == normalized_title:
+        partial_coverage = 1.0
+        score = 300.0
+    elif normalized_line in normalized_title or normalized_title in normalized_line:
+        if normalized_line in normalized_title:
+            partial_coverage = len(normalized_line) / max(1, len(normalized_title))
+        else:
+            partial_coverage = len(normalized_title) / max(1, len(normalized_line))
+        if partial_coverage < 0.25:
+            return None
+        score = 45.0
+    else:
+        return None
+
+    font_size = metadata_float_value(layout.get("font_size")) or 0.0
+    size_ratio = metadata_float_value(layout.get("size_ratio")) or 1.0
+    score += font_size * 3.0
+    score += size_ratio * 20.0
+    score += partial_coverage * 200.0
+
+    if layout_text_is_toc_listing(line_title):
+        score -= 180.0
+    if layout_is_running_header_footer(layout):
+        score -= 80.0
+    if font_size <= 10.5 and size_ratio <= 1.05:
+        score -= 20.0
+    if normalized_line != normalized_title and partial_coverage < 0.50:
+        score -= 100.0
+    if len(normalized_line) < max(4, int(len(normalized_title) * 0.25)):
+        score -= 25.0
+    return score
+
+
+def choose_better_title_layout(
+    title: str,
+    current: dict[str, Any],
+    candidate: dict[str, Any],
+    *,
+    min_delta: float = 5.0,
+) -> tuple[dict[str, Any], bool]:
+    if not candidate:
+        return current, False
+    current_score = layout_match_score_for_title(title, current) if current else None
+    candidate_score = layout_match_score_for_title(title, candidate)
+    if candidate_score is None:
+        return current, False
+    if current_score is None or candidate_score > current_score + min_delta:
+        return candidate, True
+    return current, False
+
+
+def find_layout_for_chapter_title(chunk_text: str, title: str, page: Any = None) -> dict[str, Any]:
     normalized_title = normalize_toc_match_text(title)
     if not normalized_title:
         return {}
 
-    fallback_match: dict[str, Any] = {}
+    page_number = metadata_int_value(page)
+    current_page: int | None = None
+    best_match: dict[str, Any] = {}
+    best_score: float | None = None
     for line_index, line in enumerate(str(chunk_text or "").splitlines()):
+        page_match = re.match(r"^\[PAGE\s+(\d+)\]$", clean_text(line))
+        if page_match:
+            current_page = metadata_int_value(page_match.group(1))
+            continue
         layout = parse_layout_line(line)
         if not layout:
             continue
-        layout["line_index"] = line_index
-
-        line_title = clean_text(layout.get("text"))
-        normalized_line = normalize_toc_match_text(line_title)
-        if not normalized_line:
+        if page_number is not None and current_page is not None and current_page != page_number:
             continue
+        layout["line_index"] = line_index
+        if current_page is not None:
+            layout["page"] = current_page
 
-        if normalized_line == normalized_title:
-            return layout
-        if normalized_title in normalized_line or normalized_line in normalized_title:
-            if not fallback_match:
-                fallback_match = layout
+        score = layout_match_score_for_title(title, layout)
+        if score is None:
+            continue
+        if best_score is None or score > best_score:
+            best_score = score
+            best_match = layout
 
-    return fallback_match
+    return best_match
 
 
 def toc_level_reference_entry(
@@ -3599,8 +3963,12 @@ def toc_level_reference_entry(
 ) -> dict[str, Any]:
     entry: dict[str, Any] = {"title": compact_toc_example_title(chapter_title)}
     layout = layout_from_toc_metadata(chapter) if isinstance(chapter, dict) else {}
-    if not layout:
-        layout = find_layout_for_chapter_title(chunk_text=chunk_text, title=chapter_title)
+    source_layout = find_layout_for_chapter_title(
+        chunk_text=chunk_text,
+        title=chapter_title,
+        page=chapter.get("page") if isinstance(chapter, dict) else None,
+    )
+    layout, _ = choose_better_title_layout(chapter_title, layout, source_layout)
     for key in (
         "font_size",
         "size_ratio",
@@ -3903,9 +4271,13 @@ def add_level_reasons_to_toc(
         if not title:
             continue
         layout = layout_from_toc_metadata(chapter)
-        if not layout:
-            layout = find_layout_for_chapter_title(chunk_text=chunk_text, title=title)
-        copy_layout_sort_metadata(chapter, layout, fallback_order=chapter_index)
+        source_layout = find_layout_for_chapter_title(
+            chunk_text=chunk_text,
+            title=title,
+            page=chapter.get("page"),
+        )
+        layout, overwrite_layout = choose_better_title_layout(title, layout, source_layout)
+        copy_layout_sort_metadata(chapter, layout, fallback_order=chapter_index, overwrite=overwrite_layout)
         if clean_text(chapter.get("level_reason")) and not overwrite:
             continue
         chapter["level_reason"] = build_level_reason(
@@ -4039,8 +4411,22 @@ def restore_layout_sort_metadata_from_partials(toc: dict[str, Any], partial_tocs
         metadata = layout_by_key.get((title, page))
         if not metadata:
             continue
+        source_chapter = {
+            "chapter": chapter.get("chapter"),
+            **metadata,
+        }
+        chapter_layout = layout_from_toc_metadata(chapter)
+        source_layout = layout_from_toc_metadata(source_chapter)
+        _, overwrite_layout = choose_better_title_layout(
+            clean_text(chapter.get("chapter")),
+            chapter_layout,
+            source_layout,
+        )
         for key, value in metadata.items():
-            chapter.setdefault(key, value)
+            if overwrite_layout:
+                chapter[key] = value
+            else:
+                chapter.setdefault(key, value)
         chapter.setdefault("_local_merge_order", index)
     return toc
 
@@ -4154,6 +4540,7 @@ def build_gemma_text_prompt(
     document_style_text: str = "",
 ) -> str:
     document_style_block = f"\n\n{document_style_text}" if clean_text(document_style_text) else ""
+    pdf_title = Path(pdf_name).stem
     return f"""
 {base_prompt}
 
@@ -4161,6 +4548,8 @@ def build_gemma_text_prompt(
 Create the TOC using only the [Extracted PDF Text] below instead of an attached PDF.
 Use each text block's [PAGE n] marker to determine page numbers.
 Rules:
+- Set the top-level JSON title exactly to "{pdf_title}".
+- If a chapter/section title looks like the document title, still include it as a chapters entry.
 - Output document hierarchy titles: chapters, sections, subsections.
 - Existing TOC/Contents pages and listings are valid source candidates; do not remove entries solely because they came from a TOC page.
 - Ignore repeated headers/footers, body sentences, captions, questions, and references.
@@ -4187,6 +4576,7 @@ def build_gemma_chunk_prompt(
 ) -> str:
     level_reference_block = f"\n\n{level_reference_text}" if clean_text(level_reference_text) else ""
     document_style_block = f"\n\n{document_style_text}" if clean_text(document_style_text) else ""
+    pdf_title = Path(pdf_name).stem
     return f"""
 {base_prompt}
 
@@ -4194,6 +4584,8 @@ def build_gemma_chunk_prompt(
 The text below is one part of the full PDF.
 Use [PAGE n] markers to determine page numbers.
 Rules:
+- Set the top-level JSON title exactly to "{pdf_title}".
+- If a chapter/section title looks like the document title, still include it as a chapters entry.
 - Include document hierarchy titles visible in this chunk. Do not infer entries outside this page range.
 - Existing TOC/Contents pages and listings are valid source candidates; do not remove entries solely because they came from a TOC page.
 - Ignore repeated headers/footers, body sentences, captions, questions, and references.
@@ -4224,6 +4616,7 @@ def build_gemma_merge_prompt(
 ) -> str:
     partial_json = json.dumps(partial_tocs, ensure_ascii=False, indent=2)
     document_style_block = f"\n\n{document_style_text}" if clean_text(document_style_text) else ""
+    pdf_title = Path(pdf_name).stem
     level_reason_instruction = (
         "- Preserve level_reason when it exists. If an entry has no level_reason, add a concise reason based only on the candidate entry and nearby level pattern."
         if include_level_reason
@@ -4234,6 +4627,8 @@ def build_gemma_merge_prompt(
 
 [Chunked TOC Merge Instruction]
 Create one final TOC JSON object using only the [Partial TOC Candidates] below instead of the attached PDF.
+- Set the top-level JSON title exactly to "{pdf_title}".
+- If a chapter/section title looks like the document title, still include it as a chapters entry.
 - Keep one copy of duplicates; existing TOC/Contents page entries are valid candidates.
 - Remove cover, index, reference, repeated header/footer, caption, question, and body-sentence entries.
 - Preserve source page/order and use only levels 1 to {max_depth}.
@@ -4427,6 +4822,7 @@ def has_structural_title_marker(title: str) -> bool:
     if not text:
         return False
     patterns = (
+        r"^(?:chapter|part|section|unit)\s*\d+[A-Za-z]?\b",
         r"^제\s*\d+\s*[장절편부]\b",
         r"^\d+(?:\.\d+)+\b",
         r"^\d+\s*[.)]",
@@ -4434,7 +4830,7 @@ def has_structural_title_marker(title: str) -> bool:
         r"^[A-Za-z]\s*[.)]",
         r"^[가-힣]\s*[.)]",
     )
-    return any(re.search(pattern, text) for pattern in patterns)
+    return any(re.search(pattern, text, flags=re.IGNORECASE) for pattern in patterns)
 
 
 def is_ancillary_heading_candidate(title: str) -> bool:
@@ -4967,30 +5363,43 @@ def source_title_line_evidence(title: str, page: Any, source_text: str, max_exam
     return evidence
 
 
-def source_layout_for_title(title: str, page: Any, source_text: str) -> dict[str, Any]:
+def source_layout_for_title_from_candidates(
+    title: str,
+    page: Any,
+    candidates: list[dict[str, Any]],
+) -> dict[str, Any]:
     normalized_title = normalize_toc_match_text(title)
-    if not normalized_title or not clean_text(source_text):
+    if not normalized_title or not candidates:
         return {}
 
     page_number = metadata_int_value(page)
-    embedded_match: dict[str, Any] = {}
-    for candidate in source_text_layout_candidates(source_text):
+    best_match: dict[str, Any] = {}
+    best_score: float | None = None
+    for candidate in candidates:
         candidate_page = metadata_int_value(candidate.get("page"))
         if page_number is not None and candidate_page is not None and candidate_page != page_number:
-            continue
-        line_title = clean_text(candidate.get("title"))
-        normalized_line = normalize_toc_match_text(line_title)
-        if not normalized_line:
             continue
         layout = candidate.get("layout") if isinstance(candidate.get("layout"), dict) else {}
         layout = dict(layout)
         layout["line_index"] = candidate.get("line_index")
         layout["page"] = candidate_page
-        if normalized_line == normalized_title:
-            return layout
-        if normalized_title in normalized_line and not embedded_match:
-            embedded_match = layout
-    return embedded_match
+        score = layout_match_score_for_title(title, layout)
+        if score is None:
+            continue
+        if best_score is None or score > best_score:
+            best_score = score
+            best_match = layout
+    return best_match
+
+
+def source_layout_for_title(title: str, page: Any, source_text: str) -> dict[str, Any]:
+    if not clean_text(source_text):
+        return {}
+    return source_layout_for_title_from_candidates(
+        title,
+        page,
+        source_text_layout_candidates(source_text),
+    )
 
 
 def source_visual_context_for_title(
@@ -5442,6 +5851,13 @@ def format_gemma_level_style_summary(toc: dict[str, Any], max_conflicts: int = 2
         title = clean_text(chapter.get("chapter"))
         if not title:
             continue
+        layout = layout_from_toc_metadata(chapter)
+        if (
+            layout_text_is_toc_listing(layout.get("text"))
+            or layout_is_running_header_footer(layout)
+            or layout_match_score_for_title(title, layout) is None
+        ):
+            continue
         try:
             level = int(chapter.get("level", 1))
         except Exception:
@@ -5570,6 +5986,194 @@ def format_gemma_level_style_summary(toc: dict[str, Any], max_conflicts: int = 2
     return "\n".join(lines)
 
 
+def apply_document_style_level_correction(
+    toc: dict[str, Any],
+    source_text: str,
+    max_depth: int,
+    *,
+    min_style_examples: int = 3,
+    min_dominance: float = 0.75,
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    status: dict[str, Any] = {
+        "enabled": True,
+        "success": False,
+        "skipped": False,
+        "level_changes": 0,
+        "layout_updates": 0,
+        "style_rules": {},
+        "changes": [],
+    }
+    chapters = toc.get("chapters", [])
+    if not isinstance(chapters, list) or not chapters:
+        status.update({"skipped": True, "reason": "No TOC chapters to correct."})
+        return toc, status
+    if not clean_text(source_text):
+        status.update({"skipped": True, "reason": "No source layout text available."})
+        return toc, status
+    source_candidates = source_text_layout_candidates(source_text)
+    if not source_candidates:
+        status.update({"skipped": True, "reason": "No source layout candidates available."})
+        return toc, status
+
+    title_counts: dict[str, int] = {}
+    for chapter in chapters:
+        if not isinstance(chapter, dict):
+            continue
+        title_key = normalize_toc_match_text(chapter.get("chapter"))
+        if title_key:
+            title_counts[title_key] = title_counts.get(title_key, 0) + 1
+
+    rows: list[dict[str, Any]] = []
+    style_level_counts: dict[tuple[float | None, float | None], dict[int, int]] = {}
+    for index, chapter in enumerate(chapters):
+        if not isinstance(chapter, dict):
+            continue
+        title = clean_text(chapter.get("chapter"))
+        if not title:
+            continue
+
+        current_layout = layout_from_toc_metadata(chapter)
+        source_layout = source_layout_for_title_from_candidates(
+            title,
+            chapter.get("page"),
+            source_candidates,
+        )
+        better_layout, overwrite_layout = choose_better_title_layout(
+            title,
+            current_layout,
+            source_layout,
+        )
+        if overwrite_layout:
+            copy_layout_sort_metadata(chapter, better_layout, fallback_order=index, overwrite=True)
+            status["layout_updates"] += 1
+
+        layout = layout_from_toc_metadata(chapter)
+        if (
+            not layout
+            or layout_text_is_toc_listing(layout.get("text"))
+            or layout_is_running_header_footer(layout)
+            or layout_match_score_for_title(title, layout) is None
+        ):
+            continue
+
+        style_key = toc_chapter_style_key(chapter)
+        if style_key == (None, None):
+            continue
+        level = metadata_int_value(chapter.get("level"))
+        if level is None:
+            continue
+        level = max(1, min(level, max_depth))
+        title_key = normalize_toc_match_text(title)
+        rows.append({
+            "chapter": chapter,
+            "title": title,
+            "title_key": title_key,
+            "level": level,
+            "style_key": style_key,
+        })
+        counts = style_level_counts.setdefault(style_key, {})
+        counts[level] = counts.get(level, 0) + 1
+
+    style_rules: dict[tuple[float | None, float | None], dict[str, Any]] = {}
+    for style_key, counts in style_level_counts.items():
+        total = sum(counts.values())
+        if total < min_style_examples:
+            continue
+        dominant_level, dominant_count = max(counts.items(), key=lambda item: (item[1], -item[0]))
+        dominance = dominant_count / max(1, total)
+        if dominance < min_dominance:
+            continue
+        style_rules[style_key] = {
+            "level": dominant_level,
+            "count": dominant_count,
+            "total": total,
+            "dominance": round(dominance, 3),
+            "counts": dict(sorted(counts.items())),
+        }
+
+    changes: list[dict[str, Any]] = []
+    for row in rows:
+        title = row["title"]
+        title_key = row["title_key"]
+        if title_counts.get(title_key, 0) > 1:
+            continue
+        if has_structural_title_marker(title):
+            continue
+        rule = style_rules.get(row["style_key"])
+        if not rule:
+            continue
+        old_level = int(row["level"])
+        new_level = int(rule["level"])
+        if old_level == new_level:
+            continue
+        chapter = row["chapter"]
+        chapter["level"] = new_level
+        reason = clean_text(chapter.get("level_reason"))
+        correction = (
+            f"Document-wide style correction changed level {old_level} to {new_level} "
+            f"because style {format_style_key(row['style_key'])} is dominant level {new_level} "
+            f"({rule['count']}/{rule['total']})."
+        )
+        chapter["level_reason"] = f"{reason} {correction}".strip() if reason else correction
+        changes.append({
+            "chapter": title,
+            "page": metadata_int_value(chapter.get("page")),
+            "old_level": old_level,
+            "new_level": new_level,
+            "style": format_style_key(row["style_key"]),
+            "dominant_count": rule["count"],
+            "style_total": rule["total"],
+        })
+
+    status["success"] = True
+    status["level_changes"] = len(changes)
+    status["changes"] = changes
+    status["style_rules"] = {
+        format_style_key(style_key): rule
+        for style_key, rule in sorted(style_rules.items(), key=lambda item: format_style_key(item[0]))
+    }
+    return toc, status
+
+
+def maybe_apply_gemma_style_level_correction(
+    toc: dict[str, Any],
+    *,
+    source_text: str,
+    args: argparse.Namespace,
+    pdf_path: Path,
+    provider: str,
+    model: str,
+    stage: str,
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    if not bool(getattr(args, "style", DEFAULT_STYLE_LEVEL_CORRECTION)):
+        status = {"enabled": False, "skipped": True, "level_changes": 0}
+        update_processing_metadata(args, style_level_correction=status)
+        return toc, status
+
+    toc, status = apply_document_style_level_correction(
+        toc,
+        source_text=source_text,
+        max_depth=args.max_depth,
+    )
+    update_processing_metadata(args, style_level_correction=status)
+    write_stage_file(
+        args=args,
+        pdf_path=pdf_path,
+        provider=provider,
+        model=model,
+        stage=stage,
+        payload={
+            "style_level_correction": status,
+            "toc": toc,
+        },
+    )
+    print(
+        f"  Style level correction completed: {status.get('level_changes', 0)} level changes",
+        flush=True,
+    )
+    return toc, status
+
+
 def build_gemma_level_review_prompt(
     base_prompt: str,
     pdf_name: str,
@@ -5591,6 +6195,7 @@ def build_gemma_level_review_prompt(
     invalid_heading_block = f"\n\n{invalid_heading_summary}" if clean_text(invalid_heading_summary) else ""
     reference_block = f"\n\n{level_reference_text}" if clean_text(level_reference_text) else ""
     document_style_block = f"\n\n{document_style_text}" if clean_text(document_style_text) else ""
+    pdf_title = Path(pdf_name).stem
 
     return f"""
 {base_prompt}
@@ -5598,6 +6203,8 @@ def build_gemma_level_review_prompt(
 [Gemma TOC Level Verification and Correction]
 Review the [Current TOC JSON] and return one corrected TOC JSON object.
 Rules:
+- Set the top-level JSON title exactly to "{pdf_title}".
+- If a chapter/section title looks like the document title, keep it as a chapters entry.
 - Correct level values using visible hierarchy and _layout_* metadata.
 - Remove duplicates and clearly invalid non-title entries.
 - Do not add new entries unless the current JSON already contains a clear duplicate/merge error.
@@ -6138,8 +6745,15 @@ def restore_missing_toc_metadata_from_source(toc: dict[str, Any], source_toc: di
         source_chapter = source_by_key.get((title, page))
         if not source_chapter:
             continue
+        chapter_layout = layout_from_toc_metadata(chapter)
+        source_layout = layout_from_toc_metadata(source_chapter)
+        _, overwrite_layout = choose_better_title_layout(
+            clean_text(chapter.get("chapter")),
+            chapter_layout,
+            source_layout,
+        )
         for key in metadata_keys:
-            if key in chapter:
+            if key in chapter and (key == "level_reason" or not overwrite_layout):
                 continue
             if key == "level_reason":
                 try:
@@ -6880,6 +7494,15 @@ def generate_toc_from_pdf_gemma_text(
                         "document_style_reference": document_style_summary,
                     },
                 )
+            toc, style_level_correction_status = maybe_apply_gemma_style_level_correction(
+                toc,
+                source_text=full_text,
+                args=args,
+                pdf_path=pdf_path,
+                provider="gemma",
+                model=model,
+                stage="03b_single_style_level_corrected",
+            )
             single_level_reference_enabled = bool(getattr(args, "gemma_level_reference", DEFAULT_GEMMA_LEVEL_REFERENCE))
             single_level_reference = (
                 build_toc_level_reference(toc, max_depth=args.max_depth, chunk_text=full_text)
@@ -6903,6 +7526,7 @@ def generate_toc_from_pdf_gemma_text(
                 payload={
                     "toc": toc,
                     "level_reference": serialize_toc_level_reference(single_level_reference) if single_level_reference_enabled else {},
+                    "style_level_correction": style_level_correction_status,
                     "document_style_reference": document_style_summary,
                 },
             )
@@ -6925,6 +7549,7 @@ def generate_toc_from_pdf_gemma_text(
                 "raw_response": raw_text,
                 "level_review": level_review_status,
                 "level_review_raw_response": level_review_raw_text,
+                "style_level_correction": style_level_correction_status,
                 "level_review_change_summary_file": str(level_review_change_summary_file) if level_review_change_summary_file is not None else None,
                 "level_reference": serialize_toc_level_reference(single_level_reference) if single_level_reference_enabled else {},
             }
@@ -7168,6 +7793,15 @@ def generate_toc_from_pdf_gemma_text(
             },
         )
 
+    toc, style_level_correction_status = maybe_apply_gemma_style_level_correction(
+        toc,
+        source_text=full_text,
+        args=args,
+        pdf_path=pdf_path,
+        provider="gemma",
+        model=model,
+        stage="05b_final_style_level_corrected",
+    )
     final_level_reference = (
         build_toc_level_reference(toc, max_depth=args.max_depth)
         if level_reference_enabled
@@ -7188,6 +7822,7 @@ def generate_toc_from_pdf_gemma_text(
             "toc": toc,
             "level_reference": serialize_toc_level_reference(final_level_reference) if level_reference_enabled else {},
             "final_level_review": final_level_review_status,
+            "style_level_correction": style_level_correction_status,
             "document_style_reference": document_style_summary,
         },
     )
@@ -7214,6 +7849,7 @@ def generate_toc_from_pdf_gemma_text(
         "chunk_count": len(chunks),
         "processed_chunk_count": len(raw_parts),
         "level_verify_scope": level_verify_scope,
+        "style_level_correction": style_level_correction_status,
         "level_reference": serialize_toc_level_reference(final_level_reference) if level_reference_enabled else {},
         "chunk_level_reference": (
             serialize_toc_level_reference(level_reference)
@@ -7723,6 +8359,12 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-depth", type=int, default=6, help="Maximum TOC level")
     parser.add_argument("--temperature", type=float, default=0, help="AI temperature. Not sent to OpenAI gpt-5-family models or some newer Claude models.")
     parser.add_argument("--max-output-tokens", type=int, default=None, help="Maximum output tokens")
+    parser.add_argument(
+        "--style",
+        action="store_true",
+        default=DEFAULT_STYLE_LEVEL_CORRECTION,
+        help="Gemma layout mode only: apply a document-wide style map to correct final TOC levels. Disabled by default.",
+    )
     parser.add_argument("--no-schema", action="store_true", help="Do not use JSON schema enforcement when available; rely on the prompt only")
     parser.add_argument(
         "--gemini-thinking-budget",

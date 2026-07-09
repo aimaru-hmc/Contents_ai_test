@@ -1,0 +1,5 @@
+Run log saved: data/output/logs/부교재3_contentsx_openai_20260709_181638_log.txt
+Processing started: 부교재3_contentsx.pdf
+  provider: openai
+  OpenAI PDF upload started...
+Run log saved: data/output/logs/부교재3_contentsx_openai_20260709_181638_log.txt

@@ -1,0 +1,14 @@
+Run log saved: data/output/logs/부교재3_openai_20260709_182433_log.txt
+Processing started: 부교재3.PDF
+  provider: openai
+  OpenAI PDF upload started...
+  OpenAI PDF upload completed
+  OpenAI TOC generation started: gpt-5.5
+  OpenAI TOC generation completed: gpt-5.5
+Completed: data/output/3_openai_20260709_182647_toc.json
+  model: gpt-5.5
+  elapsed: 2m 13.7s (133.671s)
+  title: 예방의학과 공중보건학 III
+  chapters: 283
+Processing result: success 1 / failed 0
+Run log saved: data/output/logs/부교재3_openai_20260709_182433_log.txt

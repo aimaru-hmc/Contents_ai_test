@@ -1,0 +1,14 @@
+Run log saved: data/output/logs/3편1,2장(2021)_openai_20260709_181747_log.txt
+Processing started: 3편1,2장(2021).pdf
+  provider: openai
+  OpenAI PDF upload started...
+  OpenAI PDF upload completed
+  OpenAI TOC generation started: gpt-5.5
+  OpenAI TOC generation completed: gpt-5.5
+Completed: data/output/3_1_2_2021_openai_20260709_182004_toc.json
+  model: gpt-5.5
+  elapsed: 2m 17.2s (137.213s)
+  title: 제3편 환경과 건강
+  chapters: 243
+Processing result: success 1 / failed 0
+Run log saved: data/output/logs/3편1,2장(2021)_openai_20260709_181747_log.txt

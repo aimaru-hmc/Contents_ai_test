@@ -1,0 +1,23 @@
+Run log saved: data/output/logs/부교재3_contentsx_gemini_20260709_164534_log.txt
+Processing started: 부교재3_contentsx.pdf
+  provider: gemini
+/home/hmc2/work/development/eunsoo/.venv/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/home/hmc2/work/development/eunsoo/.venv/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+  Gemini PDF upload started...
+  Gemini PDF upload completed
+  Gemini TOC generation started: gemini-3.1-pro-preview
+Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated parsed result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+  Gemini TOC generation completed: gemini-3.1-pro-preview
+  Retrying Gemini generation after JSON parse failure 2/5: gemini-3.1-pro-preview
+  Gemini TOC generation started: gemini-3.1-pro-preview
+Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated parsed result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+  Gemini TOC generation completed: gemini-3.1-pro-preview
+  Retrying Gemini generation after JSON parse failure 3/5: gemini-3.1-pro-preview
+  Gemini TOC generation started: gemini-3.1-pro-preview
+Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated parsed result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+  Gemini TOC generation completed: gemini-3.1-pro-preview
+  Retrying Gemini generation after JSON parse failure 4/5: gemini-3.1-pro-preview
+  Gemini TOC generation started: gemini-3.1-pro-preview
+Run log saved: data/output/logs/부교재3_contentsx_gemini_20260709_164534_log.txt

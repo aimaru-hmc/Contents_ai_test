@@ -1,0 +1,16 @@
+{
+    "timestamp": "2026-07-09 16:48:53",
+    "fatal": true,
+    "stage": "PDF processing failed",
+    "source_pdf": "data/input/부교재3_contentsx.pdf",
+    "source_pdf_name": "부교재3_contentsx.pdf",
+    "provider": "gemini",
+    "model": "gemini-3.1-pro-preview",
+    "error_type": "JSONDecodeError",
+    "error_message": "Expecting ',' delimiter: line 1 column 1228 (char 1227)",
+    "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 1228 (char 1227)",
+    "debug": {},
+    "traceback": "Traceback (most recent call last):\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_gemma.py\", line 8109, in process_pdf\n    toc, raw_text, used_model = generate_toc_from_pdf(pdf_path=processing_pdf_path, args=args, user_prompt=user_prompt)\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_gemma.py\", line 7838, in generate_toc_from_pdf\n    return generate_toc_from_pdf_gemini(pdf_path=pdf_path, args=args, prompt=prompt)\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_gemma.py\", line 1598, in generate_toc_from_pdf_gemini\n    raise last_error\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_gemma.py\", line 1565, in generate_toc_from_pdf_gemini\n    parsed = parse_json_response_text(raw_text, provider=\"gemini\")\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_gemma.py\", line 832, in parse_json_response_text\n    raise last_error\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_gemma.py\", line 822, in parse_json_response_text\n    data = json.loads(candidate)\n  File \"/home/hmc2/anaconda3/lib/python3.9/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n  File \"/home/hmc2/anaconda3/lib/python3.9/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n  File \"/home/hmc2/anaconda3/lib/python3.9/json/decoder.py\", line 353, in raw_decode\n    obj, end = self.scan_once(s, idx)\njson.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 1228 (char 1227)\n",
+    "elapsed_seconds": 1255.428,
+    "elapsed": "20m 55.4s"
+}
