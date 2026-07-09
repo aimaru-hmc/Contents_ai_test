@@ -1,0 +1,41 @@
+{
+    "timestamp": "2026-07-09 13:31:59",
+    "stage_index": 13,
+    "stage": "level_review_changes_summary",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/1편(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/1_2021.pdf",
+    "review_count": 1,
+    "level_change_count": 0,
+    "added_count": 0,
+    "removed_count": 1,
+    "reviews": [
+        {
+            "review_stage": "chunk 1/2",
+            "input_chapters": 63,
+            "output_chapters": 62,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "3) 건강정책분석을 위한 역학적 모형",
+                        "page": 16,
+                        "level_reason": "Numbered list item under subsection 2.3.",
+                        "_layout_x": 80.0,
+                        "_layout_y": 754.0,
+                        "_layout_font_size": 8.5,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "역학적 모형",
+                        "_source_order": 552
+                    }
+                }
+            ]
+        }
+    ]
+}
