@@ -1,0 +1,41 @@
+{
+    "timestamp": "2026-07-09 15:18:16",
+    "stage_index": 5,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "chunk 1/8",
+    "review_stage": "chunk 1/8",
+    "input_chapters": 33,
+    "candidate_count": 1,
+    "candidates": [
+        {
+            "title": "Natural history of disease",
+            "level": 3,
+            "page": 4,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Sub-subsection under Epidemiology and public health.",
+            "font_size": 10.0,
+            "size_ratio": 1.0,
+            "left_indent": 115.0,
+            "vertical_position": 294.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=4, line=54, s=10.0, r=1.0, x=115.0, y=294.0: \"Natural history of disease 4\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        }
+    ]
+}

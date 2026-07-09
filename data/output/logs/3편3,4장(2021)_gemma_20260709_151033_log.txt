@@ -24,3 +24,11 @@ Processing started: 3편3,4장(2021).pdf
   Gemma chunked TOC local merge started
   Gemma chunked TOC local merge completed
   Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) completed: 194 chapters / level changes 32
+Completed: data/output/3_3_4_2021_gemma_20260709_151735_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 7m 1.1s (421.111s)
+  title: 화학적 요인
+  chapters: 194
+Processing result: success 1 / failed 0
+Run log saved: data/output/logs/3편3,4장(2021)_gemma_20260709_151033_log.txt

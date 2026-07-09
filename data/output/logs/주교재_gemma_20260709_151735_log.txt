@@ -1,0 +1,21 @@
+Run log saved: data/output/logs/주교재_gemma_20260709_151735_log.txt
+Processing started: 주교재.pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 221 pages, 937307 chars, mode=layout, selected_pages=221
+  Parsed PDF text saved: data/output/parsed_pdfs/unknown_model_gemma_20260709_151735_parsed_pdf.txt
+  Gemma text chunk processing started: 8 chunks
+  Gemma chunk 1/8 request: pages 2-34
+  Gemma input chunk 1 saved: data/output/input_chunks/unknown_model_gemma_20260709_151735/chunk_1_pages_2-34.json
+  Gemma level review(chunk 1/8) started
+  Gemma level review(chunk 1/8) completed: 32 chapters / level changes 0
+  Gemma chunk 1 completed: 32 chapters
+  Gemma chunk 2/8 request: pages 35-60
+  Gemma input chunk 2 saved: data/output/input_chunks/unknown_model_gemma_20260709_151735/chunk_2_pages_35-60.json
+  Gemma level review(chunk 2/8) started
+  Gemma level review(chunk 2/8) completed: 44 chapters / level changes 2
+  Gemma chunk 2 completed: 44 chapters
+  Gemma chunk 3/8 request: pages 61-87
+  Gemma input chunk 3 saved: data/output/input_chunks/unknown_model_gemma_20260709_151735/chunk_3_pages_61-87.json
+  Gemma level review(chunk 3/8) started

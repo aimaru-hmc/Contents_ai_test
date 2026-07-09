@@ -1,0 +1,1126 @@
+{
+    "timestamp": "2026-07-09 15:19:24",
+    "stage_index": 9,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "chunk 2/8",
+    "review_stage": "chunk 2/8",
+    "input_chapters": 49,
+    "candidate_count": 31,
+    "candidates": [
+        {
+            "title": "Case fatality",
+            "level": 3,
+            "page": 35,
+            "reasons": [
+                "title itself looks like a case/example/table/figure/problem/reference label",
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection title with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 84.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=35, line=1, s=14.0, r=1.4, x=140.0, y=84.0: \"Case fatality\""
+                ],
+                "embedded_examples": [
+                    "page=35, line=2, s=10.0, r=1.0, x=140.0, y=112.0: \"Case fatality is a measure of disease severity and is defined as the proportion of cases\"",
+                    "page=35, line=7, s=10.0, r=1.0, x=150.0, y=183.0: \"Casefatality(%%%)= ×100\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 2,
+                "small_label_examples": [
+                    "page=35, line=40, s=9.0, r=0.9, x=27.0, y=54.0: \"22 Chapter 2\"",
+                    "page=35, line=40, s=9.0, r=0.9, x=27.0, y=54.0: \"22 Chapter 2\""
+                ]
+            }
+        },
+        {
+            "title": "Mortality",
+            "level": 3,
+            "page": 36,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Using available information...' with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 298.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=36, line=65, s=14.0, r=1.4, x=55.0, y=298.0: \"Mortality\""
+                ],
+                "embedded_examples": [
+                    "page=36, line=87, s=9.0, r=0.9, x=288.0, y=480.0: \"mortality and morbidity statistics.\"",
+                    "page=36, line=96, s=10.0, r=1.0, x=55.0, y=623.0: \"basic mortality statistics are not available, usually because of alack of resources to\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=36, line=67, s=8.0, r=0.8, x=288.0, y=333.0: \"Box 2.2. International Classification of Diseases\""
+                ],
+                "small_label_examples": [
+                    "page=36, line=71, s=9.0, r=0.9, x=288.0, y=360.0: \"The ICD-10 came into use in 1992. This classification is\"",
+                    "page=36, line=73, s=9.0, r=0.9, x=288.0, y=371.0: \"the latest in a series which originated in the 1850s. The\"",
+                    "page=36, line=79, s=9.0, r=0.9, x=288.0, y=425.0: \"health problems recorded on many types of records, in-\"",
+                    "page=36, line=81, s=9.0, r=0.9, x=288.0, y=436.0: \"cluding death certificates and hospital charts. This clas-\""
+                ]
+            }
+        },
+        {
+            "title": "Limitations of death certificates",
+            "level": 3,
+            "page": 36,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Mortality' with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 505.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=36, line=88, s=14.0, r=1.4, x=55.0, y=505.0: \"Limitations of death certificates\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=36, line=79, s=9.0, r=0.9, x=288.0, y=425.0: \"health problems recorded on many types of records, in-\"",
+                    "page=36, line=81, s=9.0, r=0.9, x=288.0, y=436.0: \"cluding death certificates and hospital charts. This clas-\"",
+                    "page=36, line=83, s=9.0, r=0.9, x=288.0, y=447.0: \"sification makes it possible for countries to store and\"",
+                    "page=36, line=85, s=9.0, r=0.9, x=288.0, y=458.0: \"retrieve diagnostic information for clinical and epidemi-\""
+                ]
+            }
+        },
+        {
+            "title": "Death rates",
+            "level": 2,
+            "page": 38,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Major section title with style s=20.0, r=2.00.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 55.0,
+            "vertical_position": 240.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=38, line=155, s=20.0, r=2.0, x=55.0, y=240.0: \"Death rates\""
+                ],
+                "embedded_examples": [
+                    "page=38, line=170, s=9.0, r=0.9, x=55.0, y=469.0: \"Age-specific death rates\"",
+                    "page=38, line=171, s=10.0, r=1.0, x=55.0, y=480.0: \"Death rates can be expressed for specific groups in a population which are defined\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 2,
+                "small_label_examples": [
+                    "page=38, line=170, s=9.0, r=0.9, x=55.0, y=469.0: \"Age-specific death rates\"",
+                    "page=38, line=179, s=9.0, r=0.9, x=55.0, y=601.0: \"Proportionate mortality\""
+                ]
+            }
+        },
+        {
+            "title": "Child mortality rate",
+            "level": 3,
+            "page": 39,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Death rates' with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 531.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=39, line=224, s=14.0, r=1.4, x=140.0, y=531.0: \"Child mortality rate\""
+                ],
+                "embedded_examples": [
+                    "page=39, line=225, s=10.0, r=1.0, x=140.0, y=559.0: \"The child mortality rate (under-5 mortality rate) is based on deaths of children aged\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=39, line=211, s=3.2, r=0.32, x=153.0, y=477.0: \"tnafnI\"",
+                    "page=39, line=216, s=7.6, r=0.76, x=166.0, y=451.0: \"80\"",
+                    "page=39, line=217, s=5.7, r=0.57, x=369.0, y=457.0: \"Asia\"",
+                    "page=39, line=218, s=5.7, r=0.57, x=369.0, y=463.0: \"World\""
+                ]
+            }
+        },
+        {
+            "title": "Adult mortality rate",
+            "level": 3,
+            "page": 41,
+            "reasons": [
+                "source context looks like case/example/table/figure/problem/reference material",
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Death rates' with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 275.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=41, line=295, s=14.0, r=1.4, x=140.0, y=275.0: \"Adult mortality rate\""
+                ],
+                "embedded_examples": [
+                    "page=41, line=296, s=10.0, r=1.0, x=27.0, y=302.0: \"Table 2.6. Adult mortality rates25 in selected coun- The adult mortality rate is defined...\"",
+                    "page=41, line=298, s=10.0, r=1.0, x=239.0, y=328.0: \"ulation. The adult mortality rate offers a way to analyse\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=41, line=296, s=10.0, r=1.0, x=27.0, y=302.0: \"Table 2.6. Adult mortality rates25 in selected coun- The adult mortality rate is defined...\"",
+                    "page=41, line=296, s=10.0, r=1.0, x=27.0, y=302.0: \"Table 2.6. Adult mortality rates25 in selected coun- The adult mortality rate is defined...\""
+                ],
+                "small_label_examples": [
+                    "page=41, line=300, s=8.0, r=0.8, x=76.0, y=347.0: \"population between 15 and 60 years\"",
+                    "page=41, line=302, s=8.0, r=0.8, x=76.0, y=360.0: \"Males Females\"",
+                    "page=41, line=300, s=8.0, r=0.8, x=76.0, y=347.0: \"population between 15 and 60 years\"",
+                    "page=41, line=302, s=8.0, r=0.8, x=76.0, y=360.0: \"Males Females\""
+                ]
+            }
+        },
+        {
+            "title": "Life expectancy",
+            "level": 3,
+            "page": 41,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Death rates' with style s=8.0, r=0.80.",
+            "font_size": 8.0,
+            "size_ratio": 0.8,
+            "left_indent": 27.0,
+            "vertical_position": 439.0,
+            "bold": 1,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 7,
+                "embedded_examples": [
+                    "page=41, line=311, s=8.0, r=0.8, x=27.0, y=439.0: \"Middle-income countries Life expectancy\"",
+                    "page=41, line=314, s=10.0, r=1.0, x=239.0, y=468.0: \"Life expectancy is another summary measure of the health\"",
+                    "page=41, line=322, s=10.0, r=1.0, x=239.0, y=518.0: \"interpret the reasons for the differences in life expectancy\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=41, line=302, s=8.0, r=0.8, x=76.0, y=360.0: \"Males Females\"",
+                    "page=41, line=306, s=8.0, r=0.8, x=27.0, y=401.0: \"Canada 91 57\"",
+                    "page=41, line=308, s=8.0, r=0.8, x=27.0, y=412.0: \"France 132 60\"",
+                    "page=41, line=310, s=8.0, r=0.8, x=27.0, y=424.0: \"USA 137 81\""
+                ]
+            }
+        },
+        {
+            "title": "Age-standardized rates",
+            "level": 3,
+            "page": 42,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Death rates' with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 404.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=42, line=357, s=14.0, r=1.4, x=55.0, y=404.0: \"Age-standardized rates\""
+                ],
+                "embedded_examples": [
+                    "page=42, line=363, s=10.0, r=1.0, x=73.0, y=483.0: \"Age-standardized rates enable comparisons to be\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=42, line=362, s=8.0, r=0.8, x=288.0, y=479.0: \"Box 2.5. Direct and indirect standardization of\"",
+                    "page=42, line=362, s=8.0, r=0.8, x=288.0, y=479.0: \"Box 2.5. Direct and indirect standardization of\""
+                ],
+                "small_label_examples": [
+                    "page=42, line=350, s=8.0, r=0.8, x=281.0, y=318.0: \"Zimbabwe 34 37\"",
+                    "page=42, line=355, s=8.0, r=0.8, x=55.0, y=378.0: \"men.27 USA 80 75\"",
+                    "page=42, line=356, s=8.0, r=0.8, x=281.0, y=390.0: \"Japan 86 79\"",
+                    "page=42, line=364, s=8.0, r=0.8, x=288.0, y=490.0: \"disease rates\""
+                ]
+            }
+        },
+        {
+            "title": "Morbidity",
+            "level": 2,
+            "page": 43,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Major section title with style s=20.0, r=2.00.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 140.0,
+            "vertical_position": 486.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 6,
+                "exact_examples": [
+                    "page=43, line=442, s=20.0, r=2.0, x=140.0, y=486.0: \"Morbidity\""
+                ],
+                "embedded_examples": [
+                    "page=43, line=422, s=10.0, r=1.0, x=140.0, y=295.0: \"butions on the morbidity or mortality rates being compared. For example, there is\"",
+                    "page=43, line=446, s=10.0, r=1.0, x=140.0, y=558.0: \"ation, data on morbidity (illness) are more useful than mortality rates.\"",
+                    "page=43, line=447, s=10.0, r=1.0, x=158.0, y=571.0: \"Morbidity data areoften helpful in clarifying the reasons for particular trends in\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=43, line=428, s=8.0, r=0.8, x=27.0, y=364.0: \"Table 2.9. Crude and age-standardized death rates\""
+                ],
+                "small_label_examples": [
+                    "page=43, line=414, s=8.0, r=0.8, x=198.0, y=182.0: \"Segi European WHO Segi European WHO\"",
+                    "page=43, line=415, s=8.0, r=0.8, x=282.0, y=191.0: \"world world\"",
+                    "page=43, line=416, s=8.0, r=0.8, x=140.0, y=208.0: \"Australia 6.3 10.1 7.9 5 5 5\"",
+                    "page=43, line=417, s=8.0, r=0.8, x=140.0, y=220.0: \"Cuba 27.2 44.2 34.6 4 4 4\""
+                ]
+            }
+        },
+        {
+            "title": "Health determinants, indicators, and risk factors",
+            "level": 3,
+            "page": 45,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Morbidity' with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 135.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=45, line=503, s=14.0, r=1.4, x=140.0, y=135.0: \"Health determinants, indicators, and risk factors\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 3,
+                "small_label_examples": [
+                    "page=45, line=499, s=9.0, r=0.9, x=27.0, y=54.0: \"32 Chapter 2\"",
+                    "page=45, line=504, s=9.0, r=0.9, x=140.0, y=162.0: \"Health determinants\"",
+                    "page=45, line=508, s=9.0, r=0.9, x=140.0, y=222.0: \"Health indicators\""
+                ]
+            }
+        },
+        {
+            "title": "Health determinants",
+            "level": 4,
+            "page": 45,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under 'Health determinants...' with style s=9.0, r=0.90, italic.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 162.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=45, line=504, s=9.0, r=0.9, x=140.0, y=162.0: \"Health determinants\""
+                ],
+                "embedded_examples": [
+                    "page=45, line=503, s=14.0, r=1.4, x=140.0, y=135.0: \"Health determinants, indicators, and risk factors\"",
+                    "page=45, line=505, s=10.0, r=1.0, x=140.0, y=173.0: \"Health determinants are generally defined as the underlying social, economic, cultural\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=45, line=499, s=9.0, r=0.9, x=27.0, y=54.0: \"32 Chapter 2\"",
+                    "page=45, line=504, s=9.0, r=0.9, x=140.0, y=162.0: \"Health determinants\"",
+                    "page=45, line=508, s=9.0, r=0.9, x=140.0, y=222.0: \"Health indicators\"",
+                    "page=45, line=499, s=9.0, r=0.9, x=27.0, y=54.0: \"32 Chapter 2\""
+                ]
+            }
+        },
+        {
+            "title": "Health indicators",
+            "level": 4,
+            "page": 45,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under 'Health determinants...' with style s=9.0, r=0.90, italic.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 222.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=45, line=508, s=9.0, r=0.9, x=140.0, y=222.0: \"Health indicators\""
+                ],
+                "embedded_examples": [
+                    "page=45, line=511, s=10.0, r=1.0, x=140.0, y=259.0: \"health indicators each year.25 Health indicators can also be used as components in\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=45, line=504, s=9.0, r=0.9, x=140.0, y=162.0: \"Health determinants\"",
+                    "page=45, line=516, s=9.0, r=0.9, x=140.0, y=334.0: \"Risk factors\"",
+                    "page=45, line=504, s=9.0, r=0.9, x=140.0, y=162.0: \"Health determinants\"",
+                    "page=45, line=508, s=9.0, r=0.9, x=140.0, y=222.0: \"Health indicators\""
+                ]
+            }
+        },
+        {
+            "title": "Risk factors",
+            "level": 4,
+            "page": 45,
+            "reasons": [
+                "source context looks like case/example/table/figure/problem/reference material",
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under 'Health determinants...' with style s=9.0, r=0.90, italic.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 334.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 6,
+                "exact_examples": [
+                    "page=45, line=516, s=9.0, r=0.9, x=140.0, y=334.0: \"Risk factors\""
+                ],
+                "embedded_examples": [
+                    "page=45, line=503, s=14.0, r=1.4, x=140.0, y=135.0: \"Health determinants, indicators, and risk factors\"",
+                    "page=45, line=518, s=10.0, r=1.0, x=140.0, y=358.0: \"is associated with an increased probability of occurrence of a disease. Since risk factors\"",
+                    "page=45, line=523, s=8.0, r=0.8, x=34.0, y=444.0: \"Box 2.7. Measuring risk factors\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 4,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=45, line=522, s=10.0, r=1.0, x=140.0, y=410.0: \"Box 2.7).\"",
+                    "page=45, line=523, s=8.0, r=0.8, x=34.0, y=444.0: \"Box 2.7. Measuring risk factors\"",
+                    "page=45, line=522, s=10.0, r=1.0, x=140.0, y=410.0: \"Box 2.7).\"",
+                    "page=45, line=523, s=8.0, r=0.8, x=34.0, y=444.0: \"Box 2.7. Measuring risk factors\""
+                ],
+                "small_label_examples": [
+                    "page=45, line=499, s=9.0, r=0.9, x=27.0, y=54.0: \"32 Chapter 2\"",
+                    "page=45, line=504, s=9.0, r=0.9, x=140.0, y=162.0: \"Health determinants\"",
+                    "page=45, line=508, s=9.0, r=0.9, x=140.0, y=222.0: \"Health indicators\"",
+                    "page=45, line=508, s=9.0, r=0.9, x=140.0, y=222.0: \"Health indicators\""
+                ]
+            }
+        },
+        {
+            "title": "Other summary measures of population health",
+            "level": 3,
+            "page": 45,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Morbidity' with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 634.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=45, line=537, s=14.0, r=1.4, x=140.0, y=634.0: \"Other summary measures of population health\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=45, line=529, s=9.0, r=0.9, x=34.0, y=515.0: \"representative of small population groups within a country, district or city. These metho...\"",
+                    "page=45, line=530, s=9.0, r=0.9, x=34.0, y=526.0: \"be difficult to compare results from different surveys and countries.\"",
+                    "page=45, line=531, s=9.0, r=0.9, x=52.0, y=537.0: \"Efforts have been made to standardize methods of measurement of risk factors at the globa...\"",
+                    "page=45, line=532, s=9.0, r=0.9, x=34.0, y=548.0: \"MONICA Project in the 1980s and 1990s.36, 37More recently, the WHO STEPS approach to the...\""
+                ]
+            }
+        },
+        {
+            "title": "Disability-adjusted life years",
+            "level": 4,
+            "page": 46,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under 'Other summary measures...' with style s=9.0, r=0.90, italic.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 305.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=46, line=559, s=9.0, r=0.9, x=55.0, y=305.0: \"Disability-adjusted life years\""
+                ],
+                "embedded_examples": [
+                    "page=46, line=558, s=10.0, r=1.0, x=73.0, y=282.0: \"• disability-adjusted life years (DALYs).\"",
+                    "page=46, line=563, s=10.0, r=1.0, x=55.0, y=355.0: \"disability-adjustedlife years (DALYs) which combines:\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 2,
+                "small_label_examples": [
+                    "page=46, line=559, s=9.0, r=0.9, x=55.0, y=305.0: \"Disability-adjusted life years\"",
+                    "page=46, line=559, s=9.0, r=0.9, x=55.0, y=305.0: \"Disability-adjusted life years\""
+                ]
+            }
+        },
+        {
+            "title": "Risk difference",
+            "level": 4,
+            "page": 47,
+            "reasons": [
+                "source context looks like case/example/table/figure/problem/reference material",
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under 'Absolute comparisons' with style s=9.0, r=0.90, italic.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 272.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=47, line=600, s=9.0, r=0.9, x=140.0, y=272.0: \"Risk difference\""
+                ],
+                "embedded_examples": [
+                    "page=47, line=601, s=10.0, r=1.0, x=140.0, y=283.0: \"The risk difference, also called excess risk, is the difference in rates of occurrence\"",
+                    "page=47, line=604, s=10.0, r=1.0, x=140.0, y=322.0: \"the data in Table 2.4 the risk difference between the incidence rate of stroke in women\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 3,
+                "small_label_examples": [
+                    "page=47, line=600, s=9.0, r=0.9, x=140.0, y=272.0: \"Risk difference\"",
+                    "page=47, line=600, s=9.0, r=0.9, x=140.0, y=272.0: \"Risk difference\"",
+                    "page=47, line=610, s=9.0, r=0.9, x=140.0, y=409.0: \"Attributable fraction (exposed)\""
+                ]
+            }
+        },
+        {
+            "title": "Attributable fraction (exposed)",
+            "level": 4,
+            "page": 47,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under 'Absolute comparisons' with style s=9.0, r=0.90, italic.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 409.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=47, line=610, s=9.0, r=0.9, x=140.0, y=409.0: \"Attributable fraction (exposed)\""
+                ],
+                "embedded_examples": [
+                    "page=47, line=611, s=10.0, r=1.0, x=140.0, y=420.0: \"The attributable fraction (exposed), also known as the etiological fraction (exposed),\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 1,
+                "visual_caption_examples": [
+                    "page=47, line=615, s=10.0, r=1.0, x=140.0, y=472.0: \"Table 2.4 the attributable fraction of smoking for stroke in the smokers is:\"",
+                    "page=47, line=615, s=10.0, r=1.0, x=140.0, y=472.0: \"Table 2.4 the attributable fraction of smoking for stroke in the smokers is:\""
+                ],
+                "small_label_examples": [
+                    "page=47, line=610, s=9.0, r=0.9, x=140.0, y=409.0: \"Attributable fraction (exposed)\""
+                ]
+            }
+        },
+        {
+            "title": "Population attributable risk",
+            "level": 4,
+            "page": 48,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under 'Absolute comparisons' with style s=9.0, r=0.90, italic.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 85.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=48, line=632, s=9.0, r=0.9, x=55.0, y=85.0: \"Population attributable risk\""
+                ],
+                "embedded_examples": [
+                    "page=48, line=633, s=10.0, r=1.0, x=55.0, y=96.0: \"The population attributable risk (PARRR) is the incidence of a disease in a population\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=48, line=631, s=9.0, r=0.9, x=345.0, y=54.0: \"Measuring health and disease 35\"",
+                    "page=48, line=640, s=8.0, r=0.8, x=216.0, y=186.0: \"p u\"",
+                    "page=48, line=631, s=9.0, r=0.9, x=345.0, y=54.0: \"Measuring health and disease 35\"",
+                    "page=48, line=632, s=9.0, r=0.9, x=55.0, y=85.0: \"Population attributable risk\""
+                ]
+            }
+        },
+        {
+            "title": "Relative comparisons",
+            "level": 3,
+            "page": 48,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Comparing disease occurrence' with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 264.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=48, line=649, s=14.0, r=1.4, x=55.0, y=264.0: \"Relative comparisons\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=48, line=653, s=10.0, r=1.0, x=55.0, y=329.0: \"Table 2.4, the risk ratio of stroke in women who smoke, compared with those who\""
+                ],
+                "small_label_examples": [
+                    "page=48, line=640, s=8.0, r=0.8, x=216.0, y=186.0: \"p u\"",
+                    "page=48, line=643, s=8.0, r=0.8, x=224.0, y=201.0: \"p\"",
+                    "page=48, line=646, s=7.0, r=0.7, x=75.0, y=229.0: \"p\"",
+                    "page=48, line=648, s=7.0, r=0.7, x=75.0, y=243.0: \"u\""
+                ]
+            }
+        },
+        {
+            "title": "Relative risk",
+            "level": 4,
+            "page": 48,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under 'Relative comparisons' with style s=9.0, r=0.90, italic.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 292.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=48, line=650, s=9.0, r=0.9, x=55.0, y=292.0: \"Relative risk\""
+                ],
+                "embedded_examples": [
+                    "page=48, line=651, s=10.0, r=1.0, x=55.0, y=303.0: \"The relative risk (also called the risk ratio) is the ratio of the risk of occurrence of\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=48, line=653, s=10.0, r=1.0, x=55.0, y=329.0: \"Table 2.4, the risk ratio of stroke in women who smoke, compared with those who\"",
+                    "page=48, line=653, s=10.0, r=1.0, x=55.0, y=329.0: \"Table 2.4, the risk ratio of stroke in women who smoke, compared with those who\""
+                ],
+                "small_label_examples": [
+                    "page=48, line=643, s=8.0, r=0.8, x=224.0, y=201.0: \"p\"",
+                    "page=48, line=646, s=7.0, r=0.7, x=75.0, y=229.0: \"p\"",
+                    "page=48, line=648, s=7.0, r=0.7, x=75.0, y=243.0: \"u\"",
+                    "page=48, line=643, s=8.0, r=0.8, x=224.0, y=201.0: \"p\""
+                ]
+            }
+        },
+        {
+            "title": "Attributable risk",
+            "level": 4,
+            "page": 48,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under 'Relative comparisons' with style s=9.0, r=0.90, italic.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 507.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 5,
+                "exact_examples": [
+                    "page=48, line=666, s=9.0, r=0.9, x=55.0, y=507.0: \"Attributable risk\""
+                ],
+                "embedded_examples": [
+                    "page=48, line=632, s=9.0, r=0.9, x=55.0, y=85.0: \"Population attributable risk\"",
+                    "page=48, line=633, s=10.0, r=1.0, x=55.0, y=96.0: \"The population attributable risk (PARRR) is the incidence of a disease in a population\"",
+                    "page=48, line=667, s=10.0, r=1.0, x=55.0, y=518.0: \"Attributable risk is the rate (proportion) of a disease or other outcome in exposed\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=48, line=631, s=9.0, r=0.9, x=345.0, y=54.0: \"Measuring health and disease 35\"",
+                    "page=48, line=640, s=8.0, r=0.8, x=216.0, y=186.0: \"p u\"",
+                    "page=48, line=631, s=9.0, r=0.9, x=345.0, y=54.0: \"Measuring health and disease 35\"",
+                    "page=48, line=632, s=9.0, r=0.9, x=55.0, y=85.0: \"Population attributable risk\""
+                ]
+            }
+        },
+        {
+            "title": "References",
+            "level": 2,
+            "page": 49,
+            "reasons": [
+                "title itself looks like a case/example/table/figure/problem/reference label",
+                "source context looks like case/example/table/figure/problem/reference material"
+            ],
+            "level_reason": "Major section title with style s=20.0, r=2.00.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 140.0,
+            "vertical_position": 403.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=49, line=707, s=20.0, r=2.0, x=140.0, y=403.0: \"References\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "Descriptive studies",
+            "level": 3,
+            "page": 53,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Observational epidemiology' with style s=14.0, r=1.40.",
+            "font_size": 8.0,
+            "size_ratio": 0.8,
+            "left_indent": 140.0,
+            "vertical_position": 137.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 2,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=53, line=861, s=8.0, r=0.8, x=140.0, y=137.0: \"Descriptive studies\"",
+                    "page=53, line=887, s=14.0, r=1.4, x=140.0, y=513.0: \"Descriptive studies\""
+                ],
+                "embedded_examples": [
+                    "page=53, line=891, s=10.0, r=1.0, x=140.0, y=579.0: \"is undertaken by a national centre for health statistics. Pure descriptive studies make\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=53, line=858, s=8.0, r=0.8, x=140.0, y=87.0: \"Table 3.1. Types of epidemiological study\""
+                ],
+                "small_label_examples": [
+                    "page=53, line=857, s=9.0, r=0.9, x=27.0, y=53.0: \"40 Chapter 3\"",
+                    "page=53, line=859, s=8.0, r=0.8, x=140.0, y=109.0: \"Type of study Alternative name Unit of study\"",
+                    "page=53, line=860, s=8.0, r=0.8, x=140.0, y=125.0: \"Observational studies\"",
+                    "page=53, line=862, s=8.0, r=0.8, x=140.0, y=149.0: \"Analytical studies\""
+                ]
+            }
+        },
+        {
+            "title": "Ecological studies",
+            "level": 3,
+            "page": 54,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Observational epidemiology' with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 571.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=54, line=916, s=14.0, r=1.4, x=55.0, y=571.0: \"Ecological studies\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 2,
+                "small_label_examples": [
+                    "page=54, line=923, s=3.0, r=0.3, x=67.0, y=167.0: \"shtrib\"",
+                    "page=54, line=924, s=3.0, r=0.3, x=67.0, y=189.0: \"evil\""
+                ]
+            }
+        },
+        {
+            "title": "Ecological fallacy",
+            "level": 3,
+            "page": 56,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Ecological studies' with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 251.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=56, line=1014, s=14.0, r=1.4, x=55.0, y=251.0: \"Ecological fallacy\""
+                ],
+                "embedded_examples": [
+                    "page=56, line=1015, s=10.0, r=1.0, x=55.0, y=279.0: \"An ecological fallacy or bias results if inappropriate conclusions are drawn on the\"",
+                    "page=56, line=1018, s=10.0, r=1.0, x=55.0, y=318.0: \"at the individual level (see Chapter 2). An example of an ecological fallacy would be\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 2,
+                "visual_caption_examples": [
+                    "page=56, line=1024, s=8.0, r=0.8, x=55.0, y=410.0: \"Figure 3.4. Neonatal and maternal mortality are related to the absence of a skilled birth...\""
+                ],
+                "small_label_examples": [
+                    "page=56, line=1025, s=8.0, r=0.8, x=55.0, y=423.0: \"100\"",
+                    "page=56, line=1026, s=8.0, r=0.8, x=111.0, y=438.0: \"% of births without skilled attendant\""
+                ]
+            }
+        },
+        {
+            "title": "Cross-sectional studies",
+            "level": 3,
+            "page": 57,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Observational epidemiology' with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 84.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 5,
+                "exact_examples": [
+                    "page=57, line=1039, s=14.0, r=1.4, x=140.0, y=84.0: \"Cross-sectional studies\""
+                ],
+                "embedded_examples": [
+                    "page=57, line=1040, s=10.0, r=1.0, x=140.0, y=111.0: \"Cross-sectional studies measure the prevalence of disease and thus are often called\"",
+                    "page=57, line=1043, s=10.0, r=1.0, x=140.0, y=150.0: \"shown in cross-sectional studies. The key question to be asked is whether the expo-\"",
+                    "page=57, line=1047, s=10.0, r=1.0, x=158.0, y=202.0: \"Cross-sectional studies are relatively easy and inexpensive to conduct and are\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 3,
+                "small_label_examples": [
+                    "page=57, line=1038, s=9.0, r=0.9, x=27.0, y=53.0: \"44 Chapter 3\"",
+                    "page=57, line=1038, s=9.0, r=0.9, x=27.0, y=53.0: \"44 Chapter 3\"",
+                    "page=57, line=1038, s=9.0, r=0.9, x=27.0, y=53.0: \"44 Chapter 3\""
+                ]
+            }
+        },
+        {
+            "title": "Case-control studies",
+            "level": 3,
+            "page": 57,
+            "reasons": [
+                "title itself looks like a case/example/table/figure/problem/reference label",
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Observational epidemiology' with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 587.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=57, line=1074, s=14.0, r=1.4, x=140.0, y=587.0: \"Case-control studies\""
+                ],
+                "embedded_examples": [
+                    "page=57, line=1075, s=10.0, r=1.0, x=140.0, y=614.0: \"Case-control studies provide a relatively simple way to investigate causes of diseases,\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=57, line=1066, s=9.0, r=0.9, x=147.0, y=470.0: \"obesity, blood pressure, cholesterol, alcohol, tobacco use, fruit/vegetable intake, physi...\"",
+                    "page=57, line=1067, s=9.0, r=0.9, x=147.0, y=481.0: \"inactivity, diabetes) for 186 countries. The InfoBase was initiated in 2002 to improve the\"",
+                    "page=57, line=1068, s=9.0, r=0.9, x=147.0, y=492.0: \"access of health professionals and researchers to country-reported chronic disease risk\"",
+                    "page=57, line=1069, s=9.0, r=0.9, x=147.0, y=503.0: \"factor data. It has the advantage of providing traceable sources and full survey methodol-\""
+                ]
+            }
+        },
+        {
+            "title": "Selection of cases and controls",
+            "level": 4,
+            "page": 58,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under 'Case-control studies' with style s=9.0, r=0.90, italic.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 392.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=58, line=1103, s=9.0, r=0.9, x=55.0, y=392.0: \"Selection of cases and controls\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=58, line=1095, s=8.0, r=0.8, x=244.0, y=265.0: \"Cases\"",
+                    "page=58, line=1097, s=8.0, r=0.8, x=81.0, y=285.0: \"Not exposed\"",
+                    "page=58, line=1098, s=9.0, r=0.9, x=322.0, y=307.0: \"Population\"",
+                    "page=58, line=1099, s=8.0, r=0.8, x=87.0, y=332.0: \"Exposed\""
+                ]
+            }
+        },
+        {
+            "title": "Exposure",
+            "level": 4,
+            "page": 58,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under 'Case-control studies' with style s=9.0, r=0.90, italic.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 634.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 4,
+                "exact_examples": [
+                    "page=58, line=1121, s=9.0, r=0.9, x=55.0, y=634.0: \"Exposure\""
+                ],
+                "embedded_examples": [
+                    "page=58, line=1106, s=10.0, r=1.0, x=55.0, y=429.0: \"ease, not exposure. Controls are people without the disease. A critical and challenging\"",
+                    "page=58, line=1109, s=10.0, r=1.0, x=55.0, y=468.0: \"as to sample the exposure prevalence in the population that generated the cases.\"",
+                    "page=58, line=1110, s=10.0, r=1.0, x=55.0, y=481.0: \"Furthermore, the choice of controls and cases must not be influenced by exposure\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=58, line=1098, s=9.0, r=0.9, x=322.0, y=307.0: \"Population\"",
+                    "page=58, line=1099, s=8.0, r=0.8, x=87.0, y=332.0: \"Exposed\"",
+                    "page=58, line=1100, s=8.0, r=0.8, x=242.0, y=340.0: \"Controls\"",
+                    "page=58, line=1102, s=8.0, r=0.8, x=81.0, y=360.0: \"Not exposed\""
+                ]
+            }
+        },
+        {
+            "title": "Odds ratio",
+            "level": 4,
+            "page": 59,
+            "reasons": [
+                "source context looks like case/example/table/figure/problem/reference material",
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under 'Case-control studies' with style s=9.0, r=0.90, italic.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 354.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 5,
+                "exact_examples": [
+                    "page=59, line=1156, s=9.0, r=0.9, x=140.0, y=354.0: \"Odds ratio\""
+                ],
+                "embedded_examples": [
+                    "page=59, line=1158, s=10.0, r=1.0, x=140.0, y=378.0: \"measured by calculating the odds ratio (OR), which is the ratio of the odds of exposure\"",
+                    "page=59, line=1160, s=10.0, r=1.0, x=240.0, y=404.0: \"trols. For the data in Table 3.2, the odds ratio is given by:\"",
+                    "page=59, line=1172, s=10.0, r=1.0, x=257.0, y=483.0: \"The odds ratio is very similar to the risk ratio, partic-\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 3,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=59, line=1161, s=8.0, r=0.8, x=27.0, y=408.0: \"Table 3.2. Association between meat consumption\"",
+                    "page=59, line=1161, s=8.0, r=0.8, x=27.0, y=408.0: \"Table 3.2. Association between meat consumption\"",
+                    "page=59, line=1161, s=8.0, r=0.8, x=27.0, y=408.0: \"Table 3.2. Association between meat consumption\""
+                ],
+                "small_label_examples": [
+                    "page=59, line=1148, s=9.0, r=0.9, x=34.0, y=260.0: \"pregnancy.10 Accurate timing of the drug intake was\"",
+                    "page=59, line=1150, s=9.0, r=0.9, x=34.0, y=271.0: \"crucial for determining relevant exposure.\"",
+                    "page=59, line=1162, s=8.0, r=0.8, x=27.0, y=419.0: \"and enteritis necroticans in Papua New Guinea11\"",
+                    "page=59, line=1150, s=9.0, r=0.9, x=34.0, y=271.0: \"crucial for determining relevant exposure.\""
+                ]
+            }
+        },
+        {
+            "title": "Cohort studies",
+            "level": 3,
+            "page": 59,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under 'Observational epidemiology' with style s=14.0, r=1.40.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 585.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=59, line=1182, s=14.0, r=1.4, x=140.0, y=585.0: \"Cohort studies\""
+                ],
+                "embedded_examples": [
+                    "page=59, line=1183, s=10.0, r=1.0, x=140.0, y=613.0: \"Cohort studies, also called follow-up or incidence studies, begin with a group of\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=59, line=1175, s=8.0, r=0.8, x=102.0, y=500.0: \"No 16 41 57\"",
+                    "page=59, line=1177, s=8.0, r=0.8, x=102.0, y=512.0: \"Total 66 52 118\"",
+                    "page=59, line=1175, s=8.0, r=0.8, x=102.0, y=500.0: \"No 16 41 57\"",
+                    "page=59, line=1177, s=8.0, r=0.8, x=102.0, y=512.0: \"Total 66 52 118\""
+                ]
+            }
+        }
+    ]
+}
