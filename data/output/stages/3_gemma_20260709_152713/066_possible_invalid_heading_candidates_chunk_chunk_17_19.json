@@ -1,0 +1,47 @@
+{
+    "timestamp": "2026-07-09 15:47:48",
+    "stage_index": 66,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "chunk 17/19",
+    "review_stage": "chunk 17/19",
+    "input_chapters": 57,
+    "candidate_count": 1,
+    "candidates": [
+        {
+            "title": "(1) 국제보건사업의 기획단계 시 준용 원칙",
+            "level": 4,
+            "page": 514,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Sub-point under 1) with style s=10.0, r=1.06.",
+            "font_size": 10.0,
+            "size_ratio": 1.06,
+            "left_indent": 60.0,
+            "vertical_position": 638.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=514, line=772, s=10.0, r=1.06, x=60.0, y=638.0: \"가나에서개최된3차에서는파 (1) 국제보건사업의 기획단계 시 준용 원칙\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=514, line=766, s=8.5, r=0.9, x=60.0, y=589.0: \"된 2차에서는 원조효과성 증\"",
+                    "page=514, line=768, s=8.5, r=0.9, x=60.0, y=602.0: \"대를 목표로 한 파리선언(효\"",
+                    "page=514, line=770, s=8.5, r=0.9, x=60.0, y=615.0: \"과성제고를위한5대원칙과\"",
+                    "page=514, line=771, s=8.5, r=0.9, x=60.0, y=627.0: \"12개 성과지표 채택), 2008년\""
+                ]
+            }
+        }
+    ]
+}

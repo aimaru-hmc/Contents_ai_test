@@ -1,0 +1,47 @@
+{
+    "timestamp": "2026-07-09 15:44:12",
+    "stage_index": 56,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "chunk 14/19",
+    "review_stage": "chunk 14/19",
+    "input_chapters": 49,
+    "candidate_count": 1,
+    "candidates": [
+        {
+            "title": "1) 노인보건의 접근 원칙",
+            "level": 4,
+            "page": 422,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Numbered subsection under 3.2.",
+            "font_size": 8.5,
+            "size_ratio": 0.9,
+            "left_indent": 60.0,
+            "vertical_position": 716.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=422, line=59, s=8.5, r=0.9, x=60.0, y=716.0: \"역사회가 시행하는 다각적인 1) 노인보건의 접근 원칙\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=422, line=52, s=8.5, r=0.9, x=60.0, y=627.0: \"함을 주창함\"",
+                    "page=422, line=54, s=8.5, r=0.9, x=60.0, y=652.0: \"노인보건사업\"",
+                    "page=422, line=55, s=8.5, r=0.9, x=60.0, y=665.0: \"생애주기적 관점에서 볼 때\"",
+                    "page=422, line=57, s=8.5, r=0.9, x=60.0, y=691.0: \"강한 삶을 살아갈 수 있도록\""
+                ]
+            }
+        }
+    ]
+}

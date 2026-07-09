@@ -1,0 +1,41 @@
+{
+    "timestamp": "2026-07-09 15:28:55",
+    "stage_index": 5,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "chunk 1/19",
+    "review_stage": "chunk 1/19",
+    "input_chapters": 74,
+    "candidate_count": 1,
+    "candidates": [
+        {
+            "title": "1.2 질병상태의 개념과 분류",
+            "level": 5,
+            "page": 5,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Subsection under Section 1",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 105.0,
+            "vertical_position": 327.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=5, line=7, s=9.5, r=1.0, x=105.0, y=327.0: \"1.1 건강 개념의 변천/3 1.2 질병상태의 개념과 분류/5\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        }
+    ]
+}

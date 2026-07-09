@@ -1,0 +1,47 @@
+{
+    "timestamp": "2026-07-09 15:32:50",
+    "stage_index": 16,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "chunk 4/19",
+    "review_stage": "chunk 4/19",
+    "input_chapters": 47,
+    "candidate_count": 1,
+    "candidates": [
+        {
+            "title": "(1) 구조 평가",
+            "level": 6,
+            "page": 142,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Detailed point under quality evaluation approach.",
+            "font_size": 8.5,
+            "size_ratio": 0.9,
+            "left_indent": 60.0,
+            "vertical_position": 720.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=142, line=1375, s=8.5, r=0.9, x=60.0, y=733.0: \"구조는 의료서비스가 제공되 (1) 구조 평가\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=142, line=1374, s=8.5, r=0.9, x=60.0, y=720.0: \"구조 평가\"",
+                    "page=142, line=1376, s=8.5, r=0.9, x=60.0, y=745.0: \"는시설이나시술여건,환경과\"",
+                    "page=142, line=1378, s=8.5, r=0.9, x=60.0, y=758.0: \"소요되는자원을의미하며인\"",
+                    "page=142, line=1380, s=8.5, r=0.9, x=60.0, y=771.0: \"적, 물리적, 재정적인 자원에\""
+                ]
+            }
+        }
+    ]
+}

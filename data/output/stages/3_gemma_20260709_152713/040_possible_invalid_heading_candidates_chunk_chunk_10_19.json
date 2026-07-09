@@ -1,0 +1,67 @@
+{
+    "timestamp": "2026-07-09 15:39:38",
+    "stage_index": 40,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "chunk 10/19",
+    "review_stage": "chunk 10/19",
+    "input_chapters": 25,
+    "candidate_count": 2,
+    "candidates": [
+        {
+            "title": "제2장 예방의료수준에 따른 임상예방서비스",
+            "level": 3,
+            "page": 315,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Chapter title identified from page header.",
+            "font_size": 8.0,
+            "size_ratio": 0.94,
+            "left_indent": 402.0,
+            "vertical_position": 53.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=315, line=1, s=8.0, r=0.94, x=402.0, y=53.0: \"제2장 예방의료수준에 따른 임상예방서비스∙ 1191\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "제5편 임상예방의학과 지역사회예방서비스",
+            "level": 2,
+            "page": 316,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Top-level part title identified from header and previous TOC reference.",
+            "font_size": 8.0,
+            "size_ratio": 0.84,
+            "left_indent": 60.0,
+            "vertical_position": 53.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=316, line=57, s=8.0, r=0.84, x=60.0, y=53.0: \"1192∙제5편 임상예방의학과 지역사회예방서비스\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "timestamp": "2026-07-09 15:49:54",
+    "stage_index": 73,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "19",
+    "total_chunks": 19,
+    "start_page": 558,
+    "end_page": 583,
+    "toc": {
+        "title": "예방의학과 공중보건학",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "찾아보기",
+                "page": 558,
+                "level_reason": "Major section title for the index/glossary starting on page 558.",
+                "_source_order": 1,
+                "_layout_y": 53.0,
+                "_layout_x": 65.0,
+                "_layout_font_size": 8.0,
+                "_layout_size_ratio": 0.84,
+                "_layout_bold": 0,
+                "_layout_italic": 0,
+                "_layout_text": "xiv∙찾아보기"
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"예방의학과 공중보건학\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"찾아보기\",\n      \"page\": 558,\n      \"level_reason\": \"Major section title for the index/glossary starting on page 558.\"\n    }\n  ]\n}\n```"
+}

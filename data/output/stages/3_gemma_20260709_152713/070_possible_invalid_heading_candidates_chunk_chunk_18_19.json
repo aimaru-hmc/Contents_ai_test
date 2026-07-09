@@ -1,0 +1,156 @@
+{
+    "timestamp": "2026-07-09 15:49:31",
+    "stage_index": 70,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "chunk 18/19",
+    "review_stage": "chunk 18/19",
+    "input_chapters": 36,
+    "candidate_count": 5,
+    "candidates": [
+        {
+            "title": "제6장 국제보건과 북한의료",
+            "level": 1,
+            "page": 523,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Major chapter title identified by style and numbering.",
+            "font_size": 8.0,
+            "size_ratio": 0.84,
+            "left_indent": 450.0,
+            "vertical_position": 53.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=523, line=50, s=8.0, r=0.84, x=450.0, y=53.0: \"제6장 국제보건과 북한의료∙ 1399\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "① 모성 사망수준 및 사망원인",
+            "level": 6,
+            "page": 534,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific detail under maternal and infant mortality.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 708.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=534, line=484, s=9.5, r=1.0, x=183.0, y=708.0: \"① 모성 사망수준 및 사망원인\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "② 아동 사망수준 및 사망원인",
+            "level": 6,
+            "page": 535,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific detail under maternal and infant mortality.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 459.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=535, line=501, s=9.5, r=1.0, x=75.0, y=459.0: \"② 아동 사망수준 및 사망원인\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 1,
+                "visual_caption_examples": [
+                    "page=535, line=494, s=8.5, r=0.9, x=79.0, y=314.0: \"그림 6-5-9 북한의 모성사망비 추이\""
+                ],
+                "small_label_examples": [
+                    "page=535, line=495, s=8.0, r=0.84, x=79.0, y=332.0: \"출처: 1) CBS, Population census 1993, 2008\""
+                ]
+            }
+        },
+        {
+            "title": "① 주산기 의료의 지역화(Regionalization of perinatal care system)",
+            "level": 6,
+            "page": 536,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific strategy under maternal and child health cooperation.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 483.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=536, line=549, s=9.5, r=1.0, x=183.0, y=483.0: \"① 주산기 의료의 지역화(Regionalization of perinatal care system)\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "② 일차보건의료(Primary health care) 중심의 ‘모자 천일사업’ 도입 전개",
+            "level": 6,
+            "page": 536,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific strategy under maternal and child health cooperation.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 650.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=536, line=559, s=9.5, r=1.0, x=183.0, y=650.0: \"② 일차보건의료(Primary health care) 중심의 ‘모자 천일사업’ 도입 전개\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        }
+    ]
+}

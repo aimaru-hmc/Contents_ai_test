@@ -1,0 +1,44 @@
+{
+    "timestamp": "2026-07-09 15:31:56",
+    "stage_index": 12,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "chunk 3/19",
+    "review_stage": "chunk 3/19",
+    "input_chapters": 40,
+    "candidate_count": 1,
+    "candidates": [
+        {
+            "title": "제3장 보건의료자원과 조직의 관리",
+            "level": 3,
+            "page": 73,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Chapter title identified from page header and content hierarchy.",
+            "font_size": 8.0,
+            "size_ratio": 0.94,
+            "left_indent": 431.0,
+            "vertical_position": 53.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=73, line=47, s=8.0, r=0.94, x=431.0, y=53.0: \"제3장 보건의료자원과 조직의 관리∙ 949\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 0,
+                "visual_caption_examples": [
+                    "page=73, line=48, s=8.5, r=1.0, x=65.0, y=86.0: \"표 3-2-4 보건의료인력의 종류와 업무\""
+                ]
+            }
+        }
+    ]
+}
