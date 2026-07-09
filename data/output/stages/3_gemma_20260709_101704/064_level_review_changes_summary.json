@@ -1,0 +1,951 @@
+{
+    "timestamp": "2026-07-09 10:55:16",
+    "stage_index": 64,
+    "stage": "level_review_changes_summary",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "review_count": 9,
+    "level_change_count": 19,
+    "added_count": 7,
+    "removed_count": 8,
+    "reviews": [
+        {
+            "review_stage": "chunk 2/19",
+            "input_chapters": 77,
+            "output_chapters": 76,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "(3) 병원의 유형",
+                        "page": 75,
+                        "level_reason": "Numbered as (3) and nested under subsection 2).",
+                        "_layout_page": 75,
+                        "_layout_x": 75.0,
+                        "_layout_y": 426.0,
+                        "_layout_font_size": 8.5,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "(3) 병원의 유형",
+                        "_source_order": 24
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 3/19",
+            "input_chapters": 76,
+            "output_chapters": 75,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "제3장 보건의료자원과 조직의 관리",
+                        "page": 97,
+                        "level_reason": "Chapter title based on running header and previous level reference style.",
+                        "_layout_page": 97,
+                        "_layout_x": 431.0,
+                        "_layout_y": 53.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.84,
+                        "_layout_text": "제3장 보건의료자원과 조직의 관리",
+                        "_source_order": 0
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 6/19",
+            "input_chapters": 69,
+            "output_chapters": 70,
+            "level_change_count": 11,
+            "added_count": 1,
+            "removed_count": 0,
+            "level_changes": [
+                {
+                    "chapter": "3) 일차보건의료의 접근방법",
+                    "page": 209,
+                    "before_level": 4,
+                    "after_level": 3,
+                    "before_level_reason": "Numbered subsection using ')' marker, smaller font than major sections.",
+                    "after_level_reason": "Numbered subsection using ')' marker, smaller font than major sections.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "3) 일차보건의료의 접근방법",
+                        "page": 209,
+                        "level_reason": "Numbered subsection using ')' marker, smaller font than major sections.",
+                        "_layout_page": 209,
+                        "_layout_x": 65.0,
+                        "_layout_y": 313.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 일차보건의료의 접근방법",
+                        "_source_order": 1
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "3) 일차보건의료의 접근방법",
+                        "page": 209,
+                        "level_reason": "Numbered subsection using ')' marker, smaller font than major sections.",
+                        "_layout_page": 209,
+                        "_layout_x": 65.0,
+                        "_layout_y": 313.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 일차보건의료의 접근방법",
+                        "_source_order": 1
+                    }
+                },
+                {
+                    "chapter": "(1) 예방에 중점을 둔다",
+                    "page": 209,
+                    "before_level": 5,
+                    "after_level": 4,
+                    "before_level_reason": "Numbered list item using '()' marker, indented under level 4.",
+                    "after_level_reason": "Numbered list item using '()' marker, indented under level 3.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(1) 예방에 중점을 둔다",
+                        "page": 209,
+                        "level_reason": "Numbered list item using '()' marker, indented under level 4.",
+                        "_layout_page": 209,
+                        "_layout_x": 75.0,
+                        "_layout_y": 395.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 예방에 중점을 둔다",
+                        "_source_order": 2
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(1) 예방에 중점을 둔다",
+                        "page": 209,
+                        "level_reason": "Numbered list item using '()' marker, indented under level 3.",
+                        "_layout_page": 209,
+                        "_layout_x": 75.0,
+                        "_layout_y": 395.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 예방에 중점을 둔다",
+                        "_source_order": 2
+                    }
+                },
+                {
+                    "chapter": "(2) 적절한 기술과 인력을 사용한다",
+                    "page": 209,
+                    "before_level": 5,
+                    "after_level": 4,
+                    "before_level_reason": "Numbered list item using '()' marker, indented under level 4.",
+                    "after_level_reason": "Numbered list item using '()' marker, indented under level 3.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(2) 적절한 기술과 인력을 사용한다",
+                        "page": 209,
+                        "level_reason": "Numbered list item using '()' marker, indented under level 4.",
+                        "_layout_page": 209,
+                        "_layout_x": 75.0,
+                        "_layout_y": 474.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 적절한 기술과 인력을 사용한다",
+                        "_source_order": 3
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(2) 적절한 기술과 인력을 사용한다",
+                        "page": 209,
+                        "level_reason": "Numbered list item using '()' marker, indented under level 3.",
+                        "_layout_page": 209,
+                        "_layout_x": 75.0,
+                        "_layout_y": 474.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 적절한 기술과 인력을 사용한다",
+                        "_source_order": 3
+                    }
+                },
+                {
+                    "chapter": "(3) 원인 추구적 접근방법을 사용한다",
+                    "page": 209,
+                    "before_level": 5,
+                    "after_level": 4,
+                    "before_level_reason": "Numbered list item using '()' marker, indented under level 4.",
+                    "after_level_reason": "Numbered list item using '()' marker, indented under level 3.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(3) 원인 추구적 접근방법을 사용한다",
+                        "page": 209,
+                        "level_reason": "Numbered list item using '()' marker, indented under level 4.",
+                        "_layout_page": 209,
+                        "_layout_x": 75.0,
+                        "_layout_y": 568.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 원인 추구적 접근방법을 사용한다",
+                        "_source_order": 4
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(3) 원인 추구적 접근방법을 사용한다",
+                        "page": 209,
+                        "level_reason": "Numbered list item using '()' marker, indented under level 3.",
+                        "_layout_page": 209,
+                        "_layout_x": 75.0,
+                        "_layout_y": 568.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 원인 추구적 접근방법을 사용한다",
+                        "_source_order": 4
+                    }
+                },
+                {
+                    "chapter": "(4) 지역사회 참여를 유도한다",
+                    "page": 209,
+                    "before_level": 5,
+                    "after_level": 4,
+                    "before_level_reason": "Numbered list item using '()' marker, indented under level 4.",
+                    "after_level_reason": "Numbered list item using '()' marker, indented under level 3.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(4) 지역사회 참여를 유도한다",
+                        "page": 209,
+                        "level_reason": "Numbered list item using '()' marker, indented under level 4.",
+                        "_layout_page": 209,
+                        "_layout_x": 75.0,
+                        "_layout_y": 631.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(4) 지역사회 참여를 유도한다",
+                        "_source_order": 5
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(4) 지역사회 참여를 유도한다",
+                        "page": 209,
+                        "level_reason": "Numbered list item using '()' marker, indented under level 3.",
+                        "_layout_page": 209,
+                        "_layout_x": 75.0,
+                        "_layout_y": 631.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(4) 지역사회 참여를 유도한다",
+                        "_source_order": 5
+                    }
+                },
+                {
+                    "chapter": "(5) 부문 간의 협조와 조정이 필요하다",
+                    "page": 209,
+                    "before_level": 5,
+                    "after_level": 4,
+                    "before_level_reason": "Numbered list item using '()' marker, indented under level 4.",
+                    "after_level_reason": "Numbered list item using '()' marker, indented under level 3.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(5) 부문 간의 협조와 조정이 필요하다",
+                        "page": 209,
+                        "level_reason": "Numbered list item using '()' marker, indented under level 4.",
+                        "_layout_page": 209,
+                        "_layout_x": 75.0,
+                        "_layout_y": 710.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(5) 부문 간의 협조와 조정이 필요하다",
+                        "_source_order": 6
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(5) 부문 간의 협조와 조정이 필요하다",
+                        "page": 209,
+                        "level_reason": "Numbered list item using '()' marker, indented under level 3.",
+                        "_layout_page": 209,
+                        "_layout_x": 75.0,
+                        "_layout_y": 710.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(5) 부문 간의 협조와 조정이 필요하다",
+                        "_source_order": 6
+                    }
+                },
+                {
+                    "chapter": "(6) 자조⋅자립정신을 바탕으로 한다",
+                    "page": 210,
+                    "before_level": 5,
+                    "after_level": 4,
+                    "before_level_reason": "Numbered list item using '()' marker, indented under level 4.",
+                    "after_level_reason": "Numbered list item using '()' marker, indented under level 3.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(6) 자조⋅자립정신을 바탕으로 한다",
+                        "page": 210,
+                        "level_reason": "Numbered list item using '()' marker, indented under level 4.",
+                        "_layout_page": 210,
+                        "_layout_x": 183.0,
+                        "_layout_y": 85.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(6) 자조⋅자립정신을 바탕으로 한다",
+                        "_source_order": 7
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(6) 자조⋅자립정신을 바탕으로 한다",
+                        "page": 210,
+                        "level_reason": "Numbered list item using '()' marker, indented under level 3.",
+                        "_layout_page": 210,
+                        "_layout_x": 183.0,
+                        "_layout_y": 85.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(6) 자조⋅자립정신을 바탕으로 한다",
+                        "_source_order": 7
+                    }
+                },
+                {
+                    "chapter": "(7) 지역 특성에 맞는 보건사업을 추진한다",
+                    "page": 210,
+                    "before_level": 5,
+                    "after_level": 4,
+                    "before_level_reason": "Numbered list item using '()' marker, indented under level 4.",
+                    "after_level_reason": "Numbered list item using '()' marker, indented under level 3.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(7) 지역 특성에 맞는 보건사업을 추진한다",
+                        "page": 210,
+                        "level_reason": "Numbered list item using '()' marker, indented under level 4.",
+                        "_layout_page": 210,
+                        "_layout_x": 183.0,
+                        "_layout_y": 180.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(7) 지역 특성에 맞는 보건사업을 추진한다",
+                        "_source_order": 8
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(7) 지역 특성에 맞는 보건사업을 추진한다",
+                        "page": 210,
+                        "level_reason": "Numbered list item using '()' marker, indented under level 3.",
+                        "_layout_page": 210,
+                        "_layout_x": 183.0,
+                        "_layout_y": 180.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(7) 지역 특성에 맞는 보건사업을 추진한다",
+                        "_source_order": 8
+                    }
+                },
+                {
+                    "chapter": "4) 지역사회 참여의 범위와 기대 효과",
+                    "page": 210,
+                    "before_level": 4,
+                    "after_level": 3,
+                    "before_level_reason": "Numbered subsection using ')' marker, consistent with previous level 4.",
+                    "after_level_reason": "Numbered subsection using ')' marker, consistent with previous level 3.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "4) 지역사회 참여의 범위와 기대 효과",
+                        "page": 210,
+                        "level_reason": "Numbered subsection using ')' marker, consistent with previous level 4.",
+                        "_layout_page": 210,
+                        "_layout_x": 173.0,
+                        "_layout_y": 243.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 지역사회 참여의 범위와 기대 효과",
+                        "_source_order": 9
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "4) 지역사회 참여의 범위와 기대 효과",
+                        "page": 210,
+                        "level_reason": "Numbered subsection using ')' marker, consistent with previous level 3.",
+                        "_layout_page": 210,
+                        "_layout_x": 173.0,
+                        "_layout_y": 243.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 지역사회 참여의 범위와 기대 효과",
+                        "_source_order": 9
+                    }
+                },
+                {
+                    "chapter": "5) 한국의 일차보건의료사업",
+                    "page": 210,
+                    "before_level": 4,
+                    "after_level": 3,
+                    "before_level_reason": "Numbered subsection using ')' marker, consistent with previous level 4.",
+                    "after_level_reason": "Numbered subsection using ')' marker, consistent with previous level 3.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "5) 한국의 일차보건의료사업",
+                        "page": 210,
+                        "level_reason": "Numbered subsection using ')' marker, consistent with previous level 4.",
+                        "_layout_page": 210,
+                        "_layout_x": 173.0,
+                        "_layout_y": 386.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "5) 한국의 일차보건의료사업",
+                        "_source_order": 10
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "5) 한국의 일차보건의료사업",
+                        "page": 210,
+                        "level_reason": "Numbered subsection using ')' marker, consistent with previous level 3.",
+                        "_layout_page": 210,
+                        "_layout_x": 173.0,
+                        "_layout_y": 386.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "5) 한국의 일차보건의료사업",
+                        "_source_order": 10
+                    }
+                },
+                {
+                    "chapter": "6) 일차보건의료에 기초한 지역보건의료체계",
+                    "page": 210,
+                    "before_level": 4,
+                    "after_level": 3,
+                    "before_level_reason": "Numbered subsection using ')' marker, consistent with previous level 4.",
+                    "after_level_reason": "Numbered subsection using ')' marker, consistent with previous level 3.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "6) 일차보건의료에 기초한 지역보건의료체계",
+                        "page": 210,
+                        "level_reason": "Numbered subsection using ')' marker, consistent with previous level 4.",
+                        "_layout_page": 210,
+                        "_layout_x": 173.0,
+                        "_layout_y": 574.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "6) 일차보건의료에 기초한 지역보건의료체계",
+                        "_source_order": 11
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "6) 일차보건의료에 기초한 지역보건의료체계",
+                        "page": 210,
+                        "level_reason": "Numbered subsection using ')' marker, consistent with previous level 3.",
+                        "_layout_page": 210,
+                        "_layout_x": 173.0,
+                        "_layout_y": 574.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "6) 일차보건의료에 기초한 지역보건의료체계",
+                        "_source_order": 11
+                    }
+                }
+            ],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 2,
+                        "chapter": "1. 지역사회보건의 개념",
+                        "page": 209,
+                        "level_reason": "Inferred level 2 based on the numbering sequence and the presence of subsections like '3) 일차보건의료의 접근방법'."
+                    }
+                }
+            ],
+            "removed_entries": []
+        },
+        {
+            "review_stage": "chunk 7/19",
+            "input_chapters": 54,
+            "output_chapters": 54,
+            "level_change_count": 8,
+            "added_count": 0,
+            "removed_count": 0,
+            "level_changes": [
+                {
+                    "chapter": "1.2 건강증진의 접근방법",
+                    "page": 248,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Section title with '1.2' numbering and larger font size.",
+                    "after_level_reason": "Subsection under level 2, indicated by '1.2' numbering.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "1.2 건강증진의 접근방법",
+                        "page": 248,
+                        "level_reason": "Section title with '1.2' numbering and larger font size.",
+                        "_layout_page": 248,
+                        "_layout_x": 182.0,
+                        "_layout_y": 93.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.2 건강증진의 접근방법",
+                        "_source_order": 7
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "1.2 건강증진의 접근방법",
+                        "page": 248,
+                        "level_reason": "Subsection under level 2, indicated by '1.2' numbering.",
+                        "_layout_page": 248,
+                        "_layout_x": 182.0,
+                        "_layout_y": 93.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.2 건강증진의 접근방법",
+                        "_source_order": 7
+                    }
+                },
+                {
+                    "chapter": "1) 건강증진사업의 기본 특성과 바람직한 접근",
+                    "page": 248,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under level 2, indicated by '1)' numbering.",
+                    "after_level_reason": "Lower level subsection under level 3, indicated by '1)' numbering.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "1) 건강증진사업의 기본 특성과 바람직한 접근",
+                        "page": 248,
+                        "level_reason": "Subsection under level 2, indicated by '1)' numbering.",
+                        "_layout_page": 248,
+                        "_layout_x": 173.0,
+                        "_layout_y": 134.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 건강증진사업의 기본 특성과 바람직한 접근",
+                        "_source_order": 8
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "1) 건강증진사업의 기본 특성과 바람직한 접근",
+                        "page": 248,
+                        "level_reason": "Lower level subsection under level 3, indicated by '1)' numbering.",
+                        "_layout_page": 248,
+                        "_layout_x": 173.0,
+                        "_layout_y": 134.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 건강증진사업의 기본 특성과 바람직한 접근",
+                        "_source_order": 8
+                    }
+                },
+                {
+                    "chapter": "2) 건강증진사업의 전개 수준별 개입방법",
+                    "page": 249,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under level 2, indicated by '2)' numbering.",
+                    "after_level_reason": "Lower level subsection under level 3, indicated by '2)' numbering.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "2) 건강증진사업의 전개 수준별 개입방법",
+                        "page": 249,
+                        "level_reason": "Subsection under level 2, indicated by '2)' numbering.",
+                        "_layout_page": 249,
+                        "_layout_x": 65.0,
+                        "_layout_y": 477.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 건강증진사업의 전개 수준별 개입방법",
+                        "_source_order": 9
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 건강증진사업의 전개 수준별 개입방법",
+                        "page": 249,
+                        "level_reason": "Lower level subsection under level 3, indicated by '2)' numbering.",
+                        "_layout_page": 249,
+                        "_layout_x": 65.0,
+                        "_layout_y": 477.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 건강증진사업의 전개 수준별 개입방법",
+                        "_source_order": 9
+                    }
+                },
+                {
+                    "chapter": "(1) 지역사회 전체 차원의 개입(community-wide intervention)",
+                    "page": 249,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Lower level subsection under level 3, indicated by '(1)' numbering.",
+                    "after_level_reason": "Lower level subsection under level 4, indicated by '(1)' numbering.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "(1) 지역사회 전체 차원의 개입(community-wide intervention)",
+                        "page": 249,
+                        "level_reason": "Lower level subsection under level 3, indicated by '(1)' numbering.",
+                        "_layout_page": 249,
+                        "_layout_x": 75.0,
+                        "_layout_y": 559.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 지역사회 전체 차원의 개입(community-wide intervention)",
+                        "_source_order": 10
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(1) 지역사회 전체 차원의 개입(community-wide intervention)",
+                        "page": 249,
+                        "level_reason": "Lower level subsection under level 4, indicated by '(1)' numbering.",
+                        "_layout_page": 249,
+                        "_layout_x": 75.0,
+                        "_layout_y": 559.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 지역사회 전체 차원의 개입(community-wide intervention)",
+                        "_source_order": 10
+                    }
+                },
+                {
+                    "chapter": "(2) 지역사회 내 다양한 생활터 중심의 개입(settings-based intervention)",
+                    "page": 249,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Lower level subsection under level 3, indicated by '(2)' numbering.",
+                    "after_level_reason": "Lower level subsection under level 4, indicated by '(2)' numbering.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "(2) 지역사회 내 다양한 생활터 중심의 개입(settings-based intervention)",
+                        "page": 249,
+                        "level_reason": "Lower level subsection under level 3, indicated by '(2)' numbering.",
+                        "_layout_page": 249,
+                        "_layout_x": 75.0,
+                        "_layout_y": 668.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 지역사회 내 다양한 생활터 중심의 개입(settings-based intervention)",
+                        "_source_order": 11
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(2) 지역사회 내 다양한 생활터 중심의 개입(settings-based intervention)",
+                        "page": 249,
+                        "level_reason": "Lower level subsection under level 4, indicated by '(2)' numbering.",
+                        "_layout_page": 249,
+                        "_layout_x": 75.0,
+                        "_layout_y": 668.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 지역사회 내 다양한 생활터 중심의 개입(settings-based intervention)",
+                        "_source_order": 11
+                    }
+                },
+                {
+                    "chapter": "1.3 건강증진사업 모형",
+                    "page": 250,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Section title with '1.3' numbering and larger font size.",
+                    "after_level_reason": "Subsection under level 2, indicated by '1.3' numbering.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "1.3 건강증진사업 모형",
+                        "page": 250,
+                        "level_reason": "Section title with '1.3' numbering and larger font size.",
+                        "_layout_page": 250,
+                        "_layout_x": 182.0,
+                        "_layout_y": 380.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.46,
+                        "_layout_text": "1.3 건강증진사업 모형",
+                        "_source_order": 12
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "1.3 건강증진사업 모형",
+                        "page": 250,
+                        "level_reason": "Subsection under level 2, indicated by '1.3' numbering.",
+                        "_layout_page": 250,
+                        "_layout_x": 182.0,
+                        "_layout_y": 380.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.46,
+                        "_layout_text": "1.3 건강증진사업 모형",
+                        "_source_order": 12
+                    }
+                },
+                {
+                    "chapter": "1) PRECEDE-PROCEED 모형",
+                    "page": 250,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under level 2, indicated by '1)' numbering.",
+                    "after_level_reason": "Lower level subsection under level 3, indicated by '1)' numbering.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "1) PRECEDE-PROCEED 모형",
+                        "page": 250,
+                        "level_reason": "Subsection under level 2, indicated by '1)' numbering.",
+                        "_layout_page": 250,
+                        "_layout_x": 173.0,
+                        "_layout_y": 488.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.41,
+                        "_layout_text": "1) PRECEDE-PROCEED 모형",
+                        "_source_order": 13
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "1) PRECEDE-PROCEED 모형",
+                        "page": 250,
+                        "level_reason": "Lower level subsection under level 3, indicated by '1)' numbering.",
+                        "_layout_page": 250,
+                        "_layout_x": 173.0,
+                        "_layout_y": 488.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.41,
+                        "_layout_text": "1) PRECEDE-PROCEED 모형",
+                        "_source_order": 13
+                    }
+                },
+                {
+                    "chapter": "2) 생태학적 모형",
+                    "page": 252,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under level 2, indicated by '2)' numbering.",
+                    "after_level_reason": "Lower level subsection under level 3, indicated by '2)' numbering.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "2) 생태학적 모형",
+                        "page": 252,
+                        "level_reason": "Subsection under level 2, indicated by '2)' numbering.",
+                        "_layout_page": 252,
+                        "_layout_x": 173.0,
+                        "_layout_y": 86.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 생태학적 모형",
+                        "_source_order": 14
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 생태학적 모형",
+                        "page": 252,
+                        "level_reason": "Lower level subsection under level 3, indicated by '2)' numbering.",
+                        "_layout_page": 252,
+                        "_layout_x": 173.0,
+                        "_layout_y": 86.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 생태학적 모형",
+                        "_source_order": 14
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": []
+        },
+        {
+            "review_stage": "chunk 9/19",
+            "input_chapters": 43,
+            "output_chapters": 43,
+            "level_change_count": 0,
+            "added_count": 1,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 1,
+                        "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "page": 285,
+                        "level_reason": "Highest level chapter title based on document structure and previous reference style (s=31.0, r=3.27)."
+                    }
+                }
+            ],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "page": 305,
+                        "level_reason": "Chapter title found in running header and consistent with level 1 style from previous reference.",
+                        "_layout_page": 305,
+                        "_layout_x": 402.0,
+                        "_layout_y": 53.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.84,
+                        "_layout_text": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "_source_order": 0
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 10/19",
+            "input_chapters": 32,
+            "output_chapters": 32,
+            "level_change_count": 0,
+            "added_count": 1,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 1,
+                        "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "page": 283,
+                        "level_reason": "Highest level chapter title based on visual style (s=31.0) and numbering."
+                    }
+                }
+            ],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "page": 327,
+                        "level_reason": "Chapter title identified by repeated running header and structural hierarchy.",
+                        "_layout_page": 327,
+                        "_layout_x": 400.0,
+                        "_layout_y": 54.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.84,
+                        "_layout_text": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "_source_order": 0
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 11/19",
+            "input_chapters": 63,
+            "output_chapters": 63,
+            "level_change_count": 0,
+            "added_count": 2,
+            "removed_count": 2,
+            "level_changes": [],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 1,
+                        "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "page": 283,
+                        "level_reason": "Highest level chapter title based on visual hierarchy and numbering (though page 347 is a running header, the chapter starts earlier in the document)."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "4.7 비뇨기과 질환을 위한 선별검사",
+                        "page": 350,
+                        "level_reason": "Numbered section following the 4.x pattern, smaller font than chapter titles."
+                    }
+                }
+            ],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "page": 347,
+                        "level_reason": "Running header indicates this is the current major chapter.",
+                        "_layout_page": 347,
+                        "_layout_x": 400.0,
+                        "_layout_y": 53.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.84,
+                        "_layout_text": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "4.7 비뇨기과 질환을 위한 선별검사",
+                        "page": 348,
+                        "level_reason": "Numbered section following the 4.x pattern, smaller font than chapter titles.",
+                        "_layout_page": 348,
+                        "_layout_x": 181.0,
+                        "_layout_y": 670.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "4.7 비뇨기과 질환을 위한 선별검사",
+                        "_source_order": 1
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 14/19",
+            "input_chapters": 58,
+            "output_chapters": 58,
+            "level_change_count": 0,
+            "added_count": 1,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 1,
+                        "chapter": "제4장 지역사회 보건사업과 예방서비스",
+                        "page": 413,
+                        "level_reason": "Major chapter title based on document structure and running headers."
+                    }
+                }
+            ],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "제4장 지역사회 보건사업과 예방서비스",
+                        "page": 437,
+                        "level_reason": "Running header indicates this is the current major chapter.",
+                        "_layout_page": 437,
+                        "_layout_x": 414.0,
+                        "_layout_y": 53.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.84,
+                        "_layout_text": "제4장 지역사회 보건사업과 예방서비스",
+                        "_source_order": 0
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 15/19",
+            "input_chapters": 37,
+            "output_chapters": 37,
+            "level_change_count": 0,
+            "added_count": 1,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "1) 문화의 개념: 마스크의 문화 문화",
+                        "page": 489,
+                        "level_reason": "Numbered list '1)' and font size s=12.0."
+                    }
+                }
+            ],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "1) 문화의 개념: 마스크의 문화",
+                        "page": 489,
+                        "level_reason": "Numbered list '1)' and font size s=12.0.",
+                        "_layout_page": 489,
+                        "_layout_x": 65.0,
+                        "_layout_y": 256.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 문화의 개념: 마스크의 문화",
+                        "_source_order": 33
+                    }
+                }
+            ]
+        }
+    ]
+}
