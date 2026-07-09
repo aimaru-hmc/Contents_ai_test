@@ -1,0 +1,814 @@
+{
+    "timestamp": "2026-07-09 12:50:23",
+    "stage_index": 23,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "7",
+    "total_chunks": 18,
+    "start_page": 255,
+    "end_page": 287,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 7/18",
+        "input_chapters": 50,
+        "output_chapters": 50,
+        "level_changes": 1,
+        "added_entries": 0,
+        "removed_entries": 0,
+        "level_change_report_recorded": true,
+        "possible_invalid_heading_candidate_count": 4,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "4. 보건교육",
+                "level": 2,
+                "page": 265,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Major numbered section title.",
+                "font_size": 18.0,
+                "size_ratio": 1.9,
+                "left_indent": 77.0,
+                "vertical_position": 274.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=265, line=389, s=18.0, r=1.9, x=77.0, y=274.0: \"4. 보건교육\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=265, line=394, s=8.5, r=0.9, x=482.0, y=461.0: \"건강행태를실천할수있도록\"",
+                        "page=265, line=396, s=8.5, r=0.9, x=482.0, y=474.0: \"필요한지식과기술을제공하\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "제9장건강증진과보건교육",
+                    "display_text": "제9장 건강증진과 보건교육",
+                    "font_size": 8.0,
+                    "size_ratio": 0.84,
+                    "median_left_indent": 448.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 14,
+                    "page_count": 14,
+                    "page_range": "243-269",
+                    "samples": [
+                        "제9장 건강증진과 보건교육 ∙ 1119",
+                        "제9장 건강증진과 보건교육 ∙ 1121",
+                        "제9장 건강증진과 보건교육 ∙ 1123"
+                    ]
+                }
+            },
+            {
+                "title": "임상예방의학과 임상예방서비스",
+                "level": 1,
+                "page": 273,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Top-level chapter title.",
+                "font_size": 31.0,
+                "size_ratio": 3.27,
+                "left_indent": 108.0,
+                "vertical_position": 128.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=273, line=595, s=31.0, r=3.27, x=108.0, y=128.0: \"임상예방의학과 임상예방서비스\""
+                    ],
+                    "embedded_examples": [
+                        "page=273, line=599, s=18.0, r=1.9, x=77.0, y=378.0: \"1. 임상예방의학과 임상예방서비스\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=273, line=607, s=8.5, r=0.9, x=482.0, y=610.0: \"손상유발요인 최소화를 포함\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "제1장임상예방의학과임상예방서비스",
+                    "display_text": "제1장 임상예방의학과 임상예방서비스",
+                    "font_size": 8.0,
+                    "size_ratio": 0.84,
+                    "median_left_indent": 419.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 4,
+                    "page_count": 4,
+                    "page_range": "275-281",
+                    "samples": [
+                        "제1장 임상예방의학과 임상예방서비스∙ 1151",
+                        "제1장 임상예방의학과 임상예방서비스∙ 1153",
+                        "제1장 임상예방의학과 임상예방서비스∙ 1155"
+                    ]
+                }
+            },
+            {
+                "title": "1. 임상예방의학과 임상예방서비스",
+                "level": 2,
+                "page": 273,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Major numbered section under chapter.",
+                "font_size": 18.0,
+                "size_ratio": 1.9,
+                "left_indent": 77.0,
+                "vertical_position": 378.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=273, line=599, s=18.0, r=1.9, x=77.0, y=378.0: \"1. 임상예방의학과 임상예방서비스\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=273, line=607, s=8.5, r=0.9, x=482.0, y=610.0: \"손상유발요인 최소화를 포함\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "제1장임상예방의학과임상예방서비스",
+                    "display_text": "제1장 임상예방의학과 임상예방서비스",
+                    "font_size": 8.0,
+                    "size_ratio": 0.84,
+                    "median_left_indent": 419.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 4,
+                    "page_count": 4,
+                    "page_range": "275-281",
+                    "samples": [
+                        "제1장 임상예방의학과 임상예방서비스∙ 1151",
+                        "제1장 임상예방의학과 임상예방서비스∙ 1153",
+                        "제1장 임상예방의학과 임상예방서비스∙ 1155"
+                    ]
+                }
+            },
+            {
+                "title": "예방의료수준에 따른 임상예방서비스",
+                "level": 1,
+                "page": 283,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Top-level chapter title.",
+                "font_size": 31.0,
+                "size_ratio": 3.27,
+                "left_indent": 86.0,
+                "vertical_position": 128.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=283, line=1002, s=31.0, r=3.27, x=86.0, y=128.0: \"예방의료수준에 따른 임상예방서비스\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "제2장예방의료수준에따른임상예방서비스",
+                    "display_text": "제2장 예방의료수준에 따른 임상예방서비스",
+                    "font_size": 8.0,
+                    "size_ratio": 0.84,
+                    "median_left_indent": 401.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 40,
+                    "page_count": 40,
+                    "page_range": "285-369",
+                    "samples": [
+                        "제2장 예방의료수준에 따른 임상예방서비스∙ 1161",
+                        "제2장 예방의료수준에 따른 임상예방서비스∙ 1163",
+                        "제2장 예방의료수준에 따른 임상예방서비스∙ 1165"
+                    ]
+                }
+            }
+        ]
+    },
+    "toc": {
+        "title": "3.pdf",
+        "chapters": [
+            {
+                "level": 5,
+                "chapter": "(3) 건강도시의 요건 및 주요 특징",
+                "page": 255,
+                "level_reason": "Numbered list item under a higher level section.",
+                "_layout_x": 75.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(3) 건강도시의 요건 및 주요 특징",
+                "_source_order": 1
+            },
+            {
+                "level": 4,
+                "chapter": "2) 국내외 건강도시",
+                "page": 255,
+                "level_reason": "Numbered subsection title.",
+                "_layout_x": 65.0,
+                "_layout_y": 301.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 국내외 건강도시",
+                "_source_order": 14
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 세계보건기구 지역사무처 중심의 건강도시 네트워크",
+                "page": 255,
+                "level_reason": "Numbered list item under subsection 2).",
+                "_layout_x": 75.0,
+                "_layout_y": 335.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 세계보건기구 지역사무처 중심의 건강도시 네트워크",
+                "_source_order": 15
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 국내 건강도시의 발전 과정",
+                "page": 256,
+                "level_reason": "Numbered list item under subsection 2).",
+                "_layout_x": 183.0,
+                "_layout_y": 177.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 국내 건강도시의 발전 과정",
+                "_source_order": 50
+            },
+            {
+                "level": 5,
+                "chapter": "(3) 국내 건강도시의 과제",
+                "page": 257,
+                "level_reason": "Numbered list item under subsection 2).",
+                "_layout_x": 75.0,
+                "_layout_y": 508.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(3) 국내 건강도시의 과제",
+                "_source_order": 115
+            },
+            {
+                "level": 3,
+                "chapter": "2.2 건강중심정책과 건강영향평가",
+                "page": 258,
+                "level_reason": "Decimal numbered section title.",
+                "_layout_x": 181.0,
+                "_layout_y": 93.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.2 건강중심정책과 건강영향평가",
+                "_source_order": 133
+            },
+            {
+                "level": 4,
+                "chapter": "1) 건강중심정책",
+                "page": 258,
+                "level_reason": "Numbered subsection under 2.2.",
+                "_layout_x": 173.0,
+                "_layout_y": 134.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 건강중심정책",
+                "_source_order": 134
+            },
+            {
+                "level": 4,
+                "chapter": "2) 건강영향평가",
+                "page": 258,
+                "level_reason": "Numbered subsection under 2.2.",
+                "_layout_x": 173.0,
+                "_layout_y": 611.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 건강영향평가",
+                "_source_order": 167
+            },
+            {
+                "level": 2,
+                "chapter": "3. 한국의 건강증진사업",
+                "page": 260,
+                "level_reason": "Major numbered section title.",
+                "_layout_x": 185.0,
+                "_layout_y": 289.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "3. 한국의 건강증진사업",
+                "_source_order": 230
+            },
+            {
+                "level": 3,
+                "chapter": "3.1 한국 건강증진사업의 발전과정",
+                "page": 260,
+                "level_reason": "Decimal numbered section under 3.",
+                "_layout_x": 182.0,
+                "_layout_y": 419.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "3.1 한국 건강증진사업의 발전과정",
+                "_source_order": 232
+            },
+            {
+                "level": 3,
+                "chapter": "3.2 한국 건강증진사업의 현황",
+                "page": 261,
+                "level_reason": "Decimal numbered section under 3.",
+                "_layout_x": 73.0,
+                "_layout_y": 381.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "3.2 한국 건강증진사업의 현황",
+                "_source_order": 277
+            },
+            {
+                "level": 4,
+                "chapter": "1) 건강증진사업 예산",
+                "page": 261,
+                "level_reason": "Numbered subsection under 3.2.",
+                "_layout_x": 65.0,
+                "_layout_y": 459.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 건강증진사업 예산",
+                "_source_order": 280
+            },
+            {
+                "level": 4,
+                "chapter": "2) 건강증진사업 조직 및 수준별 역할",
+                "page": 262,
+                "level_reason": "Numbered subsection under 3.2.",
+                "_layout_x": 65.0,
+                "_layout_y": 723.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 건강증진사업 조직 및 수준별 역할",
+                "_source_order": 296
+            },
+            {
+                "level": 4,
+                "chapter": "3) 한국 건강증진사업의 기본방향 및 접근전략",
+                "page": 262,
+                "level_reason": "Numbered subsection under 3.2.",
+                "_layout_x": 173.0,
+                "_layout_y": 192.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 한국 건강증진사업의 기본방향 및 접근전략",
+                "_source_order": 307
+            },
+            {
+                "level": 4,
+                "chapter": "4) 한국의 건강증진사업의 모형",
+                "page": 263,
+                "level_reason": "Numbered subsection under 3.2.",
+                "_layout_x": 65.0,
+                "_layout_y": 238.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "4) 한국의 건강증진사업의 모형",
+                "_source_order": 333
+            },
+            {
+                "level": 3,
+                "chapter": "3.3 한국 건강증진사업의 문제점 및 발전방안",
+                "page": 263,
+                "level_reason": "Decimal numbered section under 3.",
+                "_layout_x": 73.0,
+                "_layout_y": 699.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "3.3 한국 건강증진사업의 문제점 및 발전방안",
+                "_source_order": 340
+            },
+            {
+                "level": 3,
+                "chapter": "3.4 국가 및 지역사회 건강증진사업을 위한 의사의 역할",
+                "page": 264,
+                "level_reason": "Decimal numbered section under 3.",
+                "_layout_x": 181.0,
+                "_layout_y": 381.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "3.4 국가 및 지역사회 건강증진사업을 위한 의사의 역할",
+                "_source_order": 363
+            },
+            {
+                "level": 2,
+                "chapter": "4. 보건교육",
+                "page": 265,
+                "level_reason": "Major numbered section title.",
+                "_layout_x": 77.0,
+                "_layout_y": 274.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "4. 보건교육",
+                "_source_order": 389
+            },
+            {
+                "level": 3,
+                "chapter": "4.1 보건교육의 개념과 정의",
+                "page": 265,
+                "level_reason": "Decimal numbered section under 4.",
+                "_layout_x": 74.0,
+                "_layout_y": 404.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "4.1 보건교육의 개념과 정의",
+                "_source_order": 391
+            },
+            {
+                "level": 3,
+                "chapter": "4.2 보건교육의 중요성과 목표",
+                "page": 265,
+                "level_reason": "Decimal numbered section under 4.",
+                "_layout_x": 73.0,
+                "_layout_y": 655.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "4.2 보건교육의 중요성과 목표",
+                "_source_order": 409
+            },
+            {
+                "level": 3,
+                "chapter": "4.3 보건교육을 위한 이론적 근거",
+                "page": 266,
+                "level_reason": "Decimal numbered section under 4.",
+                "_layout_x": 181.0,
+                "_layout_y": 548.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "4.3 보건교육을 위한 이론적 근거",
+                "_source_order": 436
+            },
+            {
+                "level": 3,
+                "chapter": "4.4 보건교육의 실제",
+                "page": 267,
+                "level_reason": "Decimal numbered section under 4.",
+                "_layout_x": 73.0,
+                "_layout_y": 184.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "4.4 보건교육의 실제",
+                "_source_order": 455
+            },
+            {
+                "level": 4,
+                "chapter": "1) 보건교육의 대상",
+                "page": 267,
+                "level_reason": "Numbered subsection under 4.4.",
+                "_layout_x": 65.0,
+                "_layout_y": 225.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 보건교육의 대상",
+                "_source_order": 456
+            },
+            {
+                "level": 4,
+                "chapter": "2) 보건교육을 위한 사전 준비",
+                "page": 267,
+                "level_reason": "Numbered subsection under 4.4.",
+                "_layout_x": 65.0,
+                "_layout_y": 338.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 보건교육을 위한 사전 준비",
+                "_source_order": 462
+            },
+            {
+                "level": 4,
+                "chapter": "3) 보건교육 운영의 실제",
+                "page": 267,
+                "level_reason": "Numbered subsection under 4.4.",
+                "_layout_x": 65.0,
+                "_layout_y": 647.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 보건교육 운영의 실제",
+                "_source_order": 480
+            },
+            {
+                "level": 4,
+                "chapter": "4) 교육자료 개발",
+                "page": 268,
+                "level_reason": "Numbered subsection under 4.4.",
+                "_layout_x": 173.0,
+                "_layout_y": 573.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "4) 교육자료 개발",
+                "_source_order": 506
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 기존 자료를 이용한 교육자료 개발의 검토사항",
+                "page": 268,
+                "level_reason": "Numbered list item under subsection 4).",
+                "_layout_x": 183.0,
+                "_layout_y": 608.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 기존 자료를 이용한 교육자료 개발의 검토사항",
+                "_source_order": 507
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 교육자료 개발 시 고려사항",
+                "page": 269,
+                "level_reason": "Numbered list item under subsection 4).",
+                "_layout_x": 75.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 교육자료 개발 시 고려사항",
+                "_source_order": 519
+            },
+            {
+                "level": 1,
+                "chapter": "임상예방의학과 임상예방서비스",
+                "page": 273,
+                "level_reason": "Top-level chapter title.",
+                "_layout_x": 108.0,
+                "_layout_y": 128.0,
+                "_layout_font_size": 31.0,
+                "_layout_size_ratio": 3.27,
+                "_layout_text": "임상예방의학과 임상예방서비스",
+                "_source_order": 595
+            },
+            {
+                "level": 2,
+                "chapter": "1. 임상예방의학과 임상예방서비스",
+                "page": 273,
+                "level_reason": "Major numbered section under chapter.",
+                "_layout_x": 77.0,
+                "_layout_y": 378.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "1. 임상예방의학과 임상예방서비스",
+                "_source_order": 599
+            },
+            {
+                "level": 3,
+                "chapter": "1.1 임상예방의학의 정의와 개념",
+                "page": 273,
+                "level_reason": "Decimal numbered section under 1.",
+                "_layout_x": 75.0,
+                "_layout_y": 552.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.1 임상예방의학의 정의와 개념",
+                "_source_order": 604
+            },
+            {
+                "level": 3,
+                "chapter": "1.2 임상예방의학의 근거와 전개",
+                "page": 274,
+                "level_reason": "Decimal numbered section under 1.",
+                "_layout_x": 182.0,
+                "_layout_y": 518.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.2 임상예방의학의 근거와 전개",
+                "_source_order": 651
+            },
+            {
+                "level": 3,
+                "chapter": "1.3 임상예방의학의 발전을 위한 조건과 교육",
+                "page": 276,
+                "level_reason": "Decimal numbered section under 1.",
+                "_layout_x": 182.0,
+                "_layout_y": 184.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.3 임상예방의학의 발전을 위한 조건과 교육",
+                "_source_order": 723
+            },
+            {
+                "level": 2,
+                "chapter": "2. 임상예방서비스의 분류와 술기",
+                "page": 278,
+                "level_reason": "Major numbered section under chapter.",
+                "_layout_x": 185.0,
+                "_layout_y": 105.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "2. 임상예방서비스의 분류와 술기",
+                "_source_order": 800
+            },
+            {
+                "level": 3,
+                "chapter": "2.1 임상예방서비스의 제공과 예방클리닉",
+                "page": 278,
+                "level_reason": "Decimal numbered section under 2.",
+                "_layout_x": 182.0,
+                "_layout_y": 400.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.1 임상예방서비스의 제공과 예방클리닉",
+                "_source_order": 813
+            },
+            {
+                "level": 4,
+                "chapter": "1) 임상예방클리닉",
+                "page": 278,
+                "level_reason": "Numbered subsection under 2.1.",
+                "_layout_x": 173.0,
+                "_layout_y": 441.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 임상예방클리닉",
+                "_source_order": 814
+            },
+            {
+                "level": 4,
+                "chapter": "2) 임상예방서비스를 위한 병력청취와 신체검사",
+                "page": 279,
+                "level_reason": "Numbered subsection under 2.1.",
+                "_layout_x": 65.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 임상예방서비스를 위한 병력청취와 신체검사",
+                "_source_order": 837
+            },
+            {
+                "level": 3,
+                "chapter": "2.2 예방상담과 교육",
+                "page": 279,
+                "level_reason": "Decimal numbered section under 2.",
+                "_layout_x": 73.0,
+                "_layout_y": 509.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.2 예방상담과 교육",
+                "_source_order": 863
+            },
+            {
+                "level": 3,
+                "chapter": "2.4 예방화학요법",
+                "page": 281,
+                "level_reason": "Decimal numbered section under 2.",
+                "_layout_x": 73.0,
+                "_layout_y": 321.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.4 예방화학요법",
+                "_source_order": 939
+            },
+            {
+                "level": 3,
+                "chapter": "2.5 선별검사",
+                "page": 281,
+                "level_reason": "Decimal numbered section under 2.",
+                "_layout_x": 73.0,
+                "_layout_y": 633.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.5 선별검사",
+                "_source_order": 957
+            },
+            {
+                "level": 1,
+                "chapter": "예방의료수준에 따른 임상예방서비스",
+                "page": 283,
+                "level_reason": "Top-level chapter title.",
+                "_layout_x": 86.0,
+                "_layout_y": 128.0,
+                "_layout_font_size": 31.0,
+                "_layout_size_ratio": 3.27,
+                "_layout_text": "예방의료수준에 따른 임상예방서비스",
+                "_source_order": 1002
+            },
+            {
+                "level": 2,
+                "chapter": "1. 일차 예방과 건강증진",
+                "page": 283,
+                "level_reason": "Major numbered section under chapter.",
+                "_layout_x": 77.0,
+                "_layout_y": 439.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "1. 일차 예방과 건강증진",
+                "_source_order": 1010
+            },
+            {
+                "level": 3,
+                "chapter": "1.1 예방상담과 교육",
+                "page": 283,
+                "level_reason": "Decimal numbered section under 1.",
+                "_layout_x": 75.0,
+                "_layout_y": 488.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.1 예방상담과 교육",
+                "_source_order": 1011
+            },
+            {
+                "level": 4,
+                "chapter": "1.2 흡연",
+                "page": 285,
+                "level_reason": "Corrected to level 4 based on style consistency (s=12.0, r=1.27).",
+                "_layout_x": 74.0,
+                "_layout_y": 651.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1.2 흡연",
+                "_source_order": 1104
+            },
+            {
+                "level": 4,
+                "chapter": "1) 흡연과 건강",
+                "page": 286,
+                "level_reason": "Numbered subsection under 1.2.",
+                "_layout_x": 173.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 흡연과 건강",
+                "_source_order": 1111
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 직접흡연으로 인한 영향",
+                "page": 286,
+                "level_reason": "Numbered list item under subsection 1).",
+                "_layout_x": 183.0,
+                "_layout_y": 120.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 직접흡연으로 인한 영향",
+                "_source_order": 1112
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 간접흡연으로 인한 영향",
+                "page": 286,
+                "level_reason": "Numbered list item under subsection 1).",
+                "_layout_x": 183.0,
+                "_layout_y": 381.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 간접흡연으로 인한 영향",
+                "_source_order": 1133
+            },
+            {
+                "level": 5,
+                "chapter": "(3) 국내 연구결과",
+                "page": 286,
+                "level_reason": "Numbered list item under subsection 1).",
+                "_layout_x": 183.0,
+                "_layout_y": 596.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(3) 국내 연구결과",
+                "_source_order": 1152
+            },
+            {
+                "level": 5,
+                "chapter": "(4) 신종담배의 영향",
+                "page": 287,
+                "level_reason": "Numbered list item under subsection 1).",
+                "_layout_x": 75.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(4) 신종담배의 영향",
+                "_source_order": 1165
+            },
+            {
+                "level": 4,
+                "chapter": "2) 개인을 위한 금연전략과 상담",
+                "page": 287,
+                "level_reason": "Numbered subsection under 1.2.",
+                "_layout_x": 65.0,
+                "_layout_y": 407.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 개인을 위한 금연전략과 상담",
+                "_source_order": 1185
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"3.pdf\",\n  \"chapters\": [\n    {\n      \"level\": 5,\n      \"chapter\": \"(3) 건강도시의 요건 및 주요 특징\",\n      \"page\": 255,\n      \"level_reason\": \"Numbered list item under a higher level section.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 국내외 건강도시\",\n      \"page\": 255,\n      \"level_reason\": \"Numbered subsection title.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 세계보건기구 지역사무처 중심의 건강도시 네트워크\",\n      \"page\": 255,\n      \"level_reason\": \"Numbered list item under subsection 2).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 국내 건강도시의 발전 과정\",\n      \"page\": 256,\n      \"level_reason\": \"Numbered list item under subsection 2).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(3) 국내 건강도시의 과제\",\n      \"page\": 257,\n      \"level_reason\": \"Numbered list item under subsection 2).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.2 건강중심정책과 건강영향평가\",\n      \"page\": 258,\n      \"level_reason\": \"Decimal numbered section title.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 건강중심정책\",\n      \"page\": 258,\n      \"level_reason\": \"Numbered subsection under 2.2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 건강영향평가\",\n      \"page\": 258,\n      \"level_reason\": \"Numbered subsection under 2.2.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"3. 한국의 건강증진사업\",\n      \"page\": 260,\n      \"level_reason\": \"Major numbered section title.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3.1 한국 건강증진사업의 발전과정\",\n      \"page\": 260,\n      \"level_reason\": \"Decimal numbered section under 3.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3.2 한국 건강증진사업의 현황\",\n      \"page\": 261,\n      \"level_reason\": \"Decimal numbered section under 3.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 건강증진사업 예산\",\n      \"page\": 261,\n      \"level_reason\": \"Numbered subsection under 3.2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 건강증진사업 조직 및 수준별 역할\",\n      \"page\": 262,\n      \"level_reason\": \"Numbered subsection under 3.2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 한국 건강증진사업의 기본방향 및 접근전략\",\n      \"page\": 262,\n      \"level_reason\": \"Numbered subsection under 3.2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 한국의 건강증진사업의 모형\",\n      \"page\": 263,\n      \"level_reason\": \"Numbered subsection under 3.2.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3.3 한국 건강증진사업의 문제점 및 발전방안\",\n      \"page\": 263,\n      \"level_reason\": \"Decimal numbered section under 3.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3.4 국가 및 지역사회 건강증진사업을 위한 의사의 역할\",\n      \"page\": 264,\n      \"level_reason\": \"Decimal numbered section under 3.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"4. 보건교육\",\n      \"page\": 265,\n      \"level_reason\": \"Major numbered section title.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"4.1 보건교육의 개념과 정의\",\n      \"page\": 265,\n      \"level_reason\": \"Decimal numbered section under 4.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"4.2 보건교육의 중요성과 목표\",\n      \"page\": 265,\n      \"level_reason\": \"Decimal numbered section under 4.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"4.3 보건교육을 위한 이론적 근거\",\n      \"page\": 266,\n      \"level_reason\": \"Decimal numbered section under 4.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"4.4 보건교육의 실제\",\n      \"page\": 267,\n      \"level_reason\": \"Decimal numbered section under 4.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 보건교육의 대상\",\n      \"page\": 267,\n      \"level_reason\": \"Numbered subsection under 4.4.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 보건교육을 위한 사전 준비\",\n      \"page\": 267,\n      \"level_reason\": \"Numbered subsection under 4.4.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 보건교육 운영의 실제\",\n      \"page\": 267,\n      \"level_reason\": \"Numbered subsection under 4.4.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 교육자료 개발\",\n      \"page\": 268,\n      \"level_reason\": \"Numbered subsection under 4.4.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 기존 자료를 이용한 교육자료 개발의 검토사항\",\n      \"page\": 268,\n      \"level_reason\": \"Numbered list item under subsection 4).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 교육자료 개발 시 고려사항\",\n      \"page\": 269,\n      \"level_reason\": \"Numbered list item under subsection 4).\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"임상예방의학과 임상예방서비스\",\n      \"page\": 273,\n      \"level_reason\": \"Top-level chapter title.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1. 임상예방의학과 임상예방서비스\",\n      \"page\": 273,\n      \"level_reason\": \"Major numbered section under chapter.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.1 임상예방의학의 정의와 개념\",\n      \"page\": 273,\n      \"level_reason\": \"Decimal numbered section under 1.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.2 임상예방의학의 근거와 전개\",\n      \"page\": 274,\n      \"level_reason\": \"Decimal numbered section under 1.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.3 임상예방의학의 발전을 위한 조건과 교육\",\n      \"page\": 276,\n      \"level_reason\": \"Decimal numbered section under 1.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2. 임상예방서비스의 분류와 술기\",\n      \"page\": 278,\n      \"level_reason\": \"Major numbered section under chapter.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.1 임상예방서비스의 제공과 예방클리닉\",\n      \"page\": 278,\n      \"level_reason\": \"Decimal numbered section under 2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 임상예방클리닉\",\n      \"page\": 278,\n      \"level_reason\": \"Numbered subsection under 2.1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 임상예방서비스를 위한 병력청취와 신체검사\",\n      \"page\": 279,\n      \"level_reason\": \"Numbered subsection under 2.1.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.2 예방상담과 교육\",\n      \"page\": 279,\n      \"level_reason\": \"Decimal numbered section under 2.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.4 예방화학요법\",\n      \"page\": 281,\n      \"level_reason\": \"Decimal numbered section under 2.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.5 선별검사\",\n      \"page\": 281,\n      \"level_reason\": \"Decimal numbered section under 2.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"예방의료수준에 따른 임상예방서비스\",\n      \"page\": 283,\n      \"level_reason\": \"Top-level chapter title.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1. 일차 예방과 건강증진\",\n      \"page\": 283,\n      \"level_reason\": \"Major numbered section under chapter.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.1 예방상담과 교육\",\n      \"page\": 283,\n      \"level_reason\": \"Decimal numbered section under 1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1.2 흡연\",\n      \"page\": 285,\n      \"level_reason\": \"Corrected to level 4 based on style consistency (s=12.0, r=1.27).\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 흡연과 건강\",\n      \"page\": 286,\n      \"level_reason\": \"Numbered subsection under 1.2.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 직접흡연으로 인한 영향\",\n      \"page\": 286,\n      \"level_reason\": \"Numbered list item under subsection 1).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 간접흡연으로 인한 영향\",\n      \"page\": 286,\n      \"level_reason\": \"Numbered list item under subsection 1).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(3) 국내 연구결과\",\n      \"page\": 286,\n      \"level_reason\": \"Numbered list item under subsection 1).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(4) 신종담배의 영향\",\n      \"page\": 287,\n      \"level_reason\": \"Numbered list item under subsection 1).\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 개인을 위한 금연전략과 상담\",\n      \"page\": 287,\n      \"level_reason\": \"Numbered subsection under 1.2.\"\n    }\n  ]\n}"
+}

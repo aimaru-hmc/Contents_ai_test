@@ -1,0 +1,12 @@
+Run log saved: data/output/logs/주교재_gemma_20260709_121616_log.txt
+Processing started: 주교재.pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 221 pages, 937307 chars, mode=layout, toc_page_mode=exclude, selected_pages=214
+  Parsed PDF text saved: data/output/parsed_pdfs/unknown_model_gemma_20260709_121616_parsed_pdf.txt
+  Gemma text chunk processing started: 8 chunks
+  Gemma chunk 1/8 request: pages 2-34
+  Gemma input chunk 1 saved: data/output/input_chunks/unknown_model_gemma_20260709_121616/chunk_1_pages_2-34.json
+  Gemma level review(chunk 1/8) started
+Run log saved: data/output/logs/주교재_gemma_20260709_121616_log.txt

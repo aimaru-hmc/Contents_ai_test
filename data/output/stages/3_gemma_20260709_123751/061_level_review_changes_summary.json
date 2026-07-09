@@ -1,0 +1,471 @@
+{
+    "timestamp": "2026-07-09 13:01:38",
+    "stage_index": 61,
+    "stage": "level_review_changes_summary",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "review_count": 10,
+    "level_change_count": 4,
+    "added_count": 3,
+    "removed_count": 13,
+    "reviews": [
+        {
+            "review_stage": "chunk 2/18",
+            "input_chapters": 88,
+            "output_chapters": 86,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 2,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "(3) 의료기술에 대한 평가",
+                        "page": 80,
+                        "level_reason": "Sub-item under 3) 의료기술의 확산, style s=10.0.",
+                        "_layout_x": 60.0,
+                        "_layout_y": 740.0,
+                        "_layout_font_size": 9.3,
+                        "_layout_size_ratio": 0.98,
+                        "_layout_text": "새로운 의료기술의 속성, 효 (3) 의료기술에 대한 평가",
+                        "_source_order": 702
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "건강관련행태",
+                        "page": 99,
+                        "level_reason": "Major section title with large font size s=31.0.",
+                        "_layout_x": 222.0,
+                        "_layout_y": 128.0,
+                        "_layout_font_size": 31.0,
+                        "_layout_size_ratio": 3.27,
+                        "_layout_text": "건강관련행태",
+                        "_source_order": 1390
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 7/18",
+            "input_chapters": 50,
+            "output_chapters": 50,
+            "level_change_count": 1,
+            "added_count": 0,
+            "removed_count": 0,
+            "level_changes": [
+                {
+                    "chapter": "1.2 흡연",
+                    "page": 285,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Decimal numbered section under 1.",
+                    "after_level_reason": "Corrected to level 4 based on style consistency (s=12.0, r=1.27).",
+                    "before": {
+                        "level": 3,
+                        "chapter": "1.2 흡연",
+                        "page": 285,
+                        "level_reason": "Decimal numbered section under 1.",
+                        "_layout_x": 74.0,
+                        "_layout_y": 651.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1.2 흡연",
+                        "_source_order": 1104
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "1.2 흡연",
+                        "page": 285,
+                        "level_reason": "Corrected to level 4 based on style consistency (s=12.0, r=1.27).",
+                        "_layout_x": 74.0,
+                        "_layout_y": 651.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1.2 흡연",
+                        "_source_order": 1104
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": []
+        },
+        {
+            "review_stage": "chunk 8/18",
+            "input_chapters": 75,
+            "output_chapters": 73,
+            "level_change_count": 2,
+            "added_count": 0,
+            "removed_count": 2,
+            "level_changes": [
+                {
+                    "chapter": "1.3 음주",
+                    "page": 290,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Major section title with decimal numbering (1.3).",
+                    "after_level_reason": "Corrected to level 4 based on style consistency with other decimal sections in this chunk.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "1.3 음주",
+                        "page": 290,
+                        "level_reason": "Major section title with decimal numbering (1.3).",
+                        "_layout_x": 182.0,
+                        "_layout_y": 523.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1.3 음주",
+                        "_source_order": 105
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "1.3 음주",
+                        "page": 290,
+                        "level_reason": "Corrected to level 4 based on style consistency with other decimal sections in this chunk.",
+                        "_layout_x": 182.0,
+                        "_layout_y": 523.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1.3 음주",
+                        "_source_order": 105
+                    }
+                },
+                {
+                    "chapter": "1.7 비 만",
+                    "page": 304,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Major section title with decimal numbering (1.7).",
+                    "after_level_reason": "Corrected to level 4 based on style consistency with other decimal sections in this chunk.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "1.7 비 만",
+                        "page": 304,
+                        "level_reason": "Major section title with decimal numbering (1.7).",
+                        "_layout_x": 183.0,
+                        "_layout_y": 475.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1.7 비 만",
+                        "_source_order": 679
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "1.7 비 만",
+                        "page": 304,
+                        "level_reason": "Corrected to level 4 based on style consistency with other decimal sections in this chunk.",
+                        "_layout_x": 183.0,
+                        "_layout_y": 475.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1.7 비 만",
+                        "_source_order": 679
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "(2) 음주자 선별 검사",
+                        "page": 292,
+                        "level_reason": "Subsection under 2) 절주상담.",
+                        "_layout_x": 60.0,
+                        "_layout_y": 653.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "음주한 경우 (2) 음주자 선별 검사",
+                        "_source_order": 200
+                    }
+                },
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "(1) 한국인 영양소 섭취기준(2015)",
+                        "page": 296,
+                        "level_reason": "Subsection under 2) 적정 영양 섭취 및 식생활 가이드 라인.",
+                        "_layout_x": 60.0,
+                        "_layout_y": 482.0,
+                        "_layout_font_size": 8.5,
+                        "_layout_size_ratio": 1.0,
+                        "_layout_text": "matedaverage requirement, (1) 한국인 영양소 섭취기준(2015)",
+                        "_source_order": 365
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 11/18",
+            "input_chapters": 79,
+            "output_chapters": 76,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 3,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "(3) 말라리아의 예방요법",
+                        "page": 366,
+                        "level_reason": "Sub-point under level 4, identified by numbering '(3)' and style s=10.0.",
+                        "_layout_x": 60.0,
+                        "_layout_y": 435.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "예방화학요법 (3) 말라리아의 예방요법",
+                        "_source_order": 462
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "직업관련질환에 대한 예방의료서비스",
+                        "page": 371,
+                        "level_reason": "Top-level chapter title identified by style s=31.0.",
+                        "_layout_x": 81.0,
+                        "_layout_y": 128.0,
+                        "_layout_font_size": 31.0,
+                        "_layout_size_ratio": 3.27,
+                        "_layout_text": "직업관련질환에 대한 예방의료서비스",
+                        "_source_order": 604
+                    }
+                },
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "(4) 작업환경관리",
+                        "page": 380,
+                        "level_reason": "Sub-point under level 4, identified by numbering '(4)' and style s=10.0.",
+                        "_layout_x": 60.0,
+                        "_layout_y": 724.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "작업환경관리 목적 (4) 작업환경관리",
+                        "_source_order": 1002
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 12/18",
+            "input_chapters": 78,
+            "output_chapters": 75,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 3,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "(3) 작업능력향상(work conditioning)과 작업단련(work hardening)",
+                        "page": 394,
+                        "level_reason": "Numbered subsection following (2) on the same page.",
+                        "_layout_x": 60.0,
+                        "_layout_y": 495.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "작업능력향상 (3) 작업능력향상(work conditioning)과 작업단련(work hardening)",
+                        "_source_order": 50
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "지역사회 보건사업과 예방서비스",
+                        "page": 411,
+                        "level_reason": "Major section title with large font size.",
+                        "_layout_x": 101.0,
+                        "_layout_y": 128.0,
+                        "_layout_font_size": 31.0,
+                        "_layout_size_ratio": 3.27,
+                        "_layout_text": "지역사회 보건사업과 예방서비스",
+                        "_source_order": 684
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "1) 노인보건의 접근 원칙",
+                        "page": 422,
+                        "level_reason": "Numbered subsection under '3.2 노인보건의 접근 원칙과 사례'.",
+                        "_layout_x": 60.0,
+                        "_layout_y": 716.0,
+                        "_layout_font_size": 8.5,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "역사회가 시행하는 다각적인 1) 노인보건의 접근 원칙",
+                        "_source_order": 1160
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 13/18",
+            "input_chapters": 54,
+            "output_chapters": 54,
+            "level_change_count": 1,
+            "added_count": 0,
+            "removed_count": 0,
+            "level_changes": [
+                {
+                    "chapter": "7.1 디지털헬스의 개념",
+                    "page": 441,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under section 7.",
+                    "after_level_reason": "Corrected to level 4 based on style consistency (s=12.0, r=1.27).",
+                    "before": {
+                        "level": 3,
+                        "chapter": "7.1 디지털헬스의 개념",
+                        "page": 441,
+                        "level_reason": "Subsection under section 7.",
+                        "_layout_x": 74.0,
+                        "_layout_y": 262.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "7.1 디지털헬스의 개념",
+                        "_source_order": 566
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "7.1 디지털헬스의 개념",
+                        "page": 441,
+                        "level_reason": "Corrected to level 4 based on style consistency (s=12.0, r=1.27).",
+                        "_layout_x": 74.0,
+                        "_layout_y": 262.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "7.1 디지털헬스의 개념",
+                        "_source_order": 566
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": []
+        },
+        {
+            "review_stage": "chunk 14/18",
+            "input_chapters": 45,
+            "output_chapters": 45,
+            "level_change_count": 0,
+            "added_count": 1,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "5.5 물리적 요인에 의한 재난의 역학조사 사례",
+                        "page": 464,
+                        "level_reason": "Subsection under level 2 with style s=12.5, r=1.32."
+                    }
+                }
+            ],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "5.5 물리적 요인에 의한 재난의 역학조사 사례; 2000년도 산불에 의한 재난 역학조사",
+                        "page": 464,
+                        "level_reason": "Subsection under level 2 with style s=12.5, r=1.32.",
+                        "_layout_x": 181.0,
+                        "_layout_y": 93.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "5.5 물리적 요인에 의한 재난의 역학조사 사례;",
+                        "_source_order": 210
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 16/18",
+            "input_chapters": 64,
+            "output_chapters": 63,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "(1) 국제보건사업의 기획단계 시 준용 원칙",
+                        "page": 514,
+                        "level_reason": "Subsection under level 4 entry.",
+                        "_layout_x": 60.0,
+                        "_layout_y": 638.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "가나에서개최된3차에서는파 (1) 국제보건사업의 기획단계 시 준용 원칙",
+                        "_source_order": 389
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 17/18",
+            "input_chapters": 1,
+            "output_chapters": 0,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "찾아보기",
+                        "page": 545,
+                        "level_reason": "Top-level section title for the index/glossary, indicated by larger font size and distinct layout.",
+                        "_layout_x": 68.0,
+                        "_layout_y": 89.0,
+                        "_layout_font_size": 22.0,
+                        "_layout_size_ratio": 2.32,
+                        "_layout_text": "찾아보기",
+                        "_source_order": 27
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 18/18",
+            "input_chapters": 0,
+            "output_chapters": 2,
+            "level_change_count": 0,
+            "added_count": 2,
+            "removed_count": 0,
+            "level_changes": [],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 1,
+                        "chapter": "예방의료수준에 따른 임상예방서비스",
+                        "page": 283,
+                        "level_reason": "Top-level section title based on style s=31.0, r=3.27."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 1,
+                        "chapter": "재난과 공중보건위기의 대비와 대응",
+                        "page": 445,
+                        "level_reason": "Top-level section title based on style s=31.0, r=3.27."
+                    }
+                }
+            ],
+            "removed_entries": []
+        }
+    ]
+}
