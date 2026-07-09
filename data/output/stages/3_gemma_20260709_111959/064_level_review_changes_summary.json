@@ -1,0 +1,1293 @@
+{
+    "timestamp": "2026-07-09 11:58:41",
+    "stage_index": 64,
+    "stage": "level_review_changes_summary",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "review_count": 8,
+    "level_change_count": 15,
+    "added_count": 70,
+    "removed_count": 7,
+    "reviews": [
+        {
+            "review_stage": "chunk 2/19",
+            "input_chapters": 77,
+            "output_chapters": 76,
+            "level_change_count": 1,
+            "added_count": 0,
+            "removed_count": 1,
+            "level_changes": [
+                {
+                    "chapter": "4) 2000년대의 주요 의료정책",
+                    "page": 62,
+                    "before_level": 2,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under a larger section, indicated by numbering '4)' and font size s=12.0.",
+                    "after_level_reason": "Numbered as '4)' and uses font size s=12.0, consistent with level 4 subsections.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "4) 2000년대의 주요 의료정책",
+                        "page": 62,
+                        "level_reason": "Subsection under a larger section, indicated by numbering '4)' and font size s=12.0.",
+                        "_layout_page": 62,
+                        "_layout_x": 173.0,
+                        "_layout_y": 146.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 2000년대의 주요 의료정책",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "4) 2000년대의 주요 의료정책",
+                        "page": 62,
+                        "level_reason": "Numbered as '4)' and uses font size s=12.0, consistent with level 4 subsections.",
+                        "_layout_page": 62,
+                        "_layout_x": 173.0,
+                        "_layout_y": 146.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 2000년대의 주요 의료정책",
+                        "_source_order": 0
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "(3) 병원의 유형",
+                        "page": 75,
+                        "level_reason": "Deepest level subsection under '2)' with numbering '(3)' and font size s=8.5.",
+                        "_layout_page": 75,
+                        "_layout_x": 75.0,
+                        "_layout_y": 426.0,
+                        "_layout_font_size": 8.5,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "(3) 병원의 유형",
+                        "_source_order": 24
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 3/19",
+            "input_chapters": 73,
+            "output_chapters": 73,
+            "level_change_count": 0,
+            "added_count": 2,
+            "removed_count": 2,
+            "level_changes": [],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(1) 이론의 배경 및 기본 전제",
+                        "page": 108,
+                        "level_reason": "Sub-topic under 2) with parentheses numbering and font size 10.0."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(1) 이론의 배경 및 기본 전제",
+                        "page": 110,
+                        "level_reason": "Sub-topic under 4) with parentheses numbering and font size 10.0."
+                    }
+                }
+            ],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "제3장 보건의료자원과 조직의 관리",
+                        "page": 97,
+                        "level_reason": "Chapter title based on running header and previous TOC reference style.",
+                        "_layout_page": 97,
+                        "_layout_x": 431.0,
+                        "_layout_y": 53.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.84,
+                        "_layout_text": "제3장 보건의료자원과 조직의 관리",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "(1) 이론의 배경 및 기본 전제",
+                        "page": 109,
+                        "level_reason": "Sub-topic under 3) with parentheses numbering.",
+                        "_layout_page": 109,
+                        "_layout_x": 75.0,
+                        "_layout_y": 713.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.18,
+                        "_layout_text": "(1) 이론의 배경 및 기본 전제",
+                        "_source_order": 23
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 7/19",
+            "input_chapters": 53,
+            "output_chapters": 54,
+            "level_change_count": 13,
+            "added_count": 1,
+            "removed_count": 0,
+            "level_changes": [
+                {
+                    "chapter": "2) 건강증진의 정의",
+                    "page": 243,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under the previous section, marked with '2)'.",
+                    "after_level_reason": "Subsection under 1.1, marked with '2)' numbering and style (s=12.0, r=1.27).",
+                    "before": {
+                        "level": 3,
+                        "chapter": "2) 건강증진의 정의",
+                        "page": 243,
+                        "level_reason": "Subsection under the previous section, marked with '2)'.",
+                        "_layout_page": 243,
+                        "_layout_x": 65.0,
+                        "_layout_y": 441.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 건강증진의 정의",
+                        "_source_order": 2
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 건강증진의 정의",
+                        "page": 243,
+                        "level_reason": "Subsection under 1.1, marked with '2)' numbering and style (s=12.0, r=1.27).",
+                        "_layout_page": 243,
+                        "_layout_x": 65.0,
+                        "_layout_y": 441.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 건강증진의 정의",
+                        "_source_order": 2
+                    }
+                },
+                {
+                    "chapter": "3) 건강증진을 위한 국제수준의 노력: 오타와 헌장 등 세계적 합의",
+                    "page": 244,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under the previous section, marked with '3)'.",
+                    "after_level_reason": "Subsection under 1.1, marked with '3)' numbering and style (s=12.0, r=1.27).",
+                    "before": {
+                        "level": 3,
+                        "chapter": "3) 건강증진을 위한 국제수준의 노력: 오타와 헌장 등 세계적 합의",
+                        "page": 244,
+                        "level_reason": "Subsection under the previous section, marked with '3)'.",
+                        "_layout_page": 244,
+                        "_layout_x": 173.0,
+                        "_layout_y": 362.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 건강증진을 위한 국제수준의 노력: 오타와 헌장 등 세계적 합의",
+                        "_source_order": 3
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "3) 건강증진을 위한 국제수준의 노력: 오타와 헌장 등 세계적 합의",
+                        "page": 244,
+                        "level_reason": "Subsection under 1.1, marked with '3)' numbering and style (s=12.0, r=1.27).",
+                        "_layout_page": 244,
+                        "_layout_x": 173.0,
+                        "_layout_y": 362.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 건강증진을 위한 국제수준의 노력: 오타와 헌장 등 세계적 합의",
+                        "_source_order": 3
+                    }
+                },
+                {
+                    "chapter": "(1) 오타와 헌장(세계보건기구, 1986)",
+                    "page": 244,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Lower level subsection marked with '(1)'.",
+                    "after_level_reason": "Lower level subsection marked with '(1)' numbering and style (s=10.0, r=1.06).",
+                    "before": {
+                        "level": 4,
+                        "chapter": "(1) 오타와 헌장(세계보건기구, 1986)",
+                        "page": 244,
+                        "level_reason": "Lower level subsection marked with '(1)'.",
+                        "_layout_page": 244,
+                        "_layout_x": 183.0,
+                        "_layout_y": 443.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 오타와 헌장(세계보건기구, 1986)",
+                        "_source_order": 4
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(1) 오타와 헌장(세계보건기구, 1986)",
+                        "page": 244,
+                        "level_reason": "Lower level subsection marked with '(1)' numbering and style (s=10.0, r=1.06).",
+                        "_layout_page": 244,
+                        "_layout_x": 183.0,
+                        "_layout_y": 443.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 오타와 헌장(세계보건기구, 1986)",
+                        "_source_order": 4
+                    }
+                },
+                {
+                    "chapter": "(2) 오타와 헌장 이후의 국제적 노력",
+                    "page": 246,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Lower level subsection marked with '(2)'.",
+                    "after_level_reason": "Lower level subsection marked with '(2)' numbering and style (s=10.0, r=1.06).",
+                    "before": {
+                        "level": 4,
+                        "chapter": "(2) 오타와 헌장 이후의 국제적 노력",
+                        "page": 246,
+                        "level_reason": "Lower level subsection marked with '(2)'.",
+                        "_layout_page": 246,
+                        "_layout_x": 183.0,
+                        "_layout_y": 411.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 오타와 헌장 이후의 국제적 노력",
+                        "_source_order": 5
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(2) 오타와 헌장 이후의 국제적 노력",
+                        "page": 246,
+                        "level_reason": "Lower level subsection marked with '(2)' numbering and style (s=10.0, r=1.06).",
+                        "_layout_page": 246,
+                        "_layout_x": 183.0,
+                        "_layout_y": 411.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 오타와 헌장 이후의 국제적 노력",
+                        "_source_order": 5
+                    }
+                },
+                {
+                    "chapter": "(3) 세계보건기구 지역별 사무처 중심의 노력과 건강도시 네트워크",
+                    "page": 247,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Lower level subsection marked with '(3)'.",
+                    "after_level_reason": "Lower level subsection marked with '(3)' numbering and style (s=10.0, r=1.06).",
+                    "before": {
+                        "level": 4,
+                        "chapter": "(3) 세계보건기구 지역별 사무처 중심의 노력과 건강도시 네트워크",
+                        "page": 247,
+                        "level_reason": "Lower level subsection marked with '(3)'.",
+                        "_layout_page": 247,
+                        "_layout_x": 75.0,
+                        "_layout_y": 587.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 세계보건기구 지역별 사무처 중심의 노력과 건강도시 네트워크",
+                        "_source_order": 6
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(3) 세계보건기구 지역별 사무처 중심의 노력과 건강도시 네트워크",
+                        "page": 247,
+                        "level_reason": "Lower level subsection marked with '(3)' numbering and style (s=10.0, r=1.06).",
+                        "_layout_page": 247,
+                        "_layout_x": 75.0,
+                        "_layout_y": 587.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 세계보건기구 지역별 사무처 중심의 노력과 건강도시 네트워크",
+                        "_source_order": 6
+                    }
+                },
+                {
+                    "chapter": "1.2 건강증진의 접근방법",
+                    "page": 248,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Section title with '1.2' numbering, indicating a second-level hierarchy.",
+                    "after_level_reason": "Subsection under section 1, marked with '1.2' numbering and style (s=12.5, r=1.32).",
+                    "before": {
+                        "level": 2,
+                        "chapter": "1.2 건강증진의 접근방법",
+                        "page": 248,
+                        "level_reason": "Section title with '1.2' numbering, indicating a second-level hierarchy.",
+                        "_layout_page": 248,
+                        "_layout_x": 182.0,
+                        "_layout_y": 93.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.2 건강증진의 접근방법",
+                        "_source_order": 7
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "1.2 건강증진의 접근방법",
+                        "page": 248,
+                        "level_reason": "Subsection under section 1, marked with '1.2' numbering and style (s=12.5, r=1.32).",
+                        "_layout_page": 248,
+                        "_layout_x": 182.0,
+                        "_layout_y": 93.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.2 건강증진의 접근방법",
+                        "_source_order": 7
+                    }
+                },
+                {
+                    "chapter": "1) 건강증진사업의 기본 특성과 바람직한 접근",
+                    "page": 248,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under 1.2, marked with '1)'.",
+                    "after_level_reason": "Subsection under 1.2, marked with '1)' numbering and style (s=12.0, r=1.27).",
+                    "before": {
+                        "level": 3,
+                        "chapter": "1) 건강증진사업의 기본 특성과 바람직한 접근",
+                        "page": 248,
+                        "level_reason": "Subsection under 1.2, marked with '1)'.",
+                        "_layout_page": 248,
+                        "_layout_x": 173.0,
+                        "_layout_y": 134.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 건강증진사업의 기본 특성과 바람직한 접근",
+                        "_source_order": 8
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "1) 건강증진사업의 기본 특성과 바람직한 접근",
+                        "page": 248,
+                        "level_reason": "Subsection under 1.2, marked with '1)' numbering and style (s=12.0, r=1.27).",
+                        "_layout_page": 248,
+                        "_layout_x": 173.0,
+                        "_layout_y": 134.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 건강증진사업의 기본 특성과 바람직한 접근",
+                        "_source_order": 8
+                    }
+                },
+                {
+                    "chapter": "2) 건강증진사업의 전개 수준별 개입방법",
+                    "page": 249,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under 1.2, marked with '2)'.",
+                    "after_level_reason": "Subsection under 1.2, marked with '2)' numbering and style (s=12.0, r=1.27).",
+                    "before": {
+                        "level": 3,
+                        "chapter": "2) 건강증진사업의 전개 수준별 개입방법",
+                        "page": 249,
+                        "level_reason": "Subsection under 1.2, marked with '2)'.",
+                        "_layout_page": 249,
+                        "_layout_x": 65.0,
+                        "_layout_y": 477.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 건강증진사업의 전개 수준별 개입방법",
+                        "_source_order": 9
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 건강증진사업의 전개 수준별 개입방법",
+                        "page": 249,
+                        "level_reason": "Subsection under 1.2, marked with '2)' numbering and style (s=12.0, r=1.27).",
+                        "_layout_page": 249,
+                        "_layout_x": 65.0,
+                        "_layout_y": 477.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 건강증진사업의 전개 수준별 개입방법",
+                        "_source_order": 9
+                    }
+                },
+                {
+                    "chapter": "(1) 지역사회 전체 차원의 개입(community-wide intervention)",
+                    "page": 249,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Lower level subsection marked with '(1)'.",
+                    "after_level_reason": "Lower level subsection marked with '(1)' numbering and style (s=10.0, r=1.06).",
+                    "before": {
+                        "level": 4,
+                        "chapter": "(1) 지역사회 전체 차원의 개입(community-wide intervention)",
+                        "page": 249,
+                        "level_reason": "Lower level subsection marked with '(1)'.",
+                        "_layout_page": 249,
+                        "_layout_x": 75.0,
+                        "_layout_y": 559.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 지역사회 전체 차원의 개입(community-wide intervention)",
+                        "_source_order": 10
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(1) 지역사회 전체 차원의 개입(community-wide intervention)",
+                        "page": 249,
+                        "level_reason": "Lower level subsection marked with '(1)' numbering and style (s=10.0, r=1.06).",
+                        "_layout_page": 249,
+                        "_layout_x": 75.0,
+                        "_layout_y": 559.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 지역사회 전체 차원의 개입(community-wide intervention)",
+                        "_source_order": 10
+                    }
+                },
+                {
+                    "chapter": "(2) 지역사회 내 다양한 생활터 중심의 개입(settings-based intervention)",
+                    "page": 249,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Lower level subsection marked with '(2)'.",
+                    "after_level_reason": "Lower level subsection marked with '(2)' numbering and style (s=10.0, r=1.06).",
+                    "before": {
+                        "level": 4,
+                        "chapter": "(2) 지역사회 내 다양한 생활터 중심의 개입(settings-based intervention)",
+                        "page": 249,
+                        "level_reason": "Lower level subsection marked with '(2)'.",
+                        "_layout_page": 249,
+                        "_layout_x": 75.0,
+                        "_layout_y": 668.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 지역사회 내 다양한 생활터 중심의 개입(settings-based intervention)",
+                        "_source_order": 11
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(2) 지역사회 내 다양한 생활터 중심의 개입(settings-based intervention)",
+                        "page": 249,
+                        "level_reason": "Lower level subsection marked with '(2)' numbering and style (s=10.0, r=1.06).",
+                        "_layout_page": 249,
+                        "_layout_x": 75.0,
+                        "_layout_y": 668.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 지역사회 내 다양한 생활터 중심의 개입(settings-based intervention)",
+                        "_source_order": 11
+                    }
+                },
+                {
+                    "chapter": "1.3 건강증진사업 모형",
+                    "page": 250,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Section title with '1.3' numbering.",
+                    "after_level_reason": "Subsection under section 1, marked with '1.3' numbering and style (s=12.5, r=1.46).",
+                    "before": {
+                        "level": 2,
+                        "chapter": "1.3 건강증진사업 모형",
+                        "page": 250,
+                        "level_reason": "Section title with '1.3' numbering.",
+                        "_layout_page": 250,
+                        "_layout_x": 182.0,
+                        "_layout_y": 380.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.46,
+                        "_layout_text": "1.3 건강증진사업 모형",
+                        "_source_order": 12
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "1.3 건강증진사업 모형",
+                        "page": 250,
+                        "level_reason": "Subsection under section 1, marked with '1.3' numbering and style (s=12.5, r=1.46).",
+                        "_layout_page": 250,
+                        "_layout_x": 182.0,
+                        "_layout_y": 380.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.46,
+                        "_layout_text": "1.3 건강증진사업 모형",
+                        "_source_order": 12
+                    }
+                },
+                {
+                    "chapter": "1) PRECEDE-PROCEED 모형",
+                    "page": 250,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under 1.3, marked with '1)'.",
+                    "after_level_reason": "Subsection under 1.3, marked with '1)' numbering and style (s=12.0, r=1.41).",
+                    "before": {
+                        "level": 3,
+                        "chapter": "1) PRECEDE-PROCEED 모형",
+                        "page": 250,
+                        "level_reason": "Subsection under 1.3, marked with '1)'.",
+                        "_layout_page": 250,
+                        "_layout_x": 173.0,
+                        "_layout_y": 488.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.41,
+                        "_layout_text": "1) PRECEDE-PROCEED 모형",
+                        "_source_order": 13
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "1) PRECEDE-PROCEED 모형",
+                        "page": 250,
+                        "level_reason": "Subsection under 1.3, marked with '1)' numbering and style (s=12.0, r=1.41).",
+                        "_layout_page": 250,
+                        "_layout_x": 173.0,
+                        "_layout_y": 488.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.41,
+                        "_layout_text": "1) PRECEDE-PROCEED 모형",
+                        "_source_order": 13
+                    }
+                },
+                {
+                    "chapter": "2) 생태학적 모형",
+                    "page": 252,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under 1.3, marked with '2)'.",
+                    "after_level_reason": "Subsection under 1.3, marked with '2)' numbering and style (s=12.0, r=1.27).",
+                    "before": {
+                        "level": 3,
+                        "chapter": "2) 생태학적 모형",
+                        "page": 252,
+                        "level_reason": "Subsection under 1.3, marked with '2)'.",
+                        "_layout_page": 252,
+                        "_layout_x": 173.0,
+                        "_layout_y": 86.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 생태학적 모형",
+                        "_source_order": 14
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 생태학적 모형",
+                        "page": 252,
+                        "level_reason": "Subsection under 1.3, marked with '2)' numbering and style (s=12.0, r=1.27).",
+                        "_layout_page": 252,
+                        "_layout_x": 173.0,
+                        "_layout_y": 86.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 생태학적 모형",
+                        "_source_order": 14
+                    }
+                }
+            ],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "1.1 보건의료의 개념과 구성요소",
+                        "page": 25,
+                        "level_reason": "Subsection under section 1, marked with '1.1' numbering and style (s=12.5, r=1.32)."
+                    }
+                }
+            ],
+            "removed_entries": []
+        },
+        {
+            "review_stage": "chunk 9/19",
+            "input_chapters": 43,
+            "output_chapters": 106,
+            "level_change_count": 0,
+            "added_count": 64,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "1) 보건의료의 정의",
+                        "page": 25,
+                        "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy (s=12.0, r=1.27)."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 2,
+                        "chapter": "1. 보건의료의 개념",
+                        "page": 25,
+                        "level_reason": "Numbered as 1. and uses font style consistent with level 2 sections (s=18.0, r=1.9)."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "1.1 보건의료의 개념과 구성요소",
+                        "page": 25,
+                        "level_reason": "Numbered as 1.1 under a level 2 section, consistent with level 3 hierarchy (s=12.5, r=1.32)."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 기본권으로서 보건의료",
+                        "page": 26,
+                        "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "3) 인류의 건강, 그리고 국가산업으로서의 의료",
+                        "page": 26,
+                        "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "1.2 보건의료의 사회경제적 특성",
+                        "page": 27,
+                        "level_reason": "Numbered as 1.2 under a level 2 section, consistent with level 3 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "4) 보건의료의 구성요소",
+                        "page": 27,
+                        "level_reason": "Numbered as 4) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "1) 외부효과",
+                        "page": 28,
+                        "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 정보의 비대칭",
+                        "page": 28,
+                        "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "3) 불확실성과 보험시장",
+                        "page": 28,
+                        "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "4) 공급의 독점성",
+                        "page": 29,
+                        "level_reason": "Numbered as 4) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "5) 가치재",
+                        "page": 29,
+                        "level_reason": "Numbered as 5) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "1) 효과",
+                        "page": 30,
+                        "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "1.3 바람직한 보건의료의 특성",
+                        "page": 30,
+                        "level_reason": "Numbered as 1.3 under a level 2 section, consistent with level 3 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 안전",
+                        "page": 30,
+                        "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "3) 환자중심성",
+                        "page": 30,
+                        "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "4) 적시성",
+                        "page": 31,
+                        "level_reason": "Numbered as 4) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "5) 효율",
+                        "page": 31,
+                        "level_reason": "Numbered as 5) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "6) 형평",
+                        "page": 31,
+                        "level_reason": "Numbered as 6) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 2,
+                        "chapter": "2. 보건의료체계",
+                        "page": 32,
+                        "level_reason": "Numbered as 2. and uses font style consistent with level 2 sections."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "2.1 보건의료체계 개념과 구성요소",
+                        "page": 32,
+                        "level_reason": "Numbered as 2.1 under a level 2 section, consistent with level 3 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(1) 일차 의료",
+                        "page": 33,
+                        "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 의료자원의 조직화",
+                        "page": 33,
+                        "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "3) 의료서비스의 제공",
+                        "page": 33,
+                        "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(2) 이차 의료",
+                        "page": 34,
+                        "level_reason": "Numbered as (2) under a level 4 section, consistent with level 5 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(3) 삼차 의료",
+                        "page": 34,
+                        "level_reason": "Numbered as (3) under a level 4 section, consistent with level 5 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "2.2 의료전달체계",
+                        "page": 34,
+                        "level_reason": "Numbered as 2.2 under a level 2 section, consistent with level 3 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "4) 경제적 지원",
+                        "page": 34,
+                        "level_reason": "Numbered as 4) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "5) 관리",
+                        "page": 34,
+                        "level_reason": "Numbered as 5) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "2.3 재원조달방식",
+                        "page": 35,
+                        "level_reason": "Numbered as 2.3 under a level 2 section, consistent with level 3 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "2.4 보건의료체계의 관리",
+                        "page": 36,
+                        "level_reason": "Numbered as 2.4 under a level 2 section, consistent with level 3 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 2,
+                        "chapter": "3. 외국의 보건의료체계",
+                        "page": 36,
+                        "level_reason": "Numbered as 3. and uses font style consistent with level 2 sections."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "3.1 보건의료체계의 분류",
+                        "page": 36,
+                        "level_reason": "Numbered as 3.1 under a level 2 section, consistent with level 3 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "1) 베버리지 모델",
+                        "page": 37,
+                        "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 비스마르크 모델",
+                        "page": 37,
+                        "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "3) 국민건강보험 모델",
+                        "page": 37,
+                        "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "4) 본인부담 모델",
+                        "page": 37,
+                        "level_reason": "Numbered as 4) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(1) 건강보험제도",
+                        "page": 38,
+                        "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "1) 미국의 보건의료체계",
+                        "page": 38,
+                        "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "3.2 외국의 보건의료체계",
+                        "page": 38,
+                        "level_reason": "Numbered as 3.2 under a level 2 section, consistent with level 3 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(1) 건강보험(보장)제도",
+                        "page": 39,
+                        "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(2) 의료전달체계",
+                        "page": 39,
+                        "level_reason": "Numbered as (2) under a level 4 section, consistent with level 5 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(3) 최근의 혁신과 변화",
+                        "page": 39,
+                        "level_reason": "Numbered as (3) under a level 4 section, consistent with level 5 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 영국의 보건의료체계",
+                        "page": 39,
+                        "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(1) 건강보험제도",
+                        "page": 40,
+                        "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "3) 일본의 보건의료체계",
+                        "page": 40,
+                        "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(2) 의료전달체계",
+                        "page": 41,
+                        "level_reason": "Numbered as (2) under a level 4 section, consistent with level 5 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(3) 최근의 혁신과 변화",
+                        "page": 41,
+                        "level_reason": "Numbered as (3) under a level 4 section, consistent with level 5 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "4) 대만의 보건의료체계",
+                        "page": 41,
+                        "level_reason": "Numbered as 4) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "3.3 보건의료체계의 변화 경향",
+                        "page": 42,
+                        "level_reason": "Numbered as 3.3 under a level 2 section, consistent with level 3 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "1) 조직구조와 관리",
+                        "page": 43,
+                        "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 2,
+                        "chapter": "4. 한국의 보건의료체계",
+                        "page": 43,
+                        "level_reason": "Numbered as 4. and uses font style consistent with level 2 sections."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "4.1 보건의료체계",
+                        "page": 43,
+                        "level_reason": "Numbered as 4.1 under a level 2 section, consistent with level 3 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 건강보험",
+                        "page": 44,
+                        "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "3) 의료전달체계",
+                        "page": 45,
+                        "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(1) 시⋅도의 보건행정조직",
+                        "page": 46,
+                        "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(2) 시⋅군⋅구의 보건행정조직",
+                        "page": 46,
+                        "level_reason": "Numbered as (2) under a level 4 section, consistent with level 5 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "1) 보건복지 관련 중앙행정기관",
+                        "page": 46,
+                        "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 보건복지 관련 지방행정조직",
+                        "page": 46,
+                        "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "4.2 보건행정체계",
+                        "page": 46,
+                        "level_reason": "Numbered as 4.2 under a level 2 section, consistent with level 3 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(3) 읍⋅면의 지역보건의료기관",
+                        "page": 47,
+                        "level_reason": "Numbered as (3) under a level 4 section, consistent with level 5 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 5,
+                        "chapter": "(4) 의료취약지역(리)의 보건진료소",
+                        "page": 47,
+                        "level_reason": "Numbered as (4) under a level 4 section, consistent with level 5 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 3,
+                        "chapter": "4.3 도전과 과제",
+                        "page": 48,
+                        "level_reason": "Numbered as 4.3 under a level 2 section, consistent with level 3 hierarchy."
+                    }
+                },
+                {
+                    "after": {
+                        "level": 1,
+                        "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "page": 285,
+                        "level_reason": "Highest level chapter title based on numbering and visual style (s=31.0, r=3.27) from document reference."
+                    }
+                }
+            ],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "page": 305,
+                        "level_reason": "Chapter title found in running header and consistent with level 1 style from previous reference.",
+                        "_layout_page": 305,
+                        "_layout_x": 402.0,
+                        "_layout_y": 53.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.84,
+                        "_layout_text": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "_source_order": 0
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 10/19",
+            "input_chapters": 34,
+            "output_chapters": 34,
+            "level_change_count": 0,
+            "added_count": 1,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 1,
+                        "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "page": 285,
+                        "level_reason": "Main chapter title identified by repeated running header and structural hierarchy."
+                    }
+                }
+            ],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "page": 327,
+                        "level_reason": "Main chapter title identified by repeated running header and structural hierarchy.",
+                        "_layout_page": 327,
+                        "_layout_x": 400.0,
+                        "_layout_y": 54.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.84,
+                        "_layout_text": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "_source_order": 0
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 11/19",
+            "input_chapters": 48,
+            "output_chapters": 48,
+            "level_change_count": 0,
+            "added_count": 1,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 1,
+                        "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "page": 285,
+                        "level_reason": "Highest level chapter title based on document structure and repeated running headers."
+                    }
+                }
+            ],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "page": 347,
+                        "level_reason": "Chapter title found in running header and previous context, acting as the primary section for this chunk.",
+                        "_layout_page": 347,
+                        "_layout_x": 400.0,
+                        "_layout_y": 53.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.84,
+                        "_layout_text": "제2장 예방의료수준에 따른 임상예방서비스",
+                        "_source_order": 0
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 14/19",
+            "input_chapters": 58,
+            "output_chapters": 58,
+            "level_change_count": 0,
+            "added_count": 1,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 1,
+                        "chapter": "제4장 지역사회 보건사업과 예방서비스",
+                        "page": 413,
+                        "level_reason": "Major chapter title based on document structure and running headers."
+                    }
+                }
+            ],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "제4장 지역사회 보건사업과 예방서비스",
+                        "page": 437,
+                        "level_reason": "Running header indicates this is the current major chapter.",
+                        "_layout_page": 437,
+                        "_layout_x": 414.0,
+                        "_layout_y": 53.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.84,
+                        "_layout_text": "제4장 지역사회 보건사업과 예방서비스",
+                        "_source_order": 0
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 17/19",
+            "input_chapters": 48,
+            "output_chapters": 48,
+            "level_change_count": 1,
+            "added_count": 0,
+            "removed_count": 0,
+            "level_changes": [
+                {
+                    "chapter": "4.4 국제보건의 경향, 한계와 향후 과제",
+                    "page": 523,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Numbered section title with larger font size than body text.",
+                    "after_level_reason": "Numbered section title with font size (12.5) consistent with other level 3 subsections in this document.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "4.4 국제보건의 경향, 한계와 향후 과제",
+                        "page": 523,
+                        "level_reason": "Numbered section title with larger font size than body text.",
+                        "_layout_page": 523,
+                        "_layout_x": 73.0,
+                        "_layout_y": 93.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "4.4 국제보건의 경향, 한계와 향후 과제",
+                        "_source_order": 13
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "4.4 국제보건의 경향, 한계와 향후 과제",
+                        "page": 523,
+                        "level_reason": "Numbered section title with font size (12.5) consistent with other level 3 subsections in this document.",
+                        "_layout_page": 523,
+                        "_layout_x": 73.0,
+                        "_layout_y": 93.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "4.4 국제보건의 경향, 한계와 향후 과제",
+                        "_source_order": 13
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": []
+        }
+    ]
+}

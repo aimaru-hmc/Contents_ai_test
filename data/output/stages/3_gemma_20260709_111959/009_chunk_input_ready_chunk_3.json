@@ -1,0 +1,15 @@
+{
+    "timestamp": "2026-07-09 11:26:45",
+    "stage_index": 9,
+    "stage": "chunk_input_ready",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "3",
+    "total_chunks": 19,
+    "start_page": 96,
+    "end_page": 135,
+    "input_chars": 118724,
+    "input_chunk_file": "data/output/input_chunks/3_gemma_20260709_111959/chunk_3_pages_96-135.json"
+}

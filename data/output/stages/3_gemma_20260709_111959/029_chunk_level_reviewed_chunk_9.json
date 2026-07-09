@@ -1,0 +1,1084 @@
+{
+    "timestamp": "2026-07-09 11:42:54",
+    "stage_index": 29,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3.PDF",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3.pdf",
+    "chunk": "9",
+    "total_chunks": 19,
+    "start_page": 305,
+    "end_page": 326,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 9/19",
+        "input_chapters": 43,
+        "output_chapters": 106,
+        "level_changes": 0,
+        "added_entries": 64,
+        "removed_entries": 1,
+        "level_change_report_recorded": true,
+        "possible_invalid_heading_candidate_count": 3,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "제2장 예방의료수준에 따른 임상예방서비스",
+                "level": 1,
+                "page": 305,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style",
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Chapter title found in running header and consistent with level 1 style from previous reference.",
+                "font_size": 8.0,
+                "size_ratio": 0.84,
+                "left_indent": 402.0,
+                "vertical_position": 53.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=305, line=1, s=8.0, r=0.84, x=402.0, y=53.0: \"제2장 예방의료수준에 따른 임상예방서비스∙ 1181\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "제2장예방의료수준에따른임상예방서비스",
+                    "display_text": "제2장 예방의료수준에 따른 임상예방서비스",
+                    "font_size": 8.0,
+                    "size_ratio": 0.84,
+                    "median_left_indent": 401.0,
+                    "median_vertical_position": 53.0,
+                    "line_count": 40,
+                    "page_count": 40,
+                    "page_range": "285-369",
+                    "samples": [
+                        "제2장 예방의료수준에 따른 임상예방서비스∙ 1161",
+                        "제2장 예방의료수준에 따른 임상예방서비스∙ 1163",
+                        "제2장 예방의료수준에 따른 임상예방서비스∙ 1165"
+                    ]
+                }
+            },
+            {
+                "title": "(1) 인플루엔자",
+                "level": 5,
+                "page": 317,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.",
+                "font_size": 10.0,
+                "size_ratio": 1.11,
+                "left_indent": 75.0,
+                "vertical_position": 774.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=317, line=563, s=10.0, r=1.11, x=75.0, y=774.0: \"(1) 인플루엔자\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=317, line=558, s=8.0, r=0.89, x=71.0, y=670.0: \"■연령권장: 면역의증거가없는대상연령의성인에게권장\"",
+                        "page=317, line=559, s=8.0, r=0.89, x=71.0, y=681.0: \"■위험군권장: 기저질환및상황등에따른위험군에게권장\""
+                    ]
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "1인플루엔자",
+                    "display_text": "(1) 인플루엔자",
+                    "font_size": 10.0,
+                    "size_ratio": 1.11,
+                    "median_left_indent": 75.0,
+                    "median_vertical_position": 774.0,
+                    "line_count": 1,
+                    "page_count": 1,
+                    "page_range": ""
+                }
+            },
+            {
+                "title": "(5) B형간염",
+                "level": 5,
+                "page": 318,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Numbered as (5) under a level 4 section, consistent with level 5 hierarchy.",
+                "font_size": 10.0,
+                "size_ratio": 1.06,
+                "left_indent": 183.0,
+                "vertical_position": 774.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=318, line=609, s=10.0, r=1.06, x=183.0, y=774.0: \"(5) B형간염\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "5b형간염",
+                    "display_text": "(5) B형간염",
+                    "font_size": 10.0,
+                    "size_ratio": 1.06,
+                    "median_left_indent": 183.0,
+                    "median_vertical_position": 774.0,
+                    "line_count": 1,
+                    "page_count": 1,
+                    "page_range": ""
+                }
+            }
+        ]
+    },
+    "toc": {
+        "title": "임상예방의학과 지역사회예방서비스",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                "page": 285,
+                "level_reason": "Highest level chapter title based on numbering and visual style (s=31.0, r=3.27) from document reference."
+            },
+            {
+                "level": 2,
+                "chapter": "1. 보건의료의 개념",
+                "page": 25,
+                "level_reason": "Numbered as 1. and uses font style consistent with level 2 sections (s=18.0, r=1.9)."
+            },
+            {
+                "level": 3,
+                "chapter": "1.1 보건의료의 개념과 구성요소",
+                "page": 25,
+                "level_reason": "Numbered as 1.1 under a level 2 section, consistent with level 3 hierarchy (s=12.5, r=1.32)."
+            },
+            {
+                "level": 4,
+                "chapter": "1) 보건의료의 정의",
+                "page": 25,
+                "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy (s=12.0, r=1.27)."
+            },
+            {
+                "level": 4,
+                "chapter": "2) 기본권으로서 보건의료",
+                "page": 26,
+                "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "3) 인류의 건강, 그리고 국가산업으로서의 의료",
+                "page": 26,
+                "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "4) 보건의료의 구성요소",
+                "page": 27,
+                "level_reason": "Numbered as 4) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 3,
+                "chapter": "1.2 보건의료의 사회경제적 특성",
+                "page": 27,
+                "level_reason": "Numbered as 1.2 under a level 2 section, consistent with level 3 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "1) 외부효과",
+                "page": 28,
+                "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "2) 정보의 비대칭",
+                "page": 28,
+                "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "3) 불확실성과 보험시장",
+                "page": 28,
+                "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "4) 공급의 독점성",
+                "page": 29,
+                "level_reason": "Numbered as 4) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "5) 가치재",
+                "page": 29,
+                "level_reason": "Numbered as 5) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 3,
+                "chapter": "1.3 바람직한 보건의료의 특성",
+                "page": 30,
+                "level_reason": "Numbered as 1.3 under a level 2 section, consistent with level 3 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "1) 효과",
+                "page": 30,
+                "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "2) 안전",
+                "page": 30,
+                "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "3) 환자중심성",
+                "page": 30,
+                "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "4) 적시성",
+                "page": 31,
+                "level_reason": "Numbered as 4) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "5) 효율",
+                "page": 31,
+                "level_reason": "Numbered as 5) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "6) 형평",
+                "page": 31,
+                "level_reason": "Numbered as 6) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 2,
+                "chapter": "2. 보건의료체계",
+                "page": 32,
+                "level_reason": "Numbered as 2. and uses font style consistent with level 2 sections."
+            },
+            {
+                "level": 3,
+                "chapter": "2.1 보건의료체계 개념과 구성요소",
+                "page": 32,
+                "level_reason": "Numbered as 2.1 under a level 2 section, consistent with level 3 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "2) 의료자원의 조직화",
+                "page": 33,
+                "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "3) 의료서비스의 제공",
+                "page": 33,
+                "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 일차 의료",
+                "page": 33,
+                "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy."
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 이차 의료",
+                "page": 34,
+                "level_reason": "Numbered as (2) under a level 4 section, consistent with level 5 hierarchy."
+            },
+            {
+                "level": 5,
+                "chapter": "(3) 삼차 의료",
+                "page": 34,
+                "level_reason": "Numbered as (3) under a level 4 section, consistent with level 5 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "4) 경제적 지원",
+                "page": 34,
+                "level_reason": "Numbered as 4) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "5) 관리",
+                "page": 34,
+                "level_reason": "Numbered as 5) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 3,
+                "chapter": "2.2 의료전달체계",
+                "page": 34,
+                "level_reason": "Numbered as 2.2 under a level 2 section, consistent with level 3 hierarchy."
+            },
+            {
+                "level": 3,
+                "chapter": "2.3 재원조달방식",
+                "page": 35,
+                "level_reason": "Numbered as 2.3 under a level 2 section, consistent with level 3 hierarchy."
+            },
+            {
+                "level": 3,
+                "chapter": "2.4 보건의료체계의 관리",
+                "page": 36,
+                "level_reason": "Numbered as 2.4 under a level 2 section, consistent with level 3 hierarchy."
+            },
+            {
+                "level": 2,
+                "chapter": "3. 외국의 보건의료체계",
+                "page": 36,
+                "level_reason": "Numbered as 3. and uses font style consistent with level 2 sections."
+            },
+            {
+                "level": 3,
+                "chapter": "3.1 보건의료체계의 분류",
+                "page": 36,
+                "level_reason": "Numbered as 3.1 under a level 2 section, consistent with level 3 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "1) 베버리지 모델",
+                "page": 37,
+                "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "2) 비스마르크 모델",
+                "page": 37,
+                "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "3) 국민건강보험 모델",
+                "page": 37,
+                "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "4) 본인부담 모델",
+                "page": 37,
+                "level_reason": "Numbered as 4) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 3,
+                "chapter": "3.2 외국의 보건의료체계",
+                "page": 38,
+                "level_reason": "Numbered as 3.2 under a level 2 section, consistent with level 3 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "1) 미국의 보건의료체계",
+                "page": 38,
+                "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 건강보험제도",
+                "page": 38,
+                "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy."
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 의료전달체계",
+                "page": 39,
+                "level_reason": "Numbered as (2) under a level 4 section, consistent with level 5 hierarchy."
+            },
+            {
+                "level": 5,
+                "chapter": "(3) 최근의 혁신과 변화",
+                "page": 39,
+                "level_reason": "Numbered as (3) under a level 4 section, consistent with level 5 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "2) 영국의 보건의료체계",
+                "page": 39,
+                "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 건강보험(보장)제도",
+                "page": 39,
+                "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "3) 일본의 보건의료체계",
+                "page": 40,
+                "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 건강보험제도",
+                "page": 40,
+                "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy."
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 의료전달체계",
+                "page": 41,
+                "level_reason": "Numbered as (2) under a level 4 section, consistent with level 5 hierarchy."
+            },
+            {
+                "level": 5,
+                "chapter": "(3) 최근의 혁신과 변화",
+                "page": 41,
+                "level_reason": "Numbered as (3) under a level 4 section, consistent with level 5 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "4) 대만의 보건의료체계",
+                "page": 41,
+                "level_reason": "Numbered as 4) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 3,
+                "chapter": "3.3 보건의료체계의 변화 경향",
+                "page": 42,
+                "level_reason": "Numbered as 3.3 under a level 2 section, consistent with level 3 hierarchy."
+            },
+            {
+                "level": 2,
+                "chapter": "4. 한국의 보건의료체계",
+                "page": 43,
+                "level_reason": "Numbered as 4. and uses font style consistent with level 2 sections."
+            },
+            {
+                "level": 3,
+                "chapter": "4.1 보건의료체계",
+                "page": 43,
+                "level_reason": "Numbered as 4.1 under a level 2 section, consistent with level 3 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "1) 조직구조와 관리",
+                "page": 43,
+                "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "2) 건강보험",
+                "page": 44,
+                "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "3) 의료전달체계",
+                "page": 45,
+                "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 3,
+                "chapter": "4.2 보건행정체계",
+                "page": 46,
+                "level_reason": "Numbered as 4.2 under a level 2 section, consistent with level 3 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "1) 보건복지 관련 중앙행정기관",
+                "page": 46,
+                "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "2) 보건복지 관련 지방행정조직",
+                "page": 46,
+                "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy."
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 시⋅도의 보건행정조직",
+                "page": 46,
+                "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy."
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 시⋅군⋅구의 보건행정조직",
+                "page": 46,
+                "level_reason": "Numbered as (2) under a level 4 section, consistent with level 5 hierarchy."
+            },
+            {
+                "level": 5,
+                "chapter": "(3) 읍⋅면의 지역보건의료기관",
+                "page": 47,
+                "level_reason": "Numbered as (3) under a level 4 section, consistent with level 5 hierarchy."
+            },
+            {
+                "level": 5,
+                "chapter": "(4) 의료취약지역(리)의 보건진료소",
+                "page": 47,
+                "level_reason": "Numbered as (4) under a level 4 section, consistent with level 5 hierarchy."
+            },
+            {
+                "level": 3,
+                "chapter": "4.3 도전과 과제",
+                "page": 48,
+                "level_reason": "Numbered as 4.3 under a level 2 section, consistent with level 3 hierarchy."
+            },
+            {
+                "level": 4,
+                "chapter": "3) 비만의 동반 질환",
+                "page": 306,
+                "level_reason": "Numbered as 3) and uses font style consistent with level 4 subsections.",
+                "_layout_page": 306,
+                "_layout_x": 173.0,
+                "_layout_y": 319.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 비만의 동반 질환",
+                "_source_order": 1
+            },
+            {
+                "level": 4,
+                "chapter": "4) 비만의 치료",
+                "page": 306,
+                "level_reason": "Numbered as 4) and uses font style consistent with level 4 subsections.",
+                "_layout_page": 306,
+                "_layout_x": 173.0,
+                "_layout_y": 680.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "4) 비만의 치료",
+                "_source_order": 2
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 비만의 행동심리학적 평가 및 치료",
+                "page": 307,
+                "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 307,
+                "_layout_x": 75.0,
+                "_layout_y": 192.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 비만의 행동심리학적 평가 및 치료",
+                "_source_order": 3
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 비만의 식사치료",
+                "page": 307,
+                "level_reason": "Numbered as (2) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 307,
+                "_layout_x": 75.0,
+                "_layout_y": 377.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 비만의 식사치료",
+                "_source_order": 4
+            },
+            {
+                "level": 5,
+                "chapter": "(3) 비만의 운동치료",
+                "page": 307,
+                "level_reason": "Numbered as (3) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 307,
+                "_layout_x": 75.0,
+                "_layout_y": 531.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(3) 비만의 운동치료",
+                "_source_order": 5
+            },
+            {
+                "level": 5,
+                "chapter": "(4) 비만의 약물치료",
+                "page": 307,
+                "level_reason": "Numbered as (4) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 307,
+                "_layout_x": 75.0,
+                "_layout_y": 701.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(4) 비만의 약물치료",
+                "_source_order": 6
+            },
+            {
+                "level": 5,
+                "chapter": "(5) 비만의 수술치료",
+                "page": 308,
+                "level_reason": "Numbered as (5) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 308,
+                "_layout_x": 183.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(5) 비만의 수술치료",
+                "_source_order": 7
+            },
+            {
+                "level": 4,
+                "chapter": "5) 비만의 예방",
+                "page": 308,
+                "level_reason": "Numbered as 5) and uses font style consistent with level 4 subsections.",
+                "_layout_page": 308,
+                "_layout_x": 173.0,
+                "_layout_y": 149.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "5) 비만의 예방",
+                "_source_order": 8
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 보편적 예방",
+                "page": 308,
+                "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 308,
+                "_layout_x": 183.0,
+                "_layout_y": 231.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 보편적 예방",
+                "_source_order": 9
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 선택적 예방",
+                "page": 308,
+                "level_reason": "Numbered as (2) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 308,
+                "_layout_x": 183.0,
+                "_layout_y": 371.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 선택적 예방",
+                "_source_order": 10
+            },
+            {
+                "level": 5,
+                "chapter": "(3) 집중적 예방",
+                "page": 308,
+                "level_reason": "Numbered as (3) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 308,
+                "_layout_x": 183.0,
+                "_layout_y": 464.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(3) 집중적 예방",
+                "_source_order": 11
+            },
+            {
+                "level": 3,
+                "chapter": "1.8 손상예방",
+                "page": 309,
+                "level_reason": "Numbered as 1.8 and uses font style consistent with level 3 sections.",
+                "_layout_page": 309,
+                "_layout_x": 74.0,
+                "_layout_y": 336.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.8 손상예방",
+                "_source_order": 12
+            },
+            {
+                "level": 4,
+                "chapter": "1) 손상의 질병부담과 보건학적 중요성",
+                "page": 309,
+                "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.",
+                "_layout_page": 309,
+                "_layout_x": 65.0,
+                "_layout_y": 574.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 손상의 질병부담과 보건학적 중요성",
+                "_source_order": 13
+            },
+            {
+                "level": 4,
+                "chapter": "2) 개인과 사회의 손상예방 모형",
+                "page": 310,
+                "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.",
+                "_layout_page": 310,
+                "_layout_x": 173.0,
+                "_layout_y": 547.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 개인과 사회의 손상예방 모형",
+                "_source_order": 14
+            },
+            {
+                "level": 4,
+                "chapter": "3) 효과적인 손상예방을 위한 개인차원의 상담과 처방",
+                "page": 311,
+                "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy.",
+                "_layout_page": 311,
+                "_layout_x": 65.0,
+                "_layout_y": 567.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 효과적인 손상예방을 위한 개인차원의 상담과 처방",
+                "_source_order": 15
+            },
+            {
+                "level": 4,
+                "chapter": "4) 효과적인 손상예방을 위한 지역사회 접근전략",
+                "page": 312,
+                "level_reason": "Numbered as 4) under a level 3 section, consistent with level 4 hierarchy.",
+                "_layout_page": 312,
+                "_layout_x": 173.0,
+                "_layout_y": 628.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.41,
+                "_layout_text": "4) 효과적인 손상예방을 위한 지역사회 접근전략",
+                "_source_order": 16
+            },
+            {
+                "level": 2,
+                "chapter": "2. 일차 예방과 예방접종",
+                "page": 314,
+                "level_reason": "Numbered as 2. and uses font style consistent with level 2 sections.",
+                "_layout_page": 314,
+                "_layout_x": 185.0,
+                "_layout_y": 105.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "2. 일차 예방과 예방접종",
+                "_source_order": 17
+            },
+            {
+                "level": 3,
+                "chapter": "2.1 소아 예방접종",
+                "page": 314,
+                "level_reason": "Numbered as 2.1 under a level 2 section, consistent with level 3 hierarchy.",
+                "_layout_page": 314,
+                "_layout_x": 182.0,
+                "_layout_y": 154.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.1 소아 예방접종",
+                "_source_order": 18
+            },
+            {
+                "level": 4,
+                "chapter": "1) 소아 예방접종 개요",
+                "page": 314,
+                "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.",
+                "_layout_page": 314,
+                "_layout_x": 173.0,
+                "_layout_y": 321.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 소아 예방접종 개요",
+                "_source_order": 19
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 소아 예방접종의 목표 및 보건학적 중요성",
+                "page": 314,
+                "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 314,
+                "_layout_x": 183.0,
+                "_layout_y": 355.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 소아 예방접종의 목표 및 보건학적 중요성",
+                "_source_order": 20
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 소아 예방접종 일정 및 지침",
+                "page": 314,
+                "level_reason": "Numbered as (2) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 314,
+                "_layout_x": 183.0,
+                "_layout_y": 646.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 소아 예방접종 일정 및 지침",
+                "_source_order": 21
+            },
+            {
+                "level": 4,
+                "chapter": "2) 소아 예방접종률을 높이기 위한 전략",
+                "page": 316,
+                "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.",
+                "_layout_page": 316,
+                "_layout_x": 173.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 소아 예방접종률을 높이기 위한 전략",
+                "_source_order": 22
+            },
+            {
+                "level": 3,
+                "chapter": "2.2 성인 예방접종",
+                "page": 317,
+                "level_reason": "Numbered as 2.2 under a level 2 section, consistent with level 3 hierarchy.",
+                "_layout_page": 317,
+                "_layout_x": 73.0,
+                "_layout_y": 93.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.39,
+                "_layout_text": "2.2 성인 예방접종",
+                "_source_order": 23
+            },
+            {
+                "level": 4,
+                "chapter": "1) 성인 예방접종 스케쥴 및 지침",
+                "page": 317,
+                "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.",
+                "_layout_page": 317,
+                "_layout_x": 65.0,
+                "_layout_y": 260.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.33,
+                "_layout_text": "1) 성인 예방접종 스케쥴 및 지침",
+                "_source_order": 24
+            },
+            {
+                "level": 5,
+                "chapter": "(1) 인플루엔자",
+                "page": 317,
+                "level_reason": "Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 317,
+                "_layout_x": 75.0,
+                "_layout_y": 774.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.11,
+                "_layout_text": "(1) 인플루엔자",
+                "_source_order": 25
+            },
+            {
+                "level": 5,
+                "chapter": "(2) 파상풍⋅디프테리아⋅백일해",
+                "page": 318,
+                "level_reason": "Numbered as (2) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 318,
+                "_layout_x": 183.0,
+                "_layout_y": 176.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 파상풍⋅디프테리아⋅백일해",
+                "_source_order": 26
+            },
+            {
+                "level": 5,
+                "chapter": "(3) 폐렴구균",
+                "page": 318,
+                "level_reason": "Numbered as (3) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 318,
+                "_layout_x": 183.0,
+                "_layout_y": 377.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(3) 폐렴구균",
+                "_source_order": 27
+            },
+            {
+                "level": 5,
+                "chapter": "(4) A형간염",
+                "page": 318,
+                "level_reason": "Numbered as (4) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 318,
+                "_layout_x": 183.0,
+                "_layout_y": 606.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(4) A형간염",
+                "_source_order": 28
+            },
+            {
+                "level": 5,
+                "chapter": "(5) B형간염",
+                "page": 318,
+                "level_reason": "Numbered as (5) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 318,
+                "_layout_x": 183.0,
+                "_layout_y": 774.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(5) B형간염",
+                "_source_order": 29
+            },
+            {
+                "level": 5,
+                "chapter": "(10) 수막구균",
+                "page": 320,
+                "level_reason": "Numbered as (10) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 320,
+                "_layout_x": 183.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(10) 수막구균",
+                "_source_order": 30
+            },
+            {
+                "level": 5,
+                "chapter": "(11) B형 헤모필로스 인플루엔자",
+                "page": 320,
+                "level_reason": "Numbered as (11) under a level 4 section, consistent with level 5 hierarchy.",
+                "_layout_page": 320,
+                "_layout_x": 183.0,
+                "_layout_y": 225.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(11) B형 헤모필로스 인플루엔자",
+                "_source_order": 31
+            },
+            {
+                "level": 4,
+                "chapter": "2) 성인 예방접종률을 높이기 위한 개인 및 지역사회차원의 전략",
+                "page": 320,
+                "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.",
+                "_layout_page": 320,
+                "_layout_x": 173.0,
+                "_layout_y": 349.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 성인 예방접종률을 높이기 위한 개인 및 지역사회차원의 전략",
+                "_source_order": 32
+            },
+            {
+                "level": 2,
+                "chapter": "3. 일차 예방과 예방화학요법",
+                "page": 321,
+                "level_reason": "Numbered as 3. and uses font style consistent with level 2 sections.",
+                "_layout_page": 321,
+                "_layout_x": 77.0,
+                "_layout_y": 227.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "3. 일차 예방과 예방화학요법",
+                "_source_order": 33
+            },
+            {
+                "level": 3,
+                "chapter": "3.1 심혈관질환 예방을 위한 예방화학요법",
+                "page": 321,
+                "level_reason": "Numbered as 3.1 under a level 2 section, consistent with level 3 hierarchy.",
+                "_layout_page": 321,
+                "_layout_x": 74.0,
+                "_layout_y": 276.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "3.1 심혈관질환 예방을 위한 예방화학요법",
+                "_source_order": 34
+            },
+            {
+                "level": 4,
+                "chapter": "1) 아스피린",
+                "page": 321,
+                "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.",
+                "_layout_page": 321,
+                "_layout_x": 65.0,
+                "_layout_y": 569.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 아스피린",
+                "_source_order": 35
+            },
+            {
+                "level": 4,
+                "chapter": "2) 스타틴",
+                "page": 322,
+                "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.",
+                "_layout_page": 322,
+                "_layout_x": 173.0,
+                "_layout_y": 331.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 스타틴",
+                "_source_order": 36
+            },
+            {
+                "level": 4,
+                "chapter": "3) 베타카로틴과 비타민제",
+                "page": 323,
+                "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy.",
+                "_layout_page": 323,
+                "_layout_x": 65.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 베타카로틴과 비타민제",
+                "_source_order": 37
+            },
+            {
+                "level": 3,
+                "chapter": "3.2 암 예방을 위한 예방화학요법",
+                "page": 323,
+                "level_reason": "Numbered as 3.2 under a level 2 section, consistent with level 3 hierarchy.",
+                "_layout_page": 323,
+                "_layout_x": 73.0,
+                "_layout_y": 605.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "3.2 암 예방을 위한 예방화학요법",
+                "_source_order": 38
+            },
+            {
+                "level": 4,
+                "chapter": "1) 호르몬 제재",
+                "page": 324,
+                "level_reason": "Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.",
+                "_layout_page": 324,
+                "_layout_x": 173.0,
+                "_layout_y": 116.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.41,
+                "_layout_text": "1) 호르몬 제재",
+                "_source_order": 39
+            },
+            {
+                "level": 4,
+                "chapter": "2) 약물",
+                "page": 325,
+                "level_reason": "Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.",
+                "_layout_page": 325,
+                "_layout_x": 65.0,
+                "_layout_y": 190.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 약물",
+                "_source_order": 40
+            },
+            {
+                "level": 4,
+                "chapter": "3) 예방접종",
+                "page": 325,
+                "level_reason": "Numbered as 3) under a level 3 section, consistent with level 4 hierarchy.",
+                "_layout_page": 325,
+                "_layout_x": 65.0,
+                "_layout_y": 589.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 예방접종",
+                "_source_order": 41
+            },
+            {
+                "level": 3,
+                "chapter": "3.3 임산부와 여성을 위한 예방접종과 예방화학요법",
+                "page": 326,
+                "level_reason": "Numbered as 3.3 under a level 2 section, consistent with level 3 hierarchy.",
+                "_layout_page": 326,
+                "_layout_x": 181.0,
+                "_layout_y": 660.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "3.3 임산부와 여성을 위한 예방접종과 예방화학요법",
+                "_source_order": 42
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"임상예방의학과 지역사회예방서비스\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"제2장 예방의료수준에 따른 임상예방서비스\",\n      \"page\": 285,\n      \"level_reason\": \"Highest level chapter title based on numbering and visual style (s=31.0, r=3.27) from document reference.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1. 보건의료의 개념\",\n      \"page\": 25,\n      \"level_reason\": \"Numbered as 1. and uses font style consistent with level 2 sections (s=18.0, r=1.9).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.1 보건의료의 개념과 구성요소\",\n      \"page\": 25,\n      \"level_reason\": \"Numbered as 1.1 under a level 2 section, consistent with level 3 hierarchy (s=12.5, r=1.32).\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 보건의료의 정의\",\n      \"page\": 25,\n      \"level_reason\": \"Numbered as 1) under a level 3 section, consistent with level 4 hierarchy (s=12.0, r=1.27).\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 기본권으로서 보건의료\",\n      \"page\": 26,\n      \"level_reason\": \"Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 인류의 건강, 그리고 국가산업으로서의 의료\",\n      \"page\": 26,\n      \"level_reason\": \"Numbered as 3) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 보건의료의 구성요소\",\n      \"page\": 27,\n      \"level_reason\": \"Numbered as 4) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.2 보건의료의 사회경제적 특성\",\n      \"page\": 27,\n      \"level_reason\": \"Numbered as 1.2 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 외부효과\",\n      \"page\": 28,\n      \"level_reason\": \"Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 정보의 비대칭\",\n      \"page\": 28,\n      \"level_reason\": \"Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 불확실성과 보험시장\",\n      \"page\": 28,\n      \"level_reason\": \"Numbered as 3) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 공급의 독점성\",\n      \"page\": 29,\n      \"level_reason\": \"Numbered as 4) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"5) 가치재\",\n      \"page\": 29,\n      \"level_reason\": \"Numbered as 5) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.3 바람직한 보건의료의 특성\",\n      \"page\": 30,\n      \"level_reason\": \"Numbered as 1.3 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 효과\",\n      \"page\": 30,\n      \"level_reason\": \"Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 안전\",\n      \"page\": 30,\n      \"level_reason\": \"Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 환자중심성\",\n      \"page\": 30,\n      \"level_reason\": \"Numbered as 3) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 적시성\",\n      \"page\": 31,\n      \"level_reason\": \"Numbered as 4) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"5) 효율\",\n      \"page\": 31,\n      \"level_reason\": \"Numbered as 5) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"6) 형평\",\n      \"page\": 31,\n      \"level_reason\": \"Numbered as 6) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2. 보건의료체계\",\n      \"page\": 32,\n      \"level_reason\": \"Numbered as 2. and uses font style consistent with level 2 sections.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.1 보건의료체계 개념과 구성요소\",\n      \"page\": 32,\n      \"level_reason\": \"Numbered as 2.1 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 의료자원의 조직화\",\n      \"page\": 33,\n      \"level_reason\": \"Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 의료서비스의 제공\",\n      \"page\": 33,\n      \"level_reason\": \"Numbered as 3) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 일차 의료\",\n      \"page\": 33,\n      \"level_reason\": \"Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 이차 의료\",\n      \"page\": 34,\n      \"level_reason\": \"Numbered as (2) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(3) 삼차 의료\",\n      \"page\": 34,\n      \"level_reason\": \"Numbered as (3) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 경제적 지원\",\n      \"page\": 34,\n      \"level_reason\": \"Numbered as 4) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"5) 관리\",\n      \"page\": 34,\n      \"level_reason\": \"Numbered as 5) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.2 의료전달체계\",\n      \"page\": 34,\n      \"level_reason\": \"Numbered as 2.2 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.3 재원조달방식\",\n      \"page\": 35,\n      \"level_reason\": \"Numbered as 2.3 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.4 보건의료체계의 관리\",\n      \"page\": 36,\n      \"level_reason\": \"Numbered as 2.4 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"3. 외국의 보건의료체계\",\n      \"page\": 36,\n      \"level_reason\": \"Numbered as 3. and uses font style consistent with level 2 sections.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3.1 보건의료체계의 분류\",\n      \"page\": 36,\n      \"level_reason\": \"Numbered as 3.1 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 베버리지 모델\",\n      \"page\": 37,\n      \"level_reason\": \"Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 비스마르크 모델\",\n      \"page\": 37,\n      \"level_reason\": \"Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 국민건강보험 모델\",\n      \"page\": 37,\n      \"level_reason\": \"Numbered as 3) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 본인부담 모델\",\n      \"page\": 37,\n      \"level_reason\": \"Numbered as 4) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3.2 외국의 보건의료체계\",\n      \"page\": 38,\n      \"level_reason\": \"Numbered as 3.2 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 미국의 보건의료체계\",\n      \"page\": 38,\n      \"level_reason\": \"Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 건강보험제도\",\n      \"page\": 38,\n      \"level_reason\": \"Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 의료전달체계\",\n      \"page\": 39,\n      \"level_reason\": \"Numbered as (2) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(3) 최근의 혁신과 변화\",\n      \"page\": 39,\n      \"level_reason\": \"Numbered as (3) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 영국의 보건의료체계\",\n      \"page\": 39,\n      \"level_reason\": \"Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 건강보험(보장)제도\",\n      \"page\": 39,\n      \"level_reason\": \"Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 의료전달체계\",\n      \"page\": 40,\n      \"level_reason\": \"Numbered as (2) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(3) 최근의 혁신과 변화\",\n      \"page\": 40,\n      \"level_reason\": \"Numbered as (3) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 일본의 보건의료체계\",\n      \"page\": 40,\n      \"level_reason\": \"Numbered as 3) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 건강보험제도\",\n      \"page\": 40,\n      \"level_reason\": \"Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 의료전달체계\",\n      \"page\": 41,\n      \"level_reason\": \"Numbered as (2) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(3) 최근의 혁신과 변화\",\n      \"page\": 41,\n      \"level_reason\": \"Numbered as (3) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 대만의 보건의료체계\",\n      \"page\": 41,\n      \"level_reason\": \"Numbered as 4) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 건강보험제도\",\n      \"page\": 41,\n      \"level_reason\": \"Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 의료전달체계\",\n      \"page\": 42,\n      \"level_reason\": \"Numbered as (2) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(3) 최근의 혁신과 변화\",\n      \"page\": 42,\n      \"level_reason\": \"Numbered as (3) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3.3 보건의료체계의 변화 경향\",\n      \"page\": 42,\n      \"level_reason\": \"Numbered as 3.3 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"4. 한국의 보건의료체계\",\n      \"page\": 43,\n      \"level_reason\": \"Numbered as 4. and uses font style consistent with level 2 sections.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"4.1 보건의료체계\",\n      \"page\": 43,\n      \"level_reason\": \"Numbered as 4.1 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 조직구조와 관리\",\n      \"page\": 43,\n      \"level_reason\": \"Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 건강보험\",\n      \"page\": 44,\n      \"level_reason\": \"Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 의료전달체계\",\n      \"page\": 45,\n      \"level_reason\": \"Numbered as 3) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"4.2 보건행정체계\",\n      \"page\": 46,\n      \"level_reason\": \"Numbered as 4.2 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 보건복지 관련 중앙행정기관\",\n      \"page\": 46,\n      \"level_reason\": \"Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 보건복지 관련 지방행정조직\",\n      \"page\": 46,\n      \"level_reason\": \"Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 시⋅도의 보건행정조직\",\n      \"page\": 46,\n      \"level_reason\": \"Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 시⋅군⋅구의 보건행정조직\",\n      \"page\": 46,\n      \"level_reason\": \"Numbered as (2) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(3) 읍⋅면의 지역보건의료기관\",\n      \"page\": 47,\n      \"level_reason\": \"Numbered as (3) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(4) 의료취약지역(리)의 보건진료소\",\n      \"page\": 47,\n      \"level_reason\": \"Numbered as (4) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"4.3 도전과 과제\",\n      \"page\": 48,\n      \"level_reason\": \"Numbered as 4.3 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 비만의 동반 질환\",\n      \"page\": 306,\n      \"level_reason\": \"Numbered as 3) and uses font style consistent with level 4 subsections.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 비만의 치료\",\n      \"page\": 306,\n      \"level_reason\": \"Numbered as 4) and uses font style consistent with level 4 subsections.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 비만의 행동심리학적 평가 및 치료\",\n      \"page\": 307,\n      \"level_reason\": \"Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 비만의 식사치료\",\n      \"page\": 307,\n      \"level_reason\": \"Numbered as (2) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(3) 비만의 운동치료\",\n      \"page\": 307,\n      \"level_reason\": \"Numbered as (3) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(4) 비만의 약물치료\",\n      \"page\": 307,\n      \"level_reason\": \"Numbered as (4) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(5) 비만의 수술치료\",\n      \"page\": 308,\n      \"level_reason\": \"Numbered as (5) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"5) 비만의 예방\",\n      \"page\": 308,\n      \"level_reason\": \"Numbered as 5) and uses font style consistent with level 4 subsections.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 보편적 예방\",\n      \"page\": 308,\n      \"level_reason\": \"Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 선택적 예방\",\n      \"page\": 308,\n      \"level_reason\": \"Numbered as (2) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(3) 집중적 예방\",\n      \"page\": 308,\n      \"level_reason\": \"Numbered as (3) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.8 손상예방\",\n      \"page\": 309,\n      \"level_reason\": \"Numbered as 1.8 and uses font style consistent with level 3 sections.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 손상의 질병부담과 보건학적 중요성\",\n      \"page\": 309,\n      \"level_reason\": \"Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 개인과 사회의 손상예방 모형\",\n      \"page\": 310,\n      \"level_reason\": \"Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 효과적인 손상예방을 위한 개인차원의 상담과 처방\",\n      \"page\": 311,\n      \"level_reason\": \"Numbered as 3) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 효과적인 손상예방을 위한 지역사회 접근전략\",\n      \"page\": 312,\n      \"level_reason\": \"Numbered as 4) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2. 일차 예방과 예방접종\",\n      \"page\": 314,\n      \"level_reason\": \"Numbered as 2. and uses font style consistent with level 2 sections.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.1 소아 예방접종\",\n      \"page\": 314,\n      \"level_reason\": \"Numbered as 2.1 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 소아 예방접종 개요\",\n      \"page\": 314,\n      \"level_reason\": \"Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 소아 예방접종의 목표 및 보건학적 중요성\",\n      \"page\": 314,\n      \"level_reason\": \"Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 소아 예방접종 일정 및 지침\",\n      \"page\": 314,\n      \"level_reason\": \"Numbered as (2) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 소아 예방접종률을 높이기 위한 전략\",\n      \"page\": 316,\n      \"level_reason\": \"Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.2 성인 예방접종\",\n      \"page\": 317,\n      \"level_reason\": \"Numbered as 2.2 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 성인 예방접종 스케쥴 및 지침\",\n      \"page\": 317,\n      \"level_reason\": \"Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(1) 인플루엔자\",\n      \"page\": 317,\n      \"level_reason\": \"Numbered as (1) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(2) 파상풍⋅디프테리아⋅백일해\",\n      \"page\": 318,\n      \"level_reason\": \"Numbered as (2) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(3) 폐렴구균\",\n      \"page\": 318,\n      \"level_reason\": \"Numbered as (3) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(4) A형간염\",\n      \"page\": 318,\n      \"level_reason\": \"Numbered as (4) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(5) B형간염\",\n      \"page\": 318,\n      \"level_reason\": \"Numbered as (5) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(10) 수막구균\",\n      \"page\": 320,\n      \"level_reason\": \"Numbered as (10) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"(11) B형 헤모필로스 인플루엔자\",\n      \"page\": 320,\n      \"level_reason\": \"Numbered as (11) under a level 4 section, consistent with level 5 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 성인 예방접종률을 높이기 위한 개인 및 지역사회차원의 전략\",\n      \"page\": 320,\n      \"level_reason\": \"Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"3. 일차 예방과 예방화학요법\",\n      \"page\": 321,\n      \"level_reason\": \"Numbered as 3. and uses font style consistent with level 2 sections.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3.1 심혈관질환 예방을 위한 예방화학요법\",\n      \"page\": 321,\n      \"level_reason\": \"Numbered as 3.1 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 아스피린\",\n      \"page\": 321,\n      \"level_reason\": \"Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 스타틴\",\n      \"page\": 322,\n      \"level_reason\": \"Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 베타카로틴과 비타민제\",\n      \"page\": 323,\n      \"level_reason\": \"Numbered as 3) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3.2 암 예방을 위한 예방화학요법\",\n      \"page\": 323,\n      \"level_reason\": \"Numbered as 3.2 under a level 2 section, consistent with level 3 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 호르몬 제재\",\n      \"page\": 324,\n      \"level_reason\": \"Numbered as 1) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 약물\",\n      \"page\": 325,\n      \"level_reason\": \"Numbered as 2) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 예방접종\",\n      \"page\": 325,\n      \"level_reason\": \"Numbered as 3) under a level 3 section, consistent with level 4 hierarchy.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"3.3 임산부와 여성을 위한 예방접종과 예방화학요법\",\n      \"page\": 326,\n      \"level_reason\": \"Numbered as 3.3 under a level 2 section, consistent with level 3 hierarchy.\"\n    }\n  ]\n}\n```"
+}
