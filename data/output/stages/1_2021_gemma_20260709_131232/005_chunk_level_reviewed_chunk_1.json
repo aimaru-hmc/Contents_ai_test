@@ -1,0 +1,1005 @@
+{
+    "timestamp": "2026-07-09 13:13:53",
+    "stage_index": 5,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/1편(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/1_2021.pdf",
+    "chunk": "1",
+    "total_chunks": 2,
+    "start_page": 1,
+    "end_page": 39,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 1/2",
+        "input_chapters": 63,
+        "output_chapters": 62,
+        "level_changes": 0,
+        "added_entries": 0,
+        "removed_entries": 1,
+        "level_change_report_recorded": true,
+        "possible_invalid_heading_candidate_count": 6,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "건강과 질병의 정의 및 결정요인",
+                "level": 1,
+                "page": 3,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Main chapter title with largest font size and distinct layout.",
+                "font_size": 31.0,
+                "size_ratio": 3.27,
+                "left_indent": 80.0,
+                "vertical_position": 126.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=3, line=10, s=31.0, r=3.27, x=80.0, y=126.0: \"건강과 질병의 정의 및 결정요인\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "제1장건강과질병의정의및결정요인",
+                    "display_text": "제1장 건강과 질병의 정의 및 결정요인",
+                    "font_size": 8.0,
+                    "size_ratio": 0.85,
+                    "median_left_indent": 407.0,
+                    "median_vertical_position": 52.0,
+                    "line_count": 7,
+                    "page_count": 7,
+                    "page_range": "5-17",
+                    "samples": [
+                        "제1장 건강과 질병의 정의 및 결정요인∙ 5",
+                        "제1장 건강과 질병의 정의 및 결정요인∙ 7",
+                        "제1장 건강과 질병의 정의 및 결정요인∙ 9"
+                    ]
+                }
+            },
+            {
+                "title": "3) 건강정책분석을 위한 역학적 모형",
+                "level": 4,
+                "page": 16,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Numbered list item under subsection 2.3.",
+                "font_size": 8.5,
+                "size_ratio": 0.9,
+                "left_indent": 80.0,
+                "vertical_position": 754.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=16, line=555, s=12.0, r=1.27, x=60.0, y=85.0: \"건강정책 분석을 위한 역 3) 건강정책분석을 위한 역학적 모형\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=16, line=556, s=8.5, r=0.9, x=60.0, y=99.0: \"학적 모형\"",
+                        "page=16, line=558, s=8.5, r=0.9, x=60.0, y=112.0: \"건강과 질병은 단순히 이분\"",
+                        "page=16, line=560, s=8.5, r=0.9, x=60.0, y=125.0: \"법적인 것이 아니라 그 정도\"",
+                        "page=16, line=563, s=8.5, r=0.9, x=60.0, y=163.0: \"의해 발생된다는 개념이다.\""
+                    ]
+                }
+            },
+            {
+                "title": "예방의학과 공중보건학의 개념과 활용",
+                "level": 1,
+                "page": 19,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Main chapter title with largest font size.",
+                "font_size": 31.0,
+                "size_ratio": 3.27,
+                "left_indent": 91.0,
+                "vertical_position": 123.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "제2장예방의학과공중보건학의개념과활용",
+                    "display_text": "제2장 예방의학과 공중보건학의 개념과 활용",
+                    "font_size": 8.0,
+                    "size_ratio": 0.85,
+                    "median_left_indent": 395.0,
+                    "median_vertical_position": 52.0,
+                    "line_count": 7,
+                    "page_count": 7,
+                    "page_range": "21-33",
+                    "samples": [
+                        "제2장 예방의학과 공중보건학의 개념과 활용∙ 21",
+                        "제2장 예방의학과 공중보건학의 개념과 활용∙ 23",
+                        "제2장 예방의학과 공중보건학의 개념과 활용∙ 25"
+                    ]
+                }
+            },
+            {
+                "title": "1. 예방의학과 공중보건학의 개념",
+                "level": 2,
+                "page": 19,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Numbered section title under the main chapter.",
+                "font_size": 18.0,
+                "size_ratio": 1.9,
+                "left_indent": 77.0,
+                "vertical_position": 377.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=19, line=671, s=18.0, r=1.9, x=77.0, y=377.0: \"1. 예방의학과 공중보건학의 개념\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "제2장예방의학과공중보건학의개념과활용",
+                    "display_text": "제2장 예방의학과 공중보건학의 개념과 활용",
+                    "font_size": 8.0,
+                    "size_ratio": 0.85,
+                    "median_left_indent": 395.0,
+                    "median_vertical_position": 52.0,
+                    "line_count": 7,
+                    "page_count": 7,
+                    "page_range": "21-33",
+                    "samples": [
+                        "제2장 예방의학과 공중보건학의 개념과 활용∙ 21",
+                        "제2장 예방의학과 공중보건학의 개념과 활용∙ 23",
+                        "제2장 예방의학과 공중보건학의 개념과 활용∙ 25"
+                    ]
+                }
+            },
+            {
+                "title": "1.2 예방의학과 공중보건학의 개념",
+                "level": 3,
+                "page": 21,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Subsection of section 1.",
+                "font_size": 12.5,
+                "size_ratio": 1.32,
+                "left_indent": 73.0,
+                "vertical_position": 729.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=21, line=761, s=12.5, r=1.32, x=73.0, y=729.0: \"1.2 예방의학과 공중보건학의 개념\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "제2장예방의학과공중보건학의개념과활용",
+                    "display_text": "제2장 예방의학과 공중보건학의 개념과 활용",
+                    "font_size": 8.0,
+                    "size_ratio": 0.85,
+                    "median_left_indent": 395.0,
+                    "median_vertical_position": 52.0,
+                    "line_count": 7,
+                    "page_count": 7,
+                    "page_range": "21-33",
+                    "samples": [
+                        "제2장 예방의학과 공중보건학의 개념과 활용∙ 21",
+                        "제2장 예방의학과 공중보건학의 개념과 활용∙ 23",
+                        "제2장 예방의학과 공중보건학의 개념과 활용∙ 25"
+                    ]
+                }
+            },
+            {
+                "title": "예방의학과 공중보건학의 발전과 미래",
+                "level": 1,
+                "page": 34,
+                "reasons": [
+                    "matches repeated top/bottom running header/footer style"
+                ],
+                "level_reason": "Main chapter title with largest font size.",
+                "font_size": 8.5,
+                "size_ratio": 0.9,
+                "left_indent": 60.0,
+                "vertical_position": 187.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 0
+                },
+                "running_header_footer_match": {
+                    "normalized_text": "제3장예방의학과공중보건학의발전과미래",
+                    "display_text": "제3장 예방의학과 공중보건학의 발전과 미래",
+                    "font_size": 8.0,
+                    "size_ratio": 0.85,
+                    "median_left_indent": 384.0,
+                    "median_vertical_position": 52.0,
+                    "line_count": 9,
+                    "page_count": 9,
+                    "page_range": "35-51",
+                    "samples": [
+                        "제3장 예방의학과 공중보건학의 발전과 미래 ∙ 35",
+                        "제3장 예방의학과 공중보건학의 발전과 미래 ∙ 37",
+                        "제3장 예방의학과 공중보건학의 발전과 미래 ∙ 39"
+                    ]
+                }
+            }
+        ]
+    },
+    "toc": {
+        "title": "Preventive Medicine and Public Health",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "건강과 질병의 정의 및 결정요인",
+                "page": 3,
+                "level_reason": "Main chapter title with largest font size and distinct layout.",
+                "_layout_x": 80.0,
+                "_layout_y": 126.0,
+                "_layout_font_size": 31.0,
+                "_layout_size_ratio": 3.27,
+                "_layout_text": "건강과 질병의 정의 및 결정요인",
+                "_source_order": 10
+            },
+            {
+                "level": 2,
+                "chapter": "1. 건강상태와 질병상태의 개념",
+                "page": 3,
+                "level_reason": "Numbered section title under the main chapter.",
+                "_layout_x": 77.0,
+                "_layout_y": 392.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "1. 건강상태와 질병상태의 개념",
+                "_source_order": 15
+            },
+            {
+                "level": 3,
+                "chapter": "1.1 건강 개념의 변천",
+                "page": 3,
+                "level_reason": "Subsection of section 1.",
+                "_layout_x": 73.0,
+                "_layout_y": 521.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.1 건강 개념의 변천",
+                "_source_order": 18
+            },
+            {
+                "level": 4,
+                "chapter": "1) 신체(身體)개념의 건강",
+                "page": 3,
+                "level_reason": "Numbered list item under subsection 1.1.",
+                "_layout_x": 65.0,
+                "_layout_y": 704.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 신체(身體)개념의 건강",
+                "_source_order": 31
+            },
+            {
+                "level": 4,
+                "chapter": "2) 심신(心身)개념의 건강",
+                "page": 4,
+                "level_reason": "Numbered list item under subsection 1.1.",
+                "_layout_x": 173.0,
+                "_layout_y": 176.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 심신(心身)개념의 건강",
+                "_source_order": 42
+            },
+            {
+                "level": 4,
+                "chapter": "3) 생활개념의 건강",
+                "page": 4,
+                "level_reason": "Numbered list item under subsection 1.1.",
+                "_layout_x": 173.0,
+                "_layout_y": 364.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 생활개념의 건강",
+                "_source_order": 53
+            },
+            {
+                "level": 4,
+                "chapter": "4) 생활수단 개념의 건강",
+                "page": 4,
+                "level_reason": "Numbered list item under subsection 1.1.",
+                "_layout_x": 173.0,
+                "_layout_y": 704.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "4) 생활수단 개념의 건강",
+                "_source_order": 74
+            },
+            {
+                "level": 4,
+                "chapter": "5) 기타 건강에 대한 정의들",
+                "page": 5,
+                "level_reason": "Numbered list item under subsection 1.1.",
+                "_layout_x": 65.0,
+                "_layout_y": 237.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "5) 기타 건강에 대한 정의들",
+                "_source_order": 89
+            },
+            {
+                "level": 3,
+                "chapter": "1.2 질병상태의 개념과 분류",
+                "page": 6,
+                "level_reason": "Subsection of section 1.",
+                "_layout_x": 181.0,
+                "_layout_y": 92.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.2 질병상태의 개념과 분류",
+                "_source_order": 126
+            },
+            {
+                "level": 4,
+                "chapter": "1) 질병상태의 분류와 질병 이름",
+                "page": 6,
+                "level_reason": "Numbered list item under subsection 1.2.",
+                "_layout_x": 173.0,
+                "_layout_y": 564.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 질병상태의 분류와 질병 이름",
+                "_source_order": 163
+            },
+            {
+                "level": 4,
+                "chapter": "2) 역학적 분류기준",
+                "page": 7,
+                "level_reason": "Numbered list item under subsection 1.2.",
+                "_layout_x": 65.0,
+                "_layout_y": 206.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 역학적 분류기준",
+                "_source_order": 185
+            },
+            {
+                "level": 3,
+                "chapter": "1.3 건강 관련 삶의 질 개념",
+                "page": 7,
+                "level_reason": "Subsection of section 1.",
+                "_layout_x": 73.0,
+                "_layout_y": 447.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.3 건강 관련 삶의 질 개념",
+                "_source_order": 199
+            },
+            {
+                "level": 3,
+                "chapter": "1.4 건강보호의 책임에 대한 개념 변화",
+                "page": 7,
+                "level_reason": "Subsection of section 1.",
+                "_layout_x": 73.0,
+                "_layout_y": 684.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.4 건강보호의 책임에 대한 개념 변화",
+                "_source_order": 217
+            },
+            {
+                "level": 3,
+                "chapter": "1.5 인권으로서의 건강권",
+                "page": 8,
+                "level_reason": "Subsection of section 1.",
+                "_layout_x": 181.0,
+                "_layout_y": 563.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.5 인권으로서의 건강권",
+                "_source_order": 253
+            },
+            {
+                "level": 2,
+                "chapter": "2. 건강과 질병의 결정요인 및 건강모형",
+                "page": 10,
+                "level_reason": "Numbered section title under the main chapter.",
+                "_layout_x": 185.0,
+                "_layout_y": 119.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "2. 건강과 질병의 결정요인 및 건강모형",
+                "_source_order": 306
+            },
+            {
+                "level": 3,
+                "chapter": "2.1 결정요인의 개념 및 인과성과 인과론",
+                "page": 10,
+                "level_reason": "Subsection of section 2.",
+                "_layout_x": 181.0,
+                "_layout_y": 337.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.1 결정요인의 개념 및 인과성과 인과론",
+                "_source_order": 310
+            },
+            {
+                "level": 3,
+                "chapter": "2.2 건강-질병현상의 결정요인",
+                "page": 12,
+                "level_reason": "Subsection of section 2.",
+                "_layout_x": 181.0,
+                "_layout_y": 365.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.2 건강-질병현상의 결정요인",
+                "_source_order": 407
+            },
+            {
+                "level": 4,
+                "chapter": "1) 유전 요인",
+                "page": 12,
+                "level_reason": "Numbered list item under subsection 2.2.",
+                "_layout_x": 173.0,
+                "_layout_y": 610.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 유전 요인",
+                "_source_order": 424
+            },
+            {
+                "level": 4,
+                "chapter": "2) 성(性) 관련 요인",
+                "page": 12,
+                "level_reason": "Numbered list item under subsection 2.2.",
+                "_layout_x": 173.0,
+                "_layout_y": 692.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 성(性) 관련 요인",
+                "_source_order": 428
+            },
+            {
+                "level": 4,
+                "chapter": "3) 생활습관 및 건강행태 요인",
+                "page": 13,
+                "level_reason": "Numbered list item under subsection 2.2.",
+                "_layout_x": 173.0,
+                "_layout_y": 789.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 생활습관 및 건강행태 요인",
+                "_source_order": 433
+            },
+            {
+                "level": 4,
+                "chapter": "4) 개인의 사회경제적 수준",
+                "page": 13,
+                "level_reason": "Numbered list item under subsection 2.2.",
+                "_layout_x": 65.0,
+                "_layout_y": 176.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "4) 개인의 사회경제적 수준",
+                "_source_order": 441
+            },
+            {
+                "level": 4,
+                "chapter": "5) 환경 요인",
+                "page": 13,
+                "level_reason": "Numbered list item under subsection 2.2.",
+                "_layout_x": 65.0,
+                "_layout_y": 349.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "5) 환경 요인",
+                "_source_order": 451
+            },
+            {
+                "level": 4,
+                "chapter": "6) 문화적 요인",
+                "page": 13,
+                "level_reason": "Numbered list item under subsection 2.2.",
+                "_layout_x": 65.0,
+                "_layout_y": 492.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "6) 문화적 요인",
+                "_source_order": 459
+            },
+            {
+                "level": 4,
+                "chapter": "7) 정치적/사회제도적 요인",
+                "page": 13,
+                "level_reason": "Numbered list item under subsection 2.2.",
+                "_layout_x": 65.0,
+                "_layout_y": 604.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "7) 정치적/사회제도적 요인",
+                "_source_order": 465
+            },
+            {
+                "level": 3,
+                "chapter": "2.3 건강모형",
+                "page": 14,
+                "level_reason": "Subsection of section 2.",
+                "_layout_x": 181.0,
+                "_layout_y": 193.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.3 건강모형",
+                "_source_order": 479
+            },
+            {
+                "level": 4,
+                "chapter": "1) 생의학적 모형",
+                "page": 14,
+                "level_reason": "Numbered list item under subsection 2.3.",
+                "_layout_x": 173.0,
+                "_layout_y": 331.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 생의학적 모형",
+                "_source_order": 486
+            },
+            {
+                "level": 4,
+                "chapter": "2) 역학적 모형",
+                "page": 15,
+                "level_reason": "Numbered list item under subsection 2.3.",
+                "_layout_x": 65.0,
+                "_layout_y": 349.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 역학적 모형",
+                "_source_order": 529
+            },
+            {
+                "level": 4,
+                "chapter": "4) 웰니스 모형(wellness model)",
+                "page": 17,
+                "level_reason": "Numbered list item under subsection 2.3.",
+                "_layout_x": 65.0,
+                "_layout_y": 115.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "4) 웰니스 모형(wellness model)",
+                "_source_order": 603
+            },
+            {
+                "level": 1,
+                "chapter": "예방의학과 공중보건학의 개념과 활용",
+                "page": 19,
+                "level_reason": "Main chapter title with largest font size.",
+                "_layout_x": 91.0,
+                "_layout_y": 123.0,
+                "_layout_font_size": 31.0,
+                "_layout_size_ratio": 3.27,
+                "_layout_text": "예방의학과 공중보건학의 개념과",
+                "_source_order": 666
+            },
+            {
+                "level": 2,
+                "chapter": "1. 예방의학과 공중보건학의 개념",
+                "page": 19,
+                "level_reason": "Numbered section title under the main chapter.",
+                "_layout_x": 77.0,
+                "_layout_y": 377.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "1. 예방의학과 공중보건학의 개념",
+                "_source_order": 671
+            },
+            {
+                "level": 3,
+                "chapter": "1.1 의학의 분류",
+                "page": 19,
+                "level_reason": "Subsection of section 1.",
+                "_layout_x": 73.0,
+                "_layout_y": 579.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.1 의학의 분류",
+                "_source_order": 678
+            },
+            {
+                "level": 3,
+                "chapter": "1.2 예방의학과 공중보건학의 개념",
+                "page": 21,
+                "level_reason": "Subsection of section 1.",
+                "_layout_x": 73.0,
+                "_layout_y": 729.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.2 예방의학과 공중보건학의 개념",
+                "_source_order": 761
+            },
+            {
+                "level": 2,
+                "chapter": "2. 예방의학과 공중보건학의 내용과 적용",
+                "page": 22,
+                "level_reason": "Numbered section title under the main chapter.",
+                "_layout_x": 185.0,
+                "_layout_y": 331.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "2. 예방의학과 공중보건학의 내용과 적용",
+                "_source_order": 785
+            },
+            {
+                "level": 3,
+                "chapter": "2.1 질병 발생단계와 예방대책",
+                "page": 22,
+                "level_reason": "Subsection of section 2.",
+                "_layout_x": 181.0,
+                "_layout_y": 564.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.1 질병 발생단계와 예방대책",
+                "_source_order": 794
+            },
+            {
+                "level": 3,
+                "chapter": "2.2 예방의학과 공중보건학의 내용과 활용",
+                "page": 24,
+                "level_reason": "Subsection of section 2.",
+                "_layout_x": 181.0,
+                "_layout_y": 502.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.2 예방의학과 공중보건학의 내용과 활용",
+                "_source_order": 887
+            },
+            {
+                "level": 3,
+                "chapter": "2.3 예방의학과 공중보건학의 접근 전략",
+                "page": 25,
+                "level_reason": "Subsection of section 2.",
+                "_layout_x": 73.0,
+                "_layout_y": 457.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.3 예방의학과 공중보건학의 접근 전략",
+                "_source_order": 927
+            },
+            {
+                "level": 4,
+                "chapter": "1) 로즈의 예방의학 전략",
+                "page": 25,
+                "level_reason": "Numbered list item under subsection 2.3.",
+                "_layout_x": 65.0,
+                "_layout_y": 498.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 로즈의 예방의학 전략",
+                "_source_order": 928
+            },
+            {
+                "level": 4,
+                "chapter": "2) 건강영향 피라미드",
+                "page": 26,
+                "level_reason": "Numbered list item under subsection 2.3.",
+                "_layout_x": 173.0,
+                "_layout_y": 524.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 건강영향 피라미드",
+                "_source_order": 967
+            },
+            {
+                "level": 3,
+                "chapter": "2.4 예방의학과 공중보건윤리",
+                "page": 27,
+                "level_reason": "Subsection of section 2.",
+                "_layout_x": 73.0,
+                "_layout_y": 532.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "2.4 예방의학과 공중보건윤리",
+                "_source_order": 994
+            },
+            {
+                "level": 4,
+                "chapter": "1) 공중보건과 윤리",
+                "page": 27,
+                "level_reason": "Numbered list item under subsection 2.4.",
+                "_layout_x": 65.0,
+                "_layout_y": 574.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 공중보건과 윤리",
+                "_source_order": 995
+            },
+            {
+                "level": 4,
+                "chapter": "2) 공중보건 활동과 관련된 윤리 문제",
+                "page": 29,
+                "level_reason": "Numbered list item under subsection 2.4.",
+                "_layout_x": 65.0,
+                "_layout_y": 373.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 공중보건 활동과 관련된 윤리 문제",
+                "_source_order": 1075
+            },
+            {
+                "level": 1,
+                "chapter": "예방의학과 공중보건학의 발전과 미래",
+                "page": 34,
+                "level_reason": "Main chapter title based on hierarchy and numbering.",
+                "_layout_x": 60.0,
+                "_layout_y": 187.0,
+                "_layout_font_size": 8.5,
+                "_layout_size_ratio": 0.9,
+                "_layout_text": "공중보건학",
+                "_source_order": 774
+            },
+            {
+                "level": 2,
+                "chapter": "1. 서양의 예방의학과 공중보건학의 역사",
+                "page": 34,
+                "level_reason": "Numbered section title under the main chapter.",
+                "_layout_x": 185.0,
+                "_layout_y": 567.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "1. 서양의 예방의학과 공중보건학의 역사",
+                "_source_order": 1249
+            },
+            {
+                "level": 3,
+                "chapter": "1.1 고대(B.C. ?~A.D. 476)",
+                "page": 34,
+                "level_reason": "Subsection of section 1.",
+                "_layout_x": 181.0,
+                "_layout_y": 616.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.1 고대(B.C. ?~A.D. 476)",
+                "_source_order": 1250
+            },
+            {
+                "level": 4,
+                "chapter": "1) 인도",
+                "page": 34,
+                "level_reason": "Numbered list item under subsection 1.1.",
+                "_layout_x": 173.0,
+                "_layout_y": 709.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 인도",
+                "_source_order": 1254
+            },
+            {
+                "level": 4,
+                "chapter": "2) 메소포타미아",
+                "page": 35,
+                "level_reason": "Numbered list item under subsection 1.1.",
+                "_layout_x": 65.0,
+                "_layout_y": 85.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 메소포타미아",
+                "_source_order": 1259
+            },
+            {
+                "level": 4,
+                "chapter": "3) 이집트",
+                "page": 35,
+                "level_reason": "Numbered list item under subsection 1.1.",
+                "_layout_x": 65.0,
+                "_layout_y": 243.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 이집트",
+                "_source_order": 1268
+            },
+            {
+                "level": 4,
+                "chapter": "4) 그리스",
+                "page": 35,
+                "level_reason": "Numbered list item under subsection 1.1.",
+                "_layout_x": 65.0,
+                "_layout_y": 370.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "4) 그리스",
+                "_source_order": 1275
+            },
+            {
+                "level": 4,
+                "chapter": "5) 로마",
+                "page": 35,
+                "level_reason": "Numbered list item under subsection 1.1.",
+                "_layout_x": 65.0,
+                "_layout_y": 574.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "5) 로마",
+                "_source_order": 1290
+            },
+            {
+                "level": 3,
+                "chapter": "1.2 중세(A.D. 476~1453)",
+                "page": 35,
+                "level_reason": "Subsection of section 1.",
+                "_layout_x": 73.0,
+                "_layout_y": 754.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.2 중세(A.D. 476~1453)",
+                "_source_order": 1300
+            },
+            {
+                "level": 4,
+                "chapter": "1) 중세의 전염병 창궐과 공중보건제도",
+                "page": 36,
+                "level_reason": "Numbered list item under subsection 1.2.",
+                "_layout_x": 173.0,
+                "_layout_y": 85.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 중세의 전염병 창궐과 공중보건제도",
+                "_source_order": 1303
+            },
+            {
+                "level": 4,
+                "chapter": "2) 한센병의 유행과 격리제도",
+                "page": 36,
+                "level_reason": "Numbered list item under subsection 1.2.",
+                "_layout_x": 173.0,
+                "_layout_y": 319.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 한센병의 유행과 격리제도",
+                "_source_order": 1317
+            },
+            {
+                "level": 4,
+                "chapter": "3) 페스트의 유행과 검역제도",
+                "page": 36,
+                "level_reason": "Numbered list item under subsection 1.2.",
+                "_layout_x": 173.0,
+                "_layout_y": 461.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 페스트의 유행과 검역제도",
+                "_source_order": 1325
+            },
+            {
+                "level": 3,
+                "chapter": "1.3 르네상스와 중상주의시대(A.D. 1453~1750)",
+                "page": 36,
+                "level_reason": "Subsection of section 1.",
+                "_layout_x": 181.0,
+                "_layout_y": 733.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.3 르네상스와 중상주의시대(A.D. 1453~1750)",
+                "_source_order": 1344
+            },
+            {
+                "level": 4,
+                "chapter": "1) 르네상스 시대와 근대 과학기술의 태동",
+                "page": 37,
+                "level_reason": "Numbered list item under subsection 1.3.",
+                "_layout_x": 173.0,
+                "_layout_y": 774.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 르네상스 시대와 근대 과학기술의 태동",
+                "_source_order": 1345
+            },
+            {
+                "level": 4,
+                "chapter": "2) 중상주의 시대와 통계의 발전",
+                "page": 37,
+                "level_reason": "Numbered list item under subsection 1.3.",
+                "_layout_x": 65.0,
+                "_layout_y": 358.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 중상주의 시대와 통계의 발전",
+                "_source_order": 1365
+            },
+            {
+                "level": 3,
+                "chapter": "1.4 근대(A.D. 1750~19세기 후반)",
+                "page": 37,
+                "level_reason": "Subsection of section 1.",
+                "_layout_x": 73.0,
+                "_layout_y": 523.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.4 근대(A.D. 1750~19세기 후반)",
+                "_source_order": 1374
+            },
+            {
+                "level": 4,
+                "chapter": "1) 계몽주의와 프랑스 혁명시대(1750~1830)",
+                "page": 37,
+                "level_reason": "Numbered list item under subsection 1.4.",
+                "_layout_x": 65.0,
+                "_layout_y": 565.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 계몽주의와 프랑스 혁명시대(1750~1830)",
+                "_source_order": 1375
+            },
+            {
+                "level": 4,
+                "chapter": "2) 산업혁명과 환경위생시대(19세기 중반)",
+                "page": 38,
+                "level_reason": "Numbered list item under subsection 1.4.",
+                "_layout_x": 173.0,
+                "_layout_y": 191.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 산업혁명과 환경위생시대(19세기 중반)",
+                "_source_order": 1393
+            },
+            {
+                "level": 4,
+                "chapter": "3) 19세기 후반",
+                "page": 39,
+                "level_reason": "Numbered list item under subsection 1.4.",
+                "_layout_x": 65.0,
+                "_layout_y": 222.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 19세기 후반",
+                "_source_order": 1436
+            },
+            {
+                "level": 3,
+                "chapter": "1.5 20세기 전반기(제2차 대전 종말까지)",
+                "page": 39,
+                "level_reason": "Subsection of section 1.",
+                "_layout_x": 73.0,
+                "_layout_y": 633.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.5 20세기 전반기(제2차 대전 종말까지)",
+                "_source_order": 1459
+            },
+            {
+                "level": 4,
+                "chapter": "1) 빈곤 문제의 대두와 영국 공중보건의 발전",
+                "page": 39,
+                "level_reason": "Numbered list item under subsection 1.5.",
+                "_layout_x": 65.0,
+                "_layout_y": 675.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 빈곤 문제의 대두와 영국 공중보건의 발전",
+                "_source_order": 1460
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"Preventive Medicine and Public Health\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"건강과 질병의 정의 및 결정요인\",\n      \"page\": 3,\n      \"level_reason\": \"Main chapter title with largest font size and distinct layout.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1. 건강상태와 질병상태의 개념\",\n      \"page\": 3,\n      \"level_reason\": \"Numbered section title under the main chapter.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.1 건강 개념의 변천\",\n      \"page\": 3,\n      \"level_reason\": \"Subsection of section 1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 신체(身體)개념의 건강\",\n      \"page\": 3,\n      \"level_reason\": \"Numbered list item under subsection 1.1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 심신(心身)개념의 건강\",\n      \"page\": 4,\n      \"level_reason\": \"Numbered list item under subsection 1.1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 생활개념의 건강\",\n      \"page\": 4,\n      \"level_reason\": \"Numbered list item under subsection 1.1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 생활수단 개념의 건강\",\n      \"page\": 4,\n      \"level_reason\": \"Numbered list item under subsection 1.1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"5) 기타 건강에 대한 정의들\",\n      \"page\": 5,\n      \"level_reason\": \"Numbered list item under subsection 1.1.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.2 질병상태의 개념과 분류\",\n      \"page\": 6,\n      \"level_reason\": \"Subsection of section 1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 질병상태의 분류와 질병 이름\",\n      \"page\": 6,\n      \"level_reason\": \"Numbered list item under subsection 1.2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 역학적 분류기준\",\n      \"page\": 7,\n      \"level_reason\": \"Numbered list item under subsection 1.2.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.3 건강 관련 삶의 질 개념\",\n      \"page\": 7,\n      \"level_reason\": \"Subsection of section 1.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.4 건강보호의 책임에 대한 개념 변화\",\n      \"page\": 7,\n      \"level_reason\": \"Subsection of section 1.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.5 인권으로서의 건강권\",\n      \"page\": 8,\n      \"level_reason\": \"Subsection of section 1.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2. 건강과 질병의 결정요인 및 건강모형\",\n      \"page\": 10,\n      \"level_reason\": \"Numbered section title under the main chapter.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.1 결정요인의 개념 및 인과성과 인과론\",\n      \"page\": 10,\n      \"level_reason\": \"Subsection of section 2.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.2 건강-질병현상의 결정요인\",\n      \"page\": 12,\n      \"level_reason\": \"Subsection of section 2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 유전 요인\",\n      \"page\": 12,\n      \"level_reason\": \"Numbered list item under subsection 2.2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 성(性) 관련 요인\",\n      \"page\": 12,\n      \"level_reason\": \"Numbered list item under subsection 2.2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 생활습관 및 건강행태 요인\",\n      \"page\": 13,\n      \"level_reason\": \"Numbered list item under subsection 2.2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 개인의 사회경제적 수준\",\n      \"page\": 13,\n      \"level_reason\": \"Numbered list item under subsection 2.2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"5) 환경 요인\",\n      \"page\": 13,\n      \"level_reason\": \"Numbered list item under subsection 2.2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"6) 문화적 요인\",\n      \"page\": 13,\n      \"level_reason\": \"Numbered list item under subsection 2.2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"7) 정치적/사회제도적 요인\",\n      \"page\": 13,\n      \"level_reason\": \"Numbered list item under subsection 2.2.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.3 건강모형\",\n      \"page\": 14,\n      \"level_reason\": \"Subsection of section 2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 생의학적 모형\",\n      \"page\": 14,\n      \"level_reason\": \"Numbered list item under subsection 2.3.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 역학적 모형\",\n      \"page\": 15,\n      \"level_reason\": \"Numbered list item under subsection 2.3.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 웰니스 모형(wellness model)\",\n      \"page\": 17,\n      \"level_reason\": \"Numbered list item under subsection 2.3.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"예방의학과 공중보건학의 개념과 활용\",\n      \"page\": 19,\n      \"level_reason\": \"Main chapter title with largest font size.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1. 예방의학과 공중보건학의 개념\",\n      \"page\": 19,\n      \"level_reason\": \"Numbered section title under the main chapter.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.1 의학의 분류\",\n      \"page\": 19,\n      \"level_reason\": \"Subsection of section 1.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.2 예방의학과 공중보건학의 개념\",\n      \"page\": 21,\n      \"level_reason\": \"Subsection of section 1.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"2. 예방의학과 공중보건학의 내용과 적용\",\n      \"page\": 22,\n      \"level_reason\": \"Numbered section title under the main chapter.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.1 질병 발생단계와 예방대책\",\n      \"page\": 22,\n      \"level_reason\": \"Subsection of section 2.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.2 예방의학과 공중보건학의 내용과 활용\",\n      \"page\": 24,\n      \"level_reason\": \"Subsection of section 2.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.3 예방의학과 공중보건학의 접근 전략\",\n      \"page\": 25,\n      \"level_reason\": \"Subsection of section 2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 로즈의 예방의학 전략\",\n      \"page\": 25,\n      \"level_reason\": \"Numbered list item under subsection 2.3.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 건강영향 피라미드\",\n      \"page\": 26,\n      \"level_reason\": \"Numbered list item under subsection 2.3.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"2.4 예방의학과 공중보건윤리\",\n      \"page\": 27,\n      \"level_reason\": \"Subsection of section 2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 공중보건과 윤리\",\n      \"page\": 27,\n      \"level_reason\": \"Numbered list item under subsection 2.4.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 공중보건 활동과 관련된 윤리 문제\",\n      \"page\": 29,\n      \"level_reason\": \"Numbered list item under subsection 2.4.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"예방의학과 공중보건학의 발전과 미래\",\n      \"page\": 34,\n      \"level_reason\": \"Main chapter title based on hierarchy and numbering.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"1. 서양의 예방의학과 공중보건학의 역사\",\n      \"page\": 34,\n      \"level_reason\": \"Numbered section title under the main chapter.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.1 고대(B.C. ?~A.D. 476)\",\n      \"page\": 34,\n      \"level_reason\": \"Subsection of section 1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 인도\",\n      \"page\": 34,\n      \"level_reason\": \"Numbered list item under subsection 1.1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 메소포타미아\",\n      \"page\": 35,\n      \"level_reason\": \"Numbered list item under subsection 1.1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 이집트\",\n      \"page\": 35,\n      \"level_reason\": \"Numbered list item under subsection 1.1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4) 그리스\",\n      \"page\": 35,\n      \"level_reason\": \"Numbered list item under subsection 1.1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"5) 로마\",\n      \"page\": 35,\n      \"level_reason\": \"Numbered list item under subsection 1.1.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.2 중세(A.D. 476~1453)\",\n      \"page\": 35,\n      \"level_reason\": \"Subsection of section 1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 중세의 전염병 창궐과 공중보건제도\",\n      \"page\": 36,\n      \"level_reason\": \"Numbered list item under subsection 1.2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 한센병의 유행과 격리제도\",\n      \"page\": 36,\n      \"level_reason\": \"Numbered list item under subsection 1.2.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 페스트의 유행과 검역제도\",\n      \"page\": 36,\n      \"level_reason\": \"Numbered list item under subsection 1.2.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.3 르네상스와 중상주의시대(A.D. 1453~1750)\",\n      \"page\": 36,\n      \"level_reason\": \"Subsection of section 1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 르네상스 시대와 근대 과학기술의 태동\",\n      \"page\": 37,\n      \"level_reason\": \"Numbered list item under subsection 1.3.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 중상주의 시대와 통계의 발전\",\n      \"page\": 37,\n      \"level_reason\": \"Numbered list item under subsection 1.3.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.4 근대(A.D. 1750~19세기 후반)\",\n      \"page\": 37,\n      \"level_reason\": \"Subsection of section 1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 계몽주의와 프랑스 혁명시대(1750~1830)\",\n      \"page\": 37,\n      \"level_reason\": \"Numbered list item under subsection 1.4.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"2) 산업혁명과 환경위생시대(19세기 중반)\",\n      \"page\": 38,\n      \"level_reason\": \"Numbered list item under subsection 1.4.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"3) 19세기 후반\",\n      \"page\": 39,\n      \"level_reason\": \"Numbered list item under subsection 1.4.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1.5 20세기 전반기(제2차 대전 종말까지)\",\n      \"page\": 39,\n      \"level_reason\": \"Subsection of section 1.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1) 빈곤 문제의 대두와 영국 공중보건의 발전\",\n      \"page\": 39,\n      \"level_reason\": \"Numbered list item under subsection 1.5.\"\n    }\n  ]\n}"
+}

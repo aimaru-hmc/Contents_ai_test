@@ -1,0 +1,29 @@
+Run log saved: data/output/logs/1편(2021)_gemma_20260709_131232_log.txt
+Processing started: 1편(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 51 pages, 169770 chars, mode=layout, toc_page_mode=exclude, selected_pages=51, removed_header_footer_lines=137
+  Parsed PDF text saved: data/output/parsed_pdfs/1_2021_gemma_20260709_131232_parsed_pdf.txt
+  Gemma text chunk processing started: 2 chunks
+  Gemma chunk 1/2 request: pages 1-39
+  Gemma input chunk 1 saved: data/output/input_chunks/1_2021_gemma_20260709_131232/chunk_1_pages_1-39.json
+  Gemma level review(chunk 1/2) started
+  Gemma level review(chunk 1/2) completed: 62 chapters / level changes 0
+  Gemma chunk 1 completed: 62 chapters
+  Gemma chunk 2/2 request: pages 40-51
+  Gemma input chunk 2 saved: data/output/input_chunks/1_2021_gemma_20260709_131232/chunk_2_pages_40-51.json
+  Gemma level review(chunk 2/2) started
+  Gemma level review(chunk 2/2) completed: 21 chapters / level changes 0
+  Gemma chunk 2 completed: 21 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) completed: 83 chapters / level changes 0
+Completed: data/output/1_2021_gemma_20260709_131452_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 2m 20.4s (140.438s)
+  title: Preventive Medicine and Public Health
+  chapters: 83
+Processing result: success 1 / failed 0
+Run log saved: data/output/logs/1편(2021)_gemma_20260709_131232_log.txt
