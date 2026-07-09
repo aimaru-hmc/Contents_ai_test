@@ -1,0 +1,8 @@
+Run log saved: data\output\logs\3편5-7장(2021)_openai_20260709_200312_log.txt
+Processing started: 3편5-7장(2021).pdf
+  provider: openai
+Failed: 3편5-7장(2021).pdf / OPENAI_API_KEY is required. Add OPENAI_API_KEY=... to your .env file.
+  elapsed: 0.0s (0.000s)
+  Error log saved: data\output\error_logs\20260709_200312_3_5-7_2021_openai_gpt-5.5_PDF_processing_failed_error.json
+Processing result: success 0 / failed 1
+Run log saved: data\output\logs\3편5-7장(2021)_openai_20260709_200312_log.txt
