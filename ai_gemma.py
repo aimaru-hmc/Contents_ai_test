@@ -353,6 +353,25 @@ Output exactly one JSON object in the format below. Do not output explanations, 
 """.strip()
 
 
+def build_attached_pdf_prompt(base_prompt: str, pdf_name: str) -> str:
+    return f"""
+{base_prompt}
+
+[PDF Attachment Mode]
+Create the TOC using only the attached PDF.
+Use actual PDF viewer page numbers.
+Rules:
+- Output only body hierarchy titles: chapters, sections, subsections.
+- Ignore existing TOC/Contents pages and listings, repeated headers/footers, body sentences, captions, questions, and references.
+- Use PDF visual layout and source hierarchy only for level inference.
+- Include level_reason for every entry when possible.
+- Return compact valid JSON only.
+
+[PDF File Name]
+{pdf_name}
+""".strip()
+
+
 def get_api_key(provider: str) -> str:
     env_name_by_provider = {
         "gemini": "GEMINI_API_KEY",
@@ -1291,6 +1310,7 @@ def generate_gemini_once(
 
 def generate_toc_from_pdf_gemini(pdf_path: Path, args: argparse.Namespace, prompt: str) -> tuple[dict[str, Any], str, str]:
     client, types = create_gemini_client(api_key=get_api_key("gemini"))
+    pdf_prompt = build_attached_pdf_prompt(prompt, pdf_path.name)
     uploaded_file = upload_pdf_to_gemini(
         client=client,
         pdf_path=pdf_path,
@@ -1314,7 +1334,7 @@ def generate_toc_from_pdf_gemini(pdf_path: Path, args: argparse.Namespace, promp
             if index > 0:
                 print(f"Trying Gemini fallback model: {model}", file=sys.stderr, flush=True)
 
-            parse_retry_prompt = prompt
+            parse_retry_prompt = pdf_prompt
 
             for parse_attempt in range(1, max(1, int(args.ai_retries)) + 1):
                 try:
@@ -1325,12 +1345,14 @@ def generate_toc_from_pdf_gemini(pdf_path: Path, args: argparse.Namespace, promp
                             flush=True,
                         )
                         parse_retry_prompt = (
-                            prompt
+                            pdf_prompt
                             + "\n\n[Important Retry Instruction]\n"
                             + "The previous response failed JSON parsing due to invalid JSON syntax. "
                             + "This time, output exactly one valid JSON object that Python json.loads() can parse directly. "
                             + "Do not omit commas. Do not output Markdown, explanations, or code fences."
                         )
+                    else:
+                        parse_retry_prompt = pdf_prompt
 
                     print(f"  Gemini TOC generation started: {model}", flush=True)
                     response = with_retry(
@@ -1494,6 +1516,7 @@ def generate_openai_once(
 
 def generate_toc_from_pdf_openai(pdf_path: Path, args: argparse.Namespace, prompt: str) -> tuple[dict[str, Any], str, str]:
     client = create_openai_client(api_key=get_api_key("openai"))
+    pdf_prompt = build_attached_pdf_prompt(prompt, pdf_path.name)
     uploaded_file = None
     models = parse_model_list(args.model, args.ai_fallback_models)
     last_error: Exception | None = None
@@ -1526,7 +1549,7 @@ def generate_toc_from_pdf_openai(pdf_path: Path, args: argparse.Namespace, promp
             if index > 0:
                 print(f"Trying OpenAI fallback model: {model}", file=sys.stderr, flush=True)
 
-            parse_retry_prompt = prompt
+            parse_retry_prompt = pdf_prompt
 
             for parse_attempt in range(1, max(1, int(args.ai_retries)) + 1):
                 try:
@@ -1537,13 +1560,15 @@ def generate_toc_from_pdf_openai(pdf_path: Path, args: argparse.Namespace, promp
                             flush=True,
                         )
                         parse_retry_prompt = (
-                            prompt
+                            pdf_prompt
                             + "\n\n[Important Retry Instruction]\n"
                             + "The previous response failed JSON parsing due to invalid JSON syntax. "
                             + "This time, output exactly one valid JSON object that Python json.loads() can parse directly. "
                             + "Do not omit commas between array items, and close the JSON object completely even if the output is long. "
                             + "Do not output Markdown, explanations, or code fences."
                         )
+                    else:
+                        parse_retry_prompt = pdf_prompt
 
                     print(f"  OpenAI TOC generation started: {model}", flush=True)
                     response = with_retry(
@@ -6032,6 +6057,50 @@ def write_gemma_level_review_change_summary(
     return summary_file
 
 
+def write_gemma_invalid_heading_candidates_file(
+    *,
+    args: argparse.Namespace,
+    pdf_path: Path,
+    provider: str,
+    model: str,
+    stage_label: str,
+    toc: dict[str, Any],
+    candidates: list[dict[str, Any]],
+) -> Path | None:
+    if not candidates:
+        return None
+
+    chapters = toc.get("chapters", [])
+    candidate_file = write_stage_file(
+        args=args,
+        pdf_path=pdf_path,
+        provider=provider,
+        model=model,
+        stage="possible_invalid_heading_candidates",
+        chunk=stage_label,
+        payload={
+            "review_stage": stage_label,
+            "input_chapters": len(chapters) if isinstance(chapters, list) else 0,
+            "candidate_count": len(candidates),
+            "candidates": candidates,
+        },
+    )
+
+    candidate_files = getattr(args, "_gemma_invalid_heading_candidate_files", None)
+    if not isinstance(candidate_files, list):
+        candidate_files = []
+    if candidate_file is not None:
+        candidate_files.append(str(candidate_file))
+        setattr(args, "_gemma_invalid_heading_candidate_files", candidate_files)
+
+    update_processing_metadata(
+        args,
+        gemma_invalid_heading_candidate_file_count=len(candidate_files),
+        gemma_invalid_heading_candidate_files=candidate_files,
+    )
+    return candidate_file
+
+
 def restore_missing_toc_metadata_from_source(toc: dict[str, Any], source_toc: dict[str, Any]) -> dict[str, Any]:
     source_by_key: dict[tuple[str, int], dict[str, Any]] = {}
     source_chapters = source_toc.get("chapters", [])
@@ -6126,6 +6195,15 @@ def review_gemma_toc_levels(
         toc,
         source_text=source_text,
     )
+    invalid_heading_candidates_file = write_gemma_invalid_heading_candidates_file(
+        args=args,
+        pdf_path=pdf_path,
+        provider="gemma",
+        model=model,
+        stage_label=stage_label,
+        toc=toc,
+        candidates=invalid_heading_candidates,
+    )
     review_prompt = build_gemma_level_review_prompt(
         base_prompt=prompt,
         pdf_name=pdf_path.name,
@@ -6170,6 +6248,7 @@ def review_gemma_toc_levels(
             "level_change_report_recorded": level_change_report_recorded,
             "possible_invalid_heading_candidate_count": len(invalid_heading_candidates),
             "possible_invalid_heading_candidates": invalid_heading_candidates,
+            "possible_invalid_heading_candidates_file": str(invalid_heading_candidates_file) if invalid_heading_candidates_file is not None else None,
         }
         record_gemma_level_review_status(args, status)
         print(
@@ -6186,6 +6265,7 @@ def review_gemma_toc_levels(
             "level_changes": 0,
             "possible_invalid_heading_candidate_count": len(invalid_heading_candidates),
             "possible_invalid_heading_candidates": invalid_heading_candidates,
+            "possible_invalid_heading_candidates_file": str(invalid_heading_candidates_file) if invalid_heading_candidates_file is not None else None,
         }
         record_gemma_level_review_status(args, status)
         print(f"  {label} failed; keeping previous TOC: {error}", file=sys.stderr, flush=True)
