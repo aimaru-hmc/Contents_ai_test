@@ -1,0 +1,2274 @@
+{
+    "timestamp": "2026-07-10 10:14:48",
+    "stage_index": 40,
+    "stage": "level_review_changes_summary",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "review_count": 8,
+    "level_change_count": 32,
+    "added_count": 0,
+    "removed_count": 73,
+    "reviews": [
+        {
+            "review_stage": "chunk 1/8",
+            "input_chapters": 37,
+            "output_chapters": 19,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 18,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Scope",
+                        "page": 16,
+                        "level_reason": "Sub-subsection under Definition, scope, and uses of epidemiology.",
+                        "_layout_page": 16,
+                        "_layout_x": 55.0,
+                        "_layout_y": 385.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.75,
+                        "_layout_text": "Scope",
+                        "_source_order": 513
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "Epidemiology and public health",
+                        "page": 17,
+                        "level_reason": "Subsection under Chapter 1.",
+                        "_layout_page": 17,
+                        "_layout_x": 140.0,
+                        "_layout_y": 341.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "Epidemiology and public health",
+                        "_source_order": 586
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Causation of disease",
+                        "page": 17,
+                        "level_reason": "Sub-subsection under Epidemiology and public health.",
+                        "_layout_page": 17,
+                        "_layout_x": 140.0,
+                        "_layout_y": 476.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Causation of disease",
+                        "_source_order": 594
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Natural history of disease",
+                        "page": 17,
+                        "level_reason": "Sub-subsection under Epidemiology and public health.",
+                        "_layout_page": 17,
+                        "_layout_x": 45.0,
+                        "_layout_y": 618.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Good health Ill health Natural history of disease",
+                        "_source_order": 605
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Health status of populations",
+                        "page": 18,
+                        "level_reason": "Sub-subsection under Epidemiology and public health.",
+                        "_layout_page": 18,
+                        "_layout_x": 55.0,
+                        "_layout_y": 190.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Health status of populations",
+                        "_source_order": 620
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Evaluating interventions",
+                        "page": 18,
+                        "level_reason": "Sub-subsection under Epidemiology and public health.",
+                        "_layout_page": 18,
+                        "_layout_x": 55.0,
+                        "_layout_y": 436.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Evaluating interventions",
+                        "_source_order": 634
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Methyl mercury poisoning",
+                        "page": 20,
+                        "level_reason": "Sub-subsection under Achievements in epidemiology.",
+                        "_layout_page": 20,
+                        "_layout_x": 55.0,
+                        "_layout_y": 342.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Methyl mercury poisoning",
+                        "_source_order": 717
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Rheumatic fever and rheumatic heart disease",
+                        "page": 20,
+                        "level_reason": "Sub-subsection under Achievements in epidemiology.",
+                        "_layout_page": 20,
+                        "_layout_x": 55.0,
+                        "_layout_y": 576.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Rheumatic fever and rheumatic heart disease",
+                        "_source_order": 740
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Tobacco use, asbestos and lung cancer",
+                        "page": 22,
+                        "level_reason": "Sub-subsection under Achievements in epidemiology.",
+                        "_layout_page": 22,
+                        "_layout_x": 55.0,
+                        "_layout_y": 84.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Tobacco use, asbestos and lung cancer",
+                        "_source_order": 791
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Hip fractures",
+                        "page": 22,
+                        "level_reason": "Sub-subsection under Achievements in epidemiology.",
+                        "_layout_page": 22,
+                        "_layout_x": 55.0,
+                        "_layout_y": 473.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Hip fractures",
+                        "_source_order": 834
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "HIV/AIDS",
+                        "page": 23,
+                        "level_reason": "Sub-subsection under Achievements in epidemiology.",
+                        "_layout_page": 23,
+                        "_layout_x": 140.0,
+                        "_layout_y": 160.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "HIV/AIDS",
+                        "_source_order": 856
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "References",
+                        "page": 25,
+                        "level_reason": "Subsection under Chapter 1.",
+                        "_layout_page": 25,
+                        "_layout_x": 140.0,
+                        "_layout_y": 83.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "References",
+                        "_source_order": 959
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Diagnostic criteria",
+                        "page": 29,
+                        "level_reason": "Sub-subsection under Defining health and disease.",
+                        "_layout_page": 29,
+                        "_layout_x": 140.0,
+                        "_layout_y": 84.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Diagnostic criteria",
+                        "_source_order": 1074
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Population at risk",
+                        "page": 30,
+                        "level_reason": "Sub-subsection under Measuring disease frequency.",
+                        "_layout_page": 30,
+                        "_layout_x": 55.0,
+                        "_layout_y": 280.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Population at risk",
+                        "_source_order": 1141
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Incidence and prevalence",
+                        "page": 31,
+                        "level_reason": "Sub-subsection under Measuring disease frequency.",
+                        "_layout_page": 31,
+                        "_layout_x": 140.0,
+                        "_layout_y": 84.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Incidence and prevalence",
+                        "_source_order": 1164
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Prevalence",
+                        "page": 32,
+                        "level_reason": "Detailed measure under Incidence and prevalence.",
+                        "_layout_page": 32,
+                        "_layout_x": 55.0,
+                        "_layout_y": 121.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Prevalence",
+                        "_source_order": 1215
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Incidence",
+                        "page": 33,
+                        "level_reason": "Detailed measure under Incidence and prevalence.",
+                        "_layout_page": 33,
+                        "_layout_x": 140.0,
+                        "_layout_y": 412.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Incidence",
+                        "_source_order": 1280
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Cumulative incidence",
+                        "page": 34,
+                        "level_reason": "Detailed measure under Incidence and prevalence.",
+                        "_layout_page": 34,
+                        "_layout_x": 55.0,
+                        "_layout_y": 374.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Cumulative incidence",
+                        "_source_order": 1324
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 2/8",
+            "input_chapters": 40,
+            "output_chapters": 33,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 7,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Case fatality",
+                        "page": 35,
+                        "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                        "_layout_page": 35,
+                        "_layout_x": 140.0,
+                        "_layout_y": 84.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Case fatality",
+                        "_source_order": 1
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Mortality",
+                        "page": 36,
+                        "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                        "_layout_page": 36,
+                        "_layout_x": 55.0,
+                        "_layout_y": 298.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Mortality",
+                        "_source_order": 65
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Limitations of death certificates",
+                        "page": 36,
+                        "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                        "_layout_page": 36,
+                        "_layout_x": 55.0,
+                        "_layout_y": 505.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Limitations of death certificates",
+                        "_source_order": 88
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "Death rates",
+                        "page": 38,
+                        "level_reason": "Major section title with style s=20.0, r=2.00, x=55.",
+                        "_layout_page": 38,
+                        "_layout_x": 55.0,
+                        "_layout_y": 240.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "Death rates",
+                        "_source_order": 155
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Child mortality rate",
+                        "page": 39,
+                        "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                        "_layout_page": 39,
+                        "_layout_x": 140.0,
+                        "_layout_y": 531.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Child mortality rate",
+                        "_source_order": 224
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Adult mortality rate",
+                        "page": 41,
+                        "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                        "_layout_page": 41,
+                        "_layout_x": 140.0,
+                        "_layout_y": 275.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Adult mortality rate",
+                        "_source_order": 295
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Life expectancy",
+                        "page": 41,
+                        "level_reason": "Subsection title with style s=8.0, r=0.80, x=27.",
+                        "_layout_page": 41,
+                        "_layout_x": 27.0,
+                        "_layout_y": 439.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.8,
+                        "_layout_text": "Middle-income countries Life expectancy",
+                        "_source_order": 311
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 3/8",
+            "input_chapters": 59,
+            "output_chapters": 56,
+            "level_change_count": 8,
+            "added_count": 0,
+            "removed_count": 3,
+            "level_changes": [
+                {
+                    "chapter": "Validity",
+                    "page": 70,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Subsection title under Chapter 3.",
+                    "after_level_reason": "Sub-subsection under Potential errors/Chapter 3.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "Validity",
+                        "page": 70,
+                        "level_reason": "Subsection title under Chapter 3.",
+                        "_layout_page": 70,
+                        "_layout_x": 55.0,
+                        "_layout_y": 301.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Validity",
+                        "_source_order": 456
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "Validity",
+                        "page": 70,
+                        "level_reason": "Sub-subsection under Potential errors/Chapter 3.",
+                        "_layout_page": 70,
+                        "_layout_x": 55.0,
+                        "_layout_y": 301.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Validity",
+                        "_source_order": 456
+                    }
+                },
+                {
+                    "chapter": "Internal validity",
+                    "page": 71,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Sub-subsection under Validity.",
+                    "after_level_reason": "Detailed breakdown of Validity.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Internal validity",
+                        "page": 71,
+                        "level_reason": "Sub-subsection under Validity.",
+                        "_layout_page": 71,
+                        "_layout_x": 140.0,
+                        "_layout_y": 84.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Internal validity",
+                        "_source_order": 479
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Internal validity",
+                        "page": 71,
+                        "level_reason": "Detailed breakdown of Validity.",
+                        "_layout_page": 71,
+                        "_layout_x": 140.0,
+                        "_layout_y": 84.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Internal validity",
+                        "_source_order": 479
+                    }
+                },
+                {
+                    "chapter": "External validity",
+                    "page": 71,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Sub-subsection under Validity.",
+                    "after_level_reason": "Detailed breakdown of Validity.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "External validity",
+                        "page": 71,
+                        "level_reason": "Sub-subsection under Validity.",
+                        "_layout_page": 71,
+                        "_layout_x": 140.0,
+                        "_layout_y": 235.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "External validity",
+                        "_source_order": 490
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "External validity",
+                        "page": 71,
+                        "level_reason": "Detailed breakdown of Validity.",
+                        "_layout_page": 71,
+                        "_layout_x": 140.0,
+                        "_layout_y": 235.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "External validity",
+                        "_source_order": 490
+                    }
+                },
+                {
+                    "chapter": "Ethical issues",
+                    "page": 71,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Subsection title under Chapter 3.",
+                    "after_level_reason": "Sub-subsection under Chapter 3.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "Ethical issues",
+                        "page": 71,
+                        "level_reason": "Subsection title under Chapter 3.",
+                        "_layout_page": 71,
+                        "_layout_x": 140.0,
+                        "_layout_y": 400.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Ethical issues",
+                        "_source_order": 502
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "Ethical issues",
+                        "page": 71,
+                        "level_reason": "Sub-subsection under Chapter 3.",
+                        "_layout_page": 71,
+                        "_layout_x": 140.0,
+                        "_layout_y": 400.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Ethical issues",
+                        "_source_order": 502
+                    }
+                },
+                {
+                    "chapter": "Informed consent",
+                    "page": 71,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Sub-subsection under Ethical issues.",
+                    "after_level_reason": "Detailed breakdown of Ethical issues.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Informed consent",
+                        "page": 71,
+                        "level_reason": "Sub-subsection under Ethical issues.",
+                        "_layout_page": 71,
+                        "_layout_x": 140.0,
+                        "_layout_y": 626.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Informed consent",
+                        "_source_order": 517
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Informed consent",
+                        "page": 71,
+                        "level_reason": "Detailed breakdown of Ethical issues.",
+                        "_layout_page": 71,
+                        "_layout_x": 140.0,
+                        "_layout_y": 626.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Informed consent",
+                        "_source_order": 517
+                    }
+                },
+                {
+                    "chapter": "Confidentiality",
+                    "page": 72,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Sub-subsection under Ethical issues.",
+                    "after_level_reason": "Detailed breakdown of Ethical issues.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Confidentiality",
+                        "page": 72,
+                        "level_reason": "Sub-subsection under Ethical issues.",
+                        "_layout_page": 72,
+                        "_layout_x": 55.0,
+                        "_layout_y": 347.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Confidentiality",
+                        "_source_order": 544
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Confidentiality",
+                        "page": 72,
+                        "level_reason": "Detailed breakdown of Ethical issues.",
+                        "_layout_page": 72,
+                        "_layout_x": 55.0,
+                        "_layout_y": 347.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Confidentiality",
+                        "_source_order": 544
+                    }
+                },
+                {
+                    "chapter": "Respect for individual rights",
+                    "page": 72,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Sub-subsection under Ethical issues.",
+                    "after_level_reason": "Detailed breakdown of Ethical issues.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Respect for individual rights",
+                        "page": 72,
+                        "level_reason": "Sub-subsection under Ethical issues.",
+                        "_layout_page": 72,
+                        "_layout_x": 55.0,
+                        "_layout_y": 433.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Respect for individual rights",
+                        "_source_order": 550
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Respect for individual rights",
+                        "page": 72,
+                        "level_reason": "Detailed breakdown of Ethical issues.",
+                        "_layout_page": 72,
+                        "_layout_x": 55.0,
+                        "_layout_y": 433.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Respect for individual rights",
+                        "_source_order": 550
+                    }
+                },
+                {
+                    "chapter": "Scientific integrity",
+                    "page": 72,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Sub-subsection under Ethical issues.",
+                    "after_level_reason": "Detailed breakdown of Ethical issues.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Scientific integrity",
+                        "page": 72,
+                        "level_reason": "Sub-subsection under Ethical issues.",
+                        "_layout_page": 72,
+                        "_layout_x": 55.0,
+                        "_layout_y": 597.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Scientific integrity",
+                        "_source_order": 562
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Scientific integrity",
+                        "page": 72,
+                        "level_reason": "Detailed breakdown of Ethical issues.",
+                        "_layout_page": 72,
+                        "_layout_x": 55.0,
+                        "_layout_y": 597.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Scientific integrity",
+                        "_source_order": 562
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "Historical cohort studies",
+                        "page": 61,
+                        "level_reason": "Subsection title under Chapter 3.",
+                        "_layout_page": 61,
+                        "_layout_x": 140.0,
+                        "_layout_y": 419.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Historical cohort studies",
+                        "_source_order": 39
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "Nested case-control studies",
+                        "page": 61,
+                        "level_reason": "Subsection title under Chapter 3.",
+                        "_layout_page": 61,
+                        "_layout_x": 240.0,
+                        "_layout_y": 555.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Nested case-control studies",
+                        "_source_order": 54
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "Summary of epidemiological studies",
+                        "page": 62,
+                        "level_reason": "Subsection title under Chapter 3.",
+                        "_layout_page": 62,
+                        "_layout_x": 55.0,
+                        "_layout_y": 272.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Summary of epidemiological studies",
+                        "_source_order": 84
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 4/8",
+            "input_chapters": 50,
+            "output_chapters": 35,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 15,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Different regression models",
+                        "page": 88,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, i=1.",
+                        "_layout_page": 88,
+                        "_layout_x": 55.0,
+                        "_layout_y": 482.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Different regression models",
+                        "_source_order": 32
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Key concept for regression models",
+                        "page": 88,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, i=1.",
+                        "_layout_page": 88,
+                        "_layout_x": 55.0,
+                        "_layout_y": 562.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Key concept for regression models",
+                        "_source_order": 37
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Dependent variable",
+                        "page": 89,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, i=1.",
+                        "_layout_page": 89,
+                        "_layout_x": 140.0,
+                        "_layout_y": 303.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Dependent variable",
+                        "_source_order": 63
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Independent variables",
+                        "page": 90,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, i=1.",
+                        "_layout_page": 90,
+                        "_layout_x": 55.0,
+                        "_layout_y": 85.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Independent variables",
+                        "_source_order": 97
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Multiple variables",
+                        "page": 90,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, i=1.",
+                        "_layout_page": 90,
+                        "_layout_x": 55.0,
+                        "_layout_y": 343.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Multiple variables",
+                        "_source_order": 122
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Kaplan-Meier survival curves",
+                        "page": 92,
+                        "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                        "_layout_page": 92,
+                        "_layout_x": 55.0,
+                        "_layout_y": 569.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Kaplan-Meier survival curves",
+                        "_source_order": 251
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Two sample t-test",
+                        "page": 93,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, i=1.",
+                        "_layout_page": 93,
+                        "_layout_x": 140.0,
+                        "_layout_y": 391.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Two sample t-test",
+                        "_source_order": 281
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Test comparing proportions",
+                        "page": 94,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, i=1.",
+                        "_layout_page": 94,
+                        "_layout_x": 55.0,
+                        "_layout_y": 85.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Test comparing proportions",
+                        "_source_order": 308
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Multiple factors",
+                        "page": 97,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, i=1.",
+                        "_layout_page": 97,
+                        "_layout_x": 140.0,
+                        "_layout_y": 84.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Multiple factors",
+                        "_source_order": 449
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Attributable fraction",
+                        "page": 97,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, i=1.",
+                        "_layout_page": 97,
+                        "_layout_x": 140.0,
+                        "_layout_y": 235.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Attributable fraction",
+                        "_source_order": 460
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Consistency",
+                        "page": 104,
+                        "level_reason": "Subsection title with style s=9.0, r=0.90, x=55.",
+                        "_source_order": 34
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Experimental studies",
+                        "page": 108,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, i=1.",
+                        "_layout_page": 108,
+                        "_layout_x": 55.0,
+                        "_layout_y": 303.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Experimental studies",
+                        "_source_order": 986
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Cohort and case control studies",
+                        "page": 108,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, i=1.",
+                        "_layout_page": 108,
+                        "_layout_x": 55.0,
+                        "_layout_y": 441.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Cohort and case control studies",
+                        "_source_order": 999
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Cross-sectional studies",
+                        "page": 108,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, i=1.",
+                        "_layout_page": 108,
+                        "_layout_x": 55.0,
+                        "_layout_y": 527.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Cross-sectional studies",
+                        "_source_order": 1005
+                    }
+                },
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "Ecological studies",
+                        "page": 108,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, i=1.",
+                        "_layout_page": 108,
+                        "_layout_x": 55.0,
+                        "_layout_y": 626.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Ecological studies",
+                        "_source_order": 1012
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 5/8",
+            "input_chapters": 34,
+            "output_chapters": 32,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 2,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "Causation framework",
+                        "page": 115,
+                        "level_reason": "Subsection title with style s=14.0, r=1.40.",
+                        "_layout_page": 115,
+                        "_layout_x": 241.0,
+                        "_layout_y": 370.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Causation framework",
+                        "_source_order": 71
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Role of epidemiology",
+                        "page": 131,
+                        "level_reason": "Subsection under Introduction with style s=14.0, r=1.40.",
+                        "_layout_page": 131,
+                        "_layout_x": 238.0,
+                        "_layout_y": 84.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Role of epidemiology",
+                        "_source_order": 793
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 6/8",
+            "input_chapters": 50,
+            "output_chapters": 47,
+            "level_change_count": 8,
+            "added_count": 0,
+            "removed_count": 3,
+            "level_changes": [
+                {
+                    "chapter": "Interpreting biological data",
+                    "page": 164,
+                    "before_level": 4,
+                    "after_level": 3,
+                    "before_level_reason": "Lower level title with style s=14.0, r=1.40, x=55.0.",
+                    "after_level_reason": "Sub-subsection title with style s=14.0, r=1.4, x=55.0.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "Interpreting biological data",
+                        "page": 164,
+                        "level_reason": "Lower level title with style s=14.0, r=1.40, x=55.0.",
+                        "_layout_page": 164,
+                        "_layout_x": 55.0,
+                        "_layout_y": 173.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Interpreting biological data",
+                        "_source_order": 1081
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "Interpreting biological data",
+                        "page": 164,
+                        "level_reason": "Sub-subsection title with style s=14.0, r=1.4, x=55.0.",
+                        "_layout_page": 164,
+                        "_layout_x": 55.0,
+                        "_layout_y": 173.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Interpreting biological data",
+                        "_source_order": 1081
+                    }
+                },
+                {
+                    "chapter": "Individual versus group measurements",
+                    "page": 164,
+                    "before_level": 4,
+                    "after_level": 3,
+                    "before_level_reason": "Lower level title with style s=14.0, r=1.40, x=55.0.",
+                    "after_level_reason": "Sub-subsection title with style s=14.0, r=1.4, x=55.0.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "Individual versus group measurements",
+                        "page": 164,
+                        "level_reason": "Lower level title with style s=14.0, r=1.40, x=55.0.",
+                        "_layout_page": 164,
+                        "_layout_x": 55.0,
+                        "_layout_y": 615.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Individual versus group measurements",
+                        "_source_order": 1123
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "Individual versus group measurements",
+                        "page": 164,
+                        "level_reason": "Sub-subsection title with style s=14.0, r=1.4, x=55.0.",
+                        "_layout_page": 164,
+                        "_layout_x": 55.0,
+                        "_layout_y": 615.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Individual versus group measurements",
+                        "_source_order": 1123
+                    }
+                },
+                {
+                    "chapter": "Variation in time",
+                    "page": 164,
+                    "before_level": 5,
+                    "after_level": 4,
+                    "before_level_reason": "Lower level title with style s=9.0, r=0.90, x=55.0, italicized.",
+                    "after_level_reason": "Lower level title with style s=9.0, r=0.9, x=55.0.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "Variation in time",
+                        "page": 164,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, x=55.0, italicized.",
+                        "_layout_page": 164,
+                        "_layout_x": 55.0,
+                        "_layout_y": 643.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Variation in time",
+                        "_source_order": 1124
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Variation in time",
+                        "page": 164,
+                        "level_reason": "Lower level title with style s=9.0, r=0.9, x=55.0.",
+                        "_layout_page": 164,
+                        "_layout_x": 55.0,
+                        "_layout_y": 643.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Variation in time",
+                        "_source_order": 1124
+                    }
+                },
+                {
+                    "chapter": "Variation in exposure",
+                    "page": 165,
+                    "before_level": 5,
+                    "after_level": 4,
+                    "before_level_reason": "Lower level title with style s=9.0, r=0.90, x=140.0, italicized.",
+                    "after_level_reason": "Lower level title with style s=9.0, r=0.9, x=140.0.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "Variation in exposure",
+                        "page": 165,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, x=140.0, italicized.",
+                        "_layout_page": 165,
+                        "_layout_x": 140.0,
+                        "_layout_y": 120.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Variation in exposure",
+                        "_source_order": 1133
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Variation in exposure",
+                        "page": 165,
+                        "level_reason": "Lower level title with style s=9.0, r=0.9, x=140.0.",
+                        "_layout_page": 165,
+                        "_layout_x": 140.0,
+                        "_layout_y": 120.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Variation in exposure",
+                        "_source_order": 1133
+                    }
+                },
+                {
+                    "chapter": "Distribution issues",
+                    "page": 165,
+                    "before_level": 5,
+                    "after_level": 4,
+                    "before_level_reason": "Lower level title with style s=9.0, r=0.90, x=140.0, italicized.",
+                    "after_level_reason": "Lower level title with style s=9.0, r=0.9, x=140.0.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "Distribution issues",
+                        "page": 165,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, x=140.0, italicized.",
+                        "_layout_page": 165,
+                        "_layout_x": 140.0,
+                        "_layout_y": 232.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Distribution issues",
+                        "_source_order": 1141
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Distribution issues",
+                        "page": 165,
+                        "level_reason": "Lower level title with style s=9.0, r=0.9, x=140.0.",
+                        "_layout_page": 165,
+                        "_layout_x": 140.0,
+                        "_layout_y": 232.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Distribution issues",
+                        "_source_order": 1141
+                    }
+                },
+                {
+                    "chapter": "Measures of effect",
+                    "page": 165,
+                    "before_level": 5,
+                    "after_level": 4,
+                    "before_level_reason": "Lower level title with style s=9.0, r=0.90, x=140.0, italicized.",
+                    "after_level_reason": "Lower level title with style s=9.0, r=0.9, x=140.0.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "Measures of effect",
+                        "page": 165,
+                        "level_reason": "Lower level title with style s=9.0, r=0.90, x=140.0, italicized.",
+                        "_layout_page": 165,
+                        "_layout_x": 140.0,
+                        "_layout_y": 435.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Measures of effect",
+                        "_source_order": 1156
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Measures of effect",
+                        "page": 165,
+                        "level_reason": "Lower level title with style s=9.0, r=0.9, x=140.0.",
+                        "_layout_page": 165,
+                        "_layout_x": 140.0,
+                        "_layout_y": 435.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Measures of effect",
+                        "_source_order": 1156
+                    }
+                },
+                {
+                    "chapter": "Population dose",
+                    "page": 165,
+                    "before_level": 4,
+                    "after_level": 3,
+                    "before_level_reason": "Lower level title with style s=14.0, r=1.40, x=140.0.",
+                    "after_level_reason": "Sub-subsection title with style s=14.0, r=1.4, x=140.0.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "Population dose",
+                        "page": 165,
+                        "level_reason": "Lower level title with style s=14.0, r=1.40, x=140.0.",
+                        "_layout_page": 165,
+                        "_layout_x": 140.0,
+                        "_layout_y": 574.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Population dose",
+                        "_source_order": 1166
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "Population dose",
+                        "page": 165,
+                        "level_reason": "Sub-subsection title with style s=14.0, r=1.4, x=140.0.",
+                        "_layout_page": 165,
+                        "_layout_x": 140.0,
+                        "_layout_y": 574.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Population dose",
+                        "_source_order": 1166
+                    }
+                },
+                {
+                    "chapter": "Dose-effect relationships",
+                    "page": 166,
+                    "before_level": 4,
+                    "after_level": 3,
+                    "before_level_reason": "Lower level title with style s=14.0, r=1.40, x=55.0.",
+                    "after_level_reason": "Sub-subsection title with style s=14.0, r=1.4, x=55.0.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "Dose-effect relationships",
+                        "page": 166,
+                        "level_reason": "Lower level title with style s=14.0, r=1.40, x=55.0.",
+                        "_layout_page": 166,
+                        "_layout_x": 55.0,
+                        "_layout_y": 415.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Dose-effect relationships",
+                        "_source_order": 1201
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "Dose-effect relationships",
+                        "page": 166,
+                        "level_reason": "Sub-subsection title with style s=14.0, r=1.4, x=55.0.",
+                        "_layout_page": 166,
+                        "_layout_x": 55.0,
+                        "_layout_y": 415.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Dose-effect relationships",
+                        "_source_order": 1201
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "Diagnostic tests",
+                        "page": 149,
+                        "level_reason": "Subsection title with style s=9.0, r=0.90, x=34.0.",
+                        "_layout_page": 149,
+                        "_layout_x": 240.0,
+                        "_layout_y": 505.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.0,
+                        "_layout_text": "signs and symptoms. While diagnostic tests usually in-",
+                        "_source_order": 450
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Value of a test",
+                        "page": 149,
+                        "level_reason": "Sub-subsection title with style s=14.0, r=1.40, x=140.0.",
+                        "_layout_page": 149,
+                        "_layout_x": 140.0,
+                        "_layout_y": 581.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Value of a test",
+                        "_source_order": 456
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Biological monitoring",
+                        "page": 150,
+                        "level_reason": "Sub-subsection title with style s=14.0, r=1.40, x=140.0.",
+                        "_source_order": 41
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 7/8",
+            "input_chapters": 45,
+            "output_chapters": 38,
+            "level_change_count": 1,
+            "added_count": 0,
+            "removed_count": 7,
+            "level_changes": [
+                {
+                    "chapter": "The planning cycle",
+                    "page": 183,
+                    "before_level": 3,
+                    "after_level": 2,
+                    "before_level_reason": "Subsection title with style s=20.0, r=2.00, x=140.",
+                    "after_level_reason": "Section title with style s=20.0, r=2.00, x=140.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "The planning cycle",
+                        "page": 183,
+                        "level_reason": "Subsection title with style s=20.0, r=2.00, x=140.",
+                        "_layout_page": 183,
+                        "_layout_x": 140.0,
+                        "_layout_y": 132.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "The planning cycle",
+                        "_source_order": 658
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "The planning cycle",
+                        "page": 183,
+                        "level_reason": "Section title with style s=20.0, r=2.00, x=140.",
+                        "_layout_page": 183,
+                        "_layout_x": 140.0,
+                        "_layout_y": 132.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "The planning cycle",
+                        "_source_order": 658
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "Injury epidemiology",
+                        "page": 170,
+                        "level_reason": "Section title with style s=20.0, r=2.00, x=55.",
+                        "_layout_page": 170,
+                        "_layout_x": 55.0,
+                        "_layout_y": 83.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "Injury epidemiology",
+                        "_source_order": 133
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Traffic crash injuries",
+                        "page": 170,
+                        "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                        "_layout_page": 170,
+                        "_layout_x": 55.0,
+                        "_layout_y": 434.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Traffic crash injuries",
+                        "_source_order": 155
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Workplace injury",
+                        "page": 170,
+                        "level_reason": "Subsection title with style s=14.0, r=1.40, x=55.",
+                        "_layout_page": 170,
+                        "_layout_x": 55.0,
+                        "_layout_y": 538.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Workplace injury",
+                        "_source_order": 161
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Violence",
+                        "page": 171,
+                        "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                        "_layout_page": 171,
+                        "_layout_x": 140.0,
+                        "_layout_y": 408.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Violence",
+                        "_source_order": 193
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "Suicides",
+                        "page": 171,
+                        "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+                        "_layout_page": 171,
+                        "_layout_x": 140.0,
+                        "_layout_y": 538.0,
+                        "_layout_font_size": 14.0,
+                        "_layout_size_ratio": 1.4,
+                        "_layout_text": "Suicides",
+                        "_source_order": 201
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "References",
+                        "page": 174,
+                        "level_reason": "Section title with style s=20.0, r=2.00, x=55.",
+                        "_layout_page": 174,
+                        "_layout_x": 55.0,
+                        "_layout_y": 415.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "References",
+                        "_source_order": 326
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "References",
+                        "page": 189,
+                        "level_reason": "Section title with style s=20.0, r=2.00, x=140.",
+                        "_layout_page": 189,
+                        "_layout_x": 140.0,
+                        "_layout_y": 153.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "References",
+                        "_source_order": 968
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "final merged TOC",
+            "input_chapters": 280,
+            "output_chapters": 262,
+            "level_change_count": 15,
+            "added_count": 0,
+            "removed_count": 18,
+            "level_changes": [
+                {
+                    "chapter": "Age-specific death rates",
+                    "page": 38,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection title with style s=9.0, r=0.90, x=55.",
+                    "after_level_reason": "Detailed measure under Using available information.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Age-specific death rates",
+                        "page": 38,
+                        "level_reason": "Subsection title with style s=9.0, r=0.90, x=55.",
+                        "_layout_page": 38,
+                        "_layout_x": 55.0,
+                        "_layout_y": 469.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Age-specific death rates",
+                        "_source_order": 170
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Age-specific death rates",
+                        "page": 38,
+                        "level_reason": "Detailed measure under Using available information.",
+                        "_layout_page": 38,
+                        "_layout_x": 55.0,
+                        "_layout_y": 469.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Age-specific death rates",
+                        "_source_order": 170
+                    }
+                },
+                {
+                    "chapter": "Proportionate mortality",
+                    "page": 38,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection title with style s=9.0, r=0.90, x=55.",
+                    "after_level_reason": "Detailed measure under Using available information.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Proportionate mortality",
+                        "page": 38,
+                        "level_reason": "Subsection title with style s=9.0, r=0.90, x=55.",
+                        "_layout_page": 38,
+                        "_layout_x": 55.0,
+                        "_layout_y": 601.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Proportionate mortality",
+                        "_source_order": 179
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Proportionate mortality",
+                        "page": 38,
+                        "level_reason": "Detailed measure under Using available information.",
+                        "_layout_page": 38,
+                        "_layout_x": 55.0,
+                        "_layout_y": 601.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Proportionate mortality",
+                        "_source_order": 179
+                    }
+                },
+                {
+                    "chapter": "Disability-adjusted life years",
+                    "page": 46,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection title with style s=9.0, r=0.90, x=55.",
+                    "after_level_reason": "Detailed measure under Other summary measures.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Disability-adjusted life years",
+                        "page": 46,
+                        "level_reason": "Subsection title with style s=9.0, r=0.90, x=55.",
+                        "_layout_page": 46,
+                        "_layout_x": 55.0,
+                        "_layout_y": 305.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Disability-adjusted life years",
+                        "_source_order": 559
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Disability-adjusted life years",
+                        "page": 46,
+                        "level_reason": "Detailed measure under Other summary measures.",
+                        "_layout_page": 46,
+                        "_layout_x": 55.0,
+                        "_layout_y": 305.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Disability-adjusted life years",
+                        "_source_order": 559
+                    }
+                },
+                {
+                    "chapter": "Selection of cases and controls",
+                    "page": 58,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection title with style s=9.0, r=0.90, x=55.",
+                    "after_level_reason": "Detailed aspect of Case-control studies.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Selection of cases and controls",
+                        "page": 58,
+                        "level_reason": "Subsection title with style s=9.0, r=0.90, x=55.",
+                        "_layout_page": 58,
+                        "_layout_x": 55.0,
+                        "_layout_y": 392.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Selection of cases and controls",
+                        "_source_order": 1103
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Selection of cases and controls",
+                        "page": 58,
+                        "level_reason": "Detailed aspect of Case-control studies.",
+                        "_layout_page": 58,
+                        "_layout_x": 55.0,
+                        "_layout_y": 392.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Selection of cases and controls",
+                        "_source_order": 1103
+                    }
+                },
+                {
+                    "chapter": "Exposure",
+                    "page": 58,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection title with style s=9.0, r=0.90, x=55.",
+                    "after_level_reason": "Detailed aspect of Case-control studies.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Exposure",
+                        "page": 58,
+                        "level_reason": "Subsection title with style s=9.0, r=0.90, x=55.",
+                        "_layout_page": 58,
+                        "_layout_x": 55.0,
+                        "_layout_y": 634.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Exposure",
+                        "_source_order": 1121
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Exposure",
+                        "page": 58,
+                        "level_reason": "Detailed aspect of Case-control studies.",
+                        "_layout_page": 58,
+                        "_layout_x": 55.0,
+                        "_layout_y": 634.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Exposure",
+                        "_source_order": 1121
+                    }
+                },
+                {
+                    "chapter": "Odds ratio",
+                    "page": 59,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection title with style s=9.0, r=0.90, x=140.",
+                    "after_level_reason": "Detailed aspect of Case-control studies.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Odds ratio",
+                        "page": 59,
+                        "level_reason": "Subsection title with style s=9.0, r=0.90, x=140.",
+                        "_layout_page": 59,
+                        "_layout_x": 140.0,
+                        "_layout_y": 354.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Odds ratio",
+                        "_source_order": 1156
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Odds ratio",
+                        "page": 59,
+                        "level_reason": "Detailed aspect of Case-control studies.",
+                        "_layout_page": 59,
+                        "_layout_x": 140.0,
+                        "_layout_y": 354.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Odds ratio",
+                        "_source_order": 1156
+                    }
+                },
+                {
+                    "chapter": "The mean",
+                    "page": 80,
+                    "before_level": 5,
+                    "after_level": 4,
+                    "before_level_reason": "Detailed breakdown of central tendency.",
+                    "after_level_reason": "Detailed measure of central tendency.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "The mean",
+                        "page": 80,
+                        "level_reason": "Detailed breakdown of central tendency.",
+                        "_layout_page": 80,
+                        "_layout_x": 55.0,
+                        "_layout_y": 555.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "The mean",
+                        "_source_order": 858
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "The mean",
+                        "page": 80,
+                        "level_reason": "Detailed measure of central tendency.",
+                        "_layout_page": 80,
+                        "_layout_x": 55.0,
+                        "_layout_y": 555.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "The mean",
+                        "_source_order": 858
+                    }
+                },
+                {
+                    "chapter": "The median",
+                    "page": 80,
+                    "before_level": 5,
+                    "after_level": 4,
+                    "before_level_reason": "Detailed breakdown of central tendency.",
+                    "after_level_reason": "Detailed measure of central tendency.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "The median",
+                        "page": 80,
+                        "level_reason": "Detailed breakdown of central tendency.",
+                        "_layout_page": 80,
+                        "_layout_x": 55.0,
+                        "_layout_y": 641.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "The median",
+                        "_source_order": 867
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "The median",
+                        "page": 80,
+                        "level_reason": "Detailed measure of central tendency.",
+                        "_layout_page": 80,
+                        "_layout_x": 55.0,
+                        "_layout_y": 641.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "The median",
+                        "_source_order": 867
+                    }
+                },
+                {
+                    "chapter": "The mode",
+                    "page": 81,
+                    "before_level": 5,
+                    "after_level": 4,
+                    "before_level_reason": "Detailed breakdown of central tendency.",
+                    "after_level_reason": "Detailed measure of central tendency.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "The mode",
+                        "page": 81,
+                        "level_reason": "Detailed breakdown of central tendency.",
+                        "_layout_page": 81,
+                        "_layout_x": 140.0,
+                        "_layout_y": 185.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "The mode",
+                        "_source_order": 881
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "The mode",
+                        "page": 81,
+                        "level_reason": "Detailed measure of central tendency.",
+                        "_layout_page": 81,
+                        "_layout_x": 140.0,
+                        "_layout_y": 185.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "The mode",
+                        "_source_order": 881
+                    }
+                },
+                {
+                    "chapter": "Secondary prevention",
+                    "page": 121,
+                    "before_level": 3,
+                    "after_level": 2,
+                    "before_level_reason": "Specific level of prevention under Levels of prevention.",
+                    "after_level_reason": "Subsection under Levels of prevention.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Secondary prevention",
+                        "page": 121,
+                        "level_reason": "Specific level of prevention under Levels of prevention.",
+                        "_layout_page": 121,
+                        "_layout_x": 140.0,
+                        "_layout_y": 536.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.5,
+                        "_layout_text": "Secondary prevention",
+                        "_source_order": 418
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Secondary prevention",
+                        "page": 121,
+                        "level_reason": "Subsection under Levels of prevention.",
+                        "_layout_page": 121,
+                        "_layout_x": 140.0,
+                        "_layout_y": 536.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.5,
+                        "_layout_text": "Secondary prevention",
+                        "_source_order": 418
+                    }
+                },
+                {
+                    "chapter": "Definition",
+                    "page": 140,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Sub-subsection title with style s=9.0, r=0.9, x=55.0.",
+                    "after_level_reason": "Detailed aspect of Surveillance and response.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Definition",
+                        "page": 140,
+                        "level_reason": "Sub-subsection title with style s=9.0, r=0.9, x=55.0.",
+                        "_layout_page": 140,
+                        "_layout_x": 55.0,
+                        "_layout_y": 474.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Definition",
+                        "_source_order": 36
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Definition",
+                        "page": 140,
+                        "level_reason": "Detailed aspect of Surveillance and response.",
+                        "_layout_page": 140,
+                        "_layout_x": 55.0,
+                        "_layout_y": 474.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Definition",
+                        "_source_order": 36
+                    }
+                },
+                {
+                    "chapter": "The scope of surveillance",
+                    "page": 140,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Sub-subsection title with style s=9.0, r=0.9, x=55.0.",
+                    "after_level_reason": "Detailed aspect of Surveillance and response.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "The scope of surveillance",
+                        "page": 140,
+                        "level_reason": "Sub-subsection title with style s=9.0, r=0.9, x=55.0.",
+                        "_layout_page": 140,
+                        "_layout_x": 55.0,
+                        "_layout_y": 586.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "The scope of surveillance",
+                        "_source_order": 44
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "The scope of surveillance",
+                        "page": 140,
+                        "level_reason": "Detailed aspect of Surveillance and response.",
+                        "_layout_page": 140,
+                        "_layout_x": 55.0,
+                        "_layout_y": 586.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "The scope of surveillance",
+                        "_source_order": 44
+                    }
+                },
+                {
+                    "chapter": "Sources of data",
+                    "page": 141,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Sub-subsection title with style s=9.0, r=0.9, x=140.0.",
+                    "after_level_reason": "Detailed aspect of Surveillance and response.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Sources of data",
+                        "page": 141,
+                        "level_reason": "Sub-subsection title with style s=9.0, r=0.9, x=140.0.",
+                        "_layout_page": 141,
+                        "_layout_x": 140.0,
+                        "_layout_y": 361.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Sources of data",
+                        "_source_order": 79
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Sources of data",
+                        "page": 141,
+                        "level_reason": "Detailed aspect of Surveillance and response.",
+                        "_layout_page": 141,
+                        "_layout_x": 140.0,
+                        "_layout_y": 361.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Sources of data",
+                        "_source_order": 79
+                    }
+                },
+                {
+                    "chapter": "Surveillance in practice",
+                    "page": 141,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Sub-subsection title with style s=9.0, r=0.9, x=140.0.",
+                    "after_level_reason": "Detailed aspect of Surveillance and response.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Surveillance in practice",
+                        "page": 141,
+                        "level_reason": "Sub-subsection title with style s=9.0, r=0.9, x=140.0.",
+                        "_layout_page": 141,
+                        "_layout_x": 140.0,
+                        "_layout_y": 550.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Surveillance in practice",
+                        "_source_order": 92
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Surveillance in practice",
+                        "page": 141,
+                        "level_reason": "Detailed aspect of Surveillance and response.",
+                        "_layout_page": 141,
+                        "_layout_x": 140.0,
+                        "_layout_y": 550.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "Surveillance in practice",
+                        "_source_order": 92
+                    }
+                },
+                {
+                    "chapter": "Analysis and interpretation of surveillance data",
+                    "page": 142,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Sub-subsection title with style s=9.0, r=1.0, x=55.0.",
+                    "after_level_reason": "Detailed aspect of Surveillance and response.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "Analysis and interpretation of surveillance data",
+                        "page": 142,
+                        "level_reason": "Sub-subsection title with style s=9.0, r=1.0, x=55.0.",
+                        "_layout_page": 142,
+                        "_layout_x": 55.0,
+                        "_layout_y": 302.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 1.0,
+                        "_layout_text": "Analysis and interpretation of surveillance data data can be used to reinforce each other.",
+                        "_source_order": 132
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "Analysis and interpretation of surveillance data",
+                        "page": 142,
+                        "level_reason": "Detailed aspect of Surveillance and response.",
+                        "_layout_page": 142,
+                        "_layout_x": 55.0,
+                        "_layout_y": 302.0,
+                        "_layout_font_size": 9.0,
+                        "_layout_size_ratio": 1.0,
+                        "_layout_text": "Analysis and interpretation of surveillance data data can be used to reinforce each other.",
+                        "_source_order": 132
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter 3 Types of studies",
+                        "page": 61,
+                        "level_reason": "Top-level chapter title based on style and numbering.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "References",
+                        "page": 73,
+                        "level_reason": "Standard end-of-chapter section.",
+                        "_layout_page": 73,
+                        "_layout_x": 140.0,
+                        "_layout_y": 345.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "References",
+                        "_source_order": 589
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "References",
+                        "page": 95,
+                        "level_reason": "Standard section title with style s=20.0, r=2.00, x=140.",
+                        "_layout_page": 95,
+                        "_layout_x": 140.0,
+                        "_layout_y": 371.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "References",
+                        "_source_order": 392
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "References",
+                        "page": 110,
+                        "level_reason": "Standard section title with style s=20.0, r=2.00, x=55.",
+                        "_layout_page": 110,
+                        "_layout_x": 55.0,
+                        "_layout_y": 335.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "References",
+                        "_source_order": 1086
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter 6 Epidemiology and prevention: chronic noncommunicable diseases",
+                        "page": 114,
+                        "level_reason": "Top-level chapter title based on style and content.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "References",
+                        "page": 144,
+                        "level_reason": "Subsection title with style s=20.0, r=2.0, x=55.0.",
+                        "_layout_page": 144,
+                        "_layout_x": 55.0,
+                        "_layout_y": 165.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "References",
+                        "_source_order": 218
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "References",
+                        "page": 156,
+                        "level_reason": "Subsection title with style s=20.0, r=2.0, x=55.0.",
+                        "_layout_page": 156,
+                        "_layout_x": 55.0,
+                        "_layout_y": 141.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "References",
+                        "_source_order": 756
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter 1",
+                        "page": 202,
+                        "level_reason": "Top-level chapter title in Annex with style s=20.0, r=2.00, x=55.",
+                        "_layout_page": 202,
+                        "_layout_x": 55.0,
+                        "_layout_y": 83.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "Chapter 1",
+                        "_source_order": 283
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter 2",
+                        "page": 203,
+                        "level_reason": "Top-level chapter title in Annex with style s=20.0, r=2.00, x=140.",
+                        "_layout_page": 203,
+                        "_layout_x": 140.0,
+                        "_layout_y": 83.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "Chapter 2",
+                        "_source_order": 335
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter 3",
+                        "page": 205,
+                        "level_reason": "Top-level chapter title in Annex with style s=20.0, r=2.00, x=140.",
+                        "_layout_page": 205,
+                        "_layout_x": 140.0,
+                        "_layout_y": 83.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "Chapter 3",
+                        "_source_order": 398
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter 4",
+                        "page": 207,
+                        "level_reason": "Top-level chapter title in Annex with style s=20.0, r=2.00, x=140.",
+                        "_layout_page": 207,
+                        "_layout_x": 140.0,
+                        "_layout_y": 83.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "Chapter 4",
+                        "_source_order": 465
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter 5",
+                        "page": 208,
+                        "level_reason": "Top-level chapter title in Annex with style s=20.0, r=2.00, x=55.",
+                        "_layout_page": 208,
+                        "_layout_x": 55.0,
+                        "_layout_y": 83.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "Chapter 5",
+                        "_source_order": 509
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter 6",
+                        "page": 210,
+                        "level_reason": "Top-level chapter title in Annex with style s=20.0, r=2.00, x=55.",
+                        "_layout_page": 210,
+                        "_layout_x": 55.0,
+                        "_layout_y": 83.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "Chapter 6",
+                        "_source_order": 587
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter 7",
+                        "page": 211,
+                        "level_reason": "Top-level chapter title in Annex with style s=20.0, r=2.00, x=140.",
+                        "_layout_page": 211,
+                        "_layout_x": 140.0,
+                        "_layout_y": 83.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "Chapter 7",
+                        "_source_order": 622
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter 8",
+                        "page": 213,
+                        "level_reason": "Top-level chapter title in Annex with style s=20.0, r=2.00, x=140.",
+                        "_layout_page": 213,
+                        "_layout_x": 140.0,
+                        "_layout_y": 83.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "Chapter 8",
+                        "_source_order": 677
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter 9",
+                        "page": 214,
+                        "level_reason": "Top-level chapter title in Annex with style s=20.0, r=2.00, x=55.",
+                        "_layout_page": 214,
+                        "_layout_x": 55.0,
+                        "_layout_y": 83.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "Chapter 9",
+                        "_source_order": 720
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter 10",
+                        "page": 215,
+                        "level_reason": "Top-level chapter title in Annex with style s=20.0, r=2.00, x=140.",
+                        "_layout_page": 215,
+                        "_layout_x": 140.0,
+                        "_layout_y": 83.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "Chapter 10",
+                        "_source_order": 758
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter 11",
+                        "page": 217,
+                        "level_reason": "Top-level chapter title in Annex with style s=20.0, r=2.00, x=140.",
+                        "_layout_page": 217,
+                        "_layout_x": 140.0,
+                        "_layout_y": 83.0,
+                        "_layout_font_size": 20.0,
+                        "_layout_size_ratio": 2.0,
+                        "_layout_text": "Chapter 11",
+                        "_source_order": 812
+                    }
+                }
+            ]
+        }
+    ]
+}

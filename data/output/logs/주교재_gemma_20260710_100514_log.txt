@@ -29,3 +29,31 @@ Processing started: 주교재.pdf
   Gemma chunk 5/8 request: pages 114-139
   Gemma input chunk 5 saved: data/output/input_chunks/unknown_model_gemma_20260710_100514/chunk_5_pages_114-139.json
   Gemma level review(chunk 5/8) started
+  Gemma level review(chunk 5/8) completed: 32 chapters / level changes 0
+  Gemma chunk 5 completed: 32 chapters
+  Gemma chunk 6/8 request: pages 140-166
+  Gemma input chunk 6 saved: data/output/input_chunks/unknown_model_gemma_20260710_100514/chunk_6_pages_140-166.json
+  Gemma level review(chunk 6/8) started
+  Gemma level review(chunk 6/8) completed: 47 chapters / level changes 8
+  Gemma chunk 6 completed: 47 chapters
+  Gemma chunk 7/8 request: pages 167-194
+  Gemma input chunk 7 saved: data/output/input_chunks/unknown_model_gemma_20260710_100514/chunk_7_pages_167-194.json
+  Gemma level review(chunk 7/8) started
+  Gemma level review(chunk 7/8) completed: 38 chapters / level changes 1
+  Gemma chunk 7 completed: 38 chapters
+  Gemma chunk 8/8 request: pages 195-226
+  Gemma input chunk 8 saved: data/output/input_chunks/unknown_model_gemma_20260710_100514/chunk_8_pages_195-226.json
+  Gemma level review(chunk 8/8) started
+  Gemma level review(chunk 8/8) completed: 20 chapters / level changes 0
+  Gemma chunk 8 completed: 20 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) completed: 262 chapters / level changes 15
+Completed: data/output/unknown_model_gemma_20260710_101448_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 9m 33.3s (573.335s)
+  title: input_pdf
+  chapters: 262
+Processing result: success 1 / failed 0
+Run log saved: data/output/logs/주교재_gemma_20260710_100514_log.txt

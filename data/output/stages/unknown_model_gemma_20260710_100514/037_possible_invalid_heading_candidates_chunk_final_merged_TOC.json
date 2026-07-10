@@ -1,0 +1,546 @@
+{
+    "timestamp": "2026-07-10 10:13:02",
+    "stage_index": 37,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "final merged TOC",
+    "review_stage": "final merged TOC",
+    "input_chapters": 280,
+    "candidate_count": 33,
+    "candidates": [
+        {
+            "title": "Case-control studies",
+            "level": 3,
+            "page": 57,
+            "reasons": [
+                "title itself looks like a case/example/table/figure/problem/reference label"
+            ],
+            "level_reason": "Subsection title with style s=14.0, r=1.40, x=140.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 587.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Randomization",
+            "level": 4,
+            "page": 69,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Specific method for controlling confounding.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 366.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Restriction",
+            "level": 4,
+            "page": 69,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Specific method for controlling confounding.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 452.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Matching",
+            "level": 4,
+            "page": 69,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Specific method for controlling confounding.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 525.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Stratification and statistical modelling",
+            "level": 4,
+            "page": 70,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Specific method for controlling confounding.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 84.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Internal validity",
+            "level": 4,
+            "page": 71,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Detailed breakdown of Validity.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 84.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "External validity",
+            "level": 4,
+            "page": 71,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Detailed breakdown of Validity.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 235.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Informed consent",
+            "level": 4,
+            "page": 71,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Detailed breakdown of Ethical issues.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 626.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Confidentiality",
+            "level": 4,
+            "page": 72,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Detailed breakdown of Ethical issues.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 347.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Respect for individual rights",
+            "level": 4,
+            "page": 72,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Detailed breakdown of Ethical issues.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 433.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Scientific integrity",
+            "level": 4,
+            "page": 72,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Detailed breakdown of Ethical issues.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 597.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "References",
+            "level": 2,
+            "page": 73,
+            "reasons": [
+                "title itself looks like a case/example/table/figure/problem/reference label"
+            ],
+            "level_reason": "Standard end-of-chapter section.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 140.0,
+            "vertical_position": 345.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "The mean",
+            "level": 5,
+            "page": 80,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Detailed breakdown of central tendency.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 555.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "The median",
+            "level": 5,
+            "page": 80,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Detailed breakdown of central tendency.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 641.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "The mode",
+            "level": 5,
+            "page": 81,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Detailed breakdown of central tendency.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 185.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Random samples",
+            "level": 4,
+            "page": 82,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Detailed breakdown of sampling.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 378.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Calculating a confidence interval",
+            "level": 4,
+            "page": 83,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Detailed breakdown of confidence intervals.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 239.0,
+            "vertical_position": 237.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Degrees of freedom",
+            "level": 4,
+            "page": 83,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Detailed breakdown of confidence intervals.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 240.0,
+            "vertical_position": 511.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Interpreting measures outside the confidence interval",
+            "level": 4,
+            "page": 84,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Detailed breakdown of confidence intervals.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 83.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Using and interpreting regression models",
+            "level": 4,
+            "page": 88,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Lower level title with style s=9.0, r=0.90, i=1.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 397.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "References",
+            "level": 2,
+            "page": 95,
+            "reasons": [
+                "title itself looks like a case/example/table/figure/problem/reference label"
+            ],
+            "level_reason": "Standard section title with style s=20.0, r=2.00, x=140.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 140.0,
+            "vertical_position": 371.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "References",
+            "level": 2,
+            "page": 110,
+            "reasons": [
+                "title itself looks like a case/example/table/figure/problem/reference label"
+            ],
+            "level_reason": "Standard section title with style s=20.0, r=2.00, x=55.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 55.0,
+            "vertical_position": 335.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "References",
+            "level": 2,
+            "page": 144,
+            "reasons": [
+                "title itself looks like a case/example/table/figure/problem/reference label"
+            ],
+            "level_reason": "Subsection title with style s=20.0, r=2.0, x=55.0.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 55.0,
+            "vertical_position": 165.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Behavioural interventions",
+            "level": 4,
+            "page": 155,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Lower level title with style s=9.0, r=0.9, x=140.0.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 84.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Pharmacological interventions",
+            "level": 4,
+            "page": 155,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Lower level title with style s=9.0, r=0.9, x=240.0.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 240.0,
+            "vertical_position": 157.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Other interventions",
+            "level": 4,
+            "page": 155,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Lower level title with style s=9.0, r=0.9, x=140.0.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 387.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "References",
+            "level": 2,
+            "page": 156,
+            "reasons": [
+                "title itself looks like a case/example/table/figure/problem/reference label"
+            ],
+            "level_reason": "Subsection title with style s=20.0, r=2.0, x=55.0.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 55.0,
+            "vertical_position": 141.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Value of prevention",
+            "level": 4,
+            "page": 160,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Lower level title with style s=9.0, r=0.9, x=55.0.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 445.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Future challenges",
+            "level": 4,
+            "page": 160,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Lower level title with style s=9.0, r=0.9, x=55.0.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 557.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Variation in time",
+            "level": 4,
+            "page": 164,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Lower level title with style s=9.0, r=0.9, x=55.0.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 643.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Variation in exposure",
+            "level": 4,
+            "page": 165,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Lower level title with style s=9.0, r=0.9, x=140.0.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 120.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Distribution issues",
+            "level": 4,
+            "page": 165,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Lower level title with style s=9.0, r=0.9, x=140.0.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 232.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "Measures of effect",
+            "level": 4,
+            "page": 165,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Lower level title with style s=9.0, r=0.9, x=140.0.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 435.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        }
+    ]
+}

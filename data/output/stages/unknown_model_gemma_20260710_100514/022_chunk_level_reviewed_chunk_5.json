@@ -1,0 +1,1037 @@
+{
+    "timestamp": "2026-07-10 10:10:01",
+    "stage_index": 22,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "5",
+    "total_chunks": 8,
+    "start_page": 114,
+    "end_page": 139,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 5/8",
+        "input_chapters": 34,
+        "output_chapters": 32,
+        "level_changes": 0,
+        "added_entries": 0,
+        "removed_entries": 2,
+        "level_change_report_recorded": true,
+        "possible_invalid_heading_candidate_count": 16,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "Causation framework",
+                "level": 2,
+                "page": 115,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection title with style s=14.0, r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 241.0,
+                "vertical_position": 370.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=115, line=71, s=14.0, r=1.4, x=241.0, y=370.0: \"Causation framework\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=115, line=73, s=8.0, r=0.8, x=34.0, y=405.0: \"Box 6.2. Effect of risk factor burden on lifetime\""
+                    ],
+                    "small_label_examples": [
+                        "page=115, line=63, s=8.0, r=0.8, x=38.0, y=278.0: \"8 8\"",
+                        "page=115, line=64, s=8.0, r=0.8, x=38.0, y=292.0: \"6 6\"",
+                        "page=115, line=65, s=8.0, r=0.8, x=38.0, y=306.0: \"4 4\"",
+                        "page=115, line=66, s=8.0, r=0.8, x=124.0, y=311.0: \"Females\""
+                    ]
+                }
+            },
+            {
+                "title": "Levels of prevention",
+                "level": 2,
+                "page": 116,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section title with style s=20.0, r=2.00.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 319.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=116, line=128, s=20.0, r=2.0, x=55.0, y=319.0: \"Levels of prevention\""
+                    ],
+                    "embedded_examples": [
+                        "page=116, line=129, s=10.0, r=1.0, x=55.0, y=352.0: \"The four levels of prevention, corresponding to different phases in the development\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=116, line=120, s=8.0, r=0.8, x=162.0, y=192.0: \"- Age\"",
+                        "page=116, line=121, s=8.0, r=0.8, x=162.0, y=201.0: \"- Sex\"",
+                        "page=116, line=122, s=8.0, r=0.8, x=162.0, y=210.0: \"- Heredity\"",
+                        "page=116, line=121, s=8.0, r=0.8, x=162.0, y=201.0: \"- Sex\""
+                    ]
+                }
+            },
+            {
+                "title": "Primary prevention",
+                "level": 3,
+                "page": 118,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Specific level of prevention under Levels of prevention.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 361.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=118, line=218, s=20.0, r=2.0, x=55.0, y=361.0: \"Primary prevention\""
+                    ],
+                    "embedded_examples": [
+                        "page=118, line=219, s=10.0, r=1.0, x=55.0, y=393.0: \"The purpose of primary prevention is to limit the incidence of disease by controlling\"",
+                        "page=118, line=220, s=10.0, r=1.0, x=55.0, y=406.0: \"specific causes and risk factors. Primary prevention efforts can be directed at:\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 3,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=118, line=216, s=8.0, r=0.8, x=55.0, y=87.0: \"Figure 6.5. Inverse relation between real price of cigarettes and cigarette consumption,...\"",
+                        "page=118, line=216, s=8.0, r=0.8, x=55.0, y=87.0: \"Figure 6.5. Inverse relation between real price of cigarettes and cigarette consumption,...\"",
+                        "page=118, line=216, s=8.0, r=0.8, x=55.0, y=87.0: \"Figure 6.5. Inverse relation between real price of cigarettes and cigarette consumption,...\""
+                    ],
+                    "small_label_examples": [
+                        "page=118, line=217, s=8.0, r=0.8, x=55.0, y=97.0: \"1961–20013\"",
+                        "page=118, line=244, s=9.0, r=0.9, x=260.0, y=333.0: \"Period\"",
+                        "page=118, line=271, s=8.9, r=0.89, x=87.0, y=303.0: \"0 0\"",
+                        "page=118, line=272, s=4.7, r=0.47, x=96.0, y=310.0: \"1691 5691 9691 3791 7791 1891 5891 9891 3991 7991 1002\""
+                    ]
+                }
+            },
+            {
+                "title": "High-risk individual strategy",
+                "level": 4,
+                "page": 120,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Strategy under Primary prevention with style s=14.0, r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 411.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=120, line=352, s=14.0, r=1.4, x=55.0, y=411.0: \"High-risk individual strategy\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=120, line=357, s=8.0, r=0.8, x=289.0, y=486.0: \"Box 6.4. High-risk strategy: smoking cessation\""
+                    ],
+                    "small_label_examples": [
+                        "page=120, line=343, s=8.0, r=0.8, x=73.0, y=361.0: \"0\"",
+                        "page=120, line=345, s=8.0, r=0.8, x=178.0, y=387.0: \"Total cholesterol (mml/l)\"",
+                        "page=120, line=346, s=7.2, r=0.72, x=57.0, y=281.0: \"%\"",
+                        "page=120, line=347, s=9.0, r=0.9, x=231.0, y=53.0: \"Epidemiology and prevention: chronic noncommunicable diseases 107\""
+                    ]
+                }
+            },
+            {
+                "title": "Tertiary prevention",
+                "level": 3,
+                "page": 122,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Specific level of prevention under Levels of prevention.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 573.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=122, line=465, s=20.0, r=2.0, x=55.0, y=573.0: \"Tertiary prevention\""
+                    ],
+                    "embedded_examples": [
+                        "page=122, line=466, s=10.0, r=1.0, x=55.0, y=605.0: \"Tertiary prevention is aimed at reducing the progress or complications of established\"",
+                        "page=122, line=470, s=10.0, r=1.0, x=55.0, y=655.0: \"conditions. Tertiary prevention is often difficult to separate from treatment, since\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 4,
+                    "small_label_examples": [
+                        "page=122, line=457, s=8.0, r=0.8, x=77.0, y=419.0: \"1\"",
+                        "page=122, line=458, s=8.0, r=0.8, x=77.0, y=462.0: \"0\"",
+                        "page=122, line=459, s=8.0, r=0.8, x=85.0, y=472.0: \"0 100 200 300 400\"",
+                        "page=122, line=460, s=8.0, r=0.8, x=156.0, y=485.0: \"Average screen rate (per 1000 women)\""
+                    ]
+                }
+            },
+            {
+                "title": "Types of screening",
+                "level": 3,
+                "page": 123,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Screening with style s=14.0, r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 240.0,
+                "vertical_position": 423.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=123, line=497, s=14.0, r=1.4, x=240.0, y=423.0: \"Types of screening\""
+                    ],
+                    "embedded_examples": [
+                        "page=123, line=499, s=10.0, r=1.0, x=34.0, y=449.0: \"When targeted screening is done in groups with occu- There are different types of screeni...\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=123, line=498, s=8.0, r=0.8, x=34.0, y=433.0: \"Box 6.5. Targeted screening\"",
+                        "page=123, line=498, s=8.0, r=0.8, x=34.0, y=433.0: \"Box 6.5. Targeted screening\""
+                    ],
+                    "small_label_examples": [
+                        "page=123, line=500, s=9.0, r=0.9, x=34.0, y=460.0: \"pational exposures, the criteria for screening are not aims:\"",
+                        "page=123, line=501, s=9.0, r=0.9, x=34.0, y=471.0: \"necessarily as strict as those for general population\"",
+                        "page=123, line=503, s=9.0, r=0.9, x=34.0, y=493.0: \"minor (nausea or headache), but screening may be a\"",
+                        "page=123, line=505, s=9.0, r=0.9, x=34.0, y=504.0: \"high priority if the effect reduces the patient’s ability to\""
+                    ]
+                }
+            },
+            {
+                "title": "Criteria for screening",
+                "level": 3,
+                "page": 123,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Screening with style s=14.0, r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 635.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=123, line=522, s=14.0, r=1.4, x=140.0, y=635.0: \"Criteria for screening\""
+                    ],
+                    "embedded_examples": [
+                        "page=123, line=500, s=9.0, r=0.9, x=34.0, y=460.0: \"pational exposures, the criteria for screening are not aims:\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=123, line=498, s=8.0, r=0.8, x=34.0, y=433.0: \"Box 6.5. Targeted screening\"",
+                        "page=123, line=523, s=10.0, r=1.0, x=140.0, y=663.0: \"Table 6.4 lists the main criteria for establishing a screening programme.27 These relate\""
+                    ],
+                    "small_label_examples": [
+                        "page=123, line=501, s=9.0, r=0.9, x=34.0, y=471.0: \"necessarily as strict as those for general population\"",
+                        "page=123, line=503, s=9.0, r=0.9, x=34.0, y=493.0: \"minor (nausea or headache), but screening may be a\"",
+                        "page=123, line=505, s=9.0, r=0.9, x=34.0, y=504.0: \"high priority if the effect reduces the patient’s ability to\"",
+                        "page=123, line=507, s=9.0, r=0.9, x=34.0, y=515.0: \"work. Many health effects from exposure to environ-\""
+                    ]
+                }
+            },
+            {
+                "title": "Role of epidemiology",
+                "level": 3,
+                "page": 131,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Introduction with style s=14.0, r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 238.0,
+                "vertical_position": 84.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=131, line=793, s=14.0, r=1.4, x=238.0, y=84.0: \"Role of epidemiology\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 3,
+                    "visual_caption_examples": [
+                        "page=131, line=795, s=8.0, r=0.8, x=34.0, y=120.0: \"Box 7.1. Global burden of communicable disease\""
+                    ],
+                    "small_label_examples": [
+                        "page=131, line=792, s=9.0, r=0.9, x=27.0, y=53.0: \"118 Chapter 7\"",
+                        "page=131, line=799, s=9.0, r=0.9, x=34.0, y=158.0: \"attributable to maternal and perinatal conditions and\"",
+                        "page=131, line=801, s=9.0, r=0.9, x=34.0, y=169.0: \"nutritional deficiencies. Together these account for 30%\""
+                    ]
+                }
+            },
+            {
+                "title": "Epidemic and endemic disease",
+                "level": 2,
+                "page": 132,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section title with style s=20.0, r=2.00.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 145.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=132, line=858, s=20.0, r=2.0, x=55.0, y=145.0: \"Epidemic and endemic disease\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 1,
+                    "visual_caption_examples": [
+                        "page=132, line=866, s=8.0, r=0.8, x=282.0, y=274.0: \"Figure 7.2. Projected main causes of burden of\""
+                    ],
+                    "small_label_examples": [
+                        "page=132, line=853, s=9.0, r=0.9, x=232.0, y=53.0: \"Communicable diseases: epidemiology surveillance and response 119\""
+                    ]
+                }
+            },
+            {
+                "title": "Epidemics",
+                "level": 3,
+                "page": 132,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Epidemic and endemic disease with style s=14.0, r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 177.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=132, line=859, s=14.0, r=1.4, x=55.0, y=177.0: \"Epidemics\""
+                    ],
+                    "embedded_examples": [
+                        "page=132, line=860, s=10.0, r=1.0, x=55.0, y=205.0: \"Epidemics are defined as the occurrence of cases in excess of what is normally\"",
+                        "page=132, line=893, s=10.0, r=1.0, x=55.0, y=530.0: \"of bacteria, viruses and parasites cause most epidemics, and a thorough understand-\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 3,
+                    "visual_caption_examples": [
+                        "page=132, line=866, s=8.0, r=0.8, x=282.0, y=274.0: \"Figure 7.2. Projected main causes of burden of\"",
+                        "page=132, line=866, s=8.0, r=0.8, x=282.0, y=274.0: \"Figure 7.2. Projected main causes of burden of\""
+                    ],
+                    "small_label_examples": [
+                        "page=132, line=853, s=9.0, r=0.9, x=232.0, y=53.0: \"Communicable diseases: epidemiology surveillance and response 119\"",
+                        "page=132, line=853, s=9.0, r=0.9, x=232.0, y=53.0: \"Communicable diseases: epidemiology surveillance and response 119\"",
+                        "page=132, line=888, s=7.0, r=0.7, x=333.0, y=472.0: \"Injuries including mental disorders\""
+                    ]
+                }
+            },
+            {
+                "title": "Endemic diseases",
+                "level": 3,
+                "page": 134,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Epidemic and endemic disease with style s=14.0, r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 350.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=134, line=952, s=14.0, r=1.4, x=55.0, y=350.0: \"Endemic diseases\""
+                    ],
+                    "embedded_examples": [
+                        "page=134, line=955, s=10.0, r=1.0, x=55.0, y=404.0: \"high prevalence and incidence. Endemic diseases such as malaria are among the major\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 2,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=134, line=960, s=8.0, r=0.8, x=55.0, y=486.0: \"Table 7.1. Deaths from smallpox in selected European countries, 1900–1919\"",
+                        "page=134, line=960, s=8.0, r=0.8, x=55.0, y=486.0: \"Table 7.1. Deaths from smallpox in selected European countries, 1900–1919\""
+                    ],
+                    "small_label_examples": [
+                        "page=134, line=944, s=8.0, r=0.8, x=77.0, y=149.0: \"120\"",
+                        "page=134, line=945, s=8.0, r=0.8, x=77.0, y=174.0: \"100\"",
+                        "page=134, line=946, s=8.0, r=0.8, x=81.0, y=198.0: \"80\"",
+                        "page=134, line=947, s=8.0, r=0.8, x=81.0, y=223.0: \"60\""
+                    ]
+                }
+            },
+            {
+                "title": "Chain of infection",
+                "level": 2,
+                "page": 136,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Major section title with style s=20.0, r=2.00.",
+                "font_size": 20.0,
+                "size_ratio": 2.0,
+                "left_indent": 55.0,
+                "vertical_position": 132.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 2,
+                    "exact_examples": [
+                        "page=136, line=1045, s=20.0, r=2.0, x=55.0, y=132.0: \"Chain of infection\""
+                    ],
+                    "embedded_examples": [
+                        "page=136, line=1069, s=10.0, r=1.0, x=55.0, y=363.0: \"Knowledge of each factor in a chain of infection may be\"",
+                        "page=136, line=1074, s=10.0, r=1.0, x=55.0, y=415.0: \"cific chain of infection. For example, improvement of the\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=136, line=1047, s=8.0, r=0.8, x=289.0, y=174.0: \"Box 7.4. Epidemiology and avian influenza\""
+                    ],
+                    "small_label_examples": [
+                        "page=136, line=1041, s=9.0, r=0.9, x=232.0, y=53.0: \"Communicable diseases: epidemiology surveillance and response 123\"",
+                        "page=136, line=1049, s=9.0, r=0.9, x=289.0, y=190.0: \"Poultry farms were affected by the highly pathogenic\"",
+                        "page=136, line=1060, s=9.0, r=0.9, x=289.0, y=289.0: \"case-fatality rate: 50% of these confirmed cases died.\"",
+                        "page=136, line=1062, s=9.0, r=0.9, x=55.0, y=311.0: \"no signs or symptoms – to severe illness and death. causes a high fever leading to pneumo...\""
+                    ]
+                }
+            },
+            {
+                "title": "The infectious agent",
+                "level": 3,
+                "page": 136,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Component of chain of infection with style s=14.0, r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 491.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 1,
+                    "exact_examples": [
+                        "page=136, line=1079, s=14.0, r=1.4, x=55.0, y=491.0: \"The infectious agent\""
+                    ],
+                    "embedded_examples": [
+                        "page=136, line=1050, s=9.0, r=0.9, x=73.0, y=200.0: \"(cid:120) the infectious agent H5N1 virus in 2003 in Asia, and outbreaks spread to\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 1,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=136, line=1047, s=8.0, r=0.8, x=289.0, y=174.0: \"Box 7.4. Epidemiology and avian influenza\""
+                    ],
+                    "small_label_examples": [
+                        "page=136, line=1049, s=9.0, r=0.9, x=289.0, y=190.0: \"Poultry farms were affected by the highly pathogenic\"",
+                        "page=136, line=1054, s=9.0, r=0.9, x=289.0, y=245.0: \"human cases confirmed by November 2006 had a his-\"",
+                        "page=136, line=1056, s=9.0, r=0.9, x=289.0, y=267.0: \"poultry or domestic ducks.14 However, this low trans-\"",
+                        "page=136, line=1058, s=9.0, r=0.9, x=289.0, y=278.0: \"missibility has to be seen in the context of a very high\""
+                    ]
+                }
+            },
+            {
+                "title": "Transmission",
+                "level": 3,
+                "page": 137,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Component of chain of infection with style s=14.0, r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 221.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 14,
+                    "exact_examples": [
+                        "page=137, line=1106, s=14.0, r=1.4, x=140.0, y=221.0: \"Transmission\""
+                    ],
+                    "embedded_examples": [
+                        "page=137, line=1105, s=10.0, r=1.0, x=168.0, y=198.0: \"tent sexual transmission during the long asymptomatic period.\"",
+                        "page=137, line=1107, s=10.0, r=1.0, x=140.0, y=249.0: \"The second link in the chain of infection is the transmission or spread of an infectious\"",
+                        "page=137, line=1108, s=10.0, r=1.0, x=140.0, y=262.0: \"agent through the environment or to another person. Transmission may be direct or\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 3,
+                    "small_label_count": 4,
+                    "visual_caption_examples": [
+                        "page=137, line=1110, s=8.0, r=0.8, x=140.0, y=305.0: \"Table 7.2. Modes of transmission of an infectious agent\"",
+                        "page=137, line=1110, s=8.0, r=0.8, x=140.0, y=305.0: \"Table 7.2. Modes of transmission of an infectious agent\"",
+                        "page=137, line=1110, s=8.0, r=0.8, x=140.0, y=305.0: \"Table 7.2. Modes of transmission of an infectious agent\""
+                    ],
+                    "small_label_examples": [
+                        "page=137, line=1111, s=8.0, r=0.8, x=140.0, y=327.0: \"Direct transmission Indirect transmission\"",
+                        "page=137, line=1112, s=8.0, r=0.8, x=140.0, y=343.0: \"Touching Vehicle-borne (contaminated food, water,\"",
+                        "page=137, line=1113, s=8.0, r=0.8, x=140.0, y=352.0: \"Kissing towels, farm tools, etc.)\"",
+                        "page=137, line=1111, s=8.0, r=0.8, x=140.0, y=327.0: \"Direct transmission Indirect transmission\""
+                    ]
+                }
+            },
+            {
+                "title": "Host",
+                "level": 3,
+                "page": 138,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Component of chain of infection with style s=14.0, r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 55.0,
+                "vertical_position": 160.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 5,
+                    "exact_examples": [
+                        "page=138, line=1145, s=14.0, r=1.4, x=55.0, y=160.0: \"Host\""
+                    ],
+                    "embedded_examples": [
+                        "page=138, line=1146, s=10.0, r=1.0, x=55.0, y=187.0: \"The host is the third link in the chain of infection and is defined as the person or\"",
+                        "page=138, line=1148, s=10.0, r=1.0, x=55.0, y=213.0: \"under natural conditions. The points of entry to the host vary with the agent and\"",
+                        "page=138, line=1150, s=10.0, r=1.0, x=73.0, y=239.0: \"The reaction of the host to infection is extremely variable, being determined by\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=138, line=1139, s=9.0, r=0.9, x=232.0, y=53.0: \"Communicable diseases: epidemiology surveillance and response 125\"",
+                        "page=138, line=1139, s=9.0, r=0.9, x=232.0, y=53.0: \"Communicable diseases: epidemiology surveillance and response 125\""
+                    ]
+                }
+            },
+            {
+                "title": "Investigation",
+                "level": 3,
+                "page": 139,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy"
+                ],
+                "level_reason": "Subsection under Investigation and control with style s=14.0, r=1.40.",
+                "font_size": 14.0,
+                "size_ratio": 1.4,
+                "left_indent": 140.0,
+                "vertical_position": 236.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 5,
+                    "exact_examples": [
+                        "page=139, line=1191, s=14.0, r=1.4, x=140.0, y=236.0: \"Investigation\""
+                    ],
+                    "embedded_examples": [
+                        "page=139, line=1182, s=20.0, r=2.0, x=140.0, y=83.0: \"Investigation and control of epidemics\"",
+                        "page=139, line=1186, s=10.0, r=1.0, x=158.0, y=164.0: \"(cid:120) undertaking preliminary investigation\"",
+                        "page=139, line=1192, s=10.0, r=1.0, x=140.0, y=263.0: \"The initial stage of investigation should verify the diagnoses of suspected cases and\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=139, line=1181, s=9.0, r=0.9, x=27.0, y=53.0: \"126 Chapter 7\"",
+                        "page=139, line=1181, s=9.0, r=0.9, x=27.0, y=53.0: \"126 Chapter 7\""
+                    ]
+                }
+            }
+        ],
+        "possible_invalid_heading_candidates_file": "data/output/stages/unknown_model_gemma_20260710_100514/021_possible_invalid_heading_candidates_chunk_chunk_5_8.json"
+    },
+    "toc": {
+        "title": "input_pdf",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "Chapter 6 Epidemiology and prevention: chronic noncommunicable diseases",
+                "page": 114,
+                "level_reason": "Top-level chapter title based on style and content.",
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "Preventive potential",
+                "page": 114,
+                "level_reason": "Major section title with style s=14.0, r=1.56.",
+                "_layout_page": 114,
+                "_layout_x": 55.0,
+                "_layout_y": 134.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.56,
+                "_layout_text": "Preventive potential",
+                "_source_order": 5
+            },
+            {
+                "level": 2,
+                "chapter": "Levels of prevention",
+                "page": 116,
+                "level_reason": "Major section title with style s=20.0, r=2.00.",
+                "_layout_page": 116,
+                "_layout_x": 55.0,
+                "_layout_y": 319.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Levels of prevention",
+                "_source_order": 128
+            },
+            {
+                "level": 3,
+                "chapter": "Primordial prevention",
+                "page": 116,
+                "level_reason": "Specific level of prevention under Levels of prevention.",
+                "_layout_page": 116,
+                "_layout_x": 55.0,
+                "_layout_y": 517.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Primordial prevention",
+                "_source_order": 141
+            },
+            {
+                "level": 3,
+                "chapter": "Primary prevention",
+                "page": 118,
+                "level_reason": "Specific level of prevention under Levels of prevention.",
+                "_layout_page": 118,
+                "_layout_x": 55.0,
+                "_layout_y": 361.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Primary prevention",
+                "_source_order": 218
+            },
+            {
+                "level": 4,
+                "chapter": "Population strategy",
+                "page": 118,
+                "level_reason": "Strategy under Primary prevention.",
+                "_layout_page": 118,
+                "_layout_x": 55.0,
+                "_layout_y": 486.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Population strategy",
+                "_source_order": 225
+            },
+            {
+                "level": 4,
+                "chapter": "High-risk individual strategy",
+                "page": 120,
+                "level_reason": "Strategy under Primary prevention.",
+                "_layout_page": 120,
+                "_layout_x": 55.0,
+                "_layout_y": 411.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "High-risk individual strategy",
+                "_source_order": 352
+            },
+            {
+                "level": 3,
+                "chapter": "Secondary prevention",
+                "page": 121,
+                "level_reason": "Specific level of prevention under Levels of prevention.",
+                "_layout_page": 121,
+                "_layout_x": 140.0,
+                "_layout_y": 536.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.5,
+                "_layout_text": "Secondary prevention",
+                "_source_order": 418
+            },
+            {
+                "level": 3,
+                "chapter": "Tertiary prevention",
+                "page": 122,
+                "level_reason": "Specific level of prevention under Levels of prevention.",
+                "_layout_page": 122,
+                "_layout_x": 55.0,
+                "_layout_y": 573.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Tertiary prevention",
+                "_source_order": 465
+            },
+            {
+                "level": 2,
+                "chapter": "Screening",
+                "page": 123,
+                "level_reason": "Major section title with style s=20.0, r=2.00.",
+                "_layout_page": 123,
+                "_layout_x": 140.0,
+                "_layout_y": 210.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Screening",
+                "_source_order": 485
+            },
+            {
+                "level": 3,
+                "chapter": "Definition",
+                "page": 123,
+                "level_reason": "Subsection under Screening.",
+                "_layout_page": 123,
+                "_layout_x": 140.0,
+                "_layout_y": 280.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Definition",
+                "_source_order": 488
+            },
+            {
+                "level": 3,
+                "chapter": "Types of screening",
+                "page": 123,
+                "level_reason": "Subsection under Screening.",
+                "_layout_page": 123,
+                "_layout_x": 240.0,
+                "_layout_y": 423.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Types of screening",
+                "_source_order": 497
+            },
+            {
+                "level": 3,
+                "chapter": "Criteria for screening",
+                "page": 123,
+                "level_reason": "Subsection under Screening.",
+                "_layout_page": 123,
+                "_layout_x": 140.0,
+                "_layout_y": 635.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Criteria for screening",
+                "_source_order": 522
+            },
+            {
+                "level": 2,
+                "chapter": "Study questions",
+                "page": 127,
+                "level_reason": "End-of-chapter section.",
+                "_layout_page": 127,
+                "_layout_x": 140.0,
+                "_layout_y": 132.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Study questions",
+                "_source_order": 671
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter 7 Communicable diseases: epidemiology surveillance and response",
+                "page": 130,
+                "level_reason": "Top-level chapter title based on style s=32.0.",
+                "_layout_page": 130,
+                "_layout_x": 55.0,
+                "_layout_y": 169.0,
+                "_layout_font_size": 32.0,
+                "_layout_size_ratio": 3.2,
+                "_layout_text": "surveillance and response",
+                "_source_order": 761
+            },
+            {
+                "level": 2,
+                "chapter": "Key messages",
+                "page": 130,
+                "level_reason": "Standard chapter opening section.",
+                "_layout_page": 130,
+                "_layout_x": 168.0,
+                "_layout_y": 217.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Key messages",
+                "_source_order": 762
+            },
+            {
+                "level": 2,
+                "chapter": "Introduction",
+                "page": 130,
+                "level_reason": "Major section title.",
+                "_layout_page": 130,
+                "_layout_x": 55.0,
+                "_layout_y": 359.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Introduction",
+                "_source_order": 771
+            },
+            {
+                "level": 3,
+                "chapter": "Definitions",
+                "page": 130,
+                "level_reason": "Subsection under Introduction.",
+                "_layout_page": 130,
+                "_layout_x": 55.0,
+                "_layout_y": 391.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Definitions",
+                "_source_order": 772
+            },
+            {
+                "level": 3,
+                "chapter": "Threats to human security and health systems",
+                "page": 131,
+                "level_reason": "Subsection under Introduction.",
+                "_layout_page": 131,
+                "_layout_x": 238.0,
+                "_layout_y": 397.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Threats to human security and",
+                "_source_order": 823
+            },
+            {
+                "level": 2,
+                "chapter": "Epidemic and endemic disease",
+                "page": 132,
+                "level_reason": "Major section title.",
+                "_layout_page": 132,
+                "_layout_x": 55.0,
+                "_layout_y": 145.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Epidemic and endemic disease",
+                "_source_order": 858
+            },
+            {
+                "level": 3,
+                "chapter": "Epidemics",
+                "page": 132,
+                "level_reason": "Subsection under Epidemic and endemic disease.",
+                "_layout_page": 132,
+                "_layout_x": 55.0,
+                "_layout_y": 177.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Epidemics",
+                "_source_order": 859
+            },
+            {
+                "level": 3,
+                "chapter": "Endemic diseases",
+                "page": 134,
+                "level_reason": "Subsection under Epidemic and endemic disease.",
+                "_layout_page": 134,
+                "_layout_x": 55.0,
+                "_layout_y": 350.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Endemic diseases",
+                "_source_order": 952
+            },
+            {
+                "level": 3,
+                "chapter": "Emerging and re-emerging infections",
+                "page": 135,
+                "level_reason": "Subsection under Epidemic and endemic disease.",
+                "_layout_page": 135,
+                "_layout_x": 240.0,
+                "_layout_y": 215.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "infections",
+                "_source_order": 991
+            },
+            {
+                "level": 2,
+                "chapter": "Chain of infection",
+                "page": 136,
+                "level_reason": "Major section title.",
+                "_layout_page": 136,
+                "_layout_x": 55.0,
+                "_layout_y": 132.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Chain of infection",
+                "_source_order": 1045
+            },
+            {
+                "level": 3,
+                "chapter": "The infectious agent",
+                "page": 136,
+                "level_reason": "Component of chain of infection.",
+                "_layout_page": 136,
+                "_layout_x": 55.0,
+                "_layout_y": 491.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "The infectious agent",
+                "_source_order": 1079
+            },
+            {
+                "level": 3,
+                "chapter": "Transmission",
+                "page": 137,
+                "level_reason": "Component of chain of infection.",
+                "_layout_page": 137,
+                "_layout_x": 140.0,
+                "_layout_y": 221.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Transmission",
+                "_source_order": 1106
+            },
+            {
+                "level": 3,
+                "chapter": "Host",
+                "page": 138,
+                "level_reason": "Component of chain of infection.",
+                "_layout_page": 138,
+                "_layout_x": 55.0,
+                "_layout_y": 160.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Host",
+                "_source_order": 1145
+            },
+            {
+                "level": 3,
+                "chapter": "Environment",
+                "page": 138,
+                "level_reason": "Component of chain of infection.",
+                "_layout_page": 138,
+                "_layout_x": 55.0,
+                "_layout_y": 566.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Environment",
+                "_source_order": 1173
+            },
+            {
+                "level": 2,
+                "chapter": "Investigation and control of epidemics",
+                "page": 139,
+                "level_reason": "Major section title.",
+                "_layout_page": 139,
+                "_layout_x": 140.0,
+                "_layout_y": 83.0,
+                "_layout_font_size": 20.0,
+                "_layout_size_ratio": 2.0,
+                "_layout_text": "Investigation and control of epidemics",
+                "_source_order": 1182
+            },
+            {
+                "level": 3,
+                "chapter": "Investigation",
+                "page": 139,
+                "level_reason": "Subsection under Investigation and control.",
+                "_layout_page": 139,
+                "_layout_x": 140.0,
+                "_layout_y": 236.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Investigation",
+                "_source_order": 1191
+            },
+            {
+                "level": 3,
+                "chapter": "Identifying cases",
+                "page": 139,
+                "level_reason": "Subsection under Investigation and control.",
+                "_layout_page": 139,
+                "_layout_x": 140.0,
+                "_layout_y": 378.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Identifying cases",
+                "_source_order": 1200
+            },
+            {
+                "level": 3,
+                "chapter": "Management and control",
+                "page": 139,
+                "level_reason": "Subsection under Investigation and control.",
+                "_layout_page": 139,
+                "_layout_x": 140.0,
+                "_layout_y": 534.0,
+                "_layout_font_size": 14.0,
+                "_layout_size_ratio": 1.4,
+                "_layout_text": "Management and control",
+                "_source_order": 1210
+            }
+        ]
+    },
+    "raw_response": "{\n  \"title\": \"input_pdf\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 6 Epidemiology and prevention: chronic noncommunicable diseases\",\n      \"page\": 114,\n      \"level_reason\": \"Top-level chapter title based on style and content.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Preventive potential\",\n      \"page\": 114,\n      \"level_reason\": \"Major section title with style s=14.0, r=1.56.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Levels of prevention\",\n      \"page\": 116,\n      \"level_reason\": \"Major section title with style s=20.0, r=2.00.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Primordial prevention\",\n      \"page\": 116,\n      \"level_reason\": \"Specific level of prevention under Levels of prevention.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Primary prevention\",\n      \"page\": 118,\n      \"level_reason\": \"Specific level of prevention under Levels of prevention.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"Population strategy\",\n      \"page\": 118,\n      \"level_reason\": \"Strategy under Primary prevention.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"High-risk individual strategy\",\n      \"page\": 120,\n      \"level_reason\": \"Strategy under Primary prevention.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Secondary prevention\",\n      \"page\": 121,\n      \"level_reason\": \"Specific level of prevention under Levels of prevention.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Tertiary prevention\",\n      \"page\": 122,\n      \"level_reason\": \"Specific level of prevention under Levels of prevention.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Screening\",\n      \"page\": 123,\n      \"level_reason\": \"Major section title with style s=20.0, r=2.00.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Definition\",\n      \"page\": 123,\n      \"level_reason\": \"Subsection under Screening.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Types of screening\",\n      \"page\": 123,\n      \"level_reason\": \"Subsection under Screening.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Criteria for screening\",\n      \"page\": 123,\n      \"level_reason\": \"Subsection under Screening.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Study questions\",\n      \"page\": 127,\n      \"level_reason\": \"End-of-chapter section.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter 7 Communicable diseases: epidemiology surveillance and response\",\n      \"page\": 130,\n      \"level_reason\": \"Top-level chapter title based on style s=32.0.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Key messages\",\n      \"page\": 130,\n      \"level_reason\": \"Standard chapter opening section.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Introduction\",\n      \"page\": 130,\n      \"level_reason\": \"Major section title.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Definitions\",\n      \"page\": 130,\n      \"level_reason\": \"Subsection under Introduction.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Threats to human security and health systems\",\n      \"page\": 131,\n      \"level_reason\": \"Subsection under Introduction.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Epidemic and endemic disease\",\n      \"page\": 132,\n      \"level_reason\": \"Major section title.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Epidemics\",\n      \"page\": 132,\n      \"level_reason\": \"Subsection under Epidemic and endemic disease.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Endemic diseases\",\n      \"page\": 134,\n      \"level_reason\": \"Subsection under Epidemic and endemic disease.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Emerging and re-emerging infections\",\n      \"page\": 135,\n      \"level_reason\": \"Subsection under Epidemic and endemic disease.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chain of infection\",\n      \"page\": 136,\n      \"level_reason\": \"Major section title.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"The infectious agent\",\n      \"page\": 136,\n      \"level_reason\": \"Component of chain of infection.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Transmission\",\n      \"page\": 137,\n      \"level_reason\": \"Component of chain of infection.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Host\",\n      \"page\": 138,\n      \"level_reason\": \"Component of chain of infection.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Environment\",\n      \"page\": 138,\n      \"level_reason\": \"Component of chain of infection.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Investigation and control of epidemics\",\n      \"page\": 139,\n      \"level_reason\": \"Major section title.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Investigation\",\n      \"page\": 139,\n      \"level_reason\": \"Subsection under Investigation and control.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Identifying cases\",\n      \"page\": 139,\n      \"level_reason\": \"Subsection under Investigation and control.\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"Management and control\",\n      \"page\": 139,\n      \"level_reason\": \"Subsection under Investigation and control.\"\n    }\n  ]\n}"
+}

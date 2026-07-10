@@ -1,0 +1,77 @@
+{
+    "timestamp": "2026-07-10 10:12:49",
+    "stage_index": 33,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "chunk 8/8",
+    "review_stage": "chunk 8/8",
+    "input_chapters": 20,
+    "candidate_count": 2,
+    "candidates": [
+        {
+            "title": "Further reading",
+            "level": 2,
+            "page": 197,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Section title with style s=20.0, r=2.23, x=240.",
+            "font_size": 20.0,
+            "size_ratio": 2.23,
+            "left_indent": 240.0,
+            "vertical_position": 184.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=197, line=100, s=20.0, r=2.23, x=240.0, y=184.0: \"Further reading\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 1,
+                "visual_caption_examples": [
+                    "page=197, line=102, s=8.0, r=0.89, x=34.0, y=226.0: \"Box 11.1. The Health InterNetwork Access to\"",
+                    "page=197, line=103, s=10.0, r=1.11, x=240.0, y=230.0: \"Table 11.4 contains a list of relevant peer-reviewed jour-\""
+                ],
+                "small_label_examples": [
+                    "page=197, line=104, s=8.0, r=0.89, x=34.0, y=237.0: \"Research Initiative (HINARI)\""
+                ]
+            }
+        },
+        {
+            "title": "Further training",
+            "level": 2,
+            "page": 198,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Section title with style s=20.0, r=2.50, x=55.",
+            "font_size": 20.0,
+            "size_ratio": 2.5,
+            "left_indent": 55.0,
+            "vertical_position": 566.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=198, line=187, s=20.0, r=2.5, x=55.0, y=566.0: \"Further training\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 0,
+                "visual_caption_examples": [
+                    "page=198, line=189, s=10.0, r=1.25, x=55.0, y=612.0: \"Table 11.6 for useful links). Short summer courses, such as the 3-week “Epidemiology\""
+                ]
+            }
+        }
+    ]
+}
