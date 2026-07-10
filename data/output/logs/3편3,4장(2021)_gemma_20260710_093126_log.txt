@@ -1,0 +1,10 @@
+Run log saved: data/output/logs/3편3,4장(2021)_gemma_20260710_093126_log.txt
+Processing started: 3편3,4장(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 103 pages, 343956 chars, mode=layout, selected_pages=103
+  Parsed PDF text saved: data/output/parsed_pdfs/3_3_4_2021_gemma_20260710_093126_parsed_pdf.txt
+  Gemma text chunk processing started: 3 chunks
+  Gemma chunk 1/3 request: pages 1-35
+  Gemma input chunk 1 saved: data/output/input_chunks/3_3_4_2021_gemma_20260710_093126/chunk_1_pages_1-35.json

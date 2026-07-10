@@ -1,0 +1,48 @@
+Run log saved: data/output/logs/1편(2021)_gemma_20260709_202610_log.txt
+Processing started: 1편(2021).pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 51 pages, 169770 chars, mode=layout, selected_pages=51
+  Parsed PDF text saved: data/output/parsed_pdfs/1_2021_gemma_20260709_202610_parsed_pdf.txt
+  Gemma text chunk processing started: 2 chunks
+  Gemma chunk 1/2 request: pages 1-37
+  Gemma input chunk 1 saved: data/output/input_chunks/1_2021_gemma_20260709_202610/chunk_1_pages_1-37.json
+Gemma chunk 1/2 generation temporary error, retry 1/4 (after 2.9s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1/2 generation temporary error, retry 2/4 (after 4.8s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1/2 generation temporary error, retry 3/4 (after 8.8s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1/2 generation temporary error, retry 4/4 (after 16.4s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+  Gemma chunk 1 failed; retrying with 3 subchunks: Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+  Gemma chunk 1.1/2 request: pages 1-18
+  Gemma input chunk 1.1 saved: data/output/input_chunks/1_2021_gemma_20260709_202610/chunk_1.1_pages_1-18.json
+Gemma chunk 1.1/2 generation temporary error, retry 1/4 (after 2.1s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1.1/2 generation temporary error, retry 2/4 (after 4.4s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1.1/2 generation temporary error, retry 3/4 (after 8.4s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1.1/2 generation temporary error, retry 4/4 (after 16.5s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+  Gemma chunk 1.1 failed; retrying with 3 subchunks: Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+  Gemma chunk 1.1.1/2 request: pages 1-9
+  Gemma input chunk 1.1.1 saved: data/output/input_chunks/1_2021_gemma_20260709_202610/chunk_1.1.1_pages_1-9.json
+Gemma chunk 1.1.1/2 generation temporary error, retry 1/4 (after 2.5s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1.1.1/2 generation temporary error, retry 2/4 (after 4.7s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1.1.1/2 generation temporary error, retry 3/4 (after 8.9s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1.1.1/2 generation temporary error, retry 4/4 (after 16.4s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+  Gemma chunk 1.1.1 failed; retrying with 3 subchunks: Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+  Gemma chunk 1.1.1.1/2 request: pages 1-5
+  Gemma input chunk 1.1.1.1 saved: data/output/input_chunks/1_2021_gemma_20260709_202610/chunk_1.1.1.1_pages_1-5.json
+Gemma chunk 1.1.1.1/2 generation temporary error, retry 1/4 (after 2.0s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1.1.1.1/2 generation temporary error, retry 2/4 (after 4.2s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1.1.1.1/2 generation temporary error, retry 3/4 (after 8.5s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1.1.1.1/2 generation temporary error, retry 4/4 (after 16.4s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+  Gemma chunk 1.1.1.1 failed; retrying with 2 subchunks: Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+  Gemma chunk 1.1.1.1.1/2 request: pages 1-4
+  Gemma input chunk 1.1.1.1.1 saved: data/output/input_chunks/1_2021_gemma_20260709_202610/chunk_1.1.1.1.1_pages_1-4.json
+Gemma chunk 1.1.1.1.1/2 generation temporary error, retry 1/4 (after 2.9s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1.1.1.1.1/2 generation temporary error, retry 2/4 (after 4.6s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1.1.1.1.1/2 generation temporary error, retry 3/4 (after 8.5s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma chunk 1.1.1.1.1/2 generation temporary error, retry 4/4 (after 16.0s): Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Gemma model failed: google/gemma-4-31B-it / Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+Failed: 1편(2021).pdf / Gemma vLLM server is not reachable at http://127.0.0.1:8000/v1/chat/completions. Start the vLLM OpenAI-compatible server first, or check --gemma-vllm-server-base-url. Cause: <urlopen error [Errno 111] Connection refused>
+  elapsed: 2m 59.1s (179.073s)
+  Error log saved: data/output/error_logs/20260709_202909_1_2021_gemma_google_gemma-4-31B-it_PDF_processing_failed_error.json
+Processing result: success 0 / failed 1
+Run log saved: data/output/logs/1편(2021)_gemma_20260709_202610_log.txt

@@ -1,0 +1,354 @@
+{
+    "timestamp": "2026-07-10 09:31:26",
+    "stage_index": 14,
+    "stage": "level_review_changes_summary",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재1/1권-한글/1편(2021).pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/1_2021.pdf",
+    "review_count": 2,
+    "level_change_count": 8,
+    "added_count": 1,
+    "removed_count": 3,
+    "reviews": [
+        {
+            "review_stage": "chunk 2/2",
+            "input_chapters": 34,
+            "output_chapters": 34,
+            "level_change_count": 2,
+            "added_count": 1,
+            "removed_count": 1,
+            "level_changes": [
+                {
+                    "chapter": "2) 산업혁명과 환경위생시대(19세기 중반)",
+                    "page": 38,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Subsection under the history of Western preventive medicine.",
+                    "after_level_reason": "Subsection under Western history, style consistent with level 5.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "2) 산업혁명과 환경위생시대(19세기 중반)",
+                        "page": 38,
+                        "level_reason": "Subsection under the history of Western preventive medicine.",
+                        "_layout_page": 38,
+                        "_layout_x": 173.0,
+                        "_layout_y": 191.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 산업혁명과 환경위생시대(19세기 중반)",
+                        "_source_order": 7
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "2) 산업혁명과 환경위생시대(19세기 중반)",
+                        "page": 38,
+                        "level_reason": "Subsection under Western history, style consistent with level 5.",
+                        "_layout_page": 38,
+                        "_layout_x": 173.0,
+                        "_layout_y": 191.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 산업혁명과 환경위생시대(19세기 중반)",
+                        "_source_order": 7
+                    }
+                },
+                {
+                    "chapter": "3) 19세기 후반",
+                    "page": 39,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Subsection under the history of Western preventive medicine.",
+                    "after_level_reason": "Subsection under Western history, style consistent with level 5.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "3) 19세기 후반",
+                        "page": 39,
+                        "level_reason": "Subsection under the history of Western preventive medicine.",
+                        "_layout_page": 39,
+                        "_layout_x": 65.0,
+                        "_layout_y": 222.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 19세기 후반",
+                        "_source_order": 53
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "3) 19세기 후반",
+                        "page": 39,
+                        "level_reason": "Subsection under Western history, style consistent with level 5.",
+                        "_layout_page": 39,
+                        "_layout_x": 65.0,
+                        "_layout_y": 222.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 19세기 후반",
+                        "_source_order": 53
+                    }
+                }
+            ],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 2,
+                        "chapter": "제3장 예방의학과 공중보건학의 발전과 미래",
+                        "page": 38,
+                        "level_reason": "Major chapter title identified by style and hierarchy."
+                    }
+                }
+            ],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "제3장 예방의학과 공중보건학의 발전과 미래",
+                        "page": 39,
+                        "level_reason": "Major chapter title identified by style and repeated header.",
+                        "_layout_page": 39,
+                        "_layout_x": 384.0,
+                        "_layout_y": 52.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.85,
+                        "_layout_text": "제3장 예방의학과 공중보건학의 발전과 미래 ∙ 39",
+                        "_source_order": 44
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "final merged TOC",
+            "input_chapters": 94,
+            "output_chapters": 92,
+            "level_change_count": 6,
+            "added_count": 0,
+            "removed_count": 2,
+            "level_changes": [
+                {
+                    "chapter": "(1) 산업혁명과 공중보건",
+                    "page": 38,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under the Industrial Revolution era.",
+                    "after_level_reason": "Detailed point under the Industrial Revolution era.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(1) 산업혁명과 공중보건",
+                        "page": 38,
+                        "level_reason": "Detailed point under the Industrial Revolution era.",
+                        "_layout_page": 38,
+                        "_layout_x": 183.0,
+                        "_layout_y": 226.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(1) 산업혁명과 공중보건",
+                        "_source_order": 8
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(1) 산업혁명과 공중보건",
+                        "page": 38,
+                        "level_reason": "Detailed point under the Industrial Revolution era.",
+                        "_layout_page": 38,
+                        "_layout_x": 183.0,
+                        "_layout_y": 226.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(1) 산업혁명과 공중보건",
+                        "_source_order": 8
+                    }
+                },
+                {
+                    "chapter": "(2) 채드윅의 ‘열병보고서’와 영국 최초의 공중보건법",
+                    "page": 38,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under the Industrial Revolution era.",
+                    "after_level_reason": "Detailed point under the Industrial Revolution era.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(2) 채드윅의 ‘열병보고서’와 영국 최초의 공중보건법",
+                        "page": 38,
+                        "level_reason": "Detailed point under the Industrial Revolution era.",
+                        "_layout_page": 38,
+                        "_layout_x": 183.0,
+                        "_layout_y": 411.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(2) 채드윅의 ‘열병보고서’와 영국 최초의 공중보건법",
+                        "_source_order": 19
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(2) 채드윅의 ‘열병보고서’와 영국 최초의 공중보건법",
+                        "page": 38,
+                        "level_reason": "Detailed point under the Industrial Revolution era.",
+                        "_layout_page": 38,
+                        "_layout_x": 183.0,
+                        "_layout_y": 411.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(2) 채드윅의 ‘열병보고서’와 영국 최초의 공중보건법",
+                        "_source_order": 19
+                    }
+                },
+                {
+                    "chapter": "(3) 미국 쉐턱의 ‘매사추세츠 위생위원회 보고서’",
+                    "page": 38,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under the Industrial Revolution era.",
+                    "after_level_reason": "Detailed point under the Industrial Revolution era.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(3) 미국 쉐턱의 ‘매사추세츠 위생위원회 보고서’",
+                        "page": 38,
+                        "level_reason": "Detailed point under the Industrial Revolution era.",
+                        "_layout_page": 38,
+                        "_layout_x": 183.0,
+                        "_layout_y": 626.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(3) 미국 쉐턱의 ‘매사추세츠 위생위원회 보고서’",
+                        "_source_order": 32
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(3) 미국 쉐턱의 ‘매사추세츠 위생위원회 보고서’",
+                        "page": 38,
+                        "level_reason": "Detailed point under the Industrial Revolution era.",
+                        "_layout_page": 38,
+                        "_layout_x": 183.0,
+                        "_layout_y": 626.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(3) 미국 쉐턱의 ‘매사추세츠 위생위원회 보고서’",
+                        "_source_order": 32
+                    }
+                },
+                {
+                    "chapter": "(4) 존 스노의 콜레라 전파양식의 증명",
+                    "page": 38,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under the Industrial Revolution era.",
+                    "after_level_reason": "Detailed point under the Industrial Revolution era.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(4) 존 스노의 콜레라 전파양식의 증명",
+                        "page": 38,
+                        "level_reason": "Detailed point under the Industrial Revolution era.",
+                        "_layout_page": 38,
+                        "_layout_x": 183.0,
+                        "_layout_y": 765.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(4) 존 스노의 콜레라 전파양식의 증명",
+                        "_source_order": 40
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(4) 존 스노의 콜레라 전파양식의 증명",
+                        "page": 38,
+                        "level_reason": "Detailed point under the Industrial Revolution era.",
+                        "_layout_page": 38,
+                        "_layout_x": 183.0,
+                        "_layout_y": 765.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(4) 존 스노의 콜레라 전파양식의 증명",
+                        "_source_order": 40
+                    }
+                },
+                {
+                    "chapter": "(1) 세균학의 발전",
+                    "page": 39,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under the late 19th century.",
+                    "after_level_reason": "Detailed point under the late 19th century.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(1) 세균학의 발전",
+                        "page": 39,
+                        "level_reason": "Detailed point under the late 19th century.",
+                        "_layout_page": 39,
+                        "_layout_x": 75.0,
+                        "_layout_y": 256.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(1) 세균학의 발전",
+                        "_source_order": 54
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(1) 세균학의 발전",
+                        "page": 39,
+                        "level_reason": "Detailed point under the late 19th century.",
+                        "_layout_page": 39,
+                        "_layout_x": 75.0,
+                        "_layout_y": 256.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(1) 세균학의 발전",
+                        "_source_order": 54
+                    }
+                },
+                {
+                    "chapter": "(2) 공중보건 제도의 효시",
+                    "page": 39,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under the late 19th century.",
+                    "after_level_reason": "Detailed point under the late 19th century.",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(2) 공중보건 제도의 효시",
+                        "page": 39,
+                        "level_reason": "Detailed point under the late 19th century.",
+                        "_layout_page": 39,
+                        "_layout_x": 75.0,
+                        "_layout_y": 456.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(2) 공중보건 제도의 효시",
+                        "_source_order": 66
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(2) 공중보건 제도의 효시",
+                        "page": 39,
+                        "level_reason": "Detailed point under the late 19th century.",
+                        "_layout_page": 39,
+                        "_layout_x": 75.0,
+                        "_layout_y": 456.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.05,
+                        "_layout_text": "(2) 공중보건 제도의 효시",
+                        "_source_order": 66
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "제3장 예방의학과 공중보건학의 발전과 미래",
+                        "page": 38,
+                        "level_reason": "Major chapter title identified by style and hierarchy."
+                    }
+                },
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "1. 서양의 예방의학과 공중보건학의 역사",
+                        "page": 38,
+                        "level_reason": "Section title under Chapter 3.",
+                        "_source_order": 1
+                    }
+                }
+            ]
+        }
+    ]
+}
