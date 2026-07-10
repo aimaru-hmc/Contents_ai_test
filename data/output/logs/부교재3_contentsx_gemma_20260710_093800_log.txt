@@ -1,0 +1,5 @@
+Run log saved: data/output/logs/부교재3_contentsx_gemma_20260710_093800_log.txt
+Processing started: 부교재3_contentsx.pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
