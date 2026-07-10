@@ -1,0 +1,1887 @@
+{
+    "title": "input_pdf",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "Introduction",
+            "page": 12,
+            "level_reason": "Front-matter section heading preceding chapters."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 1 What is epidemiology?",
+            "page": 14,
+            "level_reason": "Numbered chapter heading."
+        },
+        {
+            "level": 2,
+            "chapter": "The historical context",
+            "page": 14,
+            "level_reason": "Major section under Chapter 1."
+        },
+        {
+            "level": 3,
+            "chapter": "Origins",
+            "page": 14,
+            "level_reason": "Subsection under The historical context."
+        },
+        {
+            "level": 3,
+            "chapter": "Recent developments in epidemiology",
+            "page": 14,
+            "level_reason": "Subsection under The historical context."
+        },
+        {
+            "level": 2,
+            "chapter": "Definition, scope, and uses of epidemiology",
+            "page": 15,
+            "level_reason": "Major section under Chapter 1."
+        },
+        {
+            "level": 3,
+            "chapter": "Definition",
+            "page": 15,
+            "level_reason": "Subsection under Definition, scope, and uses of epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Scope",
+            "page": 16,
+            "level_reason": "Subsection under Definition, scope, and uses of epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Epidemiology and public health",
+            "page": 17,
+            "level_reason": "Subsection under Definition, scope, and uses of epidemiology."
+        },
+        {
+            "level": 4,
+            "chapter": "Causation of disease",
+            "page": 17,
+            "level_reason": "Nested topic under Epidemiology and public health."
+        },
+        {
+            "level": 4,
+            "chapter": "Natural history of disease",
+            "page": 17,
+            "level_reason": "Nested topic under Epidemiology and public health."
+        },
+        {
+            "level": 4,
+            "chapter": "Evaluating interventions",
+            "page": 18,
+            "level_reason": "Nested topic under Epidemiology and public health."
+        },
+        {
+            "level": 4,
+            "chapter": "Health status of populations",
+            "page": 18,
+            "level_reason": "Nested topic under Epidemiology and public health."
+        },
+        {
+            "level": 2,
+            "chapter": "Achievements in epidemiology",
+            "page": 19,
+            "level_reason": "Major section under Chapter 1."
+        },
+        {
+            "level": 3,
+            "chapter": "Smallpox",
+            "page": 19,
+            "level_reason": "Example subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Methyl mercury poisoning",
+            "page": 20,
+            "level_reason": "Example subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Rheumatic fever and rheumatic heart disease",
+            "page": 20,
+            "level_reason": "Example subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Iodine deficiency diseases",
+            "page": 21,
+            "level_reason": "Example subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Hip fractures",
+            "page": 22,
+            "level_reason": "Example subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Tobacco use, asbestos and lung cancer",
+            "page": 22,
+            "level_reason": "Example subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "HIV/AIDS",
+            "page": 23,
+            "level_reason": "Example subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "SARS",
+            "page": 23,
+            "level_reason": "Example subsection under Achievements in epidemiology."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 2 Measuring health and disease",
+            "page": 28,
+            "level_reason": "Numbered chapter heading."
+        },
+        {
+            "level": 2,
+            "chapter": "Defining health and disease",
+            "page": 28,
+            "level_reason": "Major section under Chapter 2."
+        },
+        {
+            "level": 3,
+            "chapter": "Definitions",
+            "page": 28,
+            "level_reason": "Subsection under Defining health and disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Diagnostic criteria",
+            "page": 29,
+            "level_reason": "Subsection under Defining health and disease."
+        },
+        {
+            "level": 2,
+            "chapter": "Measuring disease frequency",
+            "page": 30,
+            "level_reason": "Major section under Chapter 2."
+        },
+        {
+            "level": 3,
+            "chapter": "Population at risk",
+            "page": 30,
+            "level_reason": "Subsection under Measuring disease frequency."
+        },
+        {
+            "level": 3,
+            "chapter": "Incidence and prevalence",
+            "page": 31,
+            "level_reason": "Subsection under Measuring disease frequency."
+        },
+        {
+            "level": 3,
+            "chapter": "Case fatality",
+            "page": 35,
+            "level_reason": "Subsection under Measuring disease frequency."
+        },
+        {
+            "level": 3,
+            "chapter": "Interrelationships of the different measures",
+            "page": 35,
+            "level_reason": "Subsection under Measuring disease frequency."
+        },
+        {
+            "level": 2,
+            "chapter": "Using available information to measure health and disease",
+            "page": 36,
+            "level_reason": "Major section under Chapter 2."
+        },
+        {
+            "level": 3,
+            "chapter": "Mortality",
+            "page": 36,
+            "level_reason": "Subsection under Using available information to measure health and disease."
+        },
+        {
+            "level": 4,
+            "chapter": "Limitations of death certificates",
+            "page": 36,
+            "level_reason": "Nested topic under Mortality."
+        },
+        {
+            "level": 4,
+            "chapter": "Limitations of vital registration systems",
+            "page": 37,
+            "level_reason": "Nested topic under Mortality."
+        },
+        {
+            "level": 4,
+            "chapter": "Towards comparable estimates",
+            "page": 37,
+            "level_reason": "Nested topic under Mortality."
+        },
+        {
+            "level": 4,
+            "chapter": "Verbal autopsy",
+            "page": 37,
+            "level_reason": "Nested topic under Mortality."
+        },
+        {
+            "level": 3,
+            "chapter": "Death rates",
+            "page": 38,
+            "level_reason": "Subsection under Using available information to measure health and disease."
+        },
+        {
+            "level": 4,
+            "chapter": "Age-specific death rates",
+            "page": 38,
+            "level_reason": "Nested topic under Death rates."
+        },
+        {
+            "level": 4,
+            "chapter": "Proportionate mortality",
+            "page": 38,
+            "level_reason": "Nested topic under Death rates."
+        },
+        {
+            "level": 3,
+            "chapter": "Child mortality rate",
+            "page": 39,
+            "level_reason": "Subsection under Using available information to measure health and disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Infant mortality",
+            "page": 39,
+            "level_reason": "Subsection under Using available information to measure health and disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Maternal mortality rate",
+            "page": 40,
+            "level_reason": "Subsection under Using available information to measure health and disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Adult mortality rate",
+            "page": 41,
+            "level_reason": "Subsection under Using available information to measure health and disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Life expectancy",
+            "page": 41,
+            "level_reason": "Subsection under Using available information to measure health and disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Age-standardized rates",
+            "page": 42,
+            "level_reason": "Subsection under Using available information to measure health and disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Morbidity",
+            "page": 43,
+            "level_reason": "Subsection under Using available information to measure health and disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Disability",
+            "page": 44,
+            "level_reason": "Subsection under Using available information to measure health and disease."
+        },
+        {
+            "level": 2,
+            "chapter": "Health determinants, indicators, and risk factors",
+            "page": 45,
+            "level_reason": "Major section under Chapter 2."
+        },
+        {
+            "level": 3,
+            "chapter": "Health determinants",
+            "page": 45,
+            "level_reason": "Subsection under Health determinants, indicators, and risk factors."
+        },
+        {
+            "level": 3,
+            "chapter": "Health indicators",
+            "page": 45,
+            "level_reason": "Subsection under Health determinants, indicators, and risk factors."
+        },
+        {
+            "level": 3,
+            "chapter": "Risk factors",
+            "page": 45,
+            "level_reason": "Subsection under Health determinants, indicators, and risk factors."
+        },
+        {
+            "level": 2,
+            "chapter": "Other summary measures of population health",
+            "page": 46,
+            "level_reason": "Major section under Chapter 2."
+        },
+        {
+            "level": 3,
+            "chapter": "Disability-adjusted life years",
+            "page": 46,
+            "level_reason": "Subsection under Other summary measures of population health."
+        },
+        {
+            "level": 2,
+            "chapter": "Comparing disease occurrence",
+            "page": 47,
+            "level_reason": "Major section under Chapter 2."
+        },
+        {
+            "level": 3,
+            "chapter": "Absolute comparisons",
+            "page": 47,
+            "level_reason": "Subsection under Comparing disease occurrence."
+        },
+        {
+            "level": 4,
+            "chapter": "Attributable fraction (exposed)",
+            "page": 47,
+            "level_reason": "Nested topic under Absolute comparisons."
+        },
+        {
+            "level": 4,
+            "chapter": "Risk difference",
+            "page": 47,
+            "level_reason": "Nested topic under Absolute comparisons."
+        },
+        {
+            "level": 3,
+            "chapter": "Relative comparisons",
+            "page": 48,
+            "level_reason": "Subsection under Comparing disease occurrence."
+        },
+        {
+            "level": 4,
+            "chapter": "Attributable risk",
+            "page": 48,
+            "level_reason": "Nested topic under Relative comparisons."
+        },
+        {
+            "level": 4,
+            "chapter": "Population attributable risk",
+            "page": 48,
+            "level_reason": "Nested topic under Absolute comparisons."
+        },
+        {
+            "level": 4,
+            "chapter": "Relative risk",
+            "page": 48,
+            "level_reason": "Nested topic under Relative comparisons."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 3 Types of studies",
+            "page": 52,
+            "level_reason": "Numbered chapter heading."
+        },
+        {
+            "level": 2,
+            "chapter": "Observations and experiments",
+            "page": 52,
+            "level_reason": "Major section under Chapter 3."
+        },
+        {
+            "level": 3,
+            "chapter": "Experimental studies",
+            "page": 52,
+            "level_reason": "Subsection under Observations and experiments."
+        },
+        {
+            "level": 3,
+            "chapter": "Observational studies",
+            "page": 52,
+            "level_reason": "Subsection under Observations and experiments."
+        },
+        {
+            "level": 2,
+            "chapter": "Observational epidemiology",
+            "page": 53,
+            "level_reason": "Major section under Chapter 3."
+        },
+        {
+            "level": 3,
+            "chapter": "Descriptive studies",
+            "page": 53,
+            "level_reason": "Subsection under Observational epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Ecological studies",
+            "page": 54,
+            "level_reason": "Subsection under Observational epidemiology."
+        },
+        {
+            "level": 4,
+            "chapter": "Ecological fallacy",
+            "page": 56,
+            "level_reason": "Nested topic under Ecological studies."
+        },
+        {
+            "level": 3,
+            "chapter": "Case-control studies",
+            "page": 57,
+            "level_reason": "Subsection under Observational epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Cross-sectional studies",
+            "page": 57,
+            "level_reason": "Subsection under Observational epidemiology."
+        },
+        {
+            "level": 4,
+            "chapter": "Exposure",
+            "page": 58,
+            "level_reason": "Nested topic under Case-control studies."
+        },
+        {
+            "level": 4,
+            "chapter": "Selection of cases and controls",
+            "page": 58,
+            "level_reason": "Nested topic under Case-control studies."
+        },
+        {
+            "level": 3,
+            "chapter": "Cohort studies",
+            "page": 59,
+            "level_reason": "Subsection under Observational epidemiology."
+        },
+        {
+            "level": 4,
+            "chapter": "Odds ratio",
+            "page": 59,
+            "level_reason": "Nested topic under Case-control studies."
+        },
+        {
+            "level": 4,
+            "chapter": "Historical cohort studies",
+            "page": 61,
+            "level_reason": "Nested topic under Cohort studies."
+        },
+        {
+            "level": 4,
+            "chapter": "Nested case-control studies",
+            "page": 61,
+            "level_reason": "Nested topic under Cohort studies."
+        },
+        {
+            "level": 2,
+            "chapter": "Experimental epidemiology",
+            "page": 62,
+            "level_reason": "Major section under Chapter 3."
+        },
+        {
+            "level": 2,
+            "chapter": "Summary of epidemiological studies",
+            "page": 62,
+            "level_reason": "Major section under Chapter 3."
+        },
+        {
+            "level": 3,
+            "chapter": "Field trials",
+            "page": 63,
+            "level_reason": "Subsection under Experimental epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Randomized controlled trials",
+            "page": 63,
+            "level_reason": "Subsection under Experimental epidemiology."
+        },
+        {
+            "level": 2,
+            "chapter": "Potential errors in epidemiological studies",
+            "page": 64,
+            "level_reason": "Major section under Chapter 3."
+        },
+        {
+            "level": 3,
+            "chapter": "Community trials",
+            "page": 64,
+            "level_reason": "Subsection under Experimental epidemiology."
+        },
+        {
+            "level": 4,
+            "chapter": "Limitations of community trials",
+            "page": 64,
+            "level_reason": "Nested topic under Community trials."
+        },
+        {
+            "level": 3,
+            "chapter": "Random error",
+            "page": 65,
+            "level_reason": "Subsection under Potential errors in epidemiological studies."
+        },
+        {
+            "level": 3,
+            "chapter": "Sample size",
+            "page": 65,
+            "level_reason": "Subsection under Potential errors in epidemiological studies."
+        },
+        {
+            "level": 3,
+            "chapter": "Systematic error",
+            "page": 66,
+            "level_reason": "Subsection under Potential errors in epidemiological studies."
+        },
+        {
+            "level": 4,
+            "chapter": "Selection bias",
+            "page": 66,
+            "level_reason": "Nested topic under Systematic error."
+        },
+        {
+            "level": 4,
+            "chapter": "Measurement bias",
+            "page": 67,
+            "level_reason": "Nested topic under Systematic error."
+        },
+        {
+            "level": 3,
+            "chapter": "Confounding",
+            "page": 68,
+            "level_reason": "Subsection under Potential errors in epidemiological studies."
+        },
+        {
+            "level": 3,
+            "chapter": "The control of confounding",
+            "page": 69,
+            "level_reason": "Subsection under Potential errors in epidemiological studies."
+        },
+        {
+            "level": 4,
+            "chapter": "Matching",
+            "page": 69,
+            "level_reason": "Nested topic under The control of confounding."
+        },
+        {
+            "level": 4,
+            "chapter": "Randomization",
+            "page": 69,
+            "level_reason": "Nested topic under The control of confounding."
+        },
+        {
+            "level": 4,
+            "chapter": "Restriction",
+            "page": 69,
+            "level_reason": "Nested topic under The control of confounding."
+        },
+        {
+            "level": 3,
+            "chapter": "Validity",
+            "page": 70,
+            "level_reason": "Subsection under Potential errors in epidemiological studies."
+        },
+        {
+            "level": 4,
+            "chapter": "Stratification and statistical modelling",
+            "page": 70,
+            "level_reason": "Nested topic under The control of confounding."
+        },
+        {
+            "level": 3,
+            "chapter": "Ethical issues",
+            "page": 71,
+            "level_reason": "Subsection under Potential errors in epidemiological studies."
+        },
+        {
+            "level": 4,
+            "chapter": "External validity",
+            "page": 71,
+            "level_reason": "Nested topic under Validity."
+        },
+        {
+            "level": 4,
+            "chapter": "Informed consent",
+            "page": 71,
+            "level_reason": "Nested topic under Ethical issues."
+        },
+        {
+            "level": 4,
+            "chapter": "Internal validity",
+            "page": 71,
+            "level_reason": "Nested topic under Validity."
+        },
+        {
+            "level": 4,
+            "chapter": "Confidentiality",
+            "page": 72,
+            "level_reason": "Nested topic under Ethical issues."
+        },
+        {
+            "level": 4,
+            "chapter": "Respect for individual rights",
+            "page": 72,
+            "level_reason": "Nested topic under Ethical issues."
+        },
+        {
+            "level": 4,
+            "chapter": "Scientific integrity",
+            "page": 72,
+            "level_reason": "Nested topic under Ethical issues."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 4 Basic biostatistics: concepts and tools",
+            "page": 76,
+            "level_reason": "Numbered chapter heading."
+        },
+        {
+            "level": 2,
+            "chapter": "Summarizing data",
+            "page": 76,
+            "level_reason": "Major section under Chapter 4."
+        },
+        {
+            "level": 3,
+            "chapter": "Tables and graphs",
+            "page": 76,
+            "level_reason": "Subsection under Summarizing data."
+        },
+        {
+            "level": 3,
+            "chapter": "Pie charts and component band charts",
+            "page": 77,
+            "level_reason": "Subsection under Summarizing data."
+        },
+        {
+            "level": 3,
+            "chapter": "Bar charts",
+            "page": 78,
+            "level_reason": "Subsection under Summarizing data."
+        },
+        {
+            "level": 3,
+            "chapter": "Spot maps and rate maps",
+            "page": 78,
+            "level_reason": "Subsection under Summarizing data."
+        },
+        {
+            "level": 3,
+            "chapter": "Frequency distributions and histograms",
+            "page": 79,
+            "level_reason": "Subsection under Summarizing data."
+        },
+        {
+            "level": 3,
+            "chapter": "Line graphs",
+            "page": 79,
+            "level_reason": "Subsection under Summarizing data."
+        },
+        {
+            "level": 3,
+            "chapter": "Normal distributions",
+            "page": 80,
+            "level_reason": "Subsection under Summarizing data."
+        },
+        {
+            "level": 3,
+            "chapter": "Summary numbers",
+            "page": 80,
+            "level_reason": "Subsection under Summarizing data."
+        },
+        {
+            "level": 4,
+            "chapter": "Means, medians and mode",
+            "page": 80,
+            "level_reason": "Nested topic under Summary numbers."
+        },
+        {
+            "level": 5,
+            "chapter": "The mean",
+            "page": 80,
+            "level_reason": "Detailed item under Means, medians and mode."
+        },
+        {
+            "level": 5,
+            "chapter": "The median",
+            "page": 80,
+            "level_reason": "Detailed item under Means, medians and mode."
+        },
+        {
+            "level": 4,
+            "chapter": "Variances, standard deviations and standard errors",
+            "page": 81,
+            "level_reason": "Nested topic under Summary numbers."
+        },
+        {
+            "level": 5,
+            "chapter": "The mode",
+            "page": 81,
+            "level_reason": "Detailed item under Means, medians and mode."
+        },
+        {
+            "level": 2,
+            "chapter": "Basic concepts of statistical inference",
+            "page": 82,
+            "level_reason": "Major section under Chapter 4."
+        },
+        {
+            "level": 3,
+            "chapter": "Using samples to understand populations",
+            "page": 82,
+            "level_reason": "Subsection under Basic concepts of statistical inference."
+        },
+        {
+            "level": 4,
+            "chapter": "Example: calculating a sample mean",
+            "page": 82,
+            "level_reason": "Nested topic under Using samples to understand populations."
+        },
+        {
+            "level": 4,
+            "chapter": "Random samples",
+            "page": 82,
+            "level_reason": "Nested topic under Using samples to understand populations."
+        },
+        {
+            "level": 3,
+            "chapter": "Confidence intervals",
+            "page": 83,
+            "level_reason": "Subsection under Basic concepts of statistical inference."
+        },
+        {
+            "level": 4,
+            "chapter": "Calculating a confidence interval",
+            "page": 83,
+            "level_reason": "Nested topic under Confidence intervals."
+        },
+        {
+            "level": 4,
+            "chapter": "Degrees of freedom",
+            "page": 83,
+            "level_reason": "Nested topic under Confidence intervals."
+        },
+        {
+            "level": 3,
+            "chapter": "Hypothesis tests, p-values, statistical power",
+            "page": 84,
+            "level_reason": "Subsection under Basic concepts of statistical inference."
+        },
+        {
+            "level": 4,
+            "chapter": "Interpreting measures outside the confidence interval",
+            "page": 84,
+            "level_reason": "Nested topic under Confidence intervals."
+        },
+        {
+            "level": 4,
+            "chapter": "Statistical power",
+            "page": 84,
+            "level_reason": "Nested topic under Hypothesis tests, p-values, statistical power."
+        },
+        {
+            "level": 4,
+            "chapter": "The p-value",
+            "page": 84,
+            "level_reason": "Nested topic under Hypothesis tests, p-values, statistical power."
+        },
+        {
+            "level": 2,
+            "chapter": "Basic methods",
+            "page": 86,
+            "level_reason": "Major section under Chapter 4."
+        },
+        {
+            "level": 3,
+            "chapter": "t-tests",
+            "page": 86,
+            "level_reason": "Subsection under Basic methods."
+        },
+        {
+            "level": 3,
+            "chapter": "Chi-squared tests for cross tabulations",
+            "page": 87,
+            "level_reason": "Subsection under Basic methods."
+        },
+        {
+            "level": 3,
+            "chapter": "Correlation",
+            "page": 88,
+            "level_reason": "Subsection under Basic methods."
+        },
+        {
+            "level": 3,
+            "chapter": "Regression",
+            "page": 88,
+            "level_reason": "Subsection under Basic methods."
+        },
+        {
+            "level": 4,
+            "chapter": "Different regression models",
+            "page": 88,
+            "level_reason": "Nested topic under Regression."
+        },
+        {
+            "level": 4,
+            "chapter": "Key concept for regression models",
+            "page": 88,
+            "level_reason": "Nested topic under Regression."
+        },
+        {
+            "level": 4,
+            "chapter": "Using and interpreting regression models",
+            "page": 88,
+            "level_reason": "Nested topic under Regression."
+        },
+        {
+            "level": 4,
+            "chapter": "Linear regression",
+            "page": 89,
+            "level_reason": "Nested topic under Regression."
+        },
+        {
+            "level": 5,
+            "chapter": "Dependent variable",
+            "page": 89,
+            "level_reason": "Detailed item under Linear regression."
+        },
+        {
+            "level": 5,
+            "chapter": "Independent variables",
+            "page": 90,
+            "level_reason": "Detailed item under Linear regression."
+        },
+        {
+            "level": 5,
+            "chapter": "Multiple variables",
+            "page": 90,
+            "level_reason": "Detailed item under Linear regression."
+        },
+        {
+            "level": 4,
+            "chapter": "Logistic regression",
+            "page": 91,
+            "level_reason": "Nested topic under Regression."
+        },
+        {
+            "level": 4,
+            "chapter": "Kaplan-Meier survival curves",
+            "page": 92,
+            "level_reason": "Nested topic under Regression."
+        },
+        {
+            "level": 4,
+            "chapter": "Survival analyses and Cox proportional hazards models",
+            "page": 92,
+            "level_reason": "Nested topic under Regression."
+        },
+        {
+            "level": 3,
+            "chapter": "Sample size issues",
+            "page": 93,
+            "level_reason": "Subsection under Basic methods."
+        },
+        {
+            "level": 4,
+            "chapter": "Two sample t-test",
+            "page": 93,
+            "level_reason": "Nested topic under Sample size issues."
+        },
+        {
+            "level": 3,
+            "chapter": "Meta-analysis",
+            "page": 94,
+            "level_reason": "Subsection under Basic methods."
+        },
+        {
+            "level": 4,
+            "chapter": "Test comparing proportions",
+            "page": 94,
+            "level_reason": "Nested topic under Sample size issues."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 5 Causation in epidemiology",
+            "page": 96,
+            "level_reason": "Numbered chapter heading."
+        },
+        {
+            "level": 2,
+            "chapter": "The concept of cause",
+            "page": 96,
+            "level_reason": "Major section under Chapter 5."
+        },
+        {
+            "level": 3,
+            "chapter": "Sufficient or necessary",
+            "page": 96,
+            "level_reason": "Subsection under The concept of cause."
+        },
+        {
+            "level": 3,
+            "chapter": "Sufficient and necessary",
+            "page": 97,
+            "level_reason": "Subsection under The concept of cause."
+        },
+        {
+            "level": 4,
+            "chapter": "Attributable fraction",
+            "page": 97,
+            "level_reason": "Nested topic under Sufficient or necessary."
+        },
+        {
+            "level": 4,
+            "chapter": "Multiple factors",
+            "page": 97,
+            "level_reason": "Nested topic under Sufficient or necessary."
+        },
+        {
+            "level": 3,
+            "chapter": "A causal pathway",
+            "page": 98,
+            "level_reason": "Subsection under The concept of cause."
+        },
+        {
+            "level": 3,
+            "chapter": "Single and multiple causes",
+            "page": 99,
+            "level_reason": "Subsection under The concept of cause."
+        },
+        {
+            "level": 3,
+            "chapter": "Factors in causation",
+            "page": 100,
+            "level_reason": "Subsection under The concept of cause."
+        },
+        {
+            "level": 3,
+            "chapter": "A hierarchy of causes",
+            "page": 101,
+            "level_reason": "Subsection under The concept of cause."
+        },
+        {
+            "level": 3,
+            "chapter": "Interaction",
+            "page": 101,
+            "level_reason": "Subsection under The concept of cause."
+        },
+        {
+            "level": 2,
+            "chapter": "Establishing the cause of a disease",
+            "page": 102,
+            "level_reason": "Major section under Chapter 5."
+        },
+        {
+            "level": 3,
+            "chapter": "Considering causation",
+            "page": 102,
+            "level_reason": "Subsection under Establishing the cause of a disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Temporal relationship",
+            "page": 102,
+            "level_reason": "Subsection under Establishing the cause of a disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Consistency",
+            "page": 104,
+            "level_reason": "Subsection under Establishing the cause of a disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Plausibility",
+            "page": 104,
+            "level_reason": "Subsection under Establishing the cause of a disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Dose–response relationship",
+            "page": 106,
+            "level_reason": "Subsection under Establishing the cause of a disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Strength",
+            "page": 106,
+            "level_reason": "Subsection under Establishing the cause of a disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Reversibility",
+            "page": 108,
+            "level_reason": "Subsection under Establishing the cause of a disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Study design",
+            "page": 108,
+            "level_reason": "Subsection under Establishing the cause of a disease."
+        },
+        {
+            "level": 4,
+            "chapter": "Cohort and case control studies",
+            "page": 108,
+            "level_reason": "Nested topic under Study design."
+        },
+        {
+            "level": 4,
+            "chapter": "Cross-sectional studies",
+            "page": 108,
+            "level_reason": "Nested topic under Study design."
+        },
+        {
+            "level": 4,
+            "chapter": "Ecological studies",
+            "page": 108,
+            "level_reason": "Nested topic under Study design."
+        },
+        {
+            "level": 4,
+            "chapter": "Experimental studies",
+            "page": 108,
+            "level_reason": "Nested topic under Study design."
+        },
+        {
+            "level": 3,
+            "chapter": "Judging the evidence",
+            "page": 109,
+            "level_reason": "Subsection under Establishing the cause of a disease."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 6 Epidemiology and prevention: chronic noncommunicable diseases",
+            "page": 112,
+            "level_reason": "Numbered chapter heading."
+        },
+        {
+            "level": 2,
+            "chapter": "The scope of prevention",
+            "page": 112,
+            "level_reason": "Major section under Chapter 6."
+        },
+        {
+            "level": 3,
+            "chapter": "Recent trends in death rates",
+            "page": 112,
+            "level_reason": "Subsection under The scope of prevention."
+        },
+        {
+            "level": 3,
+            "chapter": "Preventive potential",
+            "page": 114,
+            "level_reason": "Subsection under The scope of prevention."
+        },
+        {
+            "level": 3,
+            "chapter": "Causation framework",
+            "page": 115,
+            "level_reason": "Subsection under The scope of prevention."
+        },
+        {
+            "level": 4,
+            "chapter": "Social determinants of health",
+            "page": 115,
+            "level_reason": "Nested topic under Causation framework."
+        },
+        {
+            "level": 2,
+            "chapter": "Levels of prevention",
+            "page": 116,
+            "level_reason": "Major section under Chapter 6."
+        },
+        {
+            "level": 3,
+            "chapter": "Primordial prevention",
+            "page": 116,
+            "level_reason": "Subsection under Levels of prevention."
+        },
+        {
+            "level": 3,
+            "chapter": "Primary prevention",
+            "page": 118,
+            "level_reason": "Subsection under Levels of prevention."
+        },
+        {
+            "level": 4,
+            "chapter": "Population strategy",
+            "page": 118,
+            "level_reason": "Nested topic under Primary prevention."
+        },
+        {
+            "level": 4,
+            "chapter": "High-risk individual strategy",
+            "page": 120,
+            "level_reason": "Nested topic under Primary prevention."
+        },
+        {
+            "level": 3,
+            "chapter": "Secondary prevention",
+            "page": 121,
+            "level_reason": "Subsection under Levels of prevention."
+        },
+        {
+            "level": 3,
+            "chapter": "Tertiary prevention",
+            "page": 122,
+            "level_reason": "Subsection under Levels of prevention."
+        },
+        {
+            "level": 2,
+            "chapter": "Screening",
+            "page": 123,
+            "level_reason": "Major section under Chapter 6."
+        },
+        {
+            "level": 3,
+            "chapter": "Criteria for screening",
+            "page": 123,
+            "level_reason": "Subsection under Screening."
+        },
+        {
+            "level": 3,
+            "chapter": "Definition",
+            "page": 123,
+            "level_reason": "Subsection under Screening."
+        },
+        {
+            "level": 3,
+            "chapter": "Types of screening",
+            "page": 123,
+            "level_reason": "Subsection under Screening."
+        },
+        {
+            "level": 4,
+            "chapter": "Costs",
+            "page": 124,
+            "level_reason": "Nested topic under Criteria for screening."
+        },
+        {
+            "level": 4,
+            "chapter": "Lead time",
+            "page": 124,
+            "level_reason": "Nested topic under Criteria for screening."
+        },
+        {
+            "level": 4,
+            "chapter": "Length bias",
+            "page": 124,
+            "level_reason": "Nested topic under Criteria for screening."
+        },
+        {
+            "level": 4,
+            "chapter": "Screening test",
+            "page": 125,
+            "level_reason": "Nested topic under Criteria for screening."
+        },
+        {
+            "level": 4,
+            "chapter": "Impact",
+            "page": 126,
+            "level_reason": "Nested topic under Criteria for screening."
+        },
+        {
+            "level": 4,
+            "chapter": "Natural history",
+            "page": 126,
+            "level_reason": "Nested topic under Criteria for screening."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 7 Communicable diseases: epidemiology surveillance and response",
+            "page": 130,
+            "level_reason": "Numbered chapter heading."
+        },
+        {
+            "level": 2,
+            "chapter": "Introduction",
+            "page": 130,
+            "level_reason": "Major section under Chapter 7."
+        },
+        {
+            "level": 3,
+            "chapter": "Definitions",
+            "page": 130,
+            "level_reason": "Subsection under Introduction."
+        },
+        {
+            "level": 2,
+            "chapter": "The burden of communicable disease",
+            "page": 131,
+            "level_reason": "Major section under Chapter 7."
+        },
+        {
+            "level": 3,
+            "chapter": "Role of epidemiology",
+            "page": 131,
+            "level_reason": "Subsection under Introduction."
+        },
+        {
+            "level": 3,
+            "chapter": "Threats to human security and health systems",
+            "page": 131,
+            "level_reason": "Subsection under The burden of communicable disease."
+        },
+        {
+            "level": 2,
+            "chapter": "Epidemic and endemic disease",
+            "page": 132,
+            "level_reason": "Major section under Chapter 7."
+        },
+        {
+            "level": 3,
+            "chapter": "Epidemics",
+            "page": 132,
+            "level_reason": "Subsection under Epidemic and endemic disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Endemic diseases",
+            "page": 134,
+            "level_reason": "Subsection under Epidemic and endemic disease."
+        },
+        {
+            "level": 3,
+            "chapter": "Emerging and re-emerging infections",
+            "page": 135,
+            "level_reason": "Subsection under Epidemic and endemic disease."
+        },
+        {
+            "level": 2,
+            "chapter": "Chain of infection",
+            "page": 136,
+            "level_reason": "Major section under Chapter 7."
+        },
+        {
+            "level": 3,
+            "chapter": "The infectious agent",
+            "page": 136,
+            "level_reason": "Subsection under Chain of infection."
+        },
+        {
+            "level": 3,
+            "chapter": "Transmission",
+            "page": 137,
+            "level_reason": "Subsection under Chain of infection."
+        },
+        {
+            "level": 4,
+            "chapter": "Direct transmission",
+            "page": 137,
+            "level_reason": "Nested topic under Transmission."
+        },
+        {
+            "level": 4,
+            "chapter": "Indirect transmission",
+            "page": 137,
+            "level_reason": "Nested topic under Transmission."
+        },
+        {
+            "level": 3,
+            "chapter": "Environment",
+            "page": 138,
+            "level_reason": "Subsection under Chain of infection."
+        },
+        {
+            "level": 3,
+            "chapter": "Host",
+            "page": 138,
+            "level_reason": "Subsection under Chain of infection."
+        },
+        {
+            "level": 2,
+            "chapter": "Investigation and control of epidemics",
+            "page": 139,
+            "level_reason": "Major section under Chapter 7."
+        },
+        {
+            "level": 3,
+            "chapter": "Identifying cases",
+            "page": 139,
+            "level_reason": "Subsection under Investigation and control of epidemics."
+        },
+        {
+            "level": 3,
+            "chapter": "Investigation",
+            "page": 139,
+            "level_reason": "Subsection under Investigation and control of epidemics."
+        },
+        {
+            "level": 3,
+            "chapter": "Management and control",
+            "page": 139,
+            "level_reason": "Subsection under Investigation and control of epidemics."
+        },
+        {
+            "level": 2,
+            "chapter": "Surveillance and response",
+            "page": 140,
+            "level_reason": "Major section under Chapter 7."
+        },
+        {
+            "level": 3,
+            "chapter": "Definition",
+            "page": 140,
+            "level_reason": "Subsection under Surveillance and response."
+        },
+        {
+            "level": 3,
+            "chapter": "The scope of surveillance",
+            "page": 140,
+            "level_reason": "Subsection under Surveillance and response."
+        },
+        {
+            "level": 3,
+            "chapter": "Principles of surveillance",
+            "page": 141,
+            "level_reason": "Subsection under Surveillance and response."
+        },
+        {
+            "level": 3,
+            "chapter": "Sources of data",
+            "page": 141,
+            "level_reason": "Subsection under Surveillance and response."
+        },
+        {
+            "level": 3,
+            "chapter": "Surveillance in practice",
+            "page": 141,
+            "level_reason": "Subsection under Surveillance and response."
+        },
+        {
+            "level": 3,
+            "chapter": "Analysis and interpretation of surveillance data",
+            "page": 142,
+            "level_reason": "Subsection under Surveillance and response."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 8 Clinical epidemiology",
+            "page": 146,
+            "level_reason": "Numbered chapter heading."
+        },
+        {
+            "level": 2,
+            "chapter": "Definitions of normality and abnormality",
+            "page": 146,
+            "level_reason": "Major section under Chapter 8."
+        },
+        {
+            "level": 2,
+            "chapter": "Introduction",
+            "page": 146,
+            "level_reason": "Major section under Chapter 8."
+        },
+        {
+            "level": 3,
+            "chapter": "Normal as common",
+            "page": 147,
+            "level_reason": "Subsection under Definitions of normality and abnormality."
+        },
+        {
+            "level": 3,
+            "chapter": "Abnormal as treatable",
+            "page": 148,
+            "level_reason": "Subsection under Definitions of normality and abnormality."
+        },
+        {
+            "level": 3,
+            "chapter": "Abnormality associated with disease",
+            "page": 148,
+            "level_reason": "Subsection under Definitions of normality and abnormality."
+        },
+        {
+            "level": 2,
+            "chapter": "Diagnostic tests",
+            "page": 149,
+            "level_reason": "Major section under Chapter 8."
+        },
+        {
+            "level": 3,
+            "chapter": "Value of a test",
+            "page": 149,
+            "level_reason": "Subsection under Diagnostic tests."
+        },
+        {
+            "level": 2,
+            "chapter": "Natural history and prognosis",
+            "page": 150,
+            "level_reason": "Major section under Chapter 8."
+        },
+        {
+            "level": 3,
+            "chapter": "Prognosis",
+            "page": 150,
+            "level_reason": "Subsection under Natural history and prognosis."
+        },
+        {
+            "level": 3,
+            "chapter": "Quality of life",
+            "page": 151,
+            "level_reason": "Subsection under Natural history and prognosis."
+        },
+        {
+            "level": 3,
+            "chapter": "Quantity of life",
+            "page": 151,
+            "level_reason": "Subsection under Natural history and prognosis."
+        },
+        {
+            "level": 2,
+            "chapter": "Effectiveness of treatment",
+            "page": 152,
+            "level_reason": "Major section under Chapter 8."
+        },
+        {
+            "level": 2,
+            "chapter": "Prevention in clinical practice",
+            "page": 153,
+            "level_reason": "Major section under Chapter 8."
+        },
+        {
+            "level": 2,
+            "chapter": "Use of evidence-based guidelines",
+            "page": 153,
+            "level_reason": "Major section under Chapter 8."
+        },
+        {
+            "level": 3,
+            "chapter": "Reducing risks",
+            "page": 154,
+            "level_reason": "Subsection under Prevention in clinical practice."
+        },
+        {
+            "level": 3,
+            "chapter": "Reducing risks in patients with established disease",
+            "page": 154,
+            "level_reason": "Subsection under Prevention in clinical practice."
+        },
+        {
+            "level": 4,
+            "chapter": "Behavioural interventions",
+            "page": 155,
+            "level_reason": "Nested topic under Reducing risks in patients with established disease."
+        },
+        {
+            "level": 4,
+            "chapter": "Other interventions",
+            "page": 155,
+            "level_reason": "Nested topic under Reducing risks in patients with established disease."
+        },
+        {
+            "level": 4,
+            "chapter": "Pharmacological interventions",
+            "page": 155,
+            "level_reason": "Nested topic under Reducing risks in patients with established disease."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 9 Environmental and occupational epidemiology",
+            "page": 158,
+            "level_reason": "Numbered chapter heading."
+        },
+        {
+            "level": 2,
+            "chapter": "Environment and health",
+            "page": 158,
+            "level_reason": "Major section under Chapter 9."
+        },
+        {
+            "level": 2,
+            "chapter": "Impact of exposure to environmental factors",
+            "page": 159,
+            "level_reason": "Major section under Chapter 9."
+        },
+        {
+            "level": 3,
+            "chapter": "High burden in low-income countries",
+            "page": 159,
+            "level_reason": "Subsection under Impact of exposure to environmental factors."
+        },
+        {
+            "level": 3,
+            "chapter": "Multi-causality",
+            "page": 159,
+            "level_reason": "Subsection under Impact of exposure to environmental factors."
+        },
+        {
+            "level": 2,
+            "chapter": "Evaluation of preventive measures",
+            "page": 160,
+            "level_reason": "Major section under Chapter 9."
+        },
+        {
+            "level": 3,
+            "chapter": "Future challenges",
+            "page": 160,
+            "level_reason": "Subsection under Evaluation of preventive measures."
+        },
+        {
+            "level": 3,
+            "chapter": "Value of prevention",
+            "page": 160,
+            "level_reason": "Subsection under Evaluation of preventive measures."
+        },
+        {
+            "level": 2,
+            "chapter": "Exposure and dose",
+            "page": 162,
+            "level_reason": "Major section under Chapter 9."
+        },
+        {
+            "level": 3,
+            "chapter": "General concepts",
+            "page": 162,
+            "level_reason": "Subsection under Exposure and dose."
+        },
+        {
+            "level": 3,
+            "chapter": "Biological monitoring",
+            "page": 163,
+            "level_reason": "Subsection under Exposure and dose."
+        },
+        {
+            "level": 3,
+            "chapter": "Individual versus group measurements",
+            "page": 164,
+            "level_reason": "Subsection under Exposure and dose."
+        },
+        {
+            "level": 3,
+            "chapter": "Interpreting biological data",
+            "page": 164,
+            "level_reason": "Subsection under Exposure and dose."
+        },
+        {
+            "level": 4,
+            "chapter": "Variation in time",
+            "page": 164,
+            "level_reason": "Nested topic under Individual versus group measurements."
+        },
+        {
+            "level": 3,
+            "chapter": "Population dose",
+            "page": 165,
+            "level_reason": "Subsection under Exposure and dose."
+        },
+        {
+            "level": 4,
+            "chapter": "Distribution issues",
+            "page": 165,
+            "level_reason": "Nested topic under Individual versus group measurements."
+        },
+        {
+            "level": 4,
+            "chapter": "Measures of effect",
+            "page": 165,
+            "level_reason": "Nested topic under Individual versus group measurements."
+        },
+        {
+            "level": 4,
+            "chapter": "Variation in exposure",
+            "page": 165,
+            "level_reason": "Nested topic under Individual versus group measurements."
+        },
+        {
+            "level": 3,
+            "chapter": "Dose-effect relationships",
+            "page": 166,
+            "level_reason": "Subsection under Exposure and dose."
+        },
+        {
+            "level": 3,
+            "chapter": "Dose–response relationships",
+            "page": 167,
+            "level_reason": "Subsection under Exposure and dose."
+        },
+        {
+            "level": 2,
+            "chapter": "Assessing risk",
+            "page": 168,
+            "level_reason": "Major section under Chapter 9."
+        },
+        {
+            "level": 3,
+            "chapter": "Environmental health impact assessment",
+            "page": 168,
+            "level_reason": "Subsection under Assessing risk."
+        },
+        {
+            "level": 3,
+            "chapter": "Health impact assessment",
+            "page": 168,
+            "level_reason": "Subsection under Assessing risk."
+        },
+        {
+            "level": 3,
+            "chapter": "Risk assessment",
+            "page": 168,
+            "level_reason": "Subsection under Assessing risk."
+        },
+        {
+            "level": 3,
+            "chapter": "Risk management",
+            "page": 168,
+            "level_reason": "Subsection under Assessing risk."
+        },
+        {
+            "level": 2,
+            "chapter": "Injury epidemiology",
+            "page": 170,
+            "level_reason": "Major section under Chapter 9."
+        },
+        {
+            "level": 3,
+            "chapter": "Traffic crash injuries",
+            "page": 170,
+            "level_reason": "Subsection under Injury epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Workplace injury",
+            "page": 170,
+            "level_reason": "Subsection under Injury epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Suicides",
+            "page": 171,
+            "level_reason": "Subsection under Injury epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Violence",
+            "page": 171,
+            "level_reason": "Subsection under Injury epidemiology."
+        },
+        {
+            "level": 2,
+            "chapter": "Special features of environmental and occupational epidemiology",
+            "page": 172,
+            "level_reason": "Major section under Chapter 9."
+        },
+        {
+            "level": 3,
+            "chapter": "Setting safety standards",
+            "page": 172,
+            "level_reason": "Subsection under Special features of environmental and occupational epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Continuing challenges for epidemiologists",
+            "page": 173,
+            "level_reason": "Subsection under Special features of environmental and occupational epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Healthy worker effect in occupational studies",
+            "page": 173,
+            "level_reason": "Subsection under Special features of environmental and occupational epidemiology."
+        },
+        {
+            "level": 3,
+            "chapter": "Measuring past exposure",
+            "page": 173,
+            "level_reason": "Subsection under Special features of environmental and occupational epidemiology."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 10 Epidemiology, health policy and planning",
+            "page": 178,
+            "level_reason": "Numbered chapter heading."
+        },
+        {
+            "level": 2,
+            "chapter": "Introduction",
+            "page": 178,
+            "level_reason": "Major section under Chapter 10."
+        },
+        {
+            "level": 3,
+            "chapter": "Evaluation",
+            "page": 178,
+            "level_reason": "Definition subsection under Introduction."
+        },
+        {
+            "level": 3,
+            "chapter": "Health planning",
+            "page": 178,
+            "level_reason": "Definition subsection under Introduction."
+        },
+        {
+            "level": 3,
+            "chapter": "Health policy",
+            "page": 178,
+            "level_reason": "Definition subsection under Introduction."
+        },
+        {
+            "level": 2,
+            "chapter": "Health policy",
+            "page": 179,
+            "level_reason": "Major section under Chapter 10."
+        },
+        {
+            "level": 3,
+            "chapter": "The influence of epidemiology",
+            "page": 179,
+            "level_reason": "Subsection under Health policy."
+        },
+        {
+            "level": 3,
+            "chapter": "Framing health policy",
+            "page": 180,
+            "level_reason": "Subsection under Health policy."
+        },
+        {
+            "level": 3,
+            "chapter": "Health policy in practice",
+            "page": 181,
+            "level_reason": "Subsection under Health policy."
+        },
+        {
+            "level": 2,
+            "chapter": "Health planning",
+            "page": 182,
+            "level_reason": "Major section under Chapter 10."
+        },
+        {
+            "level": 3,
+            "chapter": "The planning cycle",
+            "page": 183,
+            "level_reason": "Subsection under Health planning."
+        },
+        {
+            "level": 3,
+            "chapter": "Assessing burden",
+            "page": 184,
+            "level_reason": "Subsection under Health planning."
+        },
+        {
+            "level": 4,
+            "chapter": "Mortality and morbidity",
+            "page": 184,
+            "level_reason": "Nested topic under Assessing burden."
+        },
+        {
+            "level": 3,
+            "chapter": "Measuring effectiveness of interventions",
+            "page": 185,
+            "level_reason": "Subsection under Health planning."
+        },
+        {
+            "level": 3,
+            "chapter": "Understanding causes",
+            "page": 185,
+            "level_reason": "Subsection under Health planning."
+        },
+        {
+            "level": 4,
+            "chapter": "Rapid assessment",
+            "page": 185,
+            "level_reason": "Nested topic under Assessing burden."
+        },
+        {
+            "level": 4,
+            "chapter": "Summary population measures",
+            "page": 185,
+            "level_reason": "Nested topic under Assessing burden."
+        },
+        {
+            "level": 3,
+            "chapter": "Assessing efficiency",
+            "page": 186,
+            "level_reason": "Subsection under Health planning."
+        },
+        {
+            "level": 3,
+            "chapter": "Implementing interventions",
+            "page": 187,
+            "level_reason": "Subsection under Health planning."
+        },
+        {
+            "level": 3,
+            "chapter": "Monitoring activities and measuring progress",
+            "page": 188,
+            "level_reason": "Subsection under Health planning."
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 11 First steps in practical epidemiology",
+            "page": 190,
+            "level_reason": "Numbered chapter heading."
+        },
+        {
+            "level": 2,
+            "chapter": "Introduction",
+            "page": 190,
+            "level_reason": "Major section under Chapter 11."
+        },
+        {
+            "level": 2,
+            "chapter": "Specific diseases",
+            "page": 190,
+            "level_reason": "Major section under Chapter 11."
+        },
+        {
+            "level": 2,
+            "chapter": "Critical reading",
+            "page": 191,
+            "level_reason": "Major section under Chapter 11."
+        },
+        {
+            "level": 2,
+            "chapter": "Planning a research project",
+            "page": 194,
+            "level_reason": "Major section under Chapter 11."
+        },
+        {
+            "level": 3,
+            "chapter": "Choosing a project",
+            "page": 194,
+            "level_reason": "Subsection under Planning a research project."
+        },
+        {
+            "level": 3,
+            "chapter": "Writing the protocol",
+            "page": 195,
+            "level_reason": "Subsection under Planning a research project."
+        },
+        {
+            "level": 3,
+            "chapter": "Analysing the data",
+            "page": 196,
+            "level_reason": "Subsection under Planning a research project."
+        },
+        {
+            "level": 3,
+            "chapter": "Doing the research",
+            "page": 196,
+            "level_reason": "Subsection under Planning a research project."
+        },
+        {
+            "level": 3,
+            "chapter": "Getting published",
+            "page": 196,
+            "level_reason": "Subsection under Planning a research project."
+        },
+        {
+            "level": 2,
+            "chapter": "Further reading",
+            "page": 197,
+            "level_reason": "Major section under Chapter 11."
+        },
+        {
+            "level": 2,
+            "chapter": "Further training",
+            "page": 198,
+            "level_reason": "Major section under Chapter 11."
+        }
+    ],
+    "_meta": {
+        "source_pdf": "data/input/주교재.pdf",
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "elapsed_seconds": 103.26796016190201,
+        "elapsed": "1m 43.3s",
+        "generated_timestamp": "20260710_100905",
+        "generation_started_at": "2026-07-10T10:07:22+0900",
+        "generation_completed_at": "2026-07-10T10:09:05+0900"
+    }
+}

@@ -1,0 +1,18 @@
+Processing started: 부교재3_contentsx.pdf
+  PDF layout extraction started...
+  PDF layout extraction completed: 3,752,408 bytes
+  OpenAI input upload started...
+  OpenAI input upload completed: 2 file(s)
+  OpenAI TOC generation started: gpt-5.5
+  Input exceeded model context; retrying automatically with exact layout metadata only.
+  OpenAI TOC generation started: gpt-5.5
+  Layout chunk fallback started: 16 chunks
+  Layout chunk 1/16 generation: pages 1-44
+  Layout chunk 2/16 generation: pages 45-87
+  Layout chunk 3/16 generation: pages 88-129
+  Layout chunk 4/16 generation: pages 130-173
+  Layout chunk 5/16 generation: pages 174-211
+  Layout chunk 6/16 generation: pages 212-253
+  Layout chunk 7/16 generation: pages 254-288
+  Layout chunk 8/16 generation: pages 289-312
+  Layout chunk 9/16 generation: pages 313-340

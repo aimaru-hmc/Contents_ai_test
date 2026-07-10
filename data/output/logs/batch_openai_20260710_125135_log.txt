@@ -1,0 +1,15 @@
+Processing started: 2편9-11장(2021).pdf
+  PDF layout extraction started...
+  PDF layout extraction completed: 1,758,683 bytes
+  OpenAI input upload started...
+  OpenAI input upload completed: 2 file(s)
+  OpenAI TOC generation started: gpt-5.5
+  Input exceeded model context; retrying automatically with exact layout metadata only.
+  OpenAI TOC generation started: gpt-5.5
+  OpenAI TOC generation completed: gpt-5.5
+Completed: data/output/2편9-11장_2021_openai_gpt-5.5_20260710_125434_toc.json
+  model: gpt-5.5
+  elapsed: 2m 59.3s (179.294s)
+  title: 2_9-11_2021
+  chapters: 373
+Processing result: success 1 / failed 0

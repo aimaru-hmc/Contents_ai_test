@@ -1,0 +1,11 @@
+Processing started: 1편(2021).pdf
+  OpenAI PDF upload started...
+  OpenAI PDF upload completed
+  OpenAI TOC generation started: gpt-5.5
+  OpenAI TOC generation completed: gpt-5.5
+Completed: data/output/1편_2021_openai_gpt-5.5_20260710_095225_toc.json
+  model: gpt-5.5
+  elapsed: 1m 20.0s (79.981s)
+  title: 1_2021
+  chapters: 114
+Processing result: success 1 / failed 0

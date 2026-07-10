@@ -1,0 +1,11 @@
+Processing started: 2편9-11장(2021).pdf
+  PDF layout extraction started...
+  PDF layout extraction completed: 1,758,683 bytes
+  OpenAI input upload started...
+  OpenAI input upload completed: 2 file(s)
+  OpenAI TOC generation started: gpt-5.5
+OpenAI model failed: gpt-5.5 / Error code: 400 - {'error': {'message': 'Your input exceeds the context window of this model. Please adjust your input and try again.', 'type': 'invalid_request_error', 'param': 'input', 'code': 'context_length_exceeded'}}
+Failed: 2편9-11장(2021).pdf / Error code: 400 - {'error': {'message': 'Your input exceeds the context window of this model. Please adjust your input and try again.', 'type': 'invalid_request_error', 'param': 'input', 'code': 'context_length_exceeded'}}
+  elapsed: 47.3s (47.288s)
+  Error log saved: data/output/error_logs/2편9-11장_2021_openai_20260710_124451_error.json
+Processing result: success 0 / failed 1

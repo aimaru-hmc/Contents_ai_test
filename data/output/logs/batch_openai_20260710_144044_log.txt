@@ -1,0 +1,36 @@
+Processing started: 주교재.pdf
+  PDF layout extraction started...
+Cannot set gray non-stroke color because /'P1' is an invalid float value
+Cannot set gray non-stroke color because /'P1' is an invalid float value
+Cannot set gray non-stroke color because /'P2' is an invalid float value
+Cannot set gray non-stroke color because /'P3' is an invalid float value
+Cannot set gray non-stroke color because /'P2' is an invalid float value
+Cannot set gray non-stroke color because /'P2' is an invalid float value
+Cannot set gray non-stroke color because /'P2' is an invalid float value
+Cannot set gray non-stroke color because /'P4' is an invalid float value
+Cannot set gray non-stroke color because /'P4' is an invalid float value
+  PDF layout extraction completed: 1,245,097 bytes
+  PDF chunking completed: 8 maximized chunks
+  Processing chunk 1/8: pages 1-37, combined=834,534 bytes, layout=176,406 chars
+  First-chunk level/layout reference created for subsequent chunks
+  Chunk 1/8 completed: 41 chapters
+  Processing chunk 2/8: pages 38-66, combined=553,199 bytes, layout=174,253 chars
+  Chunk 2/8 completed: 53 chapters
+  Processing chunk 3/8: pages 67-98, combined=788,204 bytes, layout=179,374 chars
+  Chunk 3/8 completed: 68 chapters
+  Processing chunk 4/8: pages 99-127, combined=436,311 bytes, layout=179,840 chars
+  Chunk 4/8 completed: 42 chapters
+  Processing chunk 5/8: pages 128-158, combined=378,995 bytes, layout=173,846 chars
+  Chunk 5/8 completed: 52 chapters
+  Processing chunk 6/8: pages 159-189, combined=413,455 bytes, layout=177,514 chars
+  Chunk 6/8 completed: 54 chapters
+  Processing chunk 7/8: pages 190-223, combined=341,419 bytes, layout=174,931 chars
+  Chunk 7/8 completed: 22 chapters
+  Processing chunk 8/8: pages 224-226, combined=288,075 bytes, layout=7,922 chars
+  Chunk 8/8 completed: 0 chapters
+Completed: data/output/주교재_openai_gpt-5.5_20260710_144654_toc.json
+  model: gpt-5.5
+  elapsed: 6m 10.8s (370.768s)
+  title: input_pdf
+  chapters: 332
+Processing result: success 1 / failed 0

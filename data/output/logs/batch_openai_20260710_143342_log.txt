@@ -1,0 +1,15 @@
+Processing started: 1편(2021).pdf
+  PDF layout extraction started...
+  PDF layout extraction completed: 335,730 bytes
+  PDF chunking completed: 2 maximized chunks
+  Processing chunk 1/2: pages 1-41, combined=1,219,234 bytes, layout=178,627 chars
+  First-chunk level/layout reference created for subsequent chunks
+  Chunk 1/2 completed: 99 chapters
+  Processing chunk 2/2: pages 42-52, combined=480,834 bytes, layout=48,873 chars
+  Chunk 2/2 completed: 16 chapters
+Completed: data/output/1편_2021_openai_gpt-5.5_20260710_143547_toc.json
+  model: gpt-5.5
+  elapsed: 2m 5.5s (125.480s)
+  title: 1_2021
+  chapters: 115
+Processing result: success 1 / failed 0

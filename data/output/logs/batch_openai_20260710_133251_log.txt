@@ -1,0 +1,8 @@
+Processing started: 1. 교과서-신경학 3판.pdf
+  PDF layout extraction started...
+  PDF layout extraction completed: 7,543,218 bytes
+  OpenAI PDF + layout upload started...
+Failed: 1. 교과서-신경학 3판.pdf / Error code: 400 - {'error': {'message': 'File is too large.', 'type': 'invalid_request_error', 'param': None, 'code': None}, 'detail': {'message': 'File is too large.', 'code': None}}
+  elapsed: 4m 23.8s (263.753s)
+  Error log saved: data/output/error_logs/1._교과서-신경학_3판_openai_20260710_133715_error.json
+Processing result: success 0 / failed 1

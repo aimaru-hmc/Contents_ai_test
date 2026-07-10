@@ -1,0 +1,63 @@
+Processing started: 2편1-4장(2021).pdf
+  PDF layout extraction started...
+Cannot set gray non-stroke color because /'Pa1' is an invalid float value
+Cannot set gray non-stroke color because /'Pa2' is an invalid float value
+Cannot set gray non-stroke color because /'Pa3' is an invalid float value
+Cannot set gray non-stroke color because /'Pa4' is an invalid float value
+Cannot set gray non-stroke color because /'Pa5' is an invalid float value
+Cannot set gray non-stroke color because /'Pa6' is an invalid float value
+Cannot set gray non-stroke color because /'Pa7' is an invalid float value
+Cannot set gray non-stroke color because /'Pa8' is an invalid float value
+Cannot set gray non-stroke color because /'Pa9' is an invalid float value
+Cannot set gray non-stroke color because /'Pa10' is an invalid float value
+Cannot set gray non-stroke color because /'Pa11' is an invalid float value
+Cannot set gray non-stroke color because /'Pa12' is an invalid float value
+Cannot set gray non-stroke color because /'Pa13' is an invalid float value
+Cannot set gray non-stroke color because /'Pa14' is an invalid float value
+Cannot set gray non-stroke color because /'Pa15' is an invalid float value
+Cannot set gray non-stroke color because /'Pa16' is an invalid float value
+Cannot set gray non-stroke color because /'Pa17' is an invalid float value
+Cannot set gray non-stroke color because /'Pa18' is an invalid float value
+Cannot set gray non-stroke color because /'Pa19' is an invalid float value
+Cannot set gray non-stroke color because /'Pa20' is an invalid float value
+Cannot set gray non-stroke color because /'Pa21' is an invalid float value
+Cannot set gray non-stroke color because /'Pa22' is an invalid float value
+Cannot set gray non-stroke color because /'Pa23' is an invalid float value
+Cannot set gray non-stroke color because /'Pa24' is an invalid float value
+Cannot set gray non-stroke color because /'Pa25' is an invalid float value
+Cannot set gray non-stroke color because /'Pa26' is an invalid float value
+Cannot set gray non-stroke color because /'Pa27' is an invalid float value
+Cannot set gray non-stroke color because /'Pa28' is an invalid float value
+Cannot set gray non-stroke color because /'Pa29' is an invalid float value
+Cannot set gray non-stroke color because /'Pa30' is an invalid float value
+Cannot set gray non-stroke color because /'Pa31' is an invalid float value
+Cannot set gray non-stroke color because /'Pa32' is an invalid float value
+Cannot set gray non-stroke color because /'Pa33' is an invalid float value
+Cannot set gray non-stroke color because /'Pa34' is an invalid float value
+Cannot set gray non-stroke color because /'Pa35' is an invalid float value
+Cannot set gray non-stroke color because /'Pa36' is an invalid float value
+Cannot set gray non-stroke color because /'Pa37' is an invalid float value
+Cannot set gray non-stroke color because /'Pa38' is an invalid float value
+Cannot set gray non-stroke color because /'Pa39' is an invalid float value
+Cannot set gray non-stroke color because /'Pa40' is an invalid float value
+Cannot set gray non-stroke color because /'Pa41' is an invalid float value
+Cannot set gray non-stroke color because /'Pa42' is an invalid float value
+Cannot set gray non-stroke color because /'Pa43' is an invalid float value
+Cannot set gray non-stroke color because /'Pa44' is an invalid float value
+Cannot set gray non-stroke color because /'Pa45' is an invalid float value
+Cannot set gray non-stroke color because /'Pa46' is an invalid float value
+Cannot set gray non-stroke color because /'Pa47' is an invalid float value
+Cannot set gray non-stroke color because /'Pa48' is an invalid float value
+Cannot set gray non-stroke color because /'Pa49' is an invalid float value
+Cannot set gray non-stroke color because /'Pa50' is an invalid float value
+  PDF layout extraction completed: 573,811 bytes
+  OpenAI PDF + layout upload started...
+  OpenAI PDF + layout upload completed
+  OpenAI TOC generation started: gpt-5.5
+  OpenAI TOC generation completed: gpt-5.5
+Completed: data/output/2편1-4장_2021_openai_gpt-5.5_20260710_134715_toc.json
+  model: gpt-5.5
+  elapsed: 2m 10.0s (130.034s)
+  title: 2_1-4_2021
+  chapters: 225
+Processing result: success 1 / failed 0

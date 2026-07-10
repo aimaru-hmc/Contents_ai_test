@@ -1,0 +1,43 @@
+Processing started: 부교재3.PDF
+  PDF layout extraction started...
+  PDF layout extraction completed: 3,902,921 bytes
+  PDF chunking completed: 16 maximized chunks
+  Processing chunk 1/16: pages 1-42, combined=1,946,646 bytes, layout=177,770 chars
+  First-chunk level/layout reference created for subsequent chunks
+  Chunk 1/16 completed: 58 chapters
+  Processing chunk 2/16: pages 43-83, combined=2,190,735 bytes, layout=177,366 chars
+  Chunk 2/16 completed: 83 chapters
+  Processing chunk 3/16: pages 84-129, combined=2,614,678 bytes, layout=179,547 chars
+  Chunk 3/16 completed: 125 chapters
+  Processing chunk 4/16: pages 130-172, combined=2,750,993 bytes, layout=176,589 chars
+  Chunk 4/16 completed: 101 chapters
+  Processing chunk 5/16: pages 173-214, combined=3,391,674 bytes, layout=179,069 chars
+  Chunk 5/16 completed: 70 chapters
+  Processing chunk 6/16: pages 215-251, combined=1,931,978 bytes, layout=176,975 chars
+  Chunk 6/16 completed: 72 chapters
+  Processing chunk 7/16: pages 252-288, combined=2,887,504 bytes, layout=177,399 chars
+  Chunk 7/16 completed: 59 chapters
+  Processing chunk 8/16: pages 289-322, combined=2,398,133 bytes, layout=178,667 chars
+  Chunk 8/16 completed: 88 chapters
+  Processing chunk 9/16: pages 323-347, combined=2,145,141 bytes, layout=163,799 chars
+  Chunk 9/16 completed: 44 chapters
+  Processing chunk 10/16: pages 348-380, combined=2,048,847 bytes, layout=175,550 chars
+  Chunk 10/16 completed: 79 chapters
+  Processing chunk 11/16: pages 381-421, combined=3,137,982 bytes, layout=179,608 chars
+  Chunk 11/16 completed: 113 chapters
+  Processing chunk 12/16: pages 422-457, combined=3,326,484 bytes, layout=177,140 chars
+  Chunk 12/16 completed: 66 chapters
+  Processing chunk 13/16: pages 458-486, combined=3,181,991 bytes, layout=176,143 chars
+  Chunk 13/16 completed: 54 chapters
+  Processing chunk 14/16: pages 487-517, combined=4,162,058 bytes, layout=175,892 chars
+  Chunk 14/16 completed: 73 chapters
+  Processing chunk 15/16: pages 518-558, combined=2,664,897 bytes, layout=176,223 chars
+  Chunk 15/16 completed: 49 chapters
+  Processing chunk 16/16: pages 559-584, combined=971,551 bytes, layout=127,199 chars
+  Chunk 16/16 completed: 0 chapters
+Completed: data/output/부교재3_openai_gpt-5.5_20260710_150327_toc.json
+  model: gpt-5.5
+  elapsed: 16m 31.1s (991.089s)
+  title: 3
+  chapters: 1134
+Processing result: success 1 / failed 0

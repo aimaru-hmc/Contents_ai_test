@@ -1,0 +1,22 @@
+Processing started: 주교재.pdf
+  PDF layout extraction started...
+Cannot set gray non-stroke color because /'P1' is an invalid float value
+Cannot set gray non-stroke color because /'P1' is an invalid float value
+Cannot set gray non-stroke color because /'P2' is an invalid float value
+Cannot set gray non-stroke color because /'P3' is an invalid float value
+Cannot set gray non-stroke color because /'P2' is an invalid float value
+Cannot set gray non-stroke color because /'P2' is an invalid float value
+Cannot set gray non-stroke color because /'P2' is an invalid float value
+Cannot set gray non-stroke color because /'P4' is an invalid float value
+Cannot set gray non-stroke color because /'P4' is an invalid float value
+  PDF layout extraction completed: 1,245,097 bytes
+  OpenAI PDF + layout upload started...
+  OpenAI PDF + layout upload completed
+  OpenAI TOC generation started: gpt-5.5
+  OpenAI TOC generation completed: gpt-5.5
+Completed: data/output/주교재_openai_gpt-5.5_20260710_142459_toc.json
+  model: gpt-5.5
+  elapsed: 1m 55.4s (115.365s)
+  title: input_pdf
+  chapters: 334
+Processing result: success 1 / failed 0

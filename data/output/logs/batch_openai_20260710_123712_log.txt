@@ -1,0 +1,13 @@
+Processing started: 2편5-8장(2021).pdf
+  PDF layout extraction started...
+  PDF layout extraction completed: 1,127,467 bytes
+  OpenAI input upload started...
+  OpenAI input upload completed: 2 file(s)
+  OpenAI TOC generation started: gpt-5.5
+  OpenAI TOC generation completed: gpt-5.5
+Completed: data/output/2편5-8장_2021_openai_gpt-5.5_20260710_123943_toc.json
+  model: gpt-5.5
+  elapsed: 2m 31.2s (151.166s)
+  title: 2_5-8_2021
+  chapters: 325
+Processing result: success 1 / failed 0

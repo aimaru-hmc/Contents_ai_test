@@ -1,0 +1,21 @@
+Processing started: 2편5-8장(2021).pdf
+  PDF layout extraction started...
+  PDF layout extraction completed: 1,127,467 bytes
+  PDF chunking completed: 5 maximized chunks
+  Processing chunk 1/5: pages 1-42, combined=1,559,800 bytes, layout=174,842 chars
+  First-chunk level/layout reference created for subsequent chunks
+  Chunk 1/5 completed: 86 chapters
+  Processing chunk 2/5: pages 43-82, combined=1,335,603 bytes, layout=177,766 chars
+  Chunk 2/5 completed: 61 chapters
+  Processing chunk 3/5: pages 83-122, combined=1,448,163 bytes, layout=176,558 chars
+  Chunk 3/5 completed: 87 chapters
+  Processing chunk 4/5: pages 123-160, combined=1,284,976 bytes, layout=179,108 chars
+  Chunk 4/5 completed: 63 chapters
+  Processing chunk 5/5: pages 161-178, combined=576,731 bytes, layout=83,210 chars
+  Chunk 5/5 completed: 28 chapters
+Completed: data/output/2편5-8장_2021_openai_gpt-5.5_20260710_144043_toc.json
+  model: gpt-5.5
+  elapsed: 4m 55.3s (295.323s)
+  title: 2_5-8_2021
+  chapters: 325
+Processing result: success 1 / failed 0

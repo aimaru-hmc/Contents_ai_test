@@ -1,0 +1,9 @@
+{
+    "timestamp": "2026-07-10T13:37:15+0900",
+    "source_pdf": "data/input/1. 교과서-신경학 3판.pdf",
+    "provider": "openai",
+    "elapsed_seconds": 263.7534965556115,
+    "error_type": "BadRequestError",
+    "error": "Error code: 400 - {'error': {'message': 'File is too large.', 'type': 'invalid_request_error', 'param': None, 'code': None}, 'detail': {'message': 'File is too large.', 'code': None}}",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_openai_v2.py\", line 776, in process_pdf\n    toc, raw_text, used_model = generate_toc_from_pdf_openai(\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_openai_v2.py\", line 595, in generate_toc_from_pdf_openai\n    uploaded_files.append(with_retry(\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_openai_v2.py\", line 218, in with_retry\n    return func()\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_openai_v2.py\", line 593, in do_upload\n    return client.files.create(file=file_obj, purpose=\"user_data\")\n  File \"/home/hmc2/work/development/eunsoo/.venv/lib/python3.9/site-packages/openai/resources/files.py\", line 140, in create\n    return self._post(\n  File \"/home/hmc2/work/development/eunsoo/.venv/lib/python3.9/site-packages/openai/_base_client.py\", line 1332, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n  File \"/home/hmc2/work/development/eunsoo/.venv/lib/python3.9/site-packages/openai/_base_client.py\", line 1105, in request\n    raise self._make_status_error_from_response(err.response) from None\nopenai.BadRequestError: Error code: 400 - {'error': {'message': 'File is too large.', 'type': 'invalid_request_error', 'param': None, 'code': None}, 'detail': {'message': 'File is too large.', 'code': None}}\n"
+}

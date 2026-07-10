@@ -1,0 +1,13 @@
+Processing started: 1편(2021).pdf
+  PDF layout extraction started...
+  PDF layout extraction completed: 335,730 bytes
+  OpenAI PDF + layout upload started...
+  OpenAI PDF + layout upload completed
+  OpenAI TOC generation started: gpt-5.5
+  OpenAI TOC generation completed: gpt-5.5
+Completed: data/output/1편_2021_openai_gpt-5.5_20260710_135259_toc.json
+  model: gpt-5.5
+  elapsed: 1m 24.6s (84.625s)
+  title: 1_2021
+  chapters: 111
+Processing result: success 1 / failed 0

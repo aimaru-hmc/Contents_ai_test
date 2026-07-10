@@ -1,0 +1,11 @@
+Processing started: 주교재.pdf
+  OpenAI PDF upload started...
+  OpenAI PDF upload completed
+  OpenAI TOC generation started: gpt-5.5
+  OpenAI TOC generation completed: gpt-5.5
+Completed: data/output/주교재_openai_gpt-5.5_20260710_100905_toc.json
+  model: gpt-5.5
+  elapsed: 1m 43.3s (103.268s)
+  title: input_pdf
+  chapters: 312
+Processing result: success 1 / failed 0

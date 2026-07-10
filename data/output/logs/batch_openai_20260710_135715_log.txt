@@ -1,0 +1,11 @@
+Processing started: 부교재3.PDF
+  PDF layout extraction started...
+  PDF layout extraction completed: 3,902,921 bytes
+  OpenAI PDF + layout upload started...
+  OpenAI PDF + layout upload completed
+  OpenAI TOC generation started: gpt-5.5
+OpenAI model failed: gpt-5.5 / Error code: 400 - {'error': {'message': 'Your input exceeds the context window of this model. Please adjust your input and try again.', 'type': 'invalid_request_error', 'param': 'input', 'code': 'context_length_exceeded'}}
+Failed: 부교재3.PDF / Error code: 400 - {'error': {'message': 'Your input exceeds the context window of this model. Please adjust your input and try again.', 'type': 'invalid_request_error', 'param': 'input', 'code': 'context_length_exceeded'}}
+  elapsed: 1m 8.1s (68.094s)
+  Error log saved: data/output/error_logs/부교재3_openai_20260710_135823_error.json
+Processing result: success 0 / failed 1

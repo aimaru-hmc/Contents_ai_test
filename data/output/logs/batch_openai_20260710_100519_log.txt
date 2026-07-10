@@ -1,0 +1,11 @@
+Processing started: 부교재3_contentsx.pdf
+  OpenAI PDF upload started...
+  OpenAI PDF upload completed
+  OpenAI TOC generation started: gpt-5.5
+  OpenAI TOC generation completed: gpt-5.5
+Completed: data/output/부교재3_contentsx_openai_gpt-5.5_20260710_100722_toc.json
+  model: gpt-5.5
+  elapsed: 2m 2.8s (122.751s)
+  title: 3_contentsx
+  chapters: 279
+Processing result: success 1 / failed 0
