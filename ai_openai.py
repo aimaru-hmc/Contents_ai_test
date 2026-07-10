@@ -644,6 +644,13 @@ def write_error_log(pdf_path: Path, args: argparse.Namespace, error: Exception, 
     return log_file
 
 
+def print_quiet_console(args: argparse.Namespace, text: str, error: bool = False) -> None:
+    if not getattr(args, "quiet_console", False):
+        return
+    stream = getattr(args, "_console_stderr" if error else "_console_stdout", None)
+    print(text, file=stream or (sys.stderr if error else sys.stdout), flush=True)
+
+
 def iter_pdfs(path: Path) -> list[Path]:
     if path.is_file():
         if path.suffix.lower() != ".pdf":
@@ -694,6 +701,11 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> b
         print(f"  elapsed: {format_elapsed(elapsed_seconds)} ({elapsed_seconds:.3f}s)", flush=True)
         print(f"  title: {toc.get('title')}", flush=True)
         print(f"  chapters: {len(toc.get('chapters', []))}", flush=True)
+        print_quiet_console(
+            args,
+            f"Completed: {output_file} / elapsed {format_elapsed(elapsed_seconds)} / "
+            f"chapters {len(toc.get('chapters', []))}",
+        )
         return True
 
     except Exception as error:
@@ -703,6 +715,12 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> b
         error_log = write_error_log(pdf_path=pdf_path, args=args, error=error, elapsed_seconds=elapsed_seconds)
         if error_log is not None:
             print(f"  Error log saved: {error_log}", file=sys.stderr, flush=True)
+        error_log_text = f" / error log {error_log}" if error_log is not None else ""
+        print_quiet_console(
+            args,
+            f"Failed: {display_name} / elapsed {format_elapsed(elapsed_seconds)} / {error}{error_log_text}",
+            error=True,
+        )
         if args.stop_on_error:
             raise
         return False
@@ -725,6 +743,16 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--delete-uploaded-file", action="store_true", help="Delete uploaded OpenAI file after processing")
     parser.add_argument("--stop-on-error", action="store_true", help="Stop immediately when any PDF fails")
     parser.add_argument("--no-error-log", action="store_true", help="Disable writing error logs under output_dir/error_logs")
+    parser.add_argument(
+        "--quiet-console",
+        action="store_true",
+        help="Write detailed output to a log file and show only per-PDF results and the final summary in the terminal",
+    )
+    parser.add_argument(
+        "--log-file",
+        default=None,
+        help="Detailed log path used with --quiet-console (default: output_dir/logs/batch_openai_TIMESTAMP_log.txt)",
+    )
     return parser
 
 
@@ -736,18 +764,44 @@ def main() -> int:
 
     user_prompt = load_prompt(args)
     pdf_files = iter_pdfs(Path(args.path))
-    if not pdf_files:
-        print("No PDF files to process.", flush=True)
-        return 0
+    original_stdout = sys.stdout
+    original_stderr = sys.stderr
+    log_file = None
+    setattr(args, "_console_stdout", original_stdout)
+    setattr(args, "_console_stderr", original_stderr)
 
-    success_count = 0
-    for pdf_path in pdf_files:
-        if process_pdf(pdf_path=pdf_path, args=args, user_prompt=user_prompt):
-            success_count += 1
+    if args.quiet_console:
+        log_path = (
+            Path(args.log_file)
+            if args.log_file
+            else Path(args.output_dir) / "logs" / f"batch_openai_{timestamp_for_filename()}_log.txt"
+        )
+        log_path.parent.mkdir(parents=True, exist_ok=True)
+        log_file = log_path.open("a", encoding="utf-8", buffering=1)
+        sys.stdout = log_file
+        sys.stderr = log_file
 
-    failed_count = len(pdf_files) - success_count
-    print(f"Processing result: success {success_count} / failed {failed_count}", flush=True)
-    return 0 if failed_count == 0 else 1
+    try:
+        if not pdf_files:
+            print("No PDF files to process.", flush=True)
+            print_quiet_console(args, "No PDF files to process.")
+            return 0
+
+        success_count = 0
+        for pdf_path in pdf_files:
+            if process_pdf(pdf_path=pdf_path, args=args, user_prompt=user_prompt):
+                success_count += 1
+
+        failed_count = len(pdf_files) - success_count
+        summary = f"Processing result: success {success_count} / failed {failed_count}"
+        print(summary, flush=True)
+        print_quiet_console(args, summary)
+        return 0 if failed_count == 0 else 1
+    finally:
+        if log_file is not None:
+            sys.stdout = original_stdout
+            sys.stderr = original_stderr
+            log_file.close()
 
 
 if __name__ == "__main__":

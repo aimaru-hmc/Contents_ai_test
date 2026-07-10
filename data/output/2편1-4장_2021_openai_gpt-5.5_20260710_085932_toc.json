@@ -1,0 +1,1341 @@
+{
+    "title": "2_1-4_2021",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "제1장 역학의 기본원리",
+            "page": 3,
+            "level_reason": "장 제목으로 본문 최상위 구분이다."
+        },
+        {
+            "level": 2,
+            "chapter": "1. 역학의 정의와 발전과정",
+            "page": 3,
+            "level_reason": "제1장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 역학의 정의와 특징",
+            "page": 3,
+            "level_reason": "1절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 역학과 임상의학간의 관계",
+            "page": 4,
+            "level_reason": "1절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 역학 발전의 역사적 배경",
+            "page": 5,
+            "level_reason": "1절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 고대-중세: 역학 개념 성립 이전",
+            "page": 5,
+            "level_reason": "1.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 근대-현대: 역학방법론의 논리적 배경",
+            "page": 6,
+            "level_reason": "1.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 역학의 기반 개념과 감염병 역학 방법론 정립",
+            "page": 6,
+            "level_reason": "1.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "4) 역학의 방법론에 대한 학문적 기반 확립",
+            "page": 7,
+            "level_reason": "1.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 역학의 활용과 영역",
+            "page": 8,
+            "level_reason": "1절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 2,
+            "chapter": "2. 질병발생 모형과 원인적 연관성",
+            "page": 11,
+            "level_reason": "제1장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 질병발생의 다요인설",
+            "page": 11,
+            "level_reason": "2절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 병인",
+            "page": 11,
+            "level_reason": "2.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 숙주요인 또는 인체 내부요인",
+            "page": 11,
+            "level_reason": "2.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 유전적 요인",
+            "page": 11,
+            "level_reason": "숙주요인 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 생태학적 모형과 질병관리",
+            "page": 12,
+            "level_reason": "2절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 역학적 삼각형",
+            "page": 12,
+            "level_reason": "2.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 환경요인",
+            "page": 12,
+            "level_reason": "2.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 과거 노출에 의한 숙주요인의 변화",
+            "page": 12,
+            "level_reason": "숙주요인 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 기타",
+            "page": 12,
+            "level_reason": "숙주요인 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 원인적 연관성",
+            "page": 13,
+            "level_reason": "2절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 과학적 추론의 철학적 배경",
+            "page": 13,
+            "level_reason": "2.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 거미줄 모형",
+            "page": 13,
+            "level_reason": "2.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 수레바퀴 모형",
+            "page": 13,
+            "level_reason": "2.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 인과관계에 관한 로스만의 원인모형",
+            "page": 14,
+            "level_reason": "2.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 충분원인과 필요원인",
+            "page": 14,
+            "level_reason": "로스만 원인모형 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 원인의 강도",
+            "page": 15,
+            "level_reason": "로스만 원인모형 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 기여분율의 합",
+            "page": 15,
+            "level_reason": "로스만 원인모형 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 원인간의 상호작용",
+            "page": 15,
+            "level_reason": "로스만 원인모형 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 유도기간",
+            "page": 15,
+            "level_reason": "로스만 원인모형 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 역학에서의 인과관계",
+            "page": 16,
+            "level_reason": "2.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 요인에 대한 노출과 질병발생과의 시간적 선후관계",
+            "page": 16,
+            "level_reason": "인과관계 기준 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 연관성의 강도",
+            "page": 17,
+            "level_reason": "인과관계 기준 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 연관성의 일관성",
+            "page": 17,
+            "level_reason": "인과관계 기준 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 연관성의 특이성",
+            "page": 17,
+            "level_reason": "인과관계 기준 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 양 - 반응관계",
+            "page": 17,
+            "level_reason": "인과관계 기준 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(6) 생물학적 설명 가능성",
+            "page": 17,
+            "level_reason": "인과관계 기준 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(7) 기존 지식과 일치",
+            "page": 17,
+            "level_reason": "인과관계 기준 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(8) 실험적 입증",
+            "page": 17,
+            "level_reason": "인과관계 기준 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(9) 기존의 다른 인과관계와의 유사성",
+            "page": 18,
+            "level_reason": "인과관계 기준 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 1,
+            "chapter": "제2장 역학연구의 자료",
+            "page": 20,
+            "level_reason": "장 제목으로 본문 최상위 구분이다."
+        },
+        {
+            "level": 2,
+            "chapter": "1. 일차 자료의 수집 방법과 활용",
+            "page": 20,
+            "level_reason": "제2장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 일차 자료의 정의와 특성",
+            "page": 20,
+            "level_reason": "1절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 일차 자료의 정의",
+            "page": 20,
+            "level_reason": "1.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 일차 자료를 수집하는 방법",
+            "page": 20,
+            "level_reason": "1.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 표본조사의 정의와 특성, 장단점",
+            "page": 21,
+            "level_reason": "1절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 표본조사의 정의와 특성",
+            "page": 21,
+            "level_reason": "1.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 표본조사의 장단점",
+            "page": 21,
+            "level_reason": "1.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 의사소통 또는 관찰에 따른 분류",
+            "page": 21,
+            "level_reason": "자료수집 방법 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 설문지 기록자에 따른 분류",
+            "page": 21,
+            "level_reason": "자료수집 방법 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 표본추출법",
+            "page": 22,
+            "level_reason": "1절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 확률표본추출",
+            "page": 22,
+            "level_reason": "1.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 단순무작위표본추출(simple random sampling)",
+            "page": 22,
+            "level_reason": "확률표본추출 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 층화무작위표본추출(stratified random sampling)",
+            "page": 22,
+            "level_reason": "확률표본추출 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 계통 표본추출(systematic sampling)",
+            "page": 23,
+            "level_reason": "확률표본추출 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 비확률표본추출",
+            "page": 24,
+            "level_reason": "1.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 집락표본추출(cluster sampling)",
+            "page": 24,
+            "level_reason": "확률표본추출 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 표본조사의 종류와 방법",
+            "page": 25,
+            "level_reason": "1절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 응답자가 직접 기록하는 형태",
+            "page": 25,
+            "level_reason": "1.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 설문 조사자가 대신 기록하는 형태",
+            "page": 25,
+            "level_reason": "1.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 면접조사(interview survey)",
+            "page": 25,
+            "level_reason": "조사자 기록 형태 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 자기기입식 설문조사(self-administered questionnaire survey)",
+            "page": 25,
+            "level_reason": "응답자 기록 형태 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 우편 조사(mail survey)",
+            "page": 25,
+            "level_reason": "응답자 기록 형태 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 인터넷 조사(internet survey, on-line survey)",
+            "page": 25,
+            "level_reason": "응답자 기록 형태 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 6,
+            "chapter": "① 개별 배포 조사(personal self-administered questionnaire survey)",
+            "page": 25,
+            "level_reason": "자기기입식 설문조사 아래 원형 번호 항목이다."
+        },
+        {
+            "level": 6,
+            "chapter": "② 집단 조사(group survey)",
+            "page": 25,
+            "level_reason": "자기기입식 설문조사 아래 원형 번호 항목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 조사 장소에 따른 형태",
+            "page": 27,
+            "level_reason": "1.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 전화조사(telephone survey)",
+            "page": 27,
+            "level_reason": "조사자 기록 형태 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 2,
+            "chapter": "2. 이차 자료의 종류와 활용",
+            "page": 28,
+            "level_reason": "제2장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 이차 자료의 정의와 특성",
+            "page": 28,
+            "level_reason": "2절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 인구자료",
+            "page": 28,
+            "level_reason": "2절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 사망자료",
+            "page": 29,
+            "level_reason": "2절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 사망통계 자료원",
+            "page": 29,
+            "level_reason": "2.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 사망자료의 장단점",
+            "page": 29,
+            "level_reason": "2.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 사망자료의 활용",
+            "page": 29,
+            "level_reason": "2.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "4) 사망신고자료가 부정확한 이유",
+            "page": 29,
+            "level_reason": "2.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 상병자료",
+            "page": 30,
+            "level_reason": "2절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 건강보험자료",
+            "page": 30,
+            "level_reason": "2.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직장자료",
+            "page": 30,
+            "level_reason": "2.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 병원자료",
+            "page": 30,
+            "level_reason": "2.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "4) 신고자료",
+            "page": 31,
+            "level_reason": "2.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "5) 등록자료",
+            "page": 31,
+            "level_reason": "2.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "6) 건강조사자료",
+            "page": 31,
+            "level_reason": "2.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 국민건강영양조사",
+            "page": 31,
+            "level_reason": "건강조사자료 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 청소년건강행태조사",
+            "page": 32,
+            "level_reason": "건강조사자료 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 지역사회건강조사",
+            "page": 32,
+            "level_reason": "건강조사자료 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 구강건강실태조사",
+            "page": 32,
+            "level_reason": "건강조사자료 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 2,
+            "chapter": "3. 공중보건감시",
+            "page": 34,
+            "level_reason": "제2장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 공중보건감시의 정의와 활용",
+            "page": 34,
+            "level_reason": "3절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 감시체계와 구조",
+            "page": 35,
+            "level_reason": "3절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 3,
+            "chapter": "3.3 수동감시체계와 능동감시체계",
+            "page": 36,
+            "level_reason": "3절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 3,
+            "chapter": "3.4 감시체계에 이용되는 자료원",
+            "page": 36,
+            "level_reason": "3절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 수동감시체계",
+            "page": 36,
+            "level_reason": "3.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 능동감시체계",
+            "page": 36,
+            "level_reason": "3.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 2,
+            "chapter": "4. 질병과 사망원인의 분류와 사망진단서",
+            "page": 37,
+            "level_reason": "제2장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 국제질병분류체계",
+            "page": 37,
+            "level_reason": "4절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 국제기능장애건강분류체계",
+            "page": 37,
+            "level_reason": "4절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 국제질병분류",
+            "page": 37,
+            "level_reason": "4.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "4.3 사망신고제도",
+            "page": 40,
+            "level_reason": "4절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 3,
+            "chapter": "4.4 사망진단서(시체검안서) 작성법",
+            "page": 40,
+            "level_reason": "4절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 제목",
+            "page": 40,
+            "level_reason": "4.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 사망자 확인",
+            "page": 40,
+            "level_reason": "4.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 발병일시와 사망일시",
+            "page": 40,
+            "level_reason": "4.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "4) 사망장소",
+            "page": 41,
+            "level_reason": "4.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "5) 사망의 원인",
+            "page": 41,
+            "level_reason": "4.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "6) 사망의 종류 판단",
+            "page": 41,
+            "level_reason": "4.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "7) 외인사의 추가사항",
+            "page": 42,
+            "level_reason": "4.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "8) 사망진단서 작성 시 주의사항",
+            "page": 42,
+            "level_reason": "4.4 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 1,
+            "chapter": "제3장 질병 및 사망, 건강수준의 측정",
+            "page": 45,
+            "level_reason": "장 제목으로 본문 최상위 구분이다."
+        },
+        {
+            "level": 2,
+            "chapter": "1. 보건지표",
+            "page": 45,
+            "level_reason": "제3장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 지표의 개념",
+            "page": 45,
+            "level_reason": "1절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 지표 산출 방법",
+            "page": 46,
+            "level_reason": "1절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 율의 표준화",
+            "page": 46,
+            "level_reason": "1절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 비",
+            "page": 46,
+            "level_reason": "1.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 율의 표준화 필요성",
+            "page": 46,
+            "level_reason": "1.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 분율",
+            "page": 46,
+            "level_reason": "1.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 율",
+            "page": 46,
+            "level_reason": "1.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 표준화 방법",
+            "page": 47,
+            "level_reason": "1.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 직접표준화법",
+            "page": 47,
+            "level_reason": "표준화 방법 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 간접표준화법",
+            "page": 48,
+            "level_reason": "표준화 방법 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 표준인구",
+            "page": 49,
+            "level_reason": "표준화 방법 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 2,
+            "chapter": "2. 이환지표",
+            "page": 50,
+            "level_reason": "제3장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 발생률과 유병률",
+            "page": 50,
+            "level_reason": "2절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 발생률",
+            "page": 50,
+            "level_reason": "2.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 유병률",
+            "page": 51,
+            "level_reason": "2.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 누적발생률",
+            "page": 51,
+            "level_reason": "발생률 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 평균발생률(발생밀도)",
+            "page": 51,
+            "level_reason": "발생률 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 발생률과 유병률의 상호관계와 용도",
+            "page": 52,
+            "level_reason": "2.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 발병률과 이차발병률",
+            "page": 53,
+            "level_reason": "2절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 2,
+            "chapter": "3. 사망 및 출생지표",
+            "page": 54,
+            "level_reason": "제3장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 사망지표",
+            "page": 55,
+            "level_reason": "3절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 보통사망률(crude death rate)",
+            "page": 55,
+            "level_reason": "3.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 특수사망률(specific death rate)",
+            "page": 55,
+            "level_reason": "3.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 연령별 (특수)사망률(age-specific death rate)",
+            "page": 55,
+            "level_reason": "특수사망률 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 성별 (특수)사망률(sex-specific death rate)",
+            "page": 55,
+            "level_reason": "특수사망률 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 비례사망, 비례사망비 및 비례사망지수",
+            "page": 56,
+            "level_reason": "3.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 비례사망(proportional mortality)",
+            "page": 56,
+            "level_reason": "비례사망 관련 항목 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 사인별 (특수)사망률(cause-specific death rate)",
+            "page": 56,
+            "level_reason": "특수사망률 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "4) 치명률(case fatality rate, CFR)",
+            "page": 57,
+            "level_reason": "3.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "5) 특수 집단의 사망률",
+            "page": 57,
+            "level_reason": "3.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 영아사망률(infant mortality rate)",
+            "page": 57,
+            "level_reason": "특수 집단 사망률 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 비례사망비(proportional mortality ratio)",
+            "page": 57,
+            "level_reason": "비례사망 관련 항목 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 비례사망지수(proportional mortality indicator, PMI)",
+            "page": 57,
+            "level_reason": "비례사망 관련 항목 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 신생아사망률(neonatal mortality rate)",
+            "page": 58,
+            "level_reason": "특수 집단 사망률 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 알파지표(index)",
+            "page": 58,
+            "level_reason": "특수 집단 사망률 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 주산기사망률(perinatal mortality rate)",
+            "page": 58,
+            "level_reason": "특수 집단 사망률 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 인구재생산지표",
+            "page": 59,
+            "level_reason": "3절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 보통출생률(crude birth rate)",
+            "page": 59,
+            "level_reason": "3.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 일반출산율(general fertility rate)",
+            "page": 59,
+            "level_reason": "3.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 연령별 출산율(age-specific fertility rate)",
+            "page": 59,
+            "level_reason": "3.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 모성사망비(maternal mortality ratio)",
+            "page": 59,
+            "level_reason": "특수 집단 사망률 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 2,
+            "chapter": "4. 주관적 건강지표",
+            "page": 60,
+            "level_reason": "제3장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "4) 합계출산율(total fertility rate)",
+            "page": 60,
+            "level_reason": "3.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 삶의 질 측정 도구",
+            "page": 61,
+            "level_reason": "4절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) EQ-5D",
+            "page": 61,
+            "level_reason": "4.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) SF-36과 SF-12",
+            "page": 61,
+            "level_reason": "4.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) WHOQOL-BREF",
+            "page": 61,
+            "level_reason": "4.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 정신질환과 인지능력 측정 도구",
+            "page": 62,
+            "level_reason": "4절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) MMPI",
+            "page": 62,
+            "level_reason": "4.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) CES-D-K",
+            "page": 62,
+            "level_reason": "4.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "4) PWI-SF",
+            "page": 62,
+            "level_reason": "4.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "4.3 일상생활 능력 조사도구",
+            "page": 63,
+            "level_reason": "4절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) ADL",
+            "page": 63,
+            "level_reason": "4.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) IADL",
+            "page": 63,
+            "level_reason": "4.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) MMSE",
+            "page": 63,
+            "level_reason": "4.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "4) GDS",
+            "page": 63,
+            "level_reason": "4.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 1,
+            "chapter": "제4장 한국인의 건강수준",
+            "page": 66,
+            "level_reason": "장 제목으로 본문 최상위 구분이다."
+        },
+        {
+            "level": 2,
+            "chapter": "1. 역학적 변천설과 한국의 역학적 변천",
+            "page": 66,
+            "level_reason": "제4장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 역학적 변천설",
+            "page": 66,
+            "level_reason": "1절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 한국의 역학적 변천",
+            "page": 67,
+            "level_reason": "1절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 2,
+            "chapter": "2. 인구구조 변화와 그에 따른 보건문제",
+            "page": 68,
+            "level_reason": "제4장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 인구구조의 변화",
+            "page": 68,
+            "level_reason": "2절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 인구성장률 감소와 성비변화",
+            "page": 68,
+            "level_reason": "2.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 사망률 감소, 기대여명의 증가",
+            "page": 69,
+            "level_reason": "2.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 고령화와 인구 소멸",
+            "page": 70,
+            "level_reason": "2.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "4) 저출산 등 출산 양상 변화",
+            "page": 70,
+            "level_reason": "2.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "5) 다문화",
+            "page": 71,
+            "level_reason": "2.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 보건문제와 대책",
+            "page": 72,
+            "level_reason": "2절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 고령화",
+            "page": 72,
+            "level_reason": "2.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 저출산",
+            "page": 72,
+            "level_reason": "2.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 다문화가정",
+            "page": 72,
+            "level_reason": "2.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 2,
+            "chapter": "3. 건강수준의 시간변화",
+            "page": 73,
+            "level_reason": "제4장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 건강수준의 장기 추이",
+            "page": 73,
+            "level_reason": "3절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 질병양상과 사망수준의 추이 경향",
+            "page": 73,
+            "level_reason": "3.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 보건문제와 대책",
+            "page": 76,
+            "level_reason": "3.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 계절에 따른 건강수준 변화",
+            "page": 78,
+            "level_reason": "3절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 계절별 변화 양상",
+            "page": 78,
+            "level_reason": "3.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 보건문제와 대책",
+            "page": 80,
+            "level_reason": "3.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 2,
+            "chapter": "4. 공간에 따른 건강수준 차이",
+            "page": 82,
+            "level_reason": "제4장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 국가 간 건강수준의 차이",
+            "page": 82,
+            "level_reason": "4절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 한국과 OECD 국가 간 건강수준 비교",
+            "page": 82,
+            "level_reason": "4.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 건강수준의 지역별 격차",
+            "page": 83,
+            "level_reason": "4절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 보건문제와 대책",
+            "page": 83,
+            "level_reason": "4.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "4.3 건강수준의 도농간 격차",
+            "page": 84,
+            "level_reason": "4절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 건강수준과 관련 요인의 도농간 격차",
+            "page": 84,
+            "level_reason": "4.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 건강수준의 지역별 비교의 의의",
+            "page": 84,
+            "level_reason": "4.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 지역에 따른 건강수준 전망과 대책",
+            "page": 84,
+            "level_reason": "4.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 건강수준 및 관련 요인의 도농간 격차",
+            "page": 84,
+            "level_reason": "도농간 격차 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 보건문제와 대책",
+            "page": 88,
+            "level_reason": "4.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 2,
+            "chapter": "5. 집단별 건강수준 차이",
+            "page": 89,
+            "level_reason": "제4장 아래 번호가 붙은 절 제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "5.1 성별 건강수준",
+            "page": 89,
+            "level_reason": "5절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 성별 건강수준과 요인 분포",
+            "page": 89,
+            "level_reason": "5.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 성별에 따른 사망과 질병 양상 및 관련 요인의 분포",
+            "page": 89,
+            "level_reason": "성별 건강수준과 요인 분포 아래 세부항목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 보건문제와 대책",
+            "page": 91,
+            "level_reason": "5.1 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "5.2 생애주기별 건강수준",
+            "page": 92,
+            "level_reason": "5절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 생애주기별 개념과 건강수준의 특징",
+            "page": 92,
+            "level_reason": "5.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 건강질병에 대한 생애주기별 접근모형",
+            "page": 92,
+            "level_reason": "생애주기별 개념 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 생애주기별 보건문제와 대책",
+            "page": 93,
+            "level_reason": "5.2 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 신생아, 영아, 유아기",
+            "page": 93,
+            "level_reason": "생애주기별 보건문제 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 생애주기별 접근모형의 대두 배경과 필요성",
+            "page": 93,
+            "level_reason": "생애주기별 개념 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 학령기 및 청소년기",
+            "page": 94,
+            "level_reason": "생애주기별 보건문제 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 청년기(대학생 및 비대학생)",
+            "page": 95,
+            "level_reason": "생애주기별 보건문제 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 장년기",
+            "page": 95,
+            "level_reason": "생애주기별 보건문제 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 노년기",
+            "page": 95,
+            "level_reason": "생애주기별 보건문제 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 3,
+            "chapter": "5.3 특정 집단의 건강수준",
+            "page": 97,
+            "level_reason": "5절 아래 소수 번호가 붙은 하위절이다."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 장애인 건강수준과 그 대책",
+            "page": 97,
+            "level_reason": "5.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 장애 역학",
+            "page": 97,
+            "level_reason": "장애인 건강수준 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 저소득계층의 건강수준과 그 대책",
+            "page": 98,
+            "level_reason": "5.3 하위의 괄호 번호 소제목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 저소득계층의 개념 및 건강수준 격차",
+            "page": 98,
+            "level_reason": "저소득계층 건강수준 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 장애인의 보건문제와 대책",
+            "page": 98,
+            "level_reason": "장애인 건강수준 아래 괄호 번호 세부항목이다."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 저소득계층 건강문제의 해결방안",
+            "page": 99,
+            "level_reason": "저소득계층 건강수준 아래 괄호 번호 세부항목이다."
+        }
+    ],
+    "_meta": {
+        "source_pdf": "data/input/부교재1/1권-한글/2편1-4장(2021).pdf",
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "elapsed_seconds": 121.44265372119844,
+        "elapsed": "2m 1.4s",
+        "generated_timestamp": "20260710_085932",
+        "generation_started_at": "2026-07-10T08:57:31+0900",
+        "generation_completed_at": "2026-07-10T08:59:32+0900"
+    }
+}
