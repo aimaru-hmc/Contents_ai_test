@@ -1,0 +1,1322 @@
+{
+    "timestamp": "2026-07-10 10:07:31",
+    "stage_index": 13,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "chunk 3/8",
+    "review_stage": "chunk 3/8",
+    "input_chapters": 59,
+    "candidate_count": 37,
+    "candidates": [
+        {
+            "title": "Historical cohort studies",
+            "level": 2,
+            "page": 61,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection title under Chapter 3.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 419.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=61, line=39, s=9.0, r=0.9, x=140.0, y=419.0: \"Historical cohort studies\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 3,
+                "visual_caption_examples": [
+                    "page=61, line=45, s=8.0, r=0.8, x=34.0, y=490.0: \"Box 3.5. Nested case-control study of gastric\""
+                ],
+                "small_label_examples": [
+                    "page=61, line=32, s=9.0, r=0.9, x=34.0, y=337.0: \"and the relationship between smoking and the risk of\"",
+                    "page=61, line=34, s=9.0, r=0.9, x=34.0, y=348.0: \"stroke; as shown in Table 2.3. Although stroke is a rel-\"",
+                    "page=61, line=47, s=8.0, r=0.8, x=34.0, y=501.0: \"cancer\""
+                ]
+            }
+        },
+        {
+            "title": "Nested case-control studies",
+            "level": 2,
+            "page": 61,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection title under Chapter 3.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 240.0,
+            "vertical_position": 555.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=61, line=54, s=9.0, r=0.9, x=240.0, y=555.0: \"Nested case-control studies\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=61, line=45, s=8.0, r=0.8, x=34.0, y=490.0: \"Box 3.5. Nested case-control study of gastric\""
+                ],
+                "small_label_examples": [
+                    "page=61, line=47, s=8.0, r=0.8, x=34.0, y=501.0: \"cancer\"",
+                    "page=61, line=49, s=9.0, r=0.9, x=34.0, y=517.0: \"To determine if infection with Helicobacter pylori was 30 years.17 This sort of design is...\"",
+                    "page=61, line=50, s=9.0, r=0.9, x=34.0, y=528.0: \"associated with gastric cancer, investigators used a co-\"",
+                    "page=61, line=52, s=9.0, r=0.9, x=34.0, y=539.0: \"hort of 128 992 people that had been established in\""
+                ]
+            }
+        },
+        {
+            "title": "Summary of epidemiological studies",
+            "level": 2,
+            "page": 62,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection title under Chapter 3.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 272.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=62, line=84, s=14.0, r=1.4, x=55.0, y=272.0: \"Summary of epidemiological studies\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=62, line=85, s=10.0, r=1.0, x=55.0, y=300.0: \"Table 3.3 summarizes the applications of different observational studies and Table 3.4\"",
+                    "page=62, line=88, s=8.0, r=0.8, x=55.0, y=356.0: \"Table 3.3. Applications of different observational study designs a\""
+                ],
+                "small_label_examples": [
+                    "page=62, line=76, s=8.0, r=0.8, x=131.0, y=129.0: \"People\"",
+                    "page=62, line=77, s=8.0, r=0.8, x=130.0, y=137.0: \"without\"",
+                    "page=62, line=78, s=8.0, r=0.8, x=130.0, y=145.0: \"disease\"",
+                    "page=62, line=79, s=8.0, r=0.8, x=65.0, y=156.0: \"Population\""
+                ]
+            }
+        },
+        {
+            "title": "Experimental epidemiology",
+            "level": 2,
+            "page": 62,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection title under Chapter 3.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 55.0,
+            "vertical_position": 529.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=62, line=100, s=20.0, r=2.0, x=55.0, y=529.0: \"Experimental epidemiology\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=62, line=92, s=8.0, r=0.8, x=55.0, y=418.0: \"Testing multiple effects of cause + ++ – +++++\"",
+                    "page=62, line=93, s=8.0, r=0.8, x=55.0, y=430.0: \"Study of multiple exposures and determinants ++ ++ ++++ +++\"",
+                    "page=62, line=94, s=8.0, r=0.8, x=55.0, y=442.0: \"Measurements of time relationship ++ – +b +++++\"",
+                    "page=62, line=95, s=8.0, r=0.8, x=55.0, y=454.0: \"Direct measurement of incidence – – +c +++++\""
+                ]
+            }
+        },
+        {
+            "title": "Randomized controlled trials",
+            "level": 3,
+            "page": 63,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Experimental epidemiology.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 276.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=63, line=126, s=14.0, r=1.4, x=140.0, y=276.0: \"Randomized controlled trials\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=63, line=118, s=8.0, r=0.8, x=140.0, y=149.0: \"recall bias NA high high low\"",
+                    "page=63, line=119, s=8.0, r=0.8, x=140.0, y=161.0: \"loss to follow-up NA NA low high\"",
+                    "page=63, line=120, s=8.0, r=0.8, x=140.0, y=173.0: \"confounding High medium medium medium\"",
+                    "page=63, line=121, s=8.0, r=0.8, x=140.0, y=185.0: \"time required Low medium medium high\""
+                ]
+            }
+        },
+        {
+            "title": "Field trials",
+            "level": 3,
+            "page": 63,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Experimental epidemiology.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 622.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=63, line=147, s=14.0, r=1.4, x=140.0, y=622.0: \"Field trials\""
+                ],
+                "embedded_examples": [
+                    "page=63, line=148, s=10.0, r=1.0, x=140.0, y=649.0: \"Field trials, in contrast to clinical trials, involve people who are healthy but pre-\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=63, line=139, s=8.0, r=0.8, x=291.0, y=480.0: \"Intervention\"",
+                    "page=63, line=140, s=8.0, r=0.8, x=408.0, y=493.0: \"No disease\"",
+                    "page=63, line=141, s=8.0, r=0.8, x=154.0, y=508.0: \"Population Randomization\"",
+                    "page=63, line=142, s=8.0, r=0.8, x=203.0, y=543.0: \"Exclusions\""
+                ]
+            }
+        },
+        {
+            "title": "Community trials",
+            "level": 3,
+            "page": 64,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Experimental epidemiology.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 238.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=64, line=165, s=14.0, r=1.4, x=55.0, y=238.0: \"Community trials\""
+                ],
+                "embedded_examples": [
+                    "page=64, line=176, s=10.0, r=1.0, x=55.0, y=331.0: \"condition appropriate for community trials although unan- searchers believed that the com...\"",
+                    "page=64, line=180, s=9.0, r=0.9, x=55.0, y=377.0: \"Limitations of community trials components of the intervention proved effective when\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=64, line=167, s=8.0, r=0.8, x=289.0, y=273.0: \"Box 3.6. Stanford Five-City Community\"",
+                    "page=64, line=167, s=8.0, r=0.8, x=289.0, y=273.0: \"Box 3.6. Stanford Five-City Community\""
+                ],
+                "small_label_examples": [
+                    "page=64, line=169, s=8.0, r=0.8, x=289.0, y=284.0: \"Intervention Trial\"",
+                    "page=64, line=171, s=9.0, r=0.9, x=289.0, y=300.0: \"The Stanford Five-City Project started in 1978 as one of\"",
+                    "page=64, line=173, s=9.0, r=0.9, x=289.0, y=311.0: \"several community intervention studies designed to\"",
+                    "page=64, line=169, s=8.0, r=0.8, x=289.0, y=284.0: \"Intervention Trial\""
+                ]
+            }
+        },
+        {
+            "title": "Potential errors in epidemiological studies",
+            "level": 2,
+            "page": 64,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection title under Chapter 3.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 55.0,
+            "vertical_position": 621.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=64, line=204, s=20.0, r=2.0, x=55.0, y=621.0: \"Potential errors in epidemiological studies\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 0,
+                "visual_caption_examples": [
+                    "page=64, line=199, s=10.0, r=1.0, x=73.0, y=547.0: \"Figure 3.9 shows a community trial of a tuberculosis outreach programme in\""
+                ]
+            }
+        },
+        {
+            "title": "Random error",
+            "level": 3,
+            "page": 65,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Potential errors.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 353.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 4,
+                "exact_examples": [
+                    "page=65, line=228, s=14.0, r=1.4, x=140.0, y=353.0: \"Random error\""
+                ],
+                "embedded_examples": [
+                    "page=65, line=229, s=10.0, r=1.0, x=140.0, y=380.0: \"Random error is when a value of the sample measurement diverges – due to chance\"",
+                    "page=65, line=230, s=10.0, r=1.0, x=140.0, y=393.0: \"alone – from that of the true population value. Random error causes inaccurate mea-\"",
+                    "page=65, line=231, s=10.0, r=1.0, x=140.0, y=406.0: \"sures of association. There are three major sources of random error:\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=65, line=220, s=8.0, r=0.8, x=209.0, y=250.0: \"12 communities 20 communities\"",
+                    "page=65, line=221, s=8.0, r=0.8, x=186.0, y=258.0: \"followed up; 159 smear-positive followed up; 221 smear-positive\"",
+                    "page=65, line=222, s=8.0, r=0.8, x=189.0, y=266.0: \"tuberculosis patients detected tuberculosis cases detected\"",
+                    "page=65, line=223, s=8.0, r=0.8, x=218.0, y=289.0: \"128 (81%) 165 (75%)\""
+                ]
+            }
+        },
+        {
+            "title": "Confounding",
+            "level": 2,
+            "page": 68,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection title under Chapter 3.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 55.0,
+            "vertical_position": 119.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 13,
+                "exact_examples": [
+                    "page=68, line=344, s=20.0, r=2.0, x=55.0, y=119.0: \"Confounding\""
+                ],
+                "embedded_examples": [
+                    "page=68, line=345, s=10.0, r=1.0, x=55.0, y=152.0: \"Confounding is another major issue in epidemiological studies. In a study of the\"",
+                    "page=68, line=347, s=10.0, r=1.0, x=55.0, y=178.0: \"disease, confounding can occur when another exposure exists in the study popu-\"",
+                    "page=68, line=353, s=10.0, r=1.0, x=55.0, y=256.0: \"the other. To be a confounding factor, two conditions must be met (Figure 3.10).\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=68, line=354, s=8.0, r=0.8, x=55.0, y=286.0: \"Figure 3.10. Confounding: relationship between coffee drinking (exposure), heart\""
+                ],
+                "small_label_examples": [
+                    "page=68, line=341, s=9.0, r=0.9, x=391.0, y=53.0: \"Types of studies 55\"",
+                    "page=68, line=341, s=9.0, r=0.9, x=391.0, y=53.0: \"Types of studies 55\"",
+                    "page=68, line=341, s=9.0, r=0.9, x=391.0, y=53.0: \"Types of studies 55\"",
+                    "page=68, line=355, s=8.0, r=0.8, x=55.0, y=297.0: \"disease (outcome), and a third variable (tobacco use)\""
+                ]
+            }
+        },
+        {
+            "title": "Randomization",
+            "level": 4,
+            "page": 69,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Specific method for controlling confounding.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 366.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 3,
+                "exact_examples": [
+                    "page=69, line=414, s=9.0, r=0.9, x=140.0, y=366.0: \"Randomization\""
+                ],
+                "embedded_examples": [
+                    "page=69, line=408, s=10.0, r=1.0, x=158.0, y=262.0: \"(cid:120) randomization\"",
+                    "page=69, line=415, s=10.0, r=1.0, x=140.0, y=376.0: \"In experimental studies, randomization is the ideal method for ensuring that potential\"",
+                    "page=69, line=418, s=10.0, r=1.0, x=140.0, y=415.0: \"variables. Randomization avoids the association between potentially confounding\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=69, line=414, s=9.0, r=0.9, x=140.0, y=366.0: \"Randomization\"",
+                    "page=69, line=420, s=9.0, r=0.9, x=140.0, y=452.0: \"Restriction\"",
+                    "page=69, line=414, s=9.0, r=0.9, x=140.0, y=366.0: \"Randomization\"",
+                    "page=69, line=420, s=9.0, r=0.9, x=140.0, y=452.0: \"Restriction\""
+                ]
+            }
+        },
+        {
+            "title": "Restriction",
+            "level": 4,
+            "page": 69,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Specific method for controlling confounding.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 452.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=69, line=420, s=9.0, r=0.9, x=140.0, y=452.0: \"Restriction\""
+                ],
+                "embedded_examples": [
+                    "page=69, line=409, s=10.0, r=1.0, x=158.0, y=274.0: \"(cid:120) restriction\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 3,
+                "small_label_examples": [
+                    "page=69, line=414, s=9.0, r=0.9, x=140.0, y=366.0: \"Randomization\"",
+                    "page=69, line=414, s=9.0, r=0.9, x=140.0, y=366.0: \"Randomization\"",
+                    "page=69, line=425, s=9.0, r=0.9, x=140.0, y=525.0: \"Matching\""
+                ]
+            }
+        },
+        {
+            "title": "Matching",
+            "level": 4,
+            "page": 69,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Specific method for controlling confounding.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 525.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 5,
+                "exact_examples": [
+                    "page=69, line=425, s=9.0, r=0.9, x=140.0, y=525.0: \"Matching\""
+                ],
+                "embedded_examples": [
+                    "page=69, line=410, s=10.0, r=1.0, x=158.0, y=286.0: \"(cid:120) matching.\"",
+                    "page=69, line=426, s=10.0, r=1.0, x=140.0, y=535.0: \"Matching is used to control confounding by selecting study participants so as to\"",
+                    "page=69, line=432, s=10.0, r=1.0, x=140.0, y=613.0: \"the selection of controls if the matching criteria are too strict or too numerous; this\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=69, line=414, s=9.0, r=0.9, x=140.0, y=366.0: \"Randomization\"",
+                    "page=69, line=420, s=9.0, r=0.9, x=140.0, y=452.0: \"Restriction\"",
+                    "page=69, line=420, s=9.0, r=0.9, x=140.0, y=452.0: \"Restriction\"",
+                    "page=69, line=425, s=9.0, r=0.9, x=140.0, y=525.0: \"Matching\""
+                ]
+            }
+        },
+        {
+            "title": "Validity",
+            "level": 2,
+            "page": 70,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection title under Chapter 3.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 301.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 2,
+                "embedded_count": 5,
+                "exact_examples": [
+                    "page=70, line=456, s=14.0, r=1.4, x=55.0, y=301.0: \"Validity\"",
+                    "page=70, line=467, s=9.0, r=0.9, x=227.0, y=475.0: \"Validity\""
+                ],
+                "embedded_examples": [
+                    "page=70, line=457, s=10.0, r=1.0, x=55.0, y=328.0: \"Validity is an expression of the degree to which a test is capable of measuring what\"",
+                    "page=70, line=461, s=10.0, r=1.0, x=55.0, y=380.0: \"low and high validity and reliability. With low reliability but high validity the measured\"",
+                    "page=70, line=464, s=10.0, r=1.0, x=55.0, y=419.0: \"ensure validity since they may all be far from the true value. There are two types of\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 4,
+                "small_label_count": 3,
+                "visual_caption_examples": [
+                    "page=70, line=460, s=10.0, r=1.0, x=55.0, y=367.0: \"Figure 3.11 indicates the relationship between the true value and measured values for\"",
+                    "page=70, line=460, s=10.0, r=1.0, x=55.0, y=367.0: \"Figure 3.11 indicates the relationship between the true value and measured values for\"",
+                    "page=70, line=460, s=10.0, r=1.0, x=55.0, y=367.0: \"Figure 3.11 indicates the relationship between the true value and measured values for\"",
+                    "page=70, line=466, s=8.0, r=0.8, x=55.0, y=462.0: \"Figure 3.11. Validity and reliability\""
+                ],
+                "small_label_examples": [
+                    "page=70, line=467, s=9.0, r=0.9, x=227.0, y=475.0: \"Validity\"",
+                    "page=70, line=468, s=9.0, r=0.9, x=177.0, y=492.0: \"High Low\"",
+                    "page=70, line=469, s=8.0, r=0.8, x=159.0, y=514.0: \"Measured values Measured values\""
+                ]
+            }
+        },
+        {
+            "title": "Internal validity",
+            "level": 3,
+            "page": 71,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Validity.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 84.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 3,
+                "exact_examples": [
+                    "page=71, line=479, s=9.0, r=0.9, x=140.0, y=84.0: \"Internal validity\""
+                ],
+                "embedded_examples": [
+                    "page=71, line=480, s=10.0, r=1.0, x=140.0, y=95.0: \"Internal validity is the degree to which the results of an observation are correct for\"",
+                    "page=71, line=488, s=10.0, r=1.0, x=140.0, y=199.0: \"not be compared with other studies. Internal validity can be threatened by all sources\"",
+                    "page=71, line=492, s=10.0, r=1.0, x=140.0, y=259.0: \"to people not in it (or, for example, to laboratories not involved in it). Internal valid...\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=71, line=478, s=9.0, r=0.9, x=27.0, y=53.0: \"58 Chapter 3\"",
+                    "page=71, line=478, s=9.0, r=0.9, x=27.0, y=53.0: \"58 Chapter 3\"",
+                    "page=71, line=479, s=9.0, r=0.9, x=140.0, y=84.0: \"Internal validity\"",
+                    "page=71, line=490, s=9.0, r=0.9, x=140.0, y=235.0: \"External validity\""
+                ]
+            }
+        },
+        {
+            "title": "External validity",
+            "level": 3,
+            "page": 71,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Validity.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 235.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 5,
+                "exact_examples": [
+                    "page=71, line=490, s=9.0, r=0.9, x=140.0, y=235.0: \"External validity\""
+                ],
+                "embedded_examples": [
+                    "page=71, line=491, s=10.0, r=1.0, x=140.0, y=246.0: \"External validity or generalizability is the extent to which the results of a study apply\"",
+                    "page=71, line=493, s=10.0, r=1.0, x=140.0, y=272.0: \"is necessary for, but does not guarantee, external validity, and is easier to achieve.\"",
+                    "page=71, line=494, s=10.0, r=1.0, x=140.0, y=285.0: \"External validity requires external quality control of the measurements and judgements\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 2,
+                "small_label_examples": [
+                    "page=71, line=490, s=9.0, r=0.9, x=140.0, y=235.0: \"External validity\"",
+                    "page=71, line=490, s=9.0, r=0.9, x=140.0, y=235.0: \"External validity\""
+                ]
+            }
+        },
+        {
+            "title": "Informed consent",
+            "level": 3,
+            "page": 71,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Ethical issues.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 626.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 3,
+                "exact_examples": [
+                    "page=71, line=517, s=9.0, r=0.9, x=140.0, y=626.0: \"Informed consent\""
+                ],
+                "embedded_examples": [
+                    "page=71, line=513, s=10.0, r=1.0, x=158.0, y=567.0: \"(cid:120) informed consent\"",
+                    "page=71, line=518, s=10.0, r=1.0, x=140.0, y=637.0: \"Free and voluntary informed consent must be obtained from participants in epidemi-\"",
+                    "page=71, line=520, s=10.0, r=1.0, x=140.0, y=663.0: \"may prove impracticable for informed consent to be given for access to routine med-\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 2,
+                "small_label_examples": [
+                    "page=71, line=517, s=9.0, r=0.9, x=140.0, y=626.0: \"Informed consent\"",
+                    "page=71, line=517, s=9.0, r=0.9, x=140.0, y=626.0: \"Informed consent\""
+                ]
+            }
+        },
+        {
+            "title": "Confidentiality",
+            "level": 3,
+            "page": 72,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Ethical issues.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 347.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=72, line=544, s=9.0, r=0.9, x=55.0, y=347.0: \"Confidentiality\""
+                ],
+                "embedded_examples": [
+                    "page=72, line=539, s=10.0, r=1.0, x=55.0, y=272.0: \"must respect personal privacy and confidentiality at all times. They have an obligation\"",
+                    "page=72, line=545, s=10.0, r=1.0, x=55.0, y=358.0: \"Epidemiologists also have an obligation to preserve confidentiality of information\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=72, line=531, s=9.0, r=0.9, x=62.0, y=162.0: \"Bengal, India, began noticing patients with clinical signs of arsenic intoxication (skin...\"",
+                    "page=72, line=532, s=9.0, r=0.9, x=62.0, y=173.0: \"mentation and increased rates of a variety of cancers), that the tube wells were checked.\"",
+                    "page=72, line=533, s=9.0, r=0.9, x=62.0, y=184.0: \"Currently about 30 million people, one quarter of Bangladesh’s population, are drinking\"",
+                    "page=72, line=534, s=9.0, r=0.9, x=62.0, y=195.0: \"water with significantly high levels of arsenic. All of the possible interventions to low...\""
+                ]
+            }
+        },
+        {
+            "title": "References",
+            "level": 2,
+            "page": 73,
+            "reasons": [
+                "title itself looks like a case/example/table/figure/problem/reference label",
+                "source context looks like case/example/table/figure/problem/reference material"
+            ],
+            "level_reason": "Standard end-of-chapter section.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 140.0,
+            "vertical_position": 345.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=73, line=589, s=20.0, r=2.0, x=140.0, y=345.0: \"References\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "Tables and graphs",
+            "level": 3,
+            "page": 77,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Summarizing data.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 84.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=77, line=709, s=14.0, r=1.4, x=140.0, y=84.0: \"Tables and graphs\""
+                ],
+                "embedded_examples": [
+                    "page=77, line=710, s=10.0, r=1.0, x=140.0, y=112.0: \"Tables and graphs are important means of summarizing and displaying data, but they\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 2,
+                "visual_caption_examples": [
+                    "page=77, line=716, s=8.0, r=0.8, x=34.0, y=185.0: \"Box 4.1. The advantages of graphs versus tables\"",
+                    "page=77, line=716, s=8.0, r=0.8, x=34.0, y=185.0: \"Box 4.1. The advantages of graphs versus tables\""
+                ],
+                "small_label_examples": [
+                    "page=77, line=708, s=9.0, r=0.9, x=27.0, y=54.0: \"64 Chapter 4\"",
+                    "page=77, line=708, s=9.0, r=0.9, x=27.0, y=54.0: \"64 Chapter 4\""
+                ]
+            }
+        },
+        {
+            "title": "Pie charts and component band charts",
+            "level": 4,
+            "page": 77,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Specific graph type under Tables and graphs.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 536.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=77, line=746, s=14.0, r=1.4, x=140.0, y=536.0: \"Pie charts and component band charts\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=77, line=738, s=9.0, r=0.9, x=147.0, y=419.0: \"The world health chart (http://www.gapminder.org/) shows global health development by\"",
+                    "page=77, line=739, s=9.0, r=0.9, x=147.0, y=430.0: \"a series of interactive charts linked to existing data. These charts are designed to prom...\"",
+                    "page=77, line=740, s=9.0, r=0.9, x=147.0, y=441.0: \"better use of such data, informadvocacy efforts and stimulate hypothesis generation. The\"",
+                    "page=77, line=741, s=9.0, r=0.9, x=147.0, y=452.0: \"charts show time trends in a dynamic fashion, similar to a computer game. The world\""
+                ]
+            }
+        },
+        {
+            "title": "Spot maps and rate maps",
+            "level": 4,
+            "page": 78,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Specific graph type under Tables and graphs.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 84.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=78, line=758, s=14.0, r=1.4, x=55.0, y=84.0: \"Spot maps and rate maps\""
+                ],
+                "embedded_examples": [
+                    "page=78, line=759, s=10.0, r=1.0, x=55.0, y=112.0: \"Spot maps and rate maps display geographical locations of cases or rates. John Snow\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 2,
+                "visual_caption_examples": [
+                    "page=78, line=765, s=8.0, r=0.8, x=55.0, y=206.0: \"Figure 4.1. Deaths from cholera in central London, September 18546,7\"",
+                    "page=78, line=765, s=8.0, r=0.8, x=55.0, y=206.0: \"Figure 4.1. Deaths from cholera in central London, September 18546,7\""
+                ],
+                "small_label_examples": [
+                    "page=78, line=757, s=9.0, r=0.9, x=319.0, y=54.0: \"Basic biostatistics: concepts and tools 65\"",
+                    "page=78, line=757, s=9.0, r=0.9, x=319.0, y=54.0: \"Basic biostatistics: concepts and tools 65\""
+                ]
+            }
+        },
+        {
+            "title": "Bar charts",
+            "level": 4,
+            "page": 78,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Specific graph type under Tables and graphs.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 593.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=78, line=771, s=14.0, r=1.4, x=55.0, y=593.0: \"Bar charts\""
+                ],
+                "embedded_examples": [
+                    "page=78, line=772, s=10.0, r=1.0, x=55.0, y=621.0: \"Bar charts are best suited for displaying numbers or percentages that compare two\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 0,
+                "visual_caption_examples": [
+                    "page=78, line=765, s=8.0, r=0.8, x=55.0, y=206.0: \"Figure 4.1. Deaths from cholera in central London, September 18546,7\"",
+                    "page=78, line=765, s=8.0, r=0.8, x=55.0, y=206.0: \"Figure 4.1. Deaths from cholera in central London, September 18546,7\""
+                ]
+            }
+        },
+        {
+            "title": "Line graphs",
+            "level": 4,
+            "page": 79,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Specific graph type under Tables and graphs.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 240.0,
+            "vertical_position": 439.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=79, line=816, s=14.0, r=1.4, x=240.0, y=439.0: \"Line graphs\""
+                ],
+                "embedded_examples": [
+                    "page=79, line=817, s=10.0, r=1.0, x=239.0, y=467.0: \"Line graphs (Figure 6.1) are best suited for displaying the\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=79, line=818, s=10.0, r=1.0, x=34.0, y=477.0: \"Box 4.3. A word of caution amount of change or difference in a continuous variable,\"",
+                    "page=79, line=818, s=10.0, r=1.0, x=34.0, y=477.0: \"Box 4.3. A word of caution amount of change or difference in a continuous variable,\""
+                ],
+                "small_label_examples": [
+                    "page=79, line=808, s=6.6, r=0.67, x=393.0, y=324.0: \"Madagascar\"",
+                    "page=79, line=809, s=6.6, r=0.67, x=165.0, y=332.0: \"Over 175 11—25 Botswana Zimbabwe\"",
+                    "page=79, line=810, s=7.0, r=0.7, x=165.0, y=344.0: \"101—175 10 and under South\"",
+                    "page=79, line=811, s=6.6, r=0.67, x=307.0, y=351.0: \"Africa Swaziland\""
+                ]
+            }
+        },
+        {
+            "title": "Frequency distributions and histograms",
+            "level": 4,
+            "page": 79,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Specific graph type under Tables and graphs.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 607.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=79, line=831, s=14.0, r=1.4, x=140.0, y=607.0: \"Frequency distributions and histograms\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 3,
+                "small_label_examples": [
+                    "page=79, line=823, s=9.0, r=0.9, x=34.0, y=526.0: \"may only be apparent upon careful examination of the\"",
+                    "page=79, line=825, s=9.0, r=0.9, x=34.0, y=537.0: \"vertical axis. When reading a chart, it is important to\"",
+                    "page=79, line=827, s=9.0, r=0.9, x=34.0, y=548.0: \"examine the vertical axis carefully to make sure that you\""
+                ]
+            }
+        },
+        {
+            "title": "Normal distributions",
+            "level": 3,
+            "page": 80,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Summarizing data.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 356.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=80, line=848, s=14.0, r=1.4, x=55.0, y=356.0: \"Normal distributions\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 3,
+                "visual_caption_examples": [
+                    "page=80, line=844, s=8.0, r=0.8, x=55.0, y=166.0: \"Figure 4.3. The normal distribution curve\""
+                ],
+                "small_label_examples": [
+                    "page=80, line=845, s=9.0, r=0.9, x=186.0, y=208.0: \"68%\"",
+                    "page=80, line=846, s=9.0, r=0.9, x=186.0, y=294.0: \"95%\"",
+                    "page=80, line=847, s=9.0, r=0.9, x=103.0, y=329.0: \"–1.96 SD –1 SD mean 1 SD 1.96 SD\""
+                ]
+            }
+        },
+        {
+            "title": "Summary numbers",
+            "level": 3,
+            "page": 80,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Summarizing data.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 55.0,
+            "vertical_position": 458.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=80, line=854, s=20.0, r=2.0, x=55.0, y=458.0: \"Summary numbers\""
+                ],
+                "embedded_examples": [
+                    "page=80, line=856, s=10.0, r=1.0, x=55.0, y=519.0: \"One set of summary numbers are those that measure central tendency, that is, they\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=80, line=846, s=9.0, r=0.9, x=186.0, y=294.0: \"95%\"",
+                    "page=80, line=847, s=9.0, r=0.9, x=103.0, y=329.0: \"–1.96 SD –1 SD mean 1 SD 1.96 SD\"",
+                    "page=80, line=858, s=9.0, r=0.9, x=55.0, y=555.0: \"The mean\"",
+                    "page=80, line=861, s=7.0, r=0.7, x=265.0, y=583.0: \"i\""
+                ]
+            }
+        },
+        {
+            "title": "Means, medians and mode",
+            "level": 4,
+            "page": 80,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Specific summary numbers.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 491.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=80, line=855, s=14.0, r=1.4, x=55.0, y=491.0: \"Means, medians and mode\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 3,
+                "small_label_examples": [
+                    "page=80, line=847, s=9.0, r=0.9, x=103.0, y=329.0: \"–1.96 SD –1 SD mean 1 SD 1.96 SD\"",
+                    "page=80, line=858, s=9.0, r=0.9, x=55.0, y=555.0: \"The mean\"",
+                    "page=80, line=861, s=7.0, r=0.7, x=265.0, y=583.0: \"i\""
+                ]
+            }
+        },
+        {
+            "title": "The mean",
+            "level": 5,
+            "page": 80,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Detailed breakdown of central tendency.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 555.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=80, line=858, s=9.0, r=0.9, x=55.0, y=555.0: \"The mean\""
+                ],
+                "embedded_examples": [
+                    "page=80, line=852, s=10.0, r=1.0, x=55.0, y=422.0: \"distribution curve fall within one standard deviation (SD) of the mean, and approxi-\"",
+                    "page=80, line=853, s=10.0, r=1.0, x=55.0, y=435.0: \"mately 95% fall within two standard deviations of the mean.\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=80, line=844, s=8.0, r=0.8, x=55.0, y=166.0: \"Figure 4.3. The normal distribution curve\""
+                ],
+                "small_label_examples": [
+                    "page=80, line=845, s=9.0, r=0.9, x=186.0, y=208.0: \"68%\"",
+                    "page=80, line=846, s=9.0, r=0.9, x=186.0, y=294.0: \"95%\"",
+                    "page=80, line=847, s=9.0, r=0.9, x=103.0, y=329.0: \"–1.96 SD –1 SD mean 1 SD 1.96 SD\"",
+                    "page=80, line=858, s=9.0, r=0.9, x=55.0, y=555.0: \"The mean\""
+                ]
+            }
+        },
+        {
+            "title": "The median",
+            "level": 5,
+            "page": 80,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Detailed breakdown of central tendency.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 641.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=80, line=867, s=9.0, r=0.9, x=55.0, y=641.0: \"The median\""
+                ],
+                "embedded_examples": [
+                    "page=80, line=868, s=10.0, r=1.0, x=55.0, y=652.0: \"The median is defined as the middle after all the measurements have been put in\"",
+                    "page=80, line=869, s=10.0, r=1.0, x=55.0, y=665.0: \"order according to their values. The median is especially useful when a few values\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=80, line=861, s=7.0, r=0.7, x=265.0, y=583.0: \"i\"",
+                    "page=80, line=865, s=6.0, r=0.6, x=237.0, y=614.0: \"i\"",
+                    "page=80, line=866, s=6.0, r=0.6, x=221.0, y=619.0: \"i=1\"",
+                    "page=80, line=861, s=7.0, r=0.7, x=265.0, y=583.0: \"i\""
+                ]
+            }
+        },
+        {
+            "title": "The mode",
+            "level": 5,
+            "page": 81,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Detailed breakdown of central tendency.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 185.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=81, line=881, s=9.0, r=0.9, x=140.0, y=185.0: \"The mode\""
+                ],
+                "embedded_examples": [
+                    "page=81, line=882, s=10.0, r=1.0, x=140.0, y=196.0: \"Another important measure is the mode,, which is the valueof the measurement in\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 2,
+                "small_label_examples": [
+                    "page=81, line=873, s=9.0, r=0.9, x=27.0, y=54.0: \"68 Chapter 4\"",
+                    "page=81, line=881, s=9.0, r=0.9, x=140.0, y=185.0: \"The mode\""
+                ]
+            }
+        },
+        {
+            "title": "Random samples",
+            "level": 4,
+            "page": 82,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Detailed breakdown of sampling.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 378.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=82, line=932, s=9.0, r=0.9, x=55.0, y=378.0: \"Random samples\""
+                ],
+                "embedded_examples": [
+                    "page=82, line=946, s=10.0, r=1.0, x=55.0, y=552.0: \"Of course, another random sample selected from this same population and the\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 2,
+                "small_label_examples": [
+                    "page=82, line=943, s=6.0, r=0.6, x=199.0, y=513.0: \"ii\"",
+                    "page=82, line=944, s=6.0, r=0.6, x=184.0, y=519.0: \"i=1\""
+                ]
+            }
+        },
+        {
+            "title": "Confidence intervals",
+            "level": 3,
+            "page": 83,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Statistical inference.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 240.0,
+            "vertical_position": 135.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 3,
+                "exact_examples": [
+                    "page=83, line=962, s=14.0, r=1.4, x=240.0, y=135.0: \"Confidence intervals\""
+                ],
+                "embedded_examples": [
+                    "page=83, line=963, s=10.0, r=1.0, x=239.0, y=162.0: \"Confidence intervals are one of the most useful tools in\"",
+                    "page=83, line=998, s=9.0, r=0.9, x=34.0, y=593.0: \"confidence intervals and the expectation is that, if this\"",
+                    "page=83, line=1001, s=10.0, r=1.0, x=256.0, y=609.0: \"This example focuses on confidence intervals for μ;\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 3,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=83, line=964, s=10.0, r=1.0, x=34.0, y=173.0: \"Box 4.4. Standard error of the mean epidemiology. In general, a confidence interval uses...\"",
+                    "page=83, line=964, s=10.0, r=1.0, x=34.0, y=173.0: \"Box 4.4. Standard error of the mean epidemiology. In general, a confidence interval uses...\"",
+                    "page=83, line=993, s=10.0, r=1.0, x=34.0, y=533.0: \"Box 4.5. Interpreting a confidence interval from the t distribution with n-1 = 9 degrees...\""
+                ],
+                "small_label_examples": [
+                    "page=83, line=958, s=9.0, r=0.9, x=27.0, y=54.0: \"70 Chapter 4\"",
+                    "page=83, line=967, s=9.0, r=0.9, x=34.0, y=211.0: \"likely to be close to the true value of the population\"",
+                    "page=83, line=969, s=9.0, r=0.9, x=34.0, y=221.0: \"mean. The standard deviation for this long list of sample\"",
+                    "page=83, line=970, s=9.0, r=0.9, x=34.0, y=232.0: \"means, a measure of how similar these sample means\""
+                ]
+            }
+        },
+        {
+            "title": "Calculating a confidence interval",
+            "level": 4,
+            "page": 83,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Detailed breakdown of confidence intervals.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 239.0,
+            "vertical_position": 237.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=83, line=971, s=9.0, r=0.9, x=239.0, y=237.0: \"Calculating a confidence interval\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=83, line=964, s=10.0, r=1.0, x=34.0, y=173.0: \"Box 4.4. Standard error of the mean epidemiology. In general, a confidence interval uses...\""
+                ],
+                "small_label_examples": [
+                    "page=83, line=967, s=9.0, r=0.9, x=34.0, y=211.0: \"likely to be close to the true value of the population\"",
+                    "page=83, line=969, s=9.0, r=0.9, x=34.0, y=221.0: \"mean. The standard deviation for this long list of sample\"",
+                    "page=83, line=970, s=9.0, r=0.9, x=34.0, y=232.0: \"means, a measure of how similar these sample means\"",
+                    "page=83, line=972, s=9.0, r=0.9, x=34.0, y=243.0: \"are to each other, is called the eerrrroorr ooff tthhee\""
+                ]
+            }
+        },
+        {
+            "title": "Degrees of freedom",
+            "level": 4,
+            "page": 83,
+            "reasons": [
+                "source context looks like case/example/table/figure/problem/reference material",
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Detailed breakdown of confidence intervals.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 240.0,
+            "vertical_position": 511.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=83, line=991, s=9.0, r=0.9, x=240.0, y=511.0: \"Degrees of freedom\""
+                ],
+                "embedded_examples": [
+                    "page=83, line=993, s=10.0, r=1.0, x=34.0, y=533.0: \"Box 4.5. Interpreting a confidence interval from the t distribution with n-1 = 9 degrees...\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=83, line=993, s=10.0, r=1.0, x=34.0, y=533.0: \"Box 4.5. Interpreting a confidence interval from the t distribution with n-1 = 9 degrees...\""
+                ],
+                "small_label_examples": [
+                    "page=83, line=994, s=9.0, r=0.9, x=34.0, y=547.0: \"It is conceivable that there could be a long list of random However, if the sample size i...\"",
+                    "page=83, line=995, s=9.0, r=0.9, x=34.0, y=559.0: \"samples taken from a population and that a confidence number 2.00 can be used. For very l...\"",
+                    "page=83, line=998, s=9.0, r=0.9, x=34.0, y=593.0: \"confidence intervals and the expectation is that, if this\"",
+                    "page=83, line=991, s=9.0, r=0.9, x=240.0, y=511.0: \"Degrees of freedom\""
+                ]
+            }
+        },
+        {
+            "title": "Basic methods",
+            "level": 2,
+            "page": 86,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection title under Chapter 4.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 55.0,
+            "vertical_position": 307.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=86, line=1132, s=20.0, r=2.0, x=55.0, y=307.0: \"Basic methods\""
+                ],
+                "embedded_examples": [
+                    "page=86, line=1133, s=10.0, r=1.0, x=55.0, y=339.0: \"The basic methods for epidemiology are:\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=86, line=1123, s=5.6, r=0.56, x=354.0, y=238.0: \"0 0\"",
+                    "page=86, line=1125, s=8.0, r=0.8, x=281.0, y=251.0: \"Accept H OK Type II or ß-error\"",
+                    "page=86, line=1128, s=8.0, r=0.8, x=281.0, y=266.0: \"Reject H\"",
+                    "page=86, line=1129, s=5.6, r=0.56, x=312.0, y=269.0: \"0\""
+                ]
+            }
+        },
+        {
+            "title": "t-tests",
+            "level": 3,
+            "page": 86,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Basic methods.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 421.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=86, line=1138, s=14.0, r=1.4, x=55.0, y=421.0: \"t-tests\""
+                ],
+                "embedded_examples": [
+                    "page=86, line=1134, s=10.0, r=1.0, x=73.0, y=361.0: \"• t-tests\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=86, line=1128, s=8.0, r=0.8, x=281.0, y=266.0: \"Reject H\"",
+                    "page=86, line=1129, s=5.6, r=0.56, x=312.0, y=269.0: \"0\"",
+                    "page=86, line=1130, s=8.0, r=0.8, x=333.0, y=264.0: \"Type I or (cid:734)(cid:734)(cid:734)-error OK\"",
+                    "page=86, line=1130, s=8.0, r=0.8, x=333.0, y=264.0: \"Type I or (cid:734)(cid:734)(cid:734)-error OK\""
+                ]
+            }
+        }
+    ]
+}

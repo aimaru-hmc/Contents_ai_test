@@ -1,0 +1,1316 @@
+{
+    "timestamp": "2026-07-10 09:56:32",
+    "stage_index": 43,
+    "stage": "chunk_level_reviewed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3_contentsx.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_contentsx.pdf",
+    "chunk": "11",
+    "total_chunks": 19,
+    "start_page": 325,
+    "end_page": 351,
+    "level_review": {
+        "enabled": true,
+        "success": true,
+        "stage": "chunk 11/19",
+        "input_chapters": 63,
+        "output_chapters": 62,
+        "level_changes": 4,
+        "added_entries": 0,
+        "removed_entries": 1,
+        "level_change_report_recorded": true,
+        "possible_invalid_heading_candidate_count": 17,
+        "possible_invalid_heading_candidates": [
+            {
+                "title": "제2장 예방의료수준에 따른 임상예방서비스",
+                "level": 1,
+                "page": 325,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Major chapter title identified from page headers and content structure.",
+                "font_size": 8.0,
+                "size_ratio": 0.84,
+                "left_indent": 400.0,
+                "vertical_position": 53.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=325, line=1, s=8.0, r=0.84, x=400.0, y=53.0: \"제2장 예방의료수준에 따른 임상예방서비스∙ 1223\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "① 전립선암",
+                "level": 6,
+                "page": 329,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Specific disease entry under urological cancer screenings.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 75.0,
+                "vertical_position": 381.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=329, line=197, s=9.5, r=1.0, x=75.0, y=381.0: \"① 전립선암\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "② 신장암",
+                "level": 6,
+                "page": 330,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Specific disease entry under urological cancer screenings.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 183.0,
+                "vertical_position": 177.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=330, line=233, s=9.5, r=1.0, x=183.0, y=177.0: \"② 신장암\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=330, line=227, s=8.0, r=0.84, x=60.0, y=53.0: \"1228∙제5편 임상예방의학과 지역사회예방서비스\""
+                    ]
+                }
+            },
+            {
+                "title": "③ 방광암",
+                "level": 6,
+                "page": 330,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Specific disease entry under urological cancer screenings.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 183.0,
+                "vertical_position": 541.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=330, line=256, s=9.5, r=1.0, x=183.0, y=541.0: \"③ 방광암\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "① 증상완화서비스",
+                "level": 6,
+                "page": 334,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Specific service type under tertiary prevention content.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 183.0,
+                "vertical_position": 533.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=334, line=432, s=9.5, r=1.0, x=183.0, y=533.0: \"① 증상완화서비스\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "② 건강유지서비스",
+                "level": 6,
+                "page": 334,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Specific service type under tertiary prevention content.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 183.0,
+                "vertical_position": 669.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=334, line=440, s=9.5, r=1.0, x=183.0, y=669.0: \"② 건강유지서비스\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "③ 참여증진서비스",
+                "level": 6,
+                "page": 335,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Specific service type under tertiary prevention content.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 75.0,
+                "vertical_position": 86.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=335, line=450, s=9.5, r=1.0, x=75.0, y=86.0: \"③ 참여증진서비스\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "① 기내압력변화와 관련된 건강위험요인 관리",
+                "level": 6,
+                "page": 341,
+                "reasons": [
+                    "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Management of pressure-related risks.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 75.0,
+                "vertical_position": 307.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=341, line=743, s=9.5, r=1.0, x=75.0, y=307.0: \"① 기내압력변화와 관련된 건강위험요인 관리\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 2,
+                    "small_label_examples": [
+                        "page=341, line=737, s=8.5, r=0.9, x=482.0, y=209.0: \"여행전상담은여행전4~8주\"",
+                        "page=341, line=739, s=8.5, r=0.9, x=482.0, y=221.0: \"전에방문하는것이권고된다.\""
+                    ]
+                }
+            },
+            {
+                "title": "② 오존 및 우주방사선",
+                "level": 6,
+                "page": 341,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Risks associated with ozone and radiation.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 75.0,
+                "vertical_position": 504.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=341, line=755, s=9.5, r=1.0, x=75.0, y=504.0: \"② 오존 및 우주방사선\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "③ 멀미",
+                "level": 6,
+                "page": 341,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Management of motion sickness.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 75.0,
+                "vertical_position": 565.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=341, line=758, s=9.5, r=1.0, x=75.0, y=565.0: \"③ 멀미\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "④ 정맥혈전증과 순환기 장애",
+                "level": 6,
+                "page": 341,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Prevention of venous thrombosis.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 75.0,
+                "vertical_position": 626.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=341, line=761, s=9.5, r=1.0, x=75.0, y=626.0: \"④ 정맥혈전증과 순환기 장애\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "⑤ 시차",
+                "level": 6,
+                "page": 342,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Management of jet lag.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 183.0,
+                "vertical_position": 146.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=342, line=779, s=9.5, r=1.0, x=183.0, y=146.0: \"⑤ 시차\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=342, line=775, s=8.0, r=0.84, x=60.0, y=53.0: \"1240∙제5편 임상예방의학과 지역사회예방서비스\""
+                    ]
+                }
+            },
+            {
+                "title": "⑥ 항공여행 제한이 필요한 경우",
+                "level": 6,
+                "page": 342,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Criteria for restricting air travel.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 183.0,
+                "vertical_position": 298.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=342, line=788, s=9.5, r=1.0, x=183.0, y=298.0: \"⑥ 항공여행 제한이 필요한 경우\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 1,
+                    "small_label_examples": [
+                        "page=342, line=796, s=8.5, r=0.9, x=60.0, y=433.0: \"diseases)\""
+                    ]
+                }
+            },
+            {
+                "title": "① 필수예방접종",
+                "level": 6,
+                "page": 343,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Routine vaccinations required for all.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 75.0,
+                "vertical_position": 253.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=343, line=840, s=9.5, r=1.0, x=75.0, y=253.0: \"① 필수예방접종\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "② 선택예방접종",
+                "level": 6,
+                "page": 343,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Vaccinations based on destination and risk.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 75.0,
+                "vertical_position": 541.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=343, line=858, s=9.5, r=1.0, x=75.0, y=541.0: \"② 선택예방접종\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "③ 의무예방접종",
+                "level": 6,
+                "page": 344,
+                "reasons": [
+                    "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                    "level 5 markerless entry uses body-size style"
+                ],
+                "level_reason": "Legally required vaccinations for entry.",
+                "font_size": 9.5,
+                "size_ratio": 1.0,
+                "left_indent": 183.0,
+                "vertical_position": 283.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 1,
+                    "embedded_count": 0,
+                    "exact_examples": [
+                        "page=344, line=890, s=9.5, r=1.0, x=183.0, y=283.0: \"③ 의무예방접종\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 0
+                }
+            },
+            {
+                "title": "(3) 말라리아의 예방요법",
+                "level": 6,
+                "page": 344,
+                "reasons": [
+                    "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+                ],
+                "level_reason": "Specific chemoprophylaxis for malaria.",
+                "font_size": 10.0,
+                "size_ratio": 1.06,
+                "left_indent": 60.0,
+                "vertical_position": 435.0,
+                "bold": 0,
+                "italic": 0,
+                "source_evidence": {
+                    "exact_count": 0,
+                    "embedded_count": 1,
+                    "embedded_examples": [
+                        "page=344, line=899, s=10.0, r=1.06, x=60.0, y=435.0: \"예방화학요법 (3) 말라리아의 예방요법\""
+                    ]
+                },
+                "source_visual_context": {
+                    "visual_caption_count": 0,
+                    "small_label_count": 3,
+                    "small_label_examples": [
+                        "page=344, line=902, s=8.5, r=0.9, x=60.0, y=462.0: \"항생제나기타화학약물을감\"",
+                        "page=344, line=904, s=8.5, r=0.9, x=60.0, y=475.0: \"염이나 질병예방의 목적으로\"",
+                        "page=344, line=906, s=8.5, r=0.9, x=60.0, y=487.0: \"사용하는 것\""
+                    ]
+                }
+            }
+        ],
+        "possible_invalid_heading_candidates_file": "data/output/stages/3_contentsx_gemma_20260710_093800/042_possible_invalid_heading_candidates_chunk_chunk_11_19.json"
+    },
+    "toc": {
+        "title": "3_contentsx",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "제2장 예방의료수준에 따른 임상예방서비스",
+                "page": 325,
+                "level_reason": "Major chapter title identified from document structure.",
+                "_layout_page": 325,
+                "_layout_x": 400.0,
+                "_layout_y": 53.0,
+                "_layout_font_size": 8.0,
+                "_layout_size_ratio": 0.84,
+                "_layout_text": "제2장 예방의료수준에 따른 임상예방서비스∙ 1223",
+                "_source_order": 1
+            },
+            {
+                "level": 4,
+                "chapter": "4.7 비뇨기과 질환을 위한 선별검사",
+                "page": 328,
+                "level_reason": "Numbered section title consistent with level 4 style (font_size=12.5).",
+                "_layout_page": 328,
+                "_layout_x": 181.0,
+                "_layout_y": 670.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "4.7 비뇨기과 질환을 위한 선별검사",
+                "_source_order": 171
+            },
+            {
+                "level": 5,
+                "chapter": "1) 비뇨기과 질환을 위한 선별검사",
+                "page": 329,
+                "level_reason": "Subsection under 4.7 consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 329,
+                "_layout_x": 65.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 비뇨기과 질환을 위한 선별검사",
+                "_source_order": 180
+            },
+            {
+                "level": 6,
+                "chapter": "(1) 비뇨기계암에 대한 선별검사",
+                "page": 329,
+                "level_reason": "Detailed breakdown consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 329,
+                "_layout_x": 75.0,
+                "_layout_y": 350.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 비뇨기계암에 대한 선별검사",
+                "_source_order": 196
+            },
+            {
+                "level": 6,
+                "chapter": "① 전립선암",
+                "page": 329,
+                "level_reason": "Specific disease entry consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 329,
+                "_layout_x": 75.0,
+                "_layout_y": 381.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "① 전립선암",
+                "_source_order": 197
+            },
+            {
+                "level": 6,
+                "chapter": "② 신장암",
+                "page": 330,
+                "level_reason": "Specific disease entry consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 330,
+                "_layout_x": 183.0,
+                "_layout_y": 177.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "② 신장암",
+                "_source_order": 233
+            },
+            {
+                "level": 6,
+                "chapter": "③ 방광암",
+                "page": 330,
+                "level_reason": "Specific disease entry consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 330,
+                "_layout_x": 183.0,
+                "_layout_y": 541.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "③ 방광암",
+                "_source_order": 256
+            },
+            {
+                "level": 6,
+                "chapter": "(2) 비뇨기계선별검사와 임상예방서비스",
+                "page": 331,
+                "level_reason": "Detailed breakdown consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 331,
+                "_layout_x": 75.0,
+                "_layout_y": 131.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 비뇨기계선별검사와 임상예방서비스",
+                "_source_order": 278
+            },
+            {
+                "level": 3,
+                "chapter": "5. 삼차 예방과 삼차 예방서비스",
+                "page": 333,
+                "level_reason": "Major numbered section consistent with level 3 style (font_size=18.0).",
+                "_layout_page": 333,
+                "_layout_x": 77.0,
+                "_layout_y": 105.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "5. 삼차 예방과 삼차 예방서비스",
+                "_source_order": 360
+            },
+            {
+                "level": 4,
+                "chapter": "5.1 삼차 예방의 정의와 개념",
+                "page": 333,
+                "level_reason": "Subsection consistent with level 4 style (font_size=12.5).",
+                "_layout_page": 333,
+                "_layout_x": 74.0,
+                "_layout_y": 154.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "5.1 삼차 예방의 정의와 개념",
+                "_source_order": 361
+            },
+            {
+                "level": 5,
+                "chapter": "1) 삼차 예방의 정의와 개념",
+                "page": 333,
+                "level_reason": "Detailed breakdown consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 333,
+                "_layout_x": 65.0,
+                "_layout_y": 305.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 삼차 예방의 정의와 개념",
+                "_source_order": 366
+            },
+            {
+                "level": 6,
+                "chapter": "(1) 삼차 예방과 장애",
+                "page": 333,
+                "level_reason": "Specific focus consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 333,
+                "_layout_x": 75.0,
+                "_layout_y": 478.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 삼차 예방과 장애",
+                "_source_order": 379
+            },
+            {
+                "level": 6,
+                "chapter": "(2) 삼차 예방의 목표",
+                "page": 333,
+                "level_reason": "Specific focus consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 333,
+                "_layout_x": 75.0,
+                "_layout_y": 770.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 삼차 예방의 목표",
+                "_source_order": 401
+            },
+            {
+                "level": 5,
+                "chapter": "2) 삼차 예방서비스",
+                "page": 334,
+                "level_reason": "Detailed breakdown consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 334,
+                "_layout_x": 173.0,
+                "_layout_y": 268.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 삼차 예방서비스",
+                "_source_order": 417
+            },
+            {
+                "level": 6,
+                "chapter": "(1) 삼차 예방서비스의 특징과 내용",
+                "page": 334,
+                "level_reason": "Detailed characteristics consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 334,
+                "_layout_x": 183.0,
+                "_layout_y": 302.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 삼차 예방서비스의 특징과 내용",
+                "_source_order": 418
+            },
+            {
+                "level": 6,
+                "chapter": "① 증상완화서비스",
+                "page": 334,
+                "level_reason": "Specific service type consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 334,
+                "_layout_x": 183.0,
+                "_layout_y": 533.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "① 증상완화서비스",
+                "_source_order": 432
+            },
+            {
+                "level": 6,
+                "chapter": "② 건강유지서비스",
+                "page": 334,
+                "level_reason": "Specific service type consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 334,
+                "_layout_x": 183.0,
+                "_layout_y": 669.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "② 건강유지서비스",
+                "_source_order": 440
+            },
+            {
+                "level": 6,
+                "chapter": "③ 참여증진서비스",
+                "page": 335,
+                "level_reason": "Specific service type consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 335,
+                "_layout_x": 75.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "③ 참여증진서비스",
+                "_source_order": 450
+            },
+            {
+                "level": 6,
+                "chapter": "(2) 삼차 예방서비스의 효과",
+                "page": 335,
+                "level_reason": "Evaluation consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 335,
+                "_layout_x": 75.0,
+                "_layout_y": 207.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 삼차 예방서비스의 효과",
+                "_source_order": 457
+            },
+            {
+                "level": 6,
+                "chapter": "(3) 삼차 예방서비스의 전략",
+                "page": 335,
+                "level_reason": "Implementation strategies consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 335,
+                "_layout_x": 75.0,
+                "_layout_y": 345.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(3) 삼차 예방서비스의 전략",
+                "_source_order": 465
+            },
+            {
+                "level": 3,
+                "chapter": "6. 여행의학과 임상예방서비스",
+                "page": 336,
+                "level_reason": "Major numbered section consistent with level 3 style (font_size=18.0).",
+                "_layout_page": 336,
+                "_layout_x": 185.0,
+                "_layout_y": 243.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "6. 여행의학과 임상예방서비스",
+                "_source_order": 498
+            },
+            {
+                "level": 4,
+                "chapter": "6.1 여행의학과 예방의료서비스",
+                "page": 336,
+                "level_reason": "Subsection consistent with level 4 style (font_size=12.5).",
+                "_layout_page": 336,
+                "_layout_x": 182.0,
+                "_layout_y": 444.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "6.1 여행의학과 예방의료서비스",
+                "_source_order": 505
+            },
+            {
+                "level": 5,
+                "chapter": "1) 여행의학",
+                "page": 336,
+                "level_reason": "Detailed breakdown consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 336,
+                "_layout_x": 173.0,
+                "_layout_y": 485.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 여행의학",
+                "_source_order": 506
+            },
+            {
+                "level": 5,
+                "chapter": "2) 여행의학 클리닉",
+                "page": 337,
+                "level_reason": "Detailed breakdown consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 337,
+                "_layout_x": 65.0,
+                "_layout_y": 344.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 여행의학 클리닉",
+                "_source_order": 550
+            },
+            {
+                "level": 4,
+                "chapter": "6.2 여행관련 질환의 역학",
+                "page": 337,
+                "level_reason": "Subsection consistent with level 4 style (font_size=12.5).",
+                "_layout_page": 337,
+                "_layout_x": 73.0,
+                "_layout_y": 630.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "6.2 여행관련 질환의 역학",
+                "_source_order": 567
+            },
+            {
+                "level": 5,
+                "chapter": "1) 여행관련 질환의 감시체계와 발생률",
+                "page": 337,
+                "level_reason": "Detailed breakdown consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 337,
+                "_layout_x": 65.0,
+                "_layout_y": 672.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 여행관련 질환의 감시체계와 발생률",
+                "_source_order": 568
+            },
+            {
+                "level": 5,
+                "chapter": "2) 여행지별 여행관련 질환의 빈도와 원인",
+                "page": 338,
+                "level_reason": "Detailed breakdown consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 338,
+                "_layout_x": 173.0,
+                "_layout_y": 389.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 여행지별 여행관련 질환의 빈도와 원인",
+                "_source_order": 598
+            },
+            {
+                "level": 4,
+                "chapter": "6.3 여행관련 건강위험별 예방원칙과 예방의료서비스",
+                "page": 338,
+                "level_reason": "Subsection consistent with level 4 style (font_size=12.5).",
+                "_layout_page": 338,
+                "_layout_x": 181.0,
+                "_layout_y": 691.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "6.3 여행관련 건강위험별 예방원칙과 예방의료서비스",
+                "_source_order": 616
+            },
+            {
+                "level": 5,
+                "chapter": "1) 여행관련 건강위험요인",
+                "page": 338,
+                "level_reason": "Detailed breakdown consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 338,
+                "_layout_x": 173.0,
+                "_layout_y": 732.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 여행관련 건강위험요인",
+                "_source_order": 617
+            },
+            {
+                "level": 5,
+                "chapter": "2) 여행자를 위한 예방의료서비스의 원칙",
+                "page": 340,
+                "level_reason": "Detailed breakdown consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 340,
+                "_layout_x": 173.0,
+                "_layout_y": 162.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 여행자를 위한 예방의료서비스의 원칙",
+                "_source_order": 682
+            },
+            {
+                "level": 5,
+                "chapter": "3) 주요 건강위험별 예방의료서비스",
+                "page": 341,
+                "level_reason": "Detailed breakdown consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 341,
+                "_layout_x": 65.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 주요 건강위험별 예방의료서비스",
+                "_source_order": 726
+            },
+            {
+                "level": 6,
+                "chapter": "(1) 항공여행과 관련된 예방의료서비스",
+                "page": 341,
+                "level_reason": "Specific focus consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 341,
+                "_layout_x": 75.0,
+                "_layout_y": 243.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 항공여행과 관련된 예방의료서비스",
+                "_source_order": 740
+            },
+            {
+                "level": 6,
+                "chapter": "① 기내압력변화와 관련된 건강위험요인 관리",
+                "page": 341,
+                "level_reason": "Specific risk management consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 341,
+                "_layout_x": 75.0,
+                "_layout_y": 307.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "① 기내압력변화와 관련된 건강위험요인 관리",
+                "_source_order": 743
+            },
+            {
+                "level": 6,
+                "chapter": "② 오존 및 우주방사선",
+                "page": 341,
+                "level_reason": "Specific risk management consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 341,
+                "_layout_x": 75.0,
+                "_layout_y": 504.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "② 오존 및 우주방사선",
+                "_source_order": 755
+            },
+            {
+                "level": 6,
+                "chapter": "③ 멀미",
+                "page": 341,
+                "level_reason": "Specific risk management consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 341,
+                "_layout_x": 75.0,
+                "_layout_y": 565.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "③ 멀미",
+                "_source_order": 758
+            },
+            {
+                "level": 6,
+                "chapter": "④ 정맥혈전증과 순환기 장애",
+                "page": 341,
+                "level_reason": "Specific risk management consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 341,
+                "_layout_x": 75.0,
+                "_layout_y": 626.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "④ 정맥혈전증과 순환기 장애",
+                "_source_order": 761
+            },
+            {
+                "level": 6,
+                "chapter": "⑤ 시차",
+                "page": 342,
+                "level_reason": "Specific risk management consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 342,
+                "_layout_x": 183.0,
+                "_layout_y": 146.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "⑤ 시차",
+                "_source_order": 779
+            },
+            {
+                "level": 6,
+                "chapter": "⑥ 항공여행 제한이 필요한 경우",
+                "page": 342,
+                "level_reason": "Specific risk management consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 342,
+                "_layout_x": 183.0,
+                "_layout_y": 298.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "⑥ 항공여행 제한이 필요한 경우",
+                "_source_order": 788
+            },
+            {
+                "level": 6,
+                "chapter": "(2) 여행자를 위한 예방접종",
+                "page": 342,
+                "level_reason": "Specific focus consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 342,
+                "_layout_x": 183.0,
+                "_layout_y": 389.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 여행자를 위한 예방접종",
+                "_source_order": 793
+            },
+            {
+                "level": 6,
+                "chapter": "① 필수예방접종",
+                "page": 343,
+                "level_reason": "Specific vaccination type consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 343,
+                "_layout_x": 75.0,
+                "_layout_y": 253.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "① 필수예방접종",
+                "_source_order": 840
+            },
+            {
+                "level": 6,
+                "chapter": "② 선택예방접종",
+                "page": 343,
+                "level_reason": "Specific vaccination type consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 343,
+                "_layout_x": 75.0,
+                "_layout_y": 541.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "② 선택예방접종",
+                "_source_order": 858
+            },
+            {
+                "level": 6,
+                "chapter": "③ 의무예방접종",
+                "page": 344,
+                "level_reason": "Specific vaccination type consistent with level 6 style (font_size=9.5).",
+                "_layout_page": 344,
+                "_layout_x": 183.0,
+                "_layout_y": 283.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_text": "③ 의무예방접종",
+                "_source_order": 890
+            },
+            {
+                "level": 5,
+                "chapter": "4) 여행자 상담과 교육",
+                "page": 345,
+                "level_reason": "Detailed breakdown consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 345,
+                "_layout_x": 65.0,
+                "_layout_y": 359.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "4) 여행자 상담과 교육",
+                "_source_order": 952
+            },
+            {
+                "level": 5,
+                "chapter": "5) 여행 후 예방의료서비스",
+                "page": 345,
+                "level_reason": "Detailed breakdown consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 345,
+                "_layout_x": 65.0,
+                "_layout_y": 486.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "5) 여행 후 예방의료서비스",
+                "_source_order": 959
+            },
+            {
+                "level": 4,
+                "chapter": "6.4 여행의학의 최신 정보와 근거제공 사이트",
+                "page": 345,
+                "level_reason": "Subsection consistent with level 4 style (font_size=12.5).",
+                "_layout_page": 345,
+                "_layout_x": 73.0,
+                "_layout_y": 652.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "6.4 여행의학의 최신 정보와 근거제공 사이트",
+                "_source_order": 968
+            },
+            {
+                "level": 4,
+                "chapter": "6.5 여행자 건강을 위한 여행의학 클리닉의 발전방향",
+                "page": 346,
+                "level_reason": "Subsection consistent with level 4 style (font_size=12.5).",
+                "_layout_page": 346,
+                "_layout_x": 181.0,
+                "_layout_y": 215.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "6.5 여행자 건강을 위한 여행의학 클리닉의 발전방향",
+                "_source_order": 987
+            },
+            {
+                "level": 1,
+                "chapter": "제 3 장 직업관련질환에 대한 예방의료서비스",
+                "page": 349,
+                "level_reason": "Major chapter title consistent with level 1 style (font_size=31.0).",
+                "_layout_page": 349,
+                "_layout_x": 81.0,
+                "_layout_y": 128.0,
+                "_layout_font_size": 31.0,
+                "_layout_size_ratio": 3.27,
+                "_layout_text": "직업관련질환에 대한 예방의료서비스",
+                "_source_order": 1055
+            },
+            {
+                "level": 3,
+                "chapter": "1. 일차 예방과 직업보건",
+                "page": 349,
+                "level_reason": "Major numbered section consistent with level 3 style (font_size=18.0).",
+                "_layout_page": 349,
+                "_layout_x": 77.0,
+                "_layout_y": 393.0,
+                "_layout_font_size": 18.0,
+                "_layout_size_ratio": 1.9,
+                "_layout_text": "1. 일차 예방과 직업보건",
+                "_source_order": 1060
+            },
+            {
+                "level": 4,
+                "chapter": "1.1 직장 건강증진",
+                "page": 349,
+                "level_reason": "Subsection consistent with level 4 style (font_size=12.5).",
+                "_layout_page": 349,
+                "_layout_x": 75.0,
+                "_layout_y": 442.0,
+                "_layout_font_size": 12.5,
+                "_layout_size_ratio": 1.32,
+                "_layout_text": "1.1 직장 건강증진",
+                "_source_order": 1061
+            },
+            {
+                "level": 5,
+                "chapter": "1) 직장 건강증진의 정의",
+                "page": 349,
+                "level_reason": "Detailed breakdown consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 349,
+                "_layout_x": 65.0,
+                "_layout_y": 578.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "1) 직장 건강증진의 정의",
+                "_source_order": 1065
+            },
+            {
+                "level": 5,
+                "chapter": "2) 직장 건강증진의 필요성",
+                "page": 349,
+                "level_reason": "Detailed breakdown consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 349,
+                "_layout_x": 65.0,
+                "_layout_y": 766.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "2) 직장 건강증진의 필요성",
+                "_source_order": 1079
+            },
+            {
+                "level": 6,
+                "chapter": "(1) 의료비, 재해보상비의 감소",
+                "page": 350,
+                "level_reason": "Specific focus consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 350,
+                "_layout_x": 183.0,
+                "_layout_y": 374.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 의료비, 재해보상비의 감소",
+                "_source_order": 1102
+            },
+            {
+                "level": 6,
+                "chapter": "(2) 생산성 향상",
+                "page": 350,
+                "level_reason": "Specific focus consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 350,
+                "_layout_x": 183.0,
+                "_layout_y": 544.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 생산성 향상",
+                "_source_order": 1112
+            },
+            {
+                "level": 6,
+                "chapter": "(3) 기업의 이미지",
+                "page": 350,
+                "level_reason": "Specific focus consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 350,
+                "_layout_x": 183.0,
+                "_layout_y": 698.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(3) 기업의 이미지",
+                "_source_order": 1121
+            },
+            {
+                "level": 5,
+                "chapter": "3) 직장에서의 건강증진 프로그램 기획",
+                "page": 351,
+                "level_reason": "Detailed breakdown consistent with level 5 style (font_size=12.0).",
+                "_layout_page": 351,
+                "_layout_x": 65.0,
+                "_layout_y": 86.0,
+                "_layout_font_size": 12.0,
+                "_layout_size_ratio": 1.27,
+                "_layout_text": "3) 직장에서의 건강증진 프로그램 기획",
+                "_source_order": 1129
+            },
+            {
+                "level": 6,
+                "chapter": "(1) 준비 상태 평가",
+                "page": 351,
+                "level_reason": "Specific focus consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 351,
+                "_layout_x": 75.0,
+                "_layout_y": 120.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(1) 준비 상태 평가",
+                "_source_order": 1130
+            },
+            {
+                "level": 6,
+                "chapter": "(2) 최고경영자(사업주)의 지원 수준",
+                "page": 351,
+                "level_reason": "Specific focus consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 351,
+                "_layout_x": 75.0,
+                "_layout_y": 214.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(2) 최고경영자(사업주)의 지원 수준",
+                "_source_order": 1135
+            },
+            {
+                "level": 6,
+                "chapter": "(3) 최고경영자, 근로자 및 노동조합의 요구도 평가",
+                "page": 351,
+                "level_reason": "Specific focus consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 351,
+                "_layout_x": 75.0,
+                "_layout_y": 384.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(3) 최고경영자, 근로자 및 노동조합의 요구도 평가",
+                "_source_order": 1145
+            },
+            {
+                "level": 6,
+                "chapter": "(4) 실제적인 목표 설정",
+                "page": 351,
+                "level_reason": "Specific focus consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 351,
+                "_layout_x": 75.0,
+                "_layout_y": 493.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(4) 실제적인 목표 설정",
+                "_source_order": 1151
+            },
+            {
+                "level": 6,
+                "chapter": "(5) 프로그램 디자인 과정에서부터 근로자 참여(근로자위원회 구성)",
+                "page": 351,
+                "level_reason": "Specific focus consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 351,
+                "_layout_x": 75.0,
+                "_layout_y": 602.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(5) 프로그램 디자인 과정에서부터 근로자 참여(근로자위원회 구성)",
+                "_source_order": 1157
+            },
+            {
+                "level": 6,
+                "chapter": "(6) 자원의 이용과 재원의 조달",
+                "page": 351,
+                "level_reason": "Specific focus consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 351,
+                "_layout_x": 75.0,
+                "_layout_y": 696.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(6) 자원의 이용과 재원의 조달",
+                "_source_order": 1162
+            },
+            {
+                "level": 6,
+                "chapter": "(7) 건강증진 프로그램의 수행수준",
+                "page": 351,
+                "level_reason": "Specific focus consistent with level 6 style (font_size=10.0).",
+                "_layout_page": 351,
+                "_layout_x": 75.0,
+                "_layout_y": 774.0,
+                "_layout_font_size": 10.0,
+                "_layout_size_ratio": 1.06,
+                "_layout_text": "(7) 건강증진 프로그램의 수행수준",
+                "_source_order": 1166
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"3_contentsx\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"제2장 예방의료수준에 따른 임상예방서비스\",\n      \"page\": 325,\n      \"level_reason\": \"Major chapter title identified from document structure.\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"4.7 비뇨기과 질환을 위한 선별검사\",\n      \"page\": 328,\n      \"level_reason\": \"Numbered section title consistent with level 4 style (font_size=12.5).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"1) 비뇨기과 질환을 위한 선별검사\",\n      \"page\": 329,\n      \"level_reason\": \"Subsection under 4.7 consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(1) 비뇨기계암에 대한 선별검사\",\n      \"page\": 329,\n      \"level_reason\": \"Detailed breakdown consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"① 전립선암\",\n      \"page\": 329,\n      \"level_reason\": \"Specific disease entry consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"② 신장암\",\n      \"page\": 330,\n      \"level_reason\": \"Specific disease entry consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"③ 방광암\",\n      \"page\": 330,\n      \"level_reason\": \"Specific disease entry consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(2) 비뇨기계선별검사와 임상예방서비스\",\n      \"page\": 331,\n      \"level_reason\": \"Detailed breakdown consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"5. 삼차 예방과 삼차 예방서비스\",\n      \"page\": 333,\n      \"level_reason\": \"Major numbered section consistent with level 3 style (font_size=18.0).\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"5.1 삼차 예방의 정의와 개념\",\n      \"page\": 333,\n      \"level_reason\": \"Subsection consistent with level 4 style (font_size=12.5).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"1) 삼차 예방의 정의와 개념\",\n      \"page\": 333,\n      \"level_reason\": \"Detailed breakdown consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(1) 삼차 예방과 장애\",\n      \"page\": 333,\n      \"level_reason\": \"Specific focus consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(2) 삼차 예방의 목표\",\n      \"page\": 333,\n      \"level_reason\": \"Specific focus consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"2) 삼차 예방서비스\",\n      \"page\": 334,\n      \"level_reason\": \"Detailed breakdown consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(1) 삼차 예방서비스의 특징과 내용\",\n      \"page\": 334,\n      \"level_reason\": \"Detailed characteristics consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"① 증상완화서비스\",\n      \"page\": 334,\n      \"level_reason\": \"Specific service type consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"② 건강유지서비스\",\n      \"page\": 334,\n      \"level_reason\": \"Specific service type consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"③ 참여증진서비스\",\n      \"page\": 335,\n      \"level_reason\": \"Specific service type consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(2) 삼차 예방서비스의 효과\",\n      \"page\": 335,\n      \"level_reason\": \"Evaluation consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(3) 삼차 예방서비스의 전략\",\n      \"page\": 335,\n      \"level_reason\": \"Implementation strategies consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"6. 여행의학과 임상예방서비스\",\n      \"page\": 336,\n      \"level_reason\": \"Major numbered section consistent with level 3 style (font_size=18.0).\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"6.1 여행의학과 예방의료서비스\",\n      \"page\": 336,\n      \"level_reason\": \"Subsection consistent with level 4 style (font_size=12.5).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"1) 여행의학\",\n      \"page\": 336,\n      \"level_reason\": \"Detailed breakdown consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"2) 여행의학 클리닉\",\n      \"page\": 337,\n      \"level_reason\": \"Detailed breakdown consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"6.2 여행관련 질환의 역학\",\n      \"page\": 337,\n      \"level_reason\": \"Subsection consistent with level 4 style (font_size=12.5).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"1) 여행관련 질환의 감시체계와 발생률\",\n      \"page\": 337,\n      \"level_reason\": \"Detailed breakdown consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"2) 여행지별 여행관련 질환의 빈도와 원인\",\n      \"page\": 338,\n      \"level_reason\": \"Detailed breakdown consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"6.3 여행관련 건강위험별 예방원칙과 예방의료서비스\",\n      \"page\": 338,\n      \"level_reason\": \"Subsection consistent with level 4 style (font_size=12.5).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"1) 여행관련 건강위험요인\",\n      \"page\": 338,\n      \"level_reason\": \"Detailed breakdown consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"2) 여행자를 위한 예방의료서비스의 원칙\",\n      \"page\": 340,\n      \"level_reason\": \"Detailed breakdown consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"3) 주요 건강위험별 예방의료서비스\",\n      \"page\": 341,\n      \"level_reason\": \"Detailed breakdown consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(1) 항공여행과 관련된 예방의료서비스\",\n      \"page\": 341,\n      \"level_reason\": \"Specific focus consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"① 기내압력변화와 관련된 건강위험요인 관리\",\n      \"page\": 341,\n      \"level_reason\": \"Specific risk management consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"② 오존 및 우주방사선\",\n      \"page\": 341,\n      \"level_reason\": \"Specific risk management consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"③ 멀미\",\n      \"page\": 341,\n      \"level_reason\": \"Specific risk management consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"④ 정맥혈전증과 순환기 장애\",\n      \"page\": 341,\n      \"level_reason\": \"Specific risk management consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"⑤ 시차\",\n      \"page\": 342,\n      \"level_reason\": \"Specific risk management consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"⑥ 항공여행 제한이 필요한 경우\",\n      \"page\": 342,\n      \"level_reason\": \"Specific risk management consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(2) 여행자를 위한 예방접종\",\n      \"page\": 342,\n      \"level_reason\": \"Specific focus consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"① 필수예방접종\",\n      \"page\": 343,\n      \"level_reason\": \"Specific vaccination type consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"② 선택예방접종\",\n      \"page\": 343,\n      \"level_reason\": \"Specific vaccination type consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"③ 의무예방접종\",\n      \"page\": 344,\n      \"level_reason\": \"Specific vaccination type consistent with level 6 style (font_size=9.5).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"4) 여행자 상담과 교육\",\n      \"page\": 345,\n      \"level_reason\": \"Detailed breakdown consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"5) 여행 후 예방의료서비스\",\n      \"page\": 345,\n      \"level_reason\": \"Detailed breakdown consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"6.4 여행의학의 최신 정보와 근거제공 사이트\",\n      \"page\": 345,\n      \"level_reason\": \"Subsection consistent with level 4 style (font_size=12.5).\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"6.5 여행자 건강을 위한 여행의학 클리닉의 발전방향\",\n      \"page\": 346,\n      \"level_reason\": \"Subsection consistent with level 4 style (font_size=12.5).\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"제 3 장 직업관련질환에 대한 예방의료서비스\",\n      \"page\": 349,\n      \"level_reason\": \"Major chapter title consistent with level 1 style (font_size=31.0).\"\n    },\n    {\n      \"level\": 3,\n      \"chapter\": \"1. 일차 예방과 직업보건\",\n      \"page\": 349,\n      \"level_reason\": \"Major numbered section consistent with level 3 style (font_size=18.0).\"\n    },\n    {\n      \"level\": 4,\n      \"chapter\": \"1.1 직장 건강증진\",\n      \"page\": 349,\n      \"level_reason\": \"Subsection consistent with level 4 style (font_size=12.5).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"1) 직장 건강증진의 정의\",\n      \"page\": 349,\n      \"level_reason\": \"Detailed breakdown consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"2) 직장 건강증진의 필요성\",\n      \"page\": 349,\n      \"level_reason\": \"Detailed breakdown consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(1) 의료비, 재해보상비의 감소\",\n      \"page\": 350,\n      \"level_reason\": \"Specific focus consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(2) 생산성 향상\",\n      \"page\": 350,\n      \"level_reason\": \"Specific focus consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(3) 기업의 이미지\",\n      \"page\": 350,\n      \"level_reason\": \"Specific focus consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 5,\n      \"chapter\": \"3) 직장에서의 건강증진 프로그램 기획\",\n      \"page\": 351,\n      \"level_reason\": \"Detailed breakdown consistent with level 5 style (font_size=12.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(1) 준비 상태 평가\",\n      \"page\": 351,\n      \"level_reason\": \"Specific focus consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(2) 최고경영자(사업주)의 지원 수준\",\n      \"page\": 351,\n      \"level_reason\": \"Specific focus consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(3) 최고경영자, 근로자 및 노동조합의 요구도 평가\",\n      \"page\": 351,\n      \"level_reason\": \"Specific focus consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(4) 실제적인 목표 설정\",\n      \"page\": 351,\n      \"level_reason\": \"Specific focus consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(5) 프로그램 디자인 과정에서부터 근로자 참여(근로자위원회 구성)\",\n      \"page\": 351,\n      \"level_reason\": \"Specific focus consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(6) 자원의 이용과 재원의 조달\",\n      \"page\": 351,\n      \"level_reason\": \"Specific focus consistent with level 6 style (font_size=10.0).\"\n    },\n    {\n      \"level\": 6,\n      \"chapter\": \"(7) 건강증진 프로그램의 수행수준\",\n      \"page\": 351,\n      \"level_reason\": \"Specific focus consistent with level 6 style (font_size=10.0).\"\n    }\n  ]\n}\n```"
+}

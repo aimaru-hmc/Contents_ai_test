@@ -1,0 +1,34 @@
+{
+    "timestamp": "2026-07-10 10:05:13",
+    "stage_index": 72,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3_contentsx.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_contentsx.pdf",
+    "chunk": "19",
+    "total_chunks": 19,
+    "start_page": 558,
+    "end_page": 561,
+    "toc": {
+        "title": "3_contentsx",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "찾아보기",
+                "page": 558,
+                "level_reason": "Section title for the index/lookup part of the document.",
+                "_source_order": 1,
+                "_layout_page": 558,
+                "_layout_y": 53.0,
+                "_layout_x": 65.0,
+                "_layout_font_size": 9.5,
+                "_layout_size_ratio": 1.0,
+                "_layout_bold": 0,
+                "_layout_italic": 0,
+                "_layout_text": "xxxvi∙찾아보기"
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"3_contentsx\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"찾아보기\",\n      \"page\": 558,\n      \"level_reason\": \"Section title for the index/lookup part of the document.\"\n    }\n  ]\n}\n```"
+}

@@ -1,0 +1,335 @@
+{
+    "timestamp": "2026-07-10 10:05:14",
+    "stage_index": 77,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3_contentsx.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_contentsx.pdf",
+    "chunk": "final merged TOC",
+    "review_stage": "final merged TOC",
+    "input_chapters": 1012,
+    "candidate_count": 19,
+    "candidates": [
+        {
+            "title": "① 전립선암",
+            "level": 6,
+            "page": 329,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific disease entry consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 381.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "② 신장암",
+            "level": 6,
+            "page": 330,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific disease entry consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 177.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "③ 방광암",
+            "level": 6,
+            "page": 330,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific disease entry consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 541.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "① 증상완화서비스",
+            "level": 6,
+            "page": 334,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific service type consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 533.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "② 건강유지서비스",
+            "level": 6,
+            "page": 334,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific service type consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 669.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "③ 참여증진서비스",
+            "level": 6,
+            "page": 335,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific service type consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 86.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "① 기내압력변화와 관련된 건강위험요인 관리",
+            "level": 6,
+            "page": 341,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific risk management consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 307.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "② 오존 및 우주방사선",
+            "level": 6,
+            "page": 341,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific risk management consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 504.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "③ 멀미",
+            "level": 6,
+            "page": 341,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific risk management consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 565.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "④ 정맥혈전증과 순환기 장애",
+            "level": 6,
+            "page": 341,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific risk management consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 626.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "⑤ 시차",
+            "level": 6,
+            "page": 342,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific risk management consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 146.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "⑥ 항공여행 제한이 필요한 경우",
+            "level": 6,
+            "page": 342,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific risk management consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 298.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "① 필수예방접종",
+            "level": 6,
+            "page": 343,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific vaccination type consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 253.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "② 선택예방접종",
+            "level": 6,
+            "page": 343,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific vaccination type consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 541.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "③ 의무예방접종",
+            "level": 6,
+            "page": 344,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific vaccination type consistent with level 6 style (font_size=9.5).",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 283.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "① 지속가능한 개발목표(Sustainable Development Goals, SDGs)",
+            "level": 6,
+            "page": 492,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Specific principle under 4.3.1.1.",
+            "font_size": 10.0,
+            "size_ratio": 1.06,
+            "left_indent": 183.0,
+            "vertical_position": 747.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "② 파리선언에서의 국제보건사업의 실행 원칙",
+            "level": 6,
+            "page": 493,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific principle under 4.3.1.1.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 177.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "③ 아크라 행동계획(Accra Agenda for Action, AAA)에 따른 국제보건사업의 원칙",
+            "level": 6,
+            "page": 493,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Specific principle under 4.3.1.1.",
+            "font_size": 10.0,
+            "size_ratio": 1.06,
+            "left_indent": 75.0,
+            "vertical_position": 389.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        },
+        {
+            "title": "④ 크로스커팅 이슈(cross-cutting issue)의 반영",
+            "level": 6,
+            "page": 493,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Specific principle under 4.3.1.1.",
+            "font_size": 10.0,
+            "size_ratio": 1.06,
+            "left_indent": 75.0,
+            "vertical_position": 618.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {}
+        }
+    ]
+}

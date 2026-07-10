@@ -1,0 +1,41 @@
+{
+    "timestamp": "2026-07-10 10:04:38",
+    "stage_index": 65,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3_contentsx.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_contentsx.pdf",
+    "chunk": "chunk 17/19",
+    "review_stage": "chunk 17/19",
+    "input_chapters": 46,
+    "candidate_count": 1,
+    "candidates": [
+        {
+            "title": "제6장 국제보건과 북한의료",
+            "level": 1,
+            "page": 495,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Major chapter title identified by style and repeated header.",
+            "font_size": 8.0,
+            "size_ratio": 0.84,
+            "left_indent": 450.0,
+            "vertical_position": 53.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=495, line=49, s=8.0, r=0.84, x=450.0, y=53.0: \"제6장 국제보건과 북한의료∙ 1393\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        }
+    ]
+}

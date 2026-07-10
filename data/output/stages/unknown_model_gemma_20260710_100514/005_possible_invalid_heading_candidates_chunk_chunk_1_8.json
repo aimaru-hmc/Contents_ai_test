@@ -1,0 +1,748 @@
+{
+    "timestamp": "2026-07-10 10:05:58",
+    "stage_index": 5,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/주교재.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/input_pdf.pdf",
+    "chunk": "chunk 1/8",
+    "review_stage": "chunk 1/8",
+    "input_chapters": 37,
+    "candidate_count": 21,
+    "candidates": [
+        {
+            "title": "Scope",
+            "level": 3,
+            "page": 16,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Definition, scope, and uses of epidemiology.",
+            "font_size": 14.0,
+            "size_ratio": 1.75,
+            "left_indent": 55.0,
+            "vertical_position": 385.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=16, line=513, s=14.0, r=1.75, x=55.0, y=385.0: \"Scope\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 1,
+                "visual_caption_examples": [
+                    "page=16, line=518, s=8.0, r=1.0, x=55.0, y=483.0: \"Figure 1.2. Survival from age 35 for continuing cigarette smokers and lifelong non-\""
+                ],
+                "small_label_examples": [
+                    "page=16, line=521, s=4.2, r=0.52, x=77.0, y=541.0: \"53\""
+                ]
+            }
+        },
+        {
+            "title": "Epidemiology and public health",
+            "level": 2,
+            "page": 17,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under Chapter 1.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 140.0,
+            "vertical_position": 341.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=17, line=586, s=20.0, r=2.0, x=140.0, y=341.0: \"Epidemiology and public health\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=17, line=578, s=8.0, r=0.8, x=34.0, y=233.0: \"Distribution refers to analysis of: times, persons, places and classes of people affected.\"",
+                    "page=17, line=579, s=8.0, r=0.8, x=34.0, y=245.0: \"Determinants include factors that influence health: biological, chemical, physical, socia...\"",
+                    "page=17, line=580, s=8.0, r=0.8, x=173.0, y=254.0: \"cultural, economic, genetic and behavioural.\"",
+                    "page=17, line=581, s=8.0, r=0.8, x=34.0, y=266.0: \"Health-related states and events refer to: diseases, causes of death, behaviours such as...\""
+                ]
+            }
+        },
+        {
+            "title": "Causation of disease",
+            "level": 3,
+            "page": 17,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Epidemiology and public health.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 476.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=17, line=594, s=14.0, r=1.4, x=140.0, y=476.0: \"Causation of disease\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 0,
+                "visual_caption_examples": [
+                    "page=17, line=601, s=8.0, r=0.8, x=27.0, y=573.0: \"Figure 1.3. Causation\""
+                ]
+            }
+        },
+        {
+            "title": "Natural history of disease",
+            "level": 3,
+            "page": 17,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Epidemiology and public health.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 45.0,
+            "vertical_position": 618.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=17, line=605, s=14.0, r=1.4, x=45.0, y=618.0: \"Good health Ill health Natural history of disease\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 2,
+                "visual_caption_examples": [
+                    "page=17, line=601, s=8.0, r=0.8, x=27.0, y=573.0: \"Figure 1.3. Causation\""
+                ],
+                "small_label_examples": [
+                    "page=17, line=603, s=8.0, r=0.8, x=41.0, y=586.0: \"Genetic factors\"",
+                    "page=17, line=607, s=8.0, r=0.8, x=31.0, y=650.0: \"Environmental factors\""
+                ]
+            }
+        },
+        {
+            "title": "Health status of populations",
+            "level": 3,
+            "page": 18,
+            "reasons": [
+                "source context looks like case/example/table/figure/problem/reference material",
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Epidemiology and public health.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 190.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=18, line=620, s=14.0, r=1.4, x=55.0, y=190.0: \"Health status of populations\""
+                ],
+                "embedded_examples": [
+                    "page=18, line=627, s=8.0, r=0.8, x=55.0, y=308.0: \"Figure 1.5. Describing the health status of populations\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=18, line=614, s=8.0, r=0.8, x=55.0, y=87.0: \"Figure 1.4. Natural history\"",
+                    "page=18, line=627, s=8.0, r=0.8, x=55.0, y=308.0: \"Figure 1.5. Describing the health status of populations\""
+                ],
+                "small_label_examples": [
+                    "page=18, line=613, s=9.0, r=0.9, x=370.0, y=53.0: \"What is epidemiology? 5\"",
+                    "page=18, line=615, s=8.0, r=0.8, x=284.0, y=104.0: \"Death\"",
+                    "page=18, line=616, s=8.0, r=0.8, x=174.0, y=127.0: \"Subclinical Clinical\"",
+                    "page=18, line=617, s=8.0, r=0.8, x=109.0, y=131.0: \"Good health\""
+                ]
+            }
+        },
+        {
+            "title": "Evaluating interventions",
+            "level": 3,
+            "page": 18,
+            "reasons": [
+                "source context looks like case/example/table/figure/problem/reference material",
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Epidemiology and public health.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 436.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=18, line=634, s=14.0, r=1.4, x=55.0, y=436.0: \"Evaluating interventions\""
+                ],
+                "embedded_examples": [
+                    "page=18, line=640, s=8.0, r=0.8, x=55.0, y=546.0: \"Figure 1.6. Evaluating interventions\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=18, line=627, s=8.0, r=0.8, x=55.0, y=308.0: \"Figure 1.5. Describing the health status of populations\"",
+                    "page=18, line=640, s=8.0, r=0.8, x=55.0, y=546.0: \"Figure 1.6. Evaluating interventions\""
+                ],
+                "small_label_examples": [
+                    "page=18, line=628, s=8.0, r=0.8, x=231.0, y=321.0: \"Proportion with ill health,\"",
+                    "page=18, line=629, s=8.0, r=0.8, x=231.0, y=330.0: \"changes over time\"",
+                    "page=18, line=630, s=8.0, r=0.8, x=147.0, y=345.0: \"Good health\"",
+                    "page=18, line=631, s=8.0, r=0.8, x=135.0, y=379.0: \"Ill\""
+                ]
+            }
+        },
+        {
+            "title": "Achievements in epidemiology",
+            "level": 2,
+            "page": 19,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under Chapter 1.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 140.0,
+            "vertical_position": 382.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=19, line=670, s=20.0, r=2.0, x=140.0, y=382.0: \"Achievements in epidemiology\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=19, line=662, s=9.0, r=0.9, x=160.0, y=259.0: \"•a genetic component to the disorder,\"",
+                    "page=19, line=663, s=9.0, r=0.9, x=160.0, y=271.0: \"•the relative size of that genetic effect in relation to other sources of variation in di...\"",
+                    "page=19, line=664, s=9.0, r=0.9, x=166.0, y=284.0: \"risk, and\"",
+                    "page=19, line=665, s=9.0, r=0.9, x=160.0, y=294.0: \"•the responsible gene(s).\""
+                ]
+            }
+        },
+        {
+            "title": "Smallpox",
+            "level": 3,
+            "page": 19,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Achievements in epidemiology.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 414.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 5,
+                "exact_examples": [
+                    "page=19, line=671, s=14.0, r=1.4, x=140.0, y=414.0: \"Smallpox\""
+                ],
+                "embedded_examples": [
+                    "page=19, line=672, s=10.0, r=1.0, x=140.0, y=442.0: \"The elimination of smallpox contributed greatly to the health and well-being of mil-\"",
+                    "page=19, line=673, s=10.0, r=1.0, x=140.0, y=455.0: \"lions of people, particularly in many of the poorest populations. Smallpox illustrates\"",
+                    "page=19, line=675, s=10.0, r=1.0, x=140.0, y=481.0: \"shown that cowpox infection conferred protection against the smallpox virus, yet it\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=19, line=663, s=9.0, r=0.9, x=160.0, y=271.0: \"•the relative size of that genetic effect in relation to other sources of variation in di...\"",
+                    "page=19, line=664, s=9.0, r=0.9, x=166.0, y=284.0: \"risk, and\"",
+                    "page=19, line=665, s=9.0, r=0.9, x=160.0, y=294.0: \"•the responsible gene(s).\"",
+                    "page=19, line=666, s=9.0, r=0.9, x=147.0, y=310.0: \"Public health genetics include:\""
+                ]
+            }
+        },
+        {
+            "title": "Methyl mercury poisoning",
+            "level": 3,
+            "page": 20,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Achievements in epidemiology.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 342.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=20, line=717, s=14.0, r=1.4, x=55.0, y=342.0: \"Methyl mercury poisoning\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=20, line=718, s=8.0, r=0.8, x=289.0, y=353.0: \"Box 1.5. Minamata disease\""
+                ],
+                "small_label_examples": [
+                    "page=20, line=710, s=9.0, r=0.9, x=308.0, y=248.0: \"infectious, which limits transmission.\"",
+                    "page=20, line=719, s=9.0, r=0.9, x=55.0, y=369.0: \"Mercury was known to be a hazardous substance in the Epidemiology played a crucial role i...\"",
+                    "page=20, line=721, s=9.0, r=0.9, x=289.0, y=391.0: \"reported epidemics of disease caused by environmental\"",
+                    "page=20, line=723, s=9.0, r=0.9, x=289.0, y=402.0: \"pollution. The first cases were thought to be infectious\""
+                ]
+            }
+        },
+        {
+            "title": "Rheumatic fever and rheumatic heart disease",
+            "level": 3,
+            "page": 20,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Achievements in epidemiology.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 576.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=20, line=740, s=14.0, r=1.4, x=55.0, y=576.0: \"Rheumatic fever and rheumatic heart disease\""
+                ],
+                "embedded_examples": [
+                    "page=20, line=741, s=10.0, r=1.0, x=55.0, y=604.0: \"Rheumatic fever and rheumatic heart disease are associated with poverty, and in\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 2,
+                "small_label_examples": [
+                    "page=20, line=733, s=9.0, r=0.9, x=289.0, y=479.0: \"iting these families and family members who ate small\"",
+                    "page=20, line=733, s=9.0, r=0.9, x=289.0, y=479.0: \"iting these families and family members who ate small\""
+                ]
+            }
+        },
+        {
+            "title": "Tobacco use, asbestos and lung cancer",
+            "level": 3,
+            "page": 22,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Achievements in epidemiology.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 84.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=22, line=791, s=14.0, r=1.4, x=55.0, y=84.0: \"Tobacco use, asbestos and lung cancer\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=22, line=793, s=8.0, r=0.8, x=289.0, y=119.0: \"Box 1.6. Iodine deficiency\""
+                ],
+                "small_label_examples": [
+                    "page=22, line=790, s=9.0, r=0.9, x=370.0, y=53.0: \"What is epidemiology? 9\"",
+                    "page=22, line=795, s=9.0, r=0.9, x=55.0, y=135.0: \"initially in men. It is now clear that the main cause of Epidemiologists have helped to s...\"",
+                    "page=22, line=796, s=9.0, r=0.9, x=289.0, y=146.0: \"ciency problem; there are effective measures of mass\"",
+                    "page=22, line=798, s=9.0, r=0.9, x=289.0, y=157.0: \"prevention, and ways to monitor iodization pro-\""
+                ]
+            }
+        },
+        {
+            "title": "Hip fractures",
+            "level": 3,
+            "page": 22,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Achievements in epidemiology.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 473.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 3,
+                "exact_examples": [
+                    "page=22, line=834, s=14.0, r=1.4, x=55.0, y=473.0: \"Hip fractures\""
+                ],
+                "embedded_examples": [
+                    "page=22, line=837, s=10.0, r=1.0, x=55.0, y=527.0: \"falls – particularly fractures of the neck of the femur (hip fractures) in older people –\"",
+                    "page=22, line=839, s=10.0, r=1.0, x=55.0, y=553.0: \"the health service needs of an ageing population. Hip fractures increase exponentially\"",
+                    "page=22, line=844, s=10.0, r=1.0, x=73.0, y=618.0: \"As hip fractures account for a large number of days spent in hospital, the eco-\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=22, line=826, s=8.0, r=0.8, x=282.0, y=406.0: \"No No 11\"",
+                    "page=22, line=828, s=8.0, r=0.8, x=282.0, y=418.0: \"Yes No 58\"",
+                    "page=22, line=830, s=8.0, r=0.8, x=282.0, y=430.0: \"No Yes 123\"",
+                    "page=22, line=832, s=8.0, r=0.8, x=282.0, y=442.0: \"Yes Yes 602\""
+                ]
+            }
+        },
+        {
+            "title": "HIV/AIDS",
+            "level": 3,
+            "page": 23,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Achievements in epidemiology.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 160.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=23, line=856, s=14.0, r=1.4, x=140.0, y=160.0: \"HIV/AIDS\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 1,
+                "visual_caption_examples": [
+                    "page=23, line=863, s=8.0, r=0.8, x=140.0, y=283.0: \"Figure 1.8. Global AIDS epidemic 1990–200328\""
+                ],
+                "small_label_examples": [
+                    "page=23, line=864, s=8.0, r=0.8, x=169.0, y=296.0: \"50\""
+                ]
+            }
+        },
+        {
+            "title": "Study questions",
+            "level": 2,
+            "page": 24,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Subsection under Chapter 1.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 55.0,
+            "vertical_position": 474.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=24, line=942, s=20.0, r=2.0, x=55.0, y=474.0: \"Study questions\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 3,
+                "small_label_examples": [
+                    "page=24, line=934, s=9.0, r=0.9, x=62.0, y=345.0: \"is for universal access to treatment by 2010. Epidemiology has made a major contribution\"",
+                    "page=24, line=935, s=9.0, r=0.9, x=62.0, y=356.0: \"to understanding the AIDS pandemic; however knowledge alone is no guarantee that the\"",
+                    "page=24, line=936, s=9.0, r=0.9, x=62.0, y=367.0: \"appropriate preventive actions will be taken.\""
+                ]
+            }
+        },
+        {
+            "title": "References",
+            "level": 2,
+            "page": 25,
+            "reasons": [
+                "title itself looks like a case/example/table/figure/problem/reference label",
+                "source context looks like case/example/table/figure/problem/reference material"
+            ],
+            "level_reason": "Subsection under Chapter 1.",
+            "font_size": 20.0,
+            "size_ratio": 2.0,
+            "left_indent": 140.0,
+            "vertical_position": 83.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=25, line=959, s=20.0, r=2.0, x=140.0, y=83.0: \"References\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 1,
+                "small_label_examples": [
+                    "page=25, line=958, s=9.0, r=0.9, x=27.0, y=53.0: \"12 Chapter 1\""
+                ]
+            }
+        },
+        {
+            "title": "Diagnostic criteria",
+            "level": 3,
+            "page": 29,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Defining health and disease.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 84.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 1,
+                "exact_examples": [
+                    "page=29, line=1074, s=14.0, r=1.4, x=140.0, y=84.0: \"Diagnostic criteria\""
+                ],
+                "embedded_examples": [
+                    "page=29, line=1075, s=10.0, r=1.0, x=140.0, y=112.0: \"Diagnostic criteria are usually based on symptoms, signs, history and test results. For\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 2,
+                "small_label_examples": [
+                    "page=29, line=1073, s=9.0, r=0.9, x=27.0, y=54.0: \"16 Chapter 2\"",
+                    "page=29, line=1073, s=9.0, r=0.9, x=27.0, y=54.0: \"16 Chapter 2\""
+                ]
+            }
+        },
+        {
+            "title": "Population at risk",
+            "level": 3,
+            "page": 30,
+            "reasons": [
+                "source context looks like case/example/table/figure/problem/reference material",
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Measuring disease frequency.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 55.0,
+            "vertical_position": 280.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 3,
+                "exact_examples": [
+                    "page=30, line=1141, s=14.0, r=1.4, x=55.0, y=280.0: \"Population at risk\""
+                ],
+                "embedded_examples": [
+                    "page=30, line=1147, s=8.0, r=0.8, x=55.0, y=389.0: \"Figure 2.1. Population at risk in a study of carcinoma of the cervix\"",
+                    "page=30, line=1148, s=8.0, r=0.8, x=100.0, y=402.0: \"Total population All women Population at risk\"",
+                    "page=30, line=1159, s=10.0, r=1.0, x=55.0, y=618.0: \"handling infected animals, so the population at risk consists of those working on\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 2,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=30, line=1147, s=8.0, r=0.8, x=55.0, y=389.0: \"Figure 2.1. Population at risk in a study of carcinoma of the cervix\"",
+                    "page=30, line=1147, s=8.0, r=0.8, x=55.0, y=389.0: \"Figure 2.1. Population at risk in a study of carcinoma of the cervix\""
+                ],
+                "small_label_examples": [
+                    "page=30, line=1148, s=8.0, r=0.8, x=100.0, y=402.0: \"Total population All women Population at risk\"",
+                    "page=30, line=1148, s=8.0, r=0.8, x=100.0, y=402.0: \"Total population All women Population at risk\"",
+                    "page=30, line=1150, s=8.0, r=0.8, x=219.0, y=444.0: \"0—24\"",
+                    "page=30, line=1151, s=8.0, r=0.8, x=219.0, y=454.0: \"years\""
+                ]
+            }
+        },
+        {
+            "title": "Incidence and prevalence",
+            "level": 3,
+            "page": 31,
+            "reasons": [
+                "source context looks like case/example/table/figure/problem/reference material",
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Sub-subsection under Measuring disease frequency.",
+            "font_size": 14.0,
+            "size_ratio": 1.4,
+            "left_indent": 140.0,
+            "vertical_position": 84.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 2,
+                "exact_examples": [
+                    "page=31, line=1164, s=14.0, r=1.4, x=140.0, y=84.0: \"Incidence and prevalence\""
+                ],
+                "embedded_examples": [
+                    "page=31, line=1169, s=10.0, r=1.0, x=140.0, y=164.0: \"incidence and prevalence varies among diseases. There may be low incidence and a\"",
+                    "page=31, line=1173, s=8.0, r=0.8, x=140.0, y=232.0: \"Table 2.2. Differences between incidence and prevalence\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=31, line=1173, s=8.0, r=0.8, x=140.0, y=232.0: \"Table 2.2. Differences between incidence and prevalence\""
+                ],
+                "small_label_examples": [
+                    "page=31, line=1163, s=9.0, r=0.9, x=27.0, y=54.0: \"18 Chapter 2\"",
+                    "page=31, line=1163, s=9.0, r=0.9, x=27.0, y=54.0: \"18 Chapter 2\"",
+                    "page=31, line=1174, s=8.0, r=0.8, x=192.0, y=254.0: \"Incidence Prevalence\"",
+                    "page=31, line=1175, s=8.0, r=0.8, x=140.0, y=271.0: \"Numerator Number of newcases of disease Number of existing cases of disease\""
+                ]
+            }
+        },
+        {
+            "title": "Prevalence",
+            "level": 4,
+            "page": 32,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Detailed measure under Incidence and prevalence.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 121.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 14,
+                "exact_examples": [
+                    "page=32, line=1215, s=9.0, r=0.9, x=55.0, y=121.0: \"Prevalence\""
+                ],
+                "embedded_examples": [
+                    "page=32, line=1216, s=10.0, r=1.0, x=55.0, y=131.0: \"Prevalence(P))of a disease is calculated as follows:\"",
+                    "page=32, line=1224, s=10.0, r=1.0, x=73.0, y=250.0: \"Prevalence is often expressed as cases per 100 (percentage), or per 1000 popu-\"",
+                    "page=32, line=1226, s=10.0, r=1.0, x=55.0, y=276.0: \"have been collected for one point in time, PPis the “point prevalence rate.” It is\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 3,
+                "small_label_examples": [
+                    "page=32, line=1212, s=9.0, r=0.9, x=345.0, y=54.0: \"Measuring health and disease 19\"",
+                    "page=32, line=1212, s=9.0, r=0.9, x=345.0, y=54.0: \"Measuring health and disease 19\"",
+                    "page=32, line=1215, s=9.0, r=0.9, x=55.0, y=121.0: \"Prevalence\""
+                ]
+            }
+        },
+        {
+            "title": "Incidence",
+            "level": 4,
+            "page": 33,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Detailed measure under Incidence and prevalence.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 140.0,
+            "vertical_position": 412.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 6,
+                "exact_examples": [
+                    "page=33, line=1280, s=9.0, r=0.9, x=140.0, y=412.0: \"Incidence\""
+                ],
+                "embedded_examples": [
+                    "page=33, line=1281, s=10.0, r=1.0, x=140.0, y=423.0: \"Incidence refers to the rate at which new events occur in a population. Incidence\"",
+                    "page=33, line=1284, s=10.0, r=1.0, x=158.0, y=462.0: \"In the calculation of incidence, the numerator is the number of new events that\"",
+                    "page=33, line=1287, s=10.0, r=1.0, x=140.0, y=501.0: \"cidence is to calculate what Last calls the “person-time incidence rate.”11 Each person\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=33, line=1272, s=8.0, r=0.8, x=188.0, y=301.0: \"Fiji\"",
+                    "page=33, line=1273, s=8.0, r=0.8, x=236.0, y=313.0: \"rural 23.0 16.0\"",
+                    "page=33, line=1274, s=8.0, r=0.8, x=236.0, y=325.0: \"urban 16.0 20.0\"",
+                    "page=33, line=1275, s=8.0, r=0.8, x=188.0, y=337.0: \"South India\""
+                ]
+            }
+        },
+        {
+            "title": "Cumulative incidence",
+            "level": 4,
+            "page": 34,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy"
+            ],
+            "level_reason": "Detailed measure under Incidence and prevalence.",
+            "font_size": 9.0,
+            "size_ratio": 0.9,
+            "left_indent": 55.0,
+            "vertical_position": 374.0,
+            "bold": 1,
+            "italic": 1,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 7,
+                "exact_examples": [
+                    "page=34, line=1324, s=9.0, r=0.9, x=55.0, y=374.0: \"Cumulative incidence\""
+                ],
+                "embedded_examples": [
+                    "page=34, line=1325, s=10.0, r=1.0, x=55.0, y=385.0: \"Cumulative incidence is a simpler measure of the occurrence of a disease or health\"",
+                    "page=34, line=1328, s=10.0, r=1.0, x=73.0, y=424.0: \"The cumulative incidence canbe calculated as follows:\"",
+                    "page=34, line=1331, s=10.0, r=1.0, x=54.0, y=471.0: \"CumulativeIncidence=\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=34, line=1316, s=8.0, r=0.8, x=55.0, y=255.0: \"a cohort of 118 539 women13\"",
+                    "page=34, line=1317, s=8.0, r=0.8, x=55.0, y=277.0: \"Smoking Number of cases of Person-years of Stroke incidence rate\"",
+                    "page=34, line=1318, s=8.0, r=0.8, x=55.0, y=286.0: \"category stroke observation (per 100 000) person-\"",
+                    "page=34, line=1320, s=8.0, r=0.8, x=55.0, y=311.0: \"Never smoked 70 395 594 17.7\""
+                ]
+            }
+        }
+    ]
+}

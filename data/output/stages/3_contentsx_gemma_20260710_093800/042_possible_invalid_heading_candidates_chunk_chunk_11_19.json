@@ -1,0 +1,491 @@
+{
+    "timestamp": "2026-07-10 09:55:54",
+    "stage_index": 42,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3_contentsx.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_contentsx.pdf",
+    "chunk": "chunk 11/19",
+    "review_stage": "chunk 11/19",
+    "input_chapters": 63,
+    "candidate_count": 17,
+    "candidates": [
+        {
+            "title": "제2장 예방의료수준에 따른 임상예방서비스",
+            "level": 1,
+            "page": 325,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Major chapter title identified from page headers and content structure.",
+            "font_size": 8.0,
+            "size_ratio": 0.84,
+            "left_indent": 400.0,
+            "vertical_position": 53.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=325, line=1, s=8.0, r=0.84, x=400.0, y=53.0: \"제2장 예방의료수준에 따른 임상예방서비스∙ 1223\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "① 전립선암",
+            "level": 6,
+            "page": 329,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific disease entry under urological cancer screenings.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 381.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=329, line=197, s=9.5, r=1.0, x=75.0, y=381.0: \"① 전립선암\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "② 신장암",
+            "level": 6,
+            "page": 330,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific disease entry under urological cancer screenings.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 177.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=330, line=233, s=9.5, r=1.0, x=183.0, y=177.0: \"② 신장암\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 1,
+                "small_label_examples": [
+                    "page=330, line=227, s=8.0, r=0.84, x=60.0, y=53.0: \"1228∙제5편 임상예방의학과 지역사회예방서비스\""
+                ]
+            }
+        },
+        {
+            "title": "③ 방광암",
+            "level": 6,
+            "page": 330,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific disease entry under urological cancer screenings.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 541.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=330, line=256, s=9.5, r=1.0, x=183.0, y=541.0: \"③ 방광암\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "① 증상완화서비스",
+            "level": 6,
+            "page": 334,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific service type under tertiary prevention content.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 533.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=334, line=432, s=9.5, r=1.0, x=183.0, y=533.0: \"① 증상완화서비스\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "② 건강유지서비스",
+            "level": 6,
+            "page": 334,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific service type under tertiary prevention content.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 669.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=334, line=440, s=9.5, r=1.0, x=183.0, y=669.0: \"② 건강유지서비스\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "③ 참여증진서비스",
+            "level": 6,
+            "page": 335,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific service type under tertiary prevention content.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 86.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=335, line=450, s=9.5, r=1.0, x=75.0, y=86.0: \"③ 참여증진서비스\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "① 기내압력변화와 관련된 건강위험요인 관리",
+            "level": 6,
+            "page": 341,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Management of pressure-related risks.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 307.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=341, line=743, s=9.5, r=1.0, x=75.0, y=307.0: \"① 기내압력변화와 관련된 건강위험요인 관리\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 2,
+                "small_label_examples": [
+                    "page=341, line=737, s=8.5, r=0.9, x=482.0, y=209.0: \"여행전상담은여행전4~8주\"",
+                    "page=341, line=739, s=8.5, r=0.9, x=482.0, y=221.0: \"전에방문하는것이권고된다.\""
+                ]
+            }
+        },
+        {
+            "title": "② 오존 및 우주방사선",
+            "level": 6,
+            "page": 341,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Risks associated with ozone and radiation.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 504.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=341, line=755, s=9.5, r=1.0, x=75.0, y=504.0: \"② 오존 및 우주방사선\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "③ 멀미",
+            "level": 6,
+            "page": 341,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Management of motion sickness.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 565.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=341, line=758, s=9.5, r=1.0, x=75.0, y=565.0: \"③ 멀미\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "④ 정맥혈전증과 순환기 장애",
+            "level": 6,
+            "page": 341,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Prevention of venous thrombosis.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 626.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=341, line=761, s=9.5, r=1.0, x=75.0, y=626.0: \"④ 정맥혈전증과 순환기 장애\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "⑤ 시차",
+            "level": 6,
+            "page": 342,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Management of jet lag.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 146.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=342, line=779, s=9.5, r=1.0, x=183.0, y=146.0: \"⑤ 시차\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 1,
+                "small_label_examples": [
+                    "page=342, line=775, s=8.0, r=0.84, x=60.0, y=53.0: \"1240∙제5편 임상예방의학과 지역사회예방서비스\""
+                ]
+            }
+        },
+        {
+            "title": "⑥ 항공여행 제한이 필요한 경우",
+            "level": 6,
+            "page": 342,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Criteria for restricting air travel.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 298.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=342, line=788, s=9.5, r=1.0, x=183.0, y=298.0: \"⑥ 항공여행 제한이 필요한 경우\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 1,
+                "small_label_examples": [
+                    "page=342, line=796, s=8.5, r=0.9, x=60.0, y=433.0: \"diseases)\""
+                ]
+            }
+        },
+        {
+            "title": "① 필수예방접종",
+            "level": 6,
+            "page": 343,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Routine vaccinations required for all.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 253.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=343, line=840, s=9.5, r=1.0, x=75.0, y=253.0: \"① 필수예방접종\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "② 선택예방접종",
+            "level": 6,
+            "page": 343,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Vaccinations based on destination and risk.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 541.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=343, line=858, s=9.5, r=1.0, x=75.0, y=541.0: \"② 선택예방접종\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "③ 의무예방접종",
+            "level": 6,
+            "page": 344,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Legally required vaccinations for entry.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 183.0,
+            "vertical_position": 283.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=344, line=890, s=9.5, r=1.0, x=183.0, y=283.0: \"③ 의무예방접종\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "(3) 말라리아의 예방요법",
+            "level": 6,
+            "page": 344,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Specific chemoprophylaxis for malaria.",
+            "font_size": 10.0,
+            "size_ratio": 1.06,
+            "left_indent": 60.0,
+            "vertical_position": 435.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=344, line=899, s=10.0, r=1.06, x=60.0, y=435.0: \"예방화학요법 (3) 말라리아의 예방요법\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 3,
+                "small_label_examples": [
+                    "page=344, line=902, s=8.5, r=0.9, x=60.0, y=462.0: \"항생제나기타화학약물을감\"",
+                    "page=344, line=904, s=8.5, r=0.9, x=60.0, y=475.0: \"염이나 질병예방의 목적으로\"",
+                    "page=344, line=906, s=8.5, r=0.9, x=60.0, y=487.0: \"사용하는 것\""
+                ]
+            }
+        }
+    ]
+}

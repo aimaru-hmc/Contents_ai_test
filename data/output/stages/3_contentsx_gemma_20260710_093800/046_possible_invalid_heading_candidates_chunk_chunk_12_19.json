@@ -1,0 +1,104 @@
+{
+    "timestamp": "2026-07-10 09:57:21",
+    "stage_index": 46,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3_contentsx.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_contentsx.pdf",
+    "chunk": "chunk 12/19",
+    "review_stage": "chunk 12/19",
+    "input_chapters": 69,
+    "candidate_count": 3,
+    "candidates": [
+        {
+            "title": "제3장 직업관련질환에 대한 예방의료서비스",
+            "level": 1,
+            "page": 353,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Major chapter title identified by style and repeated header.",
+            "font_size": 8.0,
+            "size_ratio": 0.84,
+            "left_indent": 401.0,
+            "vertical_position": 53.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=353, line=45, s=8.0, r=0.84, x=401.0, y=53.0: \"제3장 직업관련질환에 대한 예방의료서비스∙ 1251\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "(4) 작업환경관리",
+            "level": 4,
+            "page": 358,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Parenthesized numbering under level 3.",
+            "font_size": 10.0,
+            "size_ratio": 1.06,
+            "left_indent": 60.0,
+            "vertical_position": 724.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=358, line=310, s=10.0, r=1.06, x=60.0, y=724.0: \"작업환경관리 목적 (4) 작업환경관리\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=358, line=304, s=8.5, r=0.9, x=60.0, y=643.0: \"준이체내에흡수되었을때의\"",
+                    "page=358, line=306, s=8.5, r=0.9, x=60.0, y=655.0: \"생물학적 수준을 정한 값\"",
+                    "page=358, line=311, s=8.5, r=0.9, x=60.0, y=736.0: \"작업장의 유해인자를 평가한\"",
+                    "page=358, line=313, s=8.5, r=0.9, x=60.0, y=749.0: \"후적절한관리기법을이용하\""
+                ]
+            }
+        },
+        {
+            "title": "(3) 작업능력향상(work conditioning)과 작업단련(work hardening)",
+            "level": 5,
+            "page": 372,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Parenthesized numbering under level 4.",
+            "font_size": 10.0,
+            "size_ratio": 1.06,
+            "left_indent": 60.0,
+            "vertical_position": 495.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=372, line=884, s=10.0, r=1.06, x=60.0, y=495.0: \"작업능력향상 (3) 작업능력향상(work conditioning)과 작업단련(work hardening)\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 3,
+                "small_label_examples": [
+                    "page=372, line=887, s=8.5, r=0.9, x=60.0, y=522.0: \"일반적으로일을원활하게해주\"",
+                    "page=372, line=889, s=8.5, r=0.9, x=60.0, y=535.0: \"는지구력과근력강화를목적\"",
+                    "page=372, line=891, s=8.5, r=0.9, x=60.0, y=548.0: \"으로수행하는재활프로그램\""
+                ]
+            }
+        }
+    ]
+}

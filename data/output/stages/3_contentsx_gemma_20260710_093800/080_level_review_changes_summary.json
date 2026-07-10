@@ -1,0 +1,2555 @@
+{
+    "timestamp": "2026-07-10 10:05:14",
+    "stage_index": 80,
+    "stage": "level_review_changes_summary",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3_contentsx.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_contentsx.pdf",
+    "review_count": 14,
+    "level_change_count": 62,
+    "added_count": 2,
+    "removed_count": 16,
+    "reviews": [
+        {
+            "review_stage": "chunk 2/19",
+            "input_chapters": 70,
+            "output_chapters": 68,
+            "level_change_count": 1,
+            "added_count": 0,
+            "removed_count": 2,
+            "level_changes": [
+                {
+                    "chapter": "3.2 보건의료정책과 의사의 역할",
+                    "page": 41,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Numbered section title with style consistent with level 3.",
+                    "after_level_reason": "Corrected to level 4 based on style consistency (font_size=12.5) with other subsections.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "3.2 보건의료정책과 의사의 역할",
+                        "page": 41,
+                        "level_reason": "Numbered section title with style consistent with level 3.",
+                        "_layout_page": 41,
+                        "_layout_x": 73.0,
+                        "_layout_y": 503.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "3.2 보건의료정책과 의사의 역할",
+                        "_source_order": 127
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "3.2 보건의료정책과 의사의 역할",
+                        "page": 41,
+                        "level_reason": "Corrected to level 4 based on style consistency (font_size=12.5) with other subsections.",
+                        "_layout_page": 41,
+                        "_layout_x": 73.0,
+                        "_layout_y": 503.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "3.2 보건의료정책과 의사의 역할",
+                        "_source_order": 127
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 6,
+                        "chapter": "(3) 병원의 유형",
+                        "page": 53,
+                        "level_reason": "Detailed point under subsection 2).",
+                        "_layout_page": 53,
+                        "_layout_x": 75.0,
+                        "_layout_y": 426.0,
+                        "_layout_font_size": 8.5,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "(3) 병원의 유형 들이 효과적이고 효율적으로",
+                        "_source_order": 656
+                    }
+                },
+                {
+                    "before": {
+                        "level": 6,
+                        "chapter": "(3) 의료기술에 대한 평가",
+                        "page": 58,
+                        "level_reason": "Detailed point under subsection 3).",
+                        "_layout_page": 58,
+                        "_layout_x": 60.0,
+                        "_layout_y": 740.0,
+                        "_layout_font_size": 9.3,
+                        "_layout_size_ratio": 0.98,
+                        "_layout_text": "새로운 의료기술의 속성, 효 (3) 의료기술에 대한 평가",
+                        "_source_order": 901
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 3/19",
+            "input_chapters": 79,
+            "output_chapters": 78,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 6,
+                        "chapter": "(2) 주요 특성 및 구성 개념",
+                        "page": 86,
+                        "level_reason": "Detail under Theory of Planned Behavior, indicated by '(2)' and font size s=10.0.",
+                        "_layout_page": 86,
+                        "_layout_x": 60.0,
+                        "_layout_y": 617.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "준다는 이론 (2) 주요 특성 및 구성 개념",
+                        "_source_order": 507
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 6/19",
+            "input_chapters": 55,
+            "output_chapters": 55,
+            "level_change_count": 1,
+            "added_count": 0,
+            "removed_count": 0,
+            "level_changes": [
+                {
+                    "chapter": "4) 커뮤니티 케어",
+                    "page": 185,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Numbered subsection under the first major section.",
+                    "after_level_reason": "Corrected to level 4 based on style consistency with other numbered subsections.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "4) 커뮤니티 케어",
+                        "page": 185,
+                        "level_reason": "Numbered subsection under the first major section.",
+                        "_layout_page": 185,
+                        "_layout_x": 65.0,
+                        "_layout_y": 329.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 커뮤니티 케어",
+                        "_source_order": 17
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "4) 커뮤니티 케어",
+                        "page": 185,
+                        "level_reason": "Corrected to level 4 based on style consistency with other numbered subsections.",
+                        "_layout_page": 185,
+                        "_layout_x": 65.0,
+                        "_layout_y": 329.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 커뮤니티 케어",
+                        "_source_order": 17
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": []
+        },
+        {
+            "review_stage": "chunk 8/19",
+            "input_chapters": 54,
+            "output_chapters": 51,
+            "level_change_count": 21,
+            "added_count": 1,
+            "removed_count": 4,
+            "level_changes": [
+                {
+                    "chapter": "1.3 임상예방의학의 발전을 위한 조건과 교육",
+                    "page": 254,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Subsection under Chapter 1.",
+                    "after_level_reason": "Subsection under Chapter 1, style consistent with level 3.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "1.3 임상예방의학의 발전을 위한 조건과 교육",
+                        "page": 254,
+                        "level_reason": "Subsection under Chapter 1.",
+                        "_layout_page": 254,
+                        "_layout_x": 182.0,
+                        "_layout_y": 184.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.3 임상예방의학의 발전을 위한 조건과 교육",
+                        "_source_order": 56
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "1.3 임상예방의학의 발전을 위한 조건과 교육",
+                        "page": 254,
+                        "level_reason": "Subsection under Chapter 1, style consistent with level 3.",
+                        "_layout_page": 254,
+                        "_layout_x": 182.0,
+                        "_layout_y": 184.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.3 임상예방의학의 발전을 위한 조건과 교육",
+                        "_source_order": 56
+                    }
+                },
+                {
+                    "chapter": "1.2 흡연",
+                    "page": 263,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under section 1.",
+                    "after_level_reason": "Detailed point under section 1, style consistent with level 4.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "1.2 흡연",
+                        "page": 263,
+                        "level_reason": "Subsection under section 1.",
+                        "_layout_page": 263,
+                        "_layout_x": 74.0,
+                        "_layout_y": 651.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1.2 흡연",
+                        "_source_order": 465
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "1.2 흡연",
+                        "page": 263,
+                        "level_reason": "Detailed point under section 1, style consistent with level 4.",
+                        "_layout_page": 263,
+                        "_layout_x": 74.0,
+                        "_layout_y": 651.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1.2 흡연",
+                        "_source_order": 465
+                    }
+                },
+                {
+                    "chapter": "1) 흡연과 건강",
+                    "page": 264,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Detailed point under subsection 1.2.",
+                    "after_level_reason": "Detailed point under 1.2.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "1) 흡연과 건강",
+                        "page": 264,
+                        "level_reason": "Detailed point under subsection 1.2.",
+                        "_layout_page": 264,
+                        "_layout_x": 173.0,
+                        "_layout_y": 86.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 흡연과 건강",
+                        "_source_order": 475
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "1) 흡연과 건강",
+                        "page": 264,
+                        "level_reason": "Detailed point under 1.2.",
+                        "_layout_page": 264,
+                        "_layout_x": 173.0,
+                        "_layout_y": 86.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 흡연과 건강",
+                        "_source_order": 475
+                    }
+                },
+                {
+                    "chapter": "(1) 직접흡연으로 인한 영향",
+                    "page": 264,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under point 1).",
+                    "after_level_reason": "Detailed point under 1).",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(1) 직접흡연으로 인한 영향",
+                        "page": 264,
+                        "level_reason": "Detailed point under point 1).",
+                        "_layout_page": 264,
+                        "_layout_x": 183.0,
+                        "_layout_y": 120.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 직접흡연으로 인한 영향",
+                        "_source_order": 476
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(1) 직접흡연으로 인한 영향",
+                        "page": 264,
+                        "level_reason": "Detailed point under 1).",
+                        "_layout_page": 264,
+                        "_layout_x": 183.0,
+                        "_layout_y": 120.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 직접흡연으로 인한 영향",
+                        "_source_order": 476
+                    }
+                },
+                {
+                    "chapter": "(2) 간접흡연으로 인한 영향",
+                    "page": 264,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under point 1).",
+                    "after_level_reason": "Detailed point under 1).",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(2) 간접흡연으로 인한 영향",
+                        "page": 264,
+                        "level_reason": "Detailed point under point 1).",
+                        "_layout_page": 264,
+                        "_layout_x": 183.0,
+                        "_layout_y": 381.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 간접흡연으로 인한 영향",
+                        "_source_order": 497
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(2) 간접흡연으로 인한 영향",
+                        "page": 264,
+                        "level_reason": "Detailed point under 1).",
+                        "_layout_page": 264,
+                        "_layout_x": 183.0,
+                        "_layout_y": 381.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 간접흡연으로 인한 영향",
+                        "_source_order": 497
+                    }
+                },
+                {
+                    "chapter": "(3) 국내 연구결과",
+                    "page": 264,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under point 1).",
+                    "after_level_reason": "Detailed point under 1).",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(3) 국내 연구결과",
+                        "page": 264,
+                        "level_reason": "Detailed point under point 1).",
+                        "_layout_page": 264,
+                        "_layout_x": 183.0,
+                        "_layout_y": 596.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 국내 연구결과",
+                        "_source_order": 516
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(3) 국내 연구결과",
+                        "page": 264,
+                        "level_reason": "Detailed point under 1).",
+                        "_layout_page": 264,
+                        "_layout_x": 183.0,
+                        "_layout_y": 596.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 국내 연구결과",
+                        "_source_order": 516
+                    }
+                },
+                {
+                    "chapter": "(4) 신종담배의 영향",
+                    "page": 265,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under point 1).",
+                    "after_level_reason": "Detailed point under 1).",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(4) 신종담배의 영향",
+                        "page": 265,
+                        "level_reason": "Detailed point under point 1).",
+                        "_layout_page": 265,
+                        "_layout_x": 75.0,
+                        "_layout_y": 86.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(4) 신종담배의 영향",
+                        "_source_order": 530
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(4) 신종담배의 영향",
+                        "page": 265,
+                        "level_reason": "Detailed point under 1).",
+                        "_layout_page": 265,
+                        "_layout_x": 75.0,
+                        "_layout_y": 86.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(4) 신종담배의 영향",
+                        "_source_order": 530
+                    }
+                },
+                {
+                    "chapter": "2) 개인을 위한 금연전략과 상담",
+                    "page": 265,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Detailed point under subsection 1.2.",
+                    "after_level_reason": "Detailed point under 1.2.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "2) 개인을 위한 금연전략과 상담",
+                        "page": 265,
+                        "level_reason": "Detailed point under subsection 1.2.",
+                        "_layout_page": 265,
+                        "_layout_x": 65.0,
+                        "_layout_y": 407.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 개인을 위한 금연전략과 상담",
+                        "_source_order": 550
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "2) 개인을 위한 금연전략과 상담",
+                        "page": 265,
+                        "level_reason": "Detailed point under 1.2.",
+                        "_layout_page": 265,
+                        "_layout_x": 65.0,
+                        "_layout_y": 407.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 개인을 위한 금연전략과 상담",
+                        "_source_order": 550
+                    }
+                },
+                {
+                    "chapter": "(1) 5 A’s",
+                    "page": 266,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under point 2).",
+                    "after_level_reason": "Detailed point under 2).",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(1) 5 A’s",
+                        "page": 266,
+                        "level_reason": "Detailed point under point 2).",
+                        "_layout_page": 266,
+                        "_layout_x": 183.0,
+                        "_layout_y": 177.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 5 A’s",
+                        "_source_order": 574
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(1) 5 A’s",
+                        "page": 266,
+                        "level_reason": "Detailed point under 2).",
+                        "_layout_page": 266,
+                        "_layout_x": 183.0,
+                        "_layout_y": 177.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 5 A’s",
+                        "_source_order": 574
+                    }
+                },
+                {
+                    "chapter": "(2) 5 R’s",
+                    "page": 267,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under point 2).",
+                    "after_level_reason": "Detailed point under 2).",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(2) 5 R’s",
+                        "page": 267,
+                        "level_reason": "Detailed point under point 2).",
+                        "_layout_page": 267,
+                        "_layout_x": 75.0,
+                        "_layout_y": 237.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 5 R’s",
+                        "_source_order": 621
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(2) 5 R’s",
+                        "page": 267,
+                        "level_reason": "Detailed point under 2).",
+                        "_layout_page": 267,
+                        "_layout_x": 75.0,
+                        "_layout_y": 237.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 5 R’s",
+                        "_source_order": 621
+                    }
+                },
+                {
+                    "chapter": "(3) 금연약물 요법",
+                    "page": 267,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under point 2).",
+                    "after_level_reason": "Detailed point under 2).",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(3) 금연약물 요법",
+                        "page": 267,
+                        "level_reason": "Detailed point under point 2).",
+                        "_layout_page": 267,
+                        "_layout_x": 75.0,
+                        "_layout_y": 392.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 금연약물 요법",
+                        "_source_order": 630
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(3) 금연약물 요법",
+                        "page": 267,
+                        "level_reason": "Detailed point under 2).",
+                        "_layout_page": 267,
+                        "_layout_x": 75.0,
+                        "_layout_y": 392.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 금연약물 요법",
+                        "_source_order": 630
+                    }
+                },
+                {
+                    "chapter": "3) 금연을 위한 국가 접근전략",
+                    "page": 267,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Detailed point under subsection 1.2.",
+                    "after_level_reason": "Detailed point under 1.2.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "3) 금연을 위한 국가 접근전략",
+                        "page": 267,
+                        "level_reason": "Detailed point under subsection 1.2.",
+                        "_layout_page": 267,
+                        "_layout_x": 65.0,
+                        "_layout_y": 607.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 금연을 위한 국가 접근전략",
+                        "_source_order": 643
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "3) 금연을 위한 국가 접근전략",
+                        "page": 267,
+                        "level_reason": "Detailed point under 1.2.",
+                        "_layout_page": 267,
+                        "_layout_x": 65.0,
+                        "_layout_y": 607.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 금연을 위한 국가 접근전략",
+                        "_source_order": 643
+                    }
+                },
+                {
+                    "chapter": "1.3 음주",
+                    "page": 268,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under section 1.",
+                    "after_level_reason": "Detailed point under section 1, style consistent with level 4.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "1.3 음주",
+                        "page": 268,
+                        "level_reason": "Subsection under section 1.",
+                        "_layout_page": 268,
+                        "_layout_x": 182.0,
+                        "_layout_y": 523.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1.3 음주",
+                        "_source_order": 678
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "1.3 음주",
+                        "page": 268,
+                        "level_reason": "Detailed point under section 1, style consistent with level 4.",
+                        "_layout_page": 268,
+                        "_layout_x": 182.0,
+                        "_layout_y": 523.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1.3 음주",
+                        "_source_order": 678
+                    }
+                },
+                {
+                    "chapter": "1) 음주와 건강",
+                    "page": 268,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Detailed point under subsection 1.3.",
+                    "after_level_reason": "Detailed point under 1.3.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "1) 음주와 건강",
+                        "page": 268,
+                        "level_reason": "Detailed point under subsection 1.3.",
+                        "_layout_page": 268,
+                        "_layout_x": 173.0,
+                        "_layout_y": 675.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 음주와 건강",
+                        "_source_order": 683
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "1) 음주와 건강",
+                        "page": 268,
+                        "level_reason": "Detailed point under 1.3.",
+                        "_layout_page": 268,
+                        "_layout_x": 173.0,
+                        "_layout_y": 675.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 음주와 건강",
+                        "_source_order": 683
+                    }
+                },
+                {
+                    "chapter": "(1) 음주에 의한 사망",
+                    "page": 268,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under point 1).",
+                    "after_level_reason": "Detailed point under 1).",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(1) 음주에 의한 사망",
+                        "page": 268,
+                        "level_reason": "Detailed point under point 1).",
+                        "_layout_page": 268,
+                        "_layout_x": 183.0,
+                        "_layout_y": 709.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 음주에 의한 사망",
+                        "_source_order": 684
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(1) 음주에 의한 사망",
+                        "page": 268,
+                        "level_reason": "Detailed point under 1).",
+                        "_layout_page": 268,
+                        "_layout_x": 183.0,
+                        "_layout_y": 709.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 음주에 의한 사망",
+                        "_source_order": 684
+                    }
+                },
+                {
+                    "chapter": "(2) 음주에 의한 건강 영향",
+                    "page": 269,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under point 1).",
+                    "after_level_reason": "Detailed point under 1).",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(2) 음주에 의한 건강 영향",
+                        "page": 269,
+                        "level_reason": "Detailed point under point 1).",
+                        "_layout_page": 269,
+                        "_layout_x": 75.0,
+                        "_layout_y": 177.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 음주에 의한 건강 영향",
+                        "_source_order": 698
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(2) 음주에 의한 건강 영향",
+                        "page": 269,
+                        "level_reason": "Detailed point under 1).",
+                        "_layout_page": 269,
+                        "_layout_x": 75.0,
+                        "_layout_y": 177.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 음주에 의한 건강 영향",
+                        "_source_order": 698
+                    }
+                },
+                {
+                    "chapter": "(3) 적정음주",
+                    "page": 270,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under point 1).",
+                    "after_level_reason": "Detailed point under 1).",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(3) 적정음주",
+                        "page": 270,
+                        "level_reason": "Detailed point under point 1).",
+                        "_layout_page": 270,
+                        "_layout_x": 183.0,
+                        "_layout_y": 192.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 적정음주",
+                        "_source_order": 745
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(3) 적정음주",
+                        "page": 270,
+                        "level_reason": "Detailed point under 1).",
+                        "_layout_page": 270,
+                        "_layout_x": 183.0,
+                        "_layout_y": 192.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 적정음주",
+                        "_source_order": 745
+                    }
+                },
+                {
+                    "chapter": "2) 절주상담",
+                    "page": 270,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Detailed point under subsection 1.3.",
+                    "after_level_reason": "Detailed point under 1.3.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "2) 절주상담",
+                        "page": 270,
+                        "level_reason": "Detailed point under subsection 1.3.",
+                        "_layout_page": 270,
+                        "_layout_x": 173.0,
+                        "_layout_y": 392.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 절주상담",
+                        "_source_order": 757
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "2) 절주상담",
+                        "page": 270,
+                        "level_reason": "Detailed point under 1.3.",
+                        "_layout_page": 270,
+                        "_layout_x": 173.0,
+                        "_layout_y": 392.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 절주상담",
+                        "_source_order": 757
+                    }
+                },
+                {
+                    "chapter": "(1) 음주관련 용어",
+                    "page": 270,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under point 2).",
+                    "after_level_reason": "Detailed point under 2).",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(1) 음주관련 용어",
+                        "page": 270,
+                        "level_reason": "Detailed point under point 2).",
+                        "_layout_page": 270,
+                        "_layout_x": 183.0,
+                        "_layout_y": 426.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 음주관련 용어",
+                        "_source_order": 758
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(1) 음주관련 용어",
+                        "page": 270,
+                        "level_reason": "Detailed point under 2).",
+                        "_layout_page": 270,
+                        "_layout_x": 183.0,
+                        "_layout_y": 426.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 음주관련 용어",
+                        "_source_order": 758
+                    }
+                },
+                {
+                    "chapter": "(3) 대상자별 상담",
+                    "page": 271,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Detailed point under point 2).",
+                    "after_level_reason": "Detailed point under 2).",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(3) 대상자별 상담",
+                        "page": 271,
+                        "level_reason": "Detailed point under point 2).",
+                        "_layout_page": 271,
+                        "_layout_x": 75.0,
+                        "_layout_y": 463.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 대상자별 상담",
+                        "_source_order": 821
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(3) 대상자별 상담",
+                        "page": 271,
+                        "level_reason": "Detailed point under 2).",
+                        "_layout_page": 271,
+                        "_layout_x": 75.0,
+                        "_layout_y": 463.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 대상자별 상담",
+                        "_source_order": 821
+                    }
+                },
+                {
+                    "chapter": "3) 절주를 위한 지역사회 전략",
+                    "page": 272,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Detailed point under subsection 1.3.",
+                    "after_level_reason": "Detailed point under 1.3.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "3) 절주를 위한 지역사회 전략",
+                        "page": 272,
+                        "level_reason": "Detailed point under subsection 1.3.",
+                        "_layout_page": 272,
+                        "_layout_x": 173.0,
+                        "_layout_y": 450.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 절주를 위한 지역사회 전략",
+                        "_source_order": 861
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "3) 절주를 위한 지역사회 전략",
+                        "page": 272,
+                        "level_reason": "Detailed point under 1.3.",
+                        "_layout_page": 272,
+                        "_layout_x": 173.0,
+                        "_layout_y": 450.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 절주를 위한 지역사회 전략",
+                        "_source_order": 861
+                    }
+                }
+            ],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 1,
+                        "chapter": "예방의료수준에 따른 임상예방서비스",
+                        "page": 261,
+                        "level_reason": "Major chapter title identified by style (s=31.0)."
+                    }
+                }
+            ],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "제 장 예방의료수준에 따른 임상예방서비스",
+                        "page": 261,
+                        "level_reason": "Major chapter title (Chapter 2).",
+                        "_layout_page": 261,
+                        "_layout_x": 86.0,
+                        "_layout_y": 128.0,
+                        "_layout_font_size": 31.0,
+                        "_layout_size_ratio": 3.27,
+                        "_layout_text": "예방의료수준에 따른 임상예방서비스",
+                        "_source_order": 357
+                    }
+                },
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "(2) 음주자 선별 검사",
+                        "page": 270,
+                        "level_reason": "Detailed point under point 2).",
+                        "_layout_page": 270,
+                        "_layout_x": 60.0,
+                        "_layout_y": 653.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "음주한 경우 (2) 음주자 선별 검사",
+                        "_source_order": 779
+                    }
+                },
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "(1) 한국인 영양소 섭취기준(2015)",
+                        "page": 274,
+                        "level_reason": "Detailed point under point 2).",
+                        "_layout_page": 274,
+                        "_layout_x": 60.0,
+                        "_layout_y": 482.0,
+                        "_layout_font_size": 8.5,
+                        "_layout_size_ratio": 1.0,
+                        "_layout_text": "matedaverage requirement, (1) 한국인 영양소 섭취기준(2015)",
+                        "_source_order": 954
+                    }
+                },
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "(2) 국민공통 식생활지침",
+                        "page": 275,
+                        "level_reason": "Detailed point under point 2).",
+                        "_layout_page": 275,
+                        "_layout_x": 75.0,
+                        "_layout_y": 177.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 국민공통 식생활지침",
+                        "_source_order": 975
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 9/19",
+            "input_chapters": 52,
+            "output_chapters": 52,
+            "level_change_count": 1,
+            "added_count": 0,
+            "removed_count": 0,
+            "level_changes": [
+                {
+                    "chapter": "1.7 비 만",
+                    "page": 282,
+                    "before_level": 3,
+                    "after_level": 5,
+                    "before_level_reason": "Numbered section title with distinct style (s=12.0) following the chapter hierarchy.",
+                    "after_level_reason": "Corrected to level 5 based on style consistency (s=12.0, x=183.0) with other subsections.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "1.7 비 만",
+                        "page": 282,
+                        "level_reason": "Numbered section title with distinct style (s=12.0) following the chapter hierarchy.",
+                        "_layout_page": 282,
+                        "_layout_x": 183.0,
+                        "_layout_y": 475.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1.7 비 만",
+                        "_source_order": 68
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "1.7 비 만",
+                        "page": 282,
+                        "level_reason": "Corrected to level 5 based on style consistency (s=12.0, x=183.0) with other subsections.",
+                        "_layout_page": 282,
+                        "_layout_x": 183.0,
+                        "_layout_y": 475.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1.7 비 만",
+                        "_source_order": 68
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": []
+        },
+        {
+            "review_stage": "chunk 10/19",
+            "input_chapters": 34,
+            "output_chapters": 34,
+            "level_change_count": 3,
+            "added_count": 0,
+            "removed_count": 0,
+            "level_changes": [
+                {
+                    "chapter": "2) 임산부에서 필요한 예방화학요법",
+                    "page": 306,
+                    "before_level": 2,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under the clinical preventive services chapter.",
+                    "after_level_reason": "Subsection style consistent with observed level 4 (font_size=12.0, x=173.0).",
+                    "before": {
+                        "level": 2,
+                        "chapter": "2) 임산부에서 필요한 예방화학요법",
+                        "page": 306,
+                        "level_reason": "Subsection under the clinical preventive services chapter.",
+                        "_layout_page": 306,
+                        "_layout_x": 173.0,
+                        "_layout_y": 146.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 임산부에서 필요한 예방화학요법",
+                        "_source_order": 59
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 임산부에서 필요한 예방화학요법",
+                        "page": 306,
+                        "level_reason": "Subsection style consistent with observed level 4 (font_size=12.0, x=173.0).",
+                        "_layout_page": 306,
+                        "_layout_x": 173.0,
+                        "_layout_y": 146.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 임산부에서 필요한 예방화학요법",
+                        "_source_order": 59
+                    }
+                },
+                {
+                    "chapter": "3) 임신 중 약물 사용에 대하여",
+                    "page": 306,
+                    "before_level": 2,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under the clinical preventive services chapter.",
+                    "after_level_reason": "Subsection style consistent with observed level 4 (font_size=12.0, x=173.0).",
+                    "before": {
+                        "level": 2,
+                        "chapter": "3) 임신 중 약물 사용에 대하여",
+                        "page": 306,
+                        "level_reason": "Subsection under the clinical preventive services chapter.",
+                        "_layout_page": 306,
+                        "_layout_x": 173.0,
+                        "_layout_y": 723.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 임신 중 약물 사용에 대하여",
+                        "_source_order": 100
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "3) 임신 중 약물 사용에 대하여",
+                        "page": 306,
+                        "level_reason": "Subsection style consistent with observed level 4 (font_size=12.0, x=173.0).",
+                        "_layout_page": 306,
+                        "_layout_x": 173.0,
+                        "_layout_y": 723.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 임신 중 약물 사용에 대하여",
+                        "_source_order": 100
+                    }
+                },
+                {
+                    "chapter": "4) 폐경 여성에서의 호르몬 요법(hormone therapy)",
+                    "page": 308,
+                    "before_level": 2,
+                    "after_level": 4,
+                    "before_level_reason": "Subsection under the clinical preventive services chapter.",
+                    "after_level_reason": "Subsection style consistent with observed level 4 (font_size=12.0, x=173.0).",
+                    "before": {
+                        "level": 2,
+                        "chapter": "4) 폐경 여성에서의 호르몬 요법(hormone therapy)",
+                        "page": 308,
+                        "level_reason": "Subsection under the clinical preventive services chapter.",
+                        "_layout_page": 308,
+                        "_layout_x": 173.0,
+                        "_layout_y": 86.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 폐경 여성에서의 호르몬 요법(hormone therapy)",
+                        "_source_order": 167
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "4) 폐경 여성에서의 호르몬 요법(hormone therapy)",
+                        "page": 308,
+                        "level_reason": "Subsection style consistent with observed level 4 (font_size=12.0, x=173.0).",
+                        "_layout_page": 308,
+                        "_layout_x": 173.0,
+                        "_layout_y": 86.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 폐경 여성에서의 호르몬 요법(hormone therapy)",
+                        "_source_order": 167
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": []
+        },
+        {
+            "review_stage": "chunk 11/19",
+            "input_chapters": 63,
+            "output_chapters": 62,
+            "level_change_count": 4,
+            "added_count": 0,
+            "removed_count": 1,
+            "level_changes": [
+                {
+                    "chapter": "4.7 비뇨기과 질환을 위한 선별검사",
+                    "page": 328,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Numbered section title following the established hierarchy for specific medical screenings.",
+                    "after_level_reason": "Numbered section title consistent with level 4 style (font_size=12.5).",
+                    "before": {
+                        "level": 3,
+                        "chapter": "4.7 비뇨기과 질환을 위한 선별검사",
+                        "page": 328,
+                        "level_reason": "Numbered section title following the established hierarchy for specific medical screenings.",
+                        "_layout_page": 328,
+                        "_layout_x": 181.0,
+                        "_layout_y": 670.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "4.7 비뇨기과 질환을 위한 선별검사",
+                        "_source_order": 171
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "4.7 비뇨기과 질환을 위한 선별검사",
+                        "page": 328,
+                        "level_reason": "Numbered section title consistent with level 4 style (font_size=12.5).",
+                        "_layout_page": 328,
+                        "_layout_x": 181.0,
+                        "_layout_y": 670.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "4.7 비뇨기과 질환을 위한 선별검사",
+                        "_source_order": 171
+                    }
+                },
+                {
+                    "chapter": "1) 비뇨기과 질환을 위한 선별검사",
+                    "page": 329,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Subsection under 4.7 providing detailed definitions and criteria.",
+                    "after_level_reason": "Subsection under 4.7 consistent with level 5 style (font_size=12.0).",
+                    "before": {
+                        "level": 4,
+                        "chapter": "1) 비뇨기과 질환을 위한 선별검사",
+                        "page": 329,
+                        "level_reason": "Subsection under 4.7 providing detailed definitions and criteria.",
+                        "_layout_page": 329,
+                        "_layout_x": 65.0,
+                        "_layout_y": 86.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 비뇨기과 질환을 위한 선별검사",
+                        "_source_order": 180
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "1) 비뇨기과 질환을 위한 선별검사",
+                        "page": 329,
+                        "level_reason": "Subsection under 4.7 consistent with level 5 style (font_size=12.0).",
+                        "_layout_page": 329,
+                        "_layout_x": 65.0,
+                        "_layout_y": 86.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 비뇨기과 질환을 위한 선별검사",
+                        "_source_order": 180
+                    }
+                },
+                {
+                    "chapter": "(1) 비뇨기계암에 대한 선별검사",
+                    "page": 329,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Further breakdown of urological screenings focusing on cancers.",
+                    "after_level_reason": "Detailed breakdown consistent with level 6 style (font_size=10.0).",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(1) 비뇨기계암에 대한 선별검사",
+                        "page": 329,
+                        "level_reason": "Further breakdown of urological screenings focusing on cancers.",
+                        "_layout_page": 329,
+                        "_layout_x": 75.0,
+                        "_layout_y": 350.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 비뇨기계암에 대한 선별검사",
+                        "_source_order": 196
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(1) 비뇨기계암에 대한 선별검사",
+                        "page": 329,
+                        "level_reason": "Detailed breakdown consistent with level 6 style (font_size=10.0).",
+                        "_layout_page": 329,
+                        "_layout_x": 75.0,
+                        "_layout_y": 350.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 비뇨기계암에 대한 선별검사",
+                        "_source_order": 196
+                    }
+                },
+                {
+                    "chapter": "(2) 비뇨기계선별검사와 임상예방서비스",
+                    "page": 331,
+                    "before_level": 5,
+                    "after_level": 6,
+                    "before_level_reason": "Subsection discussing the application of screenings to clinical services.",
+                    "after_level_reason": "Detailed breakdown consistent with level 6 style (font_size=10.0).",
+                    "before": {
+                        "level": 5,
+                        "chapter": "(2) 비뇨기계선별검사와 임상예방서비스",
+                        "page": 331,
+                        "level_reason": "Subsection discussing the application of screenings to clinical services.",
+                        "_layout_page": 331,
+                        "_layout_x": 75.0,
+                        "_layout_y": 131.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 비뇨기계선별검사와 임상예방서비스",
+                        "_source_order": 278
+                    },
+                    "after": {
+                        "level": 6,
+                        "chapter": "(2) 비뇨기계선별검사와 임상예방서비스",
+                        "page": 331,
+                        "level_reason": "Detailed breakdown consistent with level 6 style (font_size=10.0).",
+                        "_layout_page": 331,
+                        "_layout_x": 75.0,
+                        "_layout_y": 131.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 비뇨기계선별검사와 임상예방서비스",
+                        "_source_order": 278
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 6,
+                        "chapter": "(3) 말라리아의 예방요법",
+                        "page": 344,
+                        "level_reason": "Specific chemoprophylaxis for malaria.",
+                        "_layout_page": 344,
+                        "_layout_x": 60.0,
+                        "_layout_y": 435.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "예방화학요법 (3) 말라리아의 예방요법",
+                        "_source_order": 899
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 12/19",
+            "input_chapters": 69,
+            "output_chapters": 67,
+            "level_change_count": 9,
+            "added_count": 0,
+            "removed_count": 2,
+            "level_changes": [
+                {
+                    "chapter": "1.2 보건관리전문기관 위탁 사업",
+                    "page": 353,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Subsection title with numbering 1.2.",
+                    "after_level_reason": "Subsection title with numbering 1.2, consistent with observed level 3 style.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "1.2 보건관리전문기관 위탁 사업",
+                        "page": 353,
+                        "level_reason": "Subsection title with numbering 1.2.",
+                        "_layout_page": 353,
+                        "_layout_x": 74.0,
+                        "_layout_y": 411.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.2 보건관리전문기관 위탁 사업",
+                        "_source_order": 63
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "1.2 보건관리전문기관 위탁 사업",
+                        "page": 353,
+                        "level_reason": "Subsection title with numbering 1.2, consistent with observed level 3 style.",
+                        "_layout_page": 353,
+                        "_layout_x": 74.0,
+                        "_layout_y": 411.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.2 보건관리전문기관 위탁 사업",
+                        "_source_order": 63
+                    }
+                },
+                {
+                    "chapter": "1) 보건관리전문기관 위탁 제도와 전임 보건관리자",
+                    "page": 353,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Numbered list item under subsection 1.2.",
+                    "after_level_reason": "Numbered list item under subsection 1.2, consistent with observed level 4 style.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "1) 보건관리전문기관 위탁 제도와 전임 보건관리자",
+                        "page": 353,
+                        "level_reason": "Numbered list item under subsection 1.2.",
+                        "_layout_page": 353,
+                        "_layout_x": 65.0,
+                        "_layout_y": 529.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 보건관리전문기관 위탁 제도와 전임 보건관리자",
+                        "_source_order": 66
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "1) 보건관리전문기관 위탁 제도와 전임 보건관리자",
+                        "page": 353,
+                        "level_reason": "Numbered list item under subsection 1.2, consistent with observed level 4 style.",
+                        "_layout_page": 353,
+                        "_layout_x": 65.0,
+                        "_layout_y": 529.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 보건관리전문기관 위탁 제도와 전임 보건관리자",
+                        "_source_order": 66
+                    }
+                },
+                {
+                    "chapter": "2) 보건관리전문기관 위탁 사업의 내용",
+                    "page": 354,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Numbered list item under subsection 1.2.",
+                    "after_level_reason": "Numbered list item under subsection 1.2, consistent with observed level 4 style.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "2) 보건관리전문기관 위탁 사업의 내용",
+                        "page": 354,
+                        "level_reason": "Numbered list item under subsection 1.2.",
+                        "_layout_page": 354,
+                        "_layout_x": 173.0,
+                        "_layout_y": 162.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 보건관리전문기관 위탁 사업의 내용",
+                        "_source_order": 94
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "2) 보건관리전문기관 위탁 사업의 내용",
+                        "page": 354,
+                        "level_reason": "Numbered list item under subsection 1.2, consistent with observed level 4 style.",
+                        "_layout_page": 354,
+                        "_layout_x": 173.0,
+                        "_layout_y": 162.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 보건관리전문기관 위탁 사업의 내용",
+                        "_source_order": 94
+                    }
+                },
+                {
+                    "chapter": "3) 중소규모 사업장의 보건관리",
+                    "page": 354,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Numbered list item under subsection 1.2.",
+                    "after_level_reason": "Numbered list item under subsection 1.2, consistent with observed level 4 style.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "3) 중소규모 사업장의 보건관리",
+                        "page": 354,
+                        "level_reason": "Numbered list item under subsection 1.2.",
+                        "_layout_page": 354,
+                        "_layout_x": 173.0,
+                        "_layout_y": 441.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 중소규모 사업장의 보건관리",
+                        "_source_order": 111
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "3) 중소규모 사업장의 보건관리",
+                        "page": 354,
+                        "level_reason": "Numbered list item under subsection 1.2, consistent with observed level 4 style.",
+                        "_layout_page": 354,
+                        "_layout_x": 173.0,
+                        "_layout_y": 441.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 중소규모 사업장의 보건관리",
+                        "_source_order": 111
+                    }
+                },
+                {
+                    "chapter": "1.3 작업환경측정",
+                    "page": 355,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Subsection title with numbering 1.3.",
+                    "after_level_reason": "Subsection title with numbering 1.3, consistent with observed level 3 style.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "1.3 작업환경측정",
+                        "page": 355,
+                        "level_reason": "Subsection title with numbering 1.3.",
+                        "_layout_page": 355,
+                        "_layout_x": 74.0,
+                        "_layout_y": 93.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.3 작업환경측정",
+                        "_source_order": 129
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "1.3 작업환경측정",
+                        "page": 355,
+                        "level_reason": "Subsection title with numbering 1.3, consistent with observed level 3 style.",
+                        "_layout_page": 355,
+                        "_layout_x": 74.0,
+                        "_layout_y": 93.0,
+                        "_layout_font_size": 12.5,
+                        "_layout_size_ratio": 1.32,
+                        "_layout_text": "1.3 작업환경측정",
+                        "_source_order": 129
+                    }
+                },
+                {
+                    "chapter": "1) 작업환경측정 및 유해요인 관리",
+                    "page": 355,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Numbered list item under subsection 1.3.",
+                    "after_level_reason": "Numbered list item under subsection 1.3, consistent with observed level 4 style.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "1) 작업환경측정 및 유해요인 관리",
+                        "page": 355,
+                        "level_reason": "Numbered list item under subsection 1.3.",
+                        "_layout_page": 355,
+                        "_layout_x": 65.0,
+                        "_layout_y": 258.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 작업환경측정 및 유해요인 관리",
+                        "_source_order": 135
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "1) 작업환경측정 및 유해요인 관리",
+                        "page": 355,
+                        "level_reason": "Numbered list item under subsection 1.3, consistent with observed level 4 style.",
+                        "_layout_page": 355,
+                        "_layout_x": 65.0,
+                        "_layout_y": 258.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "1) 작업환경측정 및 유해요인 관리",
+                        "_source_order": 135
+                    }
+                },
+                {
+                    "chapter": "(1) 작업환경측정의 목적",
+                    "page": 355,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Parenthesized numbering under level 3.",
+                    "after_level_reason": "Parenthesized numbering under level 4, consistent with observed level 5 style.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "(1) 작업환경측정의 목적",
+                        "page": 355,
+                        "level_reason": "Parenthesized numbering under level 3.",
+                        "_layout_page": 355,
+                        "_layout_x": 75.0,
+                        "_layout_y": 293.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 작업환경측정의 목적",
+                        "_source_order": 136
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(1) 작업환경측정의 목적",
+                        "page": 355,
+                        "level_reason": "Parenthesized numbering under level 4, consistent with observed level 5 style.",
+                        "_layout_page": 355,
+                        "_layout_x": 75.0,
+                        "_layout_y": 293.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 작업환경측정의 목적",
+                        "_source_order": 136
+                    }
+                },
+                {
+                    "chapter": "(2) 유해인자",
+                    "page": 357,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Parenthesized numbering under level 3.",
+                    "after_level_reason": "Parenthesized numbering under level 4, consistent with observed level 5 style.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "(2) 유해인자",
+                        "page": 357,
+                        "level_reason": "Parenthesized numbering under level 3.",
+                        "_layout_page": 357,
+                        "_layout_x": 75.0,
+                        "_layout_y": 177.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 유해인자",
+                        "_source_order": 222
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(2) 유해인자",
+                        "page": 357,
+                        "level_reason": "Parenthesized numbering under level 4, consistent with observed level 5 style.",
+                        "_layout_page": 357,
+                        "_layout_x": 75.0,
+                        "_layout_y": 177.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 유해인자",
+                        "_source_order": 222
+                    }
+                },
+                {
+                    "chapter": "(3) 노출기준",
+                    "page": 357,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Parenthesized numbering under level 3.",
+                    "after_level_reason": "Parenthesized numbering under level 4, consistent with observed level 5 style.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "(3) 노출기준",
+                        "page": 357,
+                        "level_reason": "Parenthesized numbering under level 3.",
+                        "_layout_page": 357,
+                        "_layout_x": 75.0,
+                        "_layout_y": 347.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 노출기준",
+                        "_source_order": 232
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(3) 노출기준",
+                        "page": 357,
+                        "level_reason": "Parenthesized numbering under level 4, consistent with observed level 5 style.",
+                        "_layout_page": 357,
+                        "_layout_x": 75.0,
+                        "_layout_y": 347.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 노출기준",
+                        "_source_order": 232
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 4,
+                        "chapter": "(4) 작업환경관리",
+                        "page": 358,
+                        "level_reason": "Parenthesized numbering under level 3.",
+                        "_layout_page": 358,
+                        "_layout_x": 60.0,
+                        "_layout_y": 724.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "작업환경관리 목적 (4) 작업환경관리",
+                        "_source_order": 310
+                    }
+                },
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "(3) 작업능력향상(work conditioning)과 작업단련(work hardening)",
+                        "page": 372,
+                        "level_reason": "Parenthesized numbering under level 4.",
+                        "_layout_page": 372,
+                        "_layout_x": 60.0,
+                        "_layout_y": 495.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "작업능력향상 (3) 작업능력향상(work conditioning)과 작업단련(work hardening)",
+                        "_source_order": 884
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 13/19",
+            "input_chapters": 78,
+            "output_chapters": 76,
+            "level_change_count": 8,
+            "added_count": 0,
+            "removed_count": 2,
+            "level_changes": [
+                {
+                    "chapter": "(1) 건강증진학교의 개념",
+                    "page": 396,
+                    "before_level": 6,
+                    "after_level": 5,
+                    "before_level_reason": "Numbered sub-sub-subsection under 3).",
+                    "after_level_reason": "Numbered sub-sub-subsection under 3).",
+                    "before": {
+                        "level": 6,
+                        "chapter": "(1) 건강증진학교의 개념",
+                        "page": 396,
+                        "level_reason": "Numbered sub-sub-subsection under 3).",
+                        "_layout_page": 396,
+                        "_layout_x": 183.0,
+                        "_layout_y": 682.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 건강증진학교의 개념",
+                        "_source_order": 463
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(1) 건강증진학교의 개념",
+                        "page": 396,
+                        "level_reason": "Numbered sub-sub-subsection under 3).",
+                        "_layout_page": 396,
+                        "_layout_x": 183.0,
+                        "_layout_y": 682.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 건강증진학교의 개념",
+                        "_source_order": 463
+                    }
+                },
+                {
+                    "chapter": "(2) 건강증진학교의 구성 요소",
+                    "page": 397,
+                    "before_level": 6,
+                    "after_level": 5,
+                    "before_level_reason": "Numbered sub-sub-subsection under 3).",
+                    "after_level_reason": "Numbered sub-sub-subsection under 3).",
+                    "before": {
+                        "level": 6,
+                        "chapter": "(2) 건강증진학교의 구성 요소",
+                        "page": 397,
+                        "level_reason": "Numbered sub-sub-subsection under 3).",
+                        "_layout_page": 397,
+                        "_layout_x": 75.0,
+                        "_layout_y": 162.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 건강증진학교의 구성 요소",
+                        "_source_order": 481
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(2) 건강증진학교의 구성 요소",
+                        "page": 397,
+                        "level_reason": "Numbered sub-sub-subsection under 3).",
+                        "_layout_page": 397,
+                        "_layout_x": 75.0,
+                        "_layout_y": 162.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 건강증진학교의 구성 요소",
+                        "_source_order": 481
+                    }
+                },
+                {
+                    "chapter": "(3) 건강증진학교의 수행 원칙",
+                    "page": 397,
+                    "before_level": 6,
+                    "after_level": 5,
+                    "before_level_reason": "Numbered sub-sub-subsection under 3).",
+                    "after_level_reason": "Numbered sub-sub-subsection under 3).",
+                    "before": {
+                        "level": 6,
+                        "chapter": "(3) 건강증진학교의 수행 원칙",
+                        "page": 397,
+                        "level_reason": "Numbered sub-sub-subsection under 3).",
+                        "_layout_page": 397,
+                        "_layout_x": 75.0,
+                        "_layout_y": 316.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 건강증진학교의 수행 원칙",
+                        "_source_order": 490
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(3) 건강증진학교의 수행 원칙",
+                        "page": 397,
+                        "level_reason": "Numbered sub-sub-subsection under 3).",
+                        "_layout_page": 397,
+                        "_layout_x": 75.0,
+                        "_layout_y": 316.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 건강증진학교의 수행 원칙",
+                        "_source_order": 490
+                    }
+                },
+                {
+                    "chapter": "(4) 기존 학교보건사업과 건강증진학교의 차이",
+                    "page": 397,
+                    "before_level": 6,
+                    "after_level": 5,
+                    "before_level_reason": "Numbered sub-sub-subsection under 3).",
+                    "after_level_reason": "Numbered sub-sub-subsection under 3).",
+                    "before": {
+                        "level": 6,
+                        "chapter": "(4) 기존 학교보건사업과 건강증진학교의 차이",
+                        "page": 397,
+                        "level_reason": "Numbered sub-sub-subsection under 3).",
+                        "_layout_page": 397,
+                        "_layout_x": 75.0,
+                        "_layout_y": 698.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(4) 기존 학교보건사업과 건강증진학교의 차이",
+                        "_source_order": 514
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(4) 기존 학교보건사업과 건강증진학교의 차이",
+                        "page": 397,
+                        "level_reason": "Numbered sub-sub-subsection under 3).",
+                        "_layout_page": 397,
+                        "_layout_x": 75.0,
+                        "_layout_y": 698.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(4) 기존 학교보건사업과 건강증진학교의 차이",
+                        "_source_order": 514
+                    }
+                },
+                {
+                    "chapter": "(5) 한국의 건강증진학교",
+                    "page": 397,
+                    "before_level": 6,
+                    "after_level": 5,
+                    "before_level_reason": "Numbered sub-sub-subsection under 3).",
+                    "after_level_reason": "Numbered sub-sub-subsection under 3).",
+                    "before": {
+                        "level": 6,
+                        "chapter": "(5) 한국의 건강증진학교",
+                        "page": 397,
+                        "level_reason": "Numbered sub-sub-subsection under 3).",
+                        "_layout_page": 397,
+                        "_layout_x": 75.0,
+                        "_layout_y": 762.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(5) 한국의 건강증진학교",
+                        "_source_order": 517
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(5) 한국의 건강증진학교",
+                        "page": 397,
+                        "level_reason": "Numbered sub-sub-subsection under 3).",
+                        "_layout_page": 397,
+                        "_layout_x": 75.0,
+                        "_layout_y": 762.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(5) 한국의 건강증진학교",
+                        "_source_order": 517
+                    }
+                },
+                {
+                    "chapter": "3.2 노인보건의 접근 원칙과 사례",
+                    "page": 400,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Numbered subsection under 3.",
+                    "after_level_reason": "Numbered subsection under 3, style consistent with level 5.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "3.2 노인보건의 접근 원칙과 사례",
+                        "page": 400,
+                        "level_reason": "Numbered subsection under 3.",
+                        "_layout_page": 400,
+                        "_layout_x": 60.0,
+                        "_layout_y": 676.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "인생의후반기인노년기에건 3.2 노인보건의 접근 원칙과 사례",
+                        "_source_order": 656
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "3.2 노인보건의 접근 원칙과 사례",
+                        "page": 400,
+                        "level_reason": "Numbered subsection under 3, style consistent with level 5.",
+                        "_layout_page": 400,
+                        "_layout_x": 60.0,
+                        "_layout_y": 676.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3.2 노인보건의 접근 원칙과 사례",
+                        "_source_order": 656
+                    }
+                },
+                {
+                    "chapter": "(1) 지역사회에서 우울증 환자 발견 및 치료",
+                    "page": 411,
+                    "before_level": 6,
+                    "after_level": 5,
+                    "before_level_reason": "Numbered sub-sub-subsection under 2).",
+                    "after_level_reason": "Numbered sub-sub-subsection under 2).",
+                    "before": {
+                        "level": 6,
+                        "chapter": "(1) 지역사회에서 우울증 환자 발견 및 치료",
+                        "page": 411,
+                        "level_reason": "Numbered sub-sub-subsection under 2).",
+                        "_layout_page": 411,
+                        "_layout_x": 75.0,
+                        "_layout_y": 469.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 지역사회에서 우울증 환자 발견 및 치료",
+                        "_source_order": 1142
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(1) 지역사회에서 우울증 환자 발견 및 치료",
+                        "page": 411,
+                        "level_reason": "Numbered sub-sub-subsection under 2).",
+                        "_layout_page": 411,
+                        "_layout_x": 75.0,
+                        "_layout_y": 469.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 지역사회에서 우울증 환자 발견 및 치료",
+                        "_source_order": 1142
+                    }
+                },
+                {
+                    "chapter": "(2) 지역사회에서 자살 예방",
+                    "page": 412,
+                    "before_level": 6,
+                    "after_level": 5,
+                    "before_level_reason": "Numbered sub-sub-subsection under 2).",
+                    "after_level_reason": "Numbered sub-sub-subsection under 2).",
+                    "before": {
+                        "level": 6,
+                        "chapter": "(2) 지역사회에서 자살 예방",
+                        "page": 412,
+                        "level_reason": "Numbered sub-sub-subsection under 2).",
+                        "_layout_page": 412,
+                        "_layout_x": 183.0,
+                        "_layout_y": 222.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 지역사회에서 자살 예방",
+                        "_source_order": 1184
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "(2) 지역사회에서 자살 예방",
+                        "page": 412,
+                        "level_reason": "Numbered sub-sub-subsection under 2).",
+                        "_layout_page": 412,
+                        "_layout_x": 183.0,
+                        "_layout_y": 222.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 지역사회에서 자살 예방",
+                        "_source_order": 1184
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "제3장 직업관련질환에 대한 예방의료서비스",
+                        "page": 385,
+                        "level_reason": "Chapter title appearing in header and context of the section.",
+                        "_layout_page": 385,
+                        "_layout_x": 399.0,
+                        "_layout_y": 53.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.94,
+                        "_layout_text": "제3장 직업관련질환에 대한 예방의료서비스∙ 1283",
+                        "_source_order": 1
+                    }
+                },
+                {
+                    "before": {
+                        "level": 5,
+                        "chapter": "1) 노인보건의 접근 원칙",
+                        "page": 400,
+                        "level_reason": "Numbered sub-subsection under 3.2.",
+                        "_layout_page": 400,
+                        "_layout_x": 60.0,
+                        "_layout_y": 716.0,
+                        "_layout_font_size": 8.5,
+                        "_layout_size_ratio": 0.9,
+                        "_layout_text": "역사회가 시행하는 다각적인 1) 노인보건의 접근 원칙",
+                        "_source_order": 659
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 14/19",
+            "input_chapters": 58,
+            "output_chapters": 58,
+            "level_change_count": 1,
+            "added_count": 0,
+            "removed_count": 0,
+            "level_changes": [
+                {
+                    "chapter": "7.1 디지털헬스의 개념",
+                    "page": 419,
+                    "before_level": 4,
+                    "after_level": 5,
+                    "before_level_reason": "Subsection numbered 7.1 under section 7.",
+                    "after_level_reason": "Corrected to level 5 based on style font_size=12.0, size_ratio=1.27.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "7.1 디지털헬스의 개념",
+                        "page": 419,
+                        "level_reason": "Subsection numbered 7.1 under section 7.",
+                        "_layout_page": 419,
+                        "_layout_x": 74.0,
+                        "_layout_y": 262.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "7.1 디지털헬스의 개념",
+                        "_source_order": 248
+                    },
+                    "after": {
+                        "level": 5,
+                        "chapter": "7.1 디지털헬스의 개념",
+                        "page": 419,
+                        "level_reason": "Corrected to level 5 based on style font_size=12.0, size_ratio=1.27.",
+                        "_layout_page": 419,
+                        "_layout_x": 74.0,
+                        "_layout_y": 262.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "7.1 디지털헬스의 개념",
+                        "_source_order": 248
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": []
+        },
+        {
+            "review_stage": "chunk 15/19",
+            "input_chapters": 38,
+            "output_chapters": 37,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "제5장 재난과 공중보건위기의 대비와 대응",
+                        "page": 451,
+                        "level_reason": "Major chapter title identified by style and page header.",
+                        "_layout_page": 451,
+                        "_layout_x": 402.0,
+                        "_layout_y": 53.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.94,
+                        "_layout_text": "제5장 재난과 공중보건위기의 대비와 대응∙ 1349",
+                        "_source_order": 74
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 17/19",
+            "input_chapters": 46,
+            "output_chapters": 46,
+            "level_change_count": 13,
+            "added_count": 1,
+            "removed_count": 1,
+            "level_changes": [
+                {
+                    "chapter": "2) 국제보건사업의 기획과정",
+                    "page": 494,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Subsection under international health project management.",
+                    "after_level_reason": "Subsection identified by style s=12.0, r=1.27, x=173.0.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "2) 국제보건사업의 기획과정",
+                        "page": 494,
+                        "level_reason": "Subsection under international health project management.",
+                        "_layout_page": 494,
+                        "_layout_x": 173.0,
+                        "_layout_y": 582.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 국제보건사업의 기획과정",
+                        "_source_order": 34
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "2) 국제보건사업의 기획과정",
+                        "page": 494,
+                        "level_reason": "Subsection identified by style s=12.0, r=1.27, x=173.0.",
+                        "_layout_page": 494,
+                        "_layout_x": 173.0,
+                        "_layout_y": 582.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "2) 국제보건사업의 기획과정",
+                        "_source_order": 34
+                    }
+                },
+                {
+                    "chapter": "(1) 자료 수집",
+                    "page": 494,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Specific step within the planning process.",
+                    "after_level_reason": "Detail step under planning process.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "(1) 자료 수집",
+                        "page": 494,
+                        "level_reason": "Specific step within the planning process.",
+                        "_layout_page": 494,
+                        "_layout_x": 183.0,
+                        "_layout_y": 740.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 자료 수집",
+                        "_source_order": 43
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(1) 자료 수집",
+                        "page": 494,
+                        "level_reason": "Detail step under planning process.",
+                        "_layout_page": 494,
+                        "_layout_x": 183.0,
+                        "_layout_y": 740.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 자료 수집",
+                        "_source_order": 43
+                    }
+                },
+                {
+                    "chapter": "(2) 이해관계자 분석",
+                    "page": 496,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Specific step within the planning process.",
+                    "after_level_reason": "Detail step under planning process.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "(2) 이해관계자 분석",
+                        "page": 496,
+                        "level_reason": "Specific step within the planning process.",
+                        "_layout_page": 496,
+                        "_layout_x": 183.0,
+                        "_layout_y": 86.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 이해관계자 분석",
+                        "_source_order": 98
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(2) 이해관계자 분석",
+                        "page": 496,
+                        "level_reason": "Detail step under planning process.",
+                        "_layout_page": 496,
+                        "_layout_x": 183.0,
+                        "_layout_y": 86.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 이해관계자 분석",
+                        "_source_order": 98
+                    }
+                },
+                {
+                    "chapter": "(3) 협력대상국 내 문제점 분석",
+                    "page": 496,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Specific step within the planning process.",
+                    "after_level_reason": "Detail step under planning process.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "(3) 협력대상국 내 문제점 분석",
+                        "page": 496,
+                        "level_reason": "Specific step within the planning process.",
+                        "_layout_page": 496,
+                        "_layout_x": 183.0,
+                        "_layout_y": 255.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 협력대상국 내 문제점 분석",
+                        "_source_order": 108
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(3) 협력대상국 내 문제점 분석",
+                        "page": 496,
+                        "level_reason": "Detail step under planning process.",
+                        "_layout_page": 496,
+                        "_layout_x": 183.0,
+                        "_layout_y": 255.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 협력대상국 내 문제점 분석",
+                        "_source_order": 108
+                    }
+                },
+                {
+                    "chapter": "3) 국제보건사업 실행계획",
+                    "page": 496,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Major subsection regarding implementation planning.",
+                    "after_level_reason": "Subsection identified by style s=12.0, r=1.27, x=173.0.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "3) 국제보건사업 실행계획",
+                        "page": 496,
+                        "level_reason": "Major subsection regarding implementation planning.",
+                        "_layout_page": 496,
+                        "_layout_x": 173.0,
+                        "_layout_y": 567.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 국제보건사업 실행계획",
+                        "_source_order": 126
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "3) 국제보건사업 실행계획",
+                        "page": 496,
+                        "level_reason": "Subsection identified by style s=12.0, r=1.27, x=173.0.",
+                        "_layout_page": 496,
+                        "_layout_x": 173.0,
+                        "_layout_y": 567.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "3) 국제보건사업 실행계획",
+                        "_source_order": 126
+                    }
+                },
+                {
+                    "chapter": "(1) 목표⋅목적⋅목표치 설정",
+                    "page": 496,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Component of the implementation plan.",
+                    "after_level_reason": "Component of implementation plan.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "(1) 목표⋅목적⋅목표치 설정",
+                        "page": 496,
+                        "level_reason": "Component of the implementation plan.",
+                        "_layout_page": 496,
+                        "_layout_x": 183.0,
+                        "_layout_y": 648.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 목표⋅목적⋅목표치 설정",
+                        "_source_order": 130
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(1) 목표⋅목적⋅목표치 설정",
+                        "page": 496,
+                        "level_reason": "Component of implementation plan.",
+                        "_layout_page": 496,
+                        "_layout_x": 183.0,
+                        "_layout_y": 648.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 목표⋅목적⋅목표치 설정",
+                        "_source_order": 130
+                    }
+                },
+                {
+                    "chapter": "(2) 협력대상국 내 상황분석",
+                    "page": 496,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Component of the implementation plan.",
+                    "after_level_reason": "Component of implementation plan.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "(2) 협력대상국 내 상황분석",
+                        "page": 496,
+                        "level_reason": "Component of the implementation plan.",
+                        "_layout_page": 496,
+                        "_layout_x": 183.0,
+                        "_layout_y": 773.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 협력대상국 내 상황분석",
+                        "_source_order": 137
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(2) 협력대상국 내 상황분석",
+                        "page": 496,
+                        "level_reason": "Component of implementation plan.",
+                        "_layout_page": 496,
+                        "_layout_x": 183.0,
+                        "_layout_y": 773.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(2) 협력대상국 내 상황분석",
+                        "_source_order": 137
+                    }
+                },
+                {
+                    "chapter": "(3) 실행계획 수립",
+                    "page": 497,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Component of the implementation plan.",
+                    "after_level_reason": "Component of implementation plan.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "(3) 실행계획 수립",
+                        "page": 497,
+                        "level_reason": "Component of the implementation plan.",
+                        "_layout_page": 497,
+                        "_layout_x": 75.0,
+                        "_layout_y": 175.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 실행계획 수립",
+                        "_source_order": 147
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(3) 실행계획 수립",
+                        "page": 497,
+                        "level_reason": "Component of implementation plan.",
+                        "_layout_page": 497,
+                        "_layout_x": 75.0,
+                        "_layout_y": 175.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(3) 실행계획 수립",
+                        "_source_order": 147
+                    }
+                },
+                {
+                    "chapter": "(4) 모니터링과 평가를 위한 성과지표 설정",
+                    "page": 497,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Component of the implementation plan.",
+                    "after_level_reason": "Component of implementation plan.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "(4) 모니터링과 평가를 위한 성과지표 설정",
+                        "page": 497,
+                        "level_reason": "Component of the implementation plan.",
+                        "_layout_page": 497,
+                        "_layout_x": 75.0,
+                        "_layout_y": 343.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(4) 모니터링과 평가를 위한 성과지표 설정",
+                        "_source_order": 157
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(4) 모니터링과 평가를 위한 성과지표 설정",
+                        "page": 497,
+                        "level_reason": "Component of implementation plan.",
+                        "_layout_page": 497,
+                        "_layout_x": 75.0,
+                        "_layout_y": 343.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(4) 모니터링과 평가를 위한 성과지표 설정",
+                        "_source_order": 157
+                    }
+                },
+                {
+                    "chapter": "(5) 위험요인 분석 및 위험대응계획 수립",
+                    "page": 497,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Component of the implementation plan.",
+                    "after_level_reason": "Component of implementation plan.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "(5) 위험요인 분석 및 위험대응계획 수립",
+                        "page": 497,
+                        "level_reason": "Component of the implementation plan.",
+                        "_layout_page": 497,
+                        "_layout_x": 75.0,
+                        "_layout_y": 451.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(5) 위험요인 분석 및 위험대응계획 수립",
+                        "_source_order": 163
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(5) 위험요인 분석 및 위험대응계획 수립",
+                        "page": 497,
+                        "level_reason": "Component of implementation plan.",
+                        "_layout_page": 497,
+                        "_layout_x": 75.0,
+                        "_layout_y": 451.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(5) 위험요인 분석 및 위험대응계획 수립",
+                        "_source_order": 163
+                    }
+                },
+                {
+                    "chapter": "4) 국제보건사업의 평가",
+                    "page": 498,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Major subsection regarding project evaluation.",
+                    "after_level_reason": "Subsection identified by style s=12.0, r=1.27, x=173.0.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "4) 국제보건사업의 평가",
+                        "page": 498,
+                        "level_reason": "Major subsection regarding project evaluation.",
+                        "_layout_page": 498,
+                        "_layout_x": 173.0,
+                        "_layout_y": 192.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 국제보건사업의 평가",
+                        "_source_order": 203
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "4) 국제보건사업의 평가",
+                        "page": 498,
+                        "level_reason": "Subsection identified by style s=12.0, r=1.27, x=173.0.",
+                        "_layout_page": 498,
+                        "_layout_x": 173.0,
+                        "_layout_y": 192.0,
+                        "_layout_font_size": 12.0,
+                        "_layout_size_ratio": 1.27,
+                        "_layout_text": "4) 국제보건사업의 평가",
+                        "_source_order": 203
+                    }
+                },
+                {
+                    "chapter": "(1) 국제보건사업 평가의 필요성",
+                    "page": 498,
+                    "before_level": 3,
+                    "after_level": 4,
+                    "before_level_reason": "Sub-topic of project evaluation.",
+                    "after_level_reason": "Sub-topic of project evaluation.",
+                    "before": {
+                        "level": 3,
+                        "chapter": "(1) 국제보건사업 평가의 필요성",
+                        "page": 498,
+                        "level_reason": "Sub-topic of project evaluation.",
+                        "_layout_page": 498,
+                        "_layout_x": 183.0,
+                        "_layout_y": 226.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 국제보건사업 평가의 필요성",
+                        "_source_order": 204
+                    },
+                    "after": {
+                        "level": 4,
+                        "chapter": "(1) 국제보건사업 평가의 필요성",
+                        "page": 498,
+                        "level_reason": "Sub-topic of project evaluation.",
+                        "_layout_page": 498,
+                        "_layout_x": 183.0,
+                        "_layout_y": 226.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.06,
+                        "_layout_text": "(1) 국제보건사업 평가의 필요성",
+                        "_source_order": 204
+                    }
+                },
+                {
+                    "chapter": "(2) 북한의 말라리아 관리",
+                    "page": 507,
+                    "before_level": 4,
+                    "after_level": 3,
+                    "before_level_reason": "Detail on malaria management.",
+                    "after_level_reason": "Detail identified by style s=10.0, r=1.18, x=75.0.",
+                    "before": {
+                        "level": 4,
+                        "chapter": "(2) 북한의 말라리아 관리",
+                        "page": 507,
+                        "level_reason": "Detail on malaria management.",
+                        "_layout_page": 507,
+                        "_layout_x": 75.0,
+                        "_layout_y": 718.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.18,
+                        "_layout_text": "(2) 북한의 말라리아 관리",
+                        "_source_order": 580
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "(2) 북한의 말라리아 관리",
+                        "page": 507,
+                        "level_reason": "Detail identified by style s=10.0, r=1.18, x=75.0.",
+                        "_layout_page": 507,
+                        "_layout_x": 75.0,
+                        "_layout_y": 718.0,
+                        "_layout_font_size": 10.0,
+                        "_layout_size_ratio": 1.18,
+                        "_layout_text": "(2) 북한의 말라리아 관리",
+                        "_source_order": 580
+                    }
+                }
+            ],
+            "added_entries": [
+                {
+                    "after": {
+                        "level": 1,
+                        "chapter": "제6장 국제보건과 북한의료",
+                        "page": 494,
+                        "level_reason": "Major chapter title based on hierarchy and content flow."
+                    }
+                }
+            ],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "제6장 국제보건과 북한의료",
+                        "page": 495,
+                        "level_reason": "Major chapter title identified by style and repeated header.",
+                        "_layout_page": 495,
+                        "_layout_x": 450.0,
+                        "_layout_y": 53.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.84,
+                        "_layout_text": "제6장 국제보건과 북한의료∙ 1393",
+                        "_source_order": 49
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 18/19",
+            "input_chapters": 1,
+            "output_chapters": 0,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "찾아보기",
+                        "page": 530,
+                        "level_reason": "This is the main section title for the index/glossary starting on page 530.",
+                        "_layout_page": 530,
+                        "_layout_x": 65.0,
+                        "_layout_y": 53.0,
+                        "_layout_font_size": 8.0,
+                        "_layout_size_ratio": 0.84,
+                        "_layout_text": "viii∙찾아보기",
+                        "_source_order": 1
+                    }
+                }
+            ]
+        },
+        {
+            "review_stage": "chunk 19/19",
+            "input_chapters": 1,
+            "output_chapters": 0,
+            "level_change_count": 0,
+            "added_count": 0,
+            "removed_count": 1,
+            "level_changes": [],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "찾아보기",
+                        "page": 558,
+                        "level_reason": "Section title for the index/lookup part of the document.",
+                        "_layout_page": 558,
+                        "_layout_x": 65.0,
+                        "_layout_y": 53.0,
+                        "_layout_font_size": 9.5,
+                        "_layout_size_ratio": 1.0,
+                        "_layout_text": "xxxvi∙찾아보기",
+                        "_source_order": 1
+                    }
+                }
+            ]
+        }
+    ]
+}

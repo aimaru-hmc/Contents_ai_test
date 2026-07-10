@@ -1,0 +1,185 @@
+{
+    "timestamp": "2026-07-10 10:03:26",
+    "stage_index": 61,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3_contentsx.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_contentsx.pdf",
+    "chunk": "chunk 16/19",
+    "review_stage": "chunk 16/19",
+    "input_chapters": 59,
+    "candidate_count": 6,
+    "candidates": [
+        {
+            "title": "제6장 국제보건과 북한의료",
+            "level": 1,
+            "page": 469,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Top-level chapter title identified from page headers and previous TOC reference.",
+            "font_size": 8.0,
+            "size_ratio": 0.84,
+            "left_indent": 450.0,
+            "vertical_position": 53.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=469, line=1, s=8.0, r=0.84, x=450.0, y=53.0: \"제6장 국제보건과 북한의료∙ 1367\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "(1) 국제보건사업의 기획단계 시 준용 원칙",
+            "level": 5,
+            "page": 492,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Sub-point under 4.3.1, indicated by style s=10.0.",
+            "font_size": 10.0,
+            "size_ratio": 1.06,
+            "left_indent": 60.0,
+            "vertical_position": 638.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=492, line=1043, s=10.0, r=1.06, x=60.0, y=638.0: \"가나에서개최된3차에서는파 (1) 국제보건사업의 기획단계 시 준용 원칙\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=492, line=1037, s=8.5, r=0.9, x=60.0, y=589.0: \"된 2차에서는 원조효과성 증\"",
+                    "page=492, line=1039, s=8.5, r=0.9, x=60.0, y=602.0: \"대를 목표로 한 파리선언(효\"",
+                    "page=492, line=1041, s=8.5, r=0.9, x=60.0, y=615.0: \"과성제고를위한5대원칙과\"",
+                    "page=492, line=1042, s=8.5, r=0.9, x=60.0, y=627.0: \"12개 성과지표 채택), 2008년\""
+                ]
+            }
+        },
+        {
+            "title": "① 지속가능한 개발목표(Sustainable Development Goals, SDGs)",
+            "level": 6,
+            "page": 492,
+            "reasons": [
+                "nearby source layout looks like figure/table/diagram material, not hierarchy",
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Specific principle under 4.3.1.1.",
+            "font_size": 10.0,
+            "size_ratio": 1.06,
+            "left_indent": 183.0,
+            "vertical_position": 747.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=492, line=1054, s=10.0, r=1.06, x=183.0, y=747.0: \"① 지속가능한 개발목표(Sustainable Development Goals, SDGs)\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=492, line=1047, s=8.5, r=0.9, x=60.0, y=678.0: \"모두원조효과성합의를실천\"",
+                    "page=492, line=1049, s=8.5, r=0.9, x=60.0, y=691.0: \"하는 아크라행동계획을 각각\"",
+                    "page=492, line=1052, s=8.5, r=0.9, x=60.0, y=729.0: \"기존 파리선언에서 수립되었\"",
+                    "page=492, line=1053, s=8.5, r=0.9, x=60.0, y=742.0: \"던원조효과성이행사항에대\""
+                ]
+            }
+        },
+        {
+            "title": "② 파리선언에서의 국제보건사업의 실행 원칙",
+            "level": 6,
+            "page": 493,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level",
+                "level 5 markerless entry uses body-size style"
+            ],
+            "level_reason": "Specific principle under 4.3.1.1.",
+            "font_size": 9.5,
+            "size_ratio": 1.0,
+            "left_indent": 75.0,
+            "vertical_position": 177.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=493, line=1067, s=9.5, r=1.0, x=75.0, y=177.0: \"② 파리선언에서의 국제보건사업의 실행 원칙\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "③ 아크라 행동계획(Accra Agenda for Action, AAA)에 따른 국제보건사업의 원칙",
+            "level": 6,
+            "page": 493,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Specific principle under 4.3.1.1.",
+            "font_size": 10.0,
+            "size_ratio": 1.06,
+            "left_indent": 75.0,
+            "vertical_position": 389.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=493, line=1080, s=10.0, r=1.06, x=75.0, y=389.0: \"③ 아크라 행동계획(Accra Agenda for Action, AAA)에 따른 국제보건사업의 원칙\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "④ 크로스커팅 이슈(cross-cutting issue)의 반영",
+            "level": 6,
+            "page": 493,
+            "reasons": [
+                "body-size or near-body-size style without bold/italic or structural marker at a deep level"
+            ],
+            "level_reason": "Specific principle under 4.3.1.1.",
+            "font_size": 10.0,
+            "size_ratio": 1.06,
+            "left_indent": 75.0,
+            "vertical_position": 618.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 1,
+                "embedded_count": 0,
+                "exact_examples": [
+                    "page=493, line=1094, s=10.0, r=1.06, x=75.0, y=618.0: \"④ 크로스커팅 이슈(cross-cutting issue)의 반영\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        }
+    ]
+}

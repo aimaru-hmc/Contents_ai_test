@@ -1,0 +1,47 @@
+{
+    "timestamp": "2026-07-10 09:43:55",
+    "stage_index": 12,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3_contentsx.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_contentsx.pdf",
+    "chunk": "chunk 3/19",
+    "review_stage": "chunk 3/19",
+    "input_chapters": 79,
+    "candidate_count": 1,
+    "candidates": [
+        {
+            "title": "(2) 주요 특성 및 구성 개념",
+            "level": 6,
+            "page": 86,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Detail under Theory of Planned Behavior, indicated by '(2)' and font size s=10.0.",
+            "font_size": 10.0,
+            "size_ratio": 1.06,
+            "left_indent": 60.0,
+            "vertical_position": 617.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=86, line=507, s=10.0, r=1.06, x=60.0, y=617.0: \"준다는 이론 (2) 주요 특성 및 구성 개념\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=86, line=500, s=8.5, r=0.9, x=60.0, y=553.0: \"동에 대한 의도가 가장 중요\"",
+                    "page=86, line=502, s=8.5, r=0.9, x=60.0, y=566.0: \"한 예측 요인이며 행동에 대\"",
+                    "page=86, line=504, s=8.5, r=0.9, x=60.0, y=579.0: \"한태도,주관적규범및인지\"",
+                    "page=86, line=506, s=8.5, r=0.9, x=60.0, y=604.0: \"와행동에직⋅간접적영향을\""
+                ]
+            }
+        }
+    ]
+}

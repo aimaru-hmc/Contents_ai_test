@@ -3,3 +3,112 @@ Processing started: 부교재3_contentsx.pdf
   provider: gemma
   Using Gemma/vLLM server: google/gemma-4-31B-it
   Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 554 pages, 2114192 chars, mode=layout, selected_pages=554
+  Parsed PDF text saved: data/output/parsed_pdfs/3_contentsx_gemma_20260710_093800_parsed_pdf.txt
+  Gemma text chunk processing started: 19 chunks
+  Gemma chunk 1/19 request: pages 1-38
+  Gemma input chunk 1 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_1_pages_1-38.json
+  Gemma level review(chunk 1/19) started
+  Gemma level review(chunk 1/19) completed: 86 chapters / level changes 0
+  Gemma chunk 1 completed: 86 chapters
+  Gemma chunk 2/19 request: pages 39-71
+  Gemma input chunk 2 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_2_pages_39-71.json
+  Gemma level review(chunk 2/19) started
+  Gemma level review(chunk 2/19) completed: 68 chapters / level changes 1
+  Gemma chunk 2 completed: 68 chapters
+  Gemma chunk 3/19 request: pages 72-111
+  Gemma input chunk 3 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_3_pages_72-111.json
+  Gemma level review(chunk 3/19) started
+  Gemma level review(chunk 3/19) completed: 78 chapters / level changes 0
+  Gemma chunk 3 completed: 78 chapters
+  Gemma chunk 4/19 request: pages 112-148
+  Gemma input chunk 4 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_4_pages_112-148.json
+  Gemma level review(chunk 4/19) started
+  Gemma level review(chunk 4/19) completed: 77 chapters / level changes 0
+  Gemma chunk 4 completed: 77 chapters
+  Gemma chunk 5/19 request: pages 149-184
+  Gemma input chunk 5 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_5_pages_149-184.json
+  Gemma level review(chunk 5/19) started
+  Gemma level review(chunk 5/19) completed: 50 chapters / level changes 0
+  Gemma chunk 5 completed: 50 chapters
+  Gemma chunk 6/19 request: pages 185-216
+  Gemma input chunk 6 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_6_pages_185-216.json
+  Gemma level review(chunk 6/19) started
+  Gemma level review(chunk 6/19) completed: 55 chapters / level changes 1
+  Gemma chunk 6 completed: 55 chapters
+  Gemma chunk 7/19 request: pages 217-252
+  Gemma input chunk 7 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_7_pages_217-252.json
+  Gemma level review(chunk 7/19) started
+  Gemma level review(chunk 7/19) completed: 59 chapters / level changes 0
+  Gemma chunk 7 completed: 59 chapters
+  Gemma chunk 8/19 request: pages 253-280
+  Gemma input chunk 8 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_8_pages_253-280.json
+  Gemma level review(chunk 8/19) started
+  Gemma level review(chunk 8/19) completed: 51 chapters / level changes 21
+  Gemma chunk 8 completed: 51 chapters
+  Gemma chunk 9/19 request: pages 281-304
+  Gemma input chunk 9 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_9_pages_281-304.json
+  Gemma level review(chunk 9/19) started
+  Gemma level review(chunk 9/19) completed: 52 chapters / level changes 1
+  Gemma chunk 9 completed: 52 chapters
+  Gemma chunk 10/19 request: pages 305-324
+  Gemma input chunk 10 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_10_pages_305-324.json
+  Gemma level review(chunk 10/19) started
+  Gemma level review(chunk 10/19) completed: 34 chapters / level changes 3
+  Gemma chunk 10 completed: 34 chapters
+  Gemma chunk 11/19 request: pages 325-351
+  Gemma input chunk 11 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_11_pages_325-351.json
+  Gemma level review(chunk 11/19) started
+  Gemma level review(chunk 11/19) completed: 62 chapters / level changes 4
+  Gemma chunk 11 completed: 62 chapters
+  Gemma chunk 12/19 request: pages 352-384
+  Gemma input chunk 12 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_12_pages_352-384.json
+  Gemma level review(chunk 12/19) started
+  Gemma level review(chunk 12/19) completed: 67 chapters / level changes 9
+  Gemma chunk 12 completed: 67 chapters
+  Gemma chunk 13/19 request: pages 385-412
+  Gemma input chunk 13 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_13_pages_385-412.json
+  Gemma level review(chunk 13/19) started
+  Gemma level review(chunk 13/19) completed: 76 chapters / level changes 8
+  Gemma chunk 13 completed: 76 chapters
+  Gemma chunk 14/19 request: pages 413-449
+  Gemma input chunk 14 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_14_pages_413-449.json
+  Gemma level review(chunk 14/19) started
+  Gemma level review(chunk 14/19) completed: 58 chapters / level changes 1
+  Gemma chunk 14 completed: 58 chapters
+  Gemma chunk 15/19 request: pages 450-468
+  Gemma input chunk 15 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_15_pages_450-468.json
+  Gemma level review(chunk 15/19) started
+  Gemma level review(chunk 15/19) completed: 37 chapters / level changes 0
+  Gemma chunk 15 completed: 37 chapters
+  Gemma chunk 16/19 request: pages 469-493
+  Gemma input chunk 16 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_16_pages_469-493.json
+  Gemma level review(chunk 16/19) started
+  Gemma level review(chunk 16/19) completed: 59 chapters / level changes 0
+  Gemma chunk 16 completed: 59 chapters
+  Gemma chunk 17/19 request: pages 494-529
+  Gemma input chunk 17 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_17_pages_494-529.json
+  Gemma level review(chunk 17/19) started
+  Gemma level review(chunk 17/19) completed: 46 chapters / level changes 13
+  Gemma chunk 17 completed: 46 chapters
+  Gemma chunk 18/19 request: pages 530-557
+  Gemma input chunk 18 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_18_pages_530-557.json
+  Gemma level review(chunk 18/19) started
+  Gemma level review(chunk 18/19) completed: 0 chapters / level changes 0
+  Gemma chunk 18 completed: 0 chapters
+  Gemma chunk 19/19 request: pages 558-561
+  Gemma input chunk 19 saved: data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_19_pages_558-561.json
+  Gemma level review(chunk 19/19) started
+  Gemma level review(chunk 19/19) completed: 0 chapters / level changes 0
+  Gemma chunk 19 completed: 0 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) failed; keeping previous TOC: Gemma vLLM server request failed: HTTP 400 Bad Request. URL=http://127.0.0.1:8000/v1/chat/completions. Body: {"error":{"message":"This model's maximum context length is 131072 tokens. However, you requested 16384 output tokens and your prompt contains at least 114689 input tokens, for a total of at least 131073 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=114689)","type":"BadRequestError","param":"input_tokens","code":400}}
+Completed: data/output/3_contentsx_gemma_20260710_100514_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 27m 13.9s (1633.858s)
+  title: 3_contentsx
+  chapters: 1012
+Processing result: success 1 / failed 0
+Run log saved: data/output/logs/부교재3_contentsx_gemma_20260710_093800_log.txt

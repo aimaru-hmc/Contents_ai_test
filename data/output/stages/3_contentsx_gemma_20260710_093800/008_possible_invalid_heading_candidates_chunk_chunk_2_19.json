@@ -1,0 +1,108 @@
+{
+    "timestamp": "2026-07-10 09:41:21",
+    "stage_index": 8,
+    "stage": "possible_invalid_heading_candidates",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/부교재3_contentsx.pdf",
+    "processed_pdf": "/tmp/ai_gemma_ascii_pdfs/3_contentsx.pdf",
+    "chunk": "chunk 2/19",
+    "review_stage": "chunk 2/19",
+    "input_chapters": 70,
+    "candidate_count": 3,
+    "candidates": [
+        {
+            "title": "제2장 보건의료정책",
+            "level": 2,
+            "page": 39,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Major chapter title identified from page header and previous TOC reference.",
+            "font_size": 8.0,
+            "size_ratio": 0.84,
+            "left_indent": 479.0,
+            "vertical_position": 53.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=39, line=1, s=8.0, r=0.84, x=479.0, y=53.0: \"제2장 보건의료정책∙ 937\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 0
+            }
+        },
+        {
+            "title": "(3) 병원의 유형",
+            "level": 6,
+            "page": 53,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Detailed point under subsection 2).",
+            "font_size": 8.5,
+            "size_ratio": 0.9,
+            "left_indent": 75.0,
+            "vertical_position": 426.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=53, line=656, s=8.5, r=0.9, x=75.0, y=426.0: \"(3) 병원의 유형 들이 효과적이고 효율적으로\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 0,
+                "small_label_count": 4,
+                "small_label_examples": [
+                    "page=53, line=649, s=8.5, r=0.9, x=482.0, y=361.0: \"방⋅치료및재활을포함하는\"",
+                    "page=53, line=651, s=8.5, r=0.9, x=482.0, y=375.0: \"포괄적의료를행하는지역사\"",
+                    "page=53, line=653, s=8.5, r=0.9, x=482.0, y=387.0: \"회의료체계내에서의중심기\"",
+                    "page=53, line=654, s=8.5, r=0.9, x=65.0, y=397.0: \"야 할 바를 제시하고 있다. 관이며,인력의훈련과연구를\""
+                ]
+            }
+        },
+        {
+            "title": "(3) 의료기술에 대한 평가",
+            "level": 6,
+            "page": 58,
+            "reasons": [
+                "title appears embedded in longer body lines, not as a standalone body hierarchy title"
+            ],
+            "level_reason": "Detailed point under subsection 3).",
+            "font_size": 9.3,
+            "size_ratio": 0.98,
+            "left_indent": 60.0,
+            "vertical_position": 740.0,
+            "bold": 0,
+            "italic": 0,
+            "source_evidence": {
+                "exact_count": 0,
+                "embedded_count": 1,
+                "embedded_examples": [
+                    "page=58, line=901, s=9.3, r=0.98, x=60.0, y=740.0: \"새로운 의료기술의 속성, 효 (3) 의료기술에 대한 평가\""
+                ]
+            },
+            "source_visual_context": {
+                "visual_caption_count": 1,
+                "small_label_count": 4,
+                "visual_caption_examples": [
+                    "page=58, line=894, s=13.0, r=1.37, x=187.0, y=617.0: \"그림 3-2-1\""
+                ],
+                "small_label_examples": [
+                    "page=58, line=893, s=8.5, r=0.9, x=325.0, y=612.0: \"도입기 도약기 성숙기 쇠퇴기\"",
+                    "page=58, line=895, s=8.5, r=0.9, x=401.0, y=624.0: \"시기\"",
+                    "page=58, line=896, s=8.5, r=0.9, x=187.0, y=633.0: \"의료기술의 확산곡선\"",
+                    "page=58, line=900, s=8.5, r=0.9, x=60.0, y=728.0: \"의료기술평가\""
+                ]
+            }
+        }
+    ]
+}
