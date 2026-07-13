@@ -1,0 +1,219 @@
+{
+    "title": "2_9-11_2021",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "제9장 근거기반의료와 임상적 의사결정",
+            "page": 1,
+            "level_reason": "Chapter title on opening page."
+        },
+        {
+            "level": 2,
+            "chapter": "1. 개념과 발전배경",
+            "page": 1,
+            "level_reason": "Numbered major section within chapter 9."
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 근거기반의료의 개념",
+            "page": 1,
+            "level_reason": "Decimal-numbered subsection under section 1."
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 근거기반의료의 배경",
+            "page": 2,
+            "level_reason": "Decimal-numbered subsection under section 1."
+        },
+        {
+            "level": 2,
+            "chapter": "2. 접근과정과 전략",
+            "page": 3,
+            "level_reason": "Numbered major section within chapter 9."
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 근거기반의료를 이용한 임상문제 해결 과정",
+            "page": 3,
+            "level_reason": "Decimal-numbered subsection under section 2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 임상문제의 핵심질문 선정(PICO)",
+            "page": 6,
+            "level_reason": "Decimal-numbered subsection under section 2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 임상문제에 대한 정보 검색",
+            "page": 6,
+            "level_reason": "Decimal-numbered subsection under section 2."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 근거기반의료 자료원",
+            "page": 6,
+            "level_reason": "Numbered sub-subsection under 2.3."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 문헌검색과 활용",
+            "page": 7,
+            "level_reason": "Numbered sub-subsection under 2.3."
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 근거의 수준과 평가",
+            "page": 9,
+            "level_reason": "Decimal-numbered subsection under section 2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.5 근거의 적용과 자가 평가",
+            "page": 10,
+            "level_reason": "Decimal-numbered subsection under section 2."
+        },
+        {
+            "level": 2,
+            "chapter": "3. 근거기반 임상적 의사결정 방법",
+            "page": 11,
+            "level_reason": "Numbered major section within chapter 9."
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 과학적 근거기반 임상적 의사결정 방법",
+            "page": 11,
+            "level_reason": "Decimal-numbered subsection under section 3."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 체계적 고찰과 메타분석",
+            "page": 11,
+            "level_reason": "Numbered sub-subsection under 3.1."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 임상연구 수행을 통한 의사결정",
+            "page": 15,
+            "level_reason": "Numbered sub-subsection under 3.1."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 근거기반 의사결정에 고려되어져야 할 사항",
+            "page": 16,
+            "level_reason": "Numbered sub-subsection under 3.1."
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 경제성 및 효용성 기반 임상적 의사결정",
+            "page": 17,
+            "level_reason": "Decimal-numbered subsection under section 3."
+        },
+        {
+            "level": 3,
+            "chapter": "3.3 임상적 의사결정에 도움이 되는 통계분석",
+            "page": 19,
+            "level_reason": "Decimal-numbered subsection under section 3."
+        },
+        {
+            "level": 4,
+            "chapter": "1) ROC",
+            "page": 19,
+            "level_reason": "Numbered sub-subsection under 3.3."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 베이즈 정리",
+            "page": 22,
+            "level_reason": "Numbered sub-subsection under 3.3."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 의사결정분석",
+            "page": 25,
+            "level_reason": "Numbered sub-subsection under 3.3."
+        },
+        {
+            "level": 2,
+            "chapter": "4. 근거기반의 활용",
+            "page": 27,
+            "level_reason": "Numbered major section within chapter 9."
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 의학논문의 비판적 검토",
+            "page": 27,
+            "level_reason": "Decimal-numbered subsection under section 4."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 비판적 검토의 필요성",
+            "page": 27,
+            "level_reason": "Numbered sub-subsection under 4.1."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 연구설계에 따른 비판적 검토",
+            "page": 27,
+            "level_reason": "Numbered sub-subsection under 4.1."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 문헌의 질평가 주요 영역",
+            "page": 28,
+            "level_reason": "Numbered sub-subsection under 4.1."
+        },
+        {
+            "level": 4,
+            "chapter": "4) 연구목적에 따른 문헌평가",
+            "page": 29,
+            "level_reason": "Numbered sub-subsection under 4.1."
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 임상진료지침",
+            "page": 34,
+            "level_reason": "Decimal-numbered subsection under section 4."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 배경 및 필요성",
+            "page": 34,
+            "level_reason": "Numbered sub-subsection under 4.2."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 임상진료지침의 주요 개발내용과 방법",
+            "page": 34,
+            "level_reason": "Numbered sub-subsection under 4.2."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 임상진료지침의 개발과정",
+            "page": 35,
+            "level_reason": "Numbered sub-subsection under 4.2."
+        }
+    ],
+    "_meta": {
+        "source_pdf": "data/input/부교재1/1권-한글/2편9-11장(2021).pdf",
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "elapsed_seconds": 179.29436040483415,
+        "elapsed": "2m 59.3s",
+        "generated_timestamp": "20260710_125434",
+        "generation_started_at": "2026-07-10T12:51:35+0900",
+        "generation_completed_at": "2026-07-10T12:54:34+0900",
+        "chunk1_created_at": "2026-07-13T17:16:42+09:00",
+        "chunk1_start_page": 1,
+        "chunk1_end_page": 35,
+        "source_chapter_count": 373,
+        "chunk1_chapter_count": 32,
+        "chunk1_source_toc": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/2편9-11장_2021_openai_gpt-5.5_20260710_125434_toc.json",
+        "chunk1_source_toc_max_page": 270,
+        "chunk1_source_input": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/input/부교재1/1권-한글/2편9-11장(2021).pdf",
+        "chunk1_source_input_chunks_dir": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/input_chunks/2_9-11_2021_gemma_20260708_153404",
+        "chunk1_source_input_chunks": [
+            "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/input_chunks/2_9-11_2021_gemma_20260708_153404/chunk_1_pages_1-35.json"
+        ]
+    }
+}

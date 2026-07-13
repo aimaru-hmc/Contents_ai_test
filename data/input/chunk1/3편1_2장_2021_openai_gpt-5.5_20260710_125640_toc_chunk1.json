@@ -1,0 +1,399 @@
+{
+    "title": "3_1_2_2021",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "제3편 환경과 건강",
+            "page": 1,
+            "level_reason": "Part title shown on contents page."
+        },
+        {
+            "level": 2,
+            "chapter": "제3장 화학적 요인",
+            "page": 1,
+            "level_reason": "Chapter title visible on contents page; body not present in attached excerpt."
+        },
+        {
+            "level": 2,
+            "chapter": "제4장 생활오염",
+            "page": 1,
+            "level_reason": "Chapter title visible on contents page; body not present in attached excerpt."
+        },
+        {
+            "level": 2,
+            "chapter": "제5장 직업보건",
+            "page": 1,
+            "level_reason": "Chapter title visible on contents page; body not present in attached excerpt."
+        },
+        {
+            "level": 2,
+            "chapter": "제6장 산업재해",
+            "page": 1,
+            "level_reason": "Chapter title visible on contents page; body not present in attached excerpt."
+        },
+        {
+            "level": 2,
+            "chapter": "제7장 환경 및 직업요인에 의한 질환",
+            "page": 1,
+            "level_reason": "Chapter title visible on contents page; body not present in attached excerpt."
+        },
+        {
+            "level": 2,
+            "chapter": "제1장 환경과 건강",
+            "page": 3,
+            "level_reason": "Chapter heading verified on body page under Part 3."
+        },
+        {
+            "level": 3,
+            "chapter": "1. 환경보건의 개념과 요소",
+            "page": 3,
+            "level_reason": "Major numbered section under Chapter 1."
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 환경의 개념 및 구성 요소",
+            "page": 3,
+            "level_reason": "Decimal subsection under section 1."
+        },
+        {
+            "level": 5,
+            "chapter": "1) 환경의 정의",
+            "page": 3,
+            "level_reason": "Numbered subtopic under subsection 1.1."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 환경계와 건강",
+            "page": 5,
+            "level_reason": "Decimal subsection under section 1."
+        },
+        {
+            "level": 5,
+            "chapter": "1) 환경보건",
+            "page": 5,
+            "level_reason": "Numbered subtopic under subsection 1.2."
+        },
+        {
+            "level": 5,
+            "chapter": "2) 환경과 질병부담",
+            "page": 6,
+            "level_reason": "Numbered subtopic under subsection 1.2."
+        },
+        {
+            "level": 4,
+            "chapter": "1.3 환경보건의 발전과정",
+            "page": 8,
+            "level_reason": "Decimal subsection under section 1."
+        },
+        {
+            "level": 5,
+            "chapter": "1) 고대",
+            "page": 8,
+            "level_reason": "Numbered subtopic under subsection 1.3."
+        },
+        {
+            "level": 5,
+            "chapter": "2) 중세",
+            "page": 8,
+            "level_reason": "Numbered subtopic under subsection 1.3."
+        },
+        {
+            "level": 5,
+            "chapter": "3) 근대",
+            "page": 8,
+            "level_reason": "Numbered subtopic under subsection 1.3."
+        },
+        {
+            "level": 5,
+            "chapter": "4) 현대",
+            "page": 9,
+            "level_reason": "Numbered subtopic under subsection 1.3."
+        },
+        {
+            "level": 4,
+            "chapter": "1.4 한국의 환경보건의 발전과정",
+            "page": 10,
+            "level_reason": "Decimal subsection under section 1."
+        },
+        {
+            "level": 5,
+            "chapter": "1) 한국 환경보건의 시대적 변천",
+            "page": 10,
+            "level_reason": "Numbered subtopic under subsection 1.4."
+        },
+        {
+            "level": 5,
+            "chapter": "2) 환경보건의 제도적 발전",
+            "page": 11,
+            "level_reason": "Numbered subtopic under subsection 1.4."
+        },
+        {
+            "level": 5,
+            "chapter": "3) 시민사회의 발전",
+            "page": 12,
+            "level_reason": "Numbered subtopic under subsection 1.4."
+        },
+        {
+            "level": 5,
+            "chapter": "4) 환경오염으로 인한 건강피해의 제도적 보상",
+            "page": 12,
+            "level_reason": "Numbered subtopic under subsection 1.4."
+        },
+        {
+            "level": 3,
+            "chapter": "2. 환경오염 사건",
+            "page": 13,
+            "level_reason": "Major numbered section under Chapter 1."
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 외국 오염사건",
+            "page": 13,
+            "level_reason": "Decimal subsection under section 2."
+        },
+        {
+            "level": 5,
+            "chapter": "1) 런던 스모그 사건",
+            "page": 14,
+            "level_reason": "Numbered case subtopic under subsection 2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "2) 이타이이타이병",
+            "page": 14,
+            "level_reason": "Numbered case subtopic under subsection 2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "3) 미나마타병",
+            "page": 15,
+            "level_reason": "Numbered case subtopic under subsection 2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "4) 세베소 사건",
+            "page": 15,
+            "level_reason": "Numbered case subtopic under subsection 2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "5) 러브 커낼(Love Canal) 사건",
+            "page": 16,
+            "level_reason": "Numbered case subtopic under subsection 2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "6) 보팔 사건",
+            "page": 17,
+            "level_reason": "Numbered case subtopic under subsection 2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "7) 체르노빌 사건",
+            "page": 17,
+            "level_reason": "Numbered case subtopic under subsection 2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "8) 엑슨 발데즈(Exxon Valdez)호 사건",
+            "page": 18,
+            "level_reason": "Numbered case subtopic under subsection 2.1."
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 한국의 오염사건",
+            "page": 19,
+            "level_reason": "Decimal subsection under section 2."
+        },
+        {
+            "level": 5,
+            "chapter": "1) 울산, 온산 공단지역의 오염사건",
+            "page": 20,
+            "level_reason": "Numbered case subtopic under subsection 2.2."
+        },
+        {
+            "level": 5,
+            "chapter": "2) 낙동강 페놀오염사건",
+            "page": 20,
+            "level_reason": "Numbered case subtopic under subsection 2.2."
+        },
+        {
+            "level": 5,
+            "chapter": "3) 인천 고잔동 유리섬유사건",
+            "page": 21,
+            "level_reason": "Numbered case subtopic under subsection 2.2."
+        },
+        {
+            "level": 5,
+            "chapter": "4) 고성군 폐금속광산사건",
+            "page": 22,
+            "level_reason": "Numbered case subtopic under subsection 2.2."
+        },
+        {
+            "level": 5,
+            "chapter": "5) 허베이스피리트호 원유유출사건",
+            "page": 22,
+            "level_reason": "Numbered case subtopic under subsection 2.2."
+        },
+        {
+            "level": 5,
+            "chapter": "6) 가습기살균제에 의한 폐손상",
+            "page": 23,
+            "level_reason": "Numbered case subtopic under subsection 2.2."
+        },
+        {
+            "level": 3,
+            "chapter": "3. 환경에 대한 적응과 인체영향",
+            "page": 25,
+            "level_reason": "Major numbered section under Chapter 1."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1 환경유해요인 분류",
+            "page": 25,
+            "level_reason": "Decimal subsection under section 3."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2 항상성, 적응, 순화의 정의와 개념",
+            "page": 26,
+            "level_reason": "Decimal subsection under section 3."
+        },
+        {
+            "level": 5,
+            "chapter": "1) 단기간의 적응",
+            "page": 27,
+            "level_reason": "Numbered subtopic under subsection 3.2."
+        },
+        {
+            "level": 5,
+            "chapter": "2) 중기간의 순화",
+            "page": 27,
+            "level_reason": "Numbered subtopic under subsection 3.2."
+        },
+        {
+            "level": 5,
+            "chapter": "3) 장기간의 진화",
+            "page": 28,
+            "level_reason": "Numbered subtopic under subsection 3.2."
+        },
+        {
+            "level": 3,
+            "chapter": "4. 환경역학",
+            "page": 28,
+            "level_reason": "Major numbered section under Chapter 1."
+        },
+        {
+            "level": 4,
+            "chapter": "4.1 환경역학의 정의와 역할",
+            "page": 29,
+            "level_reason": "Decimal subsection under section 4."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2 환경역학에서의 노출 평가",
+            "page": 29,
+            "level_reason": "Decimal subsection under section 4."
+        },
+        {
+            "level": 4,
+            "chapter": "4.3 환경역학에서의 건강영향 평가",
+            "page": 30,
+            "level_reason": "Decimal subsection under section 4."
+        },
+        {
+            "level": 4,
+            "chapter": "4.4 환경역학연구의 방법 및 특성",
+            "page": 30,
+            "level_reason": "Decimal subsection under section 4."
+        },
+        {
+            "level": 4,
+            "chapter": "4.5 환경역학연구의 수행",
+            "page": 31,
+            "level_reason": "Decimal subsection under section 4."
+        },
+        {
+            "level": 4,
+            "chapter": "4.6 환경역학의 전망과 과제",
+            "page": 32,
+            "level_reason": "Decimal subsection under section 4."
+        },
+        {
+            "level": 3,
+            "chapter": "5. 독성학",
+            "page": 33,
+            "level_reason": "Major numbered section under Chapter 1."
+        },
+        {
+            "level": 4,
+            "chapter": "5.1 독성학의 정의와 분야",
+            "page": 33,
+            "level_reason": "Decimal subsection under section 5."
+        },
+        {
+            "level": 5,
+            "chapter": "1) 정의",
+            "page": 33,
+            "level_reason": "Numbered subtopic under subsection 5.1."
+        },
+        {
+            "level": 5,
+            "chapter": "2) 독성학 세부분야",
+            "page": 34,
+            "level_reason": "Numbered subtopic under subsection 5.1."
+        },
+        {
+            "level": 4,
+            "chapter": "5.2 독성반응",
+            "page": 34,
+            "level_reason": "Decimal subsection under section 5."
+        },
+        {
+            "level": 5,
+            "chapter": "1) 용량-반응관계",
+            "page": 34,
+            "level_reason": "Numbered subtopic under subsection 5.2."
+        },
+        {
+            "level": 5,
+            "chapter": "2) 독성영향 요인",
+            "page": 35,
+            "level_reason": "Numbered subtopic under subsection 5.2."
+        },
+        {
+            "level": 5,
+            "chapter": "3) 독성물질의 상호작용",
+            "page": 36,
+            "level_reason": "Numbered subtopic under subsection 5.2."
+        },
+        {
+            "level": 4,
+            "chapter": "5.3 독성기전",
+            "page": 36,
+            "level_reason": "Decimal subsection under section 5."
+        }
+    ],
+    "_meta": {
+        "source_pdf": "data/input/부교재2/2권-한글/3편1,2장(2021).pdf",
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "elapsed_seconds": 124.15966519154608,
+        "elapsed": "2m 4.2s",
+        "generated_timestamp": "20260710_125640",
+        "generation_started_at": "2026-07-10T12:54:36+0900",
+        "generation_completed_at": "2026-07-10T12:56:40+0900",
+        "chunk1_created_at": "2026-07-13T17:16:42+09:00",
+        "chunk1_start_page": 1,
+        "chunk1_end_page": 36,
+        "source_chapter_count": 250,
+        "chunk1_chapter_count": 62,
+        "chunk1_source_toc": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/3편1_2장_2021_openai_gpt-5.5_20260710_125640_toc.json",
+        "chunk1_source_toc_max_page": 110,
+        "chunk1_source_input": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/input/부교재2/2권-한글/3편1,2장(2021).pdf",
+        "chunk1_source_input_chunks_dir": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/input_chunks/3_1_2_2021_gemma_20260708_153404",
+        "chunk1_source_input_chunks": [
+            "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/input_chunks/3_1_2_2021_gemma_20260708_153404/chunk_1_pages_1-36.json"
+        ]
+    }
+}

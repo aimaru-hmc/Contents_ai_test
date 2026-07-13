@@ -17,12 +17,8 @@ from pathlib import Path
 from typing import Any, Callable, Iterable
 
 ROOT = Path(__file__).resolve().parent
-CHUNK = ROOT / "data/output/input_chunks/2_5-8_2021_gemma_20260708_153404/chunk_1_pages_1-39.json"
-REFERENCE = ROOT / "data/output/2편5-8장_2021_openai_gpt-5.5_20260710_144043_toc_39.json"
-PARSED = ROOT / "data/output/parsed_pdfs/2_5-8_2021_gemma_20260708_153404_parsed_pdf.txt"
-TOC_OUTPUT_DIR = ROOT / "data/output/toc_txt/toc"
-LAYOUT_OUTPUT_DIR = ROOT / "data/output/toc_txt/layout"
-RAW_OUTPUT_DIR = ROOT / "data/output/toc_txt/raw"
+INPUT_DIR = ROOT / "data/input/chunk1"
+OUTPUT_ROOT = ROOT / "data/output_chunk1"
 
 DEFAULT_MODEL = "gemma4:31b"
 DEFAULT_FALLBACK_MODELS = DEFAULT_MODEL
@@ -82,6 +78,11 @@ def clean_text(value: Any) -> str:
 
 def norm(value: Any) -> str:
     return re.sub(r"\s+", "", clean(value)).replace("–", "-").replace("—", "-")
+
+
+def normalized_document_name(value: Any) -> str:
+    value = unicodedata.normalize("NFKC", str(value)).lower()
+    return re.sub(r"[^0-9a-z가-힣]+", "", value)
 
 
 def token_shape(token: str) -> str:
@@ -233,6 +234,80 @@ def timestamped_output(explicit: Path | None, default_dir: Path, default_stem: s
     while candidate.exists():
         candidate = directory / f"{stem}_{timestamp}_{sequence}{suffix}"
         sequence += 1
+    return candidate
+
+
+def discover_input_file(input_dir: Path, kind: str, source_hint: str | None = None) -> Path:
+    if not input_dir.is_dir():
+        raise FileNotFoundError(f"Input directory not found: {input_dir}")
+
+    files = sorted(path for path in input_dir.iterdir() if path.is_file())
+    if kind == "parsed":
+        candidates = [path for path in files if path.suffix.lower() == ".txt" and "parsed" in path.stem.lower()]
+        fallback = [path for path in files if path.suffix.lower() == ".txt"]
+    elif kind == "chunk":
+        candidates = [
+            path for path in files
+            if path.suffix.lower() == ".json" and "chunk" in path.stem.lower()
+            and "toc" not in path.stem.lower() and "reference" not in path.stem.lower()
+        ]
+        fallback = []
+    elif kind == "reference":
+        candidates = [
+            path for path in files
+            if path.suffix.lower() == ".json"
+            and ("reference" in path.stem.lower() or "toc" in path.stem.lower())
+        ]
+        fallback = []
+    else:
+        raise ValueError(f"Unknown input kind: {kind}")
+
+    matches = candidates or fallback
+    if kind == "reference":
+        chunk1_references = [path for path in matches if path.stem.lower().endswith("_chunk1")]
+        if chunk1_references:
+            if source_hint:
+                wanted = normalized_document_name(Path(source_hint).stem)
+                matching_references = [
+                    path
+                    for path in chunk1_references
+                    if normalized_document_name(path.stem).startswith(wanted)
+                ]
+                if matching_references:
+                    chunk1_references = matching_references
+                else:
+                    raise FileNotFoundError(
+                        f"No chunk1 reference matching source PDF {source_hint!r} found in: {input_dir}"
+                    )
+            matches = [max(chunk1_references, key=lambda path: (path.stat().st_mtime_ns, path.name))]
+    if len(matches) == 1:
+        return matches[0]
+    if not matches:
+        raise FileNotFoundError(
+            f"Could not find the {kind} input in {input_dir}. "
+            "Expected one parsed .txt, one chunk .json, and one reference/toc .json file."
+        )
+    names = ", ".join(path.name for path in matches)
+    raise ValueError(f"Multiple {kind} inputs found in {input_dir}: {names}. Specify --{kind} explicitly.")
+
+
+def document_stem(parsed_path: Path) -> str:
+    stem = parsed_path.stem
+    for suffix in ("_parsed_pdf", "_parsed"):
+        if stem.lower().endswith(suffix):
+            stem = stem[:-len(suffix)]
+            break
+    return stem or parsed_path.stem
+
+
+def create_run_output_dir(output_root: Path, stem: str, timestamp: str) -> Path:
+    output_root.mkdir(parents=True, exist_ok=True)
+    candidate = output_root / f"{stem}_{timestamp}"
+    sequence = 2
+    while candidate.exists():
+        candidate = output_root / f"{stem}_{timestamp}_{sequence}"
+        sequence += 1
+    candidate.mkdir(parents=True)
     return candidate
 
 
@@ -459,8 +534,75 @@ def merge_partial_tocs(title: str, partial_tocs: list[dict[str, Any]]) -> dict[s
             if reason:
                 row["level_reason"] = reason
             merged.append(row)
-    merged.sort(key=lambda item: (int(item.get("page", 1)), norm(item.get("chapter", ""))))
     return {"title": title, "chapters": merged}
+
+
+def match_toc_source_line(title: str, page_lines: list[Line]) -> Line | None:
+    wanted = norm(title)
+    if not wanted:
+        return None
+
+    ranked: list[tuple[int, int, int, Line]] = []
+    for line in page_lines:
+        actual = norm(line.text)
+        if actual == wanted:
+            score = 5
+        elif actual.startswith(wanted):
+            score = 4
+        elif wanted in actual:
+            score = 3
+        elif actual in wanted and len(actual) >= 4:
+            score = 2
+        else:
+            continue
+        ranked.append((score, -abs(len(actual) - len(wanted)), -line.order, line))
+    return max(ranked, key=lambda item: item[:3])[3] if ranked else None
+
+
+def attach_layout_metadata_and_sort(toc: dict[str, Any], parsed_lines: list[Line]) -> dict[str, Any]:
+    pages: dict[int, list[Line]] = defaultdict(list)
+    for line in parsed_lines:
+        pages[line.page].append(line)
+
+    chapters: list[dict[str, Any]] = []
+    for merge_index, item in enumerate(toc.get("chapters", [])):
+        if not isinstance(item, dict):
+            continue
+        row = dict(item)
+        page = int(row.get("page", 1))
+        line = match_toc_source_line(clean_text(row.get("chapter")), pages.get(page, []))
+        if line is None:
+            row["metadata"] = {
+                "matched_parsed_layout": False,
+                "source_order": None,
+            }
+            sort_order = math.inf
+            sort_y = math.inf
+        else:
+            row["metadata"] = {
+                "matched_parsed_layout": True,
+                "source_order": line.order,
+                "s": line.s,
+                "r": line.r,
+                "x": line.x,
+                "y": line.y,
+                "b": line.b,
+                "i": line.i,
+                "f": line.f,
+                "source_text": line.text,
+            }
+            sort_order = line.order
+            sort_y = line.y
+        row["_sort_key"] = (page, sort_order, sort_y, merge_index)
+        chapters.append(row)
+
+    chapters.sort(key=lambda item: item["_sort_key"])
+    for item in chapters:
+        item.pop("_sort_key", None)
+
+    result = dict(toc)
+    result["chapters"] = chapters
+    return result
 
 
 def parse_model_list(primary_model: str, fallback_models: str | Iterable[str] | None) -> list[str]:
@@ -778,9 +920,11 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="toc_txt_test.py와 같은 흐름으로 layout JSON을 만든 뒤, 코드 매칭 단계만 Gemma 31B로 수행합니다.",
     )
-    parser.add_argument("--chunk", type=Path, default=CHUNK, help="학습 구간 레이아웃 청크 JSON 파일")
-    parser.add_argument("--reference", type=Path, default=REFERENCE, help="학습 기준 TOC JSON 파일")
-    parser.add_argument("--parsed", type=Path, default=PARSED, help="전체 parsed PDF 텍스트 파일")
+    parser.add_argument("--input-dir", type=Path, default=INPUT_DIR, help="입력 파일 폴더")
+    parser.add_argument("--output-root", type=Path, default=OUTPUT_ROOT, help="실행별 결과 폴더를 생성할 상위 폴더")
+    parser.add_argument("--chunk", type=Path, help="학습 구간 레이아웃 청크 JSON 파일(미지정 시 input-dir에서 자동 탐색)")
+    parser.add_argument("--reference", type=Path, help="학습 기준 TOC JSON 파일(미지정 시 input-dir에서 자동 탐색)")
+    parser.add_argument("--parsed", type=Path, help="전체 parsed PDF 텍스트 파일(미지정 시 input-dir에서 자동 탐색)")
     parser.add_argument("--layout-level-output", type=Path, help="레이아웃 결과 파일명 또는 저장 폴더(생성시간 자동 추가)")
     parser.add_argument("--output", type=Path, help="TOC 결과 파일명 또는 저장 폴더(생성시간 자동 추가)")
     parser.add_argument("--raw-output", type=Path, help="Gemma 원본 응답 txt 파일명 또는 저장 폴더(생성시간 자동 추가)")
@@ -803,23 +947,43 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    reference = read_json(args.reference)
+    args.input_dir = args.input_dir.resolve()
+    args.output_root = args.output_root.resolve()
+    args.chunk = (args.chunk or discover_input_file(args.input_dir, "chunk")).resolve()
     chunk = read_json(args.chunk)
+    source_hint = clean_text(chunk.get("source_pdf")) or None
+    args.reference = (
+        args.reference or discover_input_file(args.input_dir, "reference", source_hint=source_hint)
+    ).resolve()
+    args.parsed = (args.parsed or discover_input_file(args.input_dir, "parsed")).resolve()
+
+    reference = read_json(args.reference)
     if not isinstance(chunk.get("text"), str):
         raise ValueError(f"Chunk JSON must contain a text string: {args.chunk}")
 
     learned = learn_layout_levels(reference, parse_layout(chunk["text"]), args.reference, args.chunk)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    layout_output = timestamped_output(args.layout_level_output, LAYOUT_OUTPUT_DIR, args.parsed.stem, "layout_levels", timestamp)
+    output_stem = document_stem(args.parsed)
+    run_output_dir = create_run_output_dir(args.output_root, output_stem, timestamp)
+    layout_output = timestamped_output(
+        args.layout_level_output,
+        run_output_dir / "layout",
+        output_stem,
+        "layout_levels",
+        timestamp,
+    )
     layout_output.write_text(json.dumps(learned, ensure_ascii=False, indent=4) + "\n", encoding="utf-8")
 
     layout_json = read_json(layout_output)
     parsed_text = args.parsed.read_text(encoding="utf-8")
+    parsed_lines = parse_layout(parsed_text)
     title = clean_text(args.title) or clean_text(reference.get("title")) or args.parsed.stem
 
+    generation_started_at = datetime.now().astimezone()
     started = time.perf_counter()
     raw_records: list[dict[str, Any]] = []
     used_model = ""
+    parsed_chunk_count = 1
 
     if args.single_request:
         prompt = build_prompt(layout_json, parsed_text, title, max(1, int(args.max_depth)), args.prompt)
@@ -829,6 +993,7 @@ def main() -> None:
         chunks = split_parsed_text_chunks(parsed_text, args.parsed_chunk_chars)
         partial_tocs: list[dict[str, Any]] = []
         total_chunks = len(chunks)
+        parsed_chunk_count = total_chunks
         print(f"Parsed chunks: {total_chunks} (max_chars={args.parsed_chunk_chars})", flush=True)
         for chunk_item in chunks:
             prompt = build_chunk_prompt(
@@ -854,14 +1019,50 @@ def main() -> None:
             })
         toc = validate_toc(merge_partial_tocs(title, partial_tocs), fallback_title=title, max_depth=args.max_depth)
 
+    toc = attach_layout_metadata_and_sort(toc, parsed_lines)
     elapsed = time.perf_counter() - started
+    generation_completed_at = datetime.now().astimezone()
+    matched_layout_entries = sum(
+        1
+        for item in toc.get("chapters", [])
+        if isinstance(item.get("metadata"), dict) and item["metadata"].get("matched_parsed_layout")
+    )
 
-    output = timestamped_output(args.output, TOC_OUTPUT_DIR, args.parsed.stem, "toc", timestamp)
+    output = timestamped_output(args.output, run_output_dir / "toc", output_stem, "toc", timestamp)
+    raw_path = timestamped_output(
+        args.raw_output,
+        run_output_dir / "raw",
+        output_stem,
+        "gemma_raw",
+        timestamp,
+        suffix=".json",
+    )
+    toc["_meta"] = {
+        "source_input_directory": str(args.input_dir),
+        "source_chunk": str(args.chunk),
+        "source_reference": str(args.reference),
+        "source_parsed": str(args.parsed),
+        "provider": "gemma_vllm",
+        "model": used_model,
+        "generated_at": generation_completed_at.isoformat(timespec="seconds"),
+        "generation_started_at": generation_started_at.isoformat(timespec="seconds"),
+        "generation_completed_at": generation_completed_at.isoformat(timespec="seconds"),
+        "elapsed_seconds": round(elapsed, 3),
+        "elapsed": format_elapsed(elapsed),
+        "generation_mode": "single_request" if args.single_request else "parsed_chunks",
+        "parsed_chunk_count": parsed_chunk_count,
+        "parsed_chunk_chars": None if args.single_request else args.parsed_chunk_chars,
+        "chapter_sort": "page_then_parsed_source_order",
+        "matched_layout_entries": matched_layout_entries,
+        "unmatched_layout_entries": len(toc.get("chapters", [])) - matched_layout_entries,
+        "layout_metadata_fields": ["source_order", "s", "r", "x", "y", "b", "i", "f", "source_text"],
+        "output_directory": str(run_output_dir),
+    }
     output.write_text(json.dumps(toc, ensure_ascii=False, indent=4) + "\n", encoding="utf-8")
-
-    raw_path = timestamped_output(args.raw_output, RAW_OUTPUT_DIR, args.parsed.stem, "gemma_raw", timestamp, suffix=".json")
     raw_path.write_text(json.dumps(raw_records, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
+    print(f"Input directory: {args.input_dir}", flush=True)
+    print(f"Output directory: {run_output_dir}", flush=True)
     print(f"Layout levels: {layout_output}", flush=True)
     print(f'Unmatched reference titles: {len(layout_json["unmatched_reference_titles"])}', flush=True)
     print(f"Created: {output}", flush=True)
