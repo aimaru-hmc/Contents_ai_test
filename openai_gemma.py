@@ -28,7 +28,7 @@ DEFAULT_MODEL = "gemma4:31b"
 DEFAULT_FALLBACK_MODELS = DEFAULT_MODEL
 DEFAULT_AI_RETRIES = 5
 DEFAULT_RETRY_BASE_DELAY = 2.0
-DEFAULT_MAX_OUTPUT_TOKENS = 32768
+DEFAULT_MAX_OUTPUT_TOKENS = 8192
 DEFAULT_TEMPERATURE = 0.0
 DEFAULT_BASE_URL = "http://127.0.0.1:8000/v1"
 DEFAULT_API_KEY = "EMPTY"
@@ -397,7 +397,13 @@ def call_gemma_openai_compatible(
             response_text = response.read().decode("utf-8", errors="replace")
     except urllib.error.HTTPError as error:
         error_body = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"Gemma request failed: HTTP {error.code} {error.reason}. URL={url}. Body: {error_body[:1000]}") from error
+        hint = ""
+        if "maximum context length" in error_body.lower() or "max context" in error_body.lower():
+            hint = " Hint: reduce --max-output-tokens, for example --max-output-tokens 8192 or 4096."
+        raise RuntimeError(
+            f"Gemma request failed: HTTP {error.code} {error.reason}. URL={url}. "
+            f"Body: {error_body[:1000]}{hint}"
+        ) from error
     except urllib.error.URLError as error:
         raise RuntimeError(f"Gemma server is not reachable at {url}: {error}") from error
 
