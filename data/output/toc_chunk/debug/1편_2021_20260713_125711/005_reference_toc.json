@@ -1,0 +1,94 @@
+{
+  "title": "1편(2021)",
+  "chapters": [
+    {
+      "level": 1,
+      "chapter": "제1장 건강과 질병의 정의 및 결정요인",
+      "page": 1,
+      "level_reason": "Font size 12.0, numbering \"제1장\", first occurrence on page 1."
+    },
+    {
+      "level": 1,
+      "chapter": "제2장 예방의학과 공중보건학의 개념과 활용",
+      "page": 1,
+      "level_reason": "Font size 12.0, numbering \"제2장\", same page as chapter 1."
+    },
+    {
+      "level": 1,
+      "chapter": "제3장 예방의학과 공중보건학의 발전과 미래",
+      "page": 1,
+      "level_reason": "Font size 12.0, numbering \"제3장\", same page as previous chapters."
+    },
+    {
+      "level": 2,
+      "chapter": "1.1 건강 개념의 변천",
+      "page": 3,
+      "level_reason": "Font size 12.5, explicit numbering \"1.1\", larger than chapter titles."
+    },
+    {
+      "level": 3,
+      "chapter": "1) 신체(身體)개념의 건강",
+      "page": 3,
+      "level_reason": "Font size 12.0, numbering \"1)\", positioned under 1.1 on page 3."
+    },
+    {
+      "level": 3,
+      "chapter": "2) 심신(心身)개념의 건강",
+      "page": 4,
+      "level_reason": "Font size 12.0, numbering \"2)\", follows previous item under 1.1."
+    },
+    {
+      "level": 3,
+      "chapter": "3) 생활개념의 건강",
+      "page": 4,
+      "level_reason": "Font size 12.0, numbering \"3)\", same hierarchy as previous items."
+    },
+    {
+      "level": 3,
+      "chapter": "4) 생활수단 개념의 건강",
+      "page": 4,
+      "level_reason": "Font size 12.0, numbering \"4)\", continues sub‑list under 1.1."
+    },
+    {
+      "level": 3,
+      "chapter": "5) 기타 건강에 대한 정의들",
+      "page": 5,
+      "level_reason": "Font size 12.0, numbering \"5)\", final item of sub‑list under 1.1."
+    },
+    {
+      "level": 2,
+      "chapter": "1.2 질병상태의 개념과 분류",
+      "page": 6,
+      "level_reason": "Font size 12.5, explicit numbering \"1.2\", indicates new section."
+    },
+    {
+      "level": 3,
+      "chapter": "1) 질병상태의 분류와 질병 이름",
+      "page": 6,
+      "level_reason": "Font size 12.0, numbering \"1)\", sub‑heading of 1.2."
+    },
+    {
+      "level": 3,
+      "chapter": "2) 역학적 분류기준",
+      "page": 7,
+      "level_reason": "Font size 12.0, numbering \"2)\", follows previous sub‑heading under 1.2."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-07-13T12:57:11",
+    "run_timestamp": "20260713_125711",
+    "source_pdf": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/부교재1/1권-한글/1편(2021).pdf",
+    "chunk_path": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/toc_chunk/generated_input/1편_2021_20260713_125704/chunk_1_pages_1-9.json",
+    "parsed_path": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/toc_chunk/generated_input/1편_2021_20260713_125704/1편_2021_parsed_pdf.txt",
+    "chunk_index": 1,
+    "total_chunks": 7,
+    "chunk_start_page": 1,
+    "chunk_end_page": 9,
+    "chunk_input_chars": 26780,
+    "reference_model": "gpt-oss-120b",
+    "timing": {
+      "reference_generation_seconds": 24.162,
+      "total_elapsed_seconds": 24.164
+    }
+  }
+}

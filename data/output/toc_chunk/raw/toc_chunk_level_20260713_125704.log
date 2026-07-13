@@ -1,0 +1,15 @@
+Simple log: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/toc_chunk/raw/toc_chunk_level_20260713_125704.log
+Checking existing server: http://127.0.0.1:31892/v1
+Server ready: http://127.0.0.1:31892/v1
+PDF inputs: 1
+
+[1/1] PDF: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/부교재1/1권-한글/1편(2021).pdf
+Prepared parsed input: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/toc_chunk/generated_input/1편_2021_20260713_125704/1편_2021_parsed_pdf.txt
+Prepared chunk input: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/toc_chunk/generated_input/1편_2021_20260713_125704/chunk_1_pages_1-9.json
+  Chunk reference generation started: gpt-oss-120b
+  Chunk reference generation completed: gpt-oss-120b
+Reference TOC: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/toc_chunk/reference/1편_2021_reference_gpt-oss-120b_20260713_125711.json
+Reference raw response: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/toc_chunk/raw/1편_2021_reference_gpt-oss-120b_raw_20260713_125711.txt
+Reference model: gpt-oss-120b
+Debug dir: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/toc_chunk/debug/1편_2021_20260713_125711
+Reference TOC entries: 12
