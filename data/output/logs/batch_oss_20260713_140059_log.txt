@@ -1,0 +1,9 @@
+Processing started: data/input/부교재1/1권-한글/1편(2021).pdf
+  PDF layout extraction started...
+  PDF layout extraction completed: 335,730 bytes / used chars 200,049
+  OSS TOC generation started: gpt-oss-120b
+OSS model failed: gpt-oss-120b / OSS request failed: HTTP 400 Bad Request. URL=http://127.0.0.1:31892/v1/chat/completions. Body: {"error":{"message":"max_tokens must be at least 1, got -71016.","type":"BadRequestError","param":null,"code":400}}
+Failed: data/input/부교재1/1권-한글/1편(2021).pdf / OSS request failed: HTTP 400 Bad Request. URL=http://127.0.0.1:31892/v1/chat/completions. Body: {"error":{"message":"max_tokens must be at least 1, got -71016.","type":"BadRequestError","param":null,"code":400}}
+  elapsed: 7.6s (7.609s)
+  Error log saved: data/output/error_logs/1편_2021_oss_20260713_140107_error.json
+Processing result: success 0 / failed 1

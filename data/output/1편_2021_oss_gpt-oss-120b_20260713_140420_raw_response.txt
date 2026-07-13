@@ -1,0 +1,119 @@
+{
+  "title": "1편(2021)",
+  "chapters": [
+    {
+      "level": 1,
+      "chapter": "제1장 건강과 질병의 정의 및 결정요인",
+      "page": 1,
+      "level_reason": "S=12.00, numeric prefix \"제1장\", distinct chapter heading."
+    },
+    {
+      "level": 1,
+      "chapter": "제2장 예방의학과 공중보건학의 개념과 활용",
+      "page": 1,
+      "level_reason": "S=12.00, numeric prefix \"제2장\", same style as other chapter headings."
+    },
+    {
+      "level": 1,
+      "chapter": "제3장 예방의학과 공중보건학의 발전과 미래",
+      "page": 1,
+      "level_reason": "S=12.00, numeric prefix \"제3장\", consistent chapter formatting."
+    },
+    {
+      "level": 2,
+      "chapter": "건강과 질병의 정의 및 결정요인",
+      "page": 3,
+      "level_reason": "S=30.96, large font size, high R ratio, serves as section title under Chapter 1."
+    },
+    {
+      "level": 3,
+      "chapter": "1. 건강상태와 질병상태의 개념",
+      "page": 3,
+      "level_reason": "S=18.00, numeric \"1.\" prefix, clear subsection marker."
+    },
+    {
+      "level": 4,
+      "chapter": "1.1 건강 개념의 변천",
+      "page": 3,
+      "level_reason": "S=12.48, hierarchical numeric \"1.1\", indicates deeper sub‑section."
+    },
+    {
+      "level": 4,
+      "chapter": "1) 신체(身體)개념의 건강",
+      "page": 3,
+      "level_reason": "S=12.00, parenthesized numeric list style, same level as other itemized subsections."
+    },
+    {
+      "level": 4,
+      "chapter": "2) 심신(心身)개념의 건강",
+      "page": 4,
+      "level_reason": "S=12.00, continuation of itemized list, same visual style."
+    },
+    {
+      "level": 4,
+      "chapter": "3) 생활개념의 건강",
+      "page": 4,
+      "level_reason": "S=12.00, itemized list entry, consistent formatting."
+    },
+    {
+      "level": 4,
+      "chapter": "4) 생활수단 개념의 건강",
+      "page": 4,
+      "level_reason": "S=12.00, itemized list entry, same visual cues."
+    },
+    {
+      "level": 4,
+      "chapter": "5) 기타 건강에 대한 정의들",
+      "page": 5,
+      "level_reason": "S=12.00, itemized list entry, follows same pattern."
+    },
+    {
+      "level": 2,
+      "chapter": "1.2 질병상태의 개념과 분류",
+      "page": 6,
+      "level_reason": "S=12.48, numeric \"1.2\" prefix, indicates new major subsection under Chapter 1."
+    },
+    {
+      "level": 2,
+      "chapter": "2. 건강과 질병의 결정요인 및 건강모형",
+      "page": 10,
+      "level_reason": "S=18.00, numeric \"2.\" prefix, serves as main section heading (likely under Chapter 2)."
+    },
+    {
+      "level": 3,
+      "chapter": "2.1 결정요인의 개념 및 인과성과 인과론",
+      "page": 10,
+      "level_reason": "S=12.48, hierarchical numeric \"2.1\", sub‑section of section 2."
+    },
+    {
+      "level": 3,
+      "chapter": "2.2 건강-질병현상의 결정요인",
+      "page": 12,
+      "level_reason": "S=12.48, numeric \"2.2\", continuation of section 2 hierarchy."
+    },
+    {
+      "level": 3,
+      "chapter": "2.3 건강모형",
+      "page": 14,
+      "level_reason": "S=12.48, numeric \"2.3\", introduces health model subsection."
+    },
+    {
+      "level": 4,
+      "chapter": "1) 생의학적 모형",
+      "page": 14,
+      "level_reason": "S=12.00, itemized list under 2.3, same visual style as other list items."
+    },
+    {
+      "level": 4,
+      "chapter": "2) 역학적 모형",
+      "page": 15,
+      "level_reason": "S=12.00, itemized list entry under 2.3, consistent formatting."
+    },
+    {
+      "level": 4,
+      "chapter": "4) 웰니스 모형",
+      "page": 17,
+      "level_reason": "S=12.00, itemized list entry under 2.3, same visual cues."
+    }
+  ]
+}

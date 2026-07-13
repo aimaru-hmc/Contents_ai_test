@@ -1,0 +1,10 @@
+{
+    "timestamp": "2026-07-13T14:02:34+0900",
+    "source_pdf": "data/input/부교재1/1권-한글/1편(2021).pdf",
+    "provider": "oss",
+    "base_url": "http://127.0.0.1:31892/v1",
+    "elapsed_seconds": 26.355674078222364,
+    "error_type": "JSONDecodeError",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "traceback": "Traceback (most recent call last):\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_oss.py\", line 598, in process_pdf\n    toc, raw_text, used_model, layout_text = generate_toc_from_pdf_oss(pdf_path=pdf_path, args=args, user_prompt=user_prompt)\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_oss.py\", line 480, in generate_toc_from_pdf_oss\n    raise last_error\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_oss.py\", line 469, in generate_toc_from_pdf_oss\n    parsed = parse_json_response_text(raw_text)\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_oss.py\", line 324, in parse_json_response_text\n    raise last_error\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_oss.py\", line 316, in parse_json_response_text\n    data = json.loads(candidate)\n  File \"/home/medlearnx/miniconda3/envs/test/lib/python3.10/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n  File \"/home/medlearnx/miniconda3/envs/test/lib/python3.10/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n  File \"/home/medlearnx/miniconda3/envs/test/lib/python3.10/json/decoder.py\", line 355, in raw_decode\n    raise JSONDecodeError(\"Expecting value\", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n"
+}

@@ -1,0 +1,13 @@
+Processing started: data/input/부교재1/1권-한글/1편(2021).pdf
+  PDF layout extraction started...
+  PDF layout extraction completed: 335,730 bytes / used chars 70,050
+  OSS TOC generation started: gpt-oss-120b
+  OSS TOC generation completed: gpt-oss-120b
+Raw response saved: data/output/1편_2021_oss_gpt-oss-120b_20260713_140420_raw_response.txt
+Layout input saved: data/output/1편_2021_oss_gpt-oss-120b_20260713_140420_layout.txt
+Completed: data/output/1편_2021_oss_gpt-oss-120b_20260713_140420_toc.json
+  model: gpt-oss-120b
+  elapsed: 27.1s (27.085s)
+  title: 1편(2021)
+  chapters: 19
+Processing result: success 1 / failed 0

@@ -1,0 +1,22 @@
+Processing started: data/input/부교재1/1권-한글/1편(2021).pdf
+  PDF layout extraction started...
+  PDF layout extraction completed: 335,730 bytes / used chars 80,050
+  OSS TOC generation started: gpt-oss-120b
+  OSS TOC generation completed: gpt-oss-120b
+  Retrying OSS generation after JSON parse failure 2/5: gpt-oss-120b
+  OSS TOC generation started: gpt-oss-120b
+  OSS TOC generation completed: gpt-oss-120b
+  Retrying OSS generation after JSON parse failure 3/5: gpt-oss-120b
+  OSS TOC generation started: gpt-oss-120b
+  OSS TOC generation completed: gpt-oss-120b
+  Retrying OSS generation after JSON parse failure 4/5: gpt-oss-120b
+  OSS TOC generation started: gpt-oss-120b
+  OSS TOC generation completed: gpt-oss-120b
+  Retrying OSS generation after JSON parse failure 5/5: gpt-oss-120b
+  OSS TOC generation started: gpt-oss-120b
+  OSS TOC generation completed: gpt-oss-120b
+OSS model failed: gpt-oss-120b / Expecting value: line 1 column 1 (char 0)
+Failed: data/input/부교재1/1권-한글/1편(2021).pdf / Expecting value: line 1 column 1 (char 0)
+  elapsed: 25.5s (25.476s)
+  Error log saved: data/output/error_logs/1편_2021_oss_20260713_140325_error.json
+Processing result: success 0 / failed 1
