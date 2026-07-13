@@ -19,6 +19,8 @@ from typing import Any, Callable, Iterable
 ROOT = Path(__file__).resolve().parent
 INPUT_DIR = ROOT / "data/input/chunk1"
 OUTPUT_ROOT = ROOT / "data/output_chunk1"
+INPUT_CHUNKS_DIR = ROOT / "data/output/input_chunks"
+PARSED_PDFS_DIR = ROOT / "data/output/parsed_pdfs"
 
 DEFAULT_MODEL = "gemma4:31b"
 DEFAULT_FALLBACK_MODELS = DEFAULT_MODEL
@@ -945,17 +947,103 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def main() -> None:
-    args = parse_args()
-    args.input_dir = args.input_dir.resolve()
-    args.output_root = args.output_root.resolve()
-    args.chunk = (args.chunk or discover_input_file(args.input_dir, "chunk")).resolve()
+def reference_source_name(reference_path: Path) -> str:
+    reference = read_json(reference_path)
+    metadata = reference.get("_meta")
+    if isinstance(metadata, dict):
+        source_input = clean_text(metadata.get("chunk1_source_input"))
+        if source_input:
+            return Path(source_input).stem
+    return clean_text(reference.get("title")) or reference_path.stem
+
+
+def input_chunk_matches_source(path: Path, source_name: str) -> bool:
+    try:
+        chunk = read_json(path)
+    except (OSError, ValueError):
+        return False
+    source_pdf = clean_text(chunk.get("source_pdf"))
+    if not source_pdf:
+        return False
+    return normalized_document_name(Path(source_pdf).stem) == normalized_document_name(source_name)
+
+
+def find_input_chunk_for_reference(reference_path: Path) -> Path:
+    reference = read_json(reference_path)
+    metadata = reference.get("_meta")
+    source_name = reference_source_name(reference_path)
+
+    if isinstance(metadata, dict):
+        source_run = clean_text(metadata.get("chunk1_source_input_chunks_dir"))
+        if source_run:
+            local_run = INPUT_CHUNKS_DIR / Path(source_run).name
+            local_candidates = sorted(local_run.glob("chunk_1_pages_*.json"))
+            if local_candidates:
+                return max(local_candidates, key=lambda path: (path.stat().st_mtime_ns, path.name))
+
+    candidates = [
+        path
+        for path in INPUT_CHUNKS_DIR.glob("*/chunk_1_pages_*.json")
+        if input_chunk_matches_source(path, source_name)
+    ]
+    if not candidates:
+        raise FileNotFoundError(
+            f"No input chunk matching reference source {source_name!r} found under: {INPUT_CHUNKS_DIR}"
+        )
+    return max(candidates, key=lambda path: (path.stat().st_mtime_ns, path.name))
+
+
+def find_parsed_for_chunk(chunk_path: Path) -> Path:
+    exact = PARSED_PDFS_DIR / f"{chunk_path.parent.name}_parsed_pdf.txt"
+    if exact.is_file():
+        return exact
+
+    chunk = read_json(chunk_path)
+    source_pdf = clean_text(chunk.get("source_pdf"))
+    source_name = Path(source_pdf).stem if source_pdf else chunk_path.parent.name
+    candidates = [
+        path
+        for path in PARSED_PDFS_DIR.glob("*_parsed_pdf.txt")
+        if normalized_document_name(path.stem).startswith(normalized_document_name(source_name))
+    ]
+    if not candidates:
+        raise FileNotFoundError(f"No parsed PDF text matching chunk found under: {PARSED_PDFS_DIR}")
+    return max(candidates, key=lambda path: (path.stat().st_mtime_ns, path.name))
+
+
+def resolve_document_jobs(args: argparse.Namespace) -> list[tuple[Path, Path, Path]]:
+    if args.reference:
+        references = [args.reference.resolve()]
+    else:
+        references = sorted(
+            path.resolve()
+            for path in args.input_dir.glob("*_chunk1.json")
+            if path.is_file()
+        )
+    if not references:
+        raise FileNotFoundError(f"No *_chunk1.json reference files found in: {args.input_dir}")
+    if len(references) > 1 and (args.chunk or args.parsed):
+        raise ValueError("--chunk and --parsed can only be used with one explicit --reference.")
+
+    jobs: list[tuple[Path, Path, Path]] = []
+    for reference_path in references:
+        chunk_path = args.chunk.resolve() if args.chunk else find_input_chunk_for_reference(reference_path)
+        parsed_path = args.parsed.resolve() if args.parsed else find_parsed_for_chunk(chunk_path)
+        jobs.append((reference_path, chunk_path, parsed_path))
+    return jobs
+
+
+def process_document(
+    base_args: argparse.Namespace,
+    reference_path: Path,
+    chunk_path: Path,
+    parsed_path: Path,
+) -> None:
+    args = argparse.Namespace(**vars(base_args))
+    args.reference = reference_path
+    args.chunk = chunk_path
+    args.parsed = parsed_path
     chunk = read_json(args.chunk)
-    source_hint = clean_text(chunk.get("source_pdf")) or None
-    args.reference = (
-        args.reference or discover_input_file(args.input_dir, "reference", source_hint=source_hint)
-    ).resolve()
-    args.parsed = (args.parsed or discover_input_file(args.input_dir, "parsed")).resolve()
 
     reference = read_json(args.reference)
     if not isinstance(chunk.get("text"), str):
@@ -1070,6 +1158,19 @@ def main() -> None:
     print(f"Gemma model: {used_model}", flush=True)
     print(f"TOC entries: {len(toc.get('chapters', []))}", flush=True)
     print(f"Elapsed: {format_elapsed(elapsed)}", flush=True)
+
+
+def main() -> None:
+    args = parse_args()
+    args.input_dir = args.input_dir.resolve()
+    args.output_root = args.output_root.resolve()
+    jobs = resolve_document_jobs(args)
+    print(f"Documents: {len(jobs)}", flush=True)
+    for index, (reference_path, chunk_path, parsed_path) in enumerate(jobs, start=1):
+        print(f"\nDocument {index}/{len(jobs)}: {reference_path.name}", flush=True)
+        print(f"  Input chunk: {chunk_path}", flush=True)
+        print(f"  Parsed text: {parsed_path}", flush=True)
+        process_document(args, reference_path, chunk_path, parsed_path)
 
 
 if __name__ == "__main__":
