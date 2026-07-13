@@ -62,6 +62,7 @@ DEFAULT_REFERENCE_MODEL = "gpt-oss-120b"
 DEFAULT_REFERENCE_BASE_URL = DEFAULT_GEMMA_VLLM_SERVER_BASE_URL
 DEFAULT_REFERENCE_API_KEY = DEFAULT_GEMMA_VLLM_SERVER_API_KEY
 DEFAULT_REFERENCE_TIMEOUT = DEFAULT_GEMMA_VLLM_SERVER_TIMEOUT
+DEFAULT_REFERENCE_CHUNK_CHARS = 30000
 
 PAGE_OLD_RE = re.compile(r"^\[PAGE\s+(\d+)\]$")
 PAGE_NEW_RE = re.compile(r"^\[PAGE\s+P=(\d+)[^]]*\]$")
@@ -649,9 +650,12 @@ def call_openai_compatible_chat(
             response_text = response.read().decode("utf-8", errors="replace")
     except urllib.error.HTTPError as error:
         error_body = error.read().decode("utf-8", errors="replace")
+        hint = ""
+        if "max_tokens must be at least 1" in error_body or "maximum context" in error_body.lower():
+            hint = " Hint: 입력 chunk가 서버 context보다 큽니다. --chunk-chars 값을 더 줄이세요. 예: --chunk-chars 20000 --reference-max-output-tokens 4096."
         raise RuntimeError(
             f"OpenAI-compatible request failed: HTTP {error.code} {error.reason}. "
-            f"URL={url}. Body: {error_body[:1000]}"
+            f"URL={url}. Body: {error_body[:1000]}{hint}"
         ) from error
     except urllib.error.URLError as error:
         raise RuntimeError(f"OpenAI-compatible server is not reachable at {url}: {error}") from error
@@ -1127,7 +1131,7 @@ def main() -> None:
     parser.add_argument("--chunk", type=Path, help="이미 생성된 input chunk JSON. --parsed와 같이 쓰면 PDF 자동 입력 대신 이 파일 사용")
     parser.add_argument("--parsed", type=Path, help="이미 생성된 전체 parsed PDF layout text. --chunk와 같이 사용")
     parser.add_argument("--chunk-index", type=int, default=1, help="PDF 자동 입력에서 기준으로 사용할 청크 번호")
-    parser.add_argument("--chunk-chars", type=int, default=DEFAULT_GEMMA_TEXT_CHUNK_CHARS, help="PDF 자동 입력에서 청크 하나의 최대 문자 수")
+    parser.add_argument("--chunk-chars", type=int, default=DEFAULT_REFERENCE_CHUNK_CHARS, help="PDF 자동 입력에서 청크 하나의 최대 문자 수. 기본은 gpt-oss reference context에 맞춘 30000")
     parser.add_argument("--generated-input-output", type=Path, help="PDF에서 생성한 parsed/chunk 입력 파일 저장 폴더")
     parser.add_argument("--reference", type=Path, help="이미 생성된 chunk 기준 TOC JSON. 생략하면 gpt-oss-120b가 생성")
     parser.add_argument("--reference-output", type=Path, help="gpt-oss-120b 기준 TOC 저장 파일명 또는 저장 폴더")
