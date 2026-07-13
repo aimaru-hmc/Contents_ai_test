@@ -51,12 +51,12 @@ CHUNK = ROOT / "data/output/input_chunks/2_5-8_2021_gemma_20260708_153404/chunk_
 REFERENCE = ROOT / "data/output/2편5-8장_2021_openai_gpt-5.5_20260710_144043_toc_39.json"
 PARSED = ROOT / "data/output/parsed_pdfs/2_5-8_2021_gemma_20260708_153404_parsed_pdf.txt"
 INPUT_DIR = ROOT / "data/input"
-TOC_OUTPUT_DIR = ROOT / "data/output/toc_txt/toc"
-LAYOUT_OUTPUT_DIR = ROOT / "data/output/toc_txt/layout"
-RAW_OUTPUT_DIR = ROOT / "data/output/toc_txt/raw"
-REFERENCE_OUTPUT_DIR = ROOT / "data/output/toc_txt/reference"
-DEBUG_OUTPUT_DIR = ROOT / "data/output/toc_txt/debug"
-GENERATED_INPUT_DIR = ROOT / "data/output/toc_txt/generated_input"
+TOC_OUTPUT_DIR = ROOT / "data/output/toc_chunk/toc"
+LAYOUT_OUTPUT_DIR = ROOT / "data/output/toc_chunk/layout"
+RAW_OUTPUT_DIR = ROOT / "data/output/toc_chunk/raw"
+REFERENCE_OUTPUT_DIR = ROOT / "data/output/toc_chunk/reference"
+DEBUG_OUTPUT_DIR = ROOT / "data/output/toc_chunk/debug"
+GENERATED_INPUT_DIR = ROOT / "data/output/toc_chunk/generated_input"
 
 DEFAULT_REFERENCE_MODEL = "gpt-oss-120b"
 DEFAULT_REFERENCE_BASE_URL = DEFAULT_GEMMA_VLLM_SERVER_BASE_URL
@@ -1148,7 +1148,7 @@ def main() -> None:
     parser.add_argument("--parsed-max-chars", type=int, default=0, help="0이면 제한 없음")
     parser.add_argument("--dry-run-layout", action="store_true", help="layout rule만 생성/저장하고 Gemma 호출은 하지 않음")
     parser.add_argument("--test", action="store_true", help="gpt-oss-120b로 chunk 기준 TOC만 생성/저장하고 종료")
-    parser.add_argument("--debug-dir", type=Path, help="단계별 디버그 파일 저장 폴더. 기본은 data/output/toc_txt/debug/{run_id}")
+    parser.add_argument("--debug-dir", type=Path, help="단계별 디버그 파일 저장 폴더. 기본은 data/output/toc_chunk/debug/{run_id}")
     parser.add_argument("--no-debug", action="store_true", help="단계별 디버그 파일 저장을 끔")
     parser.add_argument("--server", action="store_true", help="OpenAI-compatible vLLM 서버만 띄우고 대기")
     parser.add_argument("--server-ver", action="store_true", help="이미 떠 있는 OpenAI-compatible 서버 준비 확인 후 나머지 작업 실행")
