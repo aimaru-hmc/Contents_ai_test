@@ -1,0 +1,34 @@
+Simple log: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/toc_chunk/raw/toc_chunk_level_20260713_132045.log
+Checking existing server: http://127.0.0.1:31892/v1
+Server ready: http://127.0.0.1:31892/v1
+PDF inputs: 1
+
+[1/1] PDF: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/부교재1/1권-한글/1편(2021).pdf
+Prepared parsed input: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/toc_chunk/generated_input/1편_2021_20260713_132045/1편_2021_parsed_pdf.txt
+Prepared chunk input: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/toc_chunk/generated_input/1편_2021_20260713_132045/chunk_1_pages_1-24.json
+  Chunk reference generation started: gpt-oss-120b
+  Chunk reference generation completed: gpt-oss-120b
+  Retrying chunk reference generation after JSON parse failure 2/5: gpt-oss-120b
+  Chunk reference generation started: gpt-oss-120b
+  Chunk reference generation completed: gpt-oss-120b
+  Retrying chunk reference generation after JSON parse failure 3/5: gpt-oss-120b
+  Chunk reference generation started: gpt-oss-120b
+  Chunk reference generation completed: gpt-oss-120b
+  Retrying chunk reference generation after JSON parse failure 4/5: gpt-oss-120b
+  Chunk reference generation started: gpt-oss-120b
+  Chunk reference generation completed: gpt-oss-120b
+  Retrying chunk reference generation after JSON parse failure 5/5: gpt-oss-120b
+  Chunk reference generation started: gpt-oss-120b
+  Chunk reference generation completed: gpt-oss-120b
+Traceback (most recent call last):
+  File "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/toc_chunk_level.py", line 1236, in <module>
+    main()
+  File "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/toc_chunk_level.py", line 1221, in main
+    process_prepared_input(
+  File "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/toc_chunk_level.py", line 960, in process_prepared_input
+    reference, reference_raw_text, reference_model = generate_reference_with_gpt_oss(
+  File "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/toc_chunk_level.py", line 724, in generate_reference_with_gpt_oss
+    parsed = parse_json_response_text(raw_text, provider=model)
+  File "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma.py", line 854, in parse_json_response_text
+    raise ValueError(f"{provider} response is empty.")
+ValueError: gpt-oss-120b response is empty.

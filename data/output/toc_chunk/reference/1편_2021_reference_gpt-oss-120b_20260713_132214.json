@@ -1,0 +1,106 @@
+{
+    "title": "1편(2021)",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "건강과 질병",
+            "page": 1,
+            "level_reason": "Largest font size (45) indicates main title"
+        },
+        {
+            "level": 2,
+            "chapter": "제1장 건강과 질병의 정의 및 결정요인",
+            "page": 1,
+            "level_reason": "Chapter numbering with font size 12 (standard chapter heading)"
+        },
+        {
+            "level": 2,
+            "chapter": "제2장 예방의학과 공중보건학의 개념과 활용",
+            "page": 1,
+            "level_reason": "Chapter numbering with same style as other chapters (size 12)"
+        },
+        {
+            "level": 2,
+            "chapter": "제3장 예방의학과 공중보건학의 발전과 미래",
+            "page": 1,
+            "level_reason": "Chapter numbering with same style as other chapters (size 12)"
+        },
+        {
+            "level": 2,
+            "chapter": "건강과 질병의 정의 및 결정요인",
+            "page": 3,
+            "level_reason": "Section heading larger than subsections (size 31) but smaller than main title"
+        },
+        {
+            "level": 3,
+            "chapter": "1. 건강상태와 질병상태의 개념",
+            "page": 3,
+            "level_reason": "Numbered subsection with medium font size (18) indicating a lower hierarchy"
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 건강 개념의 변천",
+            "page": 3,
+            "level_reason": "Sub‑subsection with smaller font (12.5) and decimal numbering"
+        },
+        {
+            "level": 4,
+            "chapter": "1) 신체(身體)개념의 건강",
+            "page": 3,
+            "level_reason": "Bullet‑style sub‑subsection (size 12) under 1.1"
+        },
+        {
+            "level": 4,
+            "chapter": "2) 심신(心身)개념의 건강",
+            "page": 4,
+            "level_reason": "Bullet‑style sub‑subsection (size 12) following 1) within same section"
+        },
+        {
+            "level": 4,
+            "chapter": "3) 생활개념의 건강",
+            "page": 4,
+            "level_reason": "Bullet‑style sub‑subsection (size 12) continuing the list"
+        },
+        {
+            "level": 4,
+            "chapter": "4) 생활수단 개념의 건강",
+            "page": 4,
+            "level_reason": "Bullet‑style sub‑subsection (size 12) concluding the list"
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 질병상태의 개념과 분류",
+            "page": 6,
+            "level_reason": "Numbered sub‑section (size 12.5) under Chapter 1"
+        },
+        {
+            "level": 3,
+            "chapter": "2. 건강과 질병의 결정요인 및 건강모형",
+            "page": 10,
+            "level_reason": "Section heading with medium font size (18) under Chapter 2"
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 결정요인의 개념 및 인과성 및 인과론",
+            "page": 10,
+            "level_reason": "Sub‑section (size 12.5) under 2."
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-13T13:22:14",
+        "run_timestamp": "20260713_132214",
+        "source_pdf": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/부교재1/1권-한글/1편(2021).pdf",
+        "chunk_path": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/toc_chunk/generated_input/1편_2021_20260713_132206/chunk_1_pages_1-15.json",
+        "parsed_path": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/toc_chunk/generated_input/1편_2021_20260713_132206/1편_2021_parsed_pdf.txt",
+        "chunk_index": 1,
+        "total_chunks": 4,
+        "chunk_start_page": 1,
+        "chunk_end_page": 15,
+        "chunk_input_chars": 48597,
+        "reference_model": "gpt-oss-120b",
+        "timing": {
+            "reference_generation_seconds": 24.045,
+            "total_elapsed_seconds": 24.046
+        }
+    }
+}

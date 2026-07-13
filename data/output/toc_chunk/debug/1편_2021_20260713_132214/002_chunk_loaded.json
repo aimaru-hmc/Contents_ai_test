@@ -1,0 +1,19 @@
+{
+  "chunk_path": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/toc_chunk/generated_input/1편_2021_20260713_132206/chunk_1_pages_1-15.json",
+  "text_chars": 48597,
+  "text_bytes_utf8": 80177,
+  "keys": [
+    "chunk",
+    "end_page",
+    "input_chars",
+    "source_pdf",
+    "stage",
+    "start_page",
+    "text",
+    "timestamp",
+    "total_chunks"
+  ],
+  "start_page": 1,
+  "end_page": 15,
+  "chunk_id": null
+}
