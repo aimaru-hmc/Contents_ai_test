@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import argparse
-import atexit
 import json
 import math
 import re
@@ -448,15 +447,20 @@ def build_server_command(args: argparse.Namespace) -> list[str]:
     return cmd
 
 
-def start_openai_server(args: argparse.Namespace) -> tuple[subprocess.Popen[Any], Path]:
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_path = Path(args.server_log) if getattr(args, "server_log", None) else RAW_OUTPUT_DIR / f"server_{safe_file_part(args.reference_model)}_{timestamp}.log"
-    log_path.parent.mkdir(parents=True, exist_ok=True)
-    log_file = log_path.open("a", encoding="utf-8")
+def start_openai_server(args: argparse.Namespace) -> tuple[subprocess.Popen[Any], Path | None]:
+    log_path = Path(args.server_log) if getattr(args, "server_log", None) else None
+    if log_path is not None:
+        log_path.parent.mkdir(parents=True, exist_ok=True)
+        stdout_target: Any = log_path.open("a", encoding="utf-8")
+        stderr_target: Any = subprocess.STDOUT
+    else:
+        stdout_target = None
+        stderr_target = None
     cmd = build_server_command(args)
     print("Server command:", " ".join(shlex.quote(part) for part in cmd), flush=True)
-    print(f"Server log: {log_path}", flush=True)
-    proc = subprocess.Popen(cmd, stdout=log_file, stderr=subprocess.STDOUT, text=True)
+    if log_path is not None:
+        print(f"Server log: {log_path}", flush=True)
+    proc = subprocess.Popen(cmd, stdout=stdout_target, stderr=stderr_target, text=True)
     return proc, log_path
 
 
@@ -475,11 +479,13 @@ def stop_server_process(proc: subprocess.Popen[Any] | None) -> None:
 def run_server_only(args: argparse.Namespace) -> None:
     proc, log_path = start_openai_server(args)
     print(f"Server PID: {proc.pid}", flush=True)
-    print(f"Server log: {log_path}", flush=True)
     if wait_for_openai_server(args.reference_base_url, args.server_wait_timeout):
         print(f"Server ready: {args.reference_base_url}", flush=True)
     else:
-        print(f"Server did not become ready within {args.server_wait_timeout}s. Check log: {log_path}", flush=True)
+        message = f"Server did not become ready within {args.server_wait_timeout}s."
+        if log_path is not None:
+            message += f" Check log: {log_path}"
+        print(message, flush=True)
     try:
         proc.wait()
     except KeyboardInterrupt:
@@ -519,6 +525,43 @@ def chunk_debug_payload(chunk: dict[str, Any], chunk_text: str, chunk_path: Path
         "end_page": chunk.get("end_page"),
         "chunk_id": chunk.get("chunk_id") or chunk.get("id") or chunk.get("label"),
     }
+
+
+def elapsed_seconds(start: float) -> float:
+    return round(time.perf_counter() - start, 3)
+
+
+def chunk_metadata(
+    *,
+    chunk: dict[str, Any],
+    chunk_path: Path,
+    parsed_path: Path,
+    source_pdf: Path | None,
+) -> dict[str, Any]:
+    return {
+        "source_pdf": str(source_pdf) if source_pdf else None,
+        "chunk_path": str(chunk_path),
+        "parsed_path": str(parsed_path),
+        "chunk_index": chunk.get("chunk") or chunk.get("index") or chunk.get("chunk_index"),
+        "total_chunks": chunk.get("total_chunks") or chunk.get("chunk_count"),
+        "chunk_start_page": chunk.get("start_page"),
+        "chunk_end_page": chunk.get("end_page"),
+        "chunk_input_chars": chunk.get("input_chars"),
+    }
+
+
+def add_json_metadata(document: dict[str, Any], metadata: dict[str, Any]) -> dict[str, Any]:
+    existing = document.get("metadata")
+    merged = dict(existing) if isinstance(existing, dict) else {}
+    for key, value in metadata.items():
+        if isinstance(value, dict) and isinstance(merged.get(key), dict):
+            nested = dict(merged[key])
+            nested.update(value)
+            merged[key] = nested
+        else:
+            merged[key] = value
+    document["metadata"] = merged
+    return document
 
 
 def compact_rules_for_prompt(learned: dict[str, Any]) -> dict[str, Any]:
@@ -892,9 +935,16 @@ def process_prepared_input(
     default_stem: str,
     source_pdf: Path | None = None,
 ) -> None:
+    process_started = time.perf_counter()
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    created_at = datetime.now().isoformat(timespec="seconds")
     title = clean(args.title) or (source_pdf.stem if source_pdf else default_stem)
     debug_dir = make_debug_dir(args, default_stem, timestamp)
+    base_metadata = {
+        "created_at": created_at,
+        "run_timestamp": timestamp,
+        **chunk_metadata(chunk=chunk, chunk_path=chunk_path, parsed_path=parsed_path, source_pdf=source_pdf),
+    }
     write_debug_file(debug_dir, "001_run_config", {"timestamp": timestamp, "source_pdf": str(source_pdf) if source_pdf else None, "args": args_debug_snapshot(args)})
     write_debug_file(debug_dir, "002_chunk_loaded", chunk_debug_payload(chunk, chunk_text, chunk_path))
     write_debug_file(debug_dir, "003_chunk_text", chunk_text, suffix=".txt")
@@ -902,10 +952,23 @@ def process_prepared_input(
 
     if args.test:
         write_debug_file(debug_dir, "004_reference_prompt", build_chunk_reference_prompt(chunk_text, title, args.max_depth), suffix=".txt")
+        reference_started = time.perf_counter()
         reference, reference_raw_text, reference_model = generate_reference_with_gpt_oss(
             chunk_text=chunk_text,
             args=args,
             title=title,
+        )
+        reference_seconds = elapsed_seconds(reference_started)
+        add_json_metadata(
+            reference,
+            {
+                **base_metadata,
+                "reference_model": reference_model,
+                "timing": {
+                    "reference_generation_seconds": reference_seconds,
+                    "total_elapsed_seconds": elapsed_seconds(process_started),
+                },
+            },
         )
         reference_path = timestamped_output(
             args.reference_output,
@@ -926,6 +989,7 @@ def process_prepared_input(
         reference_raw_output.write_text(reference_raw_text, encoding="utf-8")
         write_debug_file(debug_dir, "005_reference_toc", reference)
         write_debug_file(debug_dir, "006_reference_raw", reference_raw_text, suffix=".txt")
+        write_debug_file(debug_dir, "007_timing", reference.get("metadata", {}).get("timing", {}))
         print(f"Reference TOC: {reference_path}")
         print(f"Reference raw response: {reference_raw_output}")
         print(f"Reference model: {reference_model}")
@@ -941,10 +1005,23 @@ def process_prepared_input(
         write_debug_file(debug_dir, "004_reference_loaded", {"reference_path": str(reference_path), "reference": reference})
     else:
         write_debug_file(debug_dir, "004_reference_prompt", build_chunk_reference_prompt(chunk_text, title, args.max_depth), suffix=".txt")
+        reference_started = time.perf_counter()
         reference, reference_raw_text, reference_model = generate_reference_with_gpt_oss(
             chunk_text=chunk_text,
             args=args,
             title=title,
+        )
+        reference_seconds = elapsed_seconds(reference_started)
+        add_json_metadata(
+            reference,
+            {
+                **base_metadata,
+                "reference_model": reference_model,
+                "timing": {
+                    "reference_generation_seconds": reference_seconds,
+                    "total_elapsed_seconds": elapsed_seconds(process_started),
+                },
+            },
         )
         reference_path = timestamped_output(
             args.reference_output,
@@ -968,7 +1045,9 @@ def process_prepared_input(
         print(f"Reference TOC: {reference_path}")
         print(f"Reference raw response: {reference_raw_output}")
 
+    layout_started = time.perf_counter()
     learned = learn_layout_levels(reference, parse_layout(chunk_text), reference_path, chunk_path)
+    layout_seconds = elapsed_seconds(layout_started)
     layout_output = timestamped_output(
         args.layout_level_output,
         LAYOUT_OUTPUT_DIR,
@@ -999,7 +1078,25 @@ def process_prepared_input(
         user_prompt=prompt_file_text(args),
     )
     write_debug_file(debug_dir, "010_gemma_prompt", prompt, suffix=".txt")
+    gemma_started = time.perf_counter()
     toc, raw_text, used_model = generate_toc_with_gemma(prompt, args, fallback_title=title)
+    gemma_seconds = elapsed_seconds(gemma_started)
+    reference_timing = reference.get("metadata", {}).get("timing", {}) if isinstance(reference.get("metadata"), dict) else {}
+    add_json_metadata(
+        toc,
+        {
+            **base_metadata,
+            "reference_path": str(reference_path),
+            "layout_rule_path": str(layout_output),
+            "model": used_model,
+            "timing": {
+                "reference_generation_seconds": reference_timing.get("reference_generation_seconds"),
+                "layout_rule_seconds": layout_seconds,
+                "gemma_generation_seconds": gemma_seconds,
+                "total_elapsed_seconds": elapsed_seconds(process_started),
+            },
+        },
+    )
 
     output = timestamped_output(args.output, TOC_OUTPUT_DIR, default_stem, "toc", timestamp)
     output.write_text(json.dumps(toc, ensure_ascii=False, indent=4) + "\n", encoding="utf-8")
@@ -1009,6 +1106,7 @@ def process_prepared_input(
     write_debug_file(debug_dir, "011_final_toc", toc)
     write_debug_file(debug_dir, "012_gemma_raw", raw_text, suffix=".txt")
     write_debug_file(debug_dir, "013_outputs", {"layout_output": str(layout_output), "toc_output": str(output), "raw_output": str(raw_output), "model": used_model})
+    write_debug_file(debug_dir, "014_timing", toc.get("metadata", {}).get("timing", {}))
 
     print(f"Layout levels: {layout_output}")
     print(f"Unmatched reference titles: {len(learned['unmatched_reference_titles'])}")
@@ -1053,12 +1151,12 @@ def main() -> None:
     parser.add_argument("--debug-dir", type=Path, help="단계별 디버그 파일 저장 폴더. 기본은 data/output/toc_txt/debug/{run_id}")
     parser.add_argument("--no-debug", action="store_true", help="단계별 디버그 파일 저장을 끔")
     parser.add_argument("--server", action="store_true", help="OpenAI-compatible vLLM 서버만 띄우고 대기")
-    parser.add_argument("--server_ver", action="store_true", help="이미 떠 있는 OpenAI-compatible 서버 준비 확인 후 나머지 작업 실행")
+    parser.add_argument("--server-ver", action="store_true", help="이미 떠 있는 OpenAI-compatible 서버 준비 확인 후 나머지 작업 실행")
     parser.add_argument("--server-command", help="서버 실행 명령 직접 지정. 예: vllm serve gpt-oss-120b --host 0.0.0.0 --port 8000")
     parser.add_argument("--server-extra-args", default="", help="기본 vllm serve 명령 뒤에 붙일 추가 인자")
     parser.add_argument("--server-log", type=Path, help="서버 stdout/stderr 로그 파일")
     parser.add_argument("--server-wait-timeout", type=int, default=600, help="--server_ver에서 기존 서버 준비 확인 대기 시간(초)")
-    parser.add_argument("--log_simple", action="store_true", help="콘솔 로그를 별도 simple log 파일에도 저장")
+    parser.add_argument("--log-simple", action="store_true", help="콘솔 로그를 별도 simple log 파일에도 저장")
     parser.add_argument("--log-simple-file", type=Path, help="--log_simple 로그 파일 경로")
 
     parser.add_argument("--model", default=DEFAULT_GEMMA_HF_MODEL)
