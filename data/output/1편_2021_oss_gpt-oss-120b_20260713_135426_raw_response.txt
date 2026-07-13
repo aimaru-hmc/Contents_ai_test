@@ -1,0 +1,101 @@
+{
+  "title": "1편(2021)",
+  "chapters": [
+    {
+      "level": 1,
+      "chapter": "제1장 건강과 질병의 정의 및 결정요인",
+      "page": 1,
+      "level_reason": "Numbering '제1장' and consistent style with other top-level chapters."
+    },
+    {
+      "level": 1,
+      "chapter": "제2장 예방의학과 공중보건학의 개념과 활용",
+      "page": 1,
+      "level_reason": "Numbering '제2장' indicates top-level chapter."
+    },
+    {
+      "level": 1,
+      "chapter": "제3장 예방의학과 공중보건학의 발전과 미래",
+      "page": 1,
+      "level_reason": "Numbering '제3장' indicates top-level chapter."
+    },
+    {
+      "level": 2,
+      "chapter": "건강과 질병의 정의 및 결정요인",
+      "page": 3,
+      "level_reason": "Large font size S=30.96, distinct from chapter titles, signals a section heading."
+    },
+    {
+      "level": 3,
+      "chapter": "1. 건강상태와 질병상태의 개념",
+      "page": 3,
+      "level_reason": "Numbered '1.' with size S=18.00, typical sub‑section format."
+    },
+    {
+      "level": 4,
+      "chapter": "1.1 건강 개념의 변천",
+      "page": 3,
+      "level_reason": "Numbered '1.1' and smaller size S=12.48, indicates a sub‑subsection."
+    },
+    {
+      "level": 4,
+      "chapter": "2) 심신(心身)개념의 건강",
+      "page": 4,
+      "level_reason": "Numbered '2)' with size S=12.00, same hierarchy as other numbered items."
+    },
+    {
+      "level": 4,
+      "chapter": "3) 생활개념의 건강",
+      "page": 4,
+      "level_reason": "Numbered '3)' with size S=12.00, sub‑subsection level."
+    },
+    {
+      "level": 4,
+      "chapter": "4) 생활수단 개념의 건강",
+      "page": 4,
+      "level_reason": "Numbered '4)' with size S=12.00, sub‑subsection level."
+    },
+    {
+      "level": 4,
+      "chapter": "5) 기타 건강에 대한 정의들",
+      "page": 5,
+      "level_reason": "Numbered '5)' with size S=12.00, sub‑subsection level."
+    },
+    {
+      "level": 2,
+      "chapter": "1.2 질병상태의 개념과 분류",
+      "page": 6,
+      "level_reason": "Numbered '1.2' with size S=12.48, denotes a new sub‑section under Chapter 1."
+    },
+    {
+      "level": 4,
+      "chapter": "1) 질병상태의 분류와 질병 이름",
+      "page": 6,
+      "level_reason": "Numbered '1)' with size S=12.00, sub‑subsection under 1.2."
+    },
+    {
+      "level": 3,
+      "chapter": "2) 역학적 분류기준",
+      "page": 7,
+      "level_reason": "Numbered '2)' with size S=12.00, sub‑section under Chapter 1."
+    },
+    {
+      "level": 2,
+      "chapter": "1.3 건강 관련 삶의 질 개념",
+      "page": 7,
+      "level_reason": "Numbered '1.3' with size S=12.48, another sub‑section of Chapter 1."
+    },
+    {
+      "level": 2,
+      "chapter": "1.4 건강보호의 책임에 대한 개념 변화",
+      "page": 7,
+      "level_reason": "Numbered '1.4' with size S=12.48, sub‑section of Chapter 1."
+    },
+    {
+      "level": 2,
+      "chapter": "1.5 인권으로서의 건강권",
+      "page": 8,
+      "level_reason": "Numbered '1.5' with size S=12.48, sub‑section of Chapter 1."
+    }
+  ]
+}
