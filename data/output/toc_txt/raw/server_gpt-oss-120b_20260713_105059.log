@@ -1,0 +1,86 @@
+(APIServer pid=3104106) INFO 07-13 10:51:03 [api_utils.py:339] 
+(APIServer pid=3104106) INFO 07-13 10:51:03 [api_utils.py:339]        █     █     █▄   ▄█
+(APIServer pid=3104106) INFO 07-13 10:51:03 [api_utils.py:339]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.24.0
+(APIServer pid=3104106) INFO 07-13 10:51:03 [api_utils.py:339]   █▄█▀ █     █     █     █  model   gpt-oss-120b
+(APIServer pid=3104106) INFO 07-13 10:51:03 [api_utils.py:339]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=3104106) INFO 07-13 10:51:03 [api_utils.py:339] 
+(APIServer pid=3104106) INFO 07-13 10:51:03 [api_utils.py:273] non-default args: {'model_tag': 'gpt-oss-120b', 'host': '0.0.0.0', 'model': 'gpt-oss-120b'}
+(APIServer pid=3104106) Traceback (most recent call last):
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 776, in hf_raise_for_status
+(APIServer pid=3104106)     response.raise_for_status()
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/httpx/_models.py", line 829, in raise_for_status
+(APIServer pid=3104106)     raise HTTPStatusError(message, request=request, response=self)
+(APIServer pid=3104106) httpx.HTTPStatusError: Client error '401 Unauthorized' for url 'https://huggingface.co/gpt-oss-120b/resolve/main/config.json'
+(APIServer pid=3104106) For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+(APIServer pid=3104106) 
+(APIServer pid=3104106) The above exception was the direct cause of the following exception:
+(APIServer pid=3104106) 
+(APIServer pid=3104106) Traceback (most recent call last):
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/transformers/utils/hub.py", line 437, in cached_files
+(APIServer pid=3104106)     hf_hub_download(
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+(APIServer pid=3104106)     return fn(*args, **kwargs)
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1016, in hf_hub_download
+(APIServer pid=3104106)     return _hf_hub_download_to_cache_dir(
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1167, in _hf_hub_download_to_cache_dir
+(APIServer pid=3104106)     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1805, in _raise_on_head_call_error
+(APIServer pid=3104106)     raise head_call_error
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1691, in _get_metadata_or_catch_error
+(APIServer pid=3104106)     metadata = get_hf_file_metadata(
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+(APIServer pid=3104106)     return fn(*args, **kwargs)
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1613, in get_hf_file_metadata
+(APIServer pid=3104106)     response = _httpx_follow_relative_redirects_with_backoff(
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 707, in _httpx_follow_relative_redirects_with_backoff
+(APIServer pid=3104106)     hf_raise_for_status(response)
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 863, in hf_raise_for_status
+(APIServer pid=3104106)     raise _format(RepositoryNotFoundError, message, response, repo_type=repo_type, repo_id=repo_id) from e
+(APIServer pid=3104106) huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-6a544488-5217eb9f36553a831f979233;445a4557-9da9-44f0-a3a9-df54f6fa20f0)
+(APIServer pid=3104106) 
+(APIServer pid=3104106) Repository Not Found for url: https://huggingface.co/gpt-oss-120b/resolve/main/config.json.
+(APIServer pid=3104106) Please make sure you specified the correct `repo_id` and `repo_type`.
+(APIServer pid=3104106) If you are trying to access a private or gated repo, make sure you are authenticated and your token has the required permissions.
+(APIServer pid=3104106) For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+(APIServer pid=3104106) Invalid username or password.
+(APIServer pid=3104106) 
+(APIServer pid=3104106) The above exception was the direct cause of the following exception:
+(APIServer pid=3104106) 
+(APIServer pid=3104106) Traceback (most recent call last):
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/bin/vllm", line 6, in <module>
+(APIServer pid=3104106)     sys.exit(main())
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/vllm/entrypoints/cli/main.py", line 95, in main
+(APIServer pid=3104106)     args.dispatch_function(args)
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/vllm/entrypoints/cli/serve.py", line 148, in cmd
+(APIServer pid=3104106)     uvloop.run(run_server(args))
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/uvloop/__init__.py", line 69, in run
+(APIServer pid=3104106)     return loop.run_until_complete(wrapper())
+(APIServer pid=3104106)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/uvloop/__init__.py", line 48, in wrapper
+(APIServer pid=3104106)     return await main
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 663, in run_server
+(APIServer pid=3104106)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 677, in run_server_worker
+(APIServer pid=3104106)     async with build_async_engine_client(
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/contextlib.py", line 199, in __aenter__
+(APIServer pid=3104106)     return await anext(self.gen)
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 99, in build_async_engine_client
+(APIServer pid=3104106)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/contextlib.py", line 199, in __aenter__
+(APIServer pid=3104106)     return await anext(self.gen)
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/vllm/entrypoints/openai/api_server.py", line 123, in build_async_engine_client_from_engine_args
+(APIServer pid=3104106)     vllm_config = engine_args.create_engine_config(usage_context=usage_context)
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/vllm/engine/arg_utils.py", line 1807, in create_engine_config
+(APIServer pid=3104106)     maybe_override_with_speculators(
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/vllm/transformers_utils/config.py", line 624, in maybe_override_with_speculators
+(APIServer pid=3104106)     config_dict, _ = PretrainedConfig.get_config_dict(
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/transformers/configuration_utils.py", line 687, in get_config_dict
+(APIServer pid=3104106)     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/transformers/configuration_utils.py", line 742, in _get_config_dict
+(APIServer pid=3104106)     resolved_config_file = cached_file(
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/transformers/utils/hub.py", line 293, in cached_file
+(APIServer pid=3104106)     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+(APIServer pid=3104106)   File "/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/transformers/utils/hub.py", line 469, in cached_files
+(APIServer pid=3104106)     raise OSError(
+(APIServer pid=3104106) OSError: gpt-oss-120b is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+(APIServer pid=3104106) If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`
