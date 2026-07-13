@@ -1,9 +1,14 @@
 from __future__ import annotations
 
 import argparse
+import atexit
 import json
 import math
 import re
+import shlex
+import subprocess
+import sys
+import time
 import urllib.error
 import urllib.request
 import unicodedata
@@ -351,12 +356,143 @@ def make_debug_dir(args: argparse.Namespace, default_stem: str, timestamp: str) 
     return path
 
 
+def jsonable(value: Any) -> Any:
+    if isinstance(value, Path):
+        return str(value)
+    if isinstance(value, dict):
+        return {str(key): jsonable(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple, set)):
+        return [jsonable(item) for item in value]
+    if isinstance(value, (str, int, float, bool)) or value is None:
+        return value
+    return str(value)
+
+
+class TeeStream:
+    def __init__(self, *streams: Any):
+        self.streams = streams
+
+    def write(self, data: str) -> int:
+        for stream in self.streams:
+            stream.write(data)
+            stream.flush()
+        return len(data)
+
+    def flush(self) -> None:
+        for stream in self.streams:
+            stream.flush()
+
+
+def setup_simple_log(args: argparse.Namespace, timestamp: str) -> Path | None:
+    if not getattr(args, "log_simple", False):
+        return None
+    log_path = Path(args.log_simple_file) if getattr(args, "log_simple_file", None) else RAW_OUTPUT_DIR / f"toc_chunk_level_{timestamp}.log"
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    log_file = log_path.open("a", encoding="utf-8")
+    sys.stdout = TeeStream(sys.stdout, log_file)
+    sys.stderr = TeeStream(sys.stderr, log_file)
+    print(f"Simple log: {log_path}", flush=True)
+    return log_path
+
+
+def parse_host_port_from_base_url(base_url: str) -> tuple[str, int]:
+    match = re.search(r"^https?://([^/:]+)(?::(\d+))?", clean(base_url))
+    if not match:
+        return "127.0.0.1", 8000
+    host = match.group(1)
+    port = int(match.group(2) or 8000)
+    if host in {"0.0.0.0", "localhost"}:
+        host = "127.0.0.1"
+    return host, port
+
+
+def server_models_url(base_url: str) -> str:
+    url = clean(base_url).rstrip("/")
+    if url.endswith("/chat/completions"):
+        url = url.rsplit("/chat/completions", 1)[0]
+    if not url.endswith("/v1"):
+        url = f"{url}/v1"
+    return f"{url}/models"
+
+
+def wait_for_openai_server(base_url: str, timeout: int) -> bool:
+    deadline = time.time() + max(1, int(timeout))
+    url = server_models_url(base_url)
+    while time.time() < deadline:
+        try:
+            request = urllib.request.Request(url, headers={"Accept": "application/json"}, method="GET")
+            with urllib.request.urlopen(request, timeout=5) as response:
+                if 200 <= int(getattr(response, "status", 200)) < 500:
+                    return True
+        except Exception:
+            time.sleep(2)
+    return False
+
+
+def build_server_command(args: argparse.Namespace) -> list[str]:
+    if clean(getattr(args, "server_command", "")):
+        return shlex.split(args.server_command)
+    host, port = parse_host_port_from_base_url(args.reference_base_url)
+    serve_host = "0.0.0.0" if host == "127.0.0.1" else host
+    cmd = [
+        "vllm",
+        "serve",
+        clean(args.reference_model) or DEFAULT_REFERENCE_MODEL,
+        "--host",
+        serve_host,
+        "--port",
+        str(port),
+    ]
+    if clean(getattr(args, "server_extra_args", "")):
+        cmd.extend(shlex.split(args.server_extra_args))
+    return cmd
+
+
+def start_openai_server(args: argparse.Namespace) -> tuple[subprocess.Popen[Any], Path]:
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_path = Path(args.server_log) if getattr(args, "server_log", None) else RAW_OUTPUT_DIR / f"server_{safe_file_part(args.reference_model)}_{timestamp}.log"
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    log_file = log_path.open("a", encoding="utf-8")
+    cmd = build_server_command(args)
+    print("Server command:", " ".join(shlex.quote(part) for part in cmd), flush=True)
+    print(f"Server log: {log_path}", flush=True)
+    proc = subprocess.Popen(cmd, stdout=log_file, stderr=subprocess.STDOUT, text=True)
+    return proc, log_path
+
+
+def stop_server_process(proc: subprocess.Popen[Any] | None) -> None:
+    if proc is None or proc.poll() is not None:
+        return
+    print("Stopping server...", flush=True)
+    proc.terminate()
+    try:
+        proc.wait(timeout=30)
+    except subprocess.TimeoutExpired:
+        proc.kill()
+        proc.wait(timeout=30)
+
+
+def run_server_only(args: argparse.Namespace) -> None:
+    proc, log_path = start_openai_server(args)
+    print(f"Server PID: {proc.pid}", flush=True)
+    print(f"Server log: {log_path}", flush=True)
+    if wait_for_openai_server(args.reference_base_url, args.server_wait_timeout):
+        print(f"Server ready: {args.reference_base_url}", flush=True)
+    else:
+        print(f"Server did not become ready within {args.server_wait_timeout}s. Check log: {log_path}", flush=True)
+    try:
+        proc.wait()
+    except KeyboardInterrupt:
+        proc.terminate()
+        proc.wait(timeout=30)
+
+
 def write_debug_file(debug_dir: Path | None, name: str, payload: Any, suffix: str = ".json") -> Path | None:
     if debug_dir is None:
         return None
     path = debug_dir / f"{name}{suffix}"
     if suffix == ".json":
-        path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        path.write_text(json.dumps(jsonable(payload), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     else:
         path.write_text(str(payload), encoding="utf-8")
     return path
@@ -368,10 +504,8 @@ def args_debug_snapshot(args: argparse.Namespace) -> dict[str, Any]:
     for key, value in sorted(vars(args).items()):
         if key in hidden and clean(value):
             result[key] = "***"
-        elif isinstance(value, Path):
-            result[key] = str(value)
         else:
-            result[key] = value
+            result[key] = jsonable(value)
     return result
 
 
@@ -918,6 +1052,14 @@ def main() -> None:
     parser.add_argument("--test", action="store_true", help="gpt-oss-120b로 chunk 기준 TOC만 생성/저장하고 종료")
     parser.add_argument("--debug-dir", type=Path, help="단계별 디버그 파일 저장 폴더. 기본은 data/output/toc_txt/debug/{run_id}")
     parser.add_argument("--no-debug", action="store_true", help="단계별 디버그 파일 저장을 끔")
+    parser.add_argument("--server", action="store_true", help="OpenAI-compatible vLLM 서버만 띄우고 대기")
+    parser.add_argument("--server_ver", action="store_true", help="이미 떠 있는 OpenAI-compatible 서버 준비 확인 후 나머지 작업 실행")
+    parser.add_argument("--server-command", help="서버 실행 명령 직접 지정. 예: vllm serve gpt-oss-120b --host 0.0.0.0 --port 8000")
+    parser.add_argument("--server-extra-args", default="", help="기본 vllm serve 명령 뒤에 붙일 추가 인자")
+    parser.add_argument("--server-log", type=Path, help="서버 stdout/stderr 로그 파일")
+    parser.add_argument("--server-wait-timeout", type=int, default=600, help="--server_ver에서 기존 서버 준비 확인 대기 시간(초)")
+    parser.add_argument("--log_simple", action="store_true", help="콘솔 로그를 별도 simple log 파일에도 저장")
+    parser.add_argument("--log-simple-file", type=Path, help="--log_simple 로그 파일 경로")
 
     parser.add_argument("--model", default=DEFAULT_GEMMA_HF_MODEL)
     parser.add_argument("--ai-fallback-models", default=DEFAULT_FALLBACK_MODELS_BY_PROVIDER["gemma"])
@@ -936,6 +1078,21 @@ def main() -> None:
     parser.add_argument("--gemma-vllm-server-api-key", default=DEFAULT_GEMMA_VLLM_SERVER_API_KEY)
     parser.add_argument("--gemma-vllm-server-timeout", type=int, default=DEFAULT_GEMMA_VLLM_SERVER_TIMEOUT)
     args = parser.parse_args()
+    main_timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    setup_simple_log(args, main_timestamp)
+
+    server_proc = None
+    if args.server:
+        run_server_only(args)
+        return
+    if args.server_ver:
+        print(f"Checking existing server: {args.reference_base_url}", flush=True)
+        if not wait_for_openai_server(args.reference_base_url, args.server_wait_timeout):
+            raise RuntimeError(
+                f"Existing server is not ready within {args.server_wait_timeout}s: {args.reference_base_url}. "
+                "Run --server first in another terminal, or check --reference-base-url."
+            )
+        print(f"Server ready: {args.reference_base_url}", flush=True)
 
     if args.chunk or args.parsed:
         chunk, chunk_text, chunk_path, parsed_text, parsed_path, default_stem = load_explicit_inputs(args)
@@ -948,6 +1105,7 @@ def main() -> None:
             parsed_path=parsed_path,
             default_stem=default_stem,
         )
+        stop_server_process(server_proc)
         return
 
     pdfs = discover_pdf_files(args.input_dir, args.pdf)
@@ -968,6 +1126,8 @@ def main() -> None:
             default_stem=default_stem,
             source_pdf=pdf_path,
         )
+
+    stop_server_process(server_proc)
 
 
 if __name__ == "__main__":
