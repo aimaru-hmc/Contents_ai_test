@@ -28,7 +28,7 @@ DEFAULT_MODEL = "gemma4:31b"
 DEFAULT_FALLBACK_MODELS = DEFAULT_MODEL
 DEFAULT_AI_RETRIES = 5
 DEFAULT_RETRY_BASE_DELAY = 2.0
-DEFAULT_MAX_OUTPUT_TOKENS = 4096
+DEFAULT_MAX_OUTPUT_TOKENS = 8192
 DEFAULT_TEMPERATURE = 0.0
 DEFAULT_BASE_URL = "http://127.0.0.1:8000/v1"
 DEFAULT_API_KEY = "EMPTY"
@@ -525,6 +525,7 @@ def call_gemma_openai_compatible(
         ],
         "temperature": max(0.0, float(temperature)),
         "max_tokens": max(1, int(max_output_tokens)),
+        "response_format": {"type": "json_object"},
     }
     body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
     headers = {"Content-Type": "application/json", "Accept": "application/json"}
@@ -540,7 +541,7 @@ def call_gemma_openai_compatible(
         error_body = error.read().decode("utf-8", errors="replace")
         hint = ""
         if "maximum context length" in error_body.lower() or "max context" in error_body.lower():
-            hint = " Hint: reduce --max-output-tokens, for example --max-output-tokens 4096 or 2048."
+            hint = " Hint: reduce --parsed-chunk-chars or --max-output-tokens."
         raise RuntimeError(
             f"Gemma request failed: HTTP {error.code} {error.reason}. URL={url}. "
             f"Body: {error_body[:1000]}{hint}"
