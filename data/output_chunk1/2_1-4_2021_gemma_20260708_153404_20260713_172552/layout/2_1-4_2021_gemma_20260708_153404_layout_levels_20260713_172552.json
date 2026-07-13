@@ -1,0 +1,177 @@
+{
+    "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/chunk1/2편1-4장_2021_openai_gpt-5.5_20260710_134715_toc_chunk1.json",
+    "source_chunk": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/input_chunks/2_1-4_2021_gemma_20260708_153404/chunk_1_pages_1-41.json",
+    "matching_priority": [
+        "S/R/B/I/F",
+        "learned start shape",
+        "X",
+        "Y"
+    ],
+    "rules": [
+        {
+            "level": 1,
+            "s": 31.0,
+            "r": 3.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 191.0,
+            "x_max": 191.0,
+            "y_min": 126.0,
+            "y_max": 126.0,
+            "start_shapes": [
+                "A"
+            ],
+            "reference_count": 2,
+            "examples": [
+                "제1장 역학의 기본원리",
+                "제2장 역학연구의 자료"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 18.0,
+            "r": 1.9,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 77.0,
+            "x_max": 185.0,
+            "y_min": 104.0,
+            "y_max": 483.0,
+            "start_shapes": [
+                "#."
+            ],
+            "reference_count": 6,
+            "examples": [
+                "1. 역학의 정의와 발전과정",
+                "2. 질병발생 모형과 원인적 연관성",
+                "1. 일차 자료의 수집 방법과 활용",
+                "2. 이차 자료의 종류와 활용",
+                "3. 공중보건감시",
+                "4. 질병과 사망원인의 분류와 사망진단서"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 12.5,
+            "r": 1.32,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 73.0,
+            "x_max": 181.0,
+            "y_min": 92.0,
+            "y_max": 697.0,
+            "start_shapes": [
+                "#.#"
+            ],
+            "reference_count": 23,
+            "examples": [
+                "1.1 역학의 정의와 특징",
+                "1.2 역학과 임상의학간의 관계",
+                "1.3 역학 발전의 역사적 배경",
+                "1.4 역학의 활용과 영역",
+                "2.1 질병발생의 다요인설",
+                "2.2 생태학적 모형과 질병관리",
+                "2.3 원인적 연관성",
+                "1.1 일차 자료의 정의와 특성"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 12.0,
+            "r": 1.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 65.0,
+            "x_max": 173.0,
+            "y_min": 85.0,
+            "y_max": 765.0,
+            "start_shapes": [
+                "#)"
+            ],
+            "reference_count": 41,
+            "examples": [
+                "1) 고대-중세: 역학 개념 성립 이전",
+                "2) 근대-현대: 역학방법론의 논리적 배경",
+                "3) 역학의 기반 개념과 감염병 역학 방법론 정립",
+                "4) 역학의 방법론에 대한 학문적 기반 확립",
+                "1) 병인",
+                "2) 숙주요인 또는 인체 내부요인",
+                "1) 역학적 삼각형",
+                "3) 환경요인"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 10.0,
+            "r": 1.05,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 75.0,
+            "x_max": 183.0,
+            "y_min": 131.0,
+            "y_max": 656.0,
+            "start_shapes": [
+                "A"
+            ],
+            "reference_count": 4,
+            "examples": [
+                "원인의 종류에 따른 분야",
+                "건강 결과의 종류에 따른 분야",
+                "연구가 시행되는 장소의 특성에 따른 분류",
+                "연구방법에 따른 분류"
+            ]
+        },
+        {
+            "level": 5,
+            "s": 10.0,
+            "r": 1.05,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 75.0,
+            "x_max": 183.0,
+            "y_min": 85.0,
+            "y_max": 761.0,
+            "start_shapes": [
+                "(#)"
+            ],
+            "reference_count": 32,
+            "examples": [
+                "(1) 유전적 요인",
+                "(2) 과거 노출에 의한 숙주요인의 변화",
+                "(3) 기타",
+                "(1) 충분원인과 필요원인",
+                "(2) 원인의 강도",
+                "(3) 기여분율의 합",
+                "(4) 원인간의 상호작용",
+                "(5) 유도기간"
+            ]
+        },
+        {
+            "level": 6,
+            "s": 9.5,
+            "r": 1.0,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 75.0,
+            "x_max": 75.0,
+            "y_min": 199.0,
+            "y_max": 306.0,
+            "start_shapes": [
+                "#"
+            ],
+            "reference_count": 2,
+            "examples": [
+                "① 개별 배포 조사(personal self-administered questionnaire survey)",
+                "② 집단 조사(group survey)"
+            ]
+        }
+    ],
+    "unmatched_reference_titles": []
+}
