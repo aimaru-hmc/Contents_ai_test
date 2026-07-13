@@ -28,11 +28,12 @@ DEFAULT_MODEL = "gemma4:31b"
 DEFAULT_FALLBACK_MODELS = DEFAULT_MODEL
 DEFAULT_AI_RETRIES = 5
 DEFAULT_RETRY_BASE_DELAY = 2.0
-DEFAULT_MAX_OUTPUT_TOKENS = 8192
+DEFAULT_MAX_OUTPUT_TOKENS = 4096
 DEFAULT_TEMPERATURE = 0.0
 DEFAULT_BASE_URL = "http://127.0.0.1:8000/v1"
 DEFAULT_API_KEY = "EMPTY"
 DEFAULT_TIMEOUT = 3600
+DEFAULT_PARSED_CHUNK_CHARS = 80000
 
 PAGE_RE = re.compile(r"^\[PAGE\s+(\d+)\]$")
 LINE_RE = re.compile(
@@ -322,6 +323,146 @@ Output exactly one valid JSON object. Do not output Markdown, code fences, comme
 """.strip()
 
 
+def build_chunk_prompt(
+    layout_json: dict[str, Any],
+    chunk: dict[str, Any],
+    title: str,
+    max_depth: int,
+    user_prompt: str,
+    total_chunks: int,
+) -> str:
+    layout_text = json.dumps(compact_layout_json(layout_json), ensure_ascii=False, indent=2)
+    return f"""
+You are Gemma 31B. Create a partial table-of-contents JSON from one parsed PDF layout text chunk.
+The layout JSON was generated from CHUNK and REFERENCE and is the primary evidence for heading levels.
+
+[Task]
+{user_prompt.strip()}
+
+[Document Title]
+{title}
+
+[Chunk]
+{chunk["index"]}/{total_chunks}, pages {chunk["start_page"]}-{chunk["end_page"]}
+
+[Layout JSON]
+{layout_text}
+
+[Rules]
+- Output only TOC entries whose real body heading appears inside this chunk.
+- Use the Layout JSON rules as the primary style reference learned from the verified chunk.
+- Match headings by S/R/B/I/F first, then start_shapes, X/Y position, and numbering.
+- Use only text that appears in the parsed layout text. Do not invent, rewrite, or summarize titles.
+- Preserve original numbering and title text exactly.
+- Exclude covers, prefaces, existing TOC listing rows, indexes, references, page numbers, repeated headers/footers, captions, questions, and body sentences.
+- Existing TOC/Contents pages may help you understand structure, but do not output listing rows unless the same title appears as a real body heading.
+- Preserve PDF page order and source order within the chunk.
+- Use integer levels from 1 to {max_depth}; lower numbers are higher-level headings.
+- Include level_reason for every chapter, explaining the layout or numbering evidence briefly.
+
+[Output Format]
+Output exactly one valid JSON object. Do not output Markdown, code fences, comments, or explanations outside JSON.
+
+{{
+  "title": "{title}",
+  "chapters": [
+    {{"level": 1, "chapter": "Source heading", "page": {chunk["start_page"]}, "level_reason": "Matched layout rule and numbering."}}
+  ]
+}}
+
+[Parsed PDF Layout Text Chunk]
+{chunk["text"]}
+""".strip()
+
+
+def page_number_from_segment(segment: str) -> int | None:
+    match = re.search(r"(?m)^\[PAGE\s+(\d+)\]$", segment)
+    return int(match.group(1)) if match else None
+
+
+def split_parsed_text_chunks(text: str, max_chars: int) -> list[dict[str, Any]]:
+    max_chars = max(10000, int(max_chars))
+    starts = [match.start() for match in re.finditer(r"(?m)^\[PAGE\s+\d+\]$", text)]
+    if not starts:
+        return [{"index": 1, "start_page": 1, "end_page": 1, "text": text.strip()}]
+
+    starts.append(len(text))
+    page_segments: list[tuple[int, str]] = []
+    for index in range(len(starts) - 1):
+        segment = text[starts[index]:starts[index + 1]].strip()
+        page = page_number_from_segment(segment)
+        if page is not None and segment:
+            page_segments.append((page, segment))
+
+    chunks: list[dict[str, Any]] = []
+    current_parts: list[str] = []
+    current_start: int | None = None
+    current_end: int | None = None
+    current_chars = 0
+
+    def flush() -> None:
+        nonlocal current_parts, current_start, current_end, current_chars
+        if not current_parts:
+            return
+        chunks.append({
+            "index": len(chunks) + 1,
+            "start_page": current_start or 1,
+            "end_page": current_end or current_start or 1,
+            "text": "\n\n".join(current_parts),
+        })
+        current_parts = []
+        current_start = None
+        current_end = None
+        current_chars = 0
+
+    for page, segment in page_segments:
+        segment_len = len(segment) + 2
+        if current_parts and current_chars + segment_len > max_chars:
+            flush()
+        if current_start is None:
+            current_start = page
+        current_end = page
+        current_parts.append(segment)
+        current_chars += segment_len
+
+    flush()
+    return chunks
+
+
+def merge_partial_tocs(title: str, partial_tocs: list[dict[str, Any]]) -> dict[str, Any]:
+    merged: list[dict[str, Any]] = []
+    seen: set[tuple[int, str]] = set()
+    for toc in partial_tocs:
+        chapters = toc.get("chapters", [])
+        if not isinstance(chapters, list):
+            continue
+        for item in chapters:
+            if not isinstance(item, dict):
+                continue
+            chapter = clean_text(item.get("chapter"))
+            if not chapter:
+                continue
+            try:
+                page = int(item.get("page", 1))
+            except Exception:
+                page = 1
+            key = (page, norm(chapter))
+            if key in seen:
+                continue
+            seen.add(key)
+            row = {
+                "level": int(item.get("level", 1) or 1),
+                "chapter": chapter,
+                "page": max(1, page),
+            }
+            reason = clean_text(item.get("level_reason"))
+            if reason:
+                row["level_reason"] = reason
+            merged.append(row)
+    merged.sort(key=lambda item: (int(item.get("page", 1)), norm(item.get("chapter", ""))))
+    return {"title": title, "chapters": merged}
+
+
 def parse_model_list(primary_model: str, fallback_models: str | Iterable[str] | None) -> list[str]:
     models: list[str] = []
 
@@ -399,7 +540,7 @@ def call_gemma_openai_compatible(
         error_body = error.read().decode("utf-8", errors="replace")
         hint = ""
         if "maximum context length" in error_body.lower() or "max context" in error_body.lower():
-            hint = " Hint: reduce --max-output-tokens, for example --max-output-tokens 8192 or 4096."
+            hint = " Hint: reduce --max-output-tokens, for example --max-output-tokens 4096 or 2048."
         raise RuntimeError(
             f"Gemma request failed: HTTP {error.code} {error.reason}. URL={url}. "
             f"Body: {error_body[:1000]}{hint}"
@@ -443,6 +584,19 @@ def is_configuration_error(error: Exception) -> bool:
     return any(marker in message for marker in CONFIGURATION_ERROR_MARKERS)
 
 
+def is_non_retryable_request_error(error: Exception) -> bool:
+    message = message_of(error).upper()
+    markers = (
+        "HTTP 400",
+        "HTTP 404",
+        "MAXIMUM CONTEXT LENGTH",
+        "INPUT_TOKENS",
+        "DOES NOT EXIST",
+        "NOTFOUNDERROR",
+    )
+    return any(marker in message for marker in markers)
+
+
 def with_retry(label: str, func: Callable[[], Any], max_retries: int, base_delay: float) -> Any:
     max_retries = max(1, int(max_retries))
     base_delay = max(0.1, float(base_delay))
@@ -452,7 +606,7 @@ def with_retry(label: str, func: Callable[[], Any], max_retries: int, base_delay
             return func()
         except Exception as error:
             last_error = error
-            if is_configuration_error(error):
+            if is_configuration_error(error) or is_non_retryable_request_error(error):
                 raise
             if not is_retryable_error(error) or attempt >= max_retries:
                 raise
@@ -608,6 +762,9 @@ def request_gemma_toc(prompt: str, args: argparse.Namespace, fallback_title: str
                 return validate_toc(parsed, fallback_title=fallback_title, max_depth=args.max_depth), raw_text, model
             except Exception as error:
                 last_error = error
+                if is_non_retryable_request_error(error):
+                    print(f"Gemma model failed: {model} / {error}", file=sys.stderr, flush=True)
+                    break
                 if parse_attempt >= max(1, int(args.ai_retries)):
                     print(f"Gemma model failed: {model} / {error}", file=sys.stderr, flush=True)
                     break
@@ -638,6 +795,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL, help="OpenAI-compatible Gemma/vLLM base URL")
     parser.add_argument("--api-key", default=DEFAULT_API_KEY, help="Bearer API key for the OpenAI-compatible server")
     parser.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT)
+    parser.add_argument("--parsed-chunk-chars", type=int, default=DEFAULT_PARSED_CHUNK_CHARS, help="청크별 parsed text 최대 문자 수")
+    parser.add_argument("--single-request", action="store_true", help="청크 분할 없이 전체 parsed text를 한 번에 요청")
     return parser.parse_args()
 
 
@@ -656,22 +815,56 @@ def main() -> None:
     layout_json = read_json(layout_output)
     parsed_text = args.parsed.read_text(encoding="utf-8")
     title = clean_text(args.title) or clean_text(reference.get("title")) or args.parsed.stem
-    prompt = build_prompt(layout_json, parsed_text, title, max(1, int(args.max_depth)), args.prompt)
 
     started = time.perf_counter()
-    toc, raw_text, used_model = request_gemma_toc(prompt, args, fallback_title=title)
+    raw_records: list[dict[str, Any]] = []
+    used_model = ""
+
+    if args.single_request:
+        prompt = build_prompt(layout_json, parsed_text, title, max(1, int(args.max_depth)), args.prompt)
+        toc, raw_text, used_model = request_gemma_toc(prompt, args, fallback_title=title)
+        raw_records.append({"mode": "single", "raw_text": raw_text})
+    else:
+        chunks = split_parsed_text_chunks(parsed_text, args.parsed_chunk_chars)
+        partial_tocs: list[dict[str, Any]] = []
+        total_chunks = len(chunks)
+        print(f"Parsed chunks: {total_chunks} (max_chars={args.parsed_chunk_chars})", flush=True)
+        for chunk_item in chunks:
+            prompt = build_chunk_prompt(
+                layout_json=layout_json,
+                chunk=chunk_item,
+                title=title,
+                max_depth=max(1, int(args.max_depth)),
+                user_prompt=args.prompt,
+                total_chunks=total_chunks,
+            )
+            print(
+                f"Chunk {chunk_item['index']}/{total_chunks}: pages {chunk_item['start_page']}-{chunk_item['end_page']}",
+                flush=True,
+            )
+            partial_toc, raw_text, used_model = request_gemma_toc(prompt, args, fallback_title=title)
+            partial_tocs.append(partial_toc)
+            raw_records.append({
+                "chunk": chunk_item["index"],
+                "start_page": chunk_item["start_page"],
+                "end_page": chunk_item["end_page"],
+                "toc_entries": len(partial_toc.get("chapters", [])),
+                "raw_text": raw_text,
+            })
+        toc = validate_toc(merge_partial_tocs(title, partial_tocs), fallback_title=title, max_depth=args.max_depth)
+
     elapsed = time.perf_counter() - started
 
     output = timestamped_output(args.output, TOC_OUTPUT_DIR, args.parsed.stem, "toc", timestamp)
     output.write_text(json.dumps(toc, ensure_ascii=False, indent=4) + "\n", encoding="utf-8")
 
-    raw_path = timestamped_output(args.raw_output, RAW_OUTPUT_DIR, args.parsed.stem, "gemma_raw", timestamp, suffix=".txt")
-    raw_path.write_text(raw_text.rstrip() + "\n", encoding="utf-8")
+    raw_path = timestamped_output(args.raw_output, RAW_OUTPUT_DIR, args.parsed.stem, "gemma_raw", timestamp, suffix=".json")
+    raw_path.write_text(json.dumps(raw_records, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     print(f"Layout levels: {layout_output}", flush=True)
     print(f'Unmatched reference titles: {len(layout_json["unmatched_reference_titles"])}', flush=True)
     print(f"Created: {output}", flush=True)
-    print(f"Raw response: {raw_path}", flush=True)
+    print(f"Raw responses: {raw_path}", flush=True)
     print(f"Gemma model: {used_model}", flush=True)
     print(f"TOC entries: {len(toc.get('chapters', []))}", flush=True)
     print(f"Elapsed: {format_elapsed(elapsed)}", flush=True)
