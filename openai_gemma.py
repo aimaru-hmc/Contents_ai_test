@@ -26,12 +26,13 @@ DEFAULT_MODEL = "gemma4:31b"
 DEFAULT_FALLBACK_MODELS = DEFAULT_MODEL
 DEFAULT_AI_RETRIES = 5
 DEFAULT_RETRY_BASE_DELAY = 2.0
-DEFAULT_MAX_OUTPUT_TOKENS = 8192
+DEFAULT_MAX_OUTPUT_TOKENS = 16384
 DEFAULT_TEMPERATURE = 0.0
 DEFAULT_BASE_URL = "http://127.0.0.1:8000/v1"
 DEFAULT_API_KEY = "EMPTY"
 DEFAULT_TIMEOUT = 3600
 DEFAULT_PARSED_CHUNK_CHARS = 80000
+DEFAULT_MAX_CHUNK_SPLIT_DEPTH = 3
 
 PAGE_RE = re.compile(r"^\[PAGE\s+(\d+)\]$")
 LINE_RE = re.compile(
@@ -63,6 +64,10 @@ class Line:
     i: int
     f: str
     text: str
+
+
+class GemmaOutputTruncatedError(ValueError):
+    """Raised when vLLM stops generation at the configured output-token limit."""
 
 
 def clean(value: Any) -> str:
@@ -506,6 +511,21 @@ def split_parsed_text_chunks(text: str, max_chars: int) -> list[dict[str, Any]]:
     return chunks
 
 
+def split_failed_parsed_chunk(chunk: dict[str, Any]) -> list[dict[str, Any]]:
+    text = str(chunk.get("text") or "").strip()
+    if not text:
+        return []
+
+    subchunks = split_parsed_text_chunks(text, max(10000, len(text) // 2))
+    if len(subchunks) <= 1:
+        return []
+
+    parent_index = str(chunk.get("index", ""))
+    for index, subchunk in enumerate(subchunks, start=1):
+        subchunk["index"] = f"{parent_index}.{index}"
+    return subchunks
+
+
 def merge_partial_tocs(title: str, partial_tocs: list[dict[str, Any]]) -> dict[str, Any]:
     merged: list[dict[str, Any]] = []
     seen: set[tuple[int, str]] = set()
@@ -706,13 +726,21 @@ def call_gemma_openai_compatible(
     if isinstance(message, dict):
         content = message.get("content")
         if isinstance(content, list):
-            return "\n".join(
+            output_text = "\n".join(
                 clean_text(part.get("text") if isinstance(part, dict) else part)
                 for part in content
                 if clean_text(part.get("text") if isinstance(part, dict) else part)
             )
-        return str(content or "")
-    return str(first.get("text") or "")
+        else:
+            output_text = str(content or "")
+    else:
+        output_text = str(first.get("text") or "")
+
+    if clean_text(first.get("finish_reason")).lower() == "length":
+        raise GemmaOutputTruncatedError(
+            f"Gemma output reached the {max_output_tokens}-token limit before JSON completion."
+        )
+    return output_text
 
 
 def message_of(error: Exception) -> str:
@@ -907,6 +935,8 @@ def request_gemma_toc(prompt: str, args: argparse.Namespace, fallback_title: str
                 return validate_toc(parsed, fallback_title=fallback_title, max_depth=args.max_depth), raw_text, model
             except Exception as error:
                 last_error = error
+                if isinstance(error, GemmaOutputTruncatedError):
+                    raise
                 if is_non_retryable_request_error(error):
                     print(f"Gemma model failed: {model} / {error}", file=sys.stderr, flush=True)
                     break
@@ -943,6 +973,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--api-key", default=DEFAULT_API_KEY, help="Bearer API key for the OpenAI-compatible server")
     parser.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT)
     parser.add_argument("--parsed-chunk-chars", type=int, default=DEFAULT_PARSED_CHUNK_CHARS, help="청크별 parsed text 최대 문자 수")
+    parser.add_argument(
+        "--max-chunk-split-depth",
+        type=int,
+        default=DEFAULT_MAX_CHUNK_SPLIT_DEPTH,
+        help="JSON 출력 실패 시 해당 parsed 청크를 자동 재분할할 최대 단계",
+    )
     parser.add_argument("--single-request", action="store_true", help="청크 분할 없이 전체 parsed text를 한 번에 요청")
     return parser.parse_args()
 
@@ -1083,28 +1119,56 @@ def process_document(
         total_chunks = len(chunks)
         parsed_chunk_count = total_chunks
         print(f"Parsed chunks: {total_chunks} (max_chars={args.parsed_chunk_chars})", flush=True)
-        for chunk_item in chunks:
+
+        def process_parsed_chunk(chunk_item: dict[str, Any], split_depth: int = 0) -> None:
+            nonlocal parsed_chunk_count, used_model
             prompt = build_chunk_prompt(
                 layout_json=layout_json,
                 chunk=chunk_item,
                 title=title,
                 max_depth=max(1, int(args.max_depth)),
                 user_prompt=args.prompt,
-                total_chunks=total_chunks,
+                total_chunks=parsed_chunk_count,
             )
             print(
-                f"Chunk {chunk_item['index']}/{total_chunks}: pages {chunk_item['start_page']}-{chunk_item['end_page']}",
+                f"Chunk {chunk_item['index']}/{parsed_chunk_count}: "
+                f"pages {chunk_item['start_page']}-{chunk_item['end_page']}",
                 flush=True,
             )
-            partial_toc, raw_text, used_model = request_gemma_toc(prompt, args, fallback_title=title)
+            try:
+                partial_toc, raw_text, used_model = request_gemma_toc(prompt, args, fallback_title=title)
+            except ValueError as error:
+                subchunks = split_failed_parsed_chunk(chunk_item)
+                if split_depth >= max(0, int(args.max_chunk_split_depth)) or not subchunks:
+                    raise
+                parsed_chunk_count += len(subchunks) - 1
+                print(
+                    f"  Invalid or truncated JSON for pages "
+                    f"{chunk_item['start_page']}-{chunk_item['end_page']}: {error}",
+                    file=sys.stderr,
+                    flush=True,
+                )
+                print(
+                    f"  Splitting this chunk into {len(subchunks)} smaller page ranges.",
+                    file=sys.stderr,
+                    flush=True,
+                )
+                for subchunk in subchunks:
+                    process_parsed_chunk(subchunk, split_depth + 1)
+                return
+
             partial_tocs.append(partial_toc)
             raw_records.append({
                 "chunk": chunk_item["index"],
                 "start_page": chunk_item["start_page"],
                 "end_page": chunk_item["end_page"],
+                "split_depth": split_depth,
                 "toc_entries": len(partial_toc.get("chapters", [])),
                 "raw_text": raw_text,
             })
+
+        for chunk_item in chunks:
+            process_parsed_chunk(chunk_item)
         toc = validate_toc(merge_partial_tocs(title, partial_tocs), fallback_title=title, max_depth=args.max_depth)
 
     toc = attach_layout_metadata_and_sort(toc, parsed_lines)
@@ -1140,6 +1204,7 @@ def process_document(
         "generation_mode": "single_request" if args.single_request else "parsed_chunks",
         "parsed_chunk_count": parsed_chunk_count,
         "parsed_chunk_chars": None if args.single_request else args.parsed_chunk_chars,
+        "max_chunk_split_depth": None if args.single_request else args.max_chunk_split_depth,
         "chapter_sort": "page_then_parsed_source_order",
         "matched_layout_entries": matched_layout_entries,
         "unmatched_layout_entries": len(toc.get("chapters", [])) - matched_layout_entries,
@@ -1166,11 +1231,22 @@ def main() -> None:
     args.output_root = args.output_root.resolve()
     jobs = resolve_document_jobs(args)
     print(f"Documents: {len(jobs)}", flush=True)
+    failures: list[tuple[Path, Exception]] = []
     for index, (reference_path, chunk_path, parsed_path) in enumerate(jobs, start=1):
         print(f"\nDocument {index}/{len(jobs)}: {reference_path.name}", flush=True)
         print(f"  Input chunk: {chunk_path}", flush=True)
         print(f"  Parsed text: {parsed_path}", flush=True)
-        process_document(args, reference_path, chunk_path, parsed_path)
+        try:
+            process_document(args, reference_path, chunk_path, parsed_path)
+        except Exception as error:
+            failures.append((reference_path, error))
+            print(f"Document failed: {reference_path.name} / {error}", file=sys.stderr, flush=True)
+
+    if failures:
+        print(f"\nFailed documents: {len(failures)}/{len(jobs)}", file=sys.stderr, flush=True)
+        for reference_path, error in failures:
+            print(f"  {reference_path.name}: {error}", file=sys.stderr, flush=True)
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":
