@@ -1,0 +1,181 @@
+{
+    "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/chunk1/주교재_openai_gpt-5.5_20260710_144654_toc_chunk1.json",
+    "source_chunk": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/input_chunks/unknown_model_gemma_20260710_100514/chunk_1_pages_2-34.json",
+    "matching_priority": [
+        "S/R/B/I/F",
+        "learned start shape",
+        "X",
+        "Y"
+    ],
+    "rules": [
+        {
+            "level": 1,
+            "s": 32.0,
+            "r": 3.2,
+            "b": 0,
+            "i": 0,
+            "f": "f7",
+            "x_min": 55.0,
+            "x_max": 55.0,
+            "y_min": 101.0,
+            "y_max": 101.0,
+            "start_shapes": [
+                "A"
+            ],
+            "reference_count": 1,
+            "examples": [
+                "Chapter 1 What is epidemiology?"
+            ]
+        },
+        {
+            "level": 1,
+            "s": 31.9,
+            "r": 3.2,
+            "b": 0,
+            "i": 0,
+            "f": "f7",
+            "x_min": 55.0,
+            "x_max": 55.0,
+            "y_min": 136.0,
+            "y_max": 136.0,
+            "start_shapes": [
+                "A"
+            ],
+            "reference_count": 1,
+            "examples": [
+                "Chapter 2 Measuring health and disease"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 20.0,
+            "r": 2.0,
+            "b": 0,
+            "i": 0,
+            "f": "f9",
+            "x_min": 55.0,
+            "x_max": 168.0,
+            "y_min": 149.0,
+            "y_max": 382.0,
+            "start_shapes": [
+                "A"
+            ],
+            "reference_count": 7,
+            "examples": [
+                "Key messages",
+                "The historical context",
+                "Epidemiology and public health",
+                "Achievements in epidemiology",
+                "Key messages",
+                "Defining health and disease",
+                "Measuring disease frequency"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 20.0,
+            "r": 2.23,
+            "b": 0,
+            "i": 0,
+            "f": "f9",
+            "x_min": 140.0,
+            "x_max": 140.0,
+            "y_min": 575.0,
+            "y_max": 575.0,
+            "start_shapes": [
+                "A,"
+            ],
+            "reference_count": 1,
+            "examples": [
+                "Definition, scope, and uses of epidemiology"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 14.0,
+            "r": 1.4,
+            "b": 0,
+            "i": 0,
+            "f": "f10",
+            "x_min": 45.0,
+            "x_max": 140.0,
+            "y_min": 84.0,
+            "y_max": 619.0,
+            "start_shapes": [
+                "A",
+                "A/A"
+            ],
+            "reference_count": 18,
+            "examples": [
+                "Origins",
+                "Recent developments in epidemiology",
+                "Causation of disease",
+                "Natural history of disease",
+                "Health status of populations",
+                "Evaluating interventions",
+                "Smallpox",
+                "Methyl mercury poisoning"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 14.0,
+            "r": 1.56,
+            "b": 0,
+            "i": 0,
+            "f": "f10",
+            "x_min": 140.0,
+            "x_max": 140.0,
+            "y_min": 607.0,
+            "y_max": 607.0,
+            "start_shapes": [
+                "A"
+            ],
+            "reference_count": 1,
+            "examples": [
+                "Definition"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 14.0,
+            "r": 1.75,
+            "b": 0,
+            "i": 0,
+            "f": "f10",
+            "x_min": 55.0,
+            "x_max": 55.0,
+            "y_min": 385.0,
+            "y_max": 385.0,
+            "start_shapes": [
+                "A"
+            ],
+            "reference_count": 1,
+            "examples": [
+                "Scope"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 9.0,
+            "r": 0.9,
+            "b": 1,
+            "i": 1,
+            "f": "f15",
+            "x_min": 55.0,
+            "x_max": 140.0,
+            "y_min": 121.0,
+            "y_max": 412.0,
+            "start_shapes": [
+                "A"
+            ],
+            "reference_count": 3,
+            "examples": [
+                "Prevalence",
+                "Incidence",
+                "Cumulative incidence"
+            ]
+        }
+    ],
+    "unmatched_reference_titles": []
+}
