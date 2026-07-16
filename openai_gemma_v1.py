@@ -138,26 +138,6 @@ def parse_layout(text: str) -> list[Line]:
     return result
 
 
-def annotate_source_orders(text: str) -> str:
-    """Expose page-local parsed line IDs to Gemma without changing source data."""
-    page = order = 0
-    annotated: list[str] = []
-    for raw in text.splitlines():
-        stripped = raw.strip()
-        page_match = PAGE_RE.match(stripped)
-        if page_match:
-            page, order = int(page_match.group(1)), 0
-            annotated.append(raw)
-            continue
-
-        if page and LINE_RE.match(stripped):
-            order += 1
-            leading = raw[:len(raw) - len(raw.lstrip())]
-            raw = leading + f"[L source_order={order} {stripped[3:]}"
-        annotated.append(raw)
-    return "\n".join(annotated)
-
-
 def match_reference_title(title: str, page_lines: list[Line]) -> Line | None:
     wanted = norm(title)
     ranked: list[tuple[int, int, Line]] = []
@@ -407,8 +387,6 @@ The layout JSON was generated from CHUNK and REFERENCE and is the primary eviden
 - Exclude covers, prefaces, existing TOC listing rows, indexes, references, page numbers, repeated headers/footers, captions, questions, and body sentences.
 - Existing TOC/Contents pages may help you understand structure, but do not output listing rows unless the same title appears as a real body heading.
 - Preserve PDF page order and source order within each page.
-- Every parsed layout line has a page-local source_order. Copy the exact source_order of the selected heading line.
-- The pair (page, source_order) identifies the original line. Never calculate or invent source_order.
 - Use integer levels from 1 to {max_depth}; lower numbers are higher-level headings.
 - Include level_reason for every chapter, explaining the layout or numbering evidence briefly.
 
@@ -418,7 +396,7 @@ Output exactly one valid JSON object. Do not output Markdown, code fences, comme
 {{
   "title": "{title}",
   "chapters": [
-    {{"level": 1, "chapter": "Source heading", "page": 1, "source_order": 3, "level_reason": "Matched layout rule and numbering."}}
+    {{"level": 1, "chapter": "Source heading", "page": 1, "level_reason": "Matched layout rule and numbering."}}
   ]
 }}
 
@@ -461,8 +439,6 @@ The layout JSON was generated from CHUNK and REFERENCE and is the primary eviden
 - Exclude covers, prefaces, existing TOC listing rows, indexes, references, page numbers, repeated headers/footers, captions, questions, and body sentences.
 - Existing TOC/Contents pages may help you understand structure, but do not output listing rows unless the same title appears as a real body heading.
 - Preserve PDF page order and source order within the chunk.
-- Every parsed layout line has a page-local source_order. Copy the exact source_order of the selected heading line.
-- The pair (page, source_order) identifies the original line. Never calculate or invent source_order.
 - Use integer levels from 1 to {max_depth}; lower numbers are higher-level headings.
 - Include level_reason for every chapter, explaining the layout or numbering evidence briefly.
 
@@ -472,7 +448,7 @@ Output exactly one valid JSON object. Do not output Markdown, code fences, comme
 {{
   "title": "{title}",
   "chapters": [
-    {{"level": 1, "chapter": "Source heading", "page": {chunk["start_page"]}, "source_order": 3, "level_reason": "Matched layout rule and numbering."}}
+    {{"level": 1, "chapter": "Source heading", "page": {chunk["start_page"]}, "level_reason": "Matched layout rule and numbering."}}
   ]
 }}
 
@@ -576,12 +552,6 @@ def merge_partial_tocs(title: str, partial_tocs: list[dict[str, Any]]) -> dict[s
                 "chapter": chapter,
                 "page": max(1, page),
             }
-            try:
-                source_order = int(item.get("source_order"))
-            except (TypeError, ValueError):
-                source_order = None
-            if source_order is not None and source_order > 0:
-                row["source_order"] = source_order
             reason = clean_text(item.get("level_reason"))
             if reason:
                 row["level_reason"] = reason
@@ -613,10 +583,8 @@ def match_toc_source_line(title: str, page_lines: list[Line]) -> Line | None:
 
 def attach_layout_metadata_and_sort(toc: dict[str, Any], parsed_lines: list[Line]) -> dict[str, Any]:
     pages: dict[int, list[Line]] = defaultdict(list)
-    lines_by_id: dict[tuple[int, int], Line] = {}
     for line in parsed_lines:
         pages[line.page].append(line)
-        lines_by_id[(line.page, line.order)] = line
 
     chapters: list[dict[str, Any]] = []
     for merge_index, item in enumerate(toc.get("chapters", [])):
@@ -624,17 +592,7 @@ def attach_layout_metadata_and_sort(toc: dict[str, Any], parsed_lines: list[Line
             continue
         row = dict(item)
         page = int(row.get("page", 1))
-        try:
-            requested_source_order = int(row.pop("source_order"))
-        except (KeyError, TypeError, ValueError):
-            requested_source_order = None
-        line = (
-            lines_by_id.get((page, requested_source_order))
-            if requested_source_order is not None
-            else None
-        )
-        if line is None:
-            line = match_toc_source_line(clean_text(row.get("chapter")), pages.get(page, []))
+        line = match_toc_source_line(clean_text(row.get("chapter")), pages.get(page, []))
         if line is None:
             row["metadata"] = {
                 "matched_parsed_layout": False,
@@ -921,12 +879,6 @@ def validate_toc(data: dict[str, Any], fallback_title: str, max_depth: int) -> d
             continue
         seen.add(key)
         row = {"level": level, "chapter": chapter, "page": page}
-        try:
-            source_order = int(item.get("source_order"))
-        except (TypeError, ValueError):
-            source_order = None
-        if source_order is not None and source_order > 0:
-            row["source_order"] = source_order
         reason = clean_text(item.get("level_reason"))
         if reason:
             row["level_reason"] = reason
@@ -1158,14 +1110,11 @@ def process_document(
     parsed_chunk_count = 1
 
     if args.single_request:
-        prompt_text = annotate_source_orders(parsed_text)
-        prompt = build_prompt(layout_json, prompt_text, title, max(1, int(args.max_depth)), args.prompt)
+        prompt = build_prompt(layout_json, parsed_text, title, max(1, int(args.max_depth)), args.prompt)
         toc, raw_text, used_model = request_gemma_toc(prompt, args, fallback_title=title)
         raw_records.append({"mode": "single", "raw_text": raw_text})
     else:
         chunks = split_parsed_text_chunks(parsed_text, args.parsed_chunk_chars)
-        for chunk_item in chunks:
-            chunk_item["text"] = annotate_source_orders(chunk_item["text"])
         partial_tocs: list[dict[str, Any]] = []
         total_chunks = len(chunks)
         parsed_chunk_count = total_chunks
