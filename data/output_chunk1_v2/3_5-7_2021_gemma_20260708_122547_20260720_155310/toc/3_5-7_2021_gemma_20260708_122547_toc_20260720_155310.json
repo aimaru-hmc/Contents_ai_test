@@ -1,0 +1,6050 @@
+{
+    "title": "제3편 환경과 건강",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "직업보건",
+            "page": 1,
+            "level_reason": "Matched layout rule for level 1 (S=31.0, R=3.27, X=243, Y=126).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 31.0,
+                "r": 3.27,
+                "x": 243.0,
+                "y": 126.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "직업보건"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "1. 직업보건의 역사",
+            "page": 1,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 392.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1. 직업보건의 역사"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 외국의 직업보건",
+            "page": 2,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 138.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.1 외국의 직업보건"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 한국의 직업보건",
+            "page": 3,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 350.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.2 한국의 직업보건"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "2. 직업보건의 정의와 목표",
+            "page": 5,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 514.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2. 직업보건의 정의와 목표"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 직업보건의 정의",
+            "page": 5,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 28,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 644.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.1 직업보건의 정의"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 직업보건사업의 목표와 기능",
+            "page": 6,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 290.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.2 직업보건사업의 목표와 기능"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 한국의 직업보건조직",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 214.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.3 한국의 직업보건조직"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 정부",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 255.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 정부"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 정부 산하기관",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 383.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 정부 산하기관"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 산업안전보건공단",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 449.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 산업안전보건공단"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 근로복지공단",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 574.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 근로복지공단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 민간기관",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 713.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 민간기관"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 대학 및 학회",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 747.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 대학 및 학회"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 사업수행기관",
+            "page": 8,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 176.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 사업수행기관"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 사업장 조직",
+            "page": 8,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 270.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 사업장 조직"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "3. 직업보건사업의 내용",
+            "page": 9,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 104.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3. 직업보건사업의 내용"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 작업환경측정 및 유해요인 관리",
+            "page": 9,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 332.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.1 작업환경측정 및 유해요인 관리"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 건강진단",
+            "page": 10,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 259.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.2 건강진단"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.3 근로자건강센터",
+            "page": 11,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 291.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.3 근로자건강센터"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.4 사업장 보건관리",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 335.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.4 사업장 보건관리"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.5 직업병감시체계",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 259.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.5 직업병감시체계"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.6 직장 건강증진",
+            "page": 15,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 168.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.6 직장 건강증진"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "4. 직무스트레스",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 40,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 758.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4. 직무스트레스"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 직무스트레스의 정의와 원인",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 231.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.1 직무스트레스의 정의와 원인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 직무스트레스 정의",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 272.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 직무스트레스 정의"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직무스트레스 원인",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 399.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 직무스트레스 원인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 직무 내재적 요인",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 434.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 직무 내재적 요인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 조직 내에서의 역할",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 710.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 조직 내에서의 역할"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 경력의 개발",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 41,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 789.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 경력의 개발"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 직장 내에서의 대인관계",
+            "page": 18,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 131.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 직장 내에서의 대인관계"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 조직의 구조와 분위기",
+            "page": 18,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 224.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(5) 조직의 구조와 분위기"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 직무스트레스 평가",
+            "page": 18,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 295.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.2 직무스트레스 평가"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.3 직무스트레스로 인한 영향",
+            "page": 18,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 486.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.3 직무스트레스로 인한 영향"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.4 직무스트레스 관리",
+            "page": 18,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 675.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.4 직무스트레스 관리"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 개인적 관리",
+            "page": 19,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 개인적 관리"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 조직적 관리",
+            "page": 19,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 378.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 조직적 관리"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "5. 야간노동과 교대근무",
+            "page": 20,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 516.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5. 야간노동과 교대근무"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "5.1 야간노동과 교대근무의 개념",
+            "page": 20,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 659.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5.1 야간노동과 교대근무의 개념"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "5.2 일주기리듬과 신체의 변화",
+            "page": 21,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 259.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5.2 일주기리듬과 신체의 변화"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "5.3 야간노동과 교대근무의 건강영향",
+            "page": 21,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 41,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 556.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5.3 야간노동과 교대근무의 건강영향"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "5.4 야간노동과 교대근무의 관리방안",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 259.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5.4 야간노동과 교대근무의 관리방안"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 조직적 관리방안: 교대근무 일정 조정",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 42,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 683.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 조직적 관리방안: 교대근무 일정 조정"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 개인적 관리방안",
+            "page": 23,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '2)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 45,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 745.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 개인적 관리방안"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "6. 여성 노동자의 건강",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, numbering '6.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 591.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "6. 여성 노동자의 건강"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "6.1 여성 노동자 건강에 미치는 위험요인들과 그 기전",
+            "page": 26,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, numbering '6.1')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 168.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "6.1 여성 노동자 건강에 미치는 위험요인들과 그 기전"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 사회구조적 조건과 사회적 관계",
+            "page": 26,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '1)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 210.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 사회구조적 조건과 사회적 관계"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 노동시장에서의 불평등한 고용관계: 낮은 고용 지위와 비정규직화",
+            "page": 26,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '2)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 40,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 633.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 노동시장에서의 불평등한 고용관계: 낮은 고용 지위와 비정규직화"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 작업장 노동조건: 장시간 노동 시간, 야간노동, 저임금, 빈곤화",
+            "page": 27,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '3)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 작업장 노동조건: 장시간 노동 시간, 야간노동, 저임금, 빈곤화"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 작업장 노동환경: 육체적 하중과 노동강도",
+            "page": 27,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '4)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 288.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 작업장 노동환경: 육체적 하중과 노동강도"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "5) 작업장 유해물질: 발암물질, 화학 독성물질의 증대",
+            "page": 27,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '5)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 461.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5) 작업장 유해물질: 발암물질, 화학 독성물질의 증대"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "6) 작업장 유해물질: 생식독성물질의 증대",
+            "page": 27,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '6)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 650.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "6) 작업장 유해물질: 생식독성물질의 증대"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "7) 작업장의 폭력과 정신적 위험요인: 성차별, 성희롱, 성폭력, 직장 내 괴롭힘, 직무스트레스",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '7)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 146.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "7) 작업장의 폭력과 정신적 위험요인: 성차별, 성희롱, 성폭력, 직장 내 괴롭힘,"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "8) 건강행동: 흡연, 음주, 영양",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '8)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 308.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "8) 건강행동: 흡연, 음주, 영양"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "9) 여성들의 이중 노동: 가정과 노동시장에서의 노동",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '9)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 420.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "9) 여성들의 이중 노동: 가정과 노동시장에서의 노동"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "10) 사회문화적 요소, 국가 권력구조: 법⋅제도",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '10)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 517.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "10) 사회문화적 요소, 국가 권력구조: 법⋅제도"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "6.2 한국 여성 노동자들의 10대 직업성 질환들의 발생 현황",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, numbering '6.2')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 38,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 743.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "6.2 한국 여성 노동자들의 10대 직업성 질환들의 발생 현황"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 작업장 폭력(성희롱, 성폭력) 문제, 감정노동",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '1)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 8.0,
+                "r": 0.85,
+                "x": 482.0,
+                "y": 52.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "제5장 직업보건∙ 797"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 우울증, 자살생각 등 정신건강",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '2)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 206.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 우울증, 자살생각 등 정신건강"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 생식기계 장애",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '3)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 364.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 생식기계 장애"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 암",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '4)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 568.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 암"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "5) 장시간 노동 시간, 야간노동으로 인한 건강장해",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '5)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 695.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5) 장시간 노동 시간, 야간노동으로 인한 건강장해"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "6) 근골격계질환",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '6)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 131.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "6) 근골격계질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "7) 만성질환 유병률",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '7)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 273.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "7) 만성질환 유병률"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "8) 노령 여성의 건강",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '8)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 414.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "8) 노령 여성의 건강"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "9) 여성 노동자의 이중 노동으로 인한 소진(burn out), 주관적 건강, 삶의 질, 여명의 문제",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '9)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 511.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "9) 여성 노동자의 이중 노동으로 인한 소진(burn out), 주관적 건강, 삶의"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "10) 여성 산업재해율 과소 보고 문제",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '10)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 628.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "10) 여성 산업재해율 과소 보고 문제"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "6.3 여성 노동자의 보건정책 방향",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, numbering '6.3')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 732.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "6.3 여성 노동자의 보건정책 방향"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 여성을 위한 세계보건기구(WHO) 보건정책의 전략",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '1)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 774.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 여성을 위한 세계보건기구(WHO) 보건정책의 전략"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) WHO의 여성을 위한 보건정책 전략의 원칙",
+            "page": 31,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, numbering '(1)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) WHO의 여성을 위한 보건정책 전략의 원칙"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) WHO의 남/여 형평성 전략",
+            "page": 31,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, numbering '(2)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 179.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) WHO의 남/여 형평성 전략"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 성평등과 평등을 위한 협의와 참여, 집단행동",
+            "page": 31,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, numbering '(3)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 303.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 성평등과 평등을 위한 협의와 참여, 집단행동"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 국제노동기구(ILO)의 “산업안전보건에서 성인지적 관점을 위한 10가지 지침”",
+            "page": 31,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '2)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 412.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 국제노동기구(ILO)의 “산업안전보건에서 성인지적 관점을 위한 10가지 지침”"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 한국에서 여성 노동자들의 산업안전보건 정책 방안",
+            "page": 31,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '3)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 616.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 한국에서 여성 노동자들의 산업안전보건 정책 방안"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "7. 직업역학",
+            "page": 32,
+            "level_reason": "Matched layout rule for level 2 (S=16.0, R=1.68, numbering '7.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 16.0,
+                "r": 1.68,
+                "x": 185.0,
+                "y": 487.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "7. 직업역학"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "7.1 직업역학의 정의와 방법",
+            "page": 32,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, numbering '7.1')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 617.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "7.1 직업역학의 정의와 방법"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "7.2 직업역학의 특징",
+            "page": 32,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, numbering '7.2')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 748.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "7.2 직업역학의 특징"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "7.3 직업역학 연구방법",
+            "page": 33,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, numbering '7.3')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 153.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "7.3 직업역학 연구방법"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 사례보고 및 사례군연구(case report and case series study)",
+            "page": 33,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '1)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 194.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 사례보고 및 사례군연구(case report and case series study)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 단면연구",
+            "page": 33,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '2)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 335.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 단면연구"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 환자-대조군연구",
+            "page": 33,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '3)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 571.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 환자-대조군연구"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 산업장 중심의 환자-대조군연구",
+            "page": 33,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, numbering '(1)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 681.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 산업장 중심의 환자-대조군연구"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 등록기반 환자-대조군연구",
+            "page": 34,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, numbering '(2)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 114.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 등록기반 환자-대조군연구"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 코호트연구",
+            "page": 34,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '4)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 488.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 코호트연구"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 전향적 코호트연구",
+            "page": 34,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, numbering '(1)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 615.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 전향적 코호트연구"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 후향적 코호트연구",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, numbering '(2)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 647.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 후향적 코호트연구"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "5) 사망 자료에 대한 기술학적 연구",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '5)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 115.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5) 사망 자료에 대한 기술학적 연구"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "7.4 직업역학 연구에서 고려할 사항",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, numbering '7.4')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 341.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "7.4 직업역학 연구에서 고려할 사항"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 연구수행가능성(feasibility)",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '1)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 383.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 연구수행가능성(feasibility)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 윤리적 및 정치적 문제(ethical and political issues)",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '2)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 540.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 윤리적 및 정치적 문제(ethical and political issues)"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "산업재해",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 1 (S=31.0, R=3.27)",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 31.0,
+                "r": 3.27,
+                "x": 242.0,
+                "y": 126.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "산업재해"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "1. 산업재해의 정의와 특징",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, numbering '1.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 392.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1. 산업재해의 정의와 특징"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 산업재해의 정의",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, numbering '1.1')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 522.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.1 산업재해의 정의"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 산업재해의 정의",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '1)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 564.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 산업재해의 정의"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 산업재해의 범위",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '2)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 737.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 산업재해의 범위"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 산업재해의 분류",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '3)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 282.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 산업재해의 분류"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 업무상 사고",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, numbering '(1)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 541.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 업무상 사고"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 업무상 질병",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, numbering '(2)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 45,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 771.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 업무상 질병"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 산업재해의 이론적 특성",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, numbering '1.2')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 214.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.2 산업재해의 이론적 특성"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 하인리히 법칙과 도미노 이론",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '1)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 255.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 하인리히 법칙과 도미노 이론"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 도미노 이론의 발전",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '2)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 549.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 도미노 이론의 발전"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 다수요인 이론(multiple factor theory)",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '3)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 662.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 다수요인 이론(multiple factor theory)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 사람: 사람의 심리적 상태, 성별, 나이, 생리적 차이(신장, 체중, 건강상태), 인지요인 등",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, R=1.00, numbering '(1)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 45,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 183.0,
+                "y": 759.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 사람: 사람의 심리적 상태, 성별, 나이, 생리적 차이(신장, 체중, 건강상태), 인지요인 등"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 기계: 기계의 형태, 유형, 크기, 안전 장치, 기계 운전, 사용된 에너지의 유형 등",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, R=1.00, numbering '(2)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 46,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 183.0,
+                "y": 774.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 기계: 기계의 형태, 유형, 크기, 안전 장치, 기계 운전, 사용된 에너지의 유형 등"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 매체: 기상조건, 바닥의 물기, 건물의 온도 등",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, R=1.00, numbering '(3)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 47,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 183.0,
+                "y": 789.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 매체: 기상조건, 바닥의 물기, 건물의 온도 등"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 관리: 다른 세 가지 요인(man, machine, media)을 관리하는 것",
+            "page": 43,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, R=1.00, numbering '(4)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 75.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 관리: 다른 세 가지 요인(man, machine, media)을 관리하는 것"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 인간요인 이론(human factor theory)",
+            "page": 43,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, numbering '4)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 161.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 인간요인 이론(human factor theory)"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "2. 산업재해의 지표와 현황",
+            "page": 43,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, numbering '2.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 491.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2. 산업재해의 지표와 현황"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 산업재해의 지표",
+            "page": 43,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, numbering '2.1')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 621.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.1 산업재해의 지표"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 산업재해의 현황",
+            "page": 44,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.46, numbering '2.2')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 12.5,
+                "r": 1.46,
+                "x": 181.0,
+                "y": 320.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.2 산업재해의 현황"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 근로자수와 산업재해율",
+            "page": 44,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.41, numbering '1)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.0,
+                "r": 1.41,
+                "x": 173.0,
+                "y": 361.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 근로자수와 산업재해율"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 재해율의 국제간 비교",
+            "page": 45,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.59, numbering '2)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 40,
+                "s": 12.0,
+                "r": 1.59,
+                "x": 65.0,
+                "y": 725.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 재해율의 국제간 비교"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 업무상 재해의 특성",
+            "page": 48,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, numbering '2.3')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 411.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.3 업무상 재해의 특성"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "3. 산업재해 예방과 관리",
+            "page": 51,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 226.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3. 산업재해 예방과 관리"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 산업재해 예방대책",
+            "page": 51,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 370.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.1 산업재해 예방대책"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 여러 나라의 재해예방을 위한 제도적 특징",
+            "page": 51,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 411.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 여러 나라의 재해예방을 위한 제도적 특징"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 미국의 산업안전보건 관리체계",
+            "page": 51,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 446.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 미국의 산업안전보건 관리체계"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 영국의 산업안전보건 관리체계",
+            "page": 51,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 646.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 영국의 산업안전보건 관리체계"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 독일의 산업안전보건 관리체계",
+            "page": 52,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 146.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 독일의 산업안전보건 관리체계"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 일본의 산업안전보건 관리체계",
+            "page": 52,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 391.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 일본의 산업안전보건 관리체계"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 한국의 산업재해 예방대책",
+            "page": 53,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 한국의 산업재해 예방대책"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 산업안전보건 관련 행정체계",
+            "page": 53,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 119.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 산업안전보건 관련 행정체계"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 산업안전보건 관련 기술지원체계",
+            "page": 53,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 320.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 산업안전보건 관련 기술지원체계"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 작업환경실태조사",
+            "page": 53,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 565.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 작업환경실태조사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 사업장내 산업안전보건 관리체계",
+            "page": 54,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 사업장내 산업안전보건 관리체계"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 산업재해예방의 기본조건",
+            "page": 54,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 255.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(5) 산업재해예방의 기본조건"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 산업재해 관리방법",
+            "page": 54,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 38,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 675.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.2 산업재해 관리방법"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 산업재해 관리방법",
+            "page": 54,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 716.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 산업재해 관리방법"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 재해 근로자 업무복귀",
+            "page": 55,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 751.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 재해 근로자 업무복귀"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 업무복귀의 의미",
+            "page": 55,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 785.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 업무복귀의 의미"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 업무복귀에 영향을 주는 요인",
+            "page": 56,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 404.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 업무복귀에 영향을 주는 요인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 업무복귀를 높이기 위한 방안",
+            "page": 56,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 41,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 710.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 업무복귀를 높이기 위한 방안"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "4. 산업재해보상보험",
+            "page": 58,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 180.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4. 산업재해보상보험"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 산업재해보상보험의 원리",
+            "page": 58,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 323.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.1 산업재해보상보험의 원리"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 산업재해보상보험의 역사적 배경",
+            "page": 58,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 365.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 산업재해보상보험의 역사적 배경"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 산업재해보상보험의 원리",
+            "page": 58,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 629.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 산업재해보상보험의 원리"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 무과실책임주의",
+            "page": 58,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 756.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 무과실책임주의"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 정률보상",
+            "page": 59,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 161.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 정률보상"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 사회보험",
+            "page": 59,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 300.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 사회보험"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 산업재해보상보험의 내용",
+            "page": 59,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 477.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.2 산업재해보상보험의 내용"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 산업재해보상보험의 급여의 종류",
+            "page": 59,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 519.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 산업재해보상보험의 급여의 종류"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 산업재해보상보험상의 신체장해평가",
+            "page": 60,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 43,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 724.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 산업재해보상보험상의 신체장해평가"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 재해의 인정과 인과관계 판정",
+            "page": 61,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 404.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 재해의 인정과 인과관계 판정"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.3 산업재해보상보험과 사회보장",
+            "page": 62,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 290.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.3 산업재해보상보험과 사회보장"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 산업재해와 사회보장",
+            "page": 62,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 331.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 산업재해와 사회보장"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 사회보험으로서 산업재해보상보험",
+            "page": 62,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 701.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 사회보험으로서 산업재해보상보험"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 다른 사회보험과의 관계",
+            "page": 63,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 358.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 다른 사회보험과의 관계"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "제7장 환경 및 직업요인에 의한 질환",
+            "page": 65,
+            "level_reason": "Matched layout rule for level 1 (s=31.0, r=3.27, start_shape 'A')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 31.0,
+                "r": 3.27,
+                "x": 95.0,
+                "y": 126.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "환경 및 직업요인에 의한 질환"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "1. 환경성질환",
+            "page": 65,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 453.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1. 환경성질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 환경성질환의 개념",
+            "page": 65,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 609.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.1 환경성질환의 개념"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 세계보건기구의 환경성 질병부담",
+            "page": 66,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 396.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.2 세계보건기구의 환경성 질병부담"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 한국의 환경성질환",
+            "page": 67,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 214.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.3 한국의 환경성질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 한국 환경성질환의 역사",
+            "page": 67,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 255.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 한국 환경성질환의 역사"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 환경성질환의 법적 정의",
+            "page": 67,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 41,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 747.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 환경성질환의 법적 정의"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "2. 직업성질환의 개념",
+            "page": 69,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 226.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2. 직업성질환의 개념"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 직업성질환의 정의와 개념",
+            "page": 69,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 401.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.1 직업성질환의 정의와 개념"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 직업성질환의 정의",
+            "page": 69,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 442.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 직업성질환의 정의"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직업성질환과 작업관련성질환의 차이점",
+            "page": 69,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 600.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 직업성질환과 작업관련성질환의 차이점"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 직업성질환의 종류",
+            "page": 70,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.5,
+                "r": 1.46,
+                "x": 181.0,
+                "y": 92.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.2 직업성질환의 종류"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 원인별로 분류한 직업성질환",
+            "page": 70,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 12.0,
+                "r": 1.41,
+                "x": 173.0,
+                "y": 134.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 원인별로 분류한 직업성질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 계통별로 분류한 직업성질환",
+            "page": 70,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 46,
+                "s": 12.0,
+                "r": 1.41,
+                "x": 173.0,
+                "y": 762.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 계통별로 분류한 직업성질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 법규에 명시된 업무상 질병",
+            "page": 71,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 131.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 법규에 명시된 업무상 질병"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 직업성질환의 발생 현황",
+            "page": 71,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 448.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.3 직업성질환의 발생 현황"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 직업성질환의 진단",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 12.5,
+                "r": 1.46,
+                "x": 73.0,
+                "y": 353.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.4 직업성질환의 진단"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 직업력 조사",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 10.0,
+                "r": 1.17,
+                "x": 75.0,
+                "y": 431.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 직업력 조사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 과거력",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 10.0,
+                "r": 1.17,
+                "x": 75.0,
+                "y": 479.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 과거력"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 작업장에서 노출되고 있는 유해요인, 보호구 착용 여부 및 착용 시기",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 10.0,
+                "r": 1.17,
+                "x": 75.0,
+                "y": 542.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 작업장에서 노출되고 있는 유해요인, 보호구 착용 여부 및 착용 시기"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 발병까지의 시간 경과 및 임상증상",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 10.0,
+                "r": 1.17,
+                "x": 75.0,
+                "y": 606.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 발병까지의 시간 경과 및 임상증상"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 동료 근로자에서의 증상 또는 질병 조사",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 10.0,
+                "r": 1.17,
+                "x": 75.0,
+                "y": 669.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(5) 동료 근로자에서의 증상 또는 질병 조사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(6) 비직업적 요인",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 10.0,
+                "r": 1.17,
+                "x": 75.0,
+                "y": 703.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(6) 비직업적 요인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(7) 이학적 검사",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 10.0,
+                "r": 1.17,
+                "x": 75.0,
+                "y": 751.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(7) 이학적 검사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(8) 검사실 검사",
+            "page": 74,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)') and follows context hierarchy.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(8) 검사실 검사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(9) 영상의학적 검사",
+            "page": 74,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 133.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(9) 영상의학적 검사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(10) 신경생리학적 검사",
+            "page": 74,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 167.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(10) 신경생리학적 검사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(11) 심리학적 검사",
+            "page": 74,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 200.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(11) 심리학적 검사"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.5 직업성질환의 예방 및 관리",
+            "page": 74,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 756.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.5 직업성질환의 예방 및 관리"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 작업환경관리",
+            "page": 75,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 작업환경관리"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 근로자 건강관리",
+            "page": 75,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 273.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 근로자 건강관리"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 근로자 교육",
+            "page": 75,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 355.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 근로자 교육"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "3. 직업과 건강",
+            "page": 76,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 349.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3. 직업과 건강"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 직업에 따른 직업성질환",
+            "page": 76,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 757.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.1 직업에 따른 직업성질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 보건의료종사자의 직업성질환",
+            "page": 77,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 191.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 보건의료종사자의 직업성질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 정규직과 비정규직근로자의 직업성질환",
+            "page": 77,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 637.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 정규직과 비정규직근로자의 직업성질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 교대작업자의 직업성질환",
+            "page": 77,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 44,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 780.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 교대작업자의 직업성질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 업종에 따른 직업성질환",
+            "page": 78,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 335.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.2 업종에 따른 직업성질환"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "4. 직업성 암",
+            "page": 81,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 211.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4. 직업성 암"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 직업성 암의 역학",
+            "page": 81,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 353.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.1 직업성 암의 역학"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 직업성 발암물질 노출 후부터 암 발생까지의 시간",
+            "page": 81,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 552.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 직업성 발암물질 노출 후부터 암 발생까지의 시간"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직업성 암의 발생빈도",
+            "page": 81,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 679.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 직업성 암의 발생빈도"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 직업성 발암물질",
+            "page": 82,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 487.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.2 직업성 발암물질"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 국제암연구소(International Agency for Research on Cancer, IARC)",
+            "page": 82,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 610.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 국제암연구소(International Agency for Research on Cancer, IARC)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) Group 1(120개) - 인체 발암물질",
+            "page": 82,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, R=1.00, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 183.0,
+                "y": 677.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) Group 1(120개) - 인체 발암물질: 인체 발암성이 충분히 입증된 경우가 이 범주에 해당한다."
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) Group 2(401개)- 인체 발암 추정/가능물질",
+            "page": 82,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, R=1.00, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 38,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 183.0,
+                "y": 692.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) Group 2(401개)- 인체 발암 추정/가능물질: 인체 발암성의 증거가 충분한 수준에 가까"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) Group 3(499개) - 인체 발암성 미분류 물질",
+            "page": 83,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, R=1.11, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.11,
+                "x": 75.0,
+                "y": 131.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) Group 3(499개) - 인체 발암성 미분류 물질: 인체 발암성의 증거가 부적절하며 실험동"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) Group 4(없음) - 인체 비발암성 추정물질",
+            "page": 83,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, R=1.11, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 9.5,
+                "r": 1.11,
+                "x": 75.0,
+                "y": 161.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) Group 4(없음) - 인체 비발암성 추정물질: 인체나 실험동물에서 발암성이 없다는 강력"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 미국산업위생사협회(American Conference of Governmental Industrial Hygienists, ACGIH)",
+            "page": 83,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.41, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 12.0,
+                "r": 1.41,
+                "x": 65.0,
+                "y": 606.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 미국산업위생사협회(American Conference of Governmental Industrial"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) A1 - 인체 발암성 확인물질",
+            "page": 83,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, R=1.11, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 9.5,
+                "r": 1.11,
+                "x": 75.0,
+                "y": 661.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) A1 - 인체 발암성 확인물질: 지금까지의 연구를 통하여 발암성을 가지고 있는 것으로"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) A2 - 인체 발암성 의심물질",
+            "page": 83,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, R=1.11, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 41,
+                "s": 9.5,
+                "r": 1.11,
+                "x": 75.0,
+                "y": 692.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) A2 - 인체 발암성 의심물질: 역학적 증거가 제한적이거나 1종 이상의 동물실험에서 발"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) A3 - 동물 발암성 확인물질이지만 인체 발암성은 알 수 없는 물질",
+            "page": 83,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, R=1.11, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 43,
+                "s": 9.5,
+                "r": 1.11,
+                "x": 75.0,
+                "y": 722.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) A3 - 동물 발암성 확인물질이지만 인체 발암성은 알 수 없는 물질"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) A4 - 인체 발암성 분류가 불가능한 물질",
+            "page": 83,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, R=1.11, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 44,
+                "s": 9.5,
+                "r": 1.11,
+                "x": 75.0,
+                "y": 737.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) A4 - 인체 발암성 분류가 불가능한 물질"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(5) A5 - 인체 비발암 물질",
+            "page": 83,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, R=1.11, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 45,
+                "s": 9.5,
+                "r": 1.11,
+                "x": 75.0,
+                "y": 753.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(5) A5 - 인체 비발암 물질"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 한국의 직업성 발암물질 분류",
+            "page": 83,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.41, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 46,
+                "s": 12.0,
+                "r": 1.41,
+                "x": 65.0,
+                "y": 783.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 한국의 직업성 발암물질 분류"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 직업성 암의 유발물질과 관련작업",
+            "page": 84,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 389.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 직업성 암의 유발물질과 관련작업"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "5) 한국의 직업성 암 원인물질",
+            "page": 84,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 455.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5) 한국의 직업성 암 원인물질"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "6) 한국의 직업성 암 인정기준",
+            "page": 85,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.41, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 40,
+                "s": 12.0,
+                "r": 1.41,
+                "x": 65.0,
+                "y": 657.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "6) 한국의 직업성 암 인정기준"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.3 직업성 암의 진단",
+            "page": 86,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 28,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 517.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.3 직업성 암의 진단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 암의 확진",
+            "page": 86,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 610.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 암의 확진"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 발암물질 노출 확인",
+            "page": 86,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 677.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 발암물질 노출 확인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 잠복기 조사",
+            "page": 86,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 40,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 774.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 잠복기 조사"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 발암물질 노출과 암 발생과의 관련성 평가",
+            "page": 87,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 146.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 발암물질 노출과 암 발생과의 관련성 평가"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "5) 직업관련성 평가",
+            "page": 87,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 212.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5) 직업관련성 평가"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.4 직업성 암의 예방",
+            "page": 87,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 271.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.4 직업성 암의 예방"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 일차 예방",
+            "page": 87,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 313.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 일차 예방"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 발암물질의 사용 금지 또는 제한",
+            "page": 87,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 347.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 발암물질의 사용 금지 또는 제한"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 노출 감소",
+            "page": 87,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 395.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 노출 감소"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 개인 위생",
+            "page": 87,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 489.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 개인 위생"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 근로자 교육",
+            "page": 87,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 568.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 근로자 교육"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 이차 예방",
+            "page": 87,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 632.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 이차 예방"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 정기적인 건강진단",
+            "page": 87,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 666.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 정기적인 건강진단"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 추적 조사",
+            "page": 88,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 추적 조사"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "5. 직업성폐질환",
+            "page": 89,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 440.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5. 직업성폐질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "5.1 직업성폐질환의 역학",
+            "page": 90,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 92.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5.1 직업성폐질환의 역학"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 현황",
+            "page": 90,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 134.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 현황"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직업성폐질환의 개념 및 정의",
+            "page": 90,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 307.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 직업성폐질환의 개념 및 정의"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 발생 원인 및 역학적 특성",
+            "page": 90,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 42,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 677.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 발생 원인 및 역학적 특성"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "5.2 직업성폐질환의 진단",
+            "page": 92,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 274.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5.2 직업성폐질환의 진단"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "5.3 직업성폐질환의 예방과 관리",
+            "page": 93,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 46,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 775.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5.3 직업성폐질환의 예방과 관리"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "6. 근골격계질환",
+            "page": 95,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 516.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "6. 근골격계질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "6.1 작업관련성 근골격계질환의 개념",
+            "page": 95,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 659.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "6.1 작업관련성 근골격계질환의 개념"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 작업관련성 근골격계질환의 정의",
+            "page": 95,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 701.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 작업관련성 근골격계질환의 정의"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 작업관련성 근골격계질환의 특징",
+            "page": 98,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 작업관련성 근골격계질환의 특징"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 작업관련성 근골격계질환의 원인",
+            "page": 98,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 539.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 작업관련성 근골격계질환의 원인"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "6.2 작업관련성 근골격계질환의 평가와 진단",
+            "page": 99,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 92.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "6.2 작업관련성 근골격계질환의 평가와 진단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 유해요인조사",
+            "page": 99,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 134.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 유해요인조사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 사업주는 근골격계 부담작업에 근로자를 종사하도록 하는 경우에는 3년마다 다음",
+            "page": 99,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 200.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 사업주는 근골격계 부담작업에 근로자를 종사하도록 하는 경우에는 3년마다 다음"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 사업주는 다음 사항에 해당되는 사유가 발생한 경우에는 지체 없이 유해요인조사를",
+            "page": 99,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 311.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 사업주는 다음 사항에 해당되는 사유가 발생한 경우에는 지체 없이 유해요인조사를"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 작업관련성 근골격계질환의 진단",
+            "page": 99,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 649.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 작업관련성 근골격계질환의 진단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 작업관련성 근골격계질환의 작업관련성 평가",
+            "page": 100,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 작업관련성 근골격계질환의 작업관련성 평가"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "6.3 작업관련성 근골격계질환의 예방과 관리",
+            "page": 100,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 432.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "6.3 작업관련성 근골격계질환의 예방과 관리"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "7. 심뇌혈관질환",
+            "page": 101,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 671.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "7. 심뇌혈관질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "7.1 작업관련성 심혈관질환",
+            "page": 102,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 184.0,
+                "y": 92.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "7.1 작업관련성 심혈관질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 역학",
+            "page": 102,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 134.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 역학"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직업적 위험요인",
+            "page": 102,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 291.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 직업적 위험요인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 화학적⋅물리적 요인",
+            "page": 102,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 358.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 화학적⋅물리적 요인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 사회심리적 요인",
+            "page": 103,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 282.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 사회심리적 요인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 심뇌혈관질환의 업무상 질병 인정기준",
+            "page": 103,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 589.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 심뇌혈관질환의 업무상 질병 인정기준"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 예방과 관리",
+            "page": 104,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 예방과 관리"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "8. 정신질환",
+            "page": 106,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 318.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "8. 정신질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "8.1 작업관련성 정신질환의 개념",
+            "page": 106,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 448.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "8.1 작업관련성 정신질환의 개념"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 작업관련성 정신질환의 발생 원인",
+            "page": 106,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 490.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 작업관련성 정신질환의 발생 원인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 업무관련 정신사회적 요인",
+            "page": 107,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 364.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 업무관련 정신사회적 요인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 물리적 요인",
+            "page": 107,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 34,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 612.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 물리적 요인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 화학적 요인",
+            "page": 108,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 화학적 요인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 개인의 감수성",
+            "page": 108,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 255.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 개인의 감수성"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 작업관련성 정신질환의 역학",
+            "page": 108,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 394.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 작업관련성 정신질환의 역학"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "8.2 작업관련성 정신질환의 진단",
+            "page": 108,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 681.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "8.2 작업관련성 정신질환의 진단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 작업관련성 정신질환 진단",
+            "page": 108,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 38,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 722.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 작업관련성 정신질환 진단"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 사업장 내 정신과적 증상에 대한 평가",
+            "page": 108,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 759.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 사업장 내 정신과적 증상에 대한 평가"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 정신질환의 진단",
+            "page": 109,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 237.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 정신질환의 진단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 작업관련성 정신질환의 작업관련성 평가",
+            "page": 109,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 543.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 작업관련성 정신질환의 작업관련성 평가"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "8.3 작업관련성 정신질환의 예방과 관리",
+            "page": 110,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 222.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "8.3 작업관련성 정신질환의 예방과 관리"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 일차 예방",
+            "page": 110,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 263.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 일차 예방"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 이차 예방",
+            "page": 110,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 28,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 558.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 이차 예방"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 삼차 예방",
+            "page": 110,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 655.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 삼차 예방"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "9. 피부질환",
+            "page": 112,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 104.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "9. 피부질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "9.1 직업성 피부질환의 원인 및 종류",
+            "page": 112,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 610.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "9.1 직업성 피부질환의 원인 및 종류"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 직업성 피부질환의 원인",
+            "page": 112,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 651.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 직업성 피부질환의 원인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 직접적 요인",
+            "page": 112,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 718.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 직접적 요인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 간접적 요인(개인적 요인)",
+            "page": 113,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 677.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 간접적 요인(개인적 요인)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직업성 피부질환의 종류",
+            "page": 114,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 직업성 피부질환의 종류"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 자극접촉피부염",
+            "page": 114,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 167.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 자극접촉피부염"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 알레르기접촉피부염",
+            "page": 114,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 608.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 알레르기접촉피부염"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 접촉두드러기(접촉담마진)",
+            "page": 115,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 176.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 접촉두드러기(접촉담마진)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 백피증",
+            "page": 115,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 407.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 백피증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 직업성 여드름",
+            "page": 115,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 607.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(5) 직업성 여드름"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(6) 광선피부장해(actinic skin damage)",
+            "page": 116,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 131.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(6) 광선피부장해(actinic skin damage)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(7) 피부암",
+            "page": 116,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 270.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(7) 피부암"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "9.2 직업성 피부질환의 진단",
+            "page": 116,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 417.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "9.2 직업성 피부질환의 진단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 직업성 피부질환의 진단",
+            "page": 116,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 458.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 직업성 피부질환의 진단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 피부질환의 작업관련성 평가",
+            "page": 116,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 661.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 피부질환의 작업관련성 평가"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "9.3 직업성 피부질환의 예방과 관리",
+            "page": 117,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 290.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "9.3 직업성 피부질환의 예방과 관리"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "10. 신경계질환",
+            "page": 118,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 395.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "10. 신경계질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "10.1 직업성 신경계질환의 원인",
+            "page": 118,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 180.0,
+                "y": 536.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "10.1 직업성 신경계질환의 원인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 직업성 신경계질환의 발생 원인",
+            "page": 118,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 578.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 직업성 신경계질환의 발생 원인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직업성 신경계질환의 역학적 특성",
+            "page": 119,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 252.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 직업성 신경계질환의 역학적 특성"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "10.2 직업성 신경계질환의 진단",
+            "page": 119,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 72.0,
+                "y": 507.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "10.2 직업성 신경계질환의 진단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 직업성 신경계질환의 특성",
+            "page": 119,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 28,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 549.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 직업성 신경계질환의 특성"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 금속에 의한 신경계질환의 특성",
+            "page": 119,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 616.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 금속에 의한 신경계질환의 특성"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 유기용제에 의한 신경계질환의 특성",
+            "page": 120,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 161.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 유기용제에 의한 신경계질환의 특성"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 기타 원인에 의한 신경계질환의 특성",
+            "page": 120,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 422.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 기타 원인에 의한 신경계질환의 특성"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직업성 신경계질환의 진단",
+            "page": 120,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 592.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 직업성 신경계질환의 진단"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 증상조사와 진찰",
+            "page": 120,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 689.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 증상조사와 진찰"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 영상의학 검사",
+            "page": 120,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 41,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 767.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 영상의학 검사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 전기생리학적 검사방법",
+            "page": 121,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 131.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 전기생리학적 검사방법"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 신경행동검사 및 심리검사",
+            "page": 121,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 270.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 신경행동검사 및 심리검사"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 직업성 신경계질환의 업무관련성 평가",
+            "page": 121,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 394.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 직업성 신경계질환의 업무관련성 평가"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 질병으로부터 업무관련성 유추",
+            "page": 121,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 461.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 질병으로부터 업무관련성 유추"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 생물학적 노출지표 물질을 이용",
+            "page": 121,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 646.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 생물학적 노출지표 물질을 이용"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 작업환경측정 자료의 활용",
+            "page": 121,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 725.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 작업환경측정 자료의 활용"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "10.3 직업성 신경계질환의 예방과 관리",
+            "page": 122,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 180.0,
+                "y": 137.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "10.3 직업성 신경계질환의 예방과 관리"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "11. 생식기계질환",
+            "page": 124,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 104.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "11. 생식기계질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "11.1 직업성 생식기계질환",
+            "page": 124,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 180.0,
+                "y": 233.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "11.1 직업성 생식기계질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 직업성 생식기계질환의 역학",
+            "page": 124,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 275.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 직업성 생식기계질환의 역학"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직업성 생식기계질환의 진단",
+            "page": 125,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 515.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 직업성 생식기계질환의 진단"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 환자면접",
+            "page": 125,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 581.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 환자면접"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 이학적 검사",
+            "page": 125,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 38,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 721.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 이학적 검사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 임상검사",
+            "page": 126,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 임상검사"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 직업성 생식기계질환 예방과 관리",
+            "page": 126,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 240.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 직업성 생식기계질환 예방과 관리"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "12. 신장질환",
+            "page": 127,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 305.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "12. 신장질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "12.1 직업성 신장질환",
+            "page": 127,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 435.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "12.1 직업성 신장질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 직업성 신장질환의 역학 및 원인",
+            "page": 127,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 477.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 직업성 신장질환의 역학 및 원인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직업성 신장질환의 진단",
+            "page": 127,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 710.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 직업성 신장질환의 진단"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "13. 간질환",
+            "page": 131,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 104.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "13. 간질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "13.1 직업성 간질환",
+            "page": 131,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 234.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "13.1 직업성 간질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 직업성 간질환의 역학",
+            "page": 131,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 275.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 직업성 간질환의 역학"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 유해인자",
+            "page": 131,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 310.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 유해인자"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 바이러스성 간염",
+            "page": 132,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 34,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 626.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 바이러스성 간염"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 독성 기전",
+            "page": 133,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 267.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 독성 기전"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직업성 간질환의 진단",
+            "page": 133,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 422.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 직업성 간질환의 진단"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 직업력 및 병력",
+            "page": 133,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 610.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 직업력 및 병력"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 임상진찰",
+            "page": 133,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 43,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 780.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 임상진찰"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 감별진단",
+            "page": 134,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 161.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 감별진단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 직업성 간질환의 예방과 관리",
+            "page": 134,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 300.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 직업성 간질환의 예방과 관리"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 직업성 간질환의 관리",
+            "page": 134,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 335.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 직업성 간질환의 관리"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 직업성 간질환의 의학적 감시",
+            "page": 134,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 611.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 직업성 간질환의 의학적 감시"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "14. 조혈기계질환",
+            "page": 135,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 716.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "14. 조혈기계질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "14.1 적혈구 생존 감소",
+            "page": 136,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 180.0,
+                "y": 269.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "14.1 적혈구 생존 감소"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 메트헤모글로빈 혈증과 산화성 용혈",
+            "page": 136,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 310.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 메트헤모글로빈 혈증과 산화성 용혈"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 금속에 의한 용혈",
+            "page": 137,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 191.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 금속에 의한 용혈"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "14.2 산소포화도 감소",
+            "page": 137,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 447.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "14.2 산소포화도 감소"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 산소포화도 감소",
+            "page": 137,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 489.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 산소포화도 감소"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "14.3 혈구형성 장애",
+            "page": 138,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 180.0,
+                "y": 183.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "14.3 혈구형성 장애"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 재생불량성 빈혈",
+            "page": 138,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 225.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 재생불량성 빈혈"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 기타 림프조혈기계 질환",
+            "page": 138,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 519.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 기타 림프조혈기계 질환"
+            }
+        }
+    ],
+    "_meta": {
+        "source_input_directory": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/chunk1_v2",
+        "source_chunk": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/input_chunks/3_5-7_2021_gemma_20260708_122547/chunk_1_pages_1-34.json",
+        "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/chunk1_v2/3편5-7장(2021)_openai_gpt-5.5_toc_chunk1.json",
+        "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/parsed_pdfs/3_5-7_2021_gemma_20260708_122547_parsed_pdf.txt",
+        "provider": "gemma_vllm",
+        "model": "gemma4:31b",
+        "generated_at": "2026-07-20T15:57:32+09:00",
+        "generation_started_at": "2026-07-20T15:53:10+09:00",
+        "generation_completed_at": "2026-07-20T15:57:32+09:00",
+        "elapsed_seconds": 261.485,
+        "elapsed": "4m 21.5s",
+        "generation_mode": "parsed_chunks",
+        "parsed_chunk_count": 6,
+        "parsed_chunk_chars": 80000,
+        "max_chunk_split_depth": 3,
+        "boundary_context_pages": 2,
+        "chapter_sort": "page_then_parsed_source_order",
+        "matched_layout_entries": 334,
+        "unmatched_layout_entries": 0,
+        "layout_metadata_fields": [
+            "source_order",
+            "s",
+            "r",
+            "x",
+            "y",
+            "b",
+            "i",
+            "f",
+            "source_text"
+        ],
+        "output_directory": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output_chunk1_v2/3_5-7_2021_gemma_20260708_122547_20260720_155310"
+    }
+}

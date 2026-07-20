@@ -1,0 +1,230 @@
+{
+    "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/chunk1_v2/3편3,4장(2021)_openai_gpt-5.5_toc_chunk1.json",
+    "source_chunk": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/input_chunks/3_3_4_2021_gemma_20260710_093126/chunk_1_pages_1-35.json",
+    "matching_priority": [
+        "S/R/B/I/F",
+        "learned start shape",
+        "X",
+        "Y"
+    ],
+    "rules": [
+        {
+            "level": 1,
+            "s": 31.0,
+            "r": 3.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 220.0,
+            "x_max": 220.0,
+            "y_min": 126.0,
+            "y_max": 126.0,
+            "start_shapes": [
+                "A"
+            ],
+            "reference_count": 1,
+            "examples": [
+                "제3장 화학적 요인"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 18.0,
+            "r": 1.9,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 77.0,
+            "x_max": 185.0,
+            "y_min": 104.0,
+            "y_max": 423.0,
+            "start_shapes": [
+                "#."
+            ],
+            "reference_count": 4,
+            "examples": [
+                "1. 유해금속",
+                "2. 유기용제",
+                "3. 유해가스",
+                "4. 잔류유기오염물질"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 12.5,
+            "r": 1.32,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 73.0,
+            "x_max": 181.0,
+            "y_min": 92.0,
+            "y_max": 706.0,
+            "start_shapes": [
+                "#.#"
+            ],
+            "reference_count": 13,
+            "examples": [
+                "2.1 유기용제의 종류",
+                "2.2 유기용제의 사용",
+                "2.3 유기용제의 대사",
+                "2.4 유기용제의 건강영향",
+                "2.5 유기용제 노출평가",
+                "2.6 노말헥산",
+                "2.9 이황화탄소",
+                "2.10 트라이클로로에틸렌"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 12.2,
+            "r": 1.29,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 73.0,
+            "x_max": 181.0,
+            "y_min": 205.0,
+            "y_max": 626.0,
+            "start_shapes": [
+                "#.#"
+            ],
+            "reference_count": 4,
+            "examples": [
+                "1.3 카드뮴",
+                "1.7 베릴륨",
+                "2.8 톨루엔",
+                "3.2 자극제"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 12.0,
+            "r": 1.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 73.0,
+            "x_max": 181.0,
+            "y_min": 250.0,
+            "y_max": 779.0,
+            "start_shapes": [
+                "#.#"
+            ],
+            "reference_count": 8,
+            "examples": [
+                "1.1 납",
+                "1.2 수은",
+                "1.4 크롬",
+                "1.5 망간",
+                "1.6 비소",
+                "2.7 벤젠",
+                "2.12 메탄올",
+                "3.1 서 론"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 12.0,
+            "r": 1.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 65.0,
+            "x_max": 183.0,
+            "y_min": 85.0,
+            "y_max": 768.0,
+            "start_shapes": [
+                "#)"
+            ],
+            "reference_count": 49,
+            "examples": [
+                "1) 납의 특성",
+                "2) 작업환경에서의 납 노출",
+                "3) 생활환경에서의 납 노출",
+                "4) 납의 체내 대사",
+                "5) 납중독의 병리",
+                "6) 납중독의 임상증상",
+                "7) 저농도 납 노출로 인한 건강장애",
+                "8) 진단"
+            ]
+        },
+        {
+            "level": 5,
+            "s": 10.0,
+            "r": 1.05,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 75.0,
+            "x_max": 183.0,
+            "y_min": 85.0,
+            "y_max": 737.0,
+            "start_shapes": [
+                "(#)"
+            ],
+            "reference_count": 31,
+            "examples": [
+                "(1) 흡수",
+                "(2) 체내순환, 분포 및 저장",
+                "(3) 배설",
+                "(1) 헴(heme) 합성의 장해",
+                "(2) 적혈구에 미치는 작용",
+                "(3) 신기능의 장해",
+                "(4) 신경조직의 변화",
+                "(1) 위장계통 장해"
+            ]
+        },
+        {
+            "level": 6,
+            "s": 9.5,
+            "r": 1.0,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 75.0,
+            "x_max": 183.0,
+            "y_min": 85.0,
+            "y_max": 783.0,
+            "start_shapes": [
+                "#"
+            ],
+            "reference_count": 6,
+            "examples": [
+                "① 호흡기를 통한 흡수",
+                "② 위장관을 통한 흡수",
+                "① 혈액 검사",
+                "② 혈중 납량의 측정",
+                "③ 혈중 아연프로토포르피린(zinc protoporphyrin)의 측정",
+                "④ 델타아미노레불린산(δ-aminolevulinic acid, ALA) 측정"
+            ]
+        }
+    ],
+    "unmatched_reference_titles": [
+        {
+            "level": 4,
+            "chapter": "1) 암모니아(ammonia, NH3)",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "2) 질소산화물(nitrogen oxides, NOx)",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "3) 아황산가스(Sulfur dioxide, SO2)",
+            "page": 32
+        },
+        {
+            "level": 4,
+            "chapter": "4) 오존(ozone, O3)",
+            "page": 32
+        },
+        {
+            "level": 4,
+            "chapter": "3) 황화수소(hydrogen sulfide, H2S)",
+            "page": 34
+        }
+    ]
+}
