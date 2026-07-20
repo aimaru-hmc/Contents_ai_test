@@ -402,7 +402,6 @@ The layout JSON was generated from CHUNK and REFERENCE and provides verified but
 - Behave like the generate_toc step, but do the matching and filtering with Gemma instead of Python rule matching.
 - First apply all exclusion rules. Only then use the Layout JSON rules to classify the remaining headings.
 - Exclusion rules have higher priority than every layout, style, position, and numbering rule.
-- Never output a heading whose case-insensitive, whitespace-normalized title is exactly "Study questions" or "References", even when S/R/B/I/F matches a valid TOC level.
 - Treat the Layout JSON rules as strong examples learned from the verified chunk, not as an exhaustive whitelist of heading styles or levels.
 - For styles represented in Layout JSON, match headings by S/R/B/I/F first, then start_shapes, X/Y position, and numbering.
 - Never reject a heading only because its S/R/B/I/F style or target level is absent from Layout JSON.
@@ -411,7 +410,7 @@ The layout JSON was generated from CHUNK and REFERENCE and provides verified but
 - Before finalizing, perform a second review of unmatched lines with heading-like numbering or typography and include valid unseen-style headings, while still excluding numbered body lists and sentences.
 - Use only text that appears in the parsed layout text. Do not invent, rewrite, or summarize titles.
 - Preserve original numbering and title text exactly.
-- Exclude covers, prefaces, existing TOC listing rows, indexes, references, page numbers, repeated headers/footers, captions, questions, and body sentences.
+- Exclude covers, prefaces, existing TOC listing rows, indexes, page numbers, repeated headers/footers, captions, and body sentences.
 - Existing TOC/Contents pages may help you understand structure, but do not output listing rows unless the same title appears as a real body heading.
 - Preserve PDF page order and source order within each page.
 - Every parsed layout line has a page-local source_order. Copy the exact source_order of the selected heading line.
@@ -463,7 +462,6 @@ The layout JSON was generated from CHUNK and REFERENCE and provides verified but
 - Output only TOC entries whose real body heading appears inside this chunk.
 - First apply all exclusion rules. Only then use the Layout JSON rules to classify the remaining headings.
 - Exclusion rules have higher priority than every layout, style, position, and numbering rule.
-- Never output a heading whose case-insensitive, whitespace-normalized title is exactly "Study questions" or "References", even when S/R/B/I/F matches a valid TOC level.
 - Treat the Layout JSON rules as strong examples learned from the verified chunk, not as an exhaustive whitelist of heading styles or levels.
 - For styles represented in Layout JSON, match headings by S/R/B/I/F first, then start_shapes, X/Y position, and numbering.
 - Never reject a heading only because its S/R/B/I/F style or target level is absent from Layout JSON.
@@ -472,7 +470,7 @@ The layout JSON was generated from CHUNK and REFERENCE and provides verified but
 - Before finalizing, perform a second review of unmatched lines with heading-like numbering or typography and include valid unseen-style headings, while still excluding numbered body lists and sentences.
 - Use only text that appears in the parsed layout text. Do not invent, rewrite, or summarize titles.
 - Preserve original numbering and title text exactly.
-- Exclude covers, prefaces, existing TOC listing rows, indexes, references, page numbers, repeated headers/footers, captions, questions, and body sentences.
+- Exclude covers, prefaces, existing TOC listing rows, indexes, page numbers, repeated headers/footers, captions, and body sentences.
 - Existing TOC/Contents pages may help you understand structure, but do not output listing rows unless the same title appears as a real body heading.
 - Preserve PDF page order and source order within the chunk.
 - Every parsed layout line has a page-local source_order. Copy the exact source_order of the selected heading line.
