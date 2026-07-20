@@ -1,0 +1,2018 @@
+{
+    "title": "건강과 질병",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "건강과 질병의 정의 및 결정요인",
+            "page": 3,
+            "level_reason": "Matched layout rule for level 1 (S=31.0, R=3.27) and chapter numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 31.0,
+                "r": 3.27,
+                "x": 80.0,
+                "y": 126.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "건강과 질병의 정의 및 결정요인"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "1. 건강상태와 질병상태의 개념",
+            "page": 3,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90) and numbering '1.'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 392.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1. 건강상태와 질병상태의 개념"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 건강 개념의 변천",
+            "page": 3,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '1.1'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 521.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.1 건강 개념의 변천"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 신체(身體)개념의 건강",
+            "page": 3,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 704.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 신체(身體)개념의 건강"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 심신(心身)개념의 건강",
+            "page": 4,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 176.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 심신(心身)개념의 건강"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 생활개념의 건강",
+            "page": 4,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '3)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 364.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 생활개념의 건강"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 생활수단 개념의 건강",
+            "page": 4,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '4)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 704.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 생활수단 개념의 건강"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "5) 기타 건강에 대한 정의들",
+            "page": 5,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '5)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 237.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5) 기타 건강에 대한 정의들"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 질병상태의 개념과 분류",
+            "page": 6,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '1.2'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 92.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.2 질병상태의 개념과 분류"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 질병상태의 분류와 질병 이름",
+            "page": 6,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 564.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 질병상태의 분류와 질병 이름"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 역학적 분류기준",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 206.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 역학적 분류기준"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 건강 관련 삶의 질 개념",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '1.3'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 447.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.3 건강 관련 삶의 질 개념"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 건강보호의 책임에 대한 개념 변화",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '1.4'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 41,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 684.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.4 건강보호의 책임에 대한 개념 변화"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.5 인권으로서의 건강권",
+            "page": 8,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '1.5'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 563.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.5 인권으로서의 건강권"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "2. 건강과 질병의 결정요인 및 건강모형",
+            "page": 10,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90) and numbering '2.'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 119.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2. 건강과 질병의 결정요인 및 건강모형"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 결정요인의 개념 및 인과성과 인과론",
+            "page": 10,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '2.1'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 337.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.1 결정요인의 개념 및 인과성과 인과론"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 건강-질병현상의 결정요인",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '2.2'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 365.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.2 건강-질병현상의 결정요인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 유전 요인",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 610.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 유전 요인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 성(性) 관련 요인",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 41,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 692.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 성(性) 관련 요인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 생활습관 및 건강행태 요인",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '3)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 46,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 789.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 생활습관 및 건강행태 요인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 개인의 사회경제적 수준",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '4)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 176.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 개인의 사회경제적 수준"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "5) 환경 요인",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '5)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 349.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5) 환경 요인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "6) 문화적 요인",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '6)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 492.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "6) 문화적 요인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "7) 정치적/사회제도적 요인",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '7)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 604.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "7) 정치적/사회제도적 요인"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 건강모형",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '2.3'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 193.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.3 건강모형"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 생의학적 모형",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 331.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 생의학적 모형"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 생명의 기계론적 관점",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 459.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 생명의 기계론적 관점"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 생물학적 일탈로서의 질병",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 537.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 생물학적 일탈로서의 질병"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 특정 병인설",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(3)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 631.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 특정 병인설"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 과학적 중립성과 전문가 중심의 보건의료체계",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(4)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 725.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 과학적 중립성과 전문가 중심의 보건의료체계"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 과도한 개입주의",
+            "page": 15,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(5)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(5) 과도한 개입주의"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(6) 질병에 부속화된 건강 개념",
+            "page": 15,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(6)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 179.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(6) 질병에 부속화된 건강 개념"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 역학적 모형",
+            "page": 15,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 349.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 역학적 모형"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 건강정책분석을 위한 역학적 모형",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '3)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 60.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "건강정책 분석을 위한 역 3) 건강정책분석을 위한 역학적 모형"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 환경(environment)",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 34,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 512.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 환경(environment)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 생활습관(life style)",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 575.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 생활습관(life style)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 생물학적 특성(human biology)",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(3)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 41,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 654.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 생물학적 특성(human biology)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 보건의료체계(health care system)",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(4)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 45,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 733.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 보건의료체계(health care system)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 웰니스 모형(wellness model)",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '4)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 115.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 웰니스 모형(wellness model)"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "예방의학과 공중보건학의 개념과 활용",
+            "page": 19,
+            "level_reason": "Matched layout rule for level 1 (S=31.0, R=3.27) and chapter numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 31.0,
+                "r": 3.27,
+                "x": 91.0,
+                "y": 123.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "예방의학과 공중보건학의 개념과"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "1. 예방의학과 공중보건학의 개념",
+            "page": 19,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90) and numbering '1.'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 377.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1. 예방의학과 공중보건학의 개념"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 의학의 분류",
+            "page": 19,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '1.1'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 579.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.1 의학의 분류"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 예방의학과 공중보건학의 개념",
+            "page": 21,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '1.2'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 44,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 729.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.2 예방의학과 공중보건학의 개념"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "2. 예방의학과 공중보건학의 내용과 적용",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90) and numbering '2.'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 331.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2. 예방의학과 공중보건학의 내용과 적용"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 질병 발생단계와 예방대책",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '2.1'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 564.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.1 질병 발생단계와 예방대책"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 예방의학과 공중보건학의 내용과 활용",
+            "page": 24,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '2.2'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 502.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.2 예방의학과 공중보건학의 내용과 활용"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 예방의학과 공중보건학의 접근 전략",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 2.3.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 457.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.3 예방의학과 공중보건학의 접근 전략"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 로즈의 예방의학 전략",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 498.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 로즈의 예방의학 전략"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 건강영향 피라미드",
+            "page": 26,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 524.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 건강영향 피라미드"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 예방의학과 공중보건윤리",
+            "page": 27,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 2.4.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 532.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.4 예방의학과 공중보건윤리"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 공중보건과 윤리",
+            "page": 27,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 574.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 공중보건과 윤리"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 공중보건 활동의 특징",
+            "page": 27,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 608.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 공중보건 활동의 특징"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 공중보건영역에서 생명의료윤리 네 원칙",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 41,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 632.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 공중보건영역에서 생명의료윤리 네 원칙"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 윤리원칙의 적용",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 46,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 726.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 윤리원칙의 적용"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 공중보건 활동과 관련된 윤리 문제",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 373.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 공중보건 활동과 관련된 윤리 문제"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 감염병 관리에 관련된 윤리 문제",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 501.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 감염병 관리에 관련된 윤리 문제"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 보건의료자원의 분배에 관련된 윤리 문제",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 647.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 보건의료자원의 분배에 관련된 윤리 문제"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 건강증진과 윤리 문제",
+            "page": 31,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 389.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 건강증진과 윤리 문제"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 공중보건: 공공과 민간의 협력",
+            "page": 31,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 46,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 725.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 공중보건: 공공과 민간의 협력"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "제3장 예방의학과 공중보건학의 발전과 미래",
+            "page": 34,
+            "level_reason": "Matched layout rule for level 1 (s=31.0, r=3.27) and numbering 제3장.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 31.0,
+                "r": 3.27,
+                "x": 93.0,
+                "y": 123.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "예방의학과 공중보건학의 발전과"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "1. 서양의 예방의학과 공중보건학의 역사",
+            "page": 34,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90) and numbering 1.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 567.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1. 서양의 예방의학과 공중보건학의 역사"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 고대(B.C. ?~A.D. 476)",
+            "page": 34,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 1.1.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 616.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.1 고대(B.C. ?~A.D. 476)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 인도",
+            "page": 34,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 709.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 인도"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 메소포타미아",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 메소포타미아"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 이집트",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 243.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 이집트"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 그리스",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 4).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 370.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 그리스"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "5) 로마",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 5).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 574.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5) 로마"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 중세(A.D. 476~1453)",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 1.2.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 43,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 754.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.2 중세(A.D. 476~1453)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 중세의 전염병 창궐과 공중보건제도",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 중세의 전염병 창궐과 공중보건제도"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 한센병의 유행과 격리제도",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 319.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 한센병의 유행과 격리제도"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 페스트의 유행과 검역제도",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 461.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 페스트의 유행과 검역제도"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 르네상스와 중상주의시대(A.D. 1453~1750)",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 1.3.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 43,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 733.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.3 르네상스와 중상주의시대(A.D. 1453~1750)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 르네상스 시대와 근대 과학기술의 태동",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 44,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 774.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 르네상스 시대와 근대 과학기술의 태동"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 중상주의 시대와 통계의 발전",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 358.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 중상주의 시대와 통계의 발전"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 근대(A.D. 1750~19세기 후반)",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 1.4.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 28,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 523.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.4 근대(A.D. 1750~19세기 후반)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 계몽주의와 프랑스 혁명시대(1750~1830)",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 565.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 계몽주의와 프랑스 혁명시대(1750~1830)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 프랭크의 ‘전의사경찰체계’",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 599.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 프랭크의 ‘전의사경찰체계’"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 제너의 종두법과 피넬의 정신의료",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 754.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 제너의 종두법과 피넬의 정신의료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 산업혁명과 환경위생시대(19세기 중반)",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 191.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 산업혁명과 환경위생시대(19세기 중반)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 산업혁명과 공중보건",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 226.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 산업혁명과 공중보건"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 채드윅의 ‘열병보고서’와 영국 최초의 공중보건법",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 411.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 채드윅의 ‘열병보고서’와 영국 최초의 공중보건법"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 미국 쉐턱의 ‘매사추세츠 위생위원회 보고서’",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 626.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 미국 쉐턱의 ‘매사추세츠 위생위원회 보고서’"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 존 스노의 콜레라 전파양식의 증명",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (4).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 40,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 765.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 존 스노의 콜레라 전파양식의 증명"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 19세기 후반",
+            "page": 39,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 222.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 19세기 후반"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 세균학의 발전",
+            "page": 39,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 256.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 세균학의 발전"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 공중보건 제도의 효시",
+            "page": 39,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 456.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 공중보건 제도의 효시"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.5 20세기 전반기(제2차 대전 종말까지)",
+            "page": 39,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 1.5.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 633.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.5 20세기 전반기(제2차 대전 종말까지)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 빈곤 문제의 대두와 영국 공중보건의 발전",
+            "page": 39,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 34,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 675.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 빈곤 문제의 대두와 영국 공중보건의 발전"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 미국 공중보건 제도의 발전",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 282.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 미국 공중보건 제도의 발전"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.6 20세기 후반기(제2차 대전 후)",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 1.6.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 584.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.6 20세기 후반기(제2차 대전 후)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 사회보장제도의 확립",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 625.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 사회보장제도의 확립"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 미국과 영국의 공중보건 법률과 기구",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 131.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 미국과 영국의 공중보건 법률과 기구"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 국제협력의 시작과 공중보건의 방향 제시",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 319.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 국제협력의 시작과 공중보건의 방향 제시"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 환경문제의 대두와 이에 대한 대응",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 4).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 45,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 643.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 환경문제의 대두와 이에 대한 대응"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.7 21세기",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 1.7.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 92.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.7 21세기"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 건강불평등과 이에 대한 대응",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 134.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 건강불평등과 이에 대한 대응"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) UN의 지속가능개발목표(SDGs)",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 358.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) UN의 지속가능개발목표(SDGs)"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "2. 한국의 예방의학과 공중보건학의 역사",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90) and numbering 2.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 535.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2. 한국의 예방의학과 공중보건학의 역사"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 삼국시대",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 2.1.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 584.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.1 삼국시대"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 통일신라시대",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 2.2.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 760.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.2 통일신라시대"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 고려시대",
+            "page": 43,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 2.3.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 183.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.3 고려시대"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 조선시대",
+            "page": 43,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 2.4.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 374.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.4 조선시대"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.5 20세기",
+            "page": 44,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 2.5.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 153.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.5 20세기"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 대한제국시대(1897~1910)",
+            "page": 44,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 194.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 대한제국시대(1897~1910)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 한일합병시대(1910~1945)",
+            "page": 44,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 322.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 한일합병시대(1910~1945)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 대한민국시대(1945~)",
+            "page": 44,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 510.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 대한민국시대(1945~)"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.6 21세기",
+            "page": 46,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 2.6.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 426.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.6 21세기"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "3. 예방의학과 공중보건학의 미래",
+            "page": 47,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90) and numbering 3.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 548.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3. 예방의학과 공중보건학의 미래"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 서양에서 예방의학과 공중보건학의 위치와 역할",
+            "page": 47,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 3.1.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 692.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.1 서양에서 예방의학과 공중보건학의 위치와 역할"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 한국의 예방의학과 공중보건학의 미래와 전문가의 역할",
+            "page": 49,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering pattern #.#",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 320.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.2 한국의 예방의학과 공중보건학의 미래와 전문가의 역할"
+            }
+        }
+    ],
+    "_meta": {
+        "source_input_directory": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/chunk1_v2",
+        "source_chunk": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/input_chunks/1_2021_gemma_20260710_092845/chunk_1_pages_1-37.json",
+        "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/chunk1_v2/1편(2021)_openai_gpt-5.5_toc_chunk1.json",
+        "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/parsed_pdfs/1_2021_gemma_20260710_092845_parsed_pdf.txt",
+        "provider": "gemma_vllm",
+        "model": "gemma4:31b",
+        "generated_at": "2026-07-20T14:44:25+09:00",
+        "generation_started_at": "2026-07-20T14:42:58+09:00",
+        "generation_completed_at": "2026-07-20T14:44:25+09:00",
+        "elapsed_seconds": 86.872,
+        "elapsed": "1m 26.9s",
+        "generation_mode": "parsed_chunks",
+        "parsed_chunk_count": 3,
+        "parsed_chunk_chars": 80000,
+        "max_chunk_split_depth": 3,
+        "boundary_context_pages": 2,
+        "chapter_sort": "page_then_parsed_source_order",
+        "matched_layout_entries": 110,
+        "unmatched_layout_entries": 0,
+        "layout_metadata_fields": [
+            "source_order",
+            "s",
+            "r",
+            "x",
+            "y",
+            "b",
+            "i",
+            "f",
+            "source_text"
+        ],
+        "output_directory": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output_chunk1_v2/1_2021_gemma_20260710_092845_20260720_144258"
+    }
+}
