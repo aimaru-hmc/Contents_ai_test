@@ -1,0 +1,424 @@
+{
+    "title": "제2편 역학과 그 응용",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "제5장 타당도와 신뢰도",
+            "page": 1
+        },
+        {
+            "level": 2,
+            "chapter": "1. 연구의 타당도",
+            "page": 1
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 연구집단",
+            "page": 1
+        },
+        {
+            "level": 4,
+            "chapter": "1) 단계별 연구집단의 개념",
+            "page": 1
+        },
+        {
+            "level": 4,
+            "chapter": "2) 연구설계와 목표에 따른 인구집단",
+            "page": 1
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 내적타당도와 외적타당도의 정의",
+            "page": 3
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 내적타당도",
+            "page": 3
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 외적타당도",
+            "page": 4
+        },
+        {
+            "level": 3,
+            "chapter": "1.5 내적타당도 대 외적타당도",
+            "page": 4
+        },
+        {
+            "level": 2,
+            "chapter": "2. 측정방법의 타당도와 신뢰도",
+            "page": 5
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 정 의",
+            "page": 5
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 타당도",
+            "page": 6
+        },
+        {
+            "level": 4,
+            "chapter": "1) 민감도",
+            "page": 6
+        },
+        {
+            "level": 4,
+            "chapter": "2) 특이도",
+            "page": 6
+        },
+        {
+            "level": 4,
+            "chapter": "3) 위음성률과 위양성률",
+            "page": 6
+        },
+        {
+            "level": 4,
+            "chapter": "4) 양성예측도와 음성예측도",
+            "page": 6
+        },
+        {
+            "level": 4,
+            "chapter": "5) 검사결과가 연속형 변수로 측정될 때 타당도 평가",
+            "page": 8
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 신뢰도",
+            "page": 10
+        },
+        {
+            "level": 4,
+            "chapter": "1) 신뢰도에 영향을 미치는 변이",
+            "page": 10
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 피검자의 생물학적 변이",
+            "page": 10
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 검사자 내 변이(intra-observer variability)와 검사자 간 변이(inter-observer variability)",
+            "page": 10
+        },
+        {
+            "level": 4,
+            "chapter": "2) 신뢰도의 측정방법",
+            "page": 11
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 일치율(agreement percent)",
+            "page": 11
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 카파통계량(kappa statistics, kappa value)",
+            "page": 11
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 상관계수(correlation coefficient)",
+            "page": 12
+        },
+        {
+            "level": 2,
+            "chapter": "3. 바이어스",
+            "page": 13
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 무작위 오류와 체계적 오류",
+            "page": 13
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 오류, 신뢰도, 타당도 간 관련성",
+            "page": 13
+        },
+        {
+            "level": 3,
+            "chapter": "3.3 바이어스와 내적타당도",
+            "page": 14
+        },
+        {
+            "level": 3,
+            "chapter": "3.4 바이어스의 분류",
+            "page": 14
+        },
+        {
+            "level": 4,
+            "chapter": "1) 선택 바이어스",
+            "page": 14
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 무응답 바이어스",
+            "page": 15
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 버크슨 바이어스",
+            "page": 15
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 선택적 생존 바이어스",
+            "page": 16
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 자발적 참여자 바이어스",
+            "page": 16
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 탈락 바이어스",
+            "page": 16
+        },
+        {
+            "level": 5,
+            "chapter": "(6) 기간차이 바이어스",
+            "page": 17
+        },
+        {
+            "level": 4,
+            "chapter": "2) 정보 바이어스",
+            "page": 17
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 면담자 바이어스",
+            "page": 17
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 측정 바이어스",
+            "page": 17
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 기억 소실 바이어스와 회상 바이어스",
+            "page": 18
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 호손 효과",
+            "page": 18
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 확인 바이어스",
+            "page": 18
+        },
+        {
+            "level": 5,
+            "chapter": "(6) 시간 바이어스",
+            "page": 18
+        },
+        {
+            "level": 5,
+            "chapter": "(7) 조기발견 바이어스",
+            "page": 18
+        },
+        {
+            "level": 5,
+            "chapter": "(8) 출판 바이어스",
+            "page": 19
+        },
+        {
+            "level": 5,
+            "chapter": "(9) 검출 바이어스 혹은 결과확인 바이어스",
+            "page": 19
+        },
+        {
+            "level": 5,
+            "chapter": "(10) 실행 바이어스",
+            "page": 19
+        },
+        {
+            "level": 4,
+            "chapter": "3) 오분류 방향에 따른 결과와의 연관성 평가",
+            "page": 19
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 차별적 오분류",
+            "page": 19
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 비차별적 오분류",
+            "page": 21
+        },
+        {
+            "level": 4,
+            "chapter": "3) 교란 바이어스",
+            "page": 22
+        },
+        {
+            "level": 3,
+            "chapter": "3.5 바이어스의 제어",
+            "page": 23
+        },
+        {
+            "level": 1,
+            "chapter": "제6장 역학연구방법론",
+            "page": 25
+        },
+        {
+            "level": 2,
+            "chapter": "1. 역학연구 방법의 분류",
+            "page": 25
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 관찰연구",
+            "page": 25
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 실험연구",
+            "page": 26
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 역학연구 설계에 따른 인과성에 대한 근거 수준",
+            "page": 26
+        },
+        {
+            "level": 2,
+            "chapter": "2. 기술역학의 세 주요 변수",
+            "page": 27
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 인적 변수",
+            "page": 28
+        },
+        {
+            "level": 4,
+            "chapter": "1) 연령",
+            "page": 28
+        },
+        {
+            "level": 4,
+            "chapter": "2) 성별",
+            "page": 29
+        },
+        {
+            "level": 4,
+            "chapter": "3) 결혼 상태",
+            "page": 29
+        },
+        {
+            "level": 4,
+            "chapter": "4) 직업과 사회경제적 수준(socioeconomic status, SES)",
+            "page": 30
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 시간적 변수",
+            "page": 30
+        },
+        {
+            "level": 4,
+            "chapter": "1) 장기 추세 변동(secular trends over a long period of time)",
+            "page": 30
+        },
+        {
+            "level": 4,
+            "chapter": "2) 주기변동(cyclic variation over several years)",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "3) 계절 변동(seasonal variation)",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "4) 유행 곡선(epidemic curve)",
+            "page": 31
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 지역적 변수",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "1) 지역응집성",
+            "page": 32
+        },
+        {
+            "level": 4,
+            "chapter": "2) 지역 간 비교 단위",
+            "page": 32
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 지역 분포 비교",
+            "page": 32
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 지역 간 비교",
+            "page": 33
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 국가 간 비교",
+            "page": 33
+        },
+        {
+            "level": 2,
+            "chapter": "3. 생태학적연구와 사례/사례군연구",
+            "page": 35
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 생태학적연구",
+            "page": 35
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 사례연구와 사례군연구",
+            "page": 37
+        },
+        {
+            "level": 4,
+            "chapter": "1) 사례연구",
+            "page": 37
+        },
+        {
+            "level": 4,
+            "chapter": "2) 사례군연구",
+            "page": 37
+        }
+    ],
+    "_meta": {
+        "source_pdf": "2편5-8장(2021).pdf",
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "elapsed_seconds": 107.595,
+        "elapsed": "1m 47.6s",
+        "chunk1_created_at": "2026-07-20T09:47:55+09:00",
+        "chunk1_start_page": 1,
+        "chunk1_end_page": 39,
+        "source_chapter_count": 325,
+        "chunk1_chapter_count": 80,
+        "chunk1_source_toc": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/2편5-8장(2021)_openai_gpt-5.5_toc.json",
+        "chunk1_source_toc_max_page": 177,
+        "chunk1_source_input": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/input/부교재1/1권-한글/2편5-8장(2021).pdf",
+        "chunk1_source_input_chunks_dir": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/input_chunks/2_5-8_2021_gemma_20260708_153404",
+        "chunk1_source_input_chunks": [
+            "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/input_chunks/2_5-8_2021_gemma_20260708_153404/chunk_1_pages_1-39.json"
+        ]
+    }
+}

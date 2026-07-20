@@ -1,0 +1,74 @@
+{
+    "title": "예방의학과 공중보건학 III",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "제 4편 보건의료와 건강관리",
+            "page": 23
+        },
+        {
+            "level": 2,
+            "chapter": "제1장 보건의료에 대한 이해",
+            "page": 25
+        },
+        {
+            "level": 3,
+            "chapter": "1. 보건의료의 개념",
+            "page": 25
+        },
+        {
+            "level": 4,
+            "chapter": "1.1 보건의료의 개념과 구성요소",
+            "page": 25
+        },
+        {
+            "level": 4,
+            "chapter": "1.2 보건의료의 사회경제적 특성",
+            "page": 27
+        },
+        {
+            "level": 4,
+            "chapter": "1.3 바람직한 보건의료의 특성",
+            "page": 30
+        },
+        {
+            "level": 3,
+            "chapter": "2. 보건의료체계",
+            "page": 32
+        },
+        {
+            "level": 4,
+            "chapter": "2.1 보건의료체계 개념과 구성요소",
+            "page": 32
+        },
+        {
+            "level": 4,
+            "chapter": "2.2 의료전달체계",
+            "page": 34
+        },
+        {
+            "level": 4,
+            "chapter": "2.3 재원조달방식",
+            "page": 35
+        }
+    ],
+    "_meta": {
+        "source_pdf": "부교재3.PDF",
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "elapsed_seconds": 96.59,
+        "elapsed": "1m 36.6s",
+        "chunk1_created_at": "2026-07-20T09:47:56+09:00",
+        "chunk1_start_page": 5,
+        "chunk1_end_page": 35,
+        "source_chapter_count": 283,
+        "chunk1_chapter_count": 10,
+        "chunk1_source_toc": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/부교재3_openai_gpt-5.5_toc.json",
+        "chunk1_source_toc_max_page": 539,
+        "chunk1_source_input": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/input/부교재3.PDF",
+        "chunk1_source_input_chunks_dir": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/input_chunks/3_gemma_20260709_152713",
+        "chunk1_source_input_chunks": [
+            "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/input_chunks/3_gemma_20260709_152713/chunk_1_pages_5-35.json"
+        ]
+    }
+}

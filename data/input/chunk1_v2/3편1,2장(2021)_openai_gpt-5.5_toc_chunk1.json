@@ -1,0 +1,304 @@
+{
+    "title": "제3편 환경과 건강",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "제1장 환경과 건강",
+            "page": 3
+        },
+        {
+            "level": 2,
+            "chapter": "1. 환경보건의 개념과 요소",
+            "page": 3
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 환경의 개념 및 구성 요소",
+            "page": 3
+        },
+        {
+            "level": 4,
+            "chapter": "1) 환경의 정의",
+            "page": 3
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 환경계와 건강",
+            "page": 5
+        },
+        {
+            "level": 4,
+            "chapter": "1) 환경보건",
+            "page": 5
+        },
+        {
+            "level": 4,
+            "chapter": "2) 환경과 질병부담",
+            "page": 6
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 환경보건의 발전과정",
+            "page": 8
+        },
+        {
+            "level": 4,
+            "chapter": "1) 고대",
+            "page": 8
+        },
+        {
+            "level": 4,
+            "chapter": "2) 중세",
+            "page": 8
+        },
+        {
+            "level": 4,
+            "chapter": "3) 근대",
+            "page": 8
+        },
+        {
+            "level": 4,
+            "chapter": "4) 현대",
+            "page": 9
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 한국의 환경보건의 발전과정",
+            "page": 10
+        },
+        {
+            "level": 4,
+            "chapter": "1) 한국 환경보건의 시대적 변천",
+            "page": 10
+        },
+        {
+            "level": 4,
+            "chapter": "2) 환경보건의 제도적 발전",
+            "page": 11
+        },
+        {
+            "level": 4,
+            "chapter": "3) 시민사회의 발전",
+            "page": 12
+        },
+        {
+            "level": 4,
+            "chapter": "4) 환경오염으로 인한 건강피해의 제도적 보상",
+            "page": 12
+        },
+        {
+            "level": 2,
+            "chapter": "2. 환경오염 사건",
+            "page": 13
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 외국 오염사건",
+            "page": 13
+        },
+        {
+            "level": 4,
+            "chapter": "1) 런던 스모그 사건",
+            "page": 14
+        },
+        {
+            "level": 4,
+            "chapter": "2) 이타이이타이병",
+            "page": 14
+        },
+        {
+            "level": 4,
+            "chapter": "3) 미나마타병",
+            "page": 15
+        },
+        {
+            "level": 4,
+            "chapter": "4) 세베소 사건",
+            "page": 15
+        },
+        {
+            "level": 4,
+            "chapter": "5) 러브 커낼(Love Canal) 사건",
+            "page": 16
+        },
+        {
+            "level": 4,
+            "chapter": "6) 보팔 사건",
+            "page": 17
+        },
+        {
+            "level": 4,
+            "chapter": "7) 체르노빌 사건",
+            "page": 17
+        },
+        {
+            "level": 4,
+            "chapter": "8) 엑슨 발데즈(Exxon Valdez)호 사건",
+            "page": 18
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 한국의 오염사건",
+            "page": 19
+        },
+        {
+            "level": 4,
+            "chapter": "1) 울산, 온산 공단지역의 오염사건",
+            "page": 20
+        },
+        {
+            "level": 4,
+            "chapter": "2) 낙동강 페놀오염사건",
+            "page": 20
+        },
+        {
+            "level": 4,
+            "chapter": "3) 인천 고잔동 유리섬유사건",
+            "page": 21
+        },
+        {
+            "level": 4,
+            "chapter": "4) 고성군 폐금속광산사건",
+            "page": 22
+        },
+        {
+            "level": 4,
+            "chapter": "5) 허베이스피리트호 원유유출사건",
+            "page": 22
+        },
+        {
+            "level": 4,
+            "chapter": "6) 가습기살균제에 의한 폐손상",
+            "page": 23
+        },
+        {
+            "level": 2,
+            "chapter": "3. 환경에 대한 적응과 인체영향",
+            "page": 25
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 환경유해요인 분류",
+            "page": 25
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 항상성, 적응, 순화의 정의와 개념",
+            "page": 26
+        },
+        {
+            "level": 4,
+            "chapter": "1) 단기간의 적응",
+            "page": 27
+        },
+        {
+            "level": 4,
+            "chapter": "2) 중기간의 순화",
+            "page": 28
+        },
+        {
+            "level": 4,
+            "chapter": "3) 장기간의 진화",
+            "page": 28
+        },
+        {
+            "level": 2,
+            "chapter": "4. 환경역학",
+            "page": 28
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 환경역학의 정의와 역할",
+            "page": 29
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 환경역학에서의 노출 평가",
+            "page": 29
+        },
+        {
+            "level": 3,
+            "chapter": "4.3 환경역학에서의 건강영향 평가",
+            "page": 30
+        },
+        {
+            "level": 3,
+            "chapter": "4.4 환경역학연구의 방법 및 특성",
+            "page": 30
+        },
+        {
+            "level": 3,
+            "chapter": "4.5 환경역학연구의 수행",
+            "page": 31
+        },
+        {
+            "level": 3,
+            "chapter": "4.6 환경역학의 전망과 과제",
+            "page": 32
+        },
+        {
+            "level": 2,
+            "chapter": "5. 독성학",
+            "page": 33
+        },
+        {
+            "level": 3,
+            "chapter": "5.1 독성학의 정의와 분야",
+            "page": 33
+        },
+        {
+            "level": 4,
+            "chapter": "1) 정의",
+            "page": 33
+        },
+        {
+            "level": 4,
+            "chapter": "2) 독성학 세부분야",
+            "page": 34
+        },
+        {
+            "level": 3,
+            "chapter": "5.2 독성반응",
+            "page": 34
+        },
+        {
+            "level": 4,
+            "chapter": "1) 용량-반응관계",
+            "page": 34
+        },
+        {
+            "level": 4,
+            "chapter": "2) 독성영향 요인",
+            "page": 35
+        },
+        {
+            "level": 4,
+            "chapter": "3) 독성물질의 상호작용",
+            "page": 36
+        },
+        {
+            "level": 3,
+            "chapter": "5.3 독성기전",
+            "page": 36
+        }
+    ],
+    "_meta": {
+        "source_pdf": "3편1,2장(2021).pdf",
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "elapsed_seconds": 93.506,
+        "elapsed": "1m 33.5s",
+        "chunk1_created_at": "2026-07-20T09:47:55+09:00",
+        "chunk1_start_page": 1,
+        "chunk1_end_page": 36,
+        "source_chapter_count": 266,
+        "chunk1_chapter_count": 56,
+        "chunk1_source_toc": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/3편1,2장(2021)_openai_gpt-5.5_toc.json",
+        "chunk1_source_toc_max_page": 110,
+        "chunk1_source_input": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/input/부교재2/2권-한글/3편1,2장(2021).pdf",
+        "chunk1_source_input_chunks_dir": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/input_chunks/3_1_2_2021_gemma_20260708_153404",
+        "chunk1_source_input_chunks": [
+            "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/input_chunks/3_1_2_2021_gemma_20260708_153404/chunk_1_pages_1-36.json"
+        ]
+    }
+}

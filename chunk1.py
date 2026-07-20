@@ -13,9 +13,9 @@ ROOT = Path(__file__).resolve().parent
 DEFAULT_INPUT_DIR = ROOT / "data/input"
 DEFAULT_OUTPUT_DIR = ROOT / "data/output"
 DEFAULT_INPUT_CHUNKS_DIR = DEFAULT_OUTPUT_DIR / "input_chunks"
-DEFAULT_DESTINATION_DIR = DEFAULT_INPUT_DIR / "chunk1"
+DEFAULT_DESTINATION_DIR = DEFAULT_INPUT_DIR / "chunk1_v2"
 
-DERIVED_TOC_RE = re.compile(r"(?:_chunk1|_toc_\d+)$", re.IGNORECASE)
+SOURCE_TOC_RE = re.compile(r"^.+_openai_gpt-5\.5_toc\.json$", re.IGNORECASE)
 CHUNK1_INPUT_RE = re.compile(
     r"^chunk_1_pages_(?P<start>\d+)-(?P<end>\d+)\.json$",
     re.IGNORECASE,
@@ -70,7 +70,7 @@ def match_input_document(toc_path: Path, toc: dict[str, Any], documents: list[Pa
 
 
 def is_complete_toc(path: Path) -> bool:
-    return path.suffix.lower() == ".json" and not DERIVED_TOC_RE.search(path.stem)
+    return bool(SOURCE_TOC_RE.fullmatch(path.name))
 
 
 def toc_max_page(toc: dict[str, Any]) -> int:
@@ -267,7 +267,7 @@ def create_chunk1_output(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="data/input의 PDF와 대응하는 최신 TOC를 input_chunks의 1번 청크 범위로 잘라 저장합니다.",
+        description="data/input의 PDF와 대응하는 *_openai_gpt-5.5_toc.json을 1번 청크 범위로 잘라 저장합니다.",
     )
     parser.add_argument("--input-dir", type=Path, default=DEFAULT_INPUT_DIR)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)

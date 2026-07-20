@@ -17,8 +17,8 @@ from pathlib import Path
 from typing import Any, Callable, Iterable
 
 ROOT = Path(__file__).resolve().parent
-INPUT_DIR = ROOT / "data/input/chunk1"
-OUTPUT_ROOT = ROOT / "data/output_chunk1"
+INPUT_DIR = ROOT / "data/input/chunk1_v2"
+OUTPUT_ROOT = ROOT / "data/output_chunk1_v2"
 INPUT_CHUNKS_DIR = ROOT / "data/output/input_chunks"
 PARSED_PDFS_DIR = ROOT / "data/output/parsed_pdfs"
 
@@ -387,7 +387,7 @@ def build_prompt(layout_json: dict[str, Any], parsed_text: str, title: str, max_
     return f"""
 You are Gemma 31B. Create the full table-of-contents JSON from the parsed PDF layout text.
 This replaces only the code-based full-document matching step from toc_txt_test.py.
-The layout JSON was generated from CHUNK and REFERENCE and is the primary evidence for heading levels.
+The layout JSON was generated from CHUNK and REFERENCE and provides verified but non-exhaustive examples of heading levels.
 
 [Task]
 {user_prompt.strip()}
@@ -400,8 +400,15 @@ The layout JSON was generated from CHUNK and REFERENCE and is the primary eviden
 
 [Rules]
 - Behave like the generate_toc step, but do the matching and filtering with Gemma instead of Python rule matching.
-- Use the Layout JSON rules as the primary style reference learned from the verified chunk.
-- Match headings by S/R/B/I/F first, then start_shapes, X/Y position, and numbering.
+- First apply all exclusion rules. Only then use the Layout JSON rules to classify the remaining headings.
+- Exclusion rules have higher priority than every layout, style, position, and numbering rule.
+- Never output a heading whose case-insensitive, whitespace-normalized title is exactly "Study questions" or "References", even when S/R/B/I/F matches a valid TOC level.
+- Treat the Layout JSON rules as strong examples learned from the verified chunk, not as an exhaustive whitelist of heading styles or levels.
+- For styles represented in Layout JSON, match headings by S/R/B/I/F first, then start_shapes, X/Y position, and numbering.
+- Never reject a heading only because its S/R/B/I/F style or target level is absent from Layout JSON.
+- For an unseen style, infer heading candidacy and level from numbering hierarchy, indentation and position, typographic contrast, neighboring headings, and parent-child sequence.
+- Levels missing from Layout JSON, including levels 5, 6, and 7, may still be output when structural evidence supports them; max_depth is only an output-level limit.
+- Before finalizing, perform a second review of unmatched lines with heading-like numbering or typography and include valid unseen-style headings, while still excluding numbered body lists and sentences.
 - Use only text that appears in the parsed layout text. Do not invent, rewrite, or summarize titles.
 - Preserve original numbering and title text exactly.
 - Exclude covers, prefaces, existing TOC listing rows, indexes, references, page numbers, repeated headers/footers, captions, questions, and body sentences.
@@ -438,7 +445,7 @@ def build_chunk_prompt(
     layout_text = json.dumps(compact_layout_json(layout_json), ensure_ascii=False, indent=2)
     return f"""
 You are Gemma 31B. Create a partial table-of-contents JSON from one parsed PDF layout text chunk.
-The layout JSON was generated from CHUNK and REFERENCE and is the primary evidence for heading levels.
+The layout JSON was generated from CHUNK and REFERENCE and provides verified but non-exhaustive examples of heading levels.
 
 [Task]
 {user_prompt.strip()}
@@ -454,8 +461,15 @@ The layout JSON was generated from CHUNK and REFERENCE and is the primary eviden
 
 [Rules]
 - Output only TOC entries whose real body heading appears inside this chunk.
-- Use the Layout JSON rules as the primary style reference learned from the verified chunk.
-- Match headings by S/R/B/I/F first, then start_shapes, X/Y position, and numbering.
+- First apply all exclusion rules. Only then use the Layout JSON rules to classify the remaining headings.
+- Exclusion rules have higher priority than every layout, style, position, and numbering rule.
+- Never output a heading whose case-insensitive, whitespace-normalized title is exactly "Study questions" or "References", even when S/R/B/I/F matches a valid TOC level.
+- Treat the Layout JSON rules as strong examples learned from the verified chunk, not as an exhaustive whitelist of heading styles or levels.
+- For styles represented in Layout JSON, match headings by S/R/B/I/F first, then start_shapes, X/Y position, and numbering.
+- Never reject a heading only because its S/R/B/I/F style or target level is absent from Layout JSON.
+- For an unseen style, infer heading candidacy and level from numbering hierarchy, indentation and position, typographic contrast, neighboring headings, and parent-child sequence.
+- Levels missing from Layout JSON, including levels 5, 6, and 7, may still be output when structural evidence supports them; max_depth is only an output-level limit.
+- Before finalizing, perform a second review of unmatched lines with heading-like numbering or typography and include valid unseen-style headings, while still excluding numbered body lists and sentences.
 - Use only text that appears in the parsed layout text. Do not invent, rewrite, or summarize titles.
 - Preserve original numbering and title text exactly.
 - Exclude covers, prefaces, existing TOC listing rows, indexes, references, page numbers, repeated headers/footers, captions, questions, and body sentences.
@@ -1010,7 +1024,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--raw-output", type=Path, help="Gemma 원본 응답 txt 파일명 또는 저장 폴더(생성시간 자동 추가)")
     parser.add_argument("--title", help="TOC title. Defaults to reference title or parsed filename stem.")
     parser.add_argument("--prompt", default="Create the complete table of contents JSON for the whole document from the layout text.")
-    parser.add_argument("--max-depth", type=int, default=6)
+    parser.add_argument("--max-depth", type=int, default=7)
     parser.add_argument("--model", default=DEFAULT_MODEL, help="Gemma model. '31b' normalizes to gemma4:31b.")
     parser.add_argument("--ai-fallback-models", default=DEFAULT_FALLBACK_MODELS)
     parser.add_argument("--ai-retries", type=int, default=DEFAULT_AI_RETRIES)

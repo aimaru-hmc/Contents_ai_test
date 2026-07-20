@@ -1,0 +1,629 @@
+{
+    "title": "제3편 환경과 건강",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "제3장 화학적 요인",
+            "page": 1
+        },
+        {
+            "level": 2,
+            "chapter": "1. 유해금속",
+            "page": 1
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 납",
+            "page": 1
+        },
+        {
+            "level": 4,
+            "chapter": "1) 납의 특성",
+            "page": 1
+        },
+        {
+            "level": 4,
+            "chapter": "2) 작업환경에서의 납 노출",
+            "page": 2
+        },
+        {
+            "level": 4,
+            "chapter": "3) 생활환경에서의 납 노출",
+            "page": 2
+        },
+        {
+            "level": 4,
+            "chapter": "4) 납의 체내 대사",
+            "page": 2
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 흡수",
+            "page": 2
+        },
+        {
+            "level": 6,
+            "chapter": "① 호흡기를 통한 흡수",
+            "page": 2
+        },
+        {
+            "level": 6,
+            "chapter": "② 위장관을 통한 흡수",
+            "page": 3
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 체내순환, 분포 및 저장",
+            "page": 3
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 배설",
+            "page": 3
+        },
+        {
+            "level": 4,
+            "chapter": "5) 납중독의 병리",
+            "page": 3
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 헴(heme) 합성의 장해",
+            "page": 3
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 적혈구에 미치는 작용",
+            "page": 4
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 신기능의 장해",
+            "page": 4
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 신경조직의 변화",
+            "page": 4
+        },
+        {
+            "level": 4,
+            "chapter": "6) 납중독의 임상증상",
+            "page": 5
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 위장계통 장해",
+            "page": 5
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 신경 근육 계통의 장해",
+            "page": 5
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 중추신경계통 장해",
+            "page": 5
+        },
+        {
+            "level": 4,
+            "chapter": "7) 저농도 납 노출로 인한 건강장애",
+            "page": 5
+        },
+        {
+            "level": 4,
+            "chapter": "8) 진단",
+            "page": 6
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 직업력 조사",
+            "page": 6
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 병력 조사",
+            "page": 6
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 임상증상",
+            "page": 6
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 검사실 소견",
+            "page": 6
+        },
+        {
+            "level": 6,
+            "chapter": "① 혈액 검사",
+            "page": 6
+        },
+        {
+            "level": 6,
+            "chapter": "② 혈중 납량의 측정",
+            "page": 6
+        },
+        {
+            "level": 6,
+            "chapter": "③ 혈중 아연프로토포르피린(zinc protoporphyrin)의 측정",
+            "page": 6
+        },
+        {
+            "level": 6,
+            "chapter": "④ 델타아미노레불린산(δ-aminolevulinic acid, ALA) 측정",
+            "page": 7
+        },
+        {
+            "level": 4,
+            "chapter": "9) 치료",
+            "page": 7
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 급성중독",
+            "page": 7
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 만성중독",
+            "page": 7
+        },
+        {
+            "level": 4,
+            "chapter": "10) 예방대책",
+            "page": 7
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 수은",
+            "page": 7
+        },
+        {
+            "level": 4,
+            "chapter": "1) 특성",
+            "page": 7
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직업적 노출",
+            "page": 8
+        },
+        {
+            "level": 4,
+            "chapter": "3) 환경 노출",
+            "page": 8
+        },
+        {
+            "level": 4,
+            "chapter": "4) 건강영향",
+            "page": 8
+        },
+        {
+            "level": 4,
+            "chapter": "5) 노출평가",
+            "page": 9
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 카드뮴",
+            "page": 9
+        },
+        {
+            "level": 4,
+            "chapter": "1) 일반적 특성",
+            "page": 9
+        },
+        {
+            "level": 4,
+            "chapter": "2) 노출",
+            "page": 9
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 직업적 노출",
+            "page": 10
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 환경 노출",
+            "page": 10
+        },
+        {
+            "level": 4,
+            "chapter": "3) 건강영향",
+            "page": 10
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 급성 독성",
+            "page": 10
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 만성 독성",
+            "page": 10
+        },
+        {
+            "level": 4,
+            "chapter": "4) 노출평가",
+            "page": 10
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 크롬",
+            "page": 10
+        },
+        {
+            "level": 4,
+            "chapter": "1) 일반적 특성",
+            "page": 11
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직업 및 환경 노출",
+            "page": 11
+        },
+        {
+            "level": 4,
+            "chapter": "3) 건강영향",
+            "page": 11
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 급성 독성",
+            "page": 11
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 만성 독성",
+            "page": 11
+        },
+        {
+            "level": 4,
+            "chapter": "4) 노출평가",
+            "page": 11
+        },
+        {
+            "level": 3,
+            "chapter": "1.5 망간",
+            "page": 11
+        },
+        {
+            "level": 4,
+            "chapter": "1) 망간의 특성",
+            "page": 11
+        },
+        {
+            "level": 4,
+            "chapter": "2) 용도 및 직업적 노출",
+            "page": 12
+        },
+        {
+            "level": 4,
+            "chapter": "3) 흡수, 대사 및 배설",
+            "page": 12
+        },
+        {
+            "level": 4,
+            "chapter": "4) 건강영향",
+            "page": 12
+        },
+        {
+            "level": 4,
+            "chapter": "5) 노출평가",
+            "page": 13
+        },
+        {
+            "level": 4,
+            "chapter": "6) 치료 및 예방",
+            "page": 14
+        },
+        {
+            "level": 3,
+            "chapter": "1.6 비소",
+            "page": 14
+        },
+        {
+            "level": 4,
+            "chapter": "1) 비소의 특성",
+            "page": 14
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직업 및 환경 노출",
+            "page": 14
+        },
+        {
+            "level": 4,
+            "chapter": "3) 흡수, 대사 및 배설",
+            "page": 14
+        },
+        {
+            "level": 4,
+            "chapter": "4) 건강영향",
+            "page": 15
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 급성중독",
+            "page": 15
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 만성중독",
+            "page": 15
+        },
+        {
+            "level": 4,
+            "chapter": "5) 노출평가",
+            "page": 15
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 소변",
+            "page": 15
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 혈액",
+            "page": 15
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 모발 및 손발톱",
+            "page": 15
+        },
+        {
+            "level": 4,
+            "chapter": "6) 치료 및 예방",
+            "page": 16
+        },
+        {
+            "level": 3,
+            "chapter": "1.7 베릴륨",
+            "page": 16
+        },
+        {
+            "level": 4,
+            "chapter": "1) 일반적 특성",
+            "page": 16
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직업 및 환경 노출",
+            "page": 16
+        },
+        {
+            "level": 4,
+            "chapter": "3) 건강영향",
+            "page": 16
+        },
+        {
+            "level": 4,
+            "chapter": "4) 노출평가",
+            "page": 17
+        },
+        {
+            "level": 4,
+            "chapter": "5) 예방 및 관리대책",
+            "page": 17
+        },
+        {
+            "level": 2,
+            "chapter": "2. 유기용제",
+            "page": 20
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 유기용제의 종류",
+            "page": 20
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 유기용제의 사용",
+            "page": 20
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 유기용제의 대사",
+            "page": 21
+        },
+        {
+            "level": 4,
+            "chapter": "1) 흡수와 분포",
+            "page": 21
+        },
+        {
+            "level": 4,
+            "chapter": "2) 대사",
+            "page": 21
+        },
+        {
+            "level": 4,
+            "chapter": "3) 생물학적 감시",
+            "page": 21
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 유기용제의 건강영향",
+            "page": 21
+        },
+        {
+            "level": 4,
+            "chapter": "1) 일반적 독성",
+            "page": 22
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 급성중독",
+            "page": 22
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 만성중독",
+            "page": 22
+        },
+        {
+            "level": 4,
+            "chapter": "2) 특이적 독성",
+            "page": 23
+        },
+        {
+            "level": 4,
+            "chapter": "3) 유기용제 중독의 진단",
+            "page": 23
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 노출의 확인",
+            "page": 23
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 임상소견",
+            "page": 23
+        },
+        {
+            "level": 3,
+            "chapter": "2.5 유기용제 노출평가",
+            "page": 24
+        },
+        {
+            "level": 3,
+            "chapter": "2.6 노말헥산",
+            "page": 24
+        },
+        {
+            "level": 3,
+            "chapter": "2.7 벤젠",
+            "page": 24
+        },
+        {
+            "level": 3,
+            "chapter": "2.8 톨루엔",
+            "page": 25
+        },
+        {
+            "level": 3,
+            "chapter": "2.9 이황화탄소",
+            "page": 26
+        },
+        {
+            "level": 3,
+            "chapter": "2.10 트라이클로로에틸렌",
+            "page": 26
+        },
+        {
+            "level": 3,
+            "chapter": "2.11 디메틸포름아미드",
+            "page": 27
+        },
+        {
+            "level": 3,
+            "chapter": "2.12 메탄올",
+            "page": 28
+        },
+        {
+            "level": 3,
+            "chapter": "2.13 디클로로메탄(dichloromethane)",
+            "page": 28
+        },
+        {
+            "level": 2,
+            "chapter": "3. 유해가스",
+            "page": 30
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 서 론",
+            "page": 30
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 자극제",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "1) 암모니아(ammonia, NH3)",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "2) 질소산화물(nitrogen oxides, NOx)",
+            "page": 31
+        },
+        {
+            "level": 4,
+            "chapter": "3) 아황산가스(Sulfur dioxide, SO2)",
+            "page": 32
+        },
+        {
+            "level": 4,
+            "chapter": "4) 오존(ozone, O3)",
+            "page": 32
+        },
+        {
+            "level": 4,
+            "chapter": "5) 불화수소(hydrogen fluoride, HF)",
+            "page": 33
+        },
+        {
+            "level": 3,
+            "chapter": "3.3 질식제(chemical asphyxiants)",
+            "page": 33
+        },
+        {
+            "level": 4,
+            "chapter": "1) 일산화탄소(carbon monoxide, CO)",
+            "page": 33
+        },
+        {
+            "level": 4,
+            "chapter": "2) 사이안화물(cyanide)",
+            "page": 34
+        },
+        {
+            "level": 4,
+            "chapter": "3) 황화수소(hydrogen sulfide, H2S)",
+            "page": 34
+        },
+        {
+            "level": 2,
+            "chapter": "4. 잔류유기오염물질",
+            "page": 35
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 잔류유기오염물질의 정의 및 특성",
+            "page": 35
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 잔류유기오염물질의 종류",
+            "page": 35
+        }
+    ],
+    "_meta": {
+        "source_pdf": "3편3,4장(2021).pdf",
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "elapsed_seconds": 83.415,
+        "elapsed": "1m 23.4s",
+        "chunk1_created_at": "2026-07-20T09:47:55+09:00",
+        "chunk1_start_page": 1,
+        "chunk1_end_page": 35,
+        "source_chapter_count": 263,
+        "chunk1_chapter_count": 121,
+        "chunk1_source_toc": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/3편3,4장(2021)_openai_gpt-5.5_toc.json",
+        "chunk1_source_toc_max_page": 102,
+        "chunk1_source_input": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/input/부교재2/2권-한글/3편3,4장(2021).pdf",
+        "chunk1_source_input_chunks_dir": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/input_chunks/3_3_4_2021_gemma_20260710_093126",
+        "chunk1_source_input_chunks": [
+            "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/input_chunks/3_3_4_2021_gemma_20260710_093126/chunk_1_pages_1-35.json"
+        ]
+    }
+}

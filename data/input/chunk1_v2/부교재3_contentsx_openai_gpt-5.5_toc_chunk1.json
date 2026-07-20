@@ -1,0 +1,195 @@
+{
+    "title": "3_contentsx",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "제1장 보건의료에 대한 이해",
+            "page": 3,
+            "level_reason": "Chapter title page heading."
+        },
+        {
+            "level": 2,
+            "chapter": "1. 보건의료의 개념",
+            "page": 3,
+            "level_reason": "Numbered major section under the chapter."
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 보건의료의 개념과 구성요소",
+            "page": 3,
+            "level_reason": "Decimal subsection under section 1."
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 보건의료의 사회경제적 특성",
+            "page": 5,
+            "level_reason": "Decimal subsection under section 1."
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 바람직한 보건의료의 특성",
+            "page": 8,
+            "level_reason": "Decimal subsection under section 1."
+        },
+        {
+            "level": 2,
+            "chapter": "2. 보건의료체계",
+            "page": 10,
+            "level_reason": "Numbered major section under the chapter."
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 보건의료체계 개념과 구성요소",
+            "page": 10,
+            "level_reason": "Decimal subsection under section 2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 의료전달체계",
+            "page": 12,
+            "level_reason": "Decimal subsection under section 2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 재원조달방식",
+            "page": 13,
+            "level_reason": "Decimal subsection under section 2."
+        },
+        {
+            "level": 2,
+            "chapter": "3. 외국의 보건의료체계",
+            "page": 14,
+            "level_reason": "Numbered major section under the chapter."
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 보건의료체계의 관리",
+            "page": 14,
+            "level_reason": "Decimal subsection under section 2."
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 보건의료체계의 분류",
+            "page": 14,
+            "level_reason": "Decimal subsection under section 3."
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 외국의 보건의료체계",
+            "page": 16,
+            "level_reason": "Decimal subsection under section 3."
+        },
+        {
+            "level": 3,
+            "chapter": "3.3 보건의료체계의 변화 경향",
+            "page": 20,
+            "level_reason": "Decimal subsection under section 3."
+        },
+        {
+            "level": 2,
+            "chapter": "4. 한국의 보건의료체계",
+            "page": 21,
+            "level_reason": "Numbered major section under the chapter."
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 보건의료체계",
+            "page": 21,
+            "level_reason": "Decimal subsection under section 4."
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 보건행정체계",
+            "page": 24,
+            "level_reason": "Decimal subsection under section 4."
+        },
+        {
+            "level": 3,
+            "chapter": "4.3 도전과 과제",
+            "page": 26,
+            "level_reason": "Decimal subsection under section 4."
+        },
+        {
+            "level": 1,
+            "chapter": "제2장 보건의료정책",
+            "page": 29,
+            "level_reason": "Chapter title page heading."
+        },
+        {
+            "level": 2,
+            "chapter": "1. 보건의료정책의 결정과정",
+            "page": 29,
+            "level_reason": "Numbered major section under the chapter."
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 보건의료정책의 개요",
+            "page": 29,
+            "level_reason": "Decimal subsection under section 1."
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 보건의료정책의 특성",
+            "page": 30,
+            "level_reason": "Decimal subsection under section 1."
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 정책과정",
+            "page": 31,
+            "level_reason": "Decimal subsection under section 1."
+        },
+        {
+            "level": 2,
+            "chapter": "2. 보건의료정책 환경과 참여자",
+            "page": 33,
+            "level_reason": "Numbered major section under the chapter."
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 보건의료정책 환경",
+            "page": 33,
+            "level_reason": "Decimal subsection under section 2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 보건의료정책 참여자",
+            "page": 34,
+            "level_reason": "Decimal subsection under section 2."
+        },
+        {
+            "level": 2,
+            "chapter": "3. 한국의 보건의료정책",
+            "page": 36,
+            "level_reason": "Numbered major section under the chapter."
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 한국 보건의료정책의 변천",
+            "page": 37,
+            "level_reason": "Decimal subsection under section 3."
+        }
+    ],
+    "_meta": {
+        "source_pdf": "data/input/부교재3_contentsx.pdf",
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "elapsed_seconds": 122.75096196774393,
+        "elapsed": "2m 2.8s",
+        "generated_timestamp": "20260710_100722",
+        "generation_started_at": "2026-07-10T10:05:19+0900",
+        "generation_completed_at": "2026-07-10T10:07:22+0900",
+        "chunk1_created_at": "2026-07-20T09:47:56+09:00",
+        "chunk1_start_page": 1,
+        "chunk1_end_page": 38,
+        "source_chapter_count": 279,
+        "chunk1_chapter_count": 28,
+        "chunk1_source_toc": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/부교재3_contentsx_openai_gpt-5.5_toc.json",
+        "chunk1_source_toc_max_page": 517,
+        "chunk1_source_input": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/input/부교재3_contentsx.pdf",
+        "chunk1_source_input_chunks_dir": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/input_chunks/3_contentsx_gemma_20260710_093800",
+        "chunk1_source_input_chunks": [
+            "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/output/input_chunks/3_contentsx_gemma_20260710_093800/chunk_1_pages_1-38.json"
+        ]
+    }
+}
