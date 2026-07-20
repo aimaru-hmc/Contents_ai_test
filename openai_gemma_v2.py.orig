@@ -158,54 +158,23 @@ def annotate_source_orders(text: str) -> str:
     return "\n".join(annotated)
 
 
-def reference_match_score(wanted: str, actual: str) -> int:
-    if actual == wanted:
-        return 4
-    if actual.startswith(wanted) or wanted in actual:
-        return 3
-    if wanted.endswith(actual) and len(actual) >= 4:
-        return 2
-    if actual.endswith(wanted) and len(wanted) >= 4:
-        return 1
-    return 0
-
-
-def representative_span_line(lines: list[Line]) -> Line:
-    meaningful = [line for line in lines if len(norm(line.text)) >= 4]
-    candidates = meaningful or lines
-    return max(candidates, key=lambda line: (line.s, len(norm(line.text)), -line.order))
-
-
 def match_reference_title(title: str, page_lines: list[Line]) -> Line | None:
     wanted = norm(title)
     ranked: list[tuple[int, int, Line]] = []
     for line in page_lines:
         actual = norm(line.text)
-        score = reference_match_score(wanted, actual)
-        if not score:
+        if actual == wanted:
+            score = 4
+        elif actual.startswith(wanted) or wanted in actual:
+            score = 3
+        elif wanted.endswith(actual) and len(actual) >= 4:
+            score = 2
+        elif actual.endswith(wanted) and len(wanted) >= 4:
+            score = 1
+        else:
             continue
         ranked.append((score, len(actual), line))
-    if ranked:
-        return max(ranked, key=lambda item: (item[0], item[1], item[2].s))[2]
-
-    ordered = sorted(page_lines, key=lambda line: line.order)
-    span_ranked: list[tuple[int, int, int, float, Line]] = []
-    for start in range(len(ordered)):
-        for size in range(2, min(4, len(ordered) - start) + 1):
-            span = ordered[start:start + size]
-            actual = norm(" ".join(line.text for line in span))
-            score = reference_match_score(wanted, actual)
-            if not score:
-                continue
-            representative = representative_span_line(span)
-            span_ranked.append((
-                score,
-                -abs(len(actual) - len(wanted)),
-                -size,
-                representative.s,
-                representative,
-            ))
-    return max(span_ranked, key=lambda item: item[:4])[4] if span_ranked else None
+    return max(ranked, key=lambda item: (item[0], item[1], item[2].s))[2] if ranked else None
 
 
 def learned_start_shape(reference_title: str, matched_line: Line) -> str:
