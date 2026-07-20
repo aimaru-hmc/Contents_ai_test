@@ -436,6 +436,9 @@ The layout JSON was generated from CHUNK and REFERENCE and provides verified but
 - Exclusion rules have higher priority than every layout, style, position, and numbering rule.
 - Treat the Layout JSON rules as strong examples learned from the verified chunk, not as an exhaustive whitelist of heading styles or levels.
 - For styles represented in Layout JSON, match headings by S/R/B/I/F first, then start_shapes, X/Y position, and numbering.
+- Each examples entry in a Layout JSON rule is a verified REFERENCE heading. If the same title occurs as a real body line with that rule's matching layout style, include it at that rule's level unless the occurrence is explicitly excluded.
+- Before returning JSON, audit the current parsed lines against every Layout JSON rule and include every valid matching heading, including candidates for the deepest learned level.
+- Do not stop at the deepest level already emitted in the draft; inspect all learned levels independently.
 - Never reject a heading only because its S/R/B/I/F style or target level is absent from Layout JSON.
 - For an unseen style, infer heading candidacy and level from numbering hierarchy, indentation and position, typographic contrast, neighboring headings, and parent-child sequence.
 - Levels missing from Layout JSON, including levels 5, 6, and 7, may still be output when structural evidence supports them; max_depth is only an output-level limit.
@@ -508,6 +511,9 @@ The layout JSON was generated from CHUNK and REFERENCE and provides verified but
 - Exclusion rules have higher priority than every layout, style, position, and numbering rule.
 - Treat the Layout JSON rules as strong examples learned from the verified chunk, not as an exhaustive whitelist of heading styles or levels.
 - For styles represented in Layout JSON, match headings by S/R/B/I/F first, then start_shapes, X/Y position, and numbering.
+- Each examples entry in a Layout JSON rule is a verified REFERENCE heading. If the same title occurs as a real body line with that rule's matching layout style, include it at that rule's level unless the occurrence is explicitly excluded.
+- Before returning JSON, audit the current parsed lines against every Layout JSON rule and include every valid matching heading, including candidates for the deepest learned level.
+- Do not stop at the deepest level already emitted in the draft; inspect all learned levels independently.
 - Never reject a heading only because its S/R/B/I/F style or target level is absent from Layout JSON.
 - For an unseen style, infer heading candidacy and level from numbering hierarchy, indentation and position, typographic contrast, neighboring headings, and parent-child sequence.
 - Levels missing from Layout JSON, including levels 5, 6, and 7, may still be output when structural evidence supports them; max_depth is only an output-level limit.
