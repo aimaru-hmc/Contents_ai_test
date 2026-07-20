@@ -33,6 +33,7 @@ DEFAULT_API_KEY = "EMPTY"
 DEFAULT_TIMEOUT = 3600
 DEFAULT_PARSED_CHUNK_CHARS = 80000
 DEFAULT_MAX_CHUNK_SPLIT_DEPTH = 3
+DEFAULT_BOUNDARY_CONTEXT_PAGES = 2
 
 PAGE_RE = re.compile(r"^\[PAGE\s+(\d+)\]$")
 LINE_RE = re.compile(
@@ -473,6 +474,9 @@ def build_chunk_prompt(
     total_chunks: int,
 ) -> str:
     layout_text = json.dumps(compact_layout_json(layout_json), ensure_ascii=False, indent=2)
+    boundary_context = str(chunk.get("context_text") or "").strip() or "(none: first chunk)"
+    prior_headings = chunk.get("prior_heading_context") or []
+    prior_heading_text = json.dumps(prior_headings, ensure_ascii=False, indent=2)
     return f"""
 You are Gemma 31B. Create a partial table-of-contents JSON from one parsed PDF layout text chunk.
 The layout JSON was generated from CHUNK and REFERENCE and provides verified but non-exhaustive examples of heading levels.
@@ -486,11 +490,20 @@ The layout JSON was generated from CHUNK and REFERENCE and provides verified but
 [Chunk]
 {chunk["index"]}/{total_chunks}, pages {chunk["start_page"]}-{chunk["end_page"]}
 
+[Active Parent Heading Context - context only]
+{prior_heading_text}
+
+[Previous Parsed Page Context - context only]
+{boundary_context}
+
 [Layout JSON]
 {layout_text}
 
 [Rules]
 - Output only TOC entries whose real body heading appears inside this chunk.
+- Use the active parent headings and previous parsed pages only to understand hierarchy at the chunk boundary.
+- Never output an entry from either context section. Every output page must be between {chunk["start_page"]} and {chunk["end_page"]}.
+- If this chunk starts with a child heading, continue the hierarchy established by the context instead of rejecting the heading for lacking a local parent.
 - First apply all exclusion rules. Only then use the Layout JSON rules to classify the remaining headings.
 - Exclusion rules have higher priority than every layout, style, position, and numbering rule.
 - Treat the Layout JSON rules as strong examples learned from the verified chunk, not as an exhaustive whitelist of heading styles or levels.
@@ -529,19 +542,36 @@ def page_number_from_segment(segment: str) -> int | None:
     return int(match.group(1)) if match else None
 
 
-def split_parsed_text_chunks(text: str, max_chars: int) -> list[dict[str, Any]]:
-    max_chars = max(10000, int(max_chars))
+def parsed_page_segments(text: str) -> list[tuple[int, str]]:
     starts = [match.start() for match in re.finditer(r"(?m)^\[PAGE\s+\d+\]$", text)]
     if not starts:
-        return [{"index": 1, "start_page": 1, "end_page": 1, "text": text.strip()}]
-
+        return []
     starts.append(len(text))
-    page_segments: list[tuple[int, str]] = []
+    segments: list[tuple[int, str]] = []
     for index in range(len(starts) - 1):
         segment = text[starts[index]:starts[index + 1]].strip()
         page = page_number_from_segment(segment)
         if page is not None and segment:
-            page_segments.append((page, segment))
+            segments.append((page, segment))
+    return segments
+
+
+def split_parsed_text_chunks(
+    text: str,
+    max_chars: int,
+    context_pages: int = 0,
+    initial_context_text: str = "",
+) -> list[dict[str, Any]]:
+    max_chars = max(10000, int(max_chars))
+    page_segments = parsed_page_segments(text)
+    if not page_segments:
+        return [{
+            "index": 1,
+            "start_page": 1,
+            "end_page": 1,
+            "text": text.strip(),
+            "context_text": initial_context_text.strip(),
+        }]
 
     chunks: list[dict[str, Any]] = []
     current_parts: list[str] = []
@@ -575,15 +605,38 @@ def split_parsed_text_chunks(text: str, max_chars: int) -> list[dict[str, Any]]:
         current_chars += segment_len
 
     flush()
+    context_pages = max(0, int(context_pages))
+    inherited_segments = parsed_page_segments(initial_context_text)
+    for chunk in chunks:
+        if not context_pages:
+            chunk["context_text"] = ""
+            continue
+        start_page = int(chunk["start_page"])
+        available = inherited_segments + [
+            (page, segment)
+            for page, segment in page_segments
+            if page < start_page
+        ]
+        chunk["context_text"] = "\n\n".join(
+            segment for _, segment in available[-context_pages:]
+        )
     return chunks
 
 
-def split_failed_parsed_chunk(chunk: dict[str, Any]) -> list[dict[str, Any]]:
+def split_failed_parsed_chunk(
+    chunk: dict[str, Any],
+    context_pages: int,
+) -> list[dict[str, Any]]:
     text = str(chunk.get("text") or "").strip()
     if not text:
         return []
 
-    subchunks = split_parsed_text_chunks(text, max(10000, len(text) // 2))
+    subchunks = split_parsed_text_chunks(
+        text,
+        max(10000, len(text) // 2),
+        context_pages=context_pages,
+        initial_context_text=str(chunk.get("context_text") or ""),
+    )
     if len(subchunks) <= 1:
         return []
 
@@ -591,6 +644,59 @@ def split_failed_parsed_chunk(chunk: dict[str, Any]) -> list[dict[str, Any]]:
     for index, subchunk in enumerate(subchunks, start=1):
         subchunk["index"] = f"{parent_index}.{index}"
     return subchunks
+
+
+def active_parent_heading_context(
+    partial_tocs: list[dict[str, Any]],
+    max_depth: int,
+) -> list[dict[str, Any]]:
+    active: dict[int, dict[str, Any]] = {}
+    for toc in partial_tocs:
+        chapters = toc.get("chapters", [])
+        if not isinstance(chapters, list):
+            continue
+        for item in chapters:
+            if not isinstance(item, dict):
+                continue
+            chapter = clean_text(item.get("chapter"))
+            if not chapter:
+                continue
+            try:
+                level = min(max(1, int(item.get("level", 1))), max_depth)
+                page = max(1, int(item.get("page", 1)))
+            except (TypeError, ValueError):
+                continue
+            for existing_level in list(active):
+                if existing_level >= level:
+                    del active[existing_level]
+            active[level] = {
+                "level": level,
+                "chapter": chapter,
+                "page": page,
+            }
+    return [active[level] for level in sorted(active)]
+
+
+def filter_toc_to_page_range(
+    toc: dict[str, Any],
+    start_page: int,
+    end_page: int,
+) -> dict[str, Any]:
+    filtered = dict(toc)
+    chapters: list[dict[str, Any]] = []
+    raw_chapters = toc.get("chapters", [])
+    if isinstance(raw_chapters, list):
+        for item in raw_chapters:
+            if not isinstance(item, dict):
+                continue
+            try:
+                page = int(item.get("page"))
+            except (TypeError, ValueError):
+                continue
+            if start_page <= page <= end_page:
+                chapters.append(item)
+    filtered["chapters"] = chapters
+    return filtered
 
 
 def merge_partial_tocs(title: str, partial_tocs: list[dict[str, Any]]) -> dict[str, Any]:
@@ -1065,6 +1171,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT)
     parser.add_argument("--parsed-chunk-chars", type=int, default=DEFAULT_PARSED_CHUNK_CHARS, help="청크별 parsed text 최대 문자 수")
     parser.add_argument(
+        "--boundary-context-pages",
+        type=int,
+        default=DEFAULT_BOUNDARY_CONTEXT_PAGES,
+        help="각 청크에 문맥으로만 전달할 직전 parsed 페이지 수",
+    )
+    parser.add_argument(
         "--max-chunk-split-depth",
         type=int,
         default=DEFAULT_MAX_CHUNK_SPLIT_DEPTH,
@@ -1206,9 +1318,15 @@ def process_document(
         toc, raw_text, used_model = request_gemma_toc(prompt, args, fallback_title=title)
         raw_records.append({"mode": "single", "raw_text": raw_text})
     else:
-        chunks = split_parsed_text_chunks(parsed_text, args.parsed_chunk_chars)
+        context_pages = max(0, int(args.boundary_context_pages))
+        chunks = split_parsed_text_chunks(
+            parsed_text,
+            args.parsed_chunk_chars,
+            context_pages=context_pages,
+        )
         for chunk_item in chunks:
             chunk_item["text"] = annotate_source_orders(chunk_item["text"])
+            chunk_item["context_text"] = annotate_source_orders(chunk_item["context_text"])
         partial_tocs: list[dict[str, Any]] = []
         total_chunks = len(chunks)
         parsed_chunk_count = total_chunks
@@ -1216,6 +1334,10 @@ def process_document(
 
         def process_parsed_chunk(chunk_item: dict[str, Any], split_depth: int = 0) -> None:
             nonlocal parsed_chunk_count, used_model
+            chunk_item["prior_heading_context"] = active_parent_heading_context(
+                partial_tocs,
+                max(1, int(args.max_depth)),
+            )
             prompt = build_chunk_prompt(
                 layout_json=layout_json,
                 chunk=chunk_item,
@@ -1232,7 +1354,10 @@ def process_document(
             try:
                 partial_toc, raw_text, used_model = request_gemma_toc(prompt, args, fallback_title=title)
             except ValueError as error:
-                subchunks = split_failed_parsed_chunk(chunk_item)
+                subchunks = split_failed_parsed_chunk(
+                    chunk_item,
+                    context_pages=context_pages,
+                )
                 if split_depth >= max(0, int(args.max_chunk_split_depth)) or not subchunks:
                     raise
                 parsed_chunk_count += len(subchunks) - 1
@@ -1251,12 +1376,19 @@ def process_document(
                     process_parsed_chunk(subchunk, split_depth + 1)
                 return
 
+            partial_toc = filter_toc_to_page_range(
+                partial_toc,
+                int(chunk_item["start_page"]),
+                int(chunk_item["end_page"]),
+            )
             partial_tocs.append(partial_toc)
             raw_records.append({
                 "chunk": chunk_item["index"],
                 "start_page": chunk_item["start_page"],
                 "end_page": chunk_item["end_page"],
                 "split_depth": split_depth,
+                "boundary_context_pages": context_pages,
+                "active_parent_headings": chunk_item["prior_heading_context"],
                 "toc_entries": len(partial_toc.get("chapters", [])),
                 "raw_text": raw_text,
             })
@@ -1299,6 +1431,7 @@ def process_document(
         "parsed_chunk_count": parsed_chunk_count,
         "parsed_chunk_chars": None if args.single_request else args.parsed_chunk_chars,
         "max_chunk_split_depth": None if args.single_request else args.max_chunk_split_depth,
+        "boundary_context_pages": None if args.single_request else max(0, int(args.boundary_context_pages)),
         "chapter_sort": "page_then_parsed_source_order",
         "matched_layout_entries": matched_layout_entries,
         "unmatched_layout_entries": len(toc.get("chapters", [])) - matched_layout_entries,
