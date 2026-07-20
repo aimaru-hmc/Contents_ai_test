@@ -1,0 +1,113 @@
+{
+    "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/chunk1_v2/3편1,2장(2021)_openai_gpt-5.5_toc_chunk1.json",
+    "source_chunk": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/input_chunks/3_1_2_2021_gemma_20260708_153404/chunk_1_pages_1-36.json",
+    "matching_priority": [
+        "S/R/B/I/F",
+        "learned start shape",
+        "X",
+        "Y"
+    ],
+    "rules": [
+        {
+            "level": 1,
+            "s": 31.0,
+            "r": 3.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 220.0,
+            "x_max": 220.0,
+            "y_min": 126.0,
+            "y_max": 126.0,
+            "start_shapes": [
+                "A"
+            ],
+            "reference_count": 1,
+            "examples": [
+                "제1장 환경과 건강"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 18.0,
+            "r": 1.9,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 77.0,
+            "x_max": 195.0,
+            "y_min": 211.0,
+            "y_max": 637.0,
+            "start_shapes": [
+                "#."
+            ],
+            "reference_count": 5,
+            "examples": [
+                "1. 환경보건의 개념과 요소",
+                "2. 환경오염 사건",
+                "3. 환경에 대한 적응과 인체영향",
+                "4. 환경역학",
+                "5. 독성학"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 12.5,
+            "r": 1.32,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 73.0,
+            "x_max": 181.0,
+            "y_min": 92.0,
+            "y_max": 699.0,
+            "start_shapes": [
+                "#.#"
+            ],
+            "reference_count": 17,
+            "examples": [
+                "1.1 환경의 개념 및 구성 요소",
+                "1.2 환경계와 건강",
+                "1.3 환경보건의 발전과정",
+                "1.4 한국의 환경보건의 발전과정",
+                "2.1 외국 오염사건",
+                "2.2 한국의 오염사건",
+                "3.1 환경유해요인 분류",
+                "3.2 항상성, 적응, 순화의 정의와 개념"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 12.0,
+            "r": 1.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 65.0,
+            "x_max": 173.0,
+            "y_min": 85.0,
+            "y_max": 774.0,
+            "start_shapes": [
+                "#)"
+            ],
+            "reference_count": 32,
+            "examples": [
+                "1) 환경의 정의",
+                "1) 환경보건",
+                "2) 환경과 질병부담",
+                "1) 고대",
+                "2) 중세",
+                "3) 근대",
+                "4) 현대",
+                "1) 한국 환경보건의 시대적 변천"
+            ]
+        }
+    ],
+    "unmatched_reference_titles": [
+        {
+            "level": 4,
+            "chapter": "2) 중기간의 순화",
+            "page": 28
+        }
+    ]
+}
