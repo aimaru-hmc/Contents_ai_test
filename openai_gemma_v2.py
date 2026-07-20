@@ -17,8 +17,8 @@ from pathlib import Path
 from typing import Any, Callable, Iterable
 
 ROOT = Path(__file__).resolve().parent
-INPUT_DIR = ROOT / "data/input/chunk1_v2"
-OUTPUT_ROOT = ROOT / "data/output_chunk1_v2"
+INPUT_DIR = ROOT / "data/input/chunk1"
+OUTPUT_ROOT = ROOT / "data/output_chunk1"
 INPUT_CHUNKS_DIR = ROOT / "data/output/input_chunks"
 PARSED_PDFS_DIR = ROOT / "data/output/parsed_pdfs"
 
