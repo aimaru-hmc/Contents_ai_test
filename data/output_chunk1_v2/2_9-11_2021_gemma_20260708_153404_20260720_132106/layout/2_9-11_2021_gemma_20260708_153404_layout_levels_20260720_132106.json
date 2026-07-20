@@ -1,0 +1,216 @@
+{
+    "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/chunk1_v2/2편9-11장(2021)_openai_gpt-5.5_toc_chunk1.json",
+    "source_chunk": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/input_chunks/2_9-11_2021_gemma_20260708_153404/chunk_1_pages_1-35.json",
+    "matching_priority": [
+        "S/R/B/I/F",
+        "learned start shape",
+        "X",
+        "Y"
+    ],
+    "rules": [
+        {
+            "level": 1,
+            "s": 31.0,
+            "r": 3.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 80.0,
+            "x_max": 80.0,
+            "y_min": 126.0,
+            "y_max": 126.0,
+            "start_shapes": [
+                "A"
+            ],
+            "reference_count": 1,
+            "examples": [
+                "제9장 근거기반의료와 임상적 의사결정"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 18.0,
+            "r": 1.9,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 77.0,
+            "x_max": 77.0,
+            "y_min": 104.0,
+            "y_max": 538.0,
+            "start_shapes": [
+                "#."
+            ],
+            "reference_count": 4,
+            "examples": [
+                "1. 개념과 발전배경",
+                "2. 접근과정과 전략",
+                "3. 근거기반 임상적 의사결정 방법",
+                "4. 근거기반의 활용"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 12.5,
+            "r": 1.32,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 73.0,
+            "x_max": 181.0,
+            "y_min": 138.0,
+            "y_max": 725.0,
+            "start_shapes": [
+                "#.#"
+            ],
+            "reference_count": 10,
+            "examples": [
+                "1.1 근거기반의료의 개념",
+                "1.2 근거기반의료의 배경",
+                "2.1 근거기반의료를 이용한 임상문제 해결 과정",
+                "2.4 근거의 수준과 평가",
+                "2.5 근거의 적용과 자가 평가",
+                "3.1 과학적 근거기반 임상적 의사결정 방법",
+                "3.2 경제성 및 효용성 기반 임상적 의사결정",
+                "3.3 임상적 의사결정에 도움이 되는 통계분석"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 12.5,
+            "r": 1.46,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 181.0,
+            "x_max": 181.0,
+            "y_min": 153.0,
+            "y_max": 684.0,
+            "start_shapes": [
+                "#.#"
+            ],
+            "reference_count": 2,
+            "examples": [
+                "2.2 임상문제의 핵심질문 선정 (PICO)",
+                "2.3 임상문제에 대한 정보 검색"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 12.0,
+            "r": 1.41,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 173.0,
+            "x_max": 173.0,
+            "y_min": 725.0,
+            "y_max": 725.0,
+            "start_shapes": [
+                "#)"
+            ],
+            "reference_count": 1,
+            "examples": [
+                "1) 근거기반의료 자료원"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 12.0,
+            "r": 1.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 65.0,
+            "x_max": 173.0,
+            "y_min": 131.0,
+            "y_max": 774.0,
+            "start_shapes": [
+                "#)"
+            ],
+            "reference_count": 14,
+            "examples": [
+                "2) 문헌검색과 활용",
+                "1) 체계적 고찰과 메타분석",
+                "2) 임상연구 수행을 통한 의사결정",
+                "3) 근거기반 의사결정에 고려되어져야 할 사항",
+                "1) ROC",
+                "2) 베이즈 정리",
+                "3) 의사결정분석",
+                "1) 비판적 검토의 필요성"
+            ]
+        },
+        {
+            "level": 5,
+            "s": 10.0,
+            "r": 1.17,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 183.0,
+            "x_max": 183.0,
+            "y_min": 777.0,
+            "y_max": 777.0,
+            "start_shapes": [
+                "(#)"
+            ],
+            "reference_count": 1,
+            "examples": [
+                "(1) 요약 및 지침(summaries and guidelines)"
+            ]
+        },
+        {
+            "level": 5,
+            "s": 10.0,
+            "r": 1.05,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 75.0,
+            "x_max": 183.0,
+            "y_min": 85.0,
+            "y_max": 664.0,
+            "start_shapes": [
+                "(#)"
+            ],
+            "reference_count": 18,
+            "examples": [
+                "(2) 사전에 비평된 연구(preappraised research)",
+                "(3) 사전에 비평되지 않은 연구(nonpreappraised research)",
+                "(1) 자료원의 종류 및 특징",
+                "(2) 문헌검색 과정",
+                "(1) 개념",
+                "(2) 출판 바이어스",
+                "(1) 원리",
+                "(2) ROC 적용사례"
+            ]
+        },
+        {
+            "level": 6,
+            "s": 9.5,
+            "r": 1.0,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 75.0,
+            "x_max": 183.0,
+            "y_min": 85.0,
+            "y_max": 742.0,
+            "start_shapes": [
+                "#"
+            ],
+            "reference_count": 15,
+            "examples": [
+                "① 일반 검색원",
+                "② 특정주제별 검색원",
+                "③ 이차 자료 검색원 및 기타 검색원",
+                "④ 국내 문헌 데이터베이스",
+                "① PICO(핵심질문)의 선정",
+                "② 주요검색어의 선정 및 검색전략 수립",
+                "① 문헌의 타당성 평가",
+                "② 임상적 중요성에 대한 평가"
+            ]
+        }
+    ],
+    "unmatched_reference_titles": []
+}
