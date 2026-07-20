@@ -1,0 +1,5329 @@
+{
+    "title": "Basic epidemiology",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "Preface",
+            "page": 10,
+            "level_reason": "Matched layout rule for level 1 (S=30, f=f7).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 30.0,
+                "r": 3.0,
+                "x": 55.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f7",
+                "source_text": "Preface"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Introduction",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 1 (S=30, f=f7).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 30.0,
+                "r": 3.16,
+                "x": 55.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f7",
+                "source_text": "Introduction"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "What is epidemiology?",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 1 (S=32, f=f7).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 32.0,
+                "r": 3.2,
+                "x": 55.0,
+                "y": 101.0,
+                "b": 0,
+                "i": 0,
+                "f": "f7",
+                "source_text": "What is epidemiology?"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 2 (S=20, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 168.0,
+                "y": 149.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Key messages"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "The historical context",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 2 (S=20, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 268.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "The historical context"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Origins",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 300.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Origins"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Recent developments in epidemiology",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 559.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Recent developments in epidemiology"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Definition, scope, and uses of epidemiology",
+            "page": 15,
+            "level_reason": "Matched layout rule for level 2 (S=20, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 42,
+                "s": 20.0,
+                "r": 2.23,
+                "x": 140.0,
+                "y": 575.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Definition, scope, and uses of epidemiology"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Definition",
+            "page": 15,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 43,
+                "s": 14.0,
+                "r": 1.56,
+                "x": 140.0,
+                "y": 607.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Definition"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Scope",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 14.0,
+                "r": 1.75,
+                "x": 55.0,
+                "y": 385.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Scope"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Epidemiology and public health",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 2 (S=20, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 341.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Epidemiology and public health"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Causation of disease",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 476.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Causation of disease"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Health status of populations",
+            "page": 18,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 190.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Health status of populations"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Evaluating interventions",
+            "page": 18,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 436.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Evaluating interventions"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Achievements in epidemiology",
+            "page": 19,
+            "level_reason": "Matched layout rule for level 2 (S=20, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 382.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Achievements in epidemiology"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Smallpox",
+            "page": 19,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 414.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Smallpox"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Methyl mercury poisoning",
+            "page": 20,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 342.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Methyl mercury poisoning"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Rheumatic fever and rheumatic heart disease",
+            "page": 20,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 52,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 576.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Rheumatic fever and rheumatic heart disease"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Iodine deficiency diseases",
+            "page": 21,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 447.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Iodine deficiency diseases"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Tobacco use, asbestos and lung cancer",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Tobacco use, asbestos and lung cancer"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Hip fractures",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 45,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 473.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Hip fractures"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "HIV/AIDS",
+            "page": 23,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 160.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "HIV/AIDS"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "SARS",
+            "page": 23,
+            "level_reason": "Matched layout rule for level 3 (S=14, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 57,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 619.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "SARS"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 2 Measuring health and disease",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 1 (S=31.9, R=3.2, f=f7) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 31.9,
+                "r": 3.2,
+                "x": 55.0,
+                "y": 102.0,
+                "b": 0,
+                "i": 0,
+                "f": "f7",
+                "source_text": "Measuring health and"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 2 (S=20.0, R=2.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 168.0,
+                "y": 184.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Key messages"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Defining health and disease",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 2 (S=20.0, R=2.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 290.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Defining health and disease"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Definitions",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 322.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Definitions"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Diagnostic criteria",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Diagnostic criteria"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Measuring disease frequency",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 2 (S=20.0, R=2.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 185.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Measuring disease frequency"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Population at risk",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 280.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Population at risk"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Incidence and prevalence",
+            "page": 31,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Incidence and prevalence"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Prevalence",
+            "page": 32,
+            "level_reason": "Inferred level 3 based on typographic contrast (S=9.0, B=1, I=1) and hierarchy under 'Measuring disease frequency'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 121.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Prevalence"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Incidence",
+            "page": 33,
+            "level_reason": "Inferred level 3 based on typographic contrast (S=9.0, B=1, I=1) and hierarchy under 'Measuring disease frequency'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 412.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Incidence"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Cumulative incidence",
+            "page": 34,
+            "level_reason": "Inferred level 3 based on typographic contrast (S=9.0, B=1, I=1) and hierarchy under 'Measuring disease frequency'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 374.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Cumulative incidence"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Case fatality",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Case fatality"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Interrelationships of the different measures",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 234.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Interrelationships of the different measures"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Using available information to measure health and disease",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 2 (S=20.0, R=2.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 244.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Using available information to measure"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Mortality",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 298.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Mortality"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Limitations of death certificates",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 40,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 505.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Limitations of death certificates"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Limitations of vital registration systems",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Limitations of vital registration systems"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Verbal autopsy",
+            "page": 37,
+            "level_reason": "Inferred level 3 based on typographic contrast (S=9.0, B=1, I=1) and hierarchy under 'Mortality'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 239.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Verbal autopsy"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Towards comparable estimates",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 352.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Towards comparable estimates"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Death rates",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 2 (S=20.0, R=2.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 240.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Death rates"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Age-specific death rates",
+            "page": 38,
+            "level_reason": "Inferred level 3 based on typographic contrast (S=9.0, B=1, I=1) and hierarchy under 'Death rates'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 469.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Age-specific death rates"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Proportionate mortality",
+            "page": 38,
+            "level_reason": "Inferred level 3 based on typographic contrast (S=9.0, B=1, I=1) and hierarchy under 'Death rates'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 601.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Proportionate mortality"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Infant mortality",
+            "page": 39,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 160.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Infant mortality"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Child mortality rate",
+            "page": 39,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 531.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Child mortality rate"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Maternal mortality rate",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.56, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 40,
+                "s": 14.0,
+                "r": 1.56,
+                "x": 55.0,
+                "y": 624.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Maternal mortality rate"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Adult mortality rate",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 275.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Adult mortality rate"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Age-standardized rates",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, R=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 404.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Age-standardized rates"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Morbidity",
+            "page": 43,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 486.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Morbidity"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Disability",
+            "page": 44,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 291.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Disability"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Health determinants, indicators, and risk factors",
+            "page": 45,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 135.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Health determinants, indicators, and risk factors"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "Health determinants",
+            "page": 45,
+            "level_reason": "Typographic contrast (bold/italic) and child of level 3 heading.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 162.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Health determinants"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "Health indicators",
+            "page": 45,
+            "level_reason": "Typographic contrast (bold/italic) and child of level 3 heading.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 222.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Health indicators"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "Risk factors",
+            "page": 45,
+            "level_reason": "Typographic contrast (bold/italic) and child of level 3 heading.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 334.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Risk factors"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Other summary measures of population health",
+            "page": 45,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 634.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Other summary measures of population health"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "Disability-adjusted life years",
+            "page": 46,
+            "level_reason": "Typographic contrast (bold/italic) and child of level 3 heading.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 305.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Disability-adjusted life years"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Comparing disease occurrence",
+            "page": 47,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Comparing disease occurrence"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Absolute comparisons",
+            "page": 47,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 244.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Absolute comparisons"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "Risk difference",
+            "page": 47,
+            "level_reason": "Typographic contrast (bold/italic) and child of level 3 heading.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 272.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Risk difference"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "Attributable fraction (exposed)",
+            "page": 47,
+            "level_reason": "Typographic contrast (bold/italic) and child of level 3 heading.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 409.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Attributable fraction (exposed)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "Population attributable risk",
+            "page": 48,
+            "level_reason": "Typographic contrast (bold/italic) and child of level 3 heading.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 85.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Population attributable risk"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Relative comparisons",
+            "page": 48,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 264.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Relative comparisons"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "Relative risk",
+            "page": 48,
+            "level_reason": "Typographic contrast (bold/italic) and child of level 3 heading.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 292.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Relative risk"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "Attributable risk",
+            "page": 48,
+            "level_reason": "Typographic contrast (bold/italic) and child of level 3 heading.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 507.0,
+                "b": 1,
+                "i": 1,
+                "f": "f15",
+                "source_text": "Attributable risk"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 3 Types of studies",
+            "page": 52,
+            "level_reason": "Matched layout rule for level 1 (s=32.0, r=3.2, f=f7).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 32.0,
+                "r": 3.2,
+                "x": 55.0,
+                "y": 101.0,
+                "b": 0,
+                "i": 0,
+                "f": "f7",
+                "source_text": "Types of studies"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Observations and experiments",
+            "page": 52,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 268.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Observations and experiments"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Observational studies",
+            "page": 52,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 350.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Observational studies"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Experimental studies",
+            "page": 52,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 611.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Experimental studies"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Observational epidemiology",
+            "page": 53,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 480.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Observational epidemiology"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Descriptive studies",
+            "page": 53,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 513.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Descriptive studies"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Ecological studies",
+            "page": 54,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 571.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Ecological studies"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Ecological fallacy",
+            "page": 56,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 251.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Ecological fallacy"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Cross-sectional studies",
+            "page": 57,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Cross-sectional studies"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Case-control studies",
+            "page": 57,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 587.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Case-control studies"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "Selection of cases and controls",
+            "page": 58,
+            "level_reason": "Typographic contrast (bold/italic) and child of level 3 heading.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 392.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Selection of cases and controls"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "Exposure",
+            "page": 58,
+            "level_reason": "Typographic contrast (bold/italic) and child of level 3 heading.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 634.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Exposure"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "Odds ratio",
+            "page": 59,
+            "level_reason": "Typographic contrast (bold/italic) and child of level 3 heading.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 354.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Odds ratio"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Cohort studies",
+            "page": 59,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 56,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 585.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Cohort studies"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Historical cohort studies",
+            "page": 61,
+            "level_reason": "Matched style (s=9, r=0.9, f=f18) and italicized typography typical of level 3 sub-headings.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 419.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Historical cohort studies"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Nested case-control studies",
+            "page": 61,
+            "level_reason": "Matched style (s=9, r=0.9, f=f18) and italicized typography typical of level 3 sub-headings.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 54,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 240.0,
+                "y": 555.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Nested case-control studies"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Summary of epidemiological studies",
+            "page": 62,
+            "level_reason": "Matched layout rule for level 3 (s=14, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 272.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Summary of epidemiological studies"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Experimental epidemiology",
+            "page": 62,
+            "level_reason": "Matched layout rule for level 2 (s=20, r=2.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 28,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 529.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Experimental epidemiology"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Randomized controlled trials",
+            "page": 63,
+            "level_reason": "Matched layout rule for level 3 (s=14, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 276.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Randomized controlled trials"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Field trials",
+            "page": 63,
+            "level_reason": "Matched layout rule for level 3 (s=14, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 622.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Field trials"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Community trials",
+            "page": 64,
+            "level_reason": "Matched layout rule for level 3 (s=14, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 238.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Community trials"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Potential errors in epidemiological studies",
+            "page": 64,
+            "level_reason": "Matched layout rule for level 2 (s=20, r=2.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 52,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 621.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Potential errors in epidemiological studies"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Random error",
+            "page": 65,
+            "level_reason": "Matched layout rule for level 3 (s=14, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 353.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Random error"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Sample size",
+            "page": 65,
+            "level_reason": "Matched layout rule for level 3 (s=14, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 616.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Sample size"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Systematic error",
+            "page": 66,
+            "level_reason": "Matched layout rule for level 3 (s=14, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 409.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Systematic error"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Selection bias",
+            "page": 66,
+            "level_reason": "Matched layout rule for level 3 (s=14, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 547.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Selection bias"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Measurement bias",
+            "page": 67,
+            "level_reason": "Matched layout rule for level 3 (s=14, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 316.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Measurement bias"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Confounding",
+            "page": 68,
+            "level_reason": "Matched layout rule for level 2 (s=20, r=2.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 119.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Confounding"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "The control of confounding",
+            "page": 69,
+            "level_reason": "Matched layout rule for level 3 (s=14, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 173.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "The control of confounding"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Randomization",
+            "page": 69,
+            "level_reason": "Matched style (s=9, r=0.9, f=f18) and italicized typography typical of level 3 sub-headings.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 366.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Randomization"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Restriction",
+            "page": 69,
+            "level_reason": "Matched style (s=9, r=0.9, f=f18) and italicized typography typical of level 3 sub-headings.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 452.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Restriction"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Matching",
+            "page": 69,
+            "level_reason": "Matched style (s=9, r=0.9, f=f18) and italicized typography typical of level 3 sub-headings.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 525.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Matching"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Stratification and statistical modelling",
+            "page": 70,
+            "level_reason": "Matched style (s=9, r=0.9, f=f18) and italicized typography typical of level 3 sub-headings.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 84.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Stratification and statistical modelling"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Validity",
+            "page": 70,
+            "level_reason": "Matched layout rule for level 3 (s=14, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 301.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Validity"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Internal validity",
+            "page": 71,
+            "level_reason": "Matched style (s=9, r=0.9, f=f18) and italicized typography typical of level 3 sub-headings.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 84.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Internal validity"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "External validity",
+            "page": 71,
+            "level_reason": "Matched style (s=9, r=0.9, f=f18) and italicized typography typical of level 3 sub-headings.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 235.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "External validity"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Ethical issues",
+            "page": 71,
+            "level_reason": "Matched layout rule for level 3 (s=14, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 400.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Ethical issues"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Informed consent",
+            "page": 71,
+            "level_reason": "Matched style (s=9, r=0.9, f=f18) and italicized typography typical of level 3 sub-headings.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 40,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 626.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Informed consent"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Confidentiality",
+            "page": 72,
+            "level_reason": "Matched style (s=9, r=0.9, f=f18) and italicized typography typical of level 3 sub-headings.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 347.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Confidentiality"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Respect for individual rights",
+            "page": 72,
+            "level_reason": "Matched style (s=9, r=0.9, f=f18) and italicized typography typical of level 3 sub-headings.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 433.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Respect for individual rights"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Scientific integrity",
+            "page": 72,
+            "level_reason": "Matched style (s=9, r=0.9, f=f18) and italicized typography typical of level 3 sub-headings.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 597.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Scientific integrity"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 4 Basic biostatistics: concepts and tools",
+            "page": 76,
+            "level_reason": "Matched layout rule for level 1 (s=31.9, r=3.2, f=f7).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 31.9,
+                "r": 3.2,
+                "x": 55.0,
+                "y": 102.0,
+                "b": 0,
+                "i": 0,
+                "f": "f7",
+                "source_text": "Basic biostatistics:"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Summarizing data",
+            "page": 76,
+            "level_reason": "Matched layout rule for level 2 (s=20, r=2.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 483.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Summarizing data"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Tables and graphs",
+            "page": 77,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Tables and graphs"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Pie charts and component band charts",
+            "page": 77,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 536.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Pie charts and component band charts"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Spot maps and rate maps",
+            "page": 78,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Spot maps and rate maps"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Bar charts",
+            "page": 78,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 593.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Bar charts"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Line graphs",
+            "page": 79,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 38,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 240.0,
+                "y": 439.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Line graphs"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Frequency distributions and histograms",
+            "page": 79,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 53,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 607.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Frequency distributions and histograms"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Normal distributions",
+            "page": 80,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 356.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Normal distributions"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Summary numbers",
+            "page": 80,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 458.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Summary numbers"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Means, medians and mode",
+            "page": 80,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 491.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Means, medians and mode"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Variances, standard deviations and standard errors",
+            "page": 81,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 233.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Variances, standard deviations and standard errors"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Basic concepts of statistical inference",
+            "page": 82,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 133.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Basic concepts of statistical inference"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Using samples to understand populations",
+            "page": 82,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 351.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Using samples to understand populations"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Confidence intervals",
+            "page": 83,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 240.0,
+                "y": 135.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Confidence intervals"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Hypothesis tests, p-values, statistical power",
+            "page": 84,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 343.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Hypothesis tests, p-values, statistical power"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "The p-value",
+            "page": 84,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 420.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "The p-value"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Statistical power",
+            "page": 84,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 40,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 631.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Statistical power"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Basic methods",
+            "page": 86,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 307.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Basic methods"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "t-tests",
+            "page": 86,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 421.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "t-tests"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Chi-squared tests for cross tabulations",
+            "page": 87,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Chi-squared tests for cross tabulations"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Correlation",
+            "page": 88,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Correlation"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Regression",
+            "page": 88,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 369.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Regression"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Linear regression",
+            "page": 89,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 200.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Linear regression"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Logistic regression",
+            "page": 91,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Logistic regression"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Survival analyses and Cox proportional hazards models",
+            "page": 92,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Survival analyses and Cox proportional hazards"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Kaplan-Meier survival curves",
+            "page": 92,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 51,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 569.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Kaplan-Meier survival curves"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Sample size issues",
+            "page": 93,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 173.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Sample size issues"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Meta-analysis",
+            "page": 94,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 34,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 324.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Meta-analysis"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Causation in epidemiology",
+            "page": 96,
+            "level_reason": "Matched layout rule for level 1 (s=32.0, r=3.2, f=f7) and follows 'Chapter 5' label.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 32.0,
+                "r": 3.2,
+                "x": 55.0,
+                "y": 101.0,
+                "b": 0,
+                "i": 0,
+                "f": "f7",
+                "source_text": "Causation in epidemiology"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 96,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 167.0,
+                "y": 149.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Key messages"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "The concept of cause",
+            "page": 96,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 352.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "The concept of cause"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Sufficient or necessary",
+            "page": 96,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 474.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Sufficient or necessary"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Sufficient and necessary",
+            "page": 97,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 348.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Sufficient and necessary"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "A causal pathway",
+            "page": 98,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 302.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "A causal pathway"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Single and multiple causes",
+            "page": 99,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 199.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Single and multiple causes"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Factors in causation",
+            "page": 100,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Factors in causation"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Interaction",
+            "page": 101,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 147.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Interaction"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "A hierarchy of causes",
+            "page": 101,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 273.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "A hierarchy of causes"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Establishing the cause of a disease",
+            "page": 102,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 288.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Establishing the cause of a disease"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Considering causation",
+            "page": 102,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 28,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 462.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Considering causation"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Temporal relationship",
+            "page": 102,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 579.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Temporal relationship"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Plausibility",
+            "page": 104,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 147.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Plausibility"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Consistency",
+            "page": 104,
+            "level_reason": "Inferred level 3 based on typographic contrast (s=9.0, f=f5) and sequence following 'Plausibility'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 53,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 563.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "Consistency considered to occur has been reduced from 250 ug/l in"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Strength",
+            "page": 106,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 134.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Strength"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Dose–response relationship",
+            "page": 106,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 50,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 550.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Dose–response relationship"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Reversibility",
+            "page": 108,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Reversibility"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Study design",
+            "page": 108,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 213.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Study design"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Judging the evidence",
+            "page": 109,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 238.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Judging the evidence"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Epidemiology and prevention: chronic noncommunicable diseases",
+            "page": 112,
+            "level_reason": "Matched layout rule for level 1 (s=32.0, r=3.2, f=f7) and follows 'Chapter 6' label.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 32.0,
+                "r": 3.2,
+                "x": 55.0,
+                "y": 101.0,
+                "b": 0,
+                "i": 0,
+                "f": "f7",
+                "source_text": "Epidemiology and prevention:"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 112,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 168.0,
+                "y": 217.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Key messages"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "The scope of prevention",
+            "page": 112,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 382.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "The scope of prevention"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Recent trends in death rates",
+            "page": 112,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.4, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 516.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Recent trends in death rates"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Preventive potential",
+            "page": 114,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 14.0,
+                "r": 1.56,
+                "x": 55.0,
+                "y": 134.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Preventive potential"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Causation framework",
+            "page": 115,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 241.0,
+                "y": 370.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Causation framework"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Levels of prevention",
+            "page": 116,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 319.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Levels of prevention"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Primordial prevention",
+            "page": 116,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 38,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 517.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Primordial prevention"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Primary prevention",
+            "page": 118,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 361.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Primary prevention"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Population strategy",
+            "page": 118,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 486.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Population strategy"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "High-risk individual strategy",
+            "page": 120,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 411.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "High-risk individual strategy"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Secondary prevention",
+            "page": 121,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 20.0,
+                "r": 2.5,
+                "x": 140.0,
+                "y": 536.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Secondary prevention"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Tertiary prevention",
+            "page": 122,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 573.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Tertiary prevention"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Screening",
+            "page": 123,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 210.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Screening"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Definition",
+            "page": 123,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 280.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Definition"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Types of screening",
+            "page": 123,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 240.0,
+                "y": 423.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Types of screening"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Criteria for screening",
+            "page": 123,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 48,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 635.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Criteria for screening"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Communicable diseases: epidemiology surveillance and response",
+            "page": 130,
+            "level_reason": "Matched layout rule for level 1 (s=32.0, f=f7).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 32.0,
+                "r": 3.2,
+                "x": 55.0,
+                "y": 101.0,
+                "b": 0,
+                "i": 0,
+                "f": "f7",
+                "source_text": "Communicable diseases:"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Introduction",
+            "page": 130,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 359.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Introduction"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Definitions",
+            "page": 130,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 391.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Definitions"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 7",
+            "page": 131,
+            "level_reason": "Matched layout rule for Chapter headings (S=9.0, f=f6, but contextually the start of the chapter section).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 27.0,
+                "y": 53.0,
+                "b": 0,
+                "i": 0,
+                "f": "f6",
+                "source_text": "118 Chapter 7"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Role of epidemiology",
+            "page": 131,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, f=f10), but acts as the primary section heading for the chapter.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 238.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Role of epidemiology"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Threats to human security and health systems",
+            "page": 131,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 238.0,
+                "y": 397.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Threats to human security and"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Epidemic and endemic disease",
+            "page": 132,
+            "level_reason": "Matched layout rule for level 2 (S=20.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 145.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Epidemic and endemic disease"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Epidemics",
+            "page": 132,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 177.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Epidemics"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Endemic diseases",
+            "page": 134,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 350.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Endemic diseases"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Emerging and re-emerging infections",
+            "page": 135,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 240.0,
+                "y": 215.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "infections"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Chain of infection",
+            "page": 136,
+            "level_reason": "Matched layout rule for level 2 (S=20.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 132.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Chain of infection"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "The infectious agent",
+            "page": 136,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 491.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "The infectious agent"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Transmission",
+            "page": 137,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 221.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Transmission"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Host",
+            "page": 138,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 160.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Host"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Environment",
+            "page": 138,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 566.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Environment"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Investigation and control of epidemics",
+            "page": 139,
+            "level_reason": "Matched layout rule for level 2 (S=20.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Investigation and control of epidemics"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Investigation",
+            "page": 139,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 236.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Investigation"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Identifying cases",
+            "page": 139,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 378.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Identifying cases"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Management and control",
+            "page": 139,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 534.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Management and control"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Surveillance and response",
+            "page": 140,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, f=f10), but structurally a major section.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 446.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Surveillance and response"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Definition",
+            "page": 140,
+            "level_reason": "Matched layout rule for level 3 (S=9.0, f=f18, italicized sub-heading).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 474.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Definition"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "The scope of surveillance",
+            "page": 140,
+            "level_reason": "Matched layout rule for level 3 (S=9.0, f=f18, italicized sub-heading).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 44,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 586.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "The scope of surveillance"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Sources of data",
+            "page": 141,
+            "level_reason": "Matched layout rule for level 3 (S=9.0, f=f18, italicized sub-heading).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 361.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Sources of data"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Surveillance in practice",
+            "page": 141,
+            "level_reason": "Matched layout rule for level 3 (S=9.0, f=f18, italicized sub-heading).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 550.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Surveillance in practice"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Analysis and interpretation of surveillance data",
+            "page": 142,
+            "level_reason": "Matched layout rule for level 3 (S=9.0, f=f18, italicized sub-heading).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 28,
+                "s": 9.0,
+                "r": 1.0,
+                "x": 55.0,
+                "y": 302.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Analysis and interpretation of surveillance data data can be used to reinforce each other."
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 8",
+            "page": 146,
+            "level_reason": "Matched layout rule for Chapter headings (S=20.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Chapter 8"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Clinical epidemiology",
+            "page": 146,
+            "level_reason": "Matched layout rule for level 1 (S=32.0, f=f7).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 32.0,
+                "r": 3.2,
+                "x": 55.0,
+                "y": 101.0,
+                "b": 0,
+                "i": 0,
+                "f": "f7",
+                "source_text": "Clinical epidemiology"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 146,
+            "level_reason": "Matched layout rule for level 2 (S=20.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 168.0,
+                "y": 149.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Key messages"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Introduction",
+            "page": 146,
+            "level_reason": "Matched layout rule for level 2 (S=20.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 279.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Introduction"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Definitions of normality and abnormality",
+            "page": 146,
+            "level_reason": "Matched layout rule for level 2 (S=20.0, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 560.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Definitions of normality and abnormality"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Normal as common",
+            "page": 147,
+            "level_reason": "Matched layout rule for level 3 (S=14.0, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 178.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Normal as common"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Abnormality associated with disease",
+            "page": 148,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 121.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Abnormality associated with disease"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Abnormal as treatable",
+            "page": 148,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 357.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Abnormal as treatable"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Value of a test",
+            "page": 149,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 51,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 581.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Value of a test"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Natural history and prognosis",
+            "page": 150,
+            "level_reason": "Matched layout rule S=20.0, R=2.00, F=f9.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 34,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 444.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Natural history and prognosis"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Prognosis",
+            "page": 150,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 44,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 618.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Prognosis"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Quality of life",
+            "page": 151,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 303.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Quality of life"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Quantity of life",
+            "page": 151,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 433.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Quantity of life"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Effectiveness of treatment",
+            "page": 152,
+            "level_reason": "Matched layout rule S=20.0, R=2.00, F=f9.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 319.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Effectiveness of treatment"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Use of evidence-based guidelines",
+            "page": 153,
+            "level_reason": "Matched layout rule S=20.0, R=2.00, F=f9.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 240.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Use of evidence-based"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Prevention in clinical practice",
+            "page": 153,
+            "level_reason": "Matched layout rule S=20.0, R=2.00, F=f9.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 44,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 525.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Prevention in clinical practice"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Reducing risks",
+            "page": 154,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Reducing risks"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Reducing risks in patients with established disease",
+            "page": 154,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 34,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 587.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Reducing risks in patients with established disease"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Behavioural interventions",
+            "page": 155,
+            "level_reason": "Inferred level 3 based on typographic contrast (bold/italic) and position under 'Reducing risks...'",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 84.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Behavioural interventions"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Pharmacological interventions",
+            "page": 155,
+            "level_reason": "Inferred level 3 based on typographic contrast (bold/italic) and position under 'Reducing risks...'",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 240.0,
+                "y": 157.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Pharmacological interventions"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Other interventions",
+            "page": 155,
+            "level_reason": "Inferred level 3 based on typographic contrast (bold/italic) and position under 'Reducing risks...'",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 387.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Other interventions"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 9 Environmental and occupational epidemiology",
+            "page": 158,
+            "level_reason": "Matched layout rule S=32.0, R=3.2, F=f7.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 32.0,
+                "r": 3.2,
+                "x": 55.0,
+                "y": 101.0,
+                "b": 0,
+                "i": 0,
+                "f": "f7",
+                "source_text": "Environmental and"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 158,
+            "level_reason": "Matched layout rule S=20.0, R=2.00, F=f9.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 167.0,
+                "y": 183.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Key messages"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Environment and health",
+            "page": 158,
+            "level_reason": "Matched layout rule S=20.0, R=2.00, F=f9.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 325.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Environment and health"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Impact of exposure to environmental factors",
+            "page": 159,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Impact of exposure to environmental factors"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Multi-causality",
+            "page": 159,
+            "level_reason": "Inferred level 3 based on typographic contrast (bold/italic) and position.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 239.0,
+                "y": 364.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Multi-causality"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Evaluation of preventive measures",
+            "page": 160,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 277.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Evaluation of preventive measures"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Value of prevention",
+            "page": 160,
+            "level_reason": "Inferred level 3 based on typographic contrast (bold/italic) and position.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 445.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Value of prevention"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Future challenges",
+            "page": 160,
+            "level_reason": "Inferred level 3 based on typographic contrast (bold/italic) and position.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 38,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 557.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Future challenges"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Exposure and dose",
+            "page": 162,
+            "level_reason": "Matched layout rule S=20.0, R=2.00, F=f9.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Exposure and dose"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "General concepts",
+            "page": 162,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 115.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "General concepts"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Biological monitoring",
+            "page": 163,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 597.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Biological monitoring"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Interpreting biological data",
+            "page": 164,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 173.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Interpreting biological data"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Individual versus group measurements",
+            "page": 164,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 49,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 615.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Individual versus group measurements"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Variation in time",
+            "page": 164,
+            "level_reason": "Inferred level 3 based on typographic contrast (bold/italic) and position.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 50,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 55.0,
+                "y": 643.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Variation in time"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Variation in exposure",
+            "page": 165,
+            "level_reason": "Inferred level 3 based on typographic contrast (bold/italic) and position.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 120.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Variation in exposure"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Distribution issues",
+            "page": 165,
+            "level_reason": "Inferred level 3 based on typographic contrast (bold/italic) and position.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 232.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Distribution issues"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Measures of effect",
+            "page": 165,
+            "level_reason": "Inferred level 3 based on typographic contrast (bold/italic) and position.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 9.0,
+                "r": 0.9,
+                "x": 140.0,
+                "y": 435.0,
+                "b": 1,
+                "i": 1,
+                "f": "f18",
+                "source_text": "Measures of effect"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Population dose",
+            "page": 165,
+            "level_reason": "Matched layout rule S=14.0, R=1.40, F=f10.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 574.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Population dose"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Dose-effect relationships",
+            "page": 166,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 415.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Dose-effect relationships"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Dose–response relationships",
+            "page": 167,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 394.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Dose–response relationships"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Assessing risk",
+            "page": 168,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Assessing risk"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Risk assessment",
+            "page": 168,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 115.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Risk assessment"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Health impact assessment",
+            "page": 168,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 206.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Health impact assessment"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Risk management",
+            "page": 168,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 323.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Risk management"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Environmental health impact assessment",
+            "page": 168,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 388.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Environmental health impact assessment"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Injury epidemiology",
+            "page": 170,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Injury epidemiology"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Traffic crash injuries",
+            "page": 170,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 434.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Traffic crash injuries"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Workplace injury",
+            "page": 170,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 538.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Workplace injury"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Violence",
+            "page": 171,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 408.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Violence"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Suicides",
+            "page": 171,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 538.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Suicides"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Special features of environmental and occupational epidemiology",
+            "page": 172,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 239.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Special features of environmental and"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Setting safety standards",
+            "page": 172,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 528.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Setting safety standards"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Measuring past exposure",
+            "page": 173,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 134.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Measuring past exposure"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Healthy worker effect in occupational studies",
+            "page": 173,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 238.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Healthy worker effect in occupational studies"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Continuing challenges for epidemiologists",
+            "page": 173,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 380.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Continuing challenges for epidemiologists"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Epidemiology, health policy and planning",
+            "page": 178,
+            "level_reason": "Matched layout rule for level 1 (s=32.0, r=3.20, f=f7).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 32.0,
+                "r": 3.2,
+                "x": 55.0,
+                "y": 101.0,
+                "b": 0,
+                "i": 0,
+                "f": "f7",
+                "source_text": "Epidemiology, health policy"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Introduction",
+            "page": 178,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 302.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Introduction"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Health policy",
+            "page": 178,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 436.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Health policy"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Health planning",
+            "page": 178,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 553.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Health planning"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Evaluation",
+            "page": 178,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 630.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Evaluation"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Health policy",
+            "page": 179,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 171.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Health policy"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "The influence of epidemiology",
+            "page": 179,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 240.0,
+                "y": 397.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "The influence of epidemiology"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Framing health policy",
+            "page": 180,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 199.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Framing health policy"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Health policy in practice",
+            "page": 181,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.56, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 14.0,
+                "r": 1.56,
+                "x": 140.0,
+                "y": 312.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Health policy in practice"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Health planning",
+            "page": 182,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 48,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 457.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Health planning"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "The planning cycle",
+            "page": 183,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 132.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "The planning cycle"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Assessing burden",
+            "page": 184,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.56, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 14.0,
+                "r": 1.56,
+                "x": 55.0,
+                "y": 160.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Assessing burden"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Understanding causes",
+            "page": 185,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 38,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 397.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Understanding causes"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Measuring effectiveness of interventions",
+            "page": 185,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 46,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 527.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Measuring effectiveness of interventions"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Assessing efficiency",
+            "page": 186,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Assessing efficiency"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Implementing interventions",
+            "page": 187,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 43,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 544.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Implementing interventions"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Monitoring activities and measuring progress",
+            "page": 188,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 84.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Monitoring activities and measuring progress"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "First steps in practical epidemiology",
+            "page": 190,
+            "level_reason": "Matched layout rule for level 1 (s=32.0, r=3.20, f=f7).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 32.0,
+                "r": 3.2,
+                "x": 55.0,
+                "y": 101.0,
+                "b": 0,
+                "i": 0,
+                "f": "f7",
+                "source_text": "First steps in practical"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Key messages",
+            "page": 190,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 168.0,
+                "y": 183.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Key messages"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Introduction",
+            "page": 190,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 348.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Introduction"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Specific diseases",
+            "page": 190,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 467.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Specific diseases"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Critical reading",
+            "page": 191,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 410.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Critical reading"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Planning a research project",
+            "page": 194,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.00, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 304.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Planning a research project"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Choosing a project",
+            "page": 194,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 521.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Choosing a project"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Writing the protocol",
+            "page": 195,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 140.0,
+                "y": 119.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Writing the protocol"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Doing the research",
+            "page": 196,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 160.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Doing the research"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Analysing the data",
+            "page": 196,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 407.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Analysing the data"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "Getting published",
+            "page": 196,
+            "level_reason": "Matched layout rule for level 3 (s=14.0, r=1.40, f=f10).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 38,
+                "s": 14.0,
+                "r": 1.4,
+                "x": 55.0,
+                "y": 613.0,
+                "b": 0,
+                "i": 0,
+                "f": "f10",
+                "source_text": "Getting published"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Further reading",
+            "page": 197,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.23, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 20.0,
+                "r": 2.23,
+                "x": 240.0,
+                "y": 184.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Further reading"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "Further training",
+            "page": 198,
+            "level_reason": "Matched layout rule for level 2 (s=20.0, r=2.50, f=f9).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 41,
+                "s": 20.0,
+                "r": 2.5,
+                "x": 55.0,
+                "y": 566.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Further training"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 2",
+            "page": 203,
+            "level_reason": "Matched layout rule for level 1 (S=20.0, f=f9) and explicit 'Chapter' numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Chapter 2"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 3",
+            "page": 205,
+            "level_reason": "Matched layout rule for level 1 (S=20.0, f=f9) and explicit 'Chapter' numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Chapter 3"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 4",
+            "page": 207,
+            "level_reason": "Matched layout rule for level 1 (S=20.0, f=f9) and explicit 'Chapter' numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Chapter 4"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 5",
+            "page": 208,
+            "level_reason": "Matched layout rule for level 1 (S=20.0, f=f9) and explicit 'Chapter' numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Chapter 5"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 6",
+            "page": 210,
+            "level_reason": "Matched layout rule for level 1 (S=20.0, f=f9) and explicit 'Chapter' numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Chapter 6"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 7",
+            "page": 211,
+            "level_reason": "Matched layout rule for level 1 (S=20.0, f=f9) and explicit 'Chapter' numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Chapter 7"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 8",
+            "page": 213,
+            "level_reason": "Matched layout rule for level 1 (S=20.0, f=f9) and explicit 'Chapter' numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Chapter 8"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 9",
+            "page": 214,
+            "level_reason": "Matched layout rule for level 1 (S=20.0, f=f9) and explicit 'Chapter' numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 55.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Chapter 9"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 10",
+            "page": 215,
+            "level_reason": "Matched layout rule for level 1 (S=20.0, f=f9) and explicit 'Chapter' numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Chapter 10"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "Chapter 11",
+            "page": 217,
+            "level_reason": "Matched layout rule for level 1 (S=20.0, f=f9) and explicit 'Chapter' numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 20.0,
+                "r": 2.0,
+                "x": 140.0,
+                "y": 83.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "Chapter 11"
+            }
+        }
+    ],
+    "_meta": {
+        "source_input_directory": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/chunk1_v2",
+        "source_chunk": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/input_chunks/unknown_model_gemma_20260710_100514/chunk_1_pages_2-34.json",
+        "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/chunk1_v2/주교재_openai_gpt-5.5_toc_chunk1.json",
+        "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/parsed_pdfs/unknown_model_gemma_20260710_100514_parsed_pdf.txt",
+        "provider": "gemma_vllm",
+        "model": "gemma4:31b",
+        "generated_at": "2026-07-20T11:07:35+09:00",
+        "generation_started_at": "2026-07-20T11:04:06+09:00",
+        "generation_completed_at": "2026-07-20T11:07:35+09:00",
+        "elapsed_seconds": 209.213,
+        "elapsed": "3m 29.2s",
+        "generation_mode": "parsed_chunks",
+        "parsed_chunk_count": 13,
+        "parsed_chunk_chars": 80000,
+        "max_chunk_split_depth": 3,
+        "chapter_sort": "page_then_parsed_source_order",
+        "matched_layout_entries": 294,
+        "unmatched_layout_entries": 0,
+        "layout_metadata_fields": [
+            "source_order",
+            "s",
+            "r",
+            "x",
+            "y",
+            "b",
+            "i",
+            "f",
+            "source_text"
+        ],
+        "output_directory": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output_chunk1_v2/unknown_model_gemma_20260710_100514_20260720_110406"
+    }
+}

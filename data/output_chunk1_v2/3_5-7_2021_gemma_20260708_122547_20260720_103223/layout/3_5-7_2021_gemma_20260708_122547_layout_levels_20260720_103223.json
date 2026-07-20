@@ -1,0 +1,171 @@
+{
+    "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/chunk1_v2/3편5-7장(2021)_openai_gpt-5.5_toc_chunk1.json",
+    "source_chunk": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/input_chunks/3_5-7_2021_gemma_20260708_122547/chunk_1_pages_1-34.json",
+    "matching_priority": [
+        "S/R/B/I/F",
+        "learned start shape",
+        "X",
+        "Y"
+    ],
+    "rules": [
+        {
+            "level": 1,
+            "s": 31.0,
+            "r": 3.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 243.0,
+            "x_max": 243.0,
+            "y_min": 126.0,
+            "y_max": 126.0,
+            "start_shapes": [
+                "A"
+            ],
+            "reference_count": 1,
+            "examples": [
+                "제5장 직업보건"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 18.0,
+            "r": 1.9,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 77.0,
+            "x_max": 185.0,
+            "y_min": 104.0,
+            "y_max": 758.0,
+            "start_shapes": [
+                "#."
+            ],
+            "reference_count": 6,
+            "examples": [
+                "1. 직업보건의 역사",
+                "2. 직업보건의 정의와 목표",
+                "3. 직업보건사업의 내용",
+                "4. 직무스트레스",
+                "5. 야간노동과 교대근무",
+                "6. 여성 노동자의 건강"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 16.0,
+            "r": 1.68,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 185.0,
+            "x_max": 185.0,
+            "y_min": 487.0,
+            "y_max": 487.0,
+            "start_shapes": [
+                "#."
+            ],
+            "reference_count": 1,
+            "examples": [
+                "7. 직업역학"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 12.5,
+            "r": 1.32,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 73.0,
+            "x_max": 181.0,
+            "y_min": 138.0,
+            "y_max": 748.0,
+            "start_shapes": [
+                "#.#"
+            ],
+            "reference_count": 25,
+            "examples": [
+                "1.1 외국의 직업보건",
+                "1.2 한국의 직업보건",
+                "2.1 직업보건의 정의",
+                "2.2 직업보건사업의 목표와 기능",
+                "2.3 한국의 직업보건조직",
+                "3.1 작업환경측정 및 유해요인 관리",
+                "3.2 건강진단",
+                "3.3 근로자건강센터"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 12.0,
+            "r": 1.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 65.0,
+            "x_max": 189.0,
+            "y_min": 85.0,
+            "y_max": 784.0,
+            "start_shapes": [
+                "#)",
+                "A",
+                "A,"
+            ],
+            "reference_count": 36,
+            "examples": [
+                "1) 정부",
+                "2) 정부 산하기관",
+                "4) 사업장 조직",
+                "1) 직무스트레스 정의",
+                "2) 직무스트레스 원인",
+                "1) 개인적 관리",
+                "2) 조직적 관리",
+                "1) 조직적 관리방안: 교대근무 일정 조정"
+            ]
+        },
+        {
+            "level": 5,
+            "s": 10.0,
+            "r": 1.05,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 75.0,
+            "x_max": 183.0,
+            "y_min": 85.0,
+            "y_max": 710.0,
+            "start_shapes": [
+                "(#)"
+            ],
+            "reference_count": 13,
+            "examples": [
+                "(1) 산업안전보건공단",
+                "(2) 근로복지공단",
+                "(2) 사업수행기관",
+                "(1) 직무 내재적 요인",
+                "(2) 조직 내에서의 역할",
+                "(4) 직장 내에서의 대인관계",
+                "(5) 조직의 구조와 분위기",
+                "(1) WHO의 여성을 위한 보건정책 전략의 원칙"
+            ]
+        }
+    ],
+    "unmatched_reference_titles": [
+        {
+            "level": 4,
+            "chapter": "3) 민간기관",
+            "page": 8
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 대학 및 학회",
+            "page": 8
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 경력의 개발",
+            "page": 18
+        }
+    ]
+}
