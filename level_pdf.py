@@ -2,34 +2,34 @@ from __future__ import annotations
 
 import argparse
 import json
-import shutil
 import sys
-import tempfile
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
-from ai_openai_v3 import (
+from ai_gemma_overlap import (
     DEFAULT_AI_RETRIES,
-    DEFAULT_FALLBACK_MODELS,
-    DEFAULT_MAX_OUTPUT_TOKENS,
-    DEFAULT_MODEL,
+    DEFAULT_GEMMA_BACKEND,
+    DEFAULT_GEMMA_CONTEXT_WINDOW,
+    DEFAULT_GEMMA_KEEP_ALIVE,
+    DEFAULT_GEMMA_OLLAMA_MODEL,
+    DEFAULT_GEMMA_TEXT_CHUNK_CHARS,
+    DEFAULT_GEMMA_TEXT_CHUNK_OVERLAP_CHARS,
+    DEFAULT_MAX_OUTPUT_TOKENS_BY_PROVIDER,
+    DEFAULT_OLLAMA_BASE_URL,
+    DEFAULT_OLLAMA_REQUEST_TIMEOUT,
     DEFAULT_RETRY_BASE_DELAY,
     clean_text,
-    create_openai_client,
-    extract_pdf_layout_text,
+    chunk_pdf_text_pages,
+    extract_gemma_pdf_pages,
     format_elapsed,
-    get_api_key,
+    gemma_response_text,
+    generate_gemma_once,
     is_configuration_error,
-    is_schema_config_error,
-    make_ascii_upload_name,
-    parse_json_response,
-    parse_model_list,
-    prepare_pdf_for_processing,
+    normalize_gemma_model_for_backend,
+    parse_json_response_text,
     safe_filename_part,
-    timestamp_for_filename,
-    timestamp_for_metadata,
     unique_output_path,
     with_retry,
 )
@@ -37,30 +37,9 @@ from ai_openai_v3 import (
 
 INPUT_DIR = Path("./data/input")
 OUTPUT_DIR = Path("./data/output_pdf")
-API_INPUT_MODES = ("both", "pdf", "txt")
-
-HEADINGS_SCHEMA: dict[str, Any] = {
-    "type": "object",
-    "properties": {
-        "headings": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "level": {"type": "integer"},
-                    "text": {"type": "string"},
-                    "page": {"type": "integer"},
-                    "order": {"type": "integer"},
-                    "reason": {"type": "string"},
-                },
-                "required": ["level", "text", "page", "order", "reason"],
-                "additionalProperties": False,
-            },
-        }
-    },
-    "required": ["headings"],
-    "additionalProperties": False,
-}
+DEFAULT_MODEL = DEFAULT_GEMMA_OLLAMA_MODEL
+DEFAULT_CHUNK_CHARS = max(int(DEFAULT_GEMMA_TEXT_CHUNK_CHARS), 220000)
+DEFAULT_CHUNK_OVERLAP_CHARS = max(int(DEFAULT_GEMMA_TEXT_CHUNK_OVERLAP_CHARS), 8000)
 
 
 @dataclass(frozen=True)
@@ -73,20 +52,23 @@ class Heading:
 
 
 @dataclass(frozen=True)
+class OutputPart:
+    level_start: int
+    level_end: int
+    start_page: int
+    end_page: int
+    output_pdf: str
+
+
+@dataclass(frozen=True)
 class ExtractionPlan:
     source_pdf: str
     model: str
-    api_input_mode: str
     page_count: int
     max_level: int
-    start_page: int
-    end_page: int
     target: dict[str, Any]
-    range_parent: dict[str, Any]
     path: list[dict[str, Any]]
-    output_pdf: str
-    headings_json: str | None
-    generated_at: str
+    outputs: list[dict[str, Any]]
 
 
 def pdf_page_count(pdf_path: Path) -> int:
@@ -124,28 +106,27 @@ def iter_pdfs(path: Path) -> list[Path]:
     raise FileNotFoundError(f"Path not found: {path}")
 
 
-def build_ai_prompt(pdf_name: str, max_depth: int) -> str:
+def build_heading_prompt(pdf_name: str, max_depth: int) -> str:
     return f"""
-You are analyzing a PDF document hierarchy. Your job is not to create a nice TOC; your job is to identify the real hierarchy headings needed to cut the PDF range.
+You are analyzing PDF document hierarchy from extracted text/layout metadata.
+Return only real hierarchy headings as JSON. Do not create a pretty table of contents.
 
-[Goal]
-Return the document heading lines with levels. After this, code will find the first deepest-level heading and extract PDF pages from its level 1 ancestor through the page where the next heading higher than that deepest level appears. PDF extraction is page-based, so this includes deepest-level siblings that appear earlier on that boundary page.
+[Task]
+Identify every real heading line needed to understand the document hierarchy.
+The result will be used to cut PDFs by hierarchy levels.
 
-[Important Rules]
-- Use only evidence from the attached source.
+[Rules]
+- Use only evidence in the extracted PDF text/layout.
 - Do not assume any fixed document format, numbering style, language, textbook template, or section naming convention.
-- Do not rely on hard-coded patterns. Infer hierarchy from the source itself.
-- Decide whether a line is a heading by combining visual/layout evidence, source order, repeated role, indentation, spacing, and document context.
-- If parsed layout metadata is attached, use P(page), O(line order), S(font size), R(size/body ratio), X/Y(position), B/I(style), and F(font) as evidence.
-- If the PDF is attached, use the PDF visual layout as evidence too.
-- Exclude body sentences, running headers/footers, page numbers, captions, figure/table labels, examples, exercises/questions, references, and incidental lists unless they clearly function as hierarchy headings in this document.
+- Infer hierarchy from the source itself: repeated visual roles, font size, size ratio, indentation, spacing, page order, local context, and structural containment.
+- Exclude running headers/footers, page numbers, captions, figure/table labels, body sentences, examples, exercises/questions, references, and incidental lists unless they clearly function as hierarchy headings.
 - Include headings deep enough to reach the deepest real hierarchy level visible in the document, up to level {max_depth}.
-- Do not skip parent headings between level 1 and the deepest real heading when those parent headings are visible in the source.
+- Do not skip visible parent headings between level 1 and the deepest heading.
 - Level 1 is the highest document hierarchy role found in the body.
-- Use actual PDF viewer page numbers.
+- Use actual PDF viewer page numbers from [PAGE] markers or P metadata.
 - Use order as the source line order within the page.
-- Keep exact source heading text.
-- Return valid JSON only.
+- Keep exact source heading text. Do not include layout tags in text.
+- Output exactly one valid JSON object. Do not output Markdown.
 
 [Output JSON]
 {{
@@ -155,79 +136,93 @@ Return the document heading lines with levels. After this, code will find the fi
   ]
 }}
 
-[Source File]
+[PDF File]
 {pdf_name}
 """.strip()
 
 
-def build_response_payloads(
-    model: str,
-    prompt: str,
-    file_ids: list[str],
-    max_output_tokens: int | None,
-    use_schema: bool,
-) -> list[dict[str, Any]]:
-    base: dict[str, Any] = {
-        "model": model,
-        "input": [{
-            "role": "user",
-            "content": [
-                *[{"type": "input_file", "file_id": file_id} for file_id in file_ids],
-                {"type": "input_text", "text": prompt},
-            ],
-        }],
-        "store": False,
-    }
-    if max_output_tokens:
-        base["max_output_tokens"] = int(max_output_tokens)
+def build_chunk_prompt(base_prompt: str, pdf_name: str, chunk: dict[str, Any], total_chunks: int) -> str:
+    return f"""
+{base_prompt}
 
-    payloads: list[dict[str, Any]] = []
-    if use_schema:
-        schema_payload = dict(base)
-        schema_payload["text"] = {
-            "format": {
-                "type": "json_schema",
-                "name": "level_pdf_headings_schema",
-                "schema": HEADINGS_SCHEMA,
-                "strict": True,
-            }
-        }
-        payloads.append(schema_payload)
+[Chunk Instruction]
+This is one large chunk of the PDF. Include only headings visible in this chunk.
+Do not infer headings outside this chunk. Adjacent chunks may overlap; keep duplicated headings identical if they appear.
 
-        json_payload = dict(base)
-        json_payload["text"] = {"format": {"type": "json_object"}}
-        payloads.append(json_payload)
+[Chunk]
+{chunk['index']}/{total_chunks}, pages {chunk['start_page']}-{chunk['end_page']}
 
-    payloads.append(base)
-    return payloads
+[Extracted PDF Text/Layout]
+{chunk['text']}
+""".strip()
 
 
-def create_ai_response(
-    client: Any,
-    model: str,
-    prompt: str,
-    file_ids: list[str],
-    max_output_tokens: int | None,
-    use_schema: bool,
-) -> Any:
+def build_merge_prompt(base_prompt: str, pdf_name: str, partials: list[dict[str, Any]], max_depth: int) -> str:
+    partial_json = json.dumps(partials, ensure_ascii=False, indent=2)
+    return f"""
+{base_prompt}
+
+[Merge Instruction]
+Merge the partial heading candidates into one final heading list.
+- Remove duplicates caused by chunk overlap.
+- Preserve page order and source order.
+- Keep only real hierarchy headings.
+- Keep levels 1 to {max_depth}.
+- Do not invent headings.
+- Return exactly one JSON object with a headings array.
+
+[PDF File]
+{pdf_name}
+
+[Partial Heading Candidates]
+{partial_json}
+""".strip()
+
+
+def request_gemma_json(model: str, prompt: str, args: argparse.Namespace, label: str) -> tuple[dict[str, Any], str]:
+    retry_count = max(1, int(args.ai_retries))
     last_error: Exception | None = None
-    for payload in build_response_payloads(model, prompt, file_ids, max_output_tokens, use_schema):
+    last_raw = ""
+
+    for attempt in range(1, retry_count + 1):
+        request_prompt = prompt
+        if attempt > 1:
+            preview = clean_text(last_raw)[:500]
+            request_prompt += (
+                "\n\n[Retry Instruction]\n"
+                f"Previous JSON parse failed: {type(last_error).__name__}: {last_error}\n"
+                f"Previous response preview: {preview}\n"
+                "Return exactly one valid JSON object. Do not include Markdown."
+            )
+
+        response = with_retry(
+            label=f"{label} generation",
+            func=lambda request_prompt=request_prompt: generate_gemma_once(
+                model=model,
+                prompt=request_prompt,
+                args=args,
+            ),
+            max_retries=args.ai_retries,
+            base_delay=args.ai_retry_base_delay,
+        )
+        raw = gemma_response_text(response)
         try:
-            return client.responses.create(**payload)
+            return parse_json_response_text(raw, provider="gemma"), raw
         except Exception as error:
             last_error = error
-            if is_schema_config_error(error):
-                continue
-            raise
+            last_raw = raw
+            if attempt >= retry_count:
+                raise
+
     if last_error:
         raise last_error
-    raise RuntimeError("OpenAI response generation failed.")
+    raise RuntimeError(f"{label} failed")
 
 
 def validate_headings(data: dict[str, Any], max_depth: int, page_count: int) -> list[Heading]:
     raw_headings = data.get("headings", [])
     if not isinstance(raw_headings, list):
-        raise ValueError("AI response must contain a headings array.")
+        raise ValueError("Gemma response must contain a headings array.")
 
     headings: list[Heading] = []
     seen: set[tuple[int, int, str]] = set()
@@ -257,7 +252,7 @@ def validate_headings(data: dict[str, Any], max_depth: int, page_count: int) -> 
 
     headings.sort(key=lambda item: (item.page, item.order))
     if not headings:
-        raise RuntimeError("AI returned no headings.")
+        raise RuntimeError("Gemma returned no headings.")
     return normalize_levels(headings)
 
 
@@ -267,108 +262,75 @@ def normalize_levels(headings: list[Heading]) -> list[Heading]:
     return [Heading(**{**asdict(heading), "level": mapping[heading.level]}) for heading in headings]
 
 
-def generate_ai_headings(pdf_path: Path, args: argparse.Namespace, page_count: int) -> tuple[list[Heading], str, str]:
-    client = create_openai_client(api_key=get_api_key())
-    mode = clean_text(args.api_input_mode).lower()
-    if mode not in API_INPUT_MODES:
-        raise ValueError(f"Unsupported api input mode: {mode}")
-
-    processing_pdf, display_name = prepare_pdf_for_processing(pdf_path)
-    models = parse_model_list(args.model, args.ai_fallback_models)
-    uploaded_files: list[Any] = []
-    raw_text = ""
-
-    try:
-        with tempfile.TemporaryDirectory(prefix="level_pdf_ai_upload_") as temp_name:
-            temp_dir = Path(temp_name)
-            upload_paths: list[Path] = []
-
-            if mode in ("both", "pdf"):
-                pdf_upload = temp_dir / make_ascii_upload_name(pdf_path)
-                shutil.copy2(processing_pdf, pdf_upload)
-                upload_paths.append(pdf_upload)
-
-            if mode in ("both", "txt"):
-                print("  PDF layout extraction started...", flush=True)
-                try:
-                    layout_text = extract_pdf_layout_text(pdf_path)
-                except Exception as error:
-                    if mode == "txt":
-                        raise
-                    print(f"  PDF layout extraction failed; continuing with PDF only: {error}", file=sys.stderr, flush=True)
-                    mode = "pdf"
-                else:
-                    print(f"  PDF layout extraction completed: {len(layout_text.encode('utf-8')):,} bytes", flush=True)
-                    layout_upload = temp_dir / f"{safe_filename_part(pdf_path.stem)}_layout.txt"
-                    layout_upload.write_text(layout_text, encoding="utf-8")
-                    upload_paths.append(layout_upload)
-
-            print(f"  OpenAI upload started: {mode}", flush=True)
-            for upload_path in upload_paths:
-                def do_upload(upload_path: Path = upload_path) -> Any:
-                    with upload_path.open("rb") as file_obj:
-                        return client.files.create(file=file_obj, purpose="user_data")
-
-                uploaded = with_retry(
-                    label=f"OpenAI upload({upload_path.name})",
-                    func=do_upload,
-                    max_retries=args.ai_retries,
-                    base_delay=args.ai_retry_base_delay,
-                )
-                uploaded_files.append(uploaded)
-            print("  OpenAI upload completed", flush=True)
-
-        setattr(args, "_effective_api_input_mode", mode)
-        file_ids = [uploaded.id for uploaded in uploaded_files]
-        prompt = build_ai_prompt(display_name, args.max_depth)
-        last_error: Exception | None = None
-
-        for model in models:
-            for attempt in range(1, max(1, int(args.ai_retries)) + 1):
-                retry_prompt = prompt
-                if attempt > 1:
-                    retry_prompt += "\n\nReturn exactly one valid JSON object. Do not include Markdown."
-                try:
-                    print(f"  OpenAI heading detection started: {model}", flush=True)
-                    response = with_retry(
-                        label=f"OpenAI heading detection({model})",
-                        func=lambda model=model, retry_prompt=retry_prompt: create_ai_response(
-                            client=client,
-                            model=model,
-                            prompt=retry_prompt,
-                            file_ids=file_ids,
-                            max_output_tokens=args.max_output_tokens,
-                            use_schema=not args.no_schema,
-                        ),
-                        max_retries=args.ai_retries,
-                        base_delay=args.ai_retry_base_delay,
-                    )
-                    print(f"  OpenAI heading detection completed: {model}", flush=True)
-                    raw_text = str(getattr(response, "output_text", "") or "")
-                    headings = validate_headings(parse_json_response(response), args.max_depth, page_count)
-                    return headings, raw_text, model
-                except Exception as error:
-                    last_error = error
-                    if is_configuration_error(error):
-                        raise
-                    if attempt < max(1, int(args.ai_retries)) and isinstance(error, (json.JSONDecodeError, ValueError)):
-                        continue
-                    print(f"OpenAI model failed: {model} / {error}", file=sys.stderr, flush=True)
-                    break
-
-        if last_error:
-            raise last_error
-        raise RuntimeError("No OpenAI models to try.")
-    finally:
-        if args.delete_uploaded_file:
-            for uploaded in uploaded_files:
-                try:
-                    client.files.delete(uploaded.id)
-                except Exception as error:
-                    print(f"Failed to delete OpenAI uploaded file {uploaded.id}: {error}", file=sys.stderr, flush=True)
+def extract_chunks(pdf_path: Path, args: argparse.Namespace) -> tuple[list[dict[str, Any]], int]:
+    print("  Gemma PDF text/layout extraction started...", flush=True)
+    pages, metadata = extract_gemma_pdf_pages(pdf_path, args)
+    page_count = pdf_page_count(pdf_path)
+    extracted_chars = sum(len(text) for _, text in pages)
+    print(
+        f"  Gemma PDF extraction completed: {len(pages)} pages, {extracted_chars:,} chars, mode={metadata.get('gemma_extraction_mode')}",
+        flush=True,
+    )
+    chunk_chars = max(10000, int(args.gemma_chunk_chars))
+    overlap_chars = max(0, min(int(args.gemma_chunk_overlap_chars), chunk_chars // 2))
+    chunks = chunk_pdf_text_pages(pages, max_chars=chunk_chars, overlap_chars=overlap_chars)
+    print(f"  Gemma chunking completed: {len(chunks)} chunks, chunk_chars={chunk_chars:,}, overlap={overlap_chars:,}", flush=True)
+    return chunks, page_count
 
 
-def find_first_deepest_path(headings: list[Heading]) -> tuple[Heading, list[Heading]]:
+def generate_gemma_headings(pdf_path: Path, args: argparse.Namespace, page_count: int) -> tuple[list[Heading], str, str]:
+    model = normalize_gemma_model_for_backend(args.model, args.gemma_backend)
+    base_prompt = build_heading_prompt(pdf_path.name, args.max_depth)
+    chunks, _ = extract_chunks(pdf_path, args)
+    raw_parts: list[dict[str, Any]] = []
+    partials: list[dict[str, Any]] = []
+
+    for chunk in chunks:
+        print(f"  Gemma chunk {chunk['index']}/{len(chunks)} request: pages {chunk['start_page']}-{chunk['end_page']}", flush=True)
+        parsed, raw = request_gemma_json(
+            model=model,
+            prompt=build_chunk_prompt(base_prompt, pdf_path.name, chunk, len(chunks)),
+            args=args,
+            label=f"Gemma chunk {chunk['index']}/{len(chunks)}",
+        )
+        headings = validate_headings(parsed, args.max_depth, page_count)
+        partials.append({
+            "chunk": chunk["index"],
+            "start_page": chunk["start_page"],
+            "end_page": chunk["end_page"],
+            "headings": [asdict(item) for item in headings],
+        })
+        raw_parts.append({"chunk": chunk["index"], "raw_response": raw})
+        print(f"  Gemma chunk {chunk['index']} completed: {len(headings)} headings", flush=True)
+
+    if len(partials) == 1:
+        final_data = {"headings": partials[0]["headings"]}
+        final_raw = raw_parts[0]["raw_response"]
+    else:
+        print(f"  Gemma chunk merge started: {model}", flush=True)
+        final_data, final_raw = request_gemma_json(
+            model=model,
+            prompt=build_merge_prompt(base_prompt, pdf_path.name, partials, args.max_depth),
+            args=args,
+            label="Gemma chunk merge",
+        )
+        print("  Gemma chunk merge completed", flush=True)
+
+    headings = validate_headings(final_data, args.max_depth, page_count)
+    raw_bundle = json.dumps(
+        {
+            "model": model,
+            "chunk_count": len(chunks),
+            "raw_parts": raw_parts if args.write_raw else [],
+            "final_raw_response": final_raw if args.write_raw else "",
+        },
+        ensure_ascii=False,
+        indent=2,
+    )
+    return headings, raw_bundle, model
+
+
+def first_deepest_path(headings: list[Heading]) -> tuple[Heading, list[Heading]]:
     max_level = max(heading.level for heading in headings)
     target = next(heading for heading in headings if heading.level == max_level)
     target_pos = headings.index(target)
@@ -381,93 +343,138 @@ def find_first_deepest_path(headings: list[Heading]) -> tuple[Heading, list[Head
             current_level = heading.level
             if current_level == 1:
                 break
-
     ancestors.reverse()
     return target, [*ancestors, target]
 
 
-def next_upper_heading_end_page(headings: list[Heading], target: Heading, page_count: int) -> int:
+def next_heading_page_for_level(headings: list[Heading], current: Heading, level: int, page_count: int) -> int:
     started = False
     for heading in headings:
-        if heading is target:
+        if heading is current:
             started = True
             continue
         if not started:
             continue
-        if heading.level < target.level:
-            return max(target.page, heading.page)
+        if heading.level <= level:
+            return max(current.page, heading.page)
     return page_count
 
 
-def compute_extract_range(headings: list[Heading], path: list[Heading], page_count: int) -> tuple[int, int, Heading]:
-    if not path:
-        raise RuntimeError("Could not build a heading path.")
-    target = path[-1]
-    parent = path[-2] if len(path) >= 2 else target
-    start_page = path[0].page
-    end_page = next_upper_heading_end_page(headings, target, page_count)
-    start_page = max(1, min(start_page, page_count))
-    end_page = max(start_page, min(end_page, page_count))
-    return start_page, end_page, parent
+def heading_for_level(path: list[Heading], level: int) -> Heading:
+    eligible = [heading for heading in path if heading.level <= level]
+    if not eligible:
+        return path[0]
+    return eligible[-1]
+
+
+def level_groups(max_level: int, group_size: int) -> list[tuple[int, int]]:
+    group_size = max(2, int(group_size))
+    groups: list[tuple[int, int]] = []
+    start = 1
+    while start <= max_level:
+        end = min(max_level, start + group_size - 1)
+        groups.append((start, end))
+        if end == max_level:
+            break
+        start = end
+    return groups
+
+
+def compute_level_group_ranges(
+    headings: list[Heading],
+    path: list[Heading],
+    page_count: int,
+    group_size: int,
+) -> list[tuple[int, int, int, int, Heading]]:
+    max_level = path[-1].level
+    ranges: list[tuple[int, int, int, int, Heading]] = []
+    for start_level, end_level in level_groups(max_level, group_size):
+        start_heading = heading_for_level(path, start_level)
+        end_heading = heading_for_level(path, end_level)
+        start_page = max(1, min(start_heading.page, page_count))
+        if end_level >= max_level:
+            end_page = next_heading_page_for_level(headings, end_heading, end_level, page_count)
+        else:
+            end_page = end_heading.page
+        end_page = max(start_page, min(end_page, page_count))
+        ranges.append((start_level, end_level, start_page, end_page, end_heading))
+    return ranges
 
 
 def process_pdf(pdf_path: Path, args: argparse.Namespace) -> ExtractionPlan:
-    started = time.perf_counter()
     page_count = pdf_page_count(pdf_path)
-    headings, raw_text, model = generate_ai_headings(pdf_path, args, page_count)
-    target, path = find_first_deepest_path(headings)
-    start_page, end_page, parent = compute_extract_range(headings, path, page_count)
+    headings, raw_text, model = generate_gemma_headings(pdf_path, args, page_count)
+    target, path = first_deepest_path(headings)
+    ranges = compute_level_group_ranges(headings, path, page_count, args.level_group_size)
 
-    stamp = timestamp_for_filename()
-    base = f"{safe_filename_part(pdf_path.stem)}_ai_{safe_filename_part(model)}_L{target.level}_p{start_page}-{end_page}_{stamp}"
-    output_pdf = unique_output_path(Path(args.output_dir) / f"{base}.pdf")
-    write_pdf_range(pdf_path, output_pdf, start_page, end_page)
+    stamp = time.strftime("%Y%m%d_%H%M%S")
+    file_stem = safe_filename_part(pdf_path.stem)
+    model_stem = safe_filename_part(model)
+    run_dir = unique_output_path(Path(args.output_dir) / f"{file_stem}_gemma_{model_stem}_{stamp}")
+    run_dir.mkdir(parents=True, exist_ok=True)
 
-    generated_at = timestamp_for_metadata()
+    outputs: list[OutputPart] = []
+    for start_level, end_level, start_page, end_page, end_heading in ranges:
+        base = f"L{start_level}-{end_level}_p{start_page}-{end_page}"
+        output_pdf = unique_output_path(run_dir / f"{base}.pdf")
+        write_pdf_range(pdf_path, output_pdf, start_page, end_page)
+        outputs.append(OutputPart(
+            level_start=start_level,
+            level_end=end_level,
+            start_page=start_page,
+            end_page=end_page,
+            output_pdf=str(output_pdf),
+        ))
+
     if args.write_raw:
-        raw_path = unique_output_path(Path(args.output_dir) / f"{base}_raw_response.txt")
+        raw_path = unique_output_path(run_dir / "raw_response.txt")
         raw_path.write_text(raw_text, encoding="utf-8")
 
     return ExtractionPlan(
         source_pdf=str(pdf_path),
         model=model,
-        api_input_mode=args.api_input_mode,
         page_count=page_count,
         max_level=target.level,
-        start_page=start_page,
-        end_page=end_page,
         target=asdict(target),
-        range_parent=asdict(parent),
         path=[asdict(item) for item in path],
-        output_pdf=str(output_pdf),
-        headings_json=None,
-        generated_at=generated_at,
+        outputs=[asdict(item) for item in outputs],
     )
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="OpenAI-only PDF range extractor for the first deepest heading group.")
+    parser = argparse.ArgumentParser(description="Gemma-only PDF range extractor split by hierarchy level groups.")
     parser.add_argument("path", nargs="?", default=str(INPUT_DIR), help="PDF file or directory (default: ./data/input)")
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR), help="Output directory (default: ./data/output_pdf)")
-    parser.add_argument("--api-input-mode", choices=API_INPUT_MODES, default="both", help="both=PDF + parsed layout TXT, pdf=PDF only, txt=parsed layout TXT only")
-    parser.add_argument("--model", default=DEFAULT_MODEL)
-    parser.add_argument("--ai-fallback-models", default=DEFAULT_FALLBACK_MODELS)
+    parser.add_argument("--model", default=DEFAULT_MODEL, help="Gemma model (default: gemma4:31b for Ollama)")
+    parser.add_argument("--ai-fallback-models", default="", help="Reserved for compatibility; currently unused")
+    parser.add_argument("--gemma-backend", default=DEFAULT_GEMMA_BACKEND, choices=("ollama", "transformers"))
+    parser.add_argument("--ollama-base-url", default=DEFAULT_OLLAMA_BASE_URL)
+    parser.add_argument("--ollama-request-timeout", type=int, default=DEFAULT_OLLAMA_REQUEST_TIMEOUT)
+    parser.add_argument("--gemma-context-window", type=int, default=DEFAULT_GEMMA_CONTEXT_WINDOW)
+    parser.add_argument("--gemma-keep-alive", default=DEFAULT_GEMMA_KEEP_ALIVE)
+    parser.add_argument("--gemma-think", default="")
+    parser.add_argument("--gemma-device-map", default="auto")
+    parser.add_argument("--gemma-torch-dtype", default="auto")
+    parser.add_argument("--gemma-extraction-mode", default="layout", choices=("layout", "text"))
+    parser.add_argument("--gemma-chunk-chars", type=int, default=DEFAULT_CHUNK_CHARS, help="Maximum extracted text/layout chars per Gemma chunk")
+    parser.add_argument("--gemma-chunk-overlap-chars", type=int, default=DEFAULT_CHUNK_OVERLAP_CHARS)
+    parser.add_argument("--level-group-size", type=int, default=3, help="Number of levels per output PDF; adjacent groups overlap by one level")
+    parser.add_argument("--max-depth", type=int, default=10)
+    parser.add_argument("--max-output-tokens", type=int, default=DEFAULT_MAX_OUTPUT_TOKENS_BY_PROVIDER["gemma"])
+    parser.add_argument("--temperature", type=float, default=0.1)
     parser.add_argument("--ai-retries", type=int, default=DEFAULT_AI_RETRIES)
     parser.add_argument("--ai-retry-base-delay", type=float, default=DEFAULT_RETRY_BASE_DELAY)
-    parser.add_argument("--max-depth", type=int, default=10)
-    parser.add_argument("--max-output-tokens", type=int, default=DEFAULT_MAX_OUTPUT_TOKENS)
-    parser.add_argument("--no-schema", action="store_true", help="Disable JSON schema response format")
-    parser.add_argument("--write-raw", action="store_true", help="Save raw OpenAI response text")
-    parser.add_argument("--delete-uploaded-file", action="store_true", help="Delete uploaded OpenAI files after processing")
+    parser.add_argument("--no-schema", action="store_true", help="Compatibility option; headings mode always disables the TOC schema")
+    parser.add_argument("--write-raw", action="store_true", help="Save Gemma raw response bundle")
     parser.add_argument("--stop-on-error", action="store_true", help="Stop immediately when one PDF fails")
     return parser
 
 
 def main() -> int:
-    parser = build_arg_parser()
-    args = parser.parse_args()
+    args = build_arg_parser().parse_args()
     args.max_depth = max(1, min(int(args.max_depth), 10))
-    args.api_input_mode = clean_text(args.api_input_mode).lower()
+    args.level_group_size = max(2, int(args.level_group_size))
+    args.no_schema = True
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)
 
     pdf_files = iter_pdfs(Path(args.path))
@@ -487,20 +494,23 @@ def main() -> int:
             plan = process_pdf(pdf_path, args)
             elapsed = time.perf_counter() - started
             success_count += 1
-            print(f"Completed: {plan.output_pdf}", flush=True)
+            print(f"Completed: {len(plan.outputs)} PDFs", flush=True)
             print(f"  model: {plan.model}", flush=True)
-            print(f"  api_input_mode: {plan.api_input_mode}", flush=True)
-            print(f"  range: pages {plan.start_page}-{plan.end_page} / {plan.page_count}", flush=True)
             print(f"  max_level: {plan.max_level}", flush=True)
-            print(f"  range_parent: {plan.range_parent.get('text')}", flush=True)
             print(f"  first_deepest: {plan.target.get('text')}", flush=True)
+            for output in plan.outputs:
+                print(
+                    f"  L{output['level_start']}-{output['level_end']}: "
+                    f"pages {output['start_page']}-{output['end_page']} -> {output['output_pdf']}",
+                    flush=True,
+                )
             print(f"  elapsed: {format_elapsed(elapsed)} ({elapsed:.3f}s)", flush=True)
         except Exception as error:
             elapsed = time.perf_counter() - started
             failed_count += 1
             print(f"Failed: {pdf_path} / {error}", file=sys.stderr, flush=True)
             print(f"  elapsed: {format_elapsed(elapsed)} ({elapsed:.3f}s)", file=sys.stderr, flush=True)
-            if args.stop_on_error:
+            if is_configuration_error(error) or args.stop_on_error:
                 raise
 
     total_elapsed = time.perf_counter() - total_started

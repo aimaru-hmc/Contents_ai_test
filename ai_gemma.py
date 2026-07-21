@@ -8152,6 +8152,25 @@ def iter_pdfs(path: Path) -> list[Path]:
     raise FileNotFoundError(f"Path not found: {path}")
 
 
+def filter_pdfs_by_contains(pdf_files: list[Path], terms: list[str]) -> list[Path]:
+    normalized_terms = [clean_text(term).casefold() for term in terms if clean_text(term)]
+    if not normalized_terms:
+        return pdf_files
+
+    matches = [
+        pdf_file for pdf_file in pdf_files
+        if all(term in str(pdf_file).casefold() for term in normalized_terms)
+    ]
+    if not matches:
+        available = "\n".join(f"  - {item}" for item in pdf_files[:50])
+        raise FileNotFoundError(
+            "No PDF matched --path-contains: "
+            + ", ".join(normalized_terms)
+            + ("\nAvailable PDFs:\n" + available if available else "")
+        )
+    return matches
+
+
 def print_quiet_console(args: argparse.Namespace, text: str, error: bool = False) -> None:
     if not getattr(args, "quiet_console", False):
         return
@@ -8325,6 +8344,12 @@ def build_arg_parser() -> argparse.ArgumentParser:
     )
 
     parser.add_argument("path", nargs="?", default="./data/input", help="PDF file or directory")
+    parser.add_argument(
+        "--path-contains",
+        action="append",
+        default=[],
+        help="Filter PDFs under path by filename/path substring. Can be repeated.",
+    )
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR))
     parser.add_argument("--prompt", default=None, help="TOC generation instruction")
     parser.add_argument("--prompt-file", default=None, help="UTF-8 text file containing the TOC instruction")
@@ -8654,6 +8679,7 @@ def main() -> int:
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)
     user_prompt = load_prompt(args)
     pdf_files = iter_pdfs(Path(args.path))
+    pdf_files = filter_pdfs_by_contains(pdf_files, args.path_contains)
 
     original_stdout = sys.stdout
     original_stderr = sys.stderr
