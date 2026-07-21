@@ -1,0 +1,634 @@
+{
+    "title": "cp1_2",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "신경학의 역사",
+            "page": 45,
+            "level_reason": "Large chapter-opening body title (S31) at top of chapter page."
+        },
+        {
+            "level": 2,
+            "chapter": "1. 고대 신경학",
+            "page": 45,
+            "level_reason": "Numbered section title listed in contents and verified by body heading under Chapter 1."
+        },
+        {
+            "level": 2,
+            "chapter": "2. 중세 암흑기와 르네상스시대의 신경학",
+            "page": 45,
+            "level_reason": "Numbered section title listed in contents and verified by body heading under Chapter 1."
+        },
+        {
+            "level": 2,
+            "chapter": "3. 17세기에서 20세기까지의 기초신경학",
+            "page": 45,
+            "level_reason": "Numbered section title listed in contents and verified by body heading under Chapter 1."
+        },
+        {
+            "level": 2,
+            "chapter": "4. 18세기에서 20세기까지의 임상신경학",
+            "page": 47,
+            "level_reason": "Numbered section title listed in contents and verified by body heading under Chapter 1."
+        },
+        {
+            "level": 2,
+            "chapter": "5. 한국의 신경학",
+            "page": 49,
+            "level_reason": "Numbered section title listed in contents and verified by body heading under Chapter 1."
+        },
+        {
+            "level": 1,
+            "chapter": "신경해부와 신경생리",
+            "page": 51,
+            "level_reason": "Large chapter-opening body title (S31) at top of chapter page."
+        },
+        {
+            "level": 2,
+            "chapter": "1. 대뇌피질의 기능",
+            "page": 51,
+            "level_reason": "Primary numbered section heading under Chapter 2."
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 개요",
+            "page": 51,
+            "level_reason": "Decimal subsection heading under section 1."
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 대뇌피질의부위별 고위기능",
+            "page": 52,
+            "level_reason": "Decimal subsection heading under section 1."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2.1 전두엽",
+            "page": 52,
+            "level_reason": "Third-level decimal heading under 1.2."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2.2 측두엽",
+            "page": 53,
+            "level_reason": "Third-level decimal heading under 1.2."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2.3 두정엽",
+            "page": 53,
+            "level_reason": "Third-level decimal heading under 1.2."
+        },
+        {
+            "level": 4,
+            "chapter": "1.2.4 후두엽",
+            "page": 54,
+            "level_reason": "Third-level decimal heading under 1.2."
+        },
+        {
+            "level": 2,
+            "chapter": "2. 운동신경계",
+            "page": 54,
+            "level_reason": "Primary numbered section heading under Chapter 2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 일차운동피질",
+            "page": 54,
+            "level_reason": "Decimal subsection heading under section 2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 일차운동피질 이외의 운동조절영역",
+            "page": 56,
+            "level_reason": "Decimal subsection heading under section 2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 전두엽피질-기저핵 순환회로에 의한 운동조절",
+            "page": 57,
+            "level_reason": "Decimal subsection heading under section 2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 소뇌의 운동조절",
+            "page": 58,
+            "level_reason": "Decimal subsection heading under section 2."
+        },
+        {
+            "level": 2,
+            "chapter": "3. 감각신경계와 자율신경계",
+            "page": 60,
+            "level_reason": "Primary numbered section heading under Chapter 2."
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 감각신경계",
+            "page": 60,
+            "level_reason": "Decimal subsection heading under section 3."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1.1 총론",
+            "page": 60,
+            "level_reason": "Third-level decimal heading under 3.1."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1.2 등쪽기둥-내측섬유띠경로",
+            "page": 62,
+            "level_reason": "Third-level decimal heading under 3.1."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1.3 앞가쪽계",
+            "page": 62,
+            "level_reason": "Third-level decimal heading under 3.1."
+        },
+        {
+            "level": 5,
+            "chapter": "직접감각경로: 새척수시상경로",
+            "page": 63,
+            "level_reason": "Unnumbered lower heading indented under 3.1.3 in body and contents."
+        },
+        {
+            "level": 5,
+            "chapter": "간접 감각경로: 원시척수시상경로",
+            "page": 63,
+            "level_reason": "Unnumbered lower heading indented under 3.1.3 in body and contents."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1.4 삼차신경시상경로",
+            "page": 64,
+            "level_reason": "Third-level decimal heading under 3.1."
+        },
+        {
+            "level": 4,
+            "chapter": "3.1.5 척수소뇌로",
+            "page": 64,
+            "level_reason": "Third-level decimal heading under 3.1."
+        },
+        {
+            "level": 5,
+            "chapter": "등쪽척수소뇌로",
+            "page": 64,
+            "level_reason": "Unnumbered lower heading under 3.1.5."
+        },
+        {
+            "level": 5,
+            "chapter": "배쪽척수소뇌로",
+            "page": 64,
+            "level_reason": "Unnumbered lower heading under 3.1.5."
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 자율신경계",
+            "page": 65,
+            "level_reason": "Decimal subsection heading under section 3."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2.1 총론",
+            "page": 65,
+            "level_reason": "Third-level decimal heading under 3.2."
+        },
+        {
+            "level": 5,
+            "chapter": "천막상(대뇌와 사이뇌) 수준",
+            "page": 65,
+            "level_reason": "Unnumbered lower heading under 3.2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "뇌줄기 수준",
+            "page": 65,
+            "level_reason": "Unnumbered lower heading under 3.2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "척수수준",
+            "page": 65,
+            "level_reason": "Unnumbered lower heading under 3.2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "말초신경 수준",
+            "page": 66,
+            "level_reason": "Unnumbered lower heading under 3.2.1."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2.2 교감신경계",
+            "page": 66,
+            "level_reason": "Third-level decimal heading under 3.2."
+        },
+        {
+            "level": 4,
+            "chapter": "3.2.3 부교감신경계",
+            "page": 66,
+            "level_reason": "Third-level decimal heading under 3.2."
+        },
+        {
+            "level": 5,
+            "chapter": "뇌줄기부교감원심섬유",
+            "page": 66,
+            "level_reason": "Unnumbered lower heading under 3.2.3."
+        },
+        {
+            "level": 5,
+            "chapter": "천부 부교감원심섬유",
+            "page": 66,
+            "level_reason": "Unnumbered lower heading under 3.2.3."
+        },
+        {
+            "level": 2,
+            "chapter": "4. 뇌줄기와 뇌신경",
+            "page": 67,
+            "level_reason": "Primary numbered section heading under Chapter 2."
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 뇌줄기",
+            "page": 67,
+            "level_reason": "Decimal subsection heading under section 4."
+        },
+        {
+            "level": 4,
+            "chapter": "4.1.1 뇌줄기각부분의경계",
+            "page": 67,
+            "level_reason": "Third-level decimal heading under 4.1."
+        },
+        {
+            "level": 4,
+            "chapter": "4.1.2 뇌줄기의세부구조",
+            "page": 68,
+            "level_reason": "Third-level decimal heading under 4.1."
+        },
+        {
+            "level": 5,
+            "chapter": "앞면",
+            "page": 68,
+            "level_reason": "Unnumbered lower heading under 4.1.2."
+        },
+        {
+            "level": 5,
+            "chapter": "뒷면",
+            "page": 68,
+            "level_reason": "Unnumbered lower heading under 4.1.2."
+        },
+        {
+            "level": 5,
+            "chapter": "수평단면",
+            "page": 69,
+            "level_reason": "Unnumbered lower heading under 4.1.2."
+        },
+        {
+            "level": 4,
+            "chapter": "4.1.3 혈액공급",
+            "page": 70,
+            "level_reason": "Third-level decimal heading under 4.1."
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 뇌신경계",
+            "page": 70,
+            "level_reason": "Decimal subsection heading under section 4."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2.1 후각신경(제1뇌신경)",
+            "page": 70,
+            "level_reason": "Third-level decimal heading under 4.2."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2.2 시신경(제2뇌신경)",
+            "page": 70,
+            "level_reason": "Third-level decimal heading under 4.2."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2.3 눈돌림신경(제3뇌신경)",
+            "page": 70,
+            "level_reason": "Third-level decimal heading under 4.2."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2.4 도르래신경(제4뇌신경)",
+            "page": 72,
+            "level_reason": "Third-level decimal heading under 4.2."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2.5 외전신경(제6뇌신경)",
+            "page": 72,
+            "level_reason": "Third-level decimal heading under 4.2."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2.6 삼차신경(제5뇌신경)",
+            "page": 72,
+            "level_reason": "Third-level decimal heading under 4.2."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2.7 얼굴신경(제7뇌신경)",
+            "page": 74,
+            "level_reason": "Third-level decimal heading under 4.2."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2.8 전정달팽이신경(제8뇌신경)",
+            "page": 74,
+            "level_reason": "Third-level decimal heading under 4.2."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2.9 혀인두신경(제9뇌신경)",
+            "page": 74,
+            "level_reason": "Third-level decimal heading under 4.2."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2.10 미주신경(제10뇌신경)",
+            "page": 75,
+            "level_reason": "Third-level decimal heading under 4.2."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2.11 부신경(제11뇌신경, 척수부신경)",
+            "page": 75,
+            "level_reason": "Third-level decimal heading under 4.2."
+        },
+        {
+            "level": 4,
+            "chapter": "4.2.12 혀밑신경(제12뇌신경)",
+            "page": 75,
+            "level_reason": "Third-level decimal heading under 4.2."
+        },
+        {
+            "level": 2,
+            "chapter": "5. 척수와 말초신경",
+            "page": 75,
+            "level_reason": "Primary numbered section heading under Chapter 2."
+        },
+        {
+            "level": 3,
+            "chapter": "5.1 척수의해부학적구조",
+            "page": 75,
+            "level_reason": "Decimal subsection heading under section 5."
+        },
+        {
+            "level": 4,
+            "chapter": "5.1.1 개요",
+            "page": 75,
+            "level_reason": "Third-level decimal heading under 5.1."
+        },
+        {
+            "level": 4,
+            "chapter": "5.1.2 척수신경과피부분절",
+            "page": 76,
+            "level_reason": "Third-level decimal heading under 5.1."
+        },
+        {
+            "level": 4,
+            "chapter": "5.1.3 척수의단면구조",
+            "page": 76,
+            "level_reason": "Third-level decimal heading under 5.1."
+        },
+        {
+            "level": 4,
+            "chapter": "5.1.4 혈액공급",
+            "page": 77,
+            "level_reason": "Third-level decimal heading under 5.1."
+        },
+        {
+            "level": 3,
+            "chapter": "5.2 상행 및 하행척수로",
+            "page": 77,
+            "level_reason": "Decimal subsection heading under section 5."
+        },
+        {
+            "level": 4,
+            "chapter": "5.2.1 상행척수로",
+            "page": 77,
+            "level_reason": "Third-level decimal heading under 5.2."
+        },
+        {
+            "level": 5,
+            "chapter": "등쪽기둥경로",
+            "page": 77,
+            "level_reason": "Unnumbered lower heading under 5.2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "가쪽척수시상경로",
+            "page": 78,
+            "level_reason": "Unnumbered lower heading under 5.2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "전척수시상경로",
+            "page": 78,
+            "level_reason": "Unnumbered lower heading under 5.2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "등쪽척수소뇌로",
+            "page": 78,
+            "level_reason": "Unnumbered lower heading under 5.2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "배쪽척수소뇌로",
+            "page": 78,
+            "level_reason": "Unnumbered lower heading under 5.2.1."
+        },
+        {
+            "level": 4,
+            "chapter": "5.2.2 하행척수로",
+            "page": 78,
+            "level_reason": "Third-level decimal heading under 5.2."
+        },
+        {
+            "level": 5,
+            "chapter": "피질척수로",
+            "page": 78,
+            "level_reason": "Unnumbered lower heading under 5.2.2."
+        },
+        {
+            "level": 5,
+            "chapter": "적핵척수로",
+            "page": 78,
+            "level_reason": "Unnumbered lower heading under 5.2.2."
+        },
+        {
+            "level": 5,
+            "chapter": "전정척수로",
+            "page": 78,
+            "level_reason": "Unnumbered lower heading under 5.2.2."
+        },
+        {
+            "level": 3,
+            "chapter": "5.3 말초신경의해부학적구조와 분류",
+            "page": 78,
+            "level_reason": "Decimal subsection heading under section 5."
+        },
+        {
+            "level": 4,
+            "chapter": "5.3.1 말초신경의해부학적구조",
+            "page": 78,
+            "level_reason": "Third-level decimal heading under 5.3."
+        },
+        {
+            "level": 5,
+            "chapter": "말초신경의 단면 구조",
+            "page": 78,
+            "level_reason": "Unnumbered lower heading under 5.3.1."
+        },
+        {
+            "level": 5,
+            "chapter": "말초신경의 현미경구조",
+            "page": 78,
+            "level_reason": "Unnumbered lower heading under 5.3.1."
+        },
+        {
+            "level": 4,
+            "chapter": "5.3.2 말초신경의분류",
+            "page": 78,
+            "level_reason": "Third-level decimal heading under 5.3."
+        },
+        {
+            "level": 3,
+            "chapter": "5.4 말초신경계의생리",
+            "page": 79,
+            "level_reason": "Decimal subsection heading under section 5."
+        },
+        {
+            "level": 4,
+            "chapter": "5.4.1 말초신경의신경전달기전",
+            "page": 79,
+            "level_reason": "Third-level decimal heading under 5.4."
+        },
+        {
+            "level": 5,
+            "chapter": "신경세포의 탈분극",
+            "page": 79,
+            "level_reason": "Unnumbered lower heading under 5.4.1."
+        },
+        {
+            "level": 5,
+            "chapter": "신경 전도",
+            "page": 79,
+            "level_reason": "Unnumbered lower heading under 5.4.1."
+        },
+        {
+            "level": 4,
+            "chapter": "5.4.2 말초신경 내 물질의 이동기전",
+            "page": 79,
+            "level_reason": "Third-level decimal heading under 5.4."
+        },
+        {
+            "level": 2,
+            "chapter": "6. 뇌수막, 뇌실, 뇌척수액",
+            "page": 79,
+            "level_reason": "Primary numbered section heading under Chapter 2."
+        },
+        {
+            "level": 3,
+            "chapter": "6.1 뇌수막",
+            "page": 79,
+            "level_reason": "Decimal subsection heading under section 6."
+        },
+        {
+            "level": 4,
+            "chapter": "6.1.1 경막",
+            "page": 79,
+            "level_reason": "Third-level decimal heading under 6.1."
+        },
+        {
+            "level": 4,
+            "chapter": "6.1.2 거미막",
+            "page": 79,
+            "level_reason": "Third-level decimal heading under 6.1."
+        },
+        {
+            "level": 4,
+            "chapter": "6.1.3 연막",
+            "page": 80,
+            "level_reason": "Third-level decimal heading under 6.1."
+        },
+        {
+            "level": 3,
+            "chapter": "6.2 뇌척수액의 생산, 순환과 흡수",
+            "page": 80,
+            "level_reason": "Decimal subsection heading under section 6."
+        },
+        {
+            "level": 4,
+            "chapter": "6.2.1 생산",
+            "page": 80,
+            "level_reason": "Third-level decimal heading under 6.2."
+        },
+        {
+            "level": 5,
+            "chapter": "수동확산",
+            "page": 80,
+            "level_reason": "Unnumbered lower heading under 6.2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "능동운반",
+            "page": 80,
+            "level_reason": "Unnumbered lower heading under 6.2.1."
+        },
+        {
+            "level": 5,
+            "chapter": "촉진확산",
+            "page": 80,
+            "level_reason": "Unnumbered lower heading under 6.2.1."
+        },
+        {
+            "level": 4,
+            "chapter": "6.2.2 순환",
+            "page": 80,
+            "level_reason": "Third-level decimal heading under 6.2."
+        },
+        {
+            "level": 4,
+            "chapter": "6.2.3 흡수",
+            "page": 80,
+            "level_reason": "Third-level decimal heading under 6.2."
+        },
+        {
+            "level": 3,
+            "chapter": "6.3 혈액뇌장벽",
+            "page": 80,
+            "level_reason": "Decimal subsection heading under section 6."
+        },
+        {
+            "level": 4,
+            "chapter": "6.3.1 혈액뇌장벽",
+            "page": 81,
+            "level_reason": "Third-level decimal heading under 6.3."
+        },
+        {
+            "level": 4,
+            "chapter": "6.3.2 혈액뇌척수액장벽",
+            "page": 81,
+            "level_reason": "Third-level decimal heading under 6.3."
+        }
+    ],
+    "_meta": {
+        "source_pdf": "data/input/신경학_cp1,2.pdf",
+        "api_input_mode": "txt",
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "elapsed_seconds": 92.20780405122787,
+        "elapsed": "1m 32.2s",
+        "generated_timestamp": "20260721_102222",
+        "generation_started_at": "2026-07-21T10:20:50+0900",
+        "generation_completed_at": "2026-07-21T10:22:22+0900"
+    }
+}

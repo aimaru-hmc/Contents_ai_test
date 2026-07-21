@@ -1,0 +1,160 @@
+{
+    "title": "1__2",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "제2장 예방의학과 공중보건학의 개념과 활용",
+            "page": 1,
+            "level_reason": "Largest chapter-title style at chapter opening with explicit 제2장 numbering."
+        },
+        {
+            "level": 2,
+            "chapter": "1. 예방의학과 공중보건학의 개념",
+            "page": 1,
+            "level_reason": "Large numbered major section heading under the chapter."
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 의학의 분류",
+            "page": 1,
+            "level_reason": "Smaller subsection heading with 1.1 numbering under section 1."
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 예방의학과 공중보건학의 개념",
+            "page": 3,
+            "level_reason": "Same subsection style and 1.2 numbering as 1.1 under section 1."
+        },
+        {
+            "level": 2,
+            "chapter": "2. 예방의학과 공중보건학의 내용과 적용",
+            "page": 4,
+            "level_reason": "Same large numbered major section style as section 1."
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 질병 발생단계와 예방대책",
+            "page": 4,
+            "level_reason": "Subsection heading with 2.1 numbering under section 2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 예방의학과 공중보건학의 내용과 활용",
+            "page": 6,
+            "level_reason": "Same subsection style and 2.2 numbering under section 2."
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 예방의학과 공중보건학의 접근 전략",
+            "page": 7,
+            "level_reason": "Same subsection style and 2.3 numbering under section 2."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 로즈의 예방의학 전략",
+            "page": 7,
+            "level_reason": "Indented lower-level numbered heading within 2.3."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 건강영향 피라미드",
+            "page": 8,
+            "level_reason": "Same lower-level numbered heading style as 1) within 2.3."
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 예방의학과 공중보건윤리",
+            "page": 9,
+            "level_reason": "Same subsection style and 2.4 numbering under section 2."
+        },
+        {
+            "level": 4,
+            "chapter": "1) 공중보건과 윤리",
+            "page": 9,
+            "level_reason": "Lower-level numbered heading within 2.4."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 공중보건 활동의 특징",
+            "page": 9,
+            "level_reason": "Parenthesized numbered subheading under 1) 공중보건과 윤리."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 공중보건영역에서 생명의료윤리 네 원칙",
+            "page": 10,
+            "level_reason": "Same parenthesized subheading style under 1) 공중보건과 윤리."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 윤리원칙의 적용",
+            "page": 10,
+            "level_reason": "Same parenthesized subheading style under 1) 공중보건과 윤리."
+        },
+        {
+            "level": 4,
+            "chapter": "2) 공중보건 활동과 관련된 윤리 문제",
+            "page": 11,
+            "level_reason": "Same lower-level numbered heading style as 1) within 2.4."
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 감염병 관리에 관련된 윤리 문제",
+            "page": 11,
+            "level_reason": "Parenthesized numbered subheading under 2) 공중보건 활동과 관련된 윤리 문제."
+        },
+        {
+            "level": 6,
+            "chapter": "① 감염병 감시",
+            "page": 11,
+            "level_reason": "Circled-number subheading nested under 감염병 관리 윤리 문제."
+        },
+        {
+            "level": 6,
+            "chapter": "② 예방접종",
+            "page": 12,
+            "level_reason": "Same circled-number subheading style under 감염병 관리 윤리 문제."
+        },
+        {
+            "level": 6,
+            "chapter": "③ 사회적 거리두기를 위한 격리 등 자유제한 조치",
+            "page": 12,
+            "level_reason": "Same circled-number subheading style under 감염병 관리 윤리 문제."
+        },
+        {
+            "level": 6,
+            "chapter": "④ 감염병 정보의 공개",
+            "page": 12,
+            "level_reason": "Same circled-number subheading style under 감염병 관리 윤리 문제."
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 보건의료자원의 분배에 관련된 윤리 문제",
+            "page": 12,
+            "level_reason": "Parenthesized numbered subheading under 2) 공중보건 활동과 관련된 윤리 문제."
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 건강증진과 윤리 문제",
+            "page": 13,
+            "level_reason": "Same parenthesized subheading style under 2) 공중보건 활동과 관련된 윤리 문제."
+        },
+        {
+            "level": 4,
+            "chapter": "3) 공중보건: 공공과 민간의 협력",
+            "page": 13,
+            "level_reason": "Same lower-level numbered heading style within 2.4."
+        }
+    ],
+    "_meta": {
+        "source_pdf": "data/input/1편_2장.pdf",
+        "api_input_mode": "both",
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "elapsed_seconds": 22.27971967868507,
+        "elapsed": "22.3s",
+        "generated_timestamp": "20260721_105037",
+        "generation_started_at": "2026-07-21T10:50:15+0900",
+        "generation_completed_at": "2026-07-21T10:50:37+0900"
+    }
+}

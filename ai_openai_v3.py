@@ -1,3 +1,4 @@
+# v2 + cli api-input-mode + schema + retry + pdfplumber layout extraction + metadata + error logging
 from __future__ import annotations
 
 import argparse
@@ -6,7 +7,6 @@ import os
 import random
 import re
 import shutil
-import subprocess
 import sys
 import tempfile
 import time
@@ -30,8 +30,7 @@ DEFAULT_FALLBACK_MODELS = os.getenv("OPENAI_FALLBACK_MODELS", os.getenv("AI_FALL
 DEFAULT_AI_RETRIES = int(os.getenv("AI_MAX_RETRIES", "5"))
 DEFAULT_RETRY_BASE_DELAY = float(os.getenv("AI_RETRY_BASE_DELAY", "2.0"))
 DEFAULT_MAX_OUTPUT_TOKENS = int(os.getenv("OPENAI_MAX_OUTPUT_TOKENS", os.getenv("AI_MAX_OUTPUT_TOKENS", "32768")))
-DEFAULT_CHUNK_MAX_COMBINED_BYTES = int(os.getenv("OPENAI_CHUNK_MAX_COMBINED_BYTES", "49000000"))
-DEFAULT_CHUNK_MAX_LAYOUT_CHARS = int(os.getenv("OPENAI_CHUNK_MAX_LAYOUT_CHARS", "180000"))
+API_INPUT_MODES = ("both", "pdf", "txt")
 
 TOC_SCHEMA: dict[str, Any] = {
     "type": "object",
@@ -158,9 +157,14 @@ Output exactly one JSON object in the format below. Do not output explanations, 
 """.strip()
 
 
-def build_attached_pdf_prompt(base_prompt: str, pdf_name: str) -> str:
+def build_attached_pdf_prompt(base_prompt: str, pdf_name: str, api_input_mode: str = "both") -> str:
     pdf_title = Path(pdf_name).stem
-    return f"""
+    mode = clean_text(api_input_mode).lower() or "both"
+    if mode not in API_INPUT_MODES:
+        raise ValueError(f"Unsupported API input mode: {api_input_mode}")
+
+    if mode == "both":
+        return f"""
 {base_prompt}
 
 [PDF Attachment Mode]
@@ -184,6 +188,36 @@ Rules:
 {pdf_name}
 """.strip()
 
+    if mode == "pdf":
+        mode_block = """
+[PDF Only Mode]
+Create the TOC using only the attached PDF. No parsed layout metadata file is attached.
+Use actual PDF viewer page numbers, visual layout, typography, numbering, and source hierarchy for level inference.
+""".strip()
+    else:
+        mode_block = """
+[Parsed Text Only Mode]
+Create the TOC using only the attached parsed text/layout metadata file. No PDF file is attached.
+Use P(page), O(source order), S(font size), R(size/body ratio), X/Y(position), B(bold), I(italic), and F(font name) for level inference.
+""".strip()
+
+    return f"""
+{base_prompt}
+
+{mode_block}
+
+[Shared Rules]
+- Set the top-level JSON title exactly to "{pdf_title}".
+- If a chapter/section title looks like the document title, still include it as a chapters entry.
+- Output only body hierarchy titles: chapters, sections, subsections.
+- Ignore existing TOC/Contents pages and listings unless needed for hierarchy evidence, repeated headers/footers, body sentences, captions, questions, and references.
+- Preserve source order for entries on the same page.
+- Include level_reason for every entry when possible.
+- Return compact valid JSON only.
+
+[Source File Name]
+{pdf_name}
+""".strip()
 
 def get_api_key() -> str:
     api_key = os.getenv("OPENAI_API_KEY")
@@ -571,367 +605,117 @@ def generate_openai_once(
     raise RuntimeError("OpenAI response generation failed.")
 
 
-def split_layout_into_page_blocks(layout_text: str) -> tuple[str, list[tuple[int, str]]]:
-    preamble: list[str] = []
-    pages: list[tuple[int, str]] = []
-    current_page: int | None = None
-    current_lines: list[str] = []
-
-    def flush() -> None:
-        nonlocal current_page, current_lines
-        if current_page is not None and current_lines:
-            pages.append((current_page, "\n".join(current_lines) + "\n"))
-        current_page = None
-        current_lines = []
-
-    for line in layout_text.splitlines():
-        match = re.match(r"\[PAGE P=(\d+)\b", line)
-        if match:
-            flush()
-            current_page = int(match.group(1))
-            current_lines = [line]
-        elif current_page is None:
-            preamble.append(line)
-        else:
-            current_lines.append(line)
-    flush()
-    return "\n".join(preamble).strip() + "\n", pages
-
-
-def create_pdf_page_range(source_pdf: Path, output_pdf: Path, start_page: int, end_page: int) -> None:
-    command = [
-        "mutool", "merge", "-o", str(output_pdf), str(source_pdf),
-        f"{int(start_page)}-{int(end_page)}",
-    ]
-    try:
-        subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    except FileNotFoundError as error:
-        raise RuntimeError("PDF chunking requires the `mutool` command.") from error
-    except subprocess.CalledProcessError as error:
-        raise RuntimeError(f"Failed to create PDF chunk {start_page}-{end_page}: {error.stderr}") from error
-
-
-def create_maximized_pdf_layout_chunks(
-    pdf_path: Path,
-    layout_text: str,
-    temp_dir: Path,
-    max_combined_bytes: int,
-    max_layout_chars: int,
-) -> list[dict[str, Any]]:
-    preamble, pages = split_layout_into_page_blocks(layout_text)
-    if not pages:
-        raise RuntimeError("No page layout blocks were found.")
-    max_combined_bytes = max(1_000_000, int(max_combined_bytes))
-    max_layout_chars = max(20_000, int(max_layout_chars))
-    chunks: list[dict[str, Any]] = []
-    start_index = 0
-
-    while start_index < len(pages):
-        layout_end = start_index
-        layout_chars = len(preamble)
-        while layout_end < len(pages):
-            next_chars = len(pages[layout_end][1])
-            if layout_end > start_index and layout_chars + next_chars > max_layout_chars:
-                break
-            layout_chars += next_chars
-            layout_end += 1
-        max_end_index = max(start_index, layout_end - 1)
-
-        low = start_index
-        high = max_end_index
-        best: tuple[int, Path, str, int] | None = None
-        while low <= high:
-            mid = (low + high) // 2
-            start_page = pages[start_index][0]
-            end_page = pages[mid][0]
-            trial_pdf = temp_dir / f"trial_{start_page}_{end_page}.pdf"
-            create_pdf_page_range(pdf_path, trial_pdf, start_page, end_page)
-            chunk_layout = preamble + "".join(block for _, block in pages[start_index:mid + 1])
-            combined_bytes = trial_pdf.stat().st_size + len(chunk_layout.encode("utf-8"))
-            if combined_bytes <= max_combined_bytes:
-                best = (mid, trial_pdf, chunk_layout, combined_bytes)
-                low = mid + 1
-            else:
-                trial_pdf.unlink(missing_ok=True)
-                high = mid - 1
-
-        if best is None:
-            page_number = pages[start_index][0]
-            raise RuntimeError(
-                f"PDF page {page_number} alone exceeds the configured combined chunk limit "
-                f"({max_combined_bytes:,} bytes)."
-            )
-
-        end_index, trial_pdf, chunk_layout, combined_bytes = best
-        chunk_index = len(chunks) + 1
-        start_page = pages[start_index][0]
-        end_page = pages[end_index][0]
-        final_pdf = temp_dir / f"chunk_{chunk_index:03d}_pages_{start_page}-{end_page}.pdf"
-        if trial_pdf != final_pdf:
-            trial_pdf.replace(final_pdf)
-        layout_file = temp_dir / f"chunk_{chunk_index:03d}_pages_{start_page}-{end_page}_layout.txt"
-        layout_file.write_text(chunk_layout, encoding="utf-8")
-        chunks.append({
-            "index": chunk_index,
-            "start_page": start_page,
-            "end_page": end_page,
-            "pdf_path": final_pdf,
-            "layout_path": layout_file,
-            "layout_chars": len(chunk_layout),
-            "combined_bytes": combined_bytes,
-        })
-        start_index = end_index + 1
-
-    return chunks
-
-
-def merge_toc_chunks(partials: list[dict[str, Any]], fallback_title: str, max_depth: int) -> dict[str, Any]:
-    title = fallback_title
-    chapters: list[dict[str, Any]] = []
-    seen: set[tuple[str, int]] = set()
-    for partial in partials:
-        toc = partial.get("toc") or {}
-        if clean_text(toc.get("title")):
-            title = clean_text(toc.get("title"))
-        for item in toc.get("chapters", []) or []:
-            chapter = clean_text(item.get("chapter"))
-            page = int(item.get("page", 1))
-            key = (chapter.lower(), page)
-            if not chapter or key in seen:
-                continue
-            seen.add(key)
-            chapters.append(dict(item))
-    return validate_toc({"title": title, "chapters": chapters}, fallback_title, max_depth)
-
-
-def parse_layout_line_metadata(layout_text: str) -> list[dict[str, Any]]:
-    records: list[dict[str, Any]] = []
-    pattern = re.compile(
-        r"^\[L P=(?P<page>\d+) O=(?P<order>\d+) S=(?P<size>[-0-9.]+) "
-        r"R=(?P<ratio>[-0-9.]+) X=(?P<x>[-0-9.]+) Y=(?P<y>[-0-9.]+) "
-        r"B=(?P<bold>[01]) I=(?P<italic>[01]) F=(?P<font>[^]]+)\] (?P<text>.*)$"
-    )
-    for line in layout_text.splitlines():
-        match = pattern.match(line)
-        if not match:
-            continue
-        values = match.groupdict()
-        records.append({
-            "page": int(values["page"]),
-            "order": int(values["order"]),
-            "size": float(values["size"]),
-            "ratio": float(values["ratio"]),
-            "x": float(values["x"]),
-            "y": float(values["y"]),
-            "bold": int(values["bold"]),
-            "italic": int(values["italic"]),
-            "font": values["font"],
-            "text": clean_text(values["text"]),
-        })
-    return records
-
-
-def build_first_chunk_level_reference(
-    toc: dict[str, Any],
-    layout_text: str,
-    max_examples_per_level: int = 8,
-) -> str:
-    records = parse_layout_line_metadata(layout_text)
-    by_page: dict[int, list[dict[str, Any]]] = {}
-    for record in records:
-        by_page.setdefault(int(record["page"]), []).append(record)
-
-    examples: dict[int, list[str]] = {}
-    for item in toc.get("chapters", []) or []:
-        chapter = clean_text(item.get("chapter"))
-        if not chapter:
-            continue
-        try:
-            page = int(item.get("page", 1))
-            level = int(item.get("level", 1))
-        except Exception:
-            continue
-        if len(examples.get(level, [])) >= max(1, int(max_examples_per_level)):
-            continue
-        normalized = chapter.casefold()
-        candidates = by_page.get(page, [])
-        match = next((r for r in candidates if clean_text(r["text"]).casefold() == normalized), None)
-        if match is None:
-            match = next((
-                r for r in candidates
-                if normalized in clean_text(r["text"]).casefold()
-                or clean_text(r["text"]).casefold() in normalized
-            ), None)
-        if match is None:
-            continue
-        example = (
-            f"L{level} | S={match['size']:.2f} R={match['ratio']:.3f} "
-            f"X={match['x']:.1f} Y={match['y']:.1f} B={match['bold']} I={match['italic']} "
-            f"F={match['font']} | {chapter}"
-        )
-        examples.setdefault(level, []).append(example)
-
-    if not examples:
-        return ""
-    lines = [
-        "[Level Calibration Reference From Chunk 1]",
-        "Use these first-chunk level-to-layout examples to keep later chunks consistent.",
-        "Match S/R/B/I/F first, then explicit numbering, then X/Y; do not copy titles from this reference into the current chunk output.",
-        "Only output titles that actually occur in the current chunk.",
-    ]
-    for level in sorted(examples):
-        lines.extend(examples[level])
-    return "\n".join(lines)
-
-
-def request_toc_chunk(
-    *,
-    client: Any,
-    model: str,
-    pdf_path: Path,
-    args: argparse.Namespace,
-    prompt: str,
-    chunk: dict[str, Any],
-    uploaded_files: list[Any],
-    total_chunks: int,
-    level_reference_text: str = "",
-) -> tuple[dict[str, Any], str]:
-    uploaded_chunk_files: list[Any] = []
-    for upload_path in (Path(chunk["pdf_path"]), Path(chunk["layout_path"])):
-        def do_upload(upload_path: Path = upload_path) -> Any:
-            with upload_path.open("rb") as file_obj:
-                return client.files.create(file=file_obj, purpose="user_data")
-        uploaded = with_retry(
-            label=f"OpenAI chunk upload({upload_path.name})",
-            func=do_upload,
-            max_retries=args.ai_retries,
-            base_delay=args.ai_retry_base_delay,
-        )
-        uploaded_files.append(uploaded)
-        uploaded_chunk_files.append(uploaded)
-
-    chunk_prompt = (
-        prompt
-        + "\n\n[PDF Chunk Mode]\n"
-        + f"This is chunk {chunk['index']}/{total_chunks}, containing original PDF viewer pages "
-        + f"{chunk['start_page']}-{chunk['end_page']}. The attached chunk PDF starts locally at page 1, "
-        + "but output page values MUST use original P values from the layout metadata. "
-        + "Extract only body hierarchy titles present in this chunk. Preserve O order on the same original page."
-    )
-    if level_reference_text:
-        chunk_prompt += "\n\n" + level_reference_text
-    response = with_retry(
-        label=f"OpenAI chunk generation({chunk['index']}/{total_chunks})",
-        func=lambda: generate_openai_once(
-            client=client,
-            model=model,
-            prompt=chunk_prompt,
-            file_ids=[uploaded.id for uploaded in uploaded_chunk_files],
-            max_output_tokens=args.max_output_tokens,
-            use_schema=not args.no_schema,
-        ),
-        max_retries=args.ai_retries,
-        base_delay=args.ai_retry_base_delay,
-    )
-    raw_text = str(getattr(response, "output_text", "") or "")
-    parsed = parse_json_response(response)
-    return validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth), raw_text
-
-
 def generate_toc_from_pdf_openai(pdf_path: Path, args: argparse.Namespace, prompt: str) -> tuple[dict[str, Any], str, str]:
     client = create_openai_client(api_key=get_api_key())
-    base_prompt = build_attached_pdf_prompt(prompt, pdf_path.name)
+    api_input_mode = clean_text(getattr(args, "api_input_mode", "both")).lower() or "both"
+    if api_input_mode not in API_INPUT_MODES:
+        raise ValueError(f"Unsupported API input mode: {api_input_mode}")
+    pdf_prompt = build_attached_pdf_prompt(prompt, pdf_path.name, api_input_mode=api_input_mode)
+    uploaded_files: list[Any] = []
     models = parse_model_list(args.model, args.ai_fallback_models)
     last_error: Exception | None = None
+    layout_text: str | None = None
 
-    print("  PDF layout extraction started...", flush=True)
-    layout_text = extract_pdf_layout_text(pdf_path)
-    print(f"  PDF layout extraction completed: {len(layout_text.encode('utf-8')):,} bytes", flush=True)
+    if api_input_mode in ("both", "txt"):
+        print("  PDF layout extraction started...", flush=True)
+        layout_text = extract_pdf_layout_text(pdf_path)
+        print(f"  PDF layout extraction completed: {len(layout_text.encode('utf-8')):,} bytes", flush=True)
 
-    for model_index, model in enumerate(models):
-        if model_index > 0:
-            print(f"Trying OpenAI fallback model: {model}", file=sys.stderr, flush=True)
-        uploaded_files: list[Any] = []
-        try:
-            with tempfile.TemporaryDirectory(prefix="openai_pdf_chunks_") as temp_name:
-                temp_dir = Path(temp_name)
-                chunks = create_maximized_pdf_layout_chunks(
-                    pdf_path=pdf_path,
-                    layout_text=layout_text,
-                    temp_dir=temp_dir,
-                    max_combined_bytes=args.chunk_max_combined_bytes,
-                    max_layout_chars=args.chunk_max_layout_chars,
-                )
-                print(f"  PDF chunking completed: {len(chunks)} maximized chunks", flush=True)
-                partials: list[dict[str, Any]] = []
-                raw_parts: list[dict[str, Any]] = []
-                level_reference_text = ""
-                for chunk in chunks:
+    try:
+        upload_label = {
+            "both": "OpenAI PDF + layout upload",
+            "pdf": "OpenAI PDF upload",
+            "txt": "OpenAI parsed layout upload",
+        }[api_input_mode]
+        print(f"  {upload_label} started...", flush=True)
+        with tempfile.TemporaryDirectory(prefix="openai_pdf_layout_upload_") as temp_dir:
+            temp_path = Path(temp_dir)
+            upload_paths: list[Path] = []
+
+            if api_input_mode in ("both", "pdf"):
+                pdf_upload = temp_path / make_ascii_upload_name(pdf_path)
+                shutil.copy2(pdf_path, pdf_upload)
+                upload_paths.append(pdf_upload)
+
+            if api_input_mode in ("both", "txt"):
+                if layout_text is None:
+                    raise RuntimeError("Parsed layout text was not created.")
+                layout_upload = temp_path / f"{safe_filename_part(pdf_path.stem)}_exact_layout.txt"
+                layout_upload.write_text(layout_text, encoding="utf-8")
+                upload_paths.append(layout_upload)
+
+            for upload_path in upload_paths:
+                def do_upload(upload_path: Path = upload_path) -> Any:
+                    with upload_path.open("rb") as file_obj:
+                        return client.files.create(file=file_obj, purpose="user_data")
+
+                uploaded_files.append(with_retry(
+                    label=f"OpenAI upload({upload_path.name})",
+                    func=do_upload,
+                    max_retries=args.ai_retries,
+                    base_delay=args.ai_retry_base_delay,
+                ))
+        print(f"  {upload_label} completed", flush=True)
+        file_ids = [uploaded.id for uploaded in uploaded_files]
+
+        for index, model in enumerate(models):
+            if index > 0:
+                print(f"Trying OpenAI fallback model: {model}", file=sys.stderr, flush=True)
+
+            for parse_attempt in range(1, max(1, int(args.ai_retries)) + 1):
+                parse_retry_prompt = pdf_prompt
+                if parse_attempt > 1:
                     print(
-                        f"  Processing chunk {chunk['index']}/{len(chunks)}: pages "
-                        f"{chunk['start_page']}-{chunk['end_page']}, "
-                        f"combined={chunk['combined_bytes']:,} bytes, layout={chunk['layout_chars']:,} chars",
+                        f"  Retrying OpenAI generation after JSON parse failure {parse_attempt}/{args.ai_retries}: {model}",
+                        file=sys.stderr,
                         flush=True,
                     )
-                    toc, raw_text = request_toc_chunk(
-                        client=client,
-                        model=model,
-                        pdf_path=pdf_path,
-                        args=args,
-                        prompt=base_prompt,
-                        chunk=chunk,
-                        uploaded_files=uploaded_files,
-                        total_chunks=len(chunks),
-                        level_reference_text=level_reference_text,
-                    )
-                    if int(chunk["index"]) == 1:
-                        first_layout_text = Path(chunk["layout_path"]).read_text(encoding="utf-8")
-                        level_reference_text = build_first_chunk_level_reference(
-                            toc,
-                            first_layout_text,
-                            max_examples_per_level=args.level_reference_examples,
-                        )
-                        if level_reference_text:
-                            print(
-                                "  First-chunk level/layout reference created for subsequent chunks",
-                                flush=True,
-                            )
-                    partials.append({"chunk": chunk["index"], "toc": toc})
-                    raw_parts.append({
-                        "chunk": chunk["index"],
-                        "start_page": chunk["start_page"],
-                        "end_page": chunk["end_page"],
-                        "raw_response": raw_text,
-                    })
-                    print(
-                        f"  Chunk {chunk['index']}/{len(chunks)} completed: "
-                        f"{len(toc.get('chapters', []))} chapters",
-                        flush=True,
+                    parse_retry_prompt = (
+                        pdf_prompt
+                        + "\n\n[Important Retry Instruction]\n"
+                        + "The previous response failed JSON parsing. Output exactly one valid JSON object "
+                        + "that Python json.loads() can parse directly. Do not output Markdown or explanations."
                     )
 
-                merged = merge_toc_chunks(partials, fallback_title=pdf_path.stem, max_depth=args.max_depth)
-                raw_bundle = json.dumps({
-                    "mode": "maximized_pdf_chunks",
-                    "model": model,
-                    "chunk_count": len(chunks),
-                    "chunks": raw_parts,
-                }, ensure_ascii=False, indent=2)
-                return merged, raw_bundle, model
-        except Exception as error:
-            last_error = error
-            print(f"OpenAI model failed: {model} / {error}", file=sys.stderr, flush=True)
-        finally:
-            if args.delete_uploaded_file:
-                for uploaded in uploaded_files:
-                    try:
-                        client.files.delete(uploaded.id)
-                    except Exception as error:
-                        print(f"Failed to delete OpenAI uploaded file {uploaded.id}: {error}", file=sys.stderr, flush=True)
+                try:
+                    print(f"  OpenAI TOC generation started: {model}", flush=True)
+                    response = with_retry(
+                        label=f"OpenAI generation({model})",
+                        func=lambda model=model, parse_retry_prompt=parse_retry_prompt: generate_openai_once(
+                            client=client,
+                            model=model,
+                            prompt=parse_retry_prompt,
+                            file_ids=file_ids,
+                            max_output_tokens=args.max_output_tokens,
+                            use_schema=not args.no_schema,
+                        ),
+                        max_retries=args.ai_retries,
+                        base_delay=args.ai_retry_base_delay,
+                    )
+                    print(f"  OpenAI TOC generation completed: {model}", flush=True)
+                    raw_text = str(getattr(response, "output_text", "") or "")
+                    parsed = parse_json_response(response)
+                    return validate_toc(parsed, fallback_title=pdf_path.stem, max_depth=args.max_depth), raw_text, model
+                except Exception as error:
+                    last_error = error
+                    if is_configuration_error(error):
+                        raise
+                    if parse_attempt < max(1, int(args.ai_retries)) and isinstance(error, (json.JSONDecodeError, ValueError)):
+                        continue
+                    print(f"OpenAI model failed: {model} / {error}", file=sys.stderr, flush=True)
+                    break
 
-    if last_error:
-        raise last_error
-    raise RuntimeError("No OpenAI models to try.")
-
+        if last_error:
+            raise last_error
+        raise RuntimeError("No OpenAI models to try.")
+    finally:
+        if args.delete_uploaded_file:
+            for uploaded in uploaded_files:
+                try:
+                    client.files.delete(uploaded.id)
+                    print(f"OpenAI uploaded file deleted: {uploaded.id}", file=sys.stderr, flush=True)
+                except Exception as error:
+                    print(f"Failed to delete OpenAI uploaded file {uploaded.id}: {error}", file=sys.stderr, flush=True)
 
 def save_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -979,6 +763,7 @@ def unique_output_path(path: Path) -> Path:
 def add_result_metadata(
     toc: dict[str, Any],
     pdf_path: Path,
+    args: argparse.Namespace,
     model: str,
     elapsed_seconds: float,
     generated_timestamp: str,
@@ -988,6 +773,7 @@ def add_result_metadata(
     result = dict(toc)
     result["_meta"] = {
         "source_pdf": str(pdf_path),
+        "api_input_mode": getattr(args, "api_input_mode", "both"),
         "provider": "openai",
         "model": model,
         "elapsed_seconds": elapsed_seconds,
@@ -1010,6 +796,7 @@ def write_error_log(pdf_path: Path, args: argparse.Namespace, error: Exception, 
     payload = {
         "timestamp": timestamp_for_metadata(),
         "source_pdf": str(pdf_path),
+        "api_input_mode": getattr(args, "api_input_mode", "both"),
         "provider": "openai",
         "elapsed_seconds": elapsed_seconds,
         "error_type": type(error).__name__,
@@ -1058,6 +845,7 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace, user_prompt: str) -> b
         result = add_result_metadata(
             toc=toc,
             pdf_path=pdf_path,
+            args=args,
             model=used_model,
             elapsed_seconds=elapsed_seconds,
             generated_timestamp=generated_timestamp,
@@ -1115,22 +903,10 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-depth", type=int, default=7)
     parser.add_argument("--max-output-tokens", type=int, default=DEFAULT_MAX_OUTPUT_TOKENS)
     parser.add_argument(
-        "--level-reference-examples",
-        type=int,
-        default=8,
-        help="Maximum first-chunk level/layout examples per level passed to subsequent chunks",
-    )
-    parser.add_argument(
-        "--chunk-max-combined-bytes",
-        type=int,
-        default=DEFAULT_CHUNK_MAX_COMBINED_BYTES,
-        help="Maximum PDF chunk + layout bytes; chunks are greedily maximized up to this limit (default: 49,000,000)",
-    )
-    parser.add_argument(
-        "--chunk-max-layout-chars",
-        type=int,
-        default=DEFAULT_CHUNK_MAX_LAYOUT_CHARS,
-        help="Maximum layout characters per chunk; chunks are greedily maximized up to this context-safe limit",
+        "--api-input-mode",
+        choices=API_INPUT_MODES,
+        default="both",
+        help="Files sent to the OpenAI API: both=PDF + parsed layout TXT, pdf=PDF only, txt=parsed layout TXT only",
     )
     parser.add_argument("--no-schema", action="store_true", help="Disable OpenAI JSON schema response format")
     parser.add_argument("--write-raw", action="store_true", help="Save raw OpenAI response text")
@@ -1154,6 +930,7 @@ def main() -> int:
     parser = build_arg_parser()
     args = parser.parse_args()
     args.max_depth = max(1, min(int(args.max_depth), 10))
+    args.api_input_mode = clean_text(args.api_input_mode).lower()
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)
 
     user_prompt = load_prompt(args)

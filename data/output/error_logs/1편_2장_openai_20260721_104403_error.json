@@ -1,0 +1,10 @@
+{
+    "timestamp": "2026-07-21T10:44:03+0900",
+    "source_pdf": "data/input/1편_2장.pdf",
+    "api_input_mode": "both",
+    "provider": "openai",
+    "elapsed_seconds": 38.34973846934736,
+    "error_type": "RuntimeError",
+    "error": "No extractable PDF text/layout was found. OCR is required for scanned PDFs.",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_openai_v3.py\", line 834, in process_pdf\n    toc, raw_text, used_model = generate_toc_from_pdf_openai(\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_openai_v3.py\", line 620, in generate_toc_from_pdf_openai\n    layout_text = extract_pdf_layout_text(pdf_path)\n  File \"/home/hmc2/work/development/eunsoo/Contents_ai_test/ai_openai_v3.py\", line 402, in extract_pdf_layout_text\n    raise RuntimeError(\"No extractable PDF text/layout was found. OCR is required for scanned PDFs.\")\nRuntimeError: No extractable PDF text/layout was found. OCR is required for scanned PDFs.\n"
+}
