@@ -120,15 +120,22 @@ The result will be used to cut PDFs by hierarchy levels.
 
 [Rules]
 - Use only evidence in the extracted PDF text/layout.
+- First apply all exclusion rules. Only then classify the remaining real body headings.
+- Exclusion rules have higher priority than every layout, style, position, and numbering rule.
 - Do not assume any fixed document format, numbering style, language, textbook template, or section naming convention.
-- Infer hierarchy from the source itself: repeated visual roles, font size, size ratio, indentation, spacing, page order, local context, and structural containment.
-- Exclude running headers/footers, page numbers, captions, figure/table labels, body sentences, examples, exercises/questions, references, and incidental lists unless they clearly function as hierarchy headings.
+- Infer hierarchy from the source itself: S/R/B/I/F text-format signature, font size, size ratio, indentation, X/Y position, spacing, page order, explicit numbering, local context, and structural containment.
+- For body headings, headings with the same S/R/B/I/F signature should normally receive the same level unless explicit numbering or secondary X/Y layout evidence clearly distinguishes their structural roles.
+- Do not discard X/Y. Use X/Y as secondary layout evidence and as a tie-breaker when format signatures alone are ambiguous.
+- Existing TOC/Contents pages may help you understand structure, but do not output listing rows unless the same title appears as a real body heading.
+- Exclude covers, prefaces, existing TOC listing rows, indexes, standalone page numbers, repeated headers/footers, captions, figure/table labels, references, body sentences, examples, questions/exercises, and incidental lists.
+- Before finalizing, perform a second review of unmatched lines with heading-like numbering or typography and include valid unseen-style headings, while still excluding numbered body lists and sentences.
 - Include headings deep enough to reach the deepest real hierarchy level visible in the document, up to level {max_depth}.
 - Do not skip visible parent headings between level 1 and the deepest heading.
+- Never reject a heading only because its S/R/B/I/F style or target level was absent from another part of the document.
 - Level 1 is the highest document hierarchy role found in the body.
 - Use actual PDF viewer page numbers from [PAGE] markers or P metadata.
-- Use order as the source line order within the page.
-- Keep exact source heading text. Do not include layout tags in text.
+- Use order as the source line order within the page. Never calculate or invent order.
+- Keep exact source heading text and original numbering. Do not invent, rewrite, summarize, or include layout tags in text.
 - Output exactly one valid JSON object. Do not output Markdown.
 
 [Output JSON]
@@ -410,11 +417,14 @@ def compute_level_group_ranges(
     for start_level, end_level in level_groups(max_level, group_size):
         start_heading = heading_for_level(path, start_level)
         end_heading = heading_for_level(path, end_level)
+
+        # Each PDF is anchored by the deepest heading in that group.
+        # It starts at the group-level ancestor that contains that heading.
         start_page = max(1, min(start_heading.page, page_count))
         if end_level >= max_level:
-            end_page = deepest_level_section_end_page(headings, end_heading, page_count)
+            end_page = deepest_level_section_end_page(headings, path[-1], page_count)
         else:
-            end_page = end_heading.page
+            end_page = max(1, min(end_heading.page, page_count))
         end_page = max(start_page, min(end_page, page_count))
         ranges.append((start_level, end_level, start_page, end_page, end_heading))
     return ranges
