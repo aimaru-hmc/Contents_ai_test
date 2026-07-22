@@ -14,6 +14,7 @@ from ai_gemma_overlap import (
     DEFAULT_GEMMA_CONTEXT_WINDOW,
     DEFAULT_GEMMA_KEEP_ALIVE,
     DEFAULT_GEMMA_OLLAMA_MODEL,
+    DEFAULT_GEMMA_OPENAI_BASE_URL,
     DEFAULT_GEMMA_TEXT_CHUNK_CHARS,
     DEFAULT_GEMMA_TEXT_CHUNK_OVERLAP_CHARS,
     DEFAULT_MAX_OUTPUT_TOKENS_BY_PROVIDER,
@@ -27,6 +28,7 @@ from ai_gemma_overlap import (
     gemma_response_text,
     generate_gemma_once,
     is_configuration_error,
+    normalize_gemma_backend,
     normalize_gemma_model_for_backend,
     parse_json_response_text,
     safe_filename_part,
@@ -447,9 +449,10 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR), help="Output directory (default: ./data/output_pdf)")
     parser.add_argument("--model", default=DEFAULT_MODEL, help="Gemma model (default: gemma4:31b for Ollama)")
     parser.add_argument("--ai-fallback-models", default="", help="Reserved for compatibility; currently unused")
-    parser.add_argument("--gemma-backend", default=DEFAULT_GEMMA_BACKEND, choices=("ollama", "transformers"))
-    parser.add_argument("--ollama-base-url", default=DEFAULT_OLLAMA_BASE_URL)
+    parser.add_argument("--gemma-backend", default=DEFAULT_GEMMA_BACKEND, choices=("ollama", "transformers", "openai", "vllm"))
+    parser.add_argument("--ollama-base-url", default=DEFAULT_GEMMA_OPENAI_BASE_URL, help="Base URL for Ollama or OpenAI-compatible/vLLM server")
     parser.add_argument("--ollama-request-timeout", type=int, default=DEFAULT_OLLAMA_REQUEST_TIMEOUT)
+    parser.add_argument("--api-key", default="", help="API key for OpenAI-compatible/vLLM server")
     parser.add_argument("--gemma-context-window", type=int, default=DEFAULT_GEMMA_CONTEXT_WINDOW)
     parser.add_argument("--gemma-keep-alive", default=DEFAULT_GEMMA_KEEP_ALIVE)
     parser.add_argument("--gemma-think", default="")
@@ -472,6 +475,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
 
 def main() -> int:
     args = build_arg_parser().parse_args()
+    args.gemma_backend = normalize_gemma_backend(args.gemma_backend)
     args.max_depth = max(1, min(int(args.max_depth), 10))
     args.level_group_size = max(2, int(args.level_group_size))
     args.no_schema = True

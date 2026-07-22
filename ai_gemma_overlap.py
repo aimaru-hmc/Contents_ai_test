@@ -35,6 +35,12 @@ DEFAULT_PROVIDER = os.getenv("AI_PROVIDER", ALL_PROVIDERS_VALUE).strip().lower()
 DEFAULT_GEMMA_HF_MODEL = "google/gemma-4-31B-it"
 DEFAULT_GEMMA_OLLAMA_MODEL = "gemma4:31b"
 DEFAULT_GEMMA_BACKEND = os.getenv("GEMMA_BACKEND", "transformers").strip().lower() or "transformers"
+DEFAULT_GEMMA_OPENAI_BASE_URL = (
+    os.getenv("GEMMA_OPENAI_BASE_URL", os.getenv("VLLM_SERVER_BASE_URL", os.getenv("OPENAI_BASE_URL", "http://127.0.0.1:8000/v1"))).strip()
+    or "http://127.0.0.1:8000/v1"
+)
+DEFAULT_GEMMA_OPENAI_API_KEY = os.getenv("GEMMA_OPENAI_API_KEY", os.getenv("OPENAI_API_KEY", "")).strip()
+DEFAULT_GEMMA_OPENAI_TIMEOUT = int(os.getenv("GEMMA_OPENAI_TIMEOUT", os.getenv("OPENAI_TIMEOUT", "600")))
 
 DEFAULT_MODEL_BY_PROVIDER = {
     "gemini": os.getenv("GEMINI_MODEL", os.getenv("AI_MODEL", "gemini-3.1-pro-preview")),
@@ -2166,10 +2172,15 @@ def normalize_gemma_backend(backend: str | None) -> str:
         "local": "transformers",
         "torch": "transformers",
         "api": "ollama",
+        "openai": "openai",
+        "openai-compatible": "openai",
+        "openai_compatible": "openai",
+        "vllm": "openai",
+        "server": "openai",
     }
     backend = aliases.get(backend, backend)
-    if backend not in {"transformers", "ollama"}:
-        raise ValueError("--gemma-backend must be either transformers or ollama.")
+    if backend not in {"transformers", "ollama", "openai"}:
+        raise ValueError("--gemma-backend must be one of: transformers, ollama, openai.")
     return backend
 
 
@@ -2267,6 +2278,8 @@ def normalize_gemma_ollama_model(model: str) -> str:
 def normalize_gemma_model_for_backend(model: str, backend: str) -> str:
     if backend == "ollama":
         return normalize_gemma_ollama_model(model)
+    if backend == "openai":
+        return normalize_gemma_hf_model(model)
     return normalize_gemma_hf_model(model)
 
 def normalize_ollama_base_url(base_url: str | None) -> str:
@@ -2796,6 +2809,89 @@ def generate_gemma_once_transformers(
     return {"response": text, "_runtime": bundle.get("runtime_metadata")}
 
 
+def normalize_openai_base_url(base_url: str | None) -> str:
+    base_url = clean_text(base_url) or DEFAULT_GEMMA_OPENAI_BASE_URL
+    return base_url.rstrip("/")
+
+
+def openai_compatible_chat_url(base_url: str) -> str:
+    url = normalize_openai_base_url(base_url)
+    if not url:
+        raise ValueError("OpenAI-compatible base URL is empty.")
+    if url.endswith("/chat/completions"):
+        return url
+    if url.endswith("/v1"):
+        return f"{url}/chat/completions"
+    return f"{url}/v1/chat/completions"
+
+
+def generate_gemma_once_openai(
+    model: str,
+    prompt: str,
+    args: argparse.Namespace,
+) -> dict[str, Any]:
+    base_url = getattr(args, "ollama_base_url", DEFAULT_GEMMA_OPENAI_BASE_URL)
+    api_key = clean_text(getattr(args, "api_key", DEFAULT_GEMMA_OPENAI_API_KEY))
+    timeout_seconds = max(1, int(getattr(args, "ollama_request_timeout", DEFAULT_GEMMA_OPENAI_TIMEOUT)))
+
+    payload: dict[str, Any] = {
+        "model": model,
+        "messages": [
+            {
+                "role": "system",
+                "content": (
+                    "You are an expert at creating tables of contents for PDF textbooks and lecture materials. "
+                    "Output exactly one valid JSON object. Do not output Markdown or explanations."
+                ),
+            },
+            {"role": "user", "content": prompt},
+        ],
+        "temperature": max(0.0, float(getattr(args, "temperature", 0.1))),
+        "max_tokens": max(1, int(getattr(args, "max_output_tokens", DEFAULT_MAX_OUTPUT_TOKENS_BY_PROVIDER["gemma"]))),
+    }
+
+    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    headers = {"Content-Type": "application/json", "Accept": "application/json"}
+    if api_key:
+        headers["Authorization"] = f"Bearer {api_key}"
+
+    url = openai_compatible_chat_url(base_url)
+    request = urllib.request.Request(url=url, data=body, headers=headers, method="POST")
+
+    try:
+        with urllib.request.urlopen(request, timeout=timeout_seconds) as response:
+            response_text = response.read().decode("utf-8", errors="replace")
+    except urllib.error.HTTPError as error:
+        error_body = error.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"OpenAI-compatible request failed: HTTP {error.code} {error.reason}. URL={url}. Body: {error_body[:1000]}") from error
+    except urllib.error.URLError as error:
+        raise RuntimeError(f"OpenAI-compatible server is not reachable at {url}: {error}") from error
+
+    try:
+        data = json.loads(response_text)
+    except json.JSONDecodeError as error:
+        raise RuntimeError(f"Failed to parse OpenAI-compatible response JSON: {response_text[:1000]}") from error
+
+    choices = data.get("choices") if isinstance(data, dict) else None
+    if not isinstance(choices, list) or not choices:
+        raise RuntimeError(f"OpenAI-compatible server returned no choices: {response_text[:1000]}")
+
+    message = choices[0].get("message") if isinstance(choices[0], dict) else {}
+    if isinstance(message, dict):
+        content = message.get("content") or ""
+    else:
+        content = choices[0].get("text") or ""
+
+    return {
+        "response": str(content or ""),
+        "_runtime": {
+            "gemma_backend": "openai",
+            "gemma_model": model,
+            "openai_base_url": normalize_openai_base_url(base_url),
+        },
+    }
+
+
 def build_gemma_payloads(
     model: str,
     prompt: str,
@@ -2854,6 +2950,12 @@ def generate_gemma_once(
     backend = normalize_gemma_backend(getattr(args, "gemma_backend", None))
     if backend == "transformers":
         return generate_gemma_once_transformers(
+            model=model,
+            prompt=prompt,
+            args=args,
+        )
+    if backend == "openai":
+        return generate_gemma_once_openai(
             model=model,
             prompt=prompt,
             args=args,
