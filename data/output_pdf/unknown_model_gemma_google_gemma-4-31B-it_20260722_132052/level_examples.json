@@ -1,0 +1,42 @@
+{
+  "source_pdf": "data/input/주교재.pdf",
+  "model": "google/gemma-4-31B-it",
+  "max_level": 5,
+  "examples": [
+    {
+      "level": 1,
+      "text": "Chapter 1 What is epidemiology?",
+      "page": 14,
+      "order": 2,
+      "reason": "Chapter title, largest font size, explicit numbering"
+    },
+    {
+      "level": 2,
+      "text": "Key messages",
+      "page": 14,
+      "order": 3,
+      "reason": "Section heading, consistent style f9"
+    },
+    {
+      "level": 3,
+      "text": "Origins",
+      "page": 14,
+      "order": 5,
+      "reason": "Subsection heading, style f10"
+    },
+    {
+      "level": 4,
+      "text": "Prevalence",
+      "page": 32,
+      "order": 1,
+      "reason": "Deep hierarchy, style f15"
+    },
+    {
+      "level": 5,
+      "text": "Verbal autopsy",
+      "page": 37,
+      "order": 2,
+      "reason": "Deep hierarchy, style f15"
+    }
+  ]
+}

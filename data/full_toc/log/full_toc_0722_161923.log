@@ -1,0 +1,10 @@
+[2026-07-22T16:19:23+09:00] INFO: log: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/log/full_toc_0722_161923.log
+[2026-07-22T16:19:23+09:00] INFO: PDF files: 1
+[2026-07-22T16:19:23+09:00] INFO: processing: 1편_2장.pdf | stage=gemma
+[2026-07-22T16:19:23+09:00] INFO: Existing parsed text found, skipping PDF parsing: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/1__2_parsed.txt
+[2026-07-22T16:19:23+09:00] INFO: Using layout JSON: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/1__2_0722_160143_layout.json
+[2026-07-22T16:19:23+09:00] INFO: Gemma full JSON generation started: google/gemma-4-31B-it
+[2026-07-22T16:19:39+09:00] INFO: Gemma full JSON generation completed: google/gemma-4-31B-it
+[2026-07-22T16:19:39+09:00] INFO: toc saved: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/full_jason/1__2_0722_161923_full_foc.json | chapters=24 | tokens(openai=33732, gemma=40764) | elapsed=15.9s
+[2026-07-22T16:19:39+09:00] INFO: Created full TOC files: 1
+[2026-07-22T16:19:39+09:00] INFO: created: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/full_jason/1__2_0722_161923_full_foc.json

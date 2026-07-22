@@ -1,0 +1,27 @@
+[2026-07-22T16:12:48+09:00] INFO: log: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/log/full_toc_0722_161248.log
+[2026-07-22T16:12:48+09:00] INFO: PDF files: 1
+[2026-07-22T16:12:48+09:00] INFO: processing: 1편_2장.pdf | stage=gemma
+[2026-07-22T16:12:48+09:00] INFO: Existing parsed text found, skipping PDF parsing: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/1__2_parsed.txt
+[2026-07-22T16:12:48+09:00] INFO: Using layout JSON: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/1__2_0722_160143_layout.json
+[2026-07-22T16:12:48+09:00] INFO: Gemma full JSON generation started: google/gemma-4-31B-it
+[2026-07-22T16:13:06+09:00] INFO: Gemma full JSON generation completed: google/gemma-4-31B-it
+[2026-07-22T16:13:06+09:00] INFO: Retrying Gemma JSON generation 2/5: google/gemma-4-31B-it
+[2026-07-22T16:13:06+09:00] INFO: Gemma full JSON generation started: google/gemma-4-31B-it
+[2026-07-22T16:13:22+09:00] INFO: Gemma full JSON generation completed: google/gemma-4-31B-it
+[2026-07-22T16:13:22+09:00] INFO: Retrying Gemma JSON generation 3/5: google/gemma-4-31B-it
+[2026-07-22T16:13:22+09:00] INFO: Gemma full JSON generation started: google/gemma-4-31B-it
+[2026-07-22T16:13:38+09:00] INFO: Gemma full JSON generation completed: google/gemma-4-31B-it
+[2026-07-22T16:13:38+09:00] INFO: Retrying Gemma JSON generation 4/5: google/gemma-4-31B-it
+[2026-07-22T16:13:38+09:00] INFO: Gemma full JSON generation started: google/gemma-4-31B-it
+[2026-07-22T16:13:54+09:00] INFO: Gemma full JSON generation completed: google/gemma-4-31B-it
+[2026-07-22T16:13:54+09:00] INFO: Retrying Gemma JSON generation 5/5: google/gemma-4-31B-it
+[2026-07-22T16:13:54+09:00] INFO: Gemma full JSON generation started: google/gemma-4-31B-it
+[2026-07-22T16:14:10+09:00] INFO: Gemma full JSON generation completed: google/gemma-4-31B-it
+[2026-07-22T16:14:10+09:00] ERROR: Gemma model failed: google/gemma-4-31B-it / name 'raw_text' is not defined
+[2026-07-22T16:14:10+09:00] INFO: Trying Gemma fallback model: gemma4:31b
+[2026-07-22T16:14:10+09:00] INFO: Gemma full JSON generation started: gemma4:31b
+[2026-07-22T16:14:10+09:00] ERROR: Gemma model failed: gemma4:31b / Gemma request failed: HTTP 404 Not Found. URL=http://127.0.0.1:8000/v1/chat/completions. Body: {"error":{"message":"The model `gemma4:31b` does not exist.","type":"NotFoundError","param":"model","code":404}}
+[2026-07-22T16:14:10+09:00] ERROR: Failed: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/1편_2장.pdf / Gemma request failed: HTTP 404 Not Found. URL=http://127.0.0.1:8000/v1/chat/completions. Body: {"error":{"message":"The model `gemma4:31b` does not exist.","type":"NotFoundError","param":"model","code":404}}
+[2026-07-22T16:14:10+09:00] INFO: Created full TOC files: 0
+[2026-07-22T16:14:10+09:00] ERROR: Failed files: 1
+[2026-07-22T16:14:10+09:00] ERROR: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/1편_2장.pdf: Gemma request failed: HTTP 404 Not Found. URL=http://127.0.0.1:8000/v1/chat/completions. Body: {"error":{"message":"The model `gemma4:31b` does not exist.","type":"NotFoundError","param":"model","code":404}}

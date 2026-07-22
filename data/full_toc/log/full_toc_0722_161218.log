@@ -1,0 +1,11 @@
+[2026-07-22T16:12:18+09:00] INFO: log: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/log/full_toc_0722_161218.log
+[2026-07-22T16:12:18+09:00] INFO: PDF files: 1
+[2026-07-22T16:12:18+09:00] INFO: processing: 1편_2장.pdf | stage=gemma
+[2026-07-22T16:12:18+09:00] INFO: Existing parsed text found, skipping PDF parsing: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/1__2_parsed.txt
+[2026-07-22T16:12:18+09:00] INFO: Using layout JSON: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/1__2_0722_160143_layout.json
+[2026-07-22T16:12:18+09:00] INFO: Gemma full JSON generation started: gemma4:31b
+[2026-07-22T16:12:18+09:00] ERROR: Gemma model failed: gemma4:31b / Gemma request failed: HTTP 404 Not Found. URL=http://127.0.0.1:8000/v1/chat/completions. Body: {"error":{"message":"The model `gemma4:31b` does not exist.","type":"NotFoundError","param":"model","code":404}}
+[2026-07-22T16:12:18+09:00] ERROR: Failed: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/1편_2장.pdf / Gemma request failed: HTTP 404 Not Found. URL=http://127.0.0.1:8000/v1/chat/completions. Body: {"error":{"message":"The model `gemma4:31b` does not exist.","type":"NotFoundError","param":"model","code":404}}
+[2026-07-22T16:12:18+09:00] INFO: Created full TOC files: 0
+[2026-07-22T16:12:18+09:00] ERROR: Failed files: 1
+[2026-07-22T16:12:18+09:00] ERROR: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/1편_2장.pdf: Gemma request failed: HTTP 404 Not Found. URL=http://127.0.0.1:8000/v1/chat/completions. Body: {"error":{"message":"The model `gemma4:31b` does not exist.","type":"NotFoundError","param":"model","code":404}}

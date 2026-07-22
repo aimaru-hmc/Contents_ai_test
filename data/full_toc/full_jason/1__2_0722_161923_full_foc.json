@@ -1,0 +1,489 @@
+{
+    "title": "1편_2장",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "예방의학과 공중보건학의 개념과 활용",
+            "page": 1,
+            "level_reason": "Matched layout rule for level 1 (S=31.0, R=3.27) and is the main chapter title.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 31.0,
+                "r": 3.27,
+                "x": 91.0,
+                "y": 123.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "예방의학과 공중보건학의 개념과"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "1. 예방의학과 공중보건학의 개념",
+            "page": 1,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90) and numbering '#.'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 377.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1. 예방의학과 공중보건학의 개념"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 의학의 분류",
+            "page": 1,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '#.#'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 579.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.1 의학의 분류"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 예방의학과 공중보건학의 개념",
+            "page": 3,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '#.#'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 44,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 729.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.2 예방의학과 공중보건학의 개념"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "2. 예방의학과 공중보건학의 내용과 적용",
+            "page": 4,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.90) and numbering '#.'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 331.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2. 예방의학과 공중보건학의 내용과 적용"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 질병 발생단계와 예방대책",
+            "page": 4,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '#.#'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 564.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.1 질병 발생단계와 예방대책"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 예방의학과 공중보건학의 내용과 활용",
+            "page": 6,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '#.#'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 502.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.2 예방의학과 공중보건학의 내용과 활용"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 예방의학과 공중보건학의 접근 전략",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '#.#'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 457.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.3 예방의학과 공중보건학의 접근 전략"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 로즈의 예방의학 전략",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '#)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 498.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 로즈의 예방의학 전략"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 건강영향 피라미드",
+            "page": 8,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '#)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 524.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 건강영향 피라미드"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 예방의학과 공중보건윤리",
+            "page": 9,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32) and numbering '#.#'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 532.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.4 예방의학과 공중보건윤리"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 공중보건과 윤리",
+            "page": 9,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '#)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 574.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 공중보건과 윤리"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 공중보건 활동의 특징",
+            "page": 9,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(#)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 608.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 공중보건 활동의 특징"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 공중보건영역에서 생명의료윤리 네 원칙",
+            "page": 10,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(#)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 41,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 632.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 공중보건영역에서 생명의료윤리 네 원칙"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 윤리원칙의 적용",
+            "page": 10,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(#)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 46,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 726.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 윤리원칙의 적용"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 공중보건 활동과 관련된 윤리 문제",
+            "page": 11,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '#)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 373.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 공중보건 활동과 관련된 윤리 문제"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 감염병 관리에 관련된 윤리 문제",
+            "page": 11,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(#)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 501.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 감염병 관리에 관련된 윤리 문제"
+            }
+        },
+        {
+            "level": 6,
+            "chapter": "① 감염병 감시",
+            "page": 11,
+            "level_reason": "Contextual candidate; circled-number sequence under parent (1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 75.0,
+                "y": 595.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "① 감염병 감시"
+            }
+        },
+        {
+            "level": 6,
+            "chapter": "② 예방접종",
+            "page": 12,
+            "level_reason": "Contextual candidate; circled-number sequence under parent (1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 183.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "② 예방접종"
+            }
+        },
+        {
+            "level": 6,
+            "chapter": "③ 사회적 거리두기를 위한 격리 등 자유제한 조치",
+            "page": 12,
+            "level_reason": "Contextual candidate; circled-number sequence under parent (1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 183.0,
+                "y": 297.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "③ 사회적 거리두기를 위한 격리 등 자유제한 조치"
+            }
+        },
+        {
+            "level": 6,
+            "chapter": "④ 감염병 정보의 공개",
+            "page": 12,
+            "level_reason": "Contextual candidate; circled-number sequence under parent (1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 183.0,
+                "y": 449.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "④ 감염병 정보의 공개"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 보건의료자원의 분배에 관련된 윤리 문제",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(#)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 647.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 보건의료자원의 분배에 관련된 윤리 문제"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 건강증진과 윤리 문제",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05) and numbering '(#)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 389.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 건강증진과 윤리 문제"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 공중보건: 공공과 민간의 협력",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27) and numbering '#)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 46,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 725.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 공중보건: 공공과 민간의 협력"
+            }
+        }
+    ],
+    "_meta": {
+        "source_pdf": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/1편_2장.pdf",
+        "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/1__2_parsed.txt",
+        "source_layout": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/1__2_0722_160143_layout.json",
+        "parsed_created": false,
+        "provider_layout": "openai",
+        "openai_layout_model": "gpt-5.5",
+        "provider_toc": "gemma_vllm",
+        "gemma_model": "google/gemma-4-31B-it",
+        "generated_at": "2026-07-22T16:19:39+09:00",
+        "generation_started_at": "2026-07-22T16:19:23+09:00",
+        "generation_completed_at": "2026-07-22T16:19:39+09:00",
+        "elapsed_seconds": 15.884,
+        "elapsed": "15.9s",
+        "api_usage": {
+            "layout_generation": {
+                "provider": "openai",
+                "model": "gpt-5.5",
+                "usage": {
+                    "prompt_tokens": 30160,
+                    "completion_tokens": 3572,
+                    "total_tokens": 33732,
+                    "prompt_tokens_details": {
+                        "cached_tokens": 0,
+                        "audio_tokens": 0
+                    },
+                    "completion_tokens_details": {
+                        "reasoning_tokens": 2558,
+                        "audio_tokens": 0,
+                        "accepted_prediction_tokens": 0,
+                        "rejected_prediction_tokens": 0
+                    }
+                },
+                "prompt_tokens": 30160,
+                "completion_tokens": 3572,
+                "total_tokens": 33732
+            },
+            "toc_generation": {
+                "provider": "gemma_vllm",
+                "model": "google/gemma-4-31B-it",
+                "usage": {
+                    "prompt_tokens": 38698,
+                    "total_tokens": 40764,
+                    "completion_tokens": 2066,
+                    "prompt_tokens_details": null
+                },
+                "prompt_tokens": 38698,
+                "completion_tokens": 2066,
+                "total_tokens": 40764
+            }
+        }
+    }
+}

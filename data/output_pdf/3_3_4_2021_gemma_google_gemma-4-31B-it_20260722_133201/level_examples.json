@@ -1,0 +1,42 @@
+{
+  "source_pdf": "data/input/부교재2/2권-한글/3편3,4장(2021).pdf",
+  "model": "google/gemma-4-31B-it",
+  "max_level": 5,
+  "examples": [
+    {
+      "level": 1,
+      "text": "화학적 요인",
+      "page": 1,
+      "order": 4,
+      "reason": "Largest font size, chapter title position"
+    },
+    {
+      "level": 2,
+      "text": "1. 유해금속",
+      "page": 1,
+      "order": 11,
+      "reason": "Numbered section, distinct font size"
+    },
+    {
+      "level": 3,
+      "text": "1.1 납",
+      "page": 1,
+      "order": 14,
+      "reason": "Sub-numbering 1.1"
+    },
+    {
+      "level": 4,
+      "text": "1) 납의 특성",
+      "page": 1,
+      "order": 16,
+      "reason": "Sub-numbering 1)"
+    },
+    {
+      "level": 5,
+      "text": "(1) 흡수",
+      "page": 2,
+      "order": 23,
+      "reason": "Parenthetical numbering (1)"
+    }
+  ]
+}
