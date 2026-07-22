@@ -1,0 +1,49 @@
+{
+  "source_pdf": "data/input/부교재1/1권-한글/1편(2021).pdf",
+  "model": "google/gemma-4-31B-it",
+  "max_level": 6,
+  "examples": [
+    {
+      "level": 1,
+      "text": "건강과 질병",
+      "page": 1,
+      "order": 3,
+      "reason": "Largest font size on page 1, serves as part title"
+    },
+    {
+      "level": 2,
+      "text": "제1장 건강과 질병의 정의 및 결정요인",
+      "page": 3,
+      "order": 4,
+      "reason": "Chapter title, distinct font size and numbering"
+    },
+    {
+      "level": 3,
+      "text": "1. 건강상태와 질병상태의 개념",
+      "page": 3,
+      "order": 8,
+      "reason": "Section numbering 1., bold/larger font than body"
+    },
+    {
+      "level": 4,
+      "text": "1.1 건강 개념의 변천",
+      "page": 3,
+      "order": 10,
+      "reason": "Subsection numbering 1.1"
+    },
+    {
+      "level": 5,
+      "text": "1) 신체(身體)개념의 건강",
+      "page": 3,
+      "order": 14,
+      "reason": "Numbered list style 1) used as sub-heading"
+    },
+    {
+      "level": 6,
+      "text": "(1) 생명의 기계론적 관점",
+      "page": 14,
+      "order": 20,
+      "reason": "Numbered list style (1) used as sub-heading"
+    }
+  ]
+}
