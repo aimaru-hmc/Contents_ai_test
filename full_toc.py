@@ -61,8 +61,8 @@ LOGGER: "RunLogger | None" = None
 
 
 
-DEFAULT_MODEL = "gemma4:31b"
-DEFAULT_FALLBACK_MODELS = DEFAULT_MODEL
+DEFAULT_MODEL = os.getenv("GEMMA_MODEL", "google/gemma-4-31B-it")
+DEFAULT_FALLBACK_MODELS = os.getenv("GEMMA_FALLBACK_MODELS", "")
 DEFAULT_AI_RETRIES = 5
 DEFAULT_RETRY_BASE_DELAY = 2.0
 DEFAULT_MAX_OUTPUT_TOKENS = 16384
@@ -809,8 +809,11 @@ def request_gemma_toc(prompt: str, args: argparse.Namespace, fallback_title: str
                     base_delay=args.ai_retry_base_delay,
                 )
                 log_detail(f"Gemma full JSON generation completed: {model}")
+                raw_text = str(response.get("text") or "")
+                usage = response.get("usage") if isinstance(response.get("usage"), dict) else {}
                 parsed = parse_json_response_text(raw_text)
-                return validate_toc(parsed, fallback_title=fallback_title, max_depth=args.max_depth), raw_text, model
+                api_usage = build_token_usage("gemma_vllm", model, usage)
+                return validate_toc(parsed, fallback_title=fallback_title, max_depth=args.max_depth), raw_text, model, api_usage
             except Exception as error:
                 last_error = error
                 if isinstance(error, GemmaOutputTruncatedError):
@@ -1437,8 +1440,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--openai-retries", type=int, default=DEFAULT_AI_RETRIES)
     parser.add_argument("--openai-retry-base-delay", type=float, default=DEFAULT_RETRY_BASE_DELAY)
 
-    parser.add_argument("--model", default=DEFAULT_MODEL, help="Gemma model. '31b' normalizes to gemma4:31b.")
-    parser.add_argument("--ai-fallback-models", default=DEFAULT_FALLBACK_MODELS)
+    parser.add_argument("--model", default=DEFAULT_MODEL, help="Gemma/vLLM served model name. '31b' normalizes to gemma4:31b.")
+    parser.add_argument("--ai-fallback-models", default=DEFAULT_FALLBACK_MODELS, help="Comma-separated fallback model names. 기본값은 없음.")
     parser.add_argument("--ai-retries", type=int, default=DEFAULT_AI_RETRIES)
     parser.add_argument("--ai-retry-base-delay", type=float, default=DEFAULT_RETRY_BASE_DELAY)
     parser.add_argument("--max-output-tokens", type=int, default=DEFAULT_MAX_OUTPUT_TOKENS)
