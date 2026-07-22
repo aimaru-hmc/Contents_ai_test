@@ -550,7 +550,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--gemma-chunk-chars", type=int, default=DEFAULT_CHUNK_CHARS, help="Maximum extracted text/layout chars per Gemma chunk")
     parser.add_argument("--gemma-chunk-overlap-chars", type=int, default=DEFAULT_CHUNK_OVERLAP_CHARS)
     parser.add_argument("--level-group-size", type=int, default=3, help="Number of levels per output PDF; adjacent groups overlap by one level")
-    parser.add_argument("--max-depth", type=int, default=10)
+    parser.add_argument("--max-depth", type=int, default=7)
     parser.add_argument("--max-output-tokens", type=int, default=DEFAULT_MAX_OUTPUT_TOKENS_BY_PROVIDER["gemma"])
     parser.add_argument("--temperature", type=float, default=0.1)
     parser.add_argument("--ai-retries", type=int, default=DEFAULT_AI_RETRIES)
@@ -566,7 +566,7 @@ def main() -> int:
     if args.gemma_runtime:
         args.gemma_backend = args.gemma_runtime
     args.gemma_backend = normalize_gemma_backend(args.gemma_backend)
-    args.max_depth = max(1, min(int(args.max_depth), 10))
+    args.max_depth = max(1, min(int(args.max_depth), 7))
     args.level_group_size = max(2, int(args.level_group_size))
     args.no_schema = True
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)
