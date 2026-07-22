@@ -1,0 +1,238 @@
+{
+    "source_reference": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/input/1편_2장.pdf",
+    "source_chunk": "full_pdf",
+    "source_parsed": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/full_toc/parsed/1__2_parsed.txt",
+    "matching_priority": [
+        "S/R/B/I/F",
+        "numbering",
+        "X",
+        "Y",
+        "examples"
+    ],
+    "rules": [
+        {
+            "level": 1,
+            "s": 31.0,
+            "r": 3.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 90.0,
+            "x_max": 280.0,
+            "y_min": 120.0,
+            "y_max": 180.0,
+            "start_shapes": [
+                "Hangul title line after chapter marker"
+            ],
+            "reference_count": 2,
+            "examples": [
+                "예방의학과 공중보건학의 개념과",
+                "활용"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 18.0,
+            "r": 1.9,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 70.0,
+            "x_max": 190.0,
+            "y_min": 320.0,
+            "y_max": 385.0,
+            "start_shapes": [
+                "#."
+            ],
+            "reference_count": 2,
+            "examples": [
+                "1. 예방의학과 공중보건학의 개념",
+                "2. 예방의학과 공중보건학의 내용과 적용"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 12.5,
+            "r": 1.32,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 70.0,
+            "x_max": 185.0,
+            "y_min": 450.0,
+            "y_max": 735.0,
+            "start_shapes": [
+                "#.#"
+            ],
+            "reference_count": 6,
+            "examples": [
+                "1.1 의학의 분류",
+                "1.2 예방의학과 공중보건학의 개념",
+                "2.1 질병 발생단계와 예방대책",
+                "2.2 예방의학과 공중보건학의 내용과 활용",
+                "2.3 예방의학과 공중보건학의 접근 전략",
+                "2.4 예방의학과 공중보건윤리"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 12.0,
+            "r": 1.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 60.0,
+            "x_max": 175.0,
+            "y_min": 365.0,
+            "y_max": 730.0,
+            "start_shapes": [
+                "#)"
+            ],
+            "reference_count": 5,
+            "examples": [
+                "1) 로즈의 예방의학 전략",
+                "2) 건강영향 피라미드",
+                "1) 공중보건과 윤리",
+                "2) 공중보건 활동과 관련된 윤리 문제",
+                "3) 공중보건: 공공과 민간의 협력"
+            ]
+        },
+        {
+            "level": 5,
+            "s": 10.0,
+            "r": 1.05,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 70.0,
+            "x_max": 185.0,
+            "y_min": 380.0,
+            "y_max": 730.0,
+            "start_shapes": [
+                "(#)"
+            ],
+            "reference_count": 6,
+            "examples": [
+                "(1) 공중보건 활동의 특징",
+                "(2) 공중보건영역에서 생명의료윤리 네 원칙",
+                "(3) 윤리원칙의 적용",
+                "(1) 감염병 관리에 관련된 윤리 문제",
+                "(2) 보건의료자원의 분배에 관련된 윤리 문제",
+                "(3) 건강증진과 윤리 문제"
+            ]
+        }
+    ],
+    "contextual_heading_candidates": [
+        {
+            "level": 6,
+            "chapter": "① 감염병 감시",
+            "page": 11,
+            "source_order": 431,
+            "evidence": [
+                "short standalone line",
+                "under parent heading (1) 감염병 관리에 관련된 윤리 문제",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role",
+                "fits circled-number heading sequence"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "② 예방접종",
+            "page": 12,
+            "source_order": 452,
+            "evidence": [
+                "short standalone line",
+                "under parent heading (1) 감염병 관리에 관련된 윤리 문제",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role",
+                "fits circled-number heading sequence"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "③ 사회적 거리두기를 위한 격리 등 자유제한 조치",
+            "page": 12,
+            "source_order": 466,
+            "evidence": [
+                "standalone circled-number line",
+                "under parent heading (1) 감염병 관리에 관련된 윤리 문제",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role",
+                "fits neighboring heading sequence"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "④ 감염병 정보의 공개",
+            "page": 12,
+            "source_order": 476,
+            "evidence": [
+                "short standalone line",
+                "under parent heading (1) 감염병 관리에 관련된 윤리 문제",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role",
+                "fits circled-number heading sequence"
+            ]
+        }
+    ],
+    "unmatched_reference_titles": [],
+    "_api_usage": {
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "usage": {
+            "prompt_tokens": 30160,
+            "completion_tokens": 3572,
+            "total_tokens": 33732,
+            "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+                "reasoning_tokens": 2558,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+            }
+        },
+        "prompt_tokens": 30160,
+        "completion_tokens": 3572,
+        "total_tokens": 33732
+    },
+    "_meta": {
+        "source_pdf": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/input/1편_2장.pdf",
+        "source_parsed": "/home/hmc2/work/development/eunsoo/Contents_ai_test/data/full_toc/parsed/1__2_parsed.txt",
+        "parsed_created": false,
+        "provider_layout": "openai",
+        "openai_layout_model": "gpt-5.5",
+        "generated_at": "2026-07-22T16:02:34+09:00",
+        "generation_started_at": "2026-07-22T16:01:43+09:00",
+        "generation_completed_at": "2026-07-22T16:02:34+09:00",
+        "elapsed_seconds": 51.518,
+        "elapsed": "51.5s",
+        "api_usage": {
+            "layout_generation": {
+                "provider": "openai",
+                "model": "gpt-5.5",
+                "usage": {
+                    "prompt_tokens": 30160,
+                    "completion_tokens": 3572,
+                    "total_tokens": 33732,
+                    "prompt_tokens_details": {
+                        "cached_tokens": 0,
+                        "audio_tokens": 0
+                    },
+                    "completion_tokens_details": {
+                        "reasoning_tokens": 2558,
+                        "audio_tokens": 0,
+                        "accepted_prediction_tokens": 0,
+                        "rejected_prediction_tokens": 0
+                    }
+                },
+                "prompt_tokens": 30160,
+                "completion_tokens": 3572,
+                "total_tokens": 33732
+            }
+        }
+    }
+}

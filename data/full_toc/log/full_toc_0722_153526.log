@@ -1,0 +1,10 @@
+[2026-07-22T15:35:26+09:00] INFO: log: /home/hmc2/work/development/eunsoo/Contents_ai_test/data/full_toc/log/full_toc_0722_153526.log
+[2026-07-22T15:35:26+09:00] INFO: PDF files: 1
+[2026-07-22T15:35:26+09:00] INFO: processing: 1편_2장.pdf | stage=layout
+[2026-07-22T15:35:26+09:00] INFO: PDF parsing started: 1편_2장.pdf
+[2026-07-22T15:35:27+09:00] INFO: Parsed text saved: /home/hmc2/work/development/eunsoo/Contents_ai_test/data/full_toc/parsed/1__2_parsed.txt
+[2026-07-22T15:35:27+09:00] INFO: OpenAI layout generation started: gpt-5.5
+[2026-07-22T15:35:27+09:00] ERROR: Failed: /home/hmc2/work/development/eunsoo/Contents_ai_test/data/input/1편_2장.pdf / OpenAI API key is empty. Set OPENAI_API_KEY or pass --openai-api-key.
+[2026-07-22T15:35:27+09:00] INFO: Created full TOC files: 0
+[2026-07-22T15:35:27+09:00] ERROR: Failed files: 1
+[2026-07-22T15:35:27+09:00] ERROR: /home/hmc2/work/development/eunsoo/Contents_ai_test/data/input/1편_2장.pdf: OpenAI API key is empty. Set OPENAI_API_KEY or pass --openai-api-key.

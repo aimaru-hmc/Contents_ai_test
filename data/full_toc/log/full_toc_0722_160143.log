@@ -1,0 +1,8 @@
+[2026-07-22T16:01:43+09:00] INFO: log: /home/hmc2/work/development/eunsoo/Contents_ai_test/data/full_toc/log/full_toc_0722_160143.log
+[2026-07-22T16:01:43+09:00] INFO: PDF files: 1
+[2026-07-22T16:01:43+09:00] INFO: processing: 1편_2장.pdf | stage=layout
+[2026-07-22T16:01:43+09:00] INFO: Existing parsed text found, skipping PDF parsing: /home/hmc2/work/development/eunsoo/Contents_ai_test/data/full_toc/parsed/1__2_parsed.txt
+[2026-07-22T16:01:43+09:00] INFO: OpenAI layout generation started: gpt-5.5
+[2026-07-22T16:02:34+09:00] INFO: OpenAI layout generation completed: rules=5, tokens=33732
+[2026-07-22T16:02:34+09:00] INFO: layout saved: /home/hmc2/work/development/eunsoo/Contents_ai_test/data/full_toc/layout/1__2_0722_160143_layout.json | elapsed=51.5s
+[2026-07-22T16:02:34+09:00] INFO: Created full TOC files: 0

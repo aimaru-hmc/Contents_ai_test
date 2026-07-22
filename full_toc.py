@@ -19,6 +19,34 @@ from typing import Any, Callable, Iterable
 
 
 ROOT = Path(__file__).resolve().parent
+
+
+def load_dotenv_file(path: Path) -> None:
+    if not path.is_file():
+        return
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
+def load_dotenv_files() -> None:
+    candidates = [Path.cwd() / ".env", ROOT / ".env", ROOT.parent / ".env"]
+    seen: set[Path] = set()
+    for candidate in candidates:
+        resolved = candidate.resolve()
+        if resolved in seen:
+            continue
+        seen.add(resolved)
+        load_dotenv_file(resolved)
+
+
+load_dotenv_files()
 DEFAULT_INPUT_DIR = ROOT / "data/input"
 DEFAULT_DATA_DIR = ROOT / "data/full_toc"
 DEFAULT_PARSED_DIR = DEFAULT_DATA_DIR / "parsed"
@@ -363,11 +391,26 @@ def compact_layout_json(layout: dict[str, Any]) -> dict[str, Any]:
             "reference_count": rule.get("reference_count"),
             "examples": rule.get("examples", [])[:5],
         })
+    candidates = layout.get("contextual_heading_candidates")
+    if not isinstance(candidates, list):
+        candidates = []
+    compact_candidates: list[dict[str, Any]] = []
+    for candidate in candidates:
+        if not isinstance(candidate, dict):
+            continue
+        compact_candidates.append({
+            "level": candidate.get("level"),
+            "chapter": candidate.get("chapter"),
+            "page": candidate.get("page"),
+            "source_order": candidate.get("source_order"),
+            "evidence": candidate.get("evidence", []),
+        })
     return {
         "source_reference": layout.get("source_reference"),
         "source_chunk": layout.get("source_chunk"),
         "matching_priority": layout.get("matching_priority", []),
         "rules": compact_rules,
+        "contextual_heading_candidates": compact_candidates,
         "unmatched_reference_titles": layout.get("unmatched_reference_titles", []),
     }
 
@@ -393,6 +436,9 @@ The layout JSON was generated from the full parsed PDF by OpenAI and provides he
 - Treat the Layout JSON rules as strong examples, not as an exhaustive whitelist of heading styles or levels.
 - For styles represented in Layout JSON, match headings by S/R/B/I/F first, then start_shapes, X/Y position, and numbering.
 - Before returning JSON, audit the current parsed lines against every Layout JSON rule and include every valid matching heading.
+- Treat Layout JSON contextual_heading_candidates as strong heading candidates, not final truth. Include them when surrounding parsed text supports a subsection role.
+- Do not reject a short standalone candidate solely because its font size, ratio, or font matches body text.
+- For body-like typography, use context: parent heading, line brevity, standalone placement, following explanatory paragraphs, and neighboring heading sequence.
 - Never reject a heading only because its S/R/B/I/F style or target level is absent from Layout JSON.
 - For an unseen style, infer heading candidacy and level from numbering hierarchy, indentation and position, typographic contrast, neighboring headings, and parent-child sequence.
 - Use only text that appears in the parsed layout text. Do not invent, rewrite, or summarize titles.
@@ -928,7 +974,7 @@ def call_openai_layout(
         "response_format": {"type": "json_object"},
     }
     if max_tokens:
-        payload["max_tokens"] = max(1, int(max_tokens))
+        payload["max_completion_tokens"] = max(1, int(max_tokens))
     if temperature is not None:
         payload["temperature"] = max(0.0, float(temperature))
 
@@ -968,10 +1014,14 @@ Create a compact Layout JSON for table-of-contents extraction from the parsed PD
 
 [Task]
 - Inspect all parsed layout lines.
-- Infer reusable heading-level rules from typography, numbering hierarchy, indentation, page order, and examples.
+- Infer reusable heading-level rules from typography, numbering hierarchy, indentation, page order, examples, and surrounding context.
 - The output will be passed to Gemma to produce the final full TOC JSON.
 - Include only rules that help identify real body headings.
-- Exclude covers, prefaces, existing TOC listing rows, repeated headers/footers, page numbers, captions, and body sentences.
+- Use surrounding context, not only typography. Some true subheadings may share the same font size/style as body text.
+- Preserve short standalone lines that introduce the following paragraph or subsection as contextual heading candidates, even if their typography matches body text.
+- A contextual candidate is stronger when it appears under a parent heading, is followed by explanatory body paragraphs, is shorter than surrounding body lines, and fits the neighboring heading sequence.
+- Do not discard a candidate solely because its font size, ratio, or font matches body text.
+- Exclude covers, prefaces, existing TOC listing rows, repeated headers/footers, page numbers, captions, references, problem sets, and body sentences.
 - Use integer levels from 1 to {max_depth}; lower numbers are higher-level headings.
 - Keep examples as exact source text from parsed lines.
 
@@ -996,6 +1046,20 @@ Output exactly one valid JSON object with this shape:
       "start_shapes": ["A", "#."],
       "reference_count": 3,
       "examples": ["Exact heading text"]
+    }}
+  ],
+  "contextual_heading_candidates": [
+    {{
+      "level": 6,
+      "chapter": "Exact candidate text",
+      "page": 1,
+      "source_order": 12,
+      "evidence": [
+        "short standalone line",
+        "under a parent heading",
+        "followed by explanatory body paragraph",
+        "body-like typography but subsection role"
+      ]
     }}
   ],
   "unmatched_reference_titles": []
@@ -1036,6 +1100,37 @@ def normalize_layout_json(layout: dict[str, Any], parsed_path: Path, pdf_path: P
         }
         normalized_rules.append(row)
 
+    raw_candidates = layout.get("contextual_heading_candidates")
+    if not isinstance(raw_candidates, list):
+        raw_candidates = []
+    normalized_candidates: list[dict[str, Any]] = []
+    for candidate in raw_candidates:
+        if not isinstance(candidate, dict):
+            continue
+        chapter = clean_text(candidate.get("chapter"))
+        if not chapter:
+            continue
+        try:
+            level = int(candidate.get("level"))
+        except (TypeError, ValueError):
+            continue
+        try:
+            page = int(candidate.get("page"))
+        except (TypeError, ValueError):
+            page = None
+        try:
+            source_order = int(candidate.get("source_order"))
+        except (TypeError, ValueError):
+            source_order = None
+        row: dict[str, Any] = {"level": level, "chapter": chapter}
+        if page is not None and page > 0:
+            row["page"] = page
+        if source_order is not None and source_order > 0:
+            row["source_order"] = source_order
+        evidence = candidate.get("evidence")
+        row["evidence"] = evidence if isinstance(evidence, list) else []
+        normalized_candidates.append(row)
+
     return {
         "source_reference": str(pdf_path),
         "source_chunk": "full_pdf",
@@ -1044,6 +1139,7 @@ def normalize_layout_json(layout: dict[str, Any], parsed_path: Path, pdf_path: P
         if isinstance(layout.get("matching_priority"), list)
         else ["S/R/B/I/F", "numbering", "X", "Y", "examples"],
         "rules": normalized_rules,
+        "contextual_heading_candidates": normalized_candidates,
         "unmatched_reference_titles": layout.get("unmatched_reference_titles")
         if isinstance(layout.get("unmatched_reference_titles"), list)
         else [],
@@ -1153,6 +1249,8 @@ def run_layout_stage(
     args: argparse.Namespace,
     timestamp: str,
 ) -> tuple[Path, Path, str, bool]:
+    layout_started_at = datetime.now().astimezone()
+    layout_started = time.perf_counter()
     parsed_path, parsed_text, parsed_created = parse_pdf_if_needed(
         pdf_path=pdf_path,
         parsed_dir=args.parsed_dir.resolve(),
@@ -1167,6 +1265,21 @@ def run_layout_stage(
         pdf_path=pdf_path,
         args=args,
     )
+    layout_completed_at = datetime.now().astimezone()
+    layout_elapsed_seconds = time.perf_counter() - layout_started
+    layout_json["_meta"] = {
+        "source_pdf": str(pdf_path),
+        "source_parsed": str(parsed_path),
+        "parsed_created": parsed_created,
+        "provider_layout": "openai",
+        "openai_layout_model": args.openai_model,
+        "generated_at": layout_completed_at.isoformat(timespec="seconds"),
+        "generation_started_at": layout_started_at.isoformat(timespec="seconds"),
+        "generation_completed_at": layout_completed_at.isoformat(timespec="seconds"),
+        "elapsed_seconds": round(layout_elapsed_seconds, 3),
+        "elapsed": format_elapsed(layout_elapsed_seconds),
+        "api_usage": {"layout_generation": layout_api_usage},
+    }
     layout_dir = args.layout_dir.resolve()
     layout_dir.mkdir(parents=True, exist_ok=True)
     layout_path = layout_dir / f"{safe_filename_part(pdf_path.stem)}_{timestamp}_layout.json"
@@ -1177,7 +1290,7 @@ def run_layout_stage(
             layout_raw_text,
             encoding="utf-8",
         )
-    log_info(f"layout saved: {layout_path}")
+    log_info(f"layout saved: {layout_path} | elapsed={format_elapsed(layout_elapsed_seconds)}")
     return parsed_path, layout_path, parsed_text, parsed_created
 
 

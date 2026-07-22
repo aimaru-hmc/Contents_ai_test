@@ -1,0 +1,23 @@
+[2026-07-22T15:37:08+09:00] INFO: log: /home/hmc2/work/development/eunsoo/Contents_ai_test/data/full_toc/log/full_toc_0722_153708.log
+[2026-07-22T15:37:08+09:00] INFO: PDF files: 1
+[2026-07-22T15:37:08+09:00] INFO: processing: 1편_2장.pdf | stage=layout
+[2026-07-22T15:37:08+09:00] INFO: Existing parsed text found, skipping PDF parsing: /home/hmc2/work/development/eunsoo/Contents_ai_test/data/full_toc/parsed/1__2_parsed.txt
+[2026-07-22T15:37:08+09:00] INFO: OpenAI layout generation started: gpt-5.5
+[2026-07-22T15:37:09+09:00] ERROR: Failed: /home/hmc2/work/development/eunsoo/Contents_ai_test/data/input/1편_2장.pdf / OpenAI layout request failed: HTTP 400 Bad Request. URL=https://api.openai.com/v1/chat/completions. Body: {
+  "error": {
+    "message": "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.",
+    "type": "invalid_request_error",
+    "param": "max_tokens",
+    "code": "unsupported_parameter"
+  }
+}
+[2026-07-22T15:37:09+09:00] INFO: Created full TOC files: 0
+[2026-07-22T15:37:09+09:00] ERROR: Failed files: 1
+[2026-07-22T15:37:09+09:00] ERROR: /home/hmc2/work/development/eunsoo/Contents_ai_test/data/input/1편_2장.pdf: OpenAI layout request failed: HTTP 400 Bad Request. URL=https://api.openai.com/v1/chat/completions. Body: {
+  "error": {
+    "message": "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.",
+    "type": "invalid_request_error",
+    "param": "max_tokens",
+    "code": "unsupported_parameter"
+  }
+}
