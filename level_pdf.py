@@ -40,6 +40,7 @@ from ai_gemma_overlap import (
 INPUT_DIR = Path("./data/input")
 OUTPUT_DIR = Path("./data/output_pdf")
 DEFAULT_MODEL = DEFAULT_GEMMA_OLLAMA_MODEL
+DEFAULT_LEVEL_GEMMA_BACKEND = "openai"
 DEFAULT_CHUNK_CHARS = max(int(DEFAULT_GEMMA_TEXT_CHUNK_CHARS), 220000)
 DEFAULT_CHUNK_OVERLAP_CHARS = max(int(DEFAULT_GEMMA_TEXT_CHUNK_OVERLAP_CHARS), 8000)
 
@@ -444,13 +445,26 @@ def process_pdf(pdf_path: Path, args: argparse.Namespace) -> ExtractionPlan:
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Gemma-only PDF range extractor split by hierarchy level groups.")
+    parser = argparse.ArgumentParser(description="Gemma/vLLM PDF range extractor split by hierarchy level groups.")
     parser.add_argument("path", nargs="?", default=str(INPUT_DIR), help="PDF file or directory (default: ./data/input)")
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR), help="Output directory (default: ./data/output_pdf)")
-    parser.add_argument("--model", default=DEFAULT_MODEL, help="Gemma model (default: gemma4:31b for Ollama)")
+    parser.add_argument("--model", default=DEFAULT_MODEL, help="Gemma model alias or server model name (default: gemma4:31b)")
     parser.add_argument("--ai-fallback-models", default="", help="Reserved for compatibility; currently unused")
-    parser.add_argument("--gemma-backend", default=DEFAULT_GEMMA_BACKEND, choices=("ollama", "transformers", "openai", "vllm"))
+    parser.add_argument(
+        "--gemma-backend",
+        default=DEFAULT_LEVEL_GEMMA_BACKEND,
+        choices=("ollama", "transformers", "openai", "vllm", "server"),
+        help="Gemma runtime backend. Default uses the local OpenAI-compatible vLLM server.",
+    )
+    parser.add_argument(
+        "--gemma-runtime",
+        default=None,
+        choices=("server", "vllm", "openai", "ollama", "transformers"),
+        help="Compatibility alias for --gemma-backend. Default backend is server/openai.",
+    )
     parser.add_argument("--ollama-base-url", default=DEFAULT_GEMMA_OPENAI_BASE_URL, help="Base URL for Ollama or OpenAI-compatible/vLLM server")
+    parser.add_argument("--vllm-base-url", dest="ollama_base_url", help="OpenAI-compatible/vLLM server base URL")
+    parser.add_argument("--gemma-vllm-server-base-url", dest="ollama_base_url", help="OpenAI-compatible/vLLM server base URL")
     parser.add_argument("--ollama-request-timeout", type=int, default=DEFAULT_OLLAMA_REQUEST_TIMEOUT)
     parser.add_argument("--api-key", default="", help="API key for OpenAI-compatible/vLLM server")
     parser.add_argument("--gemma-context-window", type=int, default=DEFAULT_GEMMA_CONTEXT_WINDOW)
@@ -475,6 +489,8 @@ def build_arg_parser() -> argparse.ArgumentParser:
 
 def main() -> int:
     args = build_arg_parser().parse_args()
+    if args.gemma_runtime:
+        args.gemma_backend = args.gemma_runtime
     args.gemma_backend = normalize_gemma_backend(args.gemma_backend)
     args.max_depth = max(1, min(int(args.max_depth), 10))
     args.level_group_size = max(2, int(args.level_group_size))
