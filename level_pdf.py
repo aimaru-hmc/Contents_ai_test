@@ -363,6 +363,22 @@ def next_heading_page_for_level(headings: list[Heading], current: Heading, level
     return page_count
 
 
+def deepest_level_section_end_page(headings: list[Heading], current: Heading, page_count: int) -> int:
+    deepest_level = current.level
+    started = False
+    for heading in headings:
+        if heading is current:
+            started = True
+            continue
+        if not started:
+            continue
+        if heading.level < deepest_level:
+            if heading.page <= current.page:
+                return current.page
+            return max(current.page, heading.page)
+    return page_count
+
+
 def heading_for_level(path: list[Heading], level: int) -> Heading:
     eligible = [heading for heading in path if heading.level <= level]
     if not eligible:
@@ -396,7 +412,7 @@ def compute_level_group_ranges(
         end_heading = heading_for_level(path, end_level)
         start_page = max(1, min(start_heading.page, page_count))
         if end_level >= max_level:
-            end_page = next_heading_page_for_level(headings, end_heading, end_level, page_count)
+            end_page = deepest_level_section_end_page(headings, end_heading, page_count)
         else:
             end_page = end_heading.page
         end_page = max(start_page, min(end_page, page_count))
