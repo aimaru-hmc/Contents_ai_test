@@ -130,8 +130,11 @@ The result will be used to cut PDFs by hierarchy levels.
 - Exclude covers, prefaces, existing TOC listing rows, indexes, standalone page numbers, repeated headers/footers, captions, figure/table labels, references, body sentences, examples, questions/exercises, and incidental lists.
 - Before finalizing, perform a second review of unmatched lines with heading-like numbering or typography and include valid unseen-style headings, while still excluding numbered body lists and sentences.
 - Include headings deep enough to reach the deepest real hierarchy level visible in the document, up to level {max_depth}.
+- Do not stop at the deepest level already emitted in the draft; inspect all heading-like lines independently for deeper levels.
+- Levels 5, 6, 7, and deeper levels up to {max_depth} may still be output when structural evidence supports them.
 - Do not skip visible parent headings between level 1 and the deepest heading.
 - Never reject a heading only because its S/R/B/I/F style or target level was absent from another part of the document.
+- Preserve the level numbers you infer from the document; do not compress or renumber levels to remove gaps.
 - Level 1 is the highest document hierarchy role found in the body.
 - Use actual PDF viewer page numbers from [PAGE] markers or P metadata.
 - Use order as the source line order within the page. Never calculate or invent order.
@@ -178,6 +181,8 @@ Merge the partial heading candidates into one final heading list.
 - Preserve page order and source order.
 - Keep only real hierarchy headings.
 - Keep levels 1 to {max_depth}.
+- Preserve inferred level numbers exactly; do not compress levels or renumber level 7 to level 6.
+- Audit candidates for levels 5, 6, 7, and deeper before finalizing.
 - Do not invent headings.
 - Return exactly one JSON object with a headings array.
 
@@ -263,13 +268,7 @@ def validate_headings(data: dict[str, Any], max_depth: int, page_count: int) -> 
     headings.sort(key=lambda item: (item.page, item.order))
     if not headings:
         raise RuntimeError("Gemma returned no headings.")
-    return normalize_levels(headings)
-
-
-def normalize_levels(headings: list[Heading]) -> list[Heading]:
-    used = sorted({heading.level for heading in headings})
-    mapping = {level: index + 1 for index, level in enumerate(used)}
-    return [Heading(**{**asdict(heading), "level": mapping[heading.level]}) for heading in headings]
+    return headings
 
 
 def extract_chunks(pdf_path: Path, args: argparse.Namespace) -> tuple[list[dict[str, Any]], int]:
