@@ -1,0 +1,15 @@
+{
+    "timestamp": "2026-07-22 09:27:58",
+    "stage_index": 51,
+    "stage": "chunk_input_ready",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "processed_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "chunk": "25",
+    "total_chunks": 40,
+    "start_page": 329,
+    "end_page": 340,
+    "input_chars": 29499,
+    "input_chunk_file": "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_25_pages_329-340.json"
+}

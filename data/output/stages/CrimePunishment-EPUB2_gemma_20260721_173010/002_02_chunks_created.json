@@ -1,0 +1,263 @@
+{
+    "timestamp": "2026-07-21 17:30:42",
+    "stage_index": 2,
+    "stage": "02_chunks_created",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "processed_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "chunk_count": 40,
+    "chunk_chars": 30000,
+    "raw_extracted_pages": 526,
+    "raw_extracted_chars": 1127869,
+    "extracted_pages": 526,
+    "extracted_chars": 1127869,
+    "chunks": [
+        {
+            "index": 1,
+            "start_page": 2,
+            "end_page": 20,
+            "input_chars": 28481
+        },
+        {
+            "index": 2,
+            "start_page": 21,
+            "end_page": 31,
+            "input_chars": 27520
+        },
+        {
+            "index": 3,
+            "start_page": 32,
+            "end_page": 44,
+            "input_chars": 27924
+        },
+        {
+            "index": 4,
+            "start_page": 45,
+            "end_page": 57,
+            "input_chars": 29398
+        },
+        {
+            "index": 5,
+            "start_page": 58,
+            "end_page": 70,
+            "input_chars": 28845
+        },
+        {
+            "index": 6,
+            "start_page": 71,
+            "end_page": 83,
+            "input_chars": 29529
+        },
+        {
+            "index": 7,
+            "start_page": 84,
+            "end_page": 97,
+            "input_chars": 28089
+        },
+        {
+            "index": 8,
+            "start_page": 98,
+            "end_page": 110,
+            "input_chars": 29467
+        },
+        {
+            "index": 9,
+            "start_page": 111,
+            "end_page": 123,
+            "input_chars": 28706
+        },
+        {
+            "index": 10,
+            "start_page": 124,
+            "end_page": 136,
+            "input_chars": 29091
+        },
+        {
+            "index": 11,
+            "start_page": 137,
+            "end_page": 149,
+            "input_chars": 28846
+        },
+        {
+            "index": 12,
+            "start_page": 150,
+            "end_page": 163,
+            "input_chars": 29470
+        },
+        {
+            "index": 13,
+            "start_page": 164,
+            "end_page": 177,
+            "input_chars": 29146
+        },
+        {
+            "index": 14,
+            "start_page": 178,
+            "end_page": 190,
+            "input_chars": 29408
+        },
+        {
+            "index": 15,
+            "start_page": 191,
+            "end_page": 204,
+            "input_chars": 27921
+        },
+        {
+            "index": 16,
+            "start_page": 205,
+            "end_page": 217,
+            "input_chars": 28837
+        },
+        {
+            "index": 17,
+            "start_page": 218,
+            "end_page": 231,
+            "input_chars": 28830
+        },
+        {
+            "index": 18,
+            "start_page": 232,
+            "end_page": 246,
+            "input_chars": 29994
+        },
+        {
+            "index": 19,
+            "start_page": 247,
+            "end_page": 259,
+            "input_chars": 29371
+        },
+        {
+            "index": 20,
+            "start_page": 260,
+            "end_page": 272,
+            "input_chars": 29116
+        },
+        {
+            "index": 21,
+            "start_page": 273,
+            "end_page": 287,
+            "input_chars": 29614
+        },
+        {
+            "index": 22,
+            "start_page": 288,
+            "end_page": 301,
+            "input_chars": 28924
+        },
+        {
+            "index": 23,
+            "start_page": 302,
+            "end_page": 315,
+            "input_chars": 29132
+        },
+        {
+            "index": 24,
+            "start_page": 316,
+            "end_page": 328,
+            "input_chars": 28156
+        },
+        {
+            "index": 25,
+            "start_page": 329,
+            "end_page": 340,
+            "input_chars": 29499
+        },
+        {
+            "index": 26,
+            "start_page": 341,
+            "end_page": 355,
+            "input_chars": 28060
+        },
+        {
+            "index": 27,
+            "start_page": 356,
+            "end_page": 367,
+            "input_chars": 27600
+        },
+        {
+            "index": 28,
+            "start_page": 368,
+            "end_page": 379,
+            "input_chars": 28466
+        },
+        {
+            "index": 29,
+            "start_page": 380,
+            "end_page": 392,
+            "input_chars": 29541
+        },
+        {
+            "index": 30,
+            "start_page": 393,
+            "end_page": 405,
+            "input_chars": 28962
+        },
+        {
+            "index": 31,
+            "start_page": 406,
+            "end_page": 418,
+            "input_chars": 29178
+        },
+        {
+            "index": 32,
+            "start_page": 419,
+            "end_page": 433,
+            "input_chars": 28707
+        },
+        {
+            "index": 33,
+            "start_page": 434,
+            "end_page": 445,
+            "input_chars": 28330
+        },
+        {
+            "index": 34,
+            "start_page": 446,
+            "end_page": 458,
+            "input_chars": 28048
+        },
+        {
+            "index": 35,
+            "start_page": 459,
+            "end_page": 470,
+            "input_chars": 28538
+        },
+        {
+            "index": 36,
+            "start_page": 471,
+            "end_page": 483,
+            "input_chars": 28275
+        },
+        {
+            "index": 37,
+            "start_page": 484,
+            "end_page": 496,
+            "input_chars": 29491
+        },
+        {
+            "index": 38,
+            "start_page": 497,
+            "end_page": 509,
+            "input_chars": 28538
+        },
+        {
+            "index": 39,
+            "start_page": 510,
+            "end_page": 522,
+            "input_chars": 29657
+        },
+        {
+            "index": 40,
+            "start_page": 523,
+            "end_page": 527,
+            "input_chars": 9816
+        }
+    ],
+    "document_style_reference": {
+        "enabled": true,
+        "available": false,
+        "reason": "No compact layout-tagged lines were found.",
+        "prompt_text": ""
+    }
+}

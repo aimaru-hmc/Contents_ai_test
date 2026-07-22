@@ -1,0 +1,47 @@
+{
+    "timestamp": "2026-07-22 09:28:09",
+    "stage_index": 70,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "processed_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "chunk": "34",
+    "total_chunks": 40,
+    "start_page": 446,
+    "end_page": 458,
+    "toc": {
+        "title": "CrimePunishment-EPUB2",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "Chapter Three",
+                "page": 446,
+                "level_reason": "Major section title indicating a new chapter.",
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "HE HURRIED TO VIDRIGAÏLOV S",
+                "page": 446,
+                "level_reason": "Subsection title appearing immediately after the chapter heading.",
+                "_source_order": 1
+            },
+            {
+                "level": 1,
+                "chapter": "Chapter Four",
+                "page": 456,
+                "level_reason": "Major section title indicating a new chapter.",
+                "_source_order": 2
+            },
+            {
+                "level": 2,
+                "chapter": "YOU KNOW PERHAPS YES",
+                "page": 456,
+                "level_reason": "Subsection title appearing immediately after the chapter heading.",
+                "_source_order": 3
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"CrimePunishment-EPUB2\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter Three\",\n      \"page\": 446,\n      \"level_reason\": \"Major section title indicating a new chapter.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"HE HURRIED TO VIDRIGAÏLOV S\",\n      \"page\": 446,\n      \"level_reason\": \"Subsection title appearing immediately after the chapter heading.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter Four\",\n      \"page\": 456,\n      \"level_reason\": \"Major section title indicating a new chapter.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"YOU KNOW PERHAPS YES\",\n      \"page\": 456,\n      \"level_reason\": \"Subsection title appearing immediately after the chapter heading.\"\n    }\n  ]\n}\n```"
+}

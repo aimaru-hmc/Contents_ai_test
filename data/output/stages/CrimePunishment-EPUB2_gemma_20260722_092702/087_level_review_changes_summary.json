@@ -1,0 +1,717 @@
+{
+    "timestamp": "2026-07-22 09:28:32",
+    "stage_index": 87,
+    "stage": "level_review_changes_summary",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "processed_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "review_count": 1,
+    "level_change_count": 26,
+    "added_count": 0,
+    "removed_count": 13,
+    "reviews": [
+        {
+            "review_stage": "final merged TOC",
+            "input_chapters": 55,
+            "output_chapters": 42,
+            "level_change_count": 26,
+            "added_count": 0,
+            "removed_count": 13,
+            "level_changes": [
+                {
+                    "chapter": "Chapter Three",
+                    "page": 36,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                    "after_level_reason": "Numbered chapter within Part I.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Three",
+                        "page": 36,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Three",
+                        "page": 36,
+                        "level_reason": "Numbered chapter within Part I.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Four",
+                    "page": 50,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicitly labeled chapter heading.",
+                    "after_level_reason": "Numbered chapter within Part I.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Four",
+                        "page": 50,
+                        "level_reason": "Explicitly labeled chapter heading.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Four",
+                        "page": 50,
+                        "level_reason": "Numbered chapter within Part I.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "HIS MOTHER S LETTER",
+                    "page": 50,
+                    "before_level": 2,
+                    "after_level": 3,
+                    "before_level_reason": "Section title appearing immediately under the chapter heading.",
+                    "after_level_reason": "Section title appearing immediately under the chapter heading.",
+                    "before": {
+                        "level": 2,
+                        "chapter": "HIS MOTHER S LETTER",
+                        "page": 50,
+                        "level_reason": "Section title appearing immediately under the chapter heading.",
+                        "_source_order": 1
+                    },
+                    "after": {
+                        "level": 3,
+                        "chapter": "HIS MOTHER S LETTER",
+                        "page": 50,
+                        "level_reason": "Section title appearing immediately under the chapter heading.",
+                        "_source_order": 1
+                    }
+                },
+                {
+                    "chapter": "Chapter Five",
+                    "page": 62,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                    "after_level_reason": "Numbered chapter within Part I.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Five",
+                        "page": 62,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Five",
+                        "page": 62,
+                        "level_reason": "Numbered chapter within Part I.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Six",
+                    "page": 72,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicitly labeled chapter title starting a new major section of the narrative.",
+                    "after_level_reason": "Numbered chapter within Part I.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Six",
+                        "page": 72,
+                        "level_reason": "Explicitly labeled chapter title starting a new major section of the narrative.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Six",
+                        "page": 72,
+                        "level_reason": "Numbered chapter within Part I.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Seven",
+                    "page": 84,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Major section title starting a new chapter.",
+                    "after_level_reason": "Numbered chapter within Part I.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Seven",
+                        "page": 84,
+                        "level_reason": "Major section title starting a new chapter.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Seven",
+                        "page": 84,
+                        "level_reason": "Numbered chapter within Part I.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Two",
+                    "page": 114,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                    "after_level_reason": "Numbered chapter within Part II.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Two",
+                        "page": 114,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Two",
+                        "page": 114,
+                        "level_reason": "Numbered chapter within Part II.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Three",
+                    "page": 124,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Major section title indicating the start of a new chapter.",
+                    "after_level_reason": "Numbered chapter within Part II.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Three",
+                        "page": 124,
+                        "level_reason": "Major section title indicating the start of a new chapter.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Three",
+                        "page": 124,
+                        "level_reason": "Numbered chapter within Part II.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Four",
+                    "page": 137,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Major section title indicating a new chapter.",
+                    "after_level_reason": "Numbered chapter within Part II.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Four",
+                        "page": 137,
+                        "level_reason": "Major section title indicating a new chapter.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Four",
+                        "page": 137,
+                        "level_reason": "Numbered chapter within Part II.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Five",
+                    "page": 147,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Major section title indicating a new chapter.",
+                    "after_level_reason": "Numbered chapter within Part II.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Five",
+                        "page": 147,
+                        "level_reason": "Major section title indicating a new chapter.",
+                        "_source_order": 1
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Five",
+                        "page": 147,
+                        "level_reason": "Numbered chapter within Part II.",
+                        "_source_order": 1
+                    }
+                },
+                {
+                    "chapter": "Chapter Six",
+                    "page": 158,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                    "after_level_reason": "Numbered chapter within Part II.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Six",
+                        "page": 158,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Six",
+                        "page": 158,
+                        "level_reason": "Numbered chapter within Part II.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Seven",
+                    "page": 178,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Major section title indicating the start of a new chapter.",
+                    "after_level_reason": "Numbered chapter within Part II.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Seven",
+                        "page": 178,
+                        "level_reason": "Major section title indicating the start of a new chapter.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Seven",
+                        "page": 178,
+                        "level_reason": "Numbered chapter within Part II.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Two",
+                    "page": 210,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicitly labeled as a new chapter starting on this page.",
+                    "after_level_reason": "Numbered chapter within Part III.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Two",
+                        "page": 210,
+                        "level_reason": "Explicitly labeled as a new chapter starting on this page.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Two",
+                        "page": 210,
+                        "level_reason": "Numbered chapter within Part III.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Three",
+                    "page": 222,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                    "after_level_reason": "Numbered chapter within Part III.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Three",
+                        "page": 222,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Three",
+                        "page": 222,
+                        "level_reason": "Numbered chapter within Part III.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Four",
+                    "page": 235,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicitly labeled chapter heading.",
+                    "after_level_reason": "Numbered chapter within Part III.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Four",
+                        "page": 235,
+                        "level_reason": "Explicitly labeled chapter heading.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Four",
+                        "page": 235,
+                        "level_reason": "Numbered chapter within Part III.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Five",
+                    "page": 247,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Major section title indicating the start of a new chapter.",
+                    "after_level_reason": "Numbered chapter within Part III.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Five",
+                        "page": 247,
+                        "level_reason": "Major section title indicating the start of a new chapter.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Five",
+                        "page": 247,
+                        "level_reason": "Numbered chapter within Part III.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Six",
+                    "page": 265,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicitly labeled chapter heading starting a new major section.",
+                    "after_level_reason": "Numbered chapter within Part III.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Six",
+                        "page": 265,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Six",
+                        "page": 265,
+                        "level_reason": "Numbered chapter within Part III.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Two",
+                    "page": 290,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicitly labeled as a new chapter starting on this page.",
+                    "after_level_reason": "Numbered chapter within Part IV.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Two",
+                        "page": 290,
+                        "level_reason": "Explicitly labeled as a new chapter starting on this page.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Two",
+                        "page": 290,
+                        "level_reason": "Numbered chapter within Part IV.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Three",
+                    "page": 302,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Major section title indicating a new chapter.",
+                    "after_level_reason": "Numbered chapter within Part IV.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Three",
+                        "page": 302,
+                        "level_reason": "Major section title indicating a new chapter.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Three",
+                        "page": 302,
+                        "level_reason": "Numbered chapter within Part IV.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Four",
+                    "page": 310,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Major section title indicating a new chapter.",
+                    "after_level_reason": "Numbered chapter within Part IV.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Four",
+                        "page": 310,
+                        "level_reason": "Major section title indicating a new chapter.",
+                        "_source_order": 1
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Four",
+                        "page": 310,
+                        "level_reason": "Numbered chapter within Part IV.",
+                        "_source_order": 1
+                    }
+                },
+                {
+                    "chapter": "Chapter Five",
+                    "page": 326,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                    "after_level_reason": "Numbered chapter within Part IV.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Five",
+                        "page": 326,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Five",
+                        "page": 326,
+                        "level_reason": "Numbered chapter within Part IV.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Six",
+                    "page": 343,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Major section title starting a new chapter.",
+                    "after_level_reason": "Numbered chapter within Part IV.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Six",
+                        "page": 343,
+                        "level_reason": "Major section title starting a new chapter.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Six",
+                        "page": 343,
+                        "level_reason": "Numbered chapter within Part IV.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Two",
+                    "page": 367,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicitly labeled as a new chapter starting on this page.",
+                    "after_level_reason": "Numbered chapter within Part V.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Two",
+                        "page": 367,
+                        "level_reason": "Explicitly labeled as a new chapter starting on this page.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Two",
+                        "page": 367,
+                        "level_reason": "Numbered chapter within Part V.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Three",
+                    "page": 379,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicit chapter heading starting a new major section of the narrative.",
+                    "after_level_reason": "Numbered chapter within Part V.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Three",
+                        "page": 379,
+                        "level_reason": "Explicit chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Three",
+                        "page": 379,
+                        "level_reason": "Numbered chapter within Part V.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Four",
+                    "page": 393,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Major section title indicating the start of a new chapter.",
+                    "after_level_reason": "Numbered chapter within Part V.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Four",
+                        "page": 393,
+                        "level_reason": "Major section title indicating the start of a new chapter.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Four",
+                        "page": 393,
+                        "level_reason": "Numbered chapter within Part V.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "chapter": "Chapter Five",
+                    "page": 409,
+                    "before_level": 1,
+                    "after_level": 2,
+                    "before_level_reason": "Explicitly labeled chapter heading starting a new major section.",
+                    "after_level_reason": "Numbered chapter within Part V.",
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Five",
+                        "page": 409,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section.",
+                        "_source_order": 0
+                    },
+                    "after": {
+                        "level": 2,
+                        "chapter": "Chapter Five",
+                        "page": 409,
+                        "level_reason": "Numbered chapter within Part V.",
+                        "_source_order": 0
+                    }
+                }
+            ],
+            "added_entries": [],
+            "removed_entries": [
+                {
+                    "before": {
+                        "level": 3,
+                        "chapter": "H THESE CIGARETTES",
+                        "page": 433,
+                        "level_reason": "Section heading/summary title within Chapter Two.",
+                        "_source_order": 4
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Three",
+                        "page": 446,
+                        "level_reason": "Major section title indicating a new chapter.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "HE HURRIED TO VIDRIGAÏLOV S",
+                        "page": 446,
+                        "level_reason": "Subsection title appearing immediately after the chapter heading.",
+                        "_source_order": 1
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Four",
+                        "page": 456,
+                        "level_reason": "Major section title indicating a new chapter.",
+                        "_source_order": 2
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "YOU KNOW PERHAPS YES",
+                        "page": 456,
+                        "level_reason": "Subsection title appearing immediately after the chapter heading.",
+                        "_source_order": 3
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Five",
+                        "page": 466,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Six",
+                        "page": 480,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Seven",
+                        "page": 493,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Chapter Eight",
+                        "page": 502,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "Epilogue",
+                        "page": 512,
+                        "level_reason": "Major section title marking the final part of the book.",
+                        "_source_order": 0
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "I",
+                        "page": 512,
+                        "level_reason": "Numbered subsection within the Epilogue.",
+                        "_source_order": 1
+                    }
+                },
+                {
+                    "before": {
+                        "level": 2,
+                        "chapter": "II",
+                        "page": 519,
+                        "level_reason": "Numbered subsection within the Epilogue.",
+                        "_source_order": 2
+                    }
+                },
+                {
+                    "before": {
+                        "level": 1,
+                        "chapter": "About BB eBooks",
+                        "page": 527,
+                        "level_reason": "Standalone section title at the end of the document providing company information.",
+                        "_source_order": 0
+                    }
+                }
+            ]
+        }
+    ]
+}

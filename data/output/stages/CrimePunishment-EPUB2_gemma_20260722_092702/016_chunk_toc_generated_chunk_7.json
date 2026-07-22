@@ -1,0 +1,40 @@
+{
+    "timestamp": "2026-07-22 09:27:42",
+    "stage_index": 16,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "processed_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "chunk": "7",
+    "total_chunks": 40,
+    "start_page": 84,
+    "end_page": 97,
+    "toc": {
+        "title": "CrimePunishment-EPUB2",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "Chapter Seven",
+                "page": 84,
+                "level_reason": "Major section title starting a new chapter.",
+                "_source_order": 0
+            },
+            {
+                "level": 1,
+                "chapter": "Part II",
+                "page": 96,
+                "level_reason": "Top-level division of the book.",
+                "_source_order": 1
+            },
+            {
+                "level": 2,
+                "chapter": "Chapter One",
+                "page": 97,
+                "level_reason": "Chapter subsection under Part II.",
+                "_source_order": 2
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"CrimePunishment-EPUB2\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter Seven\",\n      \"page\": 84,\n      \"level_reason\": \"Major section title starting a new chapter.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Part II\",\n      \"page\": 96,\n      \"level_reason\": \"Top-level division of the book.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chapter One\",\n      \"page\": 97,\n      \"level_reason\": \"Chapter subsection under Part II.\"\n    }\n  ]\n}\n```"
+}

@@ -1,0 +1,15 @@
+Run log saved: data/output/logs/CrimePunishment-EPUB2_gemma_20260721_170344_log.txt
+Processing started: CrimePunishment-EPUB2.pdf
+  provider: gemma
+  Using Gemma/Transformers: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+Gemma model failed: google/gemma-4-31B-it / No /Root object! - Is this really a PDF?
+Trying Gemma fallback model: google/gemma-4-31B-it
+  Using Gemma/Transformers: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+Gemma model failed: google/gemma-4-31B-it / No /Root object! - Is this really a PDF?
+Failed: CrimePunishment-EPUB2.pdf / No /Root object! - Is this really a PDF?
+  elapsed: 0.0s (0.000s)
+  Error log saved: data/output/error_logs/20260721_170346_CrimePunishment-EPUB2_gemma_gemma4_31b_PDF_processing_failed_error.json
+Processing result: success 0 / failed 1
+Run log saved: data/output/logs/CrimePunishment-EPUB2_gemma_20260721_170344_log.txt

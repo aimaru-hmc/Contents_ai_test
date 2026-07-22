@@ -1,0 +1,800 @@
+{
+    "timestamp": "2026-07-22 09:28:16",
+    "stage_index": 83,
+    "stage": "03_chunks_completed",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "processed_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "processed_chunk_count": 40,
+    "partial_count": 40,
+    "partial_tocs": [
+        {
+            "chunk": 1,
+            "start_page": 2,
+            "end_page": 20,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Translator’s Preface",
+                        "page": 7,
+                        "level_reason": "Major introductory section appearing before the main narrative.",
+                        "_source_order": 0
+                    },
+                    {
+                        "level": 1,
+                        "chapter": "Part I",
+                        "page": 10,
+                        "level_reason": "Top-level structural division of the novel.",
+                        "_source_order": 1
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "Chapter One",
+                        "page": 11,
+                        "level_reason": "Numbered chapter within Part I.",
+                        "_source_order": 2
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "Chapter Two",
+                        "page": 19,
+                        "level_reason": "Numbered chapter within Part I.",
+                        "_source_order": 3
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 2,
+            "start_page": 21,
+            "end_page": 31,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": []
+            }
+        },
+        {
+            "chunk": 3,
+            "start_page": 32,
+            "end_page": 44,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Three",
+                        "page": 36,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 4,
+            "start_page": 45,
+            "end_page": 57,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Four",
+                        "page": 50,
+                        "level_reason": "Explicitly labeled chapter heading.",
+                        "_source_order": 0
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "HIS MOTHER S LETTER",
+                        "page": 50,
+                        "level_reason": "Section title appearing immediately under the chapter heading.",
+                        "_source_order": 1
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 5,
+            "start_page": 58,
+            "end_page": 70,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Five",
+                        "page": 62,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 6,
+            "start_page": 71,
+            "end_page": 83,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Six",
+                        "page": 72,
+                        "level_reason": "Explicitly labeled chapter title starting a new major section of the narrative.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 7,
+            "start_page": 84,
+            "end_page": 97,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Seven",
+                        "page": 84,
+                        "level_reason": "Major section title starting a new chapter.",
+                        "_source_order": 0
+                    },
+                    {
+                        "level": 1,
+                        "chapter": "Part II",
+                        "page": 96,
+                        "level_reason": "Top-level division of the book.",
+                        "_source_order": 1
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "Chapter One",
+                        "page": 97,
+                        "level_reason": "Chapter subsection under Part II.",
+                        "_source_order": 2
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 8,
+            "start_page": 98,
+            "end_page": 110,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": []
+            }
+        },
+        {
+            "chunk": 9,
+            "start_page": 111,
+            "end_page": 123,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Two",
+                        "page": 114,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 10,
+            "start_page": 124,
+            "end_page": 136,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Three",
+                        "page": 124,
+                        "level_reason": "Major section title indicating the start of a new chapter.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 11,
+            "start_page": 137,
+            "end_page": 149,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Four",
+                        "page": 137,
+                        "level_reason": "Major section title indicating a new chapter.",
+                        "_source_order": 0
+                    },
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Five",
+                        "page": 147,
+                        "level_reason": "Major section title indicating a new chapter.",
+                        "_source_order": 1
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 12,
+            "start_page": 150,
+            "end_page": 163,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Six",
+                        "page": 158,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 13,
+            "start_page": 164,
+            "end_page": 177,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": []
+            }
+        },
+        {
+            "chunk": 14,
+            "start_page": 178,
+            "end_page": 190,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Seven",
+                        "page": 178,
+                        "level_reason": "Major section title indicating the start of a new chapter.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 15,
+            "start_page": 191,
+            "end_page": 204,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Part III",
+                        "page": 196,
+                        "level_reason": "Major part division indicated by centered text and distinct page.",
+                        "_source_order": 0
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "Chapter One",
+                        "page": 197,
+                        "level_reason": "Chapter division within Part III.",
+                        "_source_order": 1
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 16,
+            "start_page": 205,
+            "end_page": 217,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Two",
+                        "page": 210,
+                        "level_reason": "Explicitly labeled as a new chapter starting on this page.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 17,
+            "start_page": 218,
+            "end_page": 231,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Three",
+                        "page": 222,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 18,
+            "start_page": 232,
+            "end_page": 246,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Four",
+                        "page": 235,
+                        "level_reason": "Explicitly labeled chapter heading.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 19,
+            "start_page": 247,
+            "end_page": 259,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Five",
+                        "page": 247,
+                        "level_reason": "Major section title indicating the start of a new chapter.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 20,
+            "start_page": 260,
+            "end_page": 272,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Six",
+                        "page": 265,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 21,
+            "start_page": 273,
+            "end_page": 287,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Part IV",
+                        "page": 276,
+                        "level_reason": "Major part division of the novel.",
+                        "_source_order": 0
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "Chapter One",
+                        "page": 277,
+                        "level_reason": "First chapter within Part IV.",
+                        "_source_order": 1
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 22,
+            "start_page": 288,
+            "end_page": 301,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Two",
+                        "page": 290,
+                        "level_reason": "Explicitly labeled as a new chapter starting on this page.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 23,
+            "start_page": 302,
+            "end_page": 315,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Three",
+                        "page": 302,
+                        "level_reason": "Major section title indicating a new chapter.",
+                        "_source_order": 0
+                    },
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Four",
+                        "page": 310,
+                        "level_reason": "Major section title indicating a new chapter.",
+                        "_source_order": 1
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 24,
+            "start_page": 316,
+            "end_page": 328,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Five",
+                        "page": 326,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 25,
+            "start_page": 329,
+            "end_page": 340,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": []
+            }
+        },
+        {
+            "chunk": 26,
+            "start_page": 341,
+            "end_page": 355,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Six",
+                        "page": 343,
+                        "level_reason": "Major section title starting a new chapter.",
+                        "_source_order": 0
+                    },
+                    {
+                        "level": 1,
+                        "chapter": "Part V",
+                        "page": 351,
+                        "level_reason": "Top-level part division of the book.",
+                        "_source_order": 1
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "Chapter One",
+                        "page": 352,
+                        "level_reason": "Chapter subsection within Part V.",
+                        "_source_order": 2
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 27,
+            "start_page": 356,
+            "end_page": 367,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Two",
+                        "page": 367,
+                        "level_reason": "Explicitly labeled as a new chapter starting on this page.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 28,
+            "start_page": 368,
+            "end_page": 379,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Three",
+                        "page": 379,
+                        "level_reason": "Explicit chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 29,
+            "start_page": 380,
+            "end_page": 392,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": []
+            }
+        },
+        {
+            "chunk": 30,
+            "start_page": 393,
+            "end_page": 405,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Four",
+                        "page": 393,
+                        "level_reason": "Major section title indicating the start of a new chapter.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 31,
+            "start_page": 406,
+            "end_page": 418,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Five",
+                        "page": 409,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 32,
+            "start_page": 419,
+            "end_page": 433,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Part VI",
+                        "page": 422,
+                        "level_reason": "Major part division of the novel.",
+                        "_source_order": 0
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "Chapter One",
+                        "page": 423,
+                        "level_reason": "First chapter within Part VI.",
+                        "_source_order": 1
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "A STRANGE PERIOD BEGAN FOR ASKOLNIKOV",
+                        "page": 423,
+                        "level_reason": "Section heading/summary title within Chapter One.",
+                        "_source_order": 2
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "Chapter Two",
+                        "page": 433,
+                        "level_reason": "Second chapter within Part VI.",
+                        "_source_order": 3
+                    },
+                    {
+                        "level": 3,
+                        "chapter": "H THESE CIGARETTES",
+                        "page": 433,
+                        "level_reason": "Section heading/summary title within Chapter Two.",
+                        "_source_order": 4
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 33,
+            "start_page": 434,
+            "end_page": 445,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": []
+            }
+        },
+        {
+            "chunk": 34,
+            "start_page": 446,
+            "end_page": 458,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Three",
+                        "page": 446,
+                        "level_reason": "Major section title indicating a new chapter.",
+                        "_source_order": 0
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "HE HURRIED TO VIDRIGAÏLOV S",
+                        "page": 446,
+                        "level_reason": "Subsection title appearing immediately after the chapter heading.",
+                        "_source_order": 1
+                    },
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Four",
+                        "page": 456,
+                        "level_reason": "Major section title indicating a new chapter.",
+                        "_source_order": 2
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "YOU KNOW PERHAPS YES",
+                        "page": 456,
+                        "level_reason": "Subsection title appearing immediately after the chapter heading.",
+                        "_source_order": 3
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 35,
+            "start_page": 459,
+            "end_page": 470,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Five",
+                        "page": 466,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 36,
+            "start_page": 471,
+            "end_page": 483,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Six",
+                        "page": 480,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 37,
+            "start_page": 484,
+            "end_page": 496,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Seven",
+                        "page": 493,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section of the narrative.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 38,
+            "start_page": 497,
+            "end_page": 509,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Chapter Eight",
+                        "page": 502,
+                        "level_reason": "Explicitly labeled chapter heading starting a new major section.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 39,
+            "start_page": 510,
+            "end_page": 522,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "Epilogue",
+                        "page": 512,
+                        "level_reason": "Major section title marking the final part of the book.",
+                        "_source_order": 0
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "I",
+                        "page": 512,
+                        "level_reason": "Numbered subsection within the Epilogue.",
+                        "_source_order": 1
+                    },
+                    {
+                        "level": 2,
+                        "chapter": "II",
+                        "page": 519,
+                        "level_reason": "Numbered subsection within the Epilogue.",
+                        "_source_order": 2
+                    }
+                ]
+            }
+        },
+        {
+            "chunk": 40,
+            "start_page": 523,
+            "end_page": 527,
+            "toc": {
+                "title": "CrimePunishment-EPUB2",
+                "chapters": [
+                    {
+                        "level": 1,
+                        "chapter": "About BB eBooks",
+                        "page": 527,
+                        "level_reason": "Standalone section title at the end of the document providing company information.",
+                        "_source_order": 0
+                    }
+                ]
+            }
+        }
+    ],
+    "chunk_level_reference": {},
+    "chunk_level_reference_source": "disabled",
+    "document_style_reference": {
+        "enabled": true,
+        "available": false,
+        "reason": "No compact layout-tagged lines were found.",
+        "prompt_text": ""
+    }
+}

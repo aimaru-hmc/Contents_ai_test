@@ -1,0 +1,15 @@
+Run log saved: data/output/logs/1. 교과서-신경학 3판_gemma_20260721_155843_log.txt
+Processing started: 1. 교과서-신경학 3판.pdf
+  provider: gemma
+  Using Gemma/Transformers: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+Gemma model failed: google/gemma-4-31B-it / No /Root object! - Is this really a PDF?
+Trying Gemma fallback model: google/gemma-4-31B-it
+  Using Gemma/Transformers: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+Gemma model failed: google/gemma-4-31B-it / No /Root object! - Is this really a PDF?
+Failed: 1. 교과서-신경학 3판.pdf / No /Root object! - Is this really a PDF?
+  elapsed: 0.0s (0.000s)
+  Error log saved: data/output/error_logs/20260721_155846_1._-_3_gemma_gemma4_31b_PDF_processing_failed_error.json
+Processing result: success 0 / failed 1
+Run log saved: data/output/logs/1. 교과서-신경학 3판_gemma_20260721_155843_log.txt

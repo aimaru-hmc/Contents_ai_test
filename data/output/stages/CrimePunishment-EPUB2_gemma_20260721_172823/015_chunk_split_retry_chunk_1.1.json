@@ -1,0 +1,15 @@
+{
+    "timestamp": "2026-07-21 17:29:30",
+    "stage_index": 15,
+    "stage": "chunk_split_retry",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "processed_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "chunk": "1.1",
+    "start_page": 2,
+    "end_page": 13,
+    "input_chars": 12877,
+    "subchunk_count": 3,
+    "error": "RuntimeError: Gemma vLLM server request failed: HTTP 404 Not Found. URL=http://localhost:8000/v1/chat/completions. Body: {\"error\":{\"message\":\"The model `google/gemma-4-31B-it` does not exist.\",\"type\":\"NotFoundError\",\"param\":\"model\",\"code\":404}}"
+}

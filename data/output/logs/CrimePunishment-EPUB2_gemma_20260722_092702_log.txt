@@ -1,0 +1,139 @@
+Run log saved: data/output/logs/CrimePunishment-EPUB2_gemma_20260722_092702_log.txt
+Processing started: CrimePunishment-EPUB2.pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 526 pages, 1127869 chars, mode=text, selected_pages=526
+  Parsed PDF text saved: data/output/parsed_pdfs/CrimePunishment-EPUB2_gemma_20260722_092702_parsed_pdf.txt
+  Gemma text chunk processing started: 40 chunks
+  Gemma chunk 1/40 request: pages 2-20
+  Gemma input chunk 1 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_1_pages_2-20.json
+  Gemma chunk 1 completed: 4 chapters
+  Gemma chunk 2/40 request: pages 21-31
+  Gemma input chunk 2 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_2_pages_21-31.json
+  Gemma chunk 2 completed: 0 chapters
+  Gemma chunk 3/40 request: pages 32-44
+  Gemma input chunk 3 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_3_pages_32-44.json
+  Gemma chunk 3 completed: 1 chapters
+  Gemma chunk 4/40 request: pages 45-57
+  Gemma input chunk 4 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_4_pages_45-57.json
+  Gemma chunk 4 completed: 2 chapters
+  Gemma chunk 5/40 request: pages 58-70
+  Gemma input chunk 5 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_5_pages_58-70.json
+  Gemma chunk 5 completed: 1 chapters
+  Gemma chunk 6/40 request: pages 71-83
+  Gemma input chunk 6 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_6_pages_71-83.json
+  Gemma chunk 6 completed: 1 chapters
+  Gemma chunk 7/40 request: pages 84-97
+  Gemma input chunk 7 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_7_pages_84-97.json
+  Gemma chunk 7 completed: 3 chapters
+  Gemma chunk 8/40 request: pages 98-110
+  Gemma input chunk 8 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_8_pages_98-110.json
+  Gemma chunk 8 completed: 0 chapters
+  Gemma chunk 9/40 request: pages 111-123
+  Gemma input chunk 9 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_9_pages_111-123.json
+  Gemma chunk 9 completed: 1 chapters
+  Gemma chunk 10/40 request: pages 124-136
+  Gemma input chunk 10 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_10_pages_124-136.json
+  Gemma chunk 10 completed: 1 chapters
+  Gemma chunk 11/40 request: pages 137-149
+  Gemma input chunk 11 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_11_pages_137-149.json
+  Gemma chunk 11 completed: 2 chapters
+  Gemma chunk 12/40 request: pages 150-163
+  Gemma input chunk 12 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_12_pages_150-163.json
+  Gemma chunk 12 completed: 1 chapters
+  Gemma chunk 13/40 request: pages 164-177
+  Gemma input chunk 13 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_13_pages_164-177.json
+  Gemma chunk 13 completed: 0 chapters
+  Gemma chunk 14/40 request: pages 178-190
+  Gemma input chunk 14 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_14_pages_178-190.json
+  Gemma chunk 14 completed: 1 chapters
+  Gemma chunk 15/40 request: pages 191-204
+  Gemma input chunk 15 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_15_pages_191-204.json
+  Gemma chunk 15 completed: 2 chapters
+  Gemma chunk 16/40 request: pages 205-217
+  Gemma input chunk 16 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_16_pages_205-217.json
+  Gemma chunk 16 completed: 1 chapters
+  Gemma chunk 17/40 request: pages 218-231
+  Gemma input chunk 17 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_17_pages_218-231.json
+  Gemma chunk 17 completed: 1 chapters
+  Gemma chunk 18/40 request: pages 232-246
+  Gemma input chunk 18 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_18_pages_232-246.json
+  Gemma chunk 18 completed: 1 chapters
+  Gemma chunk 19/40 request: pages 247-259
+  Gemma input chunk 19 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_19_pages_247-259.json
+  Gemma chunk 19 completed: 1 chapters
+  Gemma chunk 20/40 request: pages 260-272
+  Gemma input chunk 20 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_20_pages_260-272.json
+  Gemma chunk 20 completed: 1 chapters
+  Gemma chunk 21/40 request: pages 273-287
+  Gemma input chunk 21 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_21_pages_273-287.json
+  Gemma chunk 21 completed: 2 chapters
+  Gemma chunk 22/40 request: pages 288-301
+  Gemma input chunk 22 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_22_pages_288-301.json
+  Gemma chunk 22 completed: 1 chapters
+  Gemma chunk 23/40 request: pages 302-315
+  Gemma input chunk 23 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_23_pages_302-315.json
+  Gemma chunk 23 completed: 2 chapters
+  Gemma chunk 24/40 request: pages 316-328
+  Gemma input chunk 24 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_24_pages_316-328.json
+  Gemma chunk 24 completed: 1 chapters
+  Gemma chunk 25/40 request: pages 329-340
+  Gemma input chunk 25 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_25_pages_329-340.json
+  Gemma chunk 25 completed: 0 chapters
+  Gemma chunk 26/40 request: pages 341-355
+  Gemma input chunk 26 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_26_pages_341-355.json
+  Gemma chunk 26 completed: 3 chapters
+  Gemma chunk 27/40 request: pages 356-367
+  Gemma input chunk 27 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_27_pages_356-367.json
+  Gemma chunk 27 completed: 1 chapters
+  Gemma chunk 28/40 request: pages 368-379
+  Gemma input chunk 28 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_28_pages_368-379.json
+  Gemma chunk 28 completed: 1 chapters
+  Gemma chunk 29/40 request: pages 380-392
+  Gemma input chunk 29 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_29_pages_380-392.json
+  Gemma chunk 29 completed: 0 chapters
+  Gemma chunk 30/40 request: pages 393-405
+  Gemma input chunk 30 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_30_pages_393-405.json
+  Gemma chunk 30 completed: 1 chapters
+  Gemma chunk 31/40 request: pages 406-418
+  Gemma input chunk 31 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_31_pages_406-418.json
+  Gemma chunk 31 completed: 1 chapters
+  Gemma chunk 32/40 request: pages 419-433
+  Gemma input chunk 32 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_32_pages_419-433.json
+  Gemma chunk 32 completed: 5 chapters
+  Gemma chunk 33/40 request: pages 434-445
+  Gemma input chunk 33 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_33_pages_434-445.json
+  Gemma chunk 33 completed: 0 chapters
+  Gemma chunk 34/40 request: pages 446-458
+  Gemma input chunk 34 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_34_pages_446-458.json
+  Gemma chunk 34 completed: 4 chapters
+  Gemma chunk 35/40 request: pages 459-470
+  Gemma input chunk 35 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_35_pages_459-470.json
+  Gemma chunk 35 completed: 1 chapters
+  Gemma chunk 36/40 request: pages 471-483
+  Gemma input chunk 36 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_36_pages_471-483.json
+  Gemma chunk 36 completed: 1 chapters
+  Gemma chunk 37/40 request: pages 484-496
+  Gemma input chunk 37 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_37_pages_484-496.json
+  Gemma chunk 37 completed: 1 chapters
+  Gemma chunk 38/40 request: pages 497-509
+  Gemma input chunk 38 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_38_pages_497-509.json
+  Gemma chunk 38 completed: 1 chapters
+  Gemma chunk 39/40 request: pages 510-522
+  Gemma input chunk 39 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_39_pages_510-522.json
+  Gemma chunk 39 completed: 3 chapters
+  Gemma chunk 40/40 request: pages 523-527
+  Gemma input chunk 40 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_40_pages_523-527.json
+  Gemma chunk 40 completed: 1 chapters
+  Gemma chunked TOC local merge started
+  Gemma chunked TOC local merge completed
+  Gemma level review(final merged TOC) started
+  Gemma level review(final merged TOC) completed: 42 chapters / level changes 26
+Completed: data/output/CrimePunishment-EPUB2_gemma_20260722_092832_toc.json
+  model: google/gemma-4-31B-it
+  elapsed: 1m 29.7s (89.694s)
+  title: CrimePunishment-EPUB2
+  chapters: 42
+Processing result: success 1 / failed 0
+Run log saved: data/output/logs/CrimePunishment-EPUB2_gemma_20260722_092702_log.txt

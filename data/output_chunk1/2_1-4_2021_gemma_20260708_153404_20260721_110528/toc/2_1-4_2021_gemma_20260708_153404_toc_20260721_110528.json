@@ -1,0 +1,4088 @@
+{
+    "title": "2_1-4_2021",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "역학의 기본원리",
+            "page": 3,
+            "level_reason": "Matched layout rule for level 1 (S=31.0, R=3.27, X=191, Y=126).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 31.0,
+                "r": 3.27,
+                "x": 191.0,
+                "y": 126.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "역학의 기본원리"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "1. 역학의 정의와 발전과정",
+            "page": 3,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.9, start_shape '#.').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 362.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1. 역학의 정의와 발전과정"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 역학의 정의와 특징",
+            "page": 3,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 535.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.1 역학의 정의와 특징"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 역학과 임상의학간의 관계",
+            "page": 4,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 274.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.2 역학과 임상의학간의 관계"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 역학 발전의 역사적 배경",
+            "page": 5,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 229.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.3 역학 발전의 역사적 배경"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 고대-중세: 역학 개념 성립 이전",
+            "page": 5,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 270.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 고대-중세: 역학 개념 성립 이전"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 근대-현대: 역학방법론의 논리적 배경",
+            "page": 6,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 131.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 근대-현대: 역학방법론의 논리적 배경"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 역학의 기반 개념과 감염병 역학 방법론 정립",
+            "page": 6,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 319.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 역학의 기반 개념과 감염병 역학 방법론 정립"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 역학의 방법론에 대한 학문적 기반 확립",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 348.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 역학의 방법론에 대한 학문적 기반 확립"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 역학의 활용과 영역",
+            "page": 8,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 335.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.4 역학의 활용과 영역"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "원인의 종류에 따른 분야",
+            "page": 8,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, R=1.05, start_shape 'A').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 656.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "원인의 종류에 따른 분야"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "건강 결과의 종류에 따른 분야",
+            "page": 9,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, R=1.05, start_shape 'A').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 131.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "건강 결과의 종류에 따른 분야"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "연구가 시행되는 장소의 특성에 따른 분류",
+            "page": 9,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, R=1.05, start_shape 'A').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 255.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "연구가 시행되는 장소의 특성에 따른 분류"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "연구방법에 따른 분류",
+            "page": 9,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, R=1.05, start_shape 'A').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 349.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "연구방법에 따른 분류"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "2. 질병발생 모형과 원인적 연관성",
+            "page": 11,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.9, start_shape '#.').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 104.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2. 질병발생 모형과 원인적 연관성"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 질병발생의 다요인설",
+            "page": 11,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 430.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.1 질병발생의 다요인설"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 병인",
+            "page": 11,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 568.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 병인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 숙주요인 또는 인체 내부요인",
+            "page": 11,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 679.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 숙주요인 또는 인체 내부요인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 유전적 요인",
+            "page": 11,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 713.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 유전적 요인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 과거 노출에 의한 숙주요인의 변화",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 과거 노출에 의한 숙주요인의 변화"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 기타",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 164.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 기타"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 환경요인",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 212.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 환경요인"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 생태학적 모형과 질병관리",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 317.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.2 생태학적 모형과 질병관리"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 역학적 삼각형",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 485.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 역학적 삼각형"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 거미줄 모형",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 거미줄 모형"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 수레바퀴 모형",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 197.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 수레바퀴 모형"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 원인적 연관성",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 527.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.3 원인적 연관성"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 과학적 추론의 철학적 배경",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 711.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 과학적 추론의 철학적 배경"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 인과관계에 관한 로스만의 원인모형",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 404.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 인과관계에 관한 로스만의 원인모형"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 충분원인과 필요원인",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 501.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 충분원인과 필요원인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 원인의 강도",
+            "page": 15,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 267.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 원인의 강도"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 기여분율의 합",
+            "page": 15,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 376.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 기여분율의 합"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 원인간의 상호작용",
+            "page": 15,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 546.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 원인간의 상호작용"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 유도기간",
+            "page": 15,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 686.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(5) 유도기간"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 역학에서의 인과관계",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 176.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 역학에서의 인과관계"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 요인에 대한 노출과 질병발생과의 시간적 선후관계",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 761.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 요인에 대한 노출과 질병발생과의 시간적 선후관계"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 연관성의 강도",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 176.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 연관성의 강도"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 연관성의 일관성",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 270.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 연관성의 일관성"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 연관성의 특이성",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 364.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 연관성의 특이성"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 양-반응관계",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 458.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(5) 양-반응관계"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(6) 생물학적 설명 가능성",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 552.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(6) 생물학적 설명 가능성"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(7) 기존 지식과 일치",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 646.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(7) 기존 지식과 일치"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(8) 실험적 입증",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 740.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(8) 실험적 입증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(9) 기존의 다른 인과관계와의 유사성",
+            "page": 18,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(9) 기존의 다른 인과관계와의 유사성"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "역학연구의 자료",
+            "page": 20,
+            "level_reason": "Matched layout rule for level 1 (S=31.0, R=3.27, X=191, Y=126).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 31.0,
+                "r": 3.27,
+                "x": 191.0,
+                "y": 126.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "역학연구의 자료"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "1. 일차 자료의 수집 방법과 활용",
+            "page": 20,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.9, start_shape '#.').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 483.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1. 일차 자료의 수집 방법과 활용"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 일차 자료의 정의와 특성",
+            "page": 20,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 627.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.1 일차 자료의 정의와 특성"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 일차 자료의 정의",
+            "page": 20,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 668.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 일차 자료의 정의"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 일차 자료를 수집하는 방법",
+            "page": 20,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 750.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 일차 자료를 수집하는 방법"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 의사소통 또는 관찰에 따른 분류",
+            "page": 21,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 115.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 의사소통 또는 관찰에 따른 분류"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 설문지 기록자에 따른 분류",
+            "page": 21,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 194.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 설문지 기록자에 따른 분류"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 표본조사의 정의와 특성, 장단점",
+            "page": 21,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 295.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.2 표본조사의 정의와 특성, 장단점"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 표본조사의 정의와 특성",
+            "page": 21,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 337.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 표본조사의 정의와 특성"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 표본조사의 장단점",
+            "page": 21,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 47,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 752.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 표본조사의 장단점"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 표본추출법",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 153.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.3 표본추출법"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 확률표본추출",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 230.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 확률표본추출"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 단순무작위표본추출(simple random sampling)",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 312.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 단순무작위표본추출(simple random sampling)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 층화무작위표본추출(stratified random sampling)",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 421.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 층화무작위표본추출(stratified random sampling)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 계통 표본추출(systematic sampling)",
+            "page": 23,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 642.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 계통 표본추출(systematic sampling)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 집락표본추출(cluster sampling)",
+            "page": 24,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 280.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 집락표본추출(cluster sampling)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 비확률표본추출",
+            "page": 24,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 679.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 비확률표본추출"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.4 표본조사의 종류와 방법",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 92.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.4 표본조사의 종류와 방법"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 응답자가 직접 기록하는 형태",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 134.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 응답자가 직접 기록하는 형태"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 자기기입식 설문조사(self-administered questionnaire survey)",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 168.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 자기기입식 설문조사(self-administered questionnaire survey)"
+            }
+        },
+        {
+            "level": 6,
+            "chapter": "① 개별 배포 조사(personal self-administered questionnaire survey)",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 6 (S=9.5, R=1.0, start_shape '#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 75.0,
+                "y": 199.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1 개별 배포 조사(personal self-administered questionnaire survey)"
+            }
+        },
+        {
+            "level": 6,
+            "chapter": "② 집단 조사(group survey)",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 6 (S=9.5, R=1.0, start_shape '#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 75.0,
+                "y": 306.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2 집단 조사(group survey)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 우편 조사(mail survey)",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 457.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 우편 조사(mail survey)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 인터넷 조사(internet survey, on-line survey)",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 566.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 인터넷 조사(internet survey, on-line survey)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 설문 조사자가 대신 기록하는 형태",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 660.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 설문 조사자가 대신 기록하는 형태"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 면접조사(interview survey)",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 695.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 면접조사(interview survey)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 전화조사(telephone survey)",
+            "page": 27,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 전화조사(telephone survey)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 조사 장소에 따른 형태",
+            "page": 27,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 179.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 조사 장소에 따른 형태"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "2. 이차 자료의 종류와 활용",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.9, start_shape '#.').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 225.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2. 이차 자료의 종류와 활용"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 이차 자료의 정의와 특성",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 367.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.1 이차 자료의 정의와 특성"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 인구자료",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 512.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.2 인구자료"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.3 사망자료",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 2.3.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 153.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.3 사망자료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 사망통계 자료원",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 276.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 사망통계 자료원"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 사망자료의 장단점",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 419.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 사망자료의 장단점"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 사망자료의 활용",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 546.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 사망자료의 활용"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 사망신고자료가 부정확한 이유",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 4).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 658.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 사망신고자료가 부정확한 이유"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.4 상병자료",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 2.4.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 153.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.4 상병자료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 건강보험자료",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 291.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 건강보험자료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 직장자료",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 479.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 직장자료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 병원자료",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 607.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 병원자료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 신고자료",
+            "page": 31,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 4).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 신고자료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "5) 등록자료",
+            "page": 31,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 5).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 258.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5) 등록자료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "6) 건강조사자료",
+            "page": 31,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 6).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 385.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "6) 건강조사자료"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 국민건강영양조사",
+            "page": 31,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 452.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 국민건강영양조사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 청소년건강행태조사",
+            "page": 32,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 251.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 청소년건강행태조사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 지역사회건강조사",
+            "page": 32,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 421.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 지역사회건강조사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 구강건강실태조사",
+            "page": 32,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (4).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 621.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 구강건강실태조사"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "3. 공중보건감시",
+            "page": 34,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90) and numbering 3.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 104.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3. 공중보건감시"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 공중보건감시의 정의와 활용",
+            "page": 34,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 3.1.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 340.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.1 공중보건감시의 정의와 활용"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 감시체계와 구조",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 3.2.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 92.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.2 감시체계와 구조"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.3 수동감시체계와 능동감시체계",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 3.3.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 92.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.3 수동감시체계와 능동감시체계"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 수동감시체계",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 200.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 수동감시체계"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 능동감시체계",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 312.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 능동감시체계"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.4 감시체계에 이용되는 자료원",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 3.4.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 508.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.4 감시체계에 이용되는 자료원"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "4. 질병과 사망원인의 분류와 사망진단서",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90) and numbering 4.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 333.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4. 질병과 사망원인의 분류와 사망진단서"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 국제질병분류체계",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 4.1.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 491.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.1 국제질병분류체계"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 국제질병분류",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 532.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 국제질병분류"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 국제기능장애건강분류체계",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 4.2.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 697.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.2 국제기능장애건강분류체계"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.3 사망신고제도",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 4.3.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 183.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.3 사망신고제도"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.4 사망진단서(시체검안서) 작성법",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 4.4.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 374.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.4 사망진단서(시체검안서) 작성법"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 제목",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 588.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 제목"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 사망자 확인",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 670.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 사망자 확인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 발병일시와 사망일시",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 38,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 737.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 발병일시와 사망일시"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 사망장소",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 4).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 267.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 사망장소"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "5) 사망의 원인",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 5).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 349.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5) 사망의 원인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "6) 사망의 종류 판단",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 6).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 43,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 765.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "6) 사망의 종류 판단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "7) 외인사의 추가사항",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 7).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "7) 외인사의 추가사항"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "8) 사망진단서 작성 시 주의사항",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 8).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 152.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "8) 사망진단서 작성 시 주의사항"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "제3장 질병 및 사망, 건강수준의 측정",
+            "page": 45,
+            "level_reason": "Matched layout rule for level 1 (s=31.0, r=3.27) and numbering 제3장.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 31.0,
+                "r": 3.27,
+                "x": 91.0,
+                "y": 126.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "질병 및 사망, 건강수준의 측정"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "1. 보건지표",
+            "page": 45,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90) and numbering 1.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 368.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1. 보건지표"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 지표의 개념",
+            "page": 45,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 1.1.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 527.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.1 지표의 개념"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 지표 산출 방법",
+            "page": 45,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 1.2.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 718.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.2 지표 산출 방법"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 비",
+            "page": 46,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 142.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 비"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 분율",
+            "page": 46,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 239.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 분율"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 율",
+            "page": 46,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 336.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 율"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.3 율의 표준화",
+            "page": 46,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 1.3.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 501.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.3 율의 표준화"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 율의 표준화 필요성",
+            "page": 46,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 609.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 율의 표준화 필요성"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 표준화 방법",
+            "page": 47,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 115.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 표준화 방법"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 직접표준화법",
+            "page": 47,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 228.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 직접표준화법"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 간접표준화법",
+            "page": 48,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 286.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 간접표준화법"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 표준인구",
+            "page": 49,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 463.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 표준인구"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "2. 이환지표",
+            "page": 50,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90) and numbering 2.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 493.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2. 이환지표"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 발생률과 유병률",
+            "page": 50,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 2.1.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 727.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.1 발생률과 유병률"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 발생률",
+            "page": 50,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 30,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 769.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 발생률"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 누적발생률",
+            "page": 51,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (1).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 176.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 누적발생률"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 평균발생률(발생밀도)",
+            "page": 51,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering (2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 386.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 평균발생률(발생밀도)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 유병률",
+            "page": 51,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 2).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 46,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 732.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 유병률"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 발생률과 유병률의 상호관계와 용도",
+            "page": 52,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering 3).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 389.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 발생률과 유병률의 상호관계와 용도"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 발병률과 이차발병률",
+            "page": 53,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering 2.2.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 41,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 746.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.2 발병률과 이차발병률"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "3. 사망 및 출생지표",
+            "page": 54,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90) and numbering 3.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 686.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3. 사망 및 출생지표"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 사망지표",
+            "page": 55,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering '3.1'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 227.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.1 사망지표"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 보통사망률(crude death rate)",
+            "page": 55,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 320.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 보통사망률(crude death rate)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 특수사망률(specific death rate)",
+            "page": 55,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 487.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 특수사망률(specific death rate)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 연령별 (특수)사망률(age-specific death rate)",
+            "page": 55,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering '(1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 554.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 연령별 (특수)사망률(age-specific death rate)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 성별 (특수)사망률(sex-specific death rate)",
+            "page": 55,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering '(2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 657.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 성별 (특수)사망률(sex-specific death rate)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 사인별 (특수)사망률(cause-specific death rate)",
+            "page": 56,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering '(3)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 사인별 (특수)사망률(cause-specific death rate)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 비례사망, 비례사망비 및 비례사망지수",
+            "page": 56,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '3)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 380.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 비례사망, 비례사망비 및 비례사망지수"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 비례사망(proportional mortality)",
+            "page": 56,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering '(1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 416.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 비례사망(proportional mortality)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 비례사망비(proportional mortality ratio)",
+            "page": 57,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering '(2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 115.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 비례사망비(proportional mortality ratio)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 비례사망지수(proportional mortality indicator, PMI)",
+            "page": 57,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering '(3)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 19,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 355.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 비례사망지수(proportional mortality indicator, PMI)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 치명률(case fatality rate, CFR)",
+            "page": 57,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '4)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 534.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 치명률(case fatality rate, CFR)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "5) 특수 집단의 사망률",
+            "page": 57,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '5)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 45,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 717.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5) 특수 집단의 사망률"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 영아사망률(infant mortality rate)",
+            "page": 57,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering '(1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 48,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 784.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 영아사망률(infant mortality rate)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 신생아사망률(neonatal mortality rate)",
+            "page": 58,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering '(2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 307.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 신생아사망률(neonatal mortality rate)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 알파지표(index)",
+            "page": 58,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering '(3)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 501.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 알파지표(index)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 주산기사망률(perinatal mortality rate)",
+            "page": 58,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering '(4)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 32,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 620.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 주산기사망률(perinatal mortality rate)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 모성사망비(maternal mortality ratio)",
+            "page": 59,
+            "level_reason": "Matched layout rule for level 5 (s=10.0, r=1.05) and numbering '(5)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(5) 모성사망비(maternal mortality ratio)"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 인구재생산지표",
+            "page": 59,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering '3.2'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 241.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.2 인구재생산지표"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 보통출생률(crude birth rate)",
+            "page": 59,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 303.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 보통출생률(crude birth rate)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 일반출산율(general fertility rate)",
+            "page": 59,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 471.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 일반출산율(general fertility rate)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 연령별 출산율(age-specific fertility rate)",
+            "page": 59,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '3)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 655.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 연령별 출산율(age-specific fertility rate)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 합계출산율(total fertility rate)",
+            "page": 60,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '4)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 합계출산율(total fertility rate)"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "4. 주관적 건강지표",
+            "page": 60,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90) and numbering '4.'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 617.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4. 주관적 건강지표"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 삶의 질 측정 도구",
+            "page": 61,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering '4.1'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 153.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.1 삶의 질 측정 도구"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) EQ-5D",
+            "page": 61,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 8.5,
+                "r": 0.9,
+                "x": 65.0,
+                "y": 261.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) EQ-5D life, HRQOL)이라고 함"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) SF-36과 SF-12",
+            "page": 61,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 449.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) SF-36과 SF-12"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) WHOQOL-BREF",
+            "page": 61,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '3)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 39,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 683.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) WHOQOL-BREF"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) PWI-SF",
+            "page": 62,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '4)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 161.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) PWI-SF"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 정신질환과 인지능력 측정 도구",
+            "page": 62,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering '4.2'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 372.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.2 정신질환과 인지능력 측정 도구"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) MMPI",
+            "page": 62,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 449.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) MMPI"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) CES-D-K",
+            "page": 62,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 607.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) CES-D-K"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) MMSE",
+            "page": 63,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '3)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) MMSE"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) GDS",
+            "page": 63,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '4)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 258.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) GDS"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.3 일상생활 능력 조사도구",
+            "page": 63,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering '4.3'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 453.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.3 일상생활 능력 조사도구"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) ADL",
+            "page": 63,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 33,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 592.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) ADL"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) IADL",
+            "page": 63,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 38,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 689.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) IADL"
+            }
+        },
+        {
+            "level": 1,
+            "chapter": "제4장 한국인의 건강수준",
+            "page": 66,
+            "level_reason": "Matched layout rule for level 1 (s=31.0, r=3.27) and numbering '제4장'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 31.0,
+                "r": 3.27,
+                "x": 176.0,
+                "y": 126.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "한국인의 건강수준"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "1. 역학적 변천설과 한국의 역학적 변천",
+            "page": 66,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90) and numbering '1.'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 423.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1. 역학적 변천설과 한국의 역학적 변천"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.1 역학적 변천설",
+            "page": 66,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering '1.1'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 594.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.1 역학적 변천설"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1.2 한국의 역학적 변천",
+            "page": 67,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering '1.2'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 708.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1.2 한국의 역학적 변천"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "2. 인구구조 변화와 그에 따른 보건문제",
+            "page": 68,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90) and numbering '2.'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 289.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2. 인구구조 변화와 그에 따른 보건문제"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.1 인구구조의 변화",
+            "page": 68,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering '2.1'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 462.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.1 인구구조의 변화"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 인구성장률 감소와 성비변화",
+            "page": 68,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 555.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 인구성장률 감소와 성비변화"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 사망률 감소, 기대여명의 증가",
+            "page": 69,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.41) and numbering '2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 12.0,
+                "r": 1.41,
+                "x": 65.0,
+                "y": 474.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 사망률 감소, 기대여명의 증가"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 고령화와 인구 소멸",
+            "page": 70,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.41) and numbering '3)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 12.0,
+                "r": 1.41,
+                "x": 173.0,
+                "y": 201.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 고령화와 인구 소멸"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 저출산 등 출산 양상 변화",
+            "page": 70,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.41) and numbering '4)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 38,
+                "s": 12.0,
+                "r": 1.41,
+                "x": 173.0,
+                "y": 632.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4) 저출산 등 출산 양상 변화"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "5) 다문화",
+            "page": 71,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.41) and numbering '5)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 18,
+                "s": 12.0,
+                "r": 1.41,
+                "x": 65.0,
+                "y": 334.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5) 다문화"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2.2 보건문제와 대책",
+            "page": 72,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering '2.2'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 92.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2.2 보건문제와 대책"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 고령화",
+            "page": 72,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 200.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 고령화"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 저출산",
+            "page": 72,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 17,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 373.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 저출산"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "3) 다문화가정",
+            "page": 72,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '3)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 34,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 652.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3) 다문화가정"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "3. 건강수준의 시간변화",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90) and numbering '3.'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 458.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3. 건강수준의 시간변화"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.1 건강수준의 장기 추이",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering '3.1'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 615.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.1 건강수준의 장기 추이"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 질병양상과 사망수준의 추이 경향",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 657.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 질병양상과 사망수준의 추이 경향"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 보건문제와 대책",
+            "page": 76,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 27,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 632.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 보건문제와 대책"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3.2 계절에 따른 건강수준 변화",
+            "page": 78,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering '3.2'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 538.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "3.2 계절에 따른 건강수준 변화"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 계절별 변화 양상",
+            "page": 78,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 23,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 579.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 계절별 변화 양상"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 보건문제와 대책",
+            "page": 80,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '2)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 631.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 보건문제와 대책"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "4. 공간에 따른 건강수준 차이",
+            "page": 82,
+            "level_reason": "Matched layout rule for level 2 (s=18.0, r=1.90) and numbering '4.'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 185.0,
+                "y": 288.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4. 공간에 따른 건강수준 차이"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.1 국가 간 건강수준의 차이",
+            "page": 82,
+            "level_reason": "Matched layout rule for level 3 (s=12.5, r=1.32) and numbering '4.1'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 461.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.1 국가 간 건강수준의 차이"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 한국과 OECD 국가 간 건강수준 비교",
+            "page": 82,
+            "level_reason": "Matched layout rule for level 4 (s=12.0, r=1.27) and numbering '1)'.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 502.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 한국과 OECD 국가 간 건강수준 비교"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 보건문제와 대책",
+            "page": 83,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 252.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 보건문제와 대책"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.2 건강수준의 지역별 격차",
+            "page": 83,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 34,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 614.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.2 건강수준의 지역별 격차"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 건강수준의 지역별 비교의 의의",
+            "page": 84,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 85.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 건강수준의 지역별 비교의 의의"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 지역에 따른 건강수준 전망과 대책",
+            "page": 84,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 303.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 지역에 따른 건강수준 전망과 대책"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4.3 건강수준의 도농간 격차",
+            "page": 84,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 35,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 683.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "4.3 건강수준의 도농간 격차"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 건강수준과 관련 요인의 도농간 격차",
+            "page": 84,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 724.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 건강수준과 관련 요인의 도농간 격차"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 건강수준 및 관련 요인의 도농간 격차",
+            "page": 84,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 759.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 건강수준 및 관련 요인의 도농간 격차"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 보건문제와 대책",
+            "page": 88,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 181.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 보건문제와 대책"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "5. 집단별 건강수준 차이",
+            "page": 89,
+            "level_reason": "Matched layout rule for level 2 (S=18.0, R=1.9, start_shape '#.')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 18.0,
+                "r": 1.9,
+                "x": 77.0,
+                "y": 288.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5. 집단별 건강수준 차이"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "5.1 성별 건강수준",
+            "page": 89,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 478.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5.1 성별 건강수준"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 성별 건강수준과 요인 분포",
+            "page": 89,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 519.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 성별 건강수준과 요인 분포"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 성별에 따른 사망과 질병 양상 및 관련 요인의 분포",
+            "page": 89,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 16,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 554.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 성별에 따른 사망과 질병 양상 및 관련 요인의 분포"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 보건문제와 대책",
+            "page": 91,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 49,
+                "s": 12.0,
+                "r": 1.41,
+                "x": 65.0,
+                "y": 722.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 보건문제와 대책"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "5.2 생애주기별 건강수준",
+            "page": 92,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 24,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 181.0,
+                "y": 568.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5.2 생애주기별 건강수준"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 생애주기별 개념과 건강수준의 특징",
+            "page": 92,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 25,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 608.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 생애주기별 개념과 건강수준의 특징"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 건강질병에 대한 생애주기별 접근모형",
+            "page": 92,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 26,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 641.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 건강질병에 대한 생애주기별 접근모형"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 생애주기별 접근모형의 대두 배경과 필요성",
+            "page": 93,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 235.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 생애주기별 접근모형의 대두 배경과 필요성"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 생애주기별 보건문제와 대책",
+            "page": 93,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 65.0,
+                "y": 481.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 생애주기별 보건문제와 대책"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 신생아, 영아, 유아기",
+            "page": 93,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 42,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 699.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 신생아, 영아, 유아기"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 학령기 및 청소년기",
+            "page": 94,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 404.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 학령기 및 청소년기"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(3) 청년기(대학생 및 비대학생)",
+            "page": 95,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 146.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(3) 청년기(대학생 및 비대학생)"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(4) 장년기",
+            "page": 95,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 22,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 422.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(4) 장년기"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(5) 노년기",
+            "page": 95,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 42,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 743.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(5) 노년기"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "5.3 특정 집단의 건강수준",
+            "page": 97,
+            "level_reason": "Matched layout rule for level 3 (S=12.5, R=1.32, start_shape '#.#')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 12.5,
+                "r": 1.32,
+                "x": 73.0,
+                "y": 92.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "5.3 특정 집단의 건강수준"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "1) 장애인 건강수준과 그 대책",
+            "page": 97,
+            "level_reason": "Matched layout rule for level 4 (S=11.0, R=1.16, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 11.0,
+                "r": 1.16,
+                "x": 65.0,
+                "y": 134.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "1) 장애인 건강수준과 그 대책"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 장애 역학",
+            "page": 97,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 167.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 장애 역학"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 장애인의 보건문제와 대책",
+            "page": 97,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 640.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 장애인의 보건문제와 대책"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "2) 저소득계층의 건강수준과 그 대책",
+            "page": 98,
+            "level_reason": "Matched layout rule for level 4 (S=12.0, R=1.27, start_shape '#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 36,
+                "s": 12.0,
+                "r": 1.27,
+                "x": 173.0,
+                "y": 666.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "2) 저소득계층의 건강수준과 그 대책"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(1) 저소득계층의 개념 및 건강수준 격차",
+            "page": 98,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 37,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 183.0,
+                "y": 701.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(1) 저소득계층의 개념 및 건강수준 격차"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "(2) 저소득계층 건강문제의 해결방안",
+            "page": 99,
+            "level_reason": "Matched layout rule for level 5 (S=10.0, R=1.05, start_shape '(#)')",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 29,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 75.0,
+                "y": 464.0,
+                "b": 0,
+                "i": 0,
+                "f": "f1",
+                "source_text": "(2) 저소득계층 건강문제의 해결방안"
+            }
+        }
+    ],
+    "_meta": {
+        "source_input_directory": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/chunk1",
+        "source_chunk": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/input_chunks/2_1-4_2021_gemma_20260708_153404/chunk_1_pages_1-41.json",
+        "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/chunk1/2편1-4장_2021_openai_gpt-5.5_20260710_134715_toc_chunk1.json",
+        "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output/parsed_pdfs/2_1-4_2021_gemma_20260708_153404_parsed_pdf.txt",
+        "provider": "gemma_vllm",
+        "model": "gemma4:31b",
+        "generated_at": "2026-07-21T11:08:22+09:00",
+        "generation_started_at": "2026-07-21T11:05:28+09:00",
+        "generation_completed_at": "2026-07-21T11:08:22+09:00",
+        "elapsed_seconds": 173.39,
+        "elapsed": "2m 53.4s",
+        "generation_mode": "parsed_chunks",
+        "parsed_chunk_count": 4,
+        "parsed_chunk_chars": 80000,
+        "max_chunk_split_depth": 3,
+        "boundary_context_pages": 2,
+        "chapter_sort": "page_then_parsed_source_order",
+        "matched_layout_entries": 225,
+        "unmatched_layout_entries": 0,
+        "layout_metadata_fields": [
+            "source_order",
+            "s",
+            "r",
+            "x",
+            "y",
+            "b",
+            "i",
+            "f",
+            "source_text"
+        ],
+        "output_directory": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/output_chunk1/2_1-4_2021_gemma_20260708_153404_20260721_110528"
+    }
+}

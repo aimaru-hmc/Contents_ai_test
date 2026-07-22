@@ -1,0 +1,40 @@
+{
+    "timestamp": "2026-07-22 09:28:15",
+    "stage_index": 80,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "processed_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "chunk": "39",
+    "total_chunks": 40,
+    "start_page": 510,
+    "end_page": 522,
+    "toc": {
+        "title": "CrimePunishment-EPUB2",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "Epilogue",
+                "page": 512,
+                "level_reason": "Major section title marking the final part of the book.",
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "I",
+                "page": 512,
+                "level_reason": "Numbered subsection within the Epilogue.",
+                "_source_order": 1
+            },
+            {
+                "level": 2,
+                "chapter": "II",
+                "page": 519,
+                "level_reason": "Numbered subsection within the Epilogue.",
+                "_source_order": 2
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"CrimePunishment-EPUB2\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"Epilogue\",\n      \"page\": 512,\n      \"level_reason\": \"Major section title marking the final part of the book.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"I\",\n      \"page\": 512,\n      \"level_reason\": \"Numbered subsection within the Epilogue.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"II\",\n      \"page\": 519,\n      \"level_reason\": \"Numbered subsection within the Epilogue.\"\n    }\n  ]\n}\n```"
+}

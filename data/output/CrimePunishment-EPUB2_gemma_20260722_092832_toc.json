@@ -1,0 +1,544 @@
+{
+    "title": "CrimePunishment-EPUB2",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "Translator’s Preface",
+            "page": 7,
+            "level_reason": "Major introductory section appearing before the main narrative.",
+            "_source_order": 0
+        },
+        {
+            "level": 1,
+            "chapter": "Part I",
+            "page": 10,
+            "level_reason": "Top-level structural division of the novel.",
+            "_source_order": 1
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter One",
+            "page": 11,
+            "level_reason": "Numbered chapter within Part I.",
+            "_source_order": 2
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Two",
+            "page": 19,
+            "level_reason": "Numbered chapter within Part I.",
+            "_source_order": 3
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Three",
+            "page": 36,
+            "level_reason": "Numbered chapter within Part I.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Four",
+            "page": 50,
+            "level_reason": "Numbered chapter within Part I.",
+            "_source_order": 0
+        },
+        {
+            "level": 3,
+            "chapter": "HIS MOTHER S LETTER",
+            "page": 50,
+            "level_reason": "Section title appearing immediately under the chapter heading.",
+            "_source_order": 1
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Five",
+            "page": 62,
+            "level_reason": "Numbered chapter within Part I.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Six",
+            "page": 72,
+            "level_reason": "Numbered chapter within Part I.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Seven",
+            "page": 84,
+            "level_reason": "Numbered chapter within Part I.",
+            "_source_order": 0
+        },
+        {
+            "level": 1,
+            "chapter": "Part II",
+            "page": 96,
+            "level_reason": "Top-level division of the book.",
+            "_source_order": 1
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter One",
+            "page": 97,
+            "level_reason": "Chapter subsection under Part II.",
+            "_source_order": 2
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Two",
+            "page": 114,
+            "level_reason": "Numbered chapter within Part II.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Three",
+            "page": 124,
+            "level_reason": "Numbered chapter within Part II.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Four",
+            "page": 137,
+            "level_reason": "Numbered chapter within Part II.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Five",
+            "page": 147,
+            "level_reason": "Numbered chapter within Part II.",
+            "_source_order": 1
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Six",
+            "page": 158,
+            "level_reason": "Numbered chapter within Part II.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Seven",
+            "page": 178,
+            "level_reason": "Numbered chapter within Part II.",
+            "_source_order": 0
+        },
+        {
+            "level": 1,
+            "chapter": "Part III",
+            "page": 196,
+            "level_reason": "Major part division indicated by centered text and distinct page.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter One",
+            "page": 197,
+            "level_reason": "Chapter division within Part III.",
+            "_source_order": 1
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Two",
+            "page": 210,
+            "level_reason": "Numbered chapter within Part III.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Three",
+            "page": 222,
+            "level_reason": "Numbered chapter within Part III.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Four",
+            "page": 235,
+            "level_reason": "Numbered chapter within Part III.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Five",
+            "page": 247,
+            "level_reason": "Numbered chapter within Part III.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Six",
+            "page": 265,
+            "level_reason": "Numbered chapter within Part III.",
+            "_source_order": 0
+        },
+        {
+            "level": 1,
+            "chapter": "Part IV",
+            "page": 276,
+            "level_reason": "Major part division of the novel.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter One",
+            "page": 277,
+            "level_reason": "First chapter within Part IV.",
+            "_source_order": 1
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Two",
+            "page": 290,
+            "level_reason": "Numbered chapter within Part IV.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Three",
+            "page": 302,
+            "level_reason": "Numbered chapter within Part IV.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Four",
+            "page": 310,
+            "level_reason": "Numbered chapter within Part IV.",
+            "_source_order": 1
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Five",
+            "page": 326,
+            "level_reason": "Numbered chapter within Part IV.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Six",
+            "page": 343,
+            "level_reason": "Numbered chapter within Part IV.",
+            "_source_order": 0
+        },
+        {
+            "level": 1,
+            "chapter": "Part V",
+            "page": 351,
+            "level_reason": "Top-level part division of the book.",
+            "_source_order": 1
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter One",
+            "page": 352,
+            "level_reason": "Chapter subsection within Part V.",
+            "_source_order": 2
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Two",
+            "page": 367,
+            "level_reason": "Numbered chapter within Part V.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Three",
+            "page": 379,
+            "level_reason": "Numbered chapter within Part V.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Four",
+            "page": 393,
+            "level_reason": "Numbered chapter within Part V.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Five",
+            "page": 409,
+            "level_reason": "Numbered chapter within Part V.",
+            "_source_order": 0
+        },
+        {
+            "level": 1,
+            "chapter": "Part VI",
+            "page": 422,
+            "level_reason": "Major part division of the novel.",
+            "_source_order": 0
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter One",
+            "page": 423,
+            "level_reason": "First chapter within Part VI.",
+            "_source_order": 1
+        },
+        {
+            "level": 3,
+            "chapter": "A STRANGE PERIOD BEGAN FOR ASKOLNIKOV",
+            "page": 423,
+            "level_reason": "Section heading/summary title within Chapter One.",
+            "_source_order": 2
+        },
+        {
+            "level": 2,
+            "chapter": "Chapter Two",
+            "page": 433,
+            "level_reason": "Second chapter within Part VI.",
+            "_source_order": 3
+        }
+    ],
+    "_meta": {
+        "source_pdf": "CrimePunishment-EPUB2.pdf",
+        "provider": "gemma",
+        "model": "google/gemma-4-31B-it",
+        "generated_timestamp": "20260722_092832",
+        "generated_at": "2026-07-22 09:28:32",
+        "generation_started_at": "2026-07-22 09:27:02",
+        "generation_completed_at": "2026-07-22 09:28:32",
+        "elapsed_seconds": 89.694,
+        "elapsed": "1m 29.7s",
+        "input_mode": "extracted_pdf_text",
+        "raw_extracted_pages": 526,
+        "raw_extracted_chars": 1127869,
+        "extracted_pages": 526,
+        "extracted_chars": 1127869,
+        "gemma_document_style_reference": true,
+        "gemma_document_style_reference_available": false,
+        "gemma_document_style_cluster_count": 0,
+        "gemma_document_style_title_like_example_count": 0,
+        "gemma_extraction_mode": "text",
+        "plain_extracted_chars": 1127869,
+        "gemma_level_verify": true,
+        "gemma_level_verify_scope": "final",
+        "parsed_pdf_file": "data/output/parsed_pdfs/CrimePunishment-EPUB2_gemma_20260722_092702_parsed_pdf.txt",
+        "stage_dir": "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702",
+        "stage_files": [
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/001_01_pdf_extracted.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/002_02_chunks_created.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/003_chunk_input_ready_chunk_1.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/004_chunk_toc_generated_chunk_1.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/005_chunk_input_ready_chunk_2.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/006_chunk_toc_generated_chunk_2.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/007_chunk_input_ready_chunk_3.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/008_chunk_toc_generated_chunk_3.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/009_chunk_input_ready_chunk_4.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/010_chunk_toc_generated_chunk_4.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/011_chunk_input_ready_chunk_5.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/012_chunk_toc_generated_chunk_5.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/013_chunk_input_ready_chunk_6.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/014_chunk_toc_generated_chunk_6.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/015_chunk_input_ready_chunk_7.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/016_chunk_toc_generated_chunk_7.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/017_chunk_input_ready_chunk_8.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/018_chunk_toc_generated_chunk_8.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/019_chunk_input_ready_chunk_9.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/020_chunk_toc_generated_chunk_9.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/021_chunk_input_ready_chunk_10.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/022_chunk_toc_generated_chunk_10.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/023_chunk_input_ready_chunk_11.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/024_chunk_toc_generated_chunk_11.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/025_chunk_input_ready_chunk_12.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/026_chunk_toc_generated_chunk_12.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/027_chunk_input_ready_chunk_13.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/028_chunk_toc_generated_chunk_13.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/029_chunk_input_ready_chunk_14.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/030_chunk_toc_generated_chunk_14.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/031_chunk_input_ready_chunk_15.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/032_chunk_toc_generated_chunk_15.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/033_chunk_input_ready_chunk_16.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/034_chunk_toc_generated_chunk_16.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/035_chunk_input_ready_chunk_17.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/036_chunk_toc_generated_chunk_17.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/037_chunk_input_ready_chunk_18.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/038_chunk_toc_generated_chunk_18.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/039_chunk_input_ready_chunk_19.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/040_chunk_toc_generated_chunk_19.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/041_chunk_input_ready_chunk_20.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/042_chunk_toc_generated_chunk_20.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/043_chunk_input_ready_chunk_21.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/044_chunk_toc_generated_chunk_21.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/045_chunk_input_ready_chunk_22.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/046_chunk_toc_generated_chunk_22.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/047_chunk_input_ready_chunk_23.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/048_chunk_toc_generated_chunk_23.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/049_chunk_input_ready_chunk_24.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/050_chunk_toc_generated_chunk_24.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/051_chunk_input_ready_chunk_25.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/052_chunk_toc_generated_chunk_25.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/053_chunk_input_ready_chunk_26.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/054_chunk_toc_generated_chunk_26.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/055_chunk_input_ready_chunk_27.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/056_chunk_toc_generated_chunk_27.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/057_chunk_input_ready_chunk_28.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/058_chunk_toc_generated_chunk_28.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/059_chunk_input_ready_chunk_29.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/060_chunk_toc_generated_chunk_29.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/061_chunk_input_ready_chunk_30.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/062_chunk_toc_generated_chunk_30.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/063_chunk_input_ready_chunk_31.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/064_chunk_toc_generated_chunk_31.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/065_chunk_input_ready_chunk_32.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/066_chunk_toc_generated_chunk_32.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/067_chunk_input_ready_chunk_33.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/068_chunk_toc_generated_chunk_33.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/069_chunk_input_ready_chunk_34.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/070_chunk_toc_generated_chunk_34.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/071_chunk_input_ready_chunk_35.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/072_chunk_toc_generated_chunk_35.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/073_chunk_input_ready_chunk_36.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/074_chunk_toc_generated_chunk_36.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/075_chunk_input_ready_chunk_37.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/076_chunk_toc_generated_chunk_37.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/077_chunk_input_ready_chunk_38.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/078_chunk_toc_generated_chunk_38.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/079_chunk_input_ready_chunk_39.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/080_chunk_toc_generated_chunk_39.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/081_chunk_input_ready_chunk_40.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/082_chunk_toc_generated_chunk_40.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/083_03_chunks_completed.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/084_04_merge_completed.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/085_05_final_level_reviewed.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/086_06_final_toc_ready.json",
+            "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/087_level_review_changes_summary.json"
+        ],
+        "chunked": true,
+        "chunk_count": 40,
+        "initial_chunk_count": 40,
+        "processed_chunk_count": 40,
+        "gemma_text_single_max_chars": 220000,
+        "gemma_text_chunk_chars": 30000,
+        "gemma_level_reference": true,
+        "gemma_chunk_level_reference": false,
+        "gemma_chunk_level_reference_source": "disabled",
+        "gemma_level_reference_source": "final_toc",
+        "input_chunk_dir": "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702",
+        "input_chunk_files": [
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_1_pages_2-20.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_2_pages_21-31.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_3_pages_32-44.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_4_pages_45-57.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_5_pages_58-70.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_6_pages_71-83.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_7_pages_84-97.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_8_pages_98-110.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_9_pages_111-123.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_10_pages_124-136.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_11_pages_137-149.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_12_pages_150-163.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_13_pages_164-177.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_14_pages_178-190.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_15_pages_191-204.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_16_pages_205-217.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_17_pages_218-231.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_18_pages_232-246.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_19_pages_247-259.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_20_pages_260-272.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_21_pages_273-287.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_22_pages_288-301.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_23_pages_302-315.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_24_pages_316-328.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_25_pages_329-340.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_26_pages_341-355.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_27_pages_356-367.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_28_pages_368-379.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_29_pages_380-392.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_30_pages_393-405.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_31_pages_406-418.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_32_pages_419-433.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_33_pages_434-445.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_34_pages_446-458.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_35_pages_459-470.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_36_pages_471-483.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_37_pages_484-496.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_38_pages_497-509.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_39_pages_510-522.json",
+            "data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260722_092702/chunk_40_pages_523-527.json"
+        ],
+        "gemma_runtime": "vllm-server",
+        "gemma_model": "google/gemma-4-31B-it",
+        "gemma_vllm_server_base_url": "http://localhost:8000/v1",
+        "gemma_vllm_server_timeout": 3600,
+        "gemma_merge_mode": "local",
+        "gemma_level_review_change_report_count": 1,
+        "gemma_level_review_change_summary_pending": false,
+        "gemma_level_review": {
+            "enabled": true,
+            "attempts": 1,
+            "success": 1,
+            "level_changes": 26
+        },
+        "style_level_correction": {
+            "enabled": false,
+            "skipped": true,
+            "level_changes": 0
+        },
+        "gemma_level_reference_levels": [
+            1,
+            2,
+            3
+        ],
+        "gemma_level_reference_examples": {
+            "1": [
+                {
+                    "title": "Translator’s Preface"
+                },
+                {
+                    "title": "Part I"
+                },
+                {
+                    "title": "Part II"
+                },
+                {
+                    "title": "Part III"
+                },
+                {
+                    "title": "Part IV"
+                }
+            ],
+            "2": [
+                {
+                    "title": "Chapter One"
+                },
+                {
+                    "title": "Chapter Two"
+                },
+                {
+                    "title": "Chapter Three"
+                },
+                {
+                    "title": "Chapter Four"
+                },
+                {
+                    "title": "Chapter Five"
+                }
+            ],
+            "3": [
+                {
+                    "title": "HIS MOTHER S LETTER"
+                },
+                {
+                    "title": "A STRANGE PERIOD BEGAN FOR ASKOLNIKOV"
+                }
+            ]
+        },
+        "gemma_level_review_change_summary": {
+            "review_count": 1,
+            "level_change_count": 26,
+            "added_count": 0,
+            "removed_count": 13,
+            "file": "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/087_level_review_changes_summary.json"
+        },
+        "gemma_level_review_change_file": "data/output/stages/CrimePunishment-EPUB2_gemma_20260722_092702/087_level_review_changes_summary.json",
+        "run_timestamp": "20260722_092702",
+        "run_log_file": "data/output/logs/CrimePunishment-EPUB2_gemma_20260722_092702_log.txt"
+    }
+}

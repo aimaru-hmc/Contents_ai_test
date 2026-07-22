@@ -1,0 +1,26 @@
+{
+    "timestamp": "2026-07-22 09:27:53",
+    "stage_index": 40,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "processed_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "chunk": "19",
+    "total_chunks": 40,
+    "start_page": 247,
+    "end_page": 259,
+    "toc": {
+        "title": "CrimePunishment-EPUB2",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "Chapter Five",
+                "page": 247,
+                "level_reason": "Major section title indicating the start of a new chapter.",
+                "_source_order": 0
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"CrimePunishment-EPUB2\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter Five\",\n      \"page\": 247,\n      \"level_reason\": \"Major section title indicating the start of a new chapter.\"\n    }\n  ]\n}\n```"
+}

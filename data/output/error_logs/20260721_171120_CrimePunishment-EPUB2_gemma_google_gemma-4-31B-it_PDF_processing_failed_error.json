@@ -1,0 +1,16 @@
+{
+    "timestamp": "2026-07-21 17:11:20",
+    "fatal": true,
+    "stage": "PDF processing failed",
+    "source_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "source_pdf_name": "CrimePunishment-EPUB2.pdf",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "error_type": "PdfminerException",
+    "error_message": "No /Root object! - Is this really a PDF?",
+    "error": "PdfminerException: No /Root object! - Is this really a PDF?",
+    "debug": {},
+    "traceback": "Traceback (most recent call last):\n  File \"/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/pdfplumber/pdf.py\", line 50, in __init__\n    self.doc = PDFDocument(PDFParser(stream), password=password or \"\")\n  File \"/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/pdfminer/pdfdocument.py\", line 744, in __init__\n    raise PDFSyntaxError(\"No /Root object! - Is this really a PDF?\")\npdfminer.pdfparser.PDFSyntaxError: No /Root object! - Is this really a PDF?\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma.py\", line 8208, in process_pdf\n    toc, raw_text, used_model = generate_toc_from_pdf(pdf_path=processing_pdf_path, args=args, user_prompt=user_prompt)\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma.py\", line 7927, in generate_toc_from_pdf\n    return generate_toc_from_pdf_gemma(pdf_path=pdf_path, args=args, prompt=prompt)\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma.py\", line 7904, in generate_toc_from_pdf_gemma\n    raise last_error\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma.py\", line 7893, in generate_toc_from_pdf_gemma\n    return generate_toc_from_pdf_gemma_text(\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma.py\", line 7360, in generate_toc_from_pdf_gemma_text\n    raw_pages, extraction_metadata = extract_gemma_pdf_pages(pdf_path, args)\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma.py\", line 2178, in extract_gemma_pdf_pages\n    return extract_pdf_layout_pages(pdf_path)\n  File \"/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/ai_gemma.py\", line 2127, in extract_pdf_layout_pages\n    with pdfplumber.open(pdf_path) as pdf:\n  File \"/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/pdfplumber/pdf.py\", line 107, in open\n    return cls(\n  File \"/home/medlearnx/miniconda3/envs/test/lib/python3.10/site-packages/pdfplumber/pdf.py\", line 52, in __init__\n    raise PdfminerException(e)\npdfplumber.utils.exceptions.PdfminerException: No /Root object! - Is this really a PDF?\n",
+    "elapsed_seconds": 0.0,
+    "elapsed": "0.0s"
+}

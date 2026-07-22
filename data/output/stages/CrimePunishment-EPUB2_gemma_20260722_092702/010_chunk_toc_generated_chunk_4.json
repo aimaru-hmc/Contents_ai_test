@@ -1,0 +1,33 @@
+{
+    "timestamp": "2026-07-22 09:27:38",
+    "stage_index": 10,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "processed_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "chunk": "4",
+    "total_chunks": 40,
+    "start_page": 45,
+    "end_page": 57,
+    "toc": {
+        "title": "CrimePunishment-EPUB2",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "Chapter Four",
+                "page": 50,
+                "level_reason": "Explicitly labeled chapter heading.",
+                "_source_order": 0
+            },
+            {
+                "level": 2,
+                "chapter": "HIS MOTHER S LETTER",
+                "page": 50,
+                "level_reason": "Section title appearing immediately under the chapter heading.",
+                "_source_order": 1
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"CrimePunishment-EPUB2\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"Chapter Four\",\n      \"page\": 50,\n      \"level_reason\": \"Explicitly labeled chapter heading.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"HIS MOTHER S LETTER\",\n      \"page\": 50,\n      \"level_reason\": \"Section title appearing immediately under the chapter heading.\"\n    }\n  ]\n}\n```"
+}

@@ -1,0 +1,24 @@
+{
+    "timestamp": "2026-07-21 17:30:42",
+    "stage_index": 1,
+    "stage": "01_pdf_extracted",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "processed_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "extraction": {
+        "gemma_extraction_mode": "text",
+        "plain_extracted_chars": 1127869
+    },
+    "raw_extracted_pages": 526,
+    "raw_extracted_chars": 1127869,
+    "extracted_pages": 526,
+    "extracted_chars": 1127869,
+    "parsed_pdf_file": "data/output/parsed_pdfs/CrimePunishment-EPUB2_gemma_20260721_173010_parsed_pdf.txt",
+    "document_style_reference": {
+        "enabled": true,
+        "available": false,
+        "reason": "No compact layout-tagged lines were found.",
+        "prompt_text": ""
+    }
+}

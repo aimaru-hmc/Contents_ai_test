@@ -1,0 +1,43 @@
+Run log saved: data/output/logs/CrimePunishment-EPUB2_gemma_20260721_172823_log.txt
+Processing started: CrimePunishment-EPUB2.pdf
+  provider: gemma
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 526 pages, 1127869 chars, mode=text, selected_pages=526
+  Parsed PDF text saved: data/output/parsed_pdfs/CrimePunishment-EPUB2_gemma_20260721_172823_parsed_pdf.txt
+  Gemma text chunk processing started: 40 chunks
+  Gemma chunk 1/40 request: pages 2-20
+  Gemma input chunk 1 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260721_172823/chunk_1_pages_2-20.json
+  Gemma chunk 1 failed; retrying with 3 subchunks: Gemma vLLM server request failed: HTTP 404 Not Found. URL=http://localhost:8000/v1/chat/completions. Body: {"error":{"message":"The model `google/gemma-4-31B-it` does not exist.","type":"NotFoundError","param":"model","code":404}}
+  Gemma chunk 1.1/40 request: pages 2-13
+  Gemma input chunk 1.1 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260721_172823/chunk_1.1_pages_2-13.json
+  Gemma chunk 1.1 failed; retrying with 3 subchunks: Gemma vLLM server request failed: HTTP 404 Not Found. URL=http://localhost:8000/v1/chat/completions. Body: {"error":{"message":"The model `google/gemma-4-31B-it` does not exist.","type":"NotFoundError","param":"model","code":404}}
+  Gemma chunk 1.1.1/40 request: pages 2-10
+  Gemma input chunk 1.1.1 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260721_172823/chunk_1.1.1_pages_2-10.json
+  Gemma chunk 1.1.1 failed; retrying with 2 subchunks: Gemma vLLM server request failed: HTTP 404 Not Found. URL=http://localhost:8000/v1/chat/completions. Body: {"error":{"message":"The model `google/gemma-4-31B-it` does not exist.","type":"NotFoundError","param":"model","code":404}}
+  Gemma chunk 1.1.1.1/40 request: pages 2-7
+  Gemma input chunk 1.1.1.1 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260721_172823/chunk_1.1.1.1_pages_2-7.json
+Gemma model failed: google/gemma-4-31B-it / Gemma vLLM server request failed: HTTP 404 Not Found. URL=http://localhost:8000/v1/chat/completions. Body: {"error":{"message":"The model `google/gemma-4-31B-it` does not exist.","type":"NotFoundError","param":"model","code":404}}
+Trying Gemma fallback model: google/gemma-4-31B-it
+  Using Gemma/vLLM server: google/gemma-4-31B-it
+  Gemma PDF text/layout extraction started...
+  Gemma PDF extraction completed: 526 pages, 1127869 chars, mode=text, selected_pages=526
+  Parsed PDF text saved: data/output/parsed_pdfs/CrimePunishment-EPUB2_gemma_20260721_172823_parsed_pdf_2.txt
+  Gemma text chunk processing started: 40 chunks
+  Gemma chunk 1/40 request: pages 2-20
+  Gemma input chunk 1 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260721_172823/chunk_1_pages_2-20_2.json
+  Gemma chunk 1 failed; retrying with 3 subchunks: Gemma vLLM server request failed: HTTP 404 Not Found. URL=http://localhost:8000/v1/chat/completions. Body: {"error":{"message":"The model `google/gemma-4-31B-it` does not exist.","type":"NotFoundError","param":"model","code":404}}
+  Gemma chunk 1.1/40 request: pages 2-13
+  Gemma input chunk 1.1 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260721_172823/chunk_1.1_pages_2-13_2.json
+  Gemma chunk 1.1 failed; retrying with 3 subchunks: Gemma vLLM server request failed: HTTP 404 Not Found. URL=http://localhost:8000/v1/chat/completions. Body: {"error":{"message":"The model `google/gemma-4-31B-it` does not exist.","type":"NotFoundError","param":"model","code":404}}
+  Gemma chunk 1.1.1/40 request: pages 2-10
+  Gemma input chunk 1.1.1 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260721_172823/chunk_1.1.1_pages_2-10_2.json
+  Gemma chunk 1.1.1 failed; retrying with 2 subchunks: Gemma vLLM server request failed: HTTP 404 Not Found. URL=http://localhost:8000/v1/chat/completions. Body: {"error":{"message":"The model `google/gemma-4-31B-it` does not exist.","type":"NotFoundError","param":"model","code":404}}
+  Gemma chunk 1.1.1.1/40 request: pages 2-7
+  Gemma input chunk 1.1.1.1 saved: data/output/input_chunks/CrimePunishment-EPUB2_gemma_20260721_172823/chunk_1.1.1.1_pages_2-7_2.json
+Gemma model failed: google/gemma-4-31B-it / Gemma vLLM server request failed: HTTP 404 Not Found. URL=http://localhost:8000/v1/chat/completions. Body: {"error":{"message":"The model `google/gemma-4-31B-it` does not exist.","type":"NotFoundError","param":"model","code":404}}
+Failed: CrimePunishment-EPUB2.pdf / Gemma vLLM server request failed: HTTP 404 Not Found. URL=http://localhost:8000/v1/chat/completions. Body: {"error":{"message":"The model `google/gemma-4-31B-it` does not exist.","type":"NotFoundError","param":"model","code":404}}
+  elapsed: 1m 7.1s (67.052s)
+  Error log saved: data/output/error_logs/20260721_172930_CrimePunishment-EPUB2_gemma_gemma4_31b_PDF_processing_failed_error.json
+Processing result: success 0 / failed 1
+Run log saved: data/output/logs/CrimePunishment-EPUB2_gemma_20260721_172823_log.txt

@@ -1,0 +1,47 @@
+{
+    "timestamp": "2026-07-22 09:27:36",
+    "stage_index": 4,
+    "stage": "chunk_toc_generated",
+    "provider": "gemma",
+    "model": "google/gemma-4-31B-it",
+    "source_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "processed_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+    "chunk": "1",
+    "total_chunks": 40,
+    "start_page": 2,
+    "end_page": 20,
+    "toc": {
+        "title": "CrimePunishment-EPUB2",
+        "chapters": [
+            {
+                "level": 1,
+                "chapter": "Translator’s Preface",
+                "page": 7,
+                "level_reason": "Major introductory section appearing before the main narrative.",
+                "_source_order": 0
+            },
+            {
+                "level": 1,
+                "chapter": "Part I",
+                "page": 10,
+                "level_reason": "Top-level structural division of the novel.",
+                "_source_order": 1
+            },
+            {
+                "level": 2,
+                "chapter": "Chapter One",
+                "page": 11,
+                "level_reason": "Numbered chapter within Part I.",
+                "_source_order": 2
+            },
+            {
+                "level": 2,
+                "chapter": "Chapter Two",
+                "page": 19,
+                "level_reason": "Numbered chapter within Part I.",
+                "_source_order": 3
+            }
+        ]
+    },
+    "raw_response": "```json\n{\n  \"title\": \"CrimePunishment-EPUB2\",\n  \"chapters\": [\n    {\n      \"level\": 1,\n      \"chapter\": \"Translator’s Preface\",\n      \"page\": 7,\n      \"level_reason\": \"Major introductory section appearing before the main narrative.\"\n    },\n    {\n      \"level\": 1,\n      \"chapter\": \"Part I\",\n      \"page\": 10,\n      \"level_reason\": \"Top-level structural division of the novel.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chapter One\",\n      \"page\": 11,\n      \"level_reason\": \"Numbered chapter within Part I.\"\n    },\n    {\n      \"level\": 2,\n      \"chapter\": \"Chapter Two\",\n      \"page\": 19,\n      \"level_reason\": \"Numbered chapter within Part I.\"\n    }\n  ]\n}\n```"
+}
