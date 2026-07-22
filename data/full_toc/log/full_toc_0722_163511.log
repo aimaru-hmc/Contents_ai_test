@@ -1,0 +1,14 @@
+[2026-07-22T16:35:11+09:00] INFO: log: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/log/full_toc_0722_163511.log
+[2026-07-22T16:35:11+09:00] INFO: PDF files: 1
+[2026-07-22T16:35:11+09:00] INFO: processing: 1편(2021).pdf | stage=all
+[2026-07-22T16:35:11+09:00] INFO: PDF parsing started: 1편(2021).pdf
+[2026-07-22T16:35:18+09:00] INFO: Parsed text saved: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/1_2021_parsed.txt
+[2026-07-22T16:35:18+09:00] INFO: OpenAI layout generation started: gpt-5.5
+[2026-07-22T16:36:01+09:00] INFO: OpenAI layout generation completed: rules=5, tokens=109224
+[2026-07-22T16:36:01+09:00] INFO: layout saved: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/1_2021_0722_163511_layout.json | elapsed=50.4s
+[2026-07-22T16:36:01+09:00] INFO: Using layout JSON: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/1_2021_0722_163511_layout.json
+[2026-07-22T16:36:01+09:00] INFO: Gemma full JSON generation started: google/gemma-4-31B-it
+[2026-07-22T16:37:32+09:00] INFO: Gemma full JSON generation completed: google/gemma-4-31B-it
+[2026-07-22T16:37:32+09:00] INFO: toc saved: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/full_jason/1_2021_0722_163511_full_foc.json | chapters=114 | tokens(openai=109224, gemma=141927) | elapsed=2m 21.0s
+[2026-07-22T16:37:32+09:00] INFO: Created full TOC files: 1
+[2026-07-22T16:37:32+09:00] INFO: created: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/full_jason/1_2021_0722_163511_full_foc.json
