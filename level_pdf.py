@@ -43,6 +43,7 @@ DEFAULT_MODEL = DEFAULT_GEMMA_OLLAMA_MODEL
 DEFAULT_LEVEL_GEMMA_BACKEND = "openai"
 DEFAULT_CHUNK_CHARS = max(int(DEFAULT_GEMMA_TEXT_CHUNK_CHARS), 220000)
 DEFAULT_CHUNK_OVERLAP_CHARS = max(int(DEFAULT_GEMMA_TEXT_CHUNK_OVERLAP_CHARS), 8000)
+DEFAULT_LEVEL_MAX_OUTPUT_TOKENS = max(int(DEFAULT_MAX_OUTPUT_TOKENS_BY_PROVIDER["gemma"]), 32768)
 
 
 @dataclass(frozen=True)
@@ -136,7 +137,7 @@ The result will be used to cut PDFs by hierarchy levels.
 - Use actual PDF viewer page numbers from [PAGE] markers or P metadata.
 - Use order as the source line order within the page. Never calculate or invent order.
 - Keep exact source heading text and original numbering. Do not invent, rewrite, summarize, or include layout tags in text.
-- Output exactly one valid JSON object. Do not output Markdown.
+- Output exactly one valid compact JSON object. Do not output Markdown, comments, code fences, trailing commas, or partial JSON.
 
 [Output JSON]
 {{
@@ -179,7 +180,7 @@ Merge the partial heading candidates into one final heading list.
 - Keep only real hierarchy headings.
 - Keep levels 1 to {max_depth}.
 - Do not invent headings.
-- Return exactly one JSON object with a headings array.
+- Return exactly one compact valid JSON object with a headings array. Do not output trailing commas or partial JSON.
 
 [PDF File]
 {pdf_name}
@@ -202,7 +203,7 @@ def request_gemma_json(model: str, prompt: str, args: argparse.Namespace, label:
                 "\n\n[Retry Instruction]\n"
                 f"Previous JSON parse failed: {type(last_error).__name__}: {last_error}\n"
                 f"Previous response preview: {preview}\n"
-                "Return exactly one valid JSON object. Do not include Markdown."
+                "Return exactly one valid compact JSON object. Do not include Markdown, comments, code fences, trailing commas, or partial JSON."
             )
 
         response = with_retry(
@@ -551,7 +552,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--gemma-chunk-overlap-chars", type=int, default=DEFAULT_CHUNK_OVERLAP_CHARS)
     parser.add_argument("--level-group-size", type=int, default=3, help="Number of levels per output PDF; adjacent groups overlap by one level")
     parser.add_argument("--max-depth", type=int, default=7)
-    parser.add_argument("--max-output-tokens", type=int, default=DEFAULT_MAX_OUTPUT_TOKENS_BY_PROVIDER["gemma"])
+    parser.add_argument("--max-output-tokens", type=int, default=DEFAULT_LEVEL_MAX_OUTPUT_TOKENS)
     parser.add_argument("--temperature", type=float, default=0.1)
     parser.add_argument("--ai-retries", type=int, default=DEFAULT_AI_RETRIES)
     parser.add_argument("--ai-retry-base-delay", type=float, default=DEFAULT_RETRY_BASE_DELAY)
