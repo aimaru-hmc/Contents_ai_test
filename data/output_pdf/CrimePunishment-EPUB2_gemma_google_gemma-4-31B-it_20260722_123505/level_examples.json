@@ -1,0 +1,21 @@
+{
+  "source_pdf": "data/input/CrimePunishment-EPUB2.pdf",
+  "model": "google/gemma-4-31B-it",
+  "max_level": 2,
+  "examples": [
+    {
+      "level": 1,
+      "text": "Translator’s Preface",
+      "page": 7,
+      "order": 1,
+      "reason": "Large font size, bold style, centered layout, introduces a major front-matter section"
+    },
+    {
+      "level": 2,
+      "text": "Chapter One",
+      "page": 11,
+      "order": 1,
+      "reason": "Large font size, bold style, centered layout, marks a secondary structural division"
+    }
+  ]
+}
