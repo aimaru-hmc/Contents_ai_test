@@ -393,6 +393,24 @@ def heading_for_level(path: list[Heading], level: int) -> Heading:
     return eligible[-1]
 
 
+def containing_heading_for_level(headings: list[Heading], target: Heading, level: int) -> Heading:
+    target_pos = headings.index(target)
+    for heading in reversed(headings[: target_pos + 1]):
+        if heading.level == level:
+            return heading
+    for heading in reversed(headings[: target_pos + 1]):
+        if heading.level <= level:
+            return heading
+    return headings[0]
+
+
+def first_heading_at_level(headings: list[Heading], level: int) -> Heading | None:
+    for heading in headings:
+        if heading.level == level:
+            return heading
+    return None
+
+
 def level_groups(max_level: int, group_size: int) -> list[tuple[int, int]]:
     group_size = max(2, int(group_size))
     groups: list[tuple[int, int]] = []
@@ -414,12 +432,16 @@ def compute_level_group_ranges(
 ) -> list[tuple[int, int, int, int, Heading]]:
     max_level = path[-1].level
     ranges: list[tuple[int, int, int, int, Heading]] = []
-    for start_level, end_level in level_groups(max_level, group_size):
-        start_heading = heading_for_level(path, start_level)
-        end_heading = heading_for_level(path, end_level)
+    for group_index, (start_level, end_level) in enumerate(level_groups(max_level, group_size)):
+        if group_index == 0:
+            end_heading = first_heading_at_level(headings, end_level) or heading_for_level(path, end_level)
+            start_heading = containing_heading_for_level(headings, end_heading, start_level)
+        else:
+            end_heading = heading_for_level(path, end_level)
+            start_heading = containing_heading_for_level(headings, end_heading, start_level)
 
-        # Each PDF is anchored by the deepest heading in that group.
-        # It starts at the group-level ancestor that contains that heading.
+        # Non-final PDFs end when the target level first appears inside that group.
+        # The final PDF extends through the next higher-level heading page.
         start_page = max(1, min(start_heading.page, page_count))
         if end_level >= max_level:
             end_page = deepest_level_section_end_page(headings, path[-1], page_count)
