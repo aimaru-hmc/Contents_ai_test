@@ -75,7 +75,7 @@ PAGE_RE = re.compile(r"^\[PAGE\s+(\d+)\]$")
 LINE_RE = re.compile(
     r"^\[L s=(?P<s>[\d.]+) r=(?P<r>[\d.]+) x=(?P<x>-?[\d.]+) "
     r"y=(?P<y>-?[\d.]+) b=(?P<b>[01]) i=(?P<i>[01]) "
-    r"f=(?P<f>[^]]+)\]\s*(?P<t>.*)$"
+    r"f=(?P<f>[^] ]+)(?: c=(?P<c>[LR]))?\]\s*(?P<t>.*)$"
 )
 RETRYABLE_ERROR_MARKERS = (
     "429", "RESOURCE_EXHAUSTED", "RATE LIMIT", "500", "INTERNAL", "502", "503",
@@ -240,7 +240,7 @@ def line_text_from_chars(chars: list[dict[str, Any]], fallback_text: Any) -> str
     return clean_extracted_pdf_text("".join(str(char.get("text") or "") for char in chars))
 
 
-def format_layout_line(line: dict[str, Any], body_size: float, font_ids: dict[str, str]) -> str:
+def format_layout_line(line: dict[str, Any], body_size: float, font_ids: dict[str, str], column: str | None = None) -> str:
     chars = [char for char in line.get("chars", []) or [] if isinstance(char, dict)]
     text = line_text_from_chars(chars, line.get("text"))
     if not text:
@@ -258,10 +258,43 @@ def format_layout_line(line: dict[str, Any], body_size: float, font_ids: dict[st
     bold, italic = font_style_flags(fontname)
     ratio = size / body_size if body_size else 1.0
     font_id = font_id_for(fontname, font_ids)
-    return f"[L s={size:.1f} r={ratio:.2f} x={x0:.0f} y={top:.0f} b={bold} i={italic} f={font_id}] {text}"
+    column_part = f" c={column}" if column else ""
+    return f"[L s={size:.1f} r={ratio:.2f} x={x0:.0f} y={top:.0f} b={bold} i={italic} f={font_id}{column_part}] {text}"
 
 
-def extract_pdf_layout_pages(pdf_path: Path) -> tuple[list[tuple[int, str]], dict[str, Any]]:
+def page_has_two_columns(page: Any, split_x: float, min_chars_per_side: int = 80) -> bool:
+    chars = [char for char in getattr(page, "chars", []) or [] if clean_text(char.get("text"))]
+    if len(chars) < min_chars_per_side * 2:
+        return False
+    left = sum(1 for char in chars if float(char.get("x0", 0.0) or 0.0) < split_x - 20)
+    right = sum(1 for char in chars if float(char.get("x0", 0.0) or 0.0) > split_x + 20)
+    total = max(1, left + right)
+    return left >= min_chars_per_side and right >= min_chars_per_side and left / total >= 0.25 and right / total >= 0.25
+
+
+def extract_region_lines(page: Any, bbox: tuple[float, float, float, float] | None, body_size: float, font_ids: dict[str, str], column: str | None) -> list[str]:
+    region = page.crop(bbox) if bbox else page
+    try:
+        raw_lines = region.extract_text_lines(layout=False, return_chars=True)
+    except Exception:
+        raw_lines = []
+    formatted_lines: list[str] = []
+    for line in raw_lines:
+        if not isinstance(line, dict):
+            continue
+        formatted = format_layout_line(line=line, body_size=body_size, font_ids=font_ids, column=column)
+        if formatted:
+            formatted_lines.append(formatted)
+    return formatted_lines
+
+
+def extract_pdf_layout_pages(
+    pdf_path: Path,
+    *,
+    column_mode: str = "auto",
+    column_split_x: float = 0.0,
+    column_gap: float = 8.0,
+) -> tuple[list[tuple[int, str]], dict[str, Any]]:
     try:
         import pdfplumber
     except ImportError as error:
@@ -270,23 +303,36 @@ def extract_pdf_layout_pages(pdf_path: Path) -> tuple[list[tuple[int, str]], dic
     font_ids: dict[str, str] = {}
     line_count = 0
     plain_chars = 0
+    two_column_pages = 0
+    column_mode = clean_text(column_mode).lower() or "auto"
     with pdfplumber.open(pdf_path) as pdf:
         for page_index, page in enumerate(pdf.pages, start=1):
             body_size = page_body_font_size(page)
-            try:
-                lines = page.extract_text_lines(layout=False, return_chars=True)
-            except Exception:
-                lines = []
+            width = float(getattr(page, "width", 0.0) or 0.0)
+            height = float(getattr(page, "height", 0.0) or 0.0)
+            split_x = float(column_split_x or 0.0) or (width / 2.0 if width else 0.0)
+            use_two_columns = False
+            if column_mode == "two":
+                use_two_columns = bool(width and height and split_x > 0)
+            elif column_mode == "auto":
+                use_two_columns = bool(width and height and split_x > 0 and page_has_two_columns(page, split_x))
+
             formatted_lines: list[str] = []
-            for line in lines:
-                if not isinstance(line, dict):
-                    continue
-                formatted = format_layout_line(line=line, body_size=body_size, font_ids=font_ids)
-                if formatted:
-                    formatted_lines.append(formatted)
+            if use_two_columns:
+                two_column_pages += 1
+                gap = max(0.0, float(column_gap))
+                left_bbox = (0.0, 0.0, max(0.0, split_x - gap / 2.0), height)
+                right_bbox = (min(width, split_x + gap / 2.0), 0.0, width, height)
+                formatted_lines.extend(extract_region_lines(page, left_bbox, body_size, font_ids, "L"))
+                formatted_lines.extend(extract_region_lines(page, right_bbox, body_size, font_ids, "R"))
+            else:
+                formatted_lines.extend(extract_region_lines(page, None, body_size, font_ids, None))
+
+            if formatted_lines:
+                for formatted in formatted_lines:
                     line_count += 1
                     plain_chars += len(formatted.split("] ", 1)[-1])
-            if not formatted_lines:
+            else:
                 fallback_text = clean_extracted_pdf_text(page.extract_text() or "")
                 if fallback_text:
                     formatted_lines.append(f"[L s={body_size:.1f} r=1.00 x=0 y=0 b=0 i=0 f=f0] {fallback_text}")
@@ -297,7 +343,11 @@ def extract_pdf_layout_pages(pdf_path: Path) -> tuple[list[tuple[int, str]], dic
     if not pages:
         raise RuntimeError("No extractable text was found in the PDF. Scanned PDFs require OCR.")
     return pages, {
-        "extraction_mode": "layout",
+        "extraction_mode": "layout_columns",
+        "column_mode": column_mode,
+        "column_split_x": column_split_x,
+        "column_gap": column_gap,
+        "two_column_pages": two_column_pages,
         "layout_line_count": line_count,
         "layout_font_count": len(font_ids),
         "plain_extracted_chars": plain_chars,
@@ -1089,14 +1139,19 @@ def parsed_path_for_pdf(pdf_path: Path, parsed_dir: Path) -> Path:
     return parsed_dir / f"{safe_filename_part(pdf_path.stem)}_parsed.txt"
 
 
-def parse_pdf_if_needed(pdf_path: Path, parsed_dir: Path, force_parse: bool = False) -> tuple[Path, str, bool]:
+def parse_pdf_if_needed(pdf_path: Path, parsed_dir: Path, args: argparse.Namespace, force_parse: bool = False) -> tuple[Path, str, bool]:
     parsed_dir.mkdir(parents=True, exist_ok=True)
     parsed_path = parsed_path_for_pdf(pdf_path, parsed_dir)
     if parsed_path.is_file() and not force_parse:
         return parsed_path, parsed_path.read_text(encoding="utf-8"), False
 
     log_detail(f"PDF parsing started: {pdf_path.name}")
-    pages, metadata = extract_pdf_layout_pages(pdf_path)
+    pages, metadata = extract_pdf_layout_pages(
+        pdf_path,
+        column_mode=args.pdf_column_mode,
+        column_split_x=args.pdf_column_split_x,
+        column_gap=args.pdf_column_gap,
+    )
     parsed_text = parsed_pdf_text_for_file(
         pdf_path=pdf_path,
         pages=pages,
@@ -1481,6 +1536,7 @@ def run_layout_stage(
     parsed_path, parsed_text, parsed_created = parse_pdf_if_needed(
         pdf_path=pdf_path,
         parsed_dir=args.parsed_dir.resolve(),
+        args=args,
         force_parse=args.force_parse,
     )
     if not parsed_created:
@@ -1542,6 +1598,7 @@ def run_gemma_stage(
         parsed_path, parsed_text, parsed_created = parse_pdf_if_needed(
             pdf_path=pdf_path,
             parsed_dir=args.parsed_dir.resolve(),
+            args=args,
             force_parse=args.force_parse,
         )
         if not parsed_created:
@@ -1696,6 +1753,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--layout-file", type=Path, help="--stage gemma에서 사용할 layout JSON. 미지정 시 layout-dir에서 최신 layout을 자동 선택합니다.")
     parser.add_argument("--parsed-dir", type=Path, default=DEFAULT_PARSED_DIR, help="PDF 파싱 txt 캐시 저장 폴더")
     parser.add_argument("--force-parse", action="store_true", help="기존 parsed txt가 있어도 PDF를 다시 파싱합니다.")
+    parser.add_argument("--pdf-column-mode", choices=("auto", "none", "two"), default="auto", help="PDF 파싱 시 컬럼 분리 방식. auto=페이지별 자동 감지, two=항상 2단, none=기존 방식")
+    parser.add_argument("--pdf-column-split-x", type=float, default=0.0, help="2단 컬럼을 나눌 x 좌표. 0이면 페이지 중앙")
+    parser.add_argument("--pdf-column-gap", type=float, default=8.0, help="컬럼 분리선 주변에서 제외할 gutter 폭")
     parser.add_argument("--title", help="TOC title. 기본값은 PDF 파일명 stem입니다.")
     parser.add_argument("--prompt", default="Create the complete table of contents JSON for the whole document from the layout text.")
     parser.add_argument("--max-depth", type=int, default=7)

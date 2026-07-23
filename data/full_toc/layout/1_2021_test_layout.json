@@ -1,0 +1,170 @@
+{
+    "source_reference": "openai_layout_from_full_pdf",
+    "source_chunk": "full_pdf",
+    "matching_priority": [
+        "S/R/B/I/F",
+        "numbering",
+        "X",
+        "Y",
+        "examples"
+    ],
+    "rules": [
+        {
+            "level": 1,
+            "s": 31.0,
+            "r": 3.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 80.0,
+            "x_max": 317.0,
+            "y_min": 123.0,
+            "y_max": 170.0,
+            "start_shapes": [
+                "A"
+            ],
+            "reference_count": 3,
+            "examples": [
+                "건강과 질병의 정",
+                "보건학의 개념과",
+                "보건학의 발전과"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 18.0,
+            "r": 1.9,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 77.0,
+            "x_max": 317.0,
+            "y_min": 119.0,
+            "y_max": 567.0,
+            "start_shapes": [
+                "#."
+            ],
+            "reference_count": 7,
+            "examples": [
+                "1. 건강상태와 질병상태의 개",
+                "2. 예방의학과 공",
+                "3. 예방의학과 공중보건학의 미래"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 12.5,
+            "r": 1.32,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 73.0,
+            "x_max": 320.0,
+            "y_min": 92.0,
+            "y_max": 760.0,
+            "start_shapes": [
+                "#.#"
+            ],
+            "reference_count": 29,
+            "examples": [
+                "1.1 건강 개념의 변천",
+                "2.4 예방의학과 공중보건윤리",
+                "3.2 한국의 예방의학과 공중보건학의 미래"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 12.0,
+            "r": 1.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 60.0,
+            "x_max": 322.0,
+            "y_min": 85.0,
+            "y_max": 789.0,
+            "start_shapes": [
+                "#)",
+                "A #)"
+            ],
+            "reference_count": 47,
+            "examples": [
+                "1) 신체(身體)개념의 건강",
+                "건강정책 분석을 위한 역 3) 건강정책분석을 위한 역",
+                "4) 환경문제의 대두와 이에 대한 대응"
+            ]
+        },
+        {
+            "level": 5,
+            "s": 10.0,
+            "r": 1.05,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 75.0,
+            "x_max": 183.0,
+            "y_min": 85.0,
+            "y_max": 765.0,
+            "start_shapes": [
+                "(#)"
+            ],
+            "reference_count": 24,
+            "examples": [
+                "(1) 생명의 기계론적 관점",
+                "(1) 감염병 관리에 관련된 윤리 문제",
+                "(4) 존 스노의 콜레라 전파양"
+            ]
+        }
+    ],
+    "contextual_heading_candidates": [
+        {
+            "level": 6,
+            "chapter": "① 감염병 감시",
+            "page": 29,
+            "source_order": 149,
+            "evidence": [
+                "short standalone line",
+                "under the parent heading (1) 감염병 관리에 관련된 윤리 문제",
+                "followed by explanatory body paragraphs before the next circled item",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "② 예방접종",
+            "page": 30,
+            "source_order": 150,
+            "evidence": [
+                "short standalone line",
+                "continues the ①→④ sibling sequence under the same parent heading",
+                "followed by explanatory body paragraphs before the next circled item",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "③ 사회적 거리두기를 위한 격리",
+            "page": 30,
+            "source_order": 151,
+            "evidence": [
+                "short standalone line",
+                "continues the ①→④ sibling sequence under the same parent heading",
+                "followed by explanatory body paragraphs before the next circled item",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "④ 감염병 정보의 공개",
+            "page": 30,
+            "source_order": 152,
+            "evidence": [
+                "short standalone line",
+                "continues the ①→④ sibling sequence under the same parent heading",
+                "followed by explanatory body paragraphs before the next level-5 heading",
+                "body-like typography but subsection role"
+            ]
+        }
+    ],
+    "unmatched_reference_titles": []
+}
