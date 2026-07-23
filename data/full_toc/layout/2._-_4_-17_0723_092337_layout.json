@@ -1,0 +1,332 @@
+{
+    "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/2. 교과서-신경학 4판-17장 파킨슨병.pdf",
+    "source_chunk": "full_pdf",
+    "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/2._-_4_-17_parsed.txt",
+    "matching_priority": [
+        "numbering",
+        "context",
+        "S/R/B/I/F",
+        "X",
+        "Y",
+        "examples"
+    ],
+    "rules": [
+        {
+            "level": 1,
+            "s": 12.4,
+            "r": 1.46,
+            "b": 1,
+            "i": 0,
+            "f": "f13",
+            "x_min": 45.0,
+            "x_max": 325.0,
+            "y_min": 40.0,
+            "y_max": 720.0,
+            "start_shapes": [
+                "^[0-9]{1,2} +[가-힣]"
+            ],
+            "reference_count": 3,
+            "examples": [
+                "2 이상운동증 접근법 권도영, 박정호",
+                "11 보툴리눔독소 주사치료"
+            ]
+        },
+        {
+            "level": 1,
+            "s": 9.5,
+            "r": 1.0,
+            "b": 0,
+            "i": 0,
+            "f": "f5/f7/f8",
+            "x_min": 45.0,
+            "x_max": 325.0,
+            "y_min": 40.0,
+            "y_max": 720.0,
+            "start_shapes": [
+                "^[0-9]{1,2} +[가-힣]"
+            ],
+            "reference_count": 9,
+            "examples": [
+                "3 파킨슨증",
+                "4 떨림",
+                "5 근긴장이상증",
+                "10 보행장애",
+                "12 이상운동질환에서 수술치료"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 10.0,
+            "r": 1.05,
+            "b": 0,
+            "i": 0,
+            "f": "f5/f7/f8",
+            "x_min": 45.0,
+            "x_max": 325.0,
+            "y_min": 40.0,
+            "y_max": 720.0,
+            "start_shapes": [
+                "^[0-9]+\\) +[가-힣]"
+            ],
+            "reference_count": 50,
+            "examples": [
+                "1) 이상운동증 현상학",
+                "2) 비정형파킨슨증",
+                "3) 이차파킨슨증",
+                "6) 제1축 떨림증후군의 종류",
+                "1) 정위기능수술"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 9.5,
+            "r": 1.0,
+            "b": 0,
+            "i": 0,
+            "f": "f5/f7/f8/f10",
+            "x_min": 45.0,
+            "x_max": 325.0,
+            "y_min": 40.0,
+            "y_max": 720.0,
+            "start_shapes": [
+                "^\\([0-9]+\\) +[가-힣]"
+            ],
+            "reference_count": 80,
+            "examples": [
+                "(1) 기저핵의 정의와 명칭",
+                "(2) 소뇌운동회로",
+                "(1) 운동감소",
+                "(5) 약물치료",
+                "(3) 과망간혈증-근긴장이상증증후군"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 9.5,
+            "r": 1.0,
+            "b": 0,
+            "i": 0,
+            "f": "f3/f7/f8/f11",
+            "x_min": 45.0,
+            "x_max": 325.0,
+            "y_min": 40.0,
+            "y_max": 720.0,
+            "start_shapes": [
+                "^[①②③④⑤⑥⑦⑧⑨⑩] +[가-힣A-Za-z]"
+            ],
+            "reference_count": 90,
+            "examples": [
+                "① 줄무늬체",
+                "② 기저핵으로부터의 출력",
+                "③ 운동완만",
+                "⑤ 신경페리티노병증",
+                "⑦ A utosomal recessive spastic ataxia of"
+            ]
+        }
+    ],
+    "contextual_heading_candidates": [
+        {
+            "level": 1,
+            "chapter": "1 이상운동질환 관련 해부학 신정환, 최성민",
+            "page": 1,
+            "source_order": 8,
+            "evidence": [
+                "top-level outline item begins with bare Arabic number",
+                "body-like typography due two-column extraction merge",
+                "followed by subordinate heading 1) 기저핵의 구조와 기능",
+                "matches chapter outline sequence"
+            ]
+        },
+        {
+            "level": 1,
+            "chapter": "3 파킨슨증",
+            "page": 14,
+            "source_order": 5,
+            "evidence": [
+                "short standalone line at right-column start",
+                "followed by author line and explanatory paragraph",
+                "body-like typography but top-level sequence after 2 이상운동증 접근법",
+                "matches chapter outline sequence"
+            ]
+        },
+        {
+            "level": 1,
+            "chapter": "4 떨림",
+            "page": 23,
+            "source_order": 8,
+            "evidence": [
+                "short standalone line",
+                "followed by author line and subsection 1) 떨림의 정의",
+                "body-like typography but top-level sequence",
+                "matches chapter outline sequence"
+            ]
+        },
+        {
+            "level": 1,
+            "chapter": "6 무도증",
+            "page": 32,
+            "source_order": 58,
+            "evidence": [
+                "short standalone line",
+                "followed by author and subsection 1) 무도증의 정의, 양상",
+                "body-like typography and column transition",
+                "matches chapter outline sequence"
+            ]
+        },
+        {
+            "level": 1,
+            "chapter": "7 근간대경련 강석윤",
+            "page": 37,
+            "source_order": 52,
+            "evidence": [
+                "top-level numbered heading merged with author",
+                "followed by definition paragraph and subsection 1) 근간대경련의 분류",
+                "body-like typography",
+                "matches chapter outline sequence"
+            ]
+        },
+        {
+            "level": 1,
+            "chapter": "10 보행장애",
+            "page": 64,
+            "source_order": 18,
+            "evidence": [
+                "short standalone line",
+                "followed by author and introductory paragraph",
+                "body-like typography",
+                "matches chapter outline sequence"
+            ]
+        },
+        {
+            "level": 2,
+            "chapter": "1) 이상운동증 현상학",
+            "page": 8,
+            "source_order": 18,
+            "evidence": [
+                "short standalone line under 2 이상운동증 접근법",
+                "followed by explanatory body paragraphs",
+                "typography matches body text",
+                "fits neighboring 2) 이상운동증의 임상적 접근 and 3) 이상운동질환에 사용되는 검사"
+            ]
+        },
+        {
+            "level": 2,
+            "chapter": "2) 소뇌의 구조와 기능",
+            "page": 6,
+            "source_order": 39,
+            "evidence": [
+                "short standalone line under level-1 anatomy section",
+                "followed by (1) 소뇌의 구조 and body paragraphs",
+                "body-like typography",
+                "continues after 1) 기저핵의 구조와 기능"
+            ]
+        },
+        {
+            "level": 3,
+            "chapter": "(3) 소뇌의 기능",
+            "page": 8,
+            "source_order": 18,
+            "evidence": [
+                "short standalone parenthesized heading",
+                "under 2) 소뇌의 구조와 기능",
+                "followed by explanatory body paragraph",
+                "body-like typography"
+            ]
+        },
+        {
+            "level": 3,
+            "chapter": "(5) 약물치료",
+            "page": 17,
+            "source_order": 5,
+            "evidence": [
+                "short standalone parenthesized heading",
+                "under 1) 파킨슨병",
+                "followed by explanatory paragraphs and circled drug subheadings",
+                "body-like typography"
+            ]
+        },
+        {
+            "level": 4,
+            "chapter": "① 안정떨림",
+            "page": 25,
+            "source_order": 13,
+            "evidence": [
+                "circled-number standalone line",
+                "under (3) 떨림 유발상황",
+                "followed by explanatory paragraphs",
+                "same size as body text but subsection role"
+            ]
+        },
+        {
+            "level": 4,
+            "chapter": "② 저혈당",
+            "page": 48,
+            "source_order": 45,
+            "evidence": [
+                "circled-number standalone line",
+                "under (4) 당뇨병",
+                "followed by explanatory paragraph",
+                "bold/body-like typography and neighboring ① 비케토산고혈당"
+            ]
+        }
+    ],
+    "unmatched_reference_titles": [],
+    "_api_usage": {
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "usage": {
+            "prompt_tokens": 269357,
+            "completion_tokens": 3574,
+            "total_tokens": 272931,
+            "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+                "reasoning_tokens": 2047,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+            }
+        },
+        "prompt_tokens": 269357,
+        "completion_tokens": 3574,
+        "total_tokens": 272931
+    },
+    "_meta": {
+        "source_pdf": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/2. 교과서-신경학 4판-17장 파킨슨병.pdf",
+        "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/2._-_4_-17_parsed.txt",
+        "parsed_created": true,
+        "provider_layout": "openai",
+        "openai_layout_model": "gpt-5.5",
+        "generated_at": "2026-07-23T09:24:42+09:00",
+        "generation_started_at": "2026-07-23T09:23:37+09:00",
+        "generation_completed_at": "2026-07-23T09:24:42+09:00",
+        "elapsed_seconds": 65.5,
+        "elapsed": "1m 5.5s",
+        "api_usage": {
+            "layout_generation": {
+                "provider": "openai",
+                "model": "gpt-5.5",
+                "usage": {
+                    "prompt_tokens": 269357,
+                    "completion_tokens": 3574,
+                    "total_tokens": 272931,
+                    "prompt_tokens_details": {
+                        "cached_tokens": 0,
+                        "audio_tokens": 0
+                    },
+                    "completion_tokens_details": {
+                        "reasoning_tokens": 2047,
+                        "audio_tokens": 0,
+                        "accepted_prediction_tokens": 0,
+                        "rejected_prediction_tokens": 0
+                    }
+                },
+                "prompt_tokens": 269357,
+                "completion_tokens": 3574,
+                "total_tokens": 272931
+            }
+        }
+    }
+}
