@@ -1,0 +1,22 @@
+[2026-07-23T15:06:56+09:00] INFO: log: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/log/full_toc_0723_150656.log
+[2026-07-23T15:06:56+09:00] INFO: PDF files: 1
+[2026-07-23T15:06:56+09:00] INFO: processing: 2. 교과서-신경학 4판-17장 파킨슨병.pdf | stage=all
+[2026-07-23T15:06:56+09:00] INFO: Existing parsed text found, skipping PDF parsing: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/2._-_4_-17_headings_parsed.txt
+[2026-07-23T15:06:56+09:00] INFO: OpenAI layout generation started: gpt-5.5
+[2026-07-23T15:07:45+09:00] INFO: OpenAI layout generation completed: rules=4, tokens=41072
+[2026-07-23T15:07:45+09:00] INFO: layout saved: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/2._-_4_-17_0723_150656_layout.json | elapsed=48.9s
+[2026-07-23T15:07:45+09:00] INFO: Using layout JSON: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/2._-_4_-17_0723_150656_layout.json
+[2026-07-23T15:07:45+09:00] INFO: Using full parsed body context for Gemma: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/2._-_4_-17_parsed.txt
+[2026-07-23T15:07:45+09:00] INFO: gemma chunks: 3 | mode=tokens | token_limit=145674 | pages_per_chunk=80 | overlap=2
+[2026-07-23T15:07:45+09:00] INFO: gemma chunk 1/3: target pages 1-34 | est_tokens=16546
+[2026-07-23T15:07:45+09:00] INFO: Gemma full JSON generation started: google/gemma-4-31B-it
+[2026-07-23T15:09:40+09:00] INFO: Gemma full JSON generation completed: google/gemma-4-31B-it
+[2026-07-23T15:09:40+09:00] INFO: gemma chunk 2/3: target pages 35-67 | est_tokens=14168
+[2026-07-23T15:09:40+09:00] INFO: Gemma full JSON generation started: google/gemma-4-31B-it
+[2026-07-23T15:11:36+09:00] INFO: Gemma full JSON generation completed: google/gemma-4-31B-it
+[2026-07-23T15:11:36+09:00] INFO: gemma chunk 3/3: target pages 68-76 | est_tokens=10358
+[2026-07-23T15:11:36+09:00] INFO: Gemma full JSON generation started: google/gemma-4-31B-it
+[2026-07-23T15:11:54+09:00] INFO: Gemma full JSON generation completed: google/gemma-4-31B-it
+[2026-07-23T15:11:54+09:00] INFO: toc saved: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/full_jason/2._-_4_-17_0723_150656_full_foc.json | chapters=293 | tokens(openai=41072, gemma=446151) | elapsed=4m 57.7s
+[2026-07-23T15:11:54+09:00] INFO: Created full TOC files: 1
+[2026-07-23T15:11:54+09:00] INFO: created: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/full_jason/2._-_4_-17_0723_150656_full_foc.json

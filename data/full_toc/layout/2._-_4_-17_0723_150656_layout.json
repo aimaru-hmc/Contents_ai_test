@@ -1,0 +1,182 @@
+{
+    "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/2. 교과서-신경학 4판-17장 파킨슨병.pdf",
+    "source_chunk": "full_pdf",
+    "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/2._-_4_-17_headings_parsed.txt",
+    "matching_priority": [
+        "numbering",
+        "S/R/B/I/F",
+        "X",
+        "Y",
+        "examples"
+    ],
+    "rules": [
+        {
+            "level": 1,
+            "s": 12.8,
+            "r": 1.35,
+            "b": 1,
+            "i": 0,
+            "f": "f7",
+            "x_min": 49.0,
+            "x_max": 318.0,
+            "y_min": 42.0,
+            "y_max": 640.0,
+            "start_shapes": [
+                "# "
+            ],
+            "reference_count": 12,
+            "examples": [
+                "1 이상운동질환 관련 해부학 신정환, 최성민",
+                "3 파킨슨증",
+                "10 보행장애",
+                "12 이상운동질환에서 수술치료"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 10.7,
+            "r": 1.13,
+            "b": 0,
+            "i": 0,
+            "f": "f5",
+            "x_min": 49.0,
+            "x_max": 315.0,
+            "y_min": 42.0,
+            "y_max": 710.0,
+            "start_shapes": [
+                "#) "
+            ],
+            "reference_count": 50,
+            "examples": [
+                "1) 기저핵의 구조와 기능",
+                "2) 이상운동증의 임상적 접근",
+                "4) 임상양상에 따른 떨림증후군의 분류(제1축)",
+                "8) 기능성이상운동질환"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 10.0,
+            "r": 1.05,
+            "b": 0,
+            "i": 0,
+            "f": "f5",
+            "x_min": 49.0,
+            "x_max": 315.0,
+            "y_min": 43.0,
+            "y_max": 724.0,
+            "start_shapes": [
+                "(#) "
+            ],
+            "reference_count": 126,
+            "examples": [
+                "(1) 기저핵의 정의와 명칭",
+                "(2) 운동과다",
+                "(10) 기능성떨림증후군",
+                "(11) 기타무도증"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 9.5,
+            "r": 1.0,
+            "b": 1,
+            "i": 0,
+            "f": "f3",
+            "x_min": 49.0,
+            "x_max": 315.0,
+            "y_min": 44.0,
+            "y_max": 724.0,
+            "start_shapes": [
+                "① ",
+                "② ",
+                "③ ",
+                "④ ",
+                "⑤ ",
+                "⑥ ",
+                "⑦ ",
+                "⑧ "
+            ],
+            "reference_count": 110,
+            "examples": [
+                "① 줄무늬체",
+                "② 뇌파검사와 유발전위검사",
+                "⑤ 비운동증상",
+                "⑧ 니만-피크병C형"
+            ]
+        }
+    ],
+    "contextual_heading_candidates": [
+        {
+            "level": 4,
+            "chapter": "Charlevoix-Saguenay (ARSACS)",
+            "page": 45,
+            "source_order": 4,
+            "evidence": [
+                "continuation of immediately preceding circled-number bold heading",
+                "same font size/style as level 4 rule",
+                "indented under ⑦ A utosomal recessive spastic ataxia of",
+                "should be merged with previous heading rather than treated as body text"
+            ]
+        }
+    ],
+    "unmatched_reference_titles": [],
+    "_api_usage": {
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "usage": {
+            "prompt_tokens": 37601,
+            "completion_tokens": 3471,
+            "total_tokens": 41072,
+            "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+                "reasoning_tokens": 2561,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+            }
+        },
+        "prompt_tokens": 37601,
+        "completion_tokens": 3471,
+        "total_tokens": 41072
+    },
+    "_meta": {
+        "source_pdf": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/2. 교과서-신경학 4판-17장 파킨슨병.pdf",
+        "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/2._-_4_-17_headings_parsed.txt",
+        "parsed_created": false,
+        "provider_layout": "openai",
+        "openai_layout_model": "gpt-5.5",
+        "generated_at": "2026-07-23T15:07:45+09:00",
+        "generation_started_at": "2026-07-23T15:06:56+09:00",
+        "generation_completed_at": "2026-07-23T15:07:45+09:00",
+        "elapsed_seconds": 48.858,
+        "elapsed": "48.9s",
+        "api_usage": {
+            "layout_generation": {
+                "provider": "openai",
+                "model": "gpt-5.5",
+                "usage": {
+                    "prompt_tokens": 37601,
+                    "completion_tokens": 3471,
+                    "total_tokens": 41072,
+                    "prompt_tokens_details": {
+                        "cached_tokens": 0,
+                        "audio_tokens": 0
+                    },
+                    "completion_tokens_details": {
+                        "reasoning_tokens": 2561,
+                        "audio_tokens": 0,
+                        "accepted_prediction_tokens": 0,
+                        "rejected_prediction_tokens": 0
+                    }
+                },
+                "prompt_tokens": 37601,
+                "completion_tokens": 3471,
+                "total_tokens": 41072
+            }
+        }
+    }
+}
