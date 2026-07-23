@@ -758,6 +758,7 @@ def build_token_limit_chunks(
         end = best_end
         context_start, context_end, chunk_text = page_chunk_text(blocks, start, end, overlap_pages)
         target_tokens = sum_range(page_tokens, start, end)
+        target_context_tokens = sum_range(extra_page_tokens, start, end)
         context_tokens = sum_range(combined_page_tokens, context_start, context_end)
         if context_tokens > token_limit:
             log_error(
