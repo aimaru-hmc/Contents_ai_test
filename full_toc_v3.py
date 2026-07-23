@@ -89,6 +89,11 @@ HEADING_PATTERNS = (
     re.compile(r"^[A-Z]\.\s+[A-Za-z가-힣]"),
 )
 AUTHOR_LINE_RE = re.compile(r"^[가-힣]{2,4}(?:,\s*[가-힣]{2,4})+(?:\s*\(.+\))?$")
+EXPLANATORY_DELIMITERS = (":", "：", " - ", " – ", " — ")
+EXPLANATORY_PROSE_MARKERS = (
+    "한다", "된다", "있다", "없다", "이며", "이고", "하고", "하며", "에서", "에게", "으로", "로서",
+    "because", "which", "that", "with", "without", "patients", "disease", "syndrome",
+)
 RETRYABLE_ERROR_MARKERS = (
     "429", "RESOURCE_EXHAUSTED", "RATE LIMIT", "500", "INTERNAL", "502", "503",
     "UNAVAILABLE", "HIGH DEMAND", "OVERLOADED", "TRY AGAIN LATER", "504",
@@ -284,6 +289,25 @@ def page_has_two_columns(page: Any, split_x: float, min_chars_per_side: int = 80
     return left >= min_chars_per_side and right >= min_chars_per_side and left / total >= 0.25 and right / total >= 0.25
 
 
+def looks_like_explanatory_body(text: str) -> bool:
+    text = clean_text(text)
+    if not text:
+        return False
+    for delimiter in EXPLANATORY_DELIMITERS:
+        if delimiter not in text:
+            continue
+        before, after = text.split(delimiter, 1)
+        before = clean_text(before)
+        after = clean_text(after)
+        if len(before) < 2 or len(after) < 8:
+            continue
+        if any(marker.lower() in after.lower() for marker in EXPLANATORY_PROSE_MARKERS):
+            return True
+        if len(after) >= 16 and re.search(r"[가-힣]{2,}", after):
+            return True
+    return False
+
+
 def is_heading_like(
     text: str,
     *,
@@ -293,6 +317,7 @@ def is_heading_like(
     body_size: float,
     max_heading_chars: int,
     drop_author_lines: bool,
+    drop_explanatory_lines: bool,
 ) -> bool:
     text = clean_text(text)
     if not text:
@@ -312,7 +337,7 @@ def is_heading_like(
     return False
 
 
-def should_keep_formatted_line(formatted: str, *, max_heading_chars: int, drop_author_lines: bool) -> bool:
+def should_keep_formatted_line(formatted: str, *, max_heading_chars: int, drop_author_lines: bool, drop_explanatory_lines: bool) -> bool:
     match = LINE_RE.match(formatted.strip())
     if not match:
         return False
@@ -332,10 +357,11 @@ def should_keep_formatted_line(formatted: str, *, max_heading_chars: int, drop_a
         body_size=body_size,
         max_heading_chars=max_heading_chars,
         drop_author_lines=drop_author_lines,
+        drop_explanatory_lines=drop_explanatory_lines,
     )
 
 
-def extract_region_lines(page: Any, bbox: tuple[float, float, float, float] | None, body_size: float, font_ids: dict[str, str], column: str | None, *, parse_mode: str = "full", max_heading_chars: int = 140, drop_author_lines: bool = True) -> list[str]:
+def extract_region_lines(page: Any, bbox: tuple[float, float, float, float] | None, body_size: float, font_ids: dict[str, str], column: str | None, *, parse_mode: str = "full", max_heading_chars: int = 140, drop_author_lines: bool = True, drop_explanatory_lines: bool = True) -> list[str]:
     region = page.crop(bbox) if bbox else page
     try:
         raw_lines = region.extract_text_lines(layout=False, return_chars=True)
@@ -346,7 +372,7 @@ def extract_region_lines(page: Any, bbox: tuple[float, float, float, float] | No
         if not isinstance(line, dict):
             continue
         formatted = format_layout_line(line=line, body_size=body_size, font_ids=font_ids, column=column)
-        if formatted and (parse_mode != "headings" or should_keep_formatted_line(formatted, max_heading_chars=max_heading_chars, drop_author_lines=drop_author_lines)):
+        if formatted and (parse_mode != "headings" or should_keep_formatted_line(formatted, max_heading_chars=max_heading_chars, drop_author_lines=drop_author_lines, drop_explanatory_lines=drop_explanatory_lines)):
             formatted_lines.append(formatted)
     return formatted_lines
 
@@ -360,6 +386,7 @@ def extract_pdf_layout_pages(
     parse_mode: str = "full",
     max_heading_chars: int = 140,
     drop_author_lines: bool = True,
+    drop_explanatory_lines: bool = True,
 ) -> tuple[list[tuple[int, str]], dict[str, Any]]:
     try:
         import pdfplumber
@@ -390,10 +417,10 @@ def extract_pdf_layout_pages(
                 gap = max(0.0, float(column_gap))
                 left_bbox = (0.0, 0.0, max(0.0, split_x - gap / 2.0), height)
                 right_bbox = (min(width, split_x + gap / 2.0), 0.0, width, height)
-                formatted_lines.extend(extract_region_lines(page, left_bbox, body_size, font_ids, "L", parse_mode=parse_mode, max_heading_chars=max_heading_chars, drop_author_lines=drop_author_lines))
-                formatted_lines.extend(extract_region_lines(page, right_bbox, body_size, font_ids, "R", parse_mode=parse_mode, max_heading_chars=max_heading_chars, drop_author_lines=drop_author_lines))
+                formatted_lines.extend(extract_region_lines(page, left_bbox, body_size, font_ids, "L", parse_mode=parse_mode, max_heading_chars=max_heading_chars, drop_author_lines=drop_author_lines, drop_explanatory_lines=drop_explanatory_lines))
+                formatted_lines.extend(extract_region_lines(page, right_bbox, body_size, font_ids, "R", parse_mode=parse_mode, max_heading_chars=max_heading_chars, drop_author_lines=drop_author_lines, drop_explanatory_lines=drop_explanatory_lines))
             else:
-                formatted_lines.extend(extract_region_lines(page, None, body_size, font_ids, None, parse_mode=parse_mode, max_heading_chars=max_heading_chars, drop_author_lines=drop_author_lines))
+                formatted_lines.extend(extract_region_lines(page, None, body_size, font_ids, None, parse_mode=parse_mode, max_heading_chars=max_heading_chars, drop_author_lines=drop_author_lines, drop_explanatory_lines=drop_explanatory_lines))
 
             if formatted_lines:
                 for formatted in formatted_lines:
@@ -414,6 +441,7 @@ def extract_pdf_layout_pages(
         "parse_mode": parse_mode,
         "max_heading_chars": max_heading_chars,
         "drop_author_lines": drop_author_lines,
+        "drop_explanatory_lines": drop_explanatory_lines,
         "column_mode": column_mode,
         "column_split_x": column_split_x,
         "column_gap": column_gap,
@@ -579,10 +607,13 @@ The layout JSON was generated from the parsed PDF by OpenAI and provides heading
 - For body-like typography, use context: parent heading, line brevity, standalone placement, following explanatory paragraphs, and neighboring heading sequence.
 - Never reject a heading only because its S/R/B/I/F style or target level is absent from Layout JSON.
 - For an unseen style, infer heading candidacy and level from numbering hierarchy, indentation and position, typographic contrast, neighboring headings, and parent-child sequence.
-- Use only text that appears in [Parsed PDF Layout Text]. Do not invent, rewrite, summarize, or trim titles.
-- Preserve original numbering and title text exactly.
+- Use heading titles from [Parsed PDF Layout Text]. Do not invent, rewrite, summarize, or trim titles.
+- Exception: if a candidate heading in [Parsed PDF Layout Text] is visibly truncated at a line break, and the immediately following line in [Full Parsed PDF Body Context] is clearly a continuation of the same heading, append that continuation exactly.
+- Only append a continuation when it is adjacent in the same page/column context, has heading-like typography or indentation continuity, and completes a noun phrase/title rather than explanatory prose.
+- Never append body sentences, definitions, examples, captions, or explanatory text.
+- Preserve original numbering and title text exactly, including any appended continuation text.
+- If a candidate is an explanatory body/list line rather than a standalone heading, exclude it. Do not trim the explanatory part to turn it into a heading.
 - Exclude covers, prefaces, existing TOC listing rows, indexes, page numbers, repeated headers/footers, captions, body sentences, and inline list items.
-- Exclude numbered/circled list items when the full body context shows the line continues as explanatory prose rather than a standalone heading.
 - Existing TOC/Contents pages may help you understand structure, but do not output listing rows unless the same title appears as a real body heading.
 - Preserve PDF page order and source order within each page.
 - Every parsed layout line has a page-local source_order. Copy the exact source_order of the selected heading line from [Parsed PDF Layout Text].
@@ -1112,6 +1143,44 @@ def match_toc_source_line(title: str, page_lines: list[Line]) -> Line | None:
     return max(ranked, key=lambda item: item[:3])[3] if ranked else None
 
 
+def find_toc_source_line_any_page(title: str, parsed_lines: list[Line]) -> Line | None:
+    wanted = norm(title)
+    if not wanted:
+        return None
+    exact = [line for line in parsed_lines if norm(line.text) == wanted]
+    if len(exact) == 1:
+        return exact[0]
+    starts = [line for line in parsed_lines if norm(line.text).startswith(wanted)]
+    if len(starts) == 1:
+        return starts[0]
+    contains = [line for line in parsed_lines if wanted in norm(line.text)]
+    if len(contains) == 1:
+        return contains[0]
+    return None
+
+
+def args_drop_explanatory_lines_enabled(toc: dict[str, Any]) -> bool:
+    meta = toc.get("_runtime_options") if isinstance(toc, dict) else None
+    if isinstance(meta, dict):
+        return bool(meta.get("drop_explanatory_lines", True))
+    return True
+
+
+def source_metadata_for_line(line: Line) -> dict[str, Any]:
+    return {
+        "matched_parsed_layout": True,
+        "source_order": line.order,
+        "s": line.s,
+        "r": line.r,
+        "x": line.x,
+        "y": line.y,
+        "b": line.b,
+        "i": line.i,
+        "f": line.f,
+        "source_text": line.text,
+    }
+
+
 def attach_layout_metadata_and_sort(toc: dict[str, Any], parsed_lines: list[Line]) -> dict[str, Any]:
     pages: dict[int, list[Line]] = defaultdict(list)
     lines_by_id: dict[tuple[int, int], Line] = {}
@@ -1123,7 +1192,10 @@ def attach_layout_metadata_and_sort(toc: dict[str, Any], parsed_lines: list[Line
         if not isinstance(item, dict):
             continue
         row = dict(item)
-        page = int(row.get("page", 1))
+        try:
+            page = int(row.get("page", 1))
+        except (TypeError, ValueError):
+            page = 1
         try:
             requested_source_order = int(row.pop("source_order"))
         except (KeyError, TypeError, ValueError):
@@ -1131,32 +1203,60 @@ def attach_layout_metadata_and_sort(toc: dict[str, Any], parsed_lines: list[Line
         line = lines_by_id.get((page, requested_source_order)) if requested_source_order is not None else None
         if line is None:
             line = match_toc_source_line(clean_text(row.get("chapter")), pages.get(page, []))
+        corrected_page = False
+        if line is None:
+            line = find_toc_source_line_any_page(clean_text(row.get("chapter")), parsed_lines)
+            if line is not None:
+                corrected_page = True
         if line is None:
             row["metadata"] = {"matched_parsed_layout": False, "source_order": None}
             sort_order = math.inf
             sort_y = math.inf
         else:
-            row["metadata"] = {
-                "matched_parsed_layout": True,
-                "source_order": line.order,
-                "s": line.s,
-                "r": line.r,
-                "x": line.x,
-                "y": line.y,
-                "b": line.b,
-                "i": line.i,
-                "f": line.f,
-                "source_text": line.text,
-            }
+            if corrected_page or page != line.page:
+                row["page"] = line.page
+                reason = clean_text(row.get("level_reason"))
+                correction_note = f"Page corrected from {page} to {line.page} by parsed layout match."
+                row["level_reason"] = f"{reason} {correction_note}".strip()
+                page = line.page
+            row["metadata"] = source_metadata_for_line(line)
+            if corrected_page:
+                row["metadata"]["page_corrected"] = True
             sort_order = line.order
             sort_y = line.y
-        row["_sort_key"] = (page, sort_order, sort_y, merge_index)
+        row["_sort_key"] = (int(row.get("page", page) or page), sort_order, sort_y, merge_index)
         chapters.append(row)
-    chapters.sort(key=lambda item: item["_sort_key"])
-    for item in chapters:
+
+    deduped: list[dict[str, Any]] = []
+    seen_line_keys: set[tuple[int, int, str]] = set()
+    seen_title_page: set[tuple[str, int]] = set()
+    for row in chapters:
+        metadata = row.get("metadata") if isinstance(row.get("metadata"), dict) else {}
+        title_key = norm(row.get("chapter"))
+        try:
+            page_key = int(row.get("page", 1))
+        except (TypeError, ValueError):
+            page_key = 1
+        source_order = metadata.get("source_order")
+        if metadata.get("matched_parsed_layout") and source_order is not None:
+            key = (page_key, int(source_order), title_key)
+            if key in seen_line_keys:
+                continue
+            seen_line_keys.add(key)
+        title_page_key = (title_key, page_key)
+        if title_page_key in seen_title_page:
+            continue
+        seen_title_page.add(title_page_key)
+        if not metadata.get("matched_parsed_layout"):
+            continue
+        deduped.append(row)
+
+    deduped.sort(key=lambda item: item["_sort_key"])
+    for item in deduped:
         item.pop("_sort_key", None)
     result = dict(toc)
-    result["chapters"] = chapters
+    result.pop("_runtime_options", None)
+    result["chapters"] = deduped
     return result
 
 
