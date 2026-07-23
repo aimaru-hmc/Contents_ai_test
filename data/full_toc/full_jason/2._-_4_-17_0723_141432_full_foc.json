@@ -1,0 +1,5665 @@
+{
+    "title": "2. 교과서-신경학 4판-17장 파킨슨병",
+    "chapters": [
+        {
+            "level": 1,
+            "chapter": "파킨슨병 및 이상운동질환",
+            "page": 1,
+            "level_reason": "Matched layout rule for level 1 (chapter title).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 33.0,
+                "r": 3.67,
+                "x": 144.0,
+                "y": 98.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "파킨슨병 및 이"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "1 이상운동질환 관련 해부학 신정환, 최성민",
+            "page": 1,
+            "level_reason": "Matched layout rule for level 2 (numbered section).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 12.8,
+                "r": 1.42,
+                "x": 53.0,
+                "y": 414.0,
+                "b": 1,
+                "i": 0,
+                "f": "f7",
+                "source_text": "1 이상운동질환 관련 해부학 신정환, 최성민"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1) 기저핵의 구조와 기능",
+            "page": 1,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 10.7,
+                "r": 1.19,
+                "x": 50.0,
+                "y": 442.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "1) 기저핵의 구조와 기능"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 기저핵의 정의와 명칭",
+            "page": 1,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 10.0,
+                "r": 1.11,
+                "x": 50.0,
+                "y": 458.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 기저핵의 정의와 명칭"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 기저핵의 세부 구성",
+            "page": 1,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 20,
+                "s": 10.0,
+                "r": 1.11,
+                "x": 315.0,
+                "y": 650.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 기저핵의 세부 구성"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 줄무늬체",
+            "page": 1,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 21,
+                "s": 9.5,
+                "r": 1.06,
+                "x": 315.0,
+                "y": 665.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 줄무늬체"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 창백핵",
+            "page": 2,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 488.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 창백핵"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 흑색질",
+            "page": 2,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 577.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 흑색질"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 시상밑핵",
+            "page": 2,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 384.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "④ 시상밑핵"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 기저핵회로의 연결",
+            "page": 3,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.18,
+                "x": 50.0,
+                "y": 325.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 기저핵회로의 연결"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 기저핵으로의 입력",
+            "page": 4,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 221.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 기저핵으로의 입력"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 기저핵으로부터의 출력",
+            "page": 4,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 443.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 기저핵으로부터의 출력"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 기저핵회로의 기능",
+            "page": 4,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 502.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 기저핵회로의 기능"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 병렬 회로",
+            "page": 4,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 517.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 병렬 회로"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 기저핵의 운동 프로그램 선택 및 수행 메커니즘",
+            "page": 5,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.12,
+                "x": 50.0,
+                "y": 621.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 기저핵의 운동 프로그램 선택 및 수행 메커니즘"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2) 소뇌의 구조와 기능",
+            "page": 6,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 10.7,
+                "r": 1.26,
+                "x": 50.0,
+                "y": 353.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "2) 소뇌의 구조와 기능"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 소뇌의 구조",
+            "page": 6,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 10.0,
+                "r": 1.18,
+                "x": 50.0,
+                "y": 369.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 소뇌의 구조"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 소뇌운동회로",
+            "page": 6,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 31,
+                "s": 10.0,
+                "r": 1.18,
+                "x": 315.0,
+                "y": 473.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 소뇌운동회로"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 피질-소뇌-피질회로",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.12,
+                "x": 49.0,
+                "y": 355.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 피질-소뇌-피질회로"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 치상핵-적핵-올리브회로",
+            "page": 7,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.12,
+                "x": 49.0,
+                "y": 651.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 치상핵-적핵-올리브회로"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 소뇌의 기능",
+            "page": 8,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.18,
+                "x": 50.0,
+                "y": 473.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 소뇌의 기능"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "2 이상운동증 접근법 권도영, 박정호",
+            "page": 8,
+            "level_reason": "Matched layout rule for level 2 (numbered section).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 12.4,
+                "r": 1.46,
+                "x": 318.0,
+                "y": 370.0,
+                "b": 1,
+                "i": 0,
+                "f": "f7",
+                "source_text": "2 이상운동증 접근법 권도영, 박정호"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1) 이상운동증 현상학",
+            "page": 8,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.7,
+                "r": 1.26,
+                "x": 315.0,
+                "y": 397.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "1) 이상운동증 현상학"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 운동감소",
+            "page": 9,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 606.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 운동감소"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 운동과다",
+            "page": 9,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 221.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 운동과다"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2) 이상운동증의 임상적 접근",
+            "page": 10,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 101.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "2) 이상운동증의 임상적 접근"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3) 이상운동질환에 사용되는 검사",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 146.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "3) 이상운동질환에 사용되는 검사"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 신경생리검사",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 265.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 신경생리검사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 근전도검사",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 369.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 근전도검사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 뇌파검사와 유발전위검사",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 177.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 뇌파검사와 유발전위검사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 자율신경검사",
+            "page": 12,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 488.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 자율신경검사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 전기안진검사/비디오안구운동검사",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 44.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "④ 전기안진검사/비디오안구운동검사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑤ 두개경유자기자극",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 355.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑤ 두개경유자기자극"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 신경영상검사",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 576.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 신경영상검사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 자기공명영상",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 591.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 자기공명영상"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 양전자방출컴퓨터단층촬영과 단일광자방출컴퓨터단층촬영",
+            "page": 13,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 369.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 양전자방출컴퓨터단층촬영과 단일광자방출컴퓨터단층촬영"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 두개경유초음파검사",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 103.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 두개경유초음파검사"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 보행검사",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 236.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 보행검사"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 반정량보행평가",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 251.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 반정량보행평가"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 검사실에서의 보행분석",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 458.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 검사실에서의 보행분석"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "3 파킨슨증",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 2 (numbered section).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.8,
+                "r": 1.35,
+                "x": 318.0,
+                "y": 44.0,
+                "b": 1,
+                "i": 0,
+                "f": "f7",
+                "source_text": "3 파킨슨증"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1) 파킨슨병",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 190.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "1) 파킨슨병"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 역학",
+            "page": 14,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 206.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 역학"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 원인",
+            "page": 15,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 10.0,
+                "r": 1.22,
+                "x": 50.0,
+                "y": 177.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 원인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 병리 소견",
+            "page": 15,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 9.5,
+                "r": 1.16,
+                "x": 50.0,
+                "y": 192.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 병리 소견"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 유전요인",
+            "page": 15,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 9.5,
+                "r": 1.16,
+                "x": 315.0,
+                "y": 207.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 유전요인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 임상 증상",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 43.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 임상 증상"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 떨림",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 59.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 떨림"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 경축",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 532.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 경축"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 운동완만",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 680.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 운동완만"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 자세와 보행",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 133.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "④ 자세와 보행"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑤ 비운동증상",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 399.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑤ 비운동증상"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 진단",
+            "page": 16,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 695.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 진단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 약물치료",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 43.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(5) 약물치료"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 레보도파",
+            "page": 17,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 266.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 레보도파"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 도파민작용제",
+            "page": 18,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 73.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 도파민작용제"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 단가아민산화효소B억제제",
+            "page": 18,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 517.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 단가아민산화효소B억제제"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 항콜린제",
+            "page": 18,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 44.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "④ 항콜린제"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑤ 아만타딘",
+            "page": 18,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 177.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑤ 아만타딘"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑥ COMT억제제",
+            "page": 18,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 355.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑥ COMT억제제"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(6) 파킨슨병의 수술치료",
+            "page": 18,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 621.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(6) 파킨슨병의 수술치료"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2) 비정형파킨슨증",
+            "page": 19,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 42.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "2) 비정형파킨슨증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 진행핵상마비",
+            "page": 19,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 295.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 진행핵상마비"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 진행핵상마비의 임상증상 및 영상소견",
+            "page": 19,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 517.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 진행핵상마비의 임상증상 및 영상소견"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 진행핵상마비의 병리",
+            "page": 19,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 636.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 진행핵상마비의 병리"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 진행핵상마비의 치료",
+            "page": 20,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 44.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 진행핵상마비의 치료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 다계통위축증",
+            "page": 20,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 162.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 다계통위축증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 다계통위축증의 임상증상 및 영상소견",
+            "page": 20,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 414.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 다계통위축증의 임상증상 및 영상소견"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 다계통위축증의 병리",
+            "page": 20,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 621.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 다계통위축증의 병리"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 다계통위축증의 치료",
+            "page": 21,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 133.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 다계통위축증의 치료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 피질기저핵증후군",
+            "page": 21,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 369.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 피질기저핵증후군"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 피질기저핵증후군의 임상증상 및 영상소견",
+            "page": 21,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 621.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 피질기저핵증후군의 임상증상 및 영상소견"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 피질기저핵증후군의 병리",
+            "page": 21,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 399.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 피질기저핵증후군의 병리"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 피질기저핵증후군의 치료",
+            "page": 21,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 636.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 피질기저핵증후군의 치료"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3) 이차파킨슨증",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 42.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "3) 이차파킨슨증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 약물유발파킨슨증",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 58.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 약물유발파킨슨증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 혈관파킨슨증",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 43.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 혈관파킨슨증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 정상압수두증",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 354.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 정상압수두증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 독성물질에 의한 파킨슨증",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 532.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 독성물질에 의한 파킨슨증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 중금속(망간, 납)중독에 의한 파킨슨증",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 547.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 중금속(망간, 납)중독에 의한 파킨슨증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 일산화탄소중독에 의한 파킨슨증",
+            "page": 22,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 695.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 일산화탄소중독에 의한 파킨슨증"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "4 떨림",
+            "page": 23,
+            "level_reason": "Matched layout rule for level 2 (numbered section).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 12.8,
+                "r": 1.35,
+                "x": 53.0,
+                "y": 148.0,
+                "b": 1,
+                "i": 0,
+                "f": "f7",
+                "source_text": "4 떨림"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1) 떨림의 정의",
+            "page": 23,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 175.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "1) 떨림의 정의"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2) 생리적떨림의 기전",
+            "page": 23,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 279.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "2) 생리적떨림의 기전"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3) 떨림의 진단",
+            "page": 23,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 649.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "3) 떨림의 진단"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4) 임상양상에 따른 떨림증후군의 분류(제1축)",
+            "page": 23,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 294.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "4) 임상양상에 따른 떨림증후군의 분류(제1축)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 발병연령",
+            "page": 23,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 413.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 발병연령"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 신체부위",
+            "page": 23,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 487.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 신체부위"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 떨림 유발상황",
+            "page": 23,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 591.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 떨림 유발상황"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 안정떨림",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 295.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 안정떨림"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 활동떨림",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 547.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 활동떨림"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 떨림진동수",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 325.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 떨림진동수"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 동반된 신경학적 징후",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 547.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(5) 동반된 신경학적 징후"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "5) 발병 원인에 따른 떨림의 분류(제2축)",
+            "page": 25,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 678.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "5) 발병 원인에 따른 떨림의 분류(제2축)"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "6) 제1축 떨림증후군의 종류",
+            "page": 26,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.7,
+                "r": 1.3,
+                "x": 49.0,
+                "y": 590.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "6) 제1축 떨림증후군의 종류"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 본태떨림",
+            "page": 26,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 10.0,
+                "r": 1.22,
+                "x": 49.0,
+                "y": 606.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 본태떨림"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 본태떨림의 분류",
+            "page": 26,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 9.5,
+                "r": 1.16,
+                "x": 49.0,
+                "y": 621.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 본태떨림의 분류"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 본태떨림의 원인",
+            "page": 27,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 503.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 본태떨림의 원인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 본태떨림의 치료",
+            "page": 27,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 133.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 본태떨림의 치료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 항진된생리적떨림",
+            "page": 27,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 384.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 항진된생리적떨림"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 단독안정떨림증후군",
+            "page": 27,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 561.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 단독안정떨림증후군"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 입천장떨림",
+            "page": 27,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 680.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 입천장떨림"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 작업특이떨림",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 280.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(5) 작업특이떨림"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(6) 기립떨림",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 428.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(6) 기립떨림"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(7) 근긴장이상떨림",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 591.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(7) 근긴장이상떨림"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(8) 파킨슨증을 동반하는 떨림",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 251.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(8) 파킨슨증을 동반하는 떨림"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(9) Holmes떨림",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 399.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(9) Holmes떨림"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(10) 기능성떨림증후군",
+            "page": 28,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 547.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(10) 기능성떨림증후군"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "5 근긴장이상증",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 2 (numbered section).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 12.8,
+                "r": 1.35,
+                "x": 53.0,
+                "y": 44.0,
+                "b": 1,
+                "i": 0,
+                "f": "f7",
+                "source_text": "5 근긴장이상증"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1) 근긴장이상증의 임상 특징",
+            "page": 29,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 131.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "1) 근긴장이상증의 임상 특징"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2) 근긴장이상증의 병태생리",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 160.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "2) 근긴장이상증의 병태생리"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3) 근긴장이상증의 분류",
+            "page": 30,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 442.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "3) 근긴장이상증의 분류"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "4) 도 파반응근긴장이상증",
+            "page": 31,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 10.7,
+                "r": 1.26,
+                "x": 49.0,
+                "y": 220.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "4) 도 파반응근긴장이상증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "5) 근간대경련-근긴장이상증",
+            "page": 32,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 116.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "5) 근간대경련-근긴장이상증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "6) 급속발병근긴장이상증-파킨슨증",
+            "page": 32,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 249.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "6) 급속발병근긴장이상증-파킨슨증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "7) 근긴장이상증의 치료",
+            "page": 32,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 412.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "7) 근긴장이상증의 치료"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "6 무도증",
+            "page": 32,
+            "level_reason": "Matched layout rule for level 2 (numbered section).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 12.8,
+                "r": 1.35,
+                "x": 53.0,
+                "y": 636.0,
+                "b": 1,
+                "i": 0,
+                "f": "f7",
+                "source_text": "6 무도증"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1) 무도증의 정의, 양상",
+            "page": 32,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 664.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "1) 무도증의 정의, 양상"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2) 감별진단",
+            "page": 32,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 190.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "2) 감별진단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 소아무도증의 감별진단",
+            "page": 32,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 487.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 소아무도증의 감별진단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 성인 무도증의 감별진단",
+            "page": 33,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 413.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 성인 무도증의 감별진단"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3) 유전성 무도증",
+            "page": 33,
+            "level_reason": "Matched layout rule for level 3 (numbered subsection).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 412.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "3) 유전성 무도증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 보통염색체우성",
+            "page": 33,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 428.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 보통염색체우성"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 헌팅턴병",
+            "page": 33,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 443.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 헌팅턴병"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 보통염샘체열성 혹은 X-연관유전",
+            "page": 33,
+            "level_reason": "Matched layout rule for level 4 (parenthesized numbering).",
+            "metadata": {
+                "matched_parsed_layout": false,
+                "source_order": null
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 윌슨병",
+            "page": 33,
+            "level_reason": "Matched layout rule for level 5 (circled numbering).",
+            "metadata": {
+                "matched_parsed_layout": false,
+                "source_order": null
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 척수소뇌실조",
+            "page": 34,
+            "level_reason": "Matched layout rule for level 5 (circled number '②').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 384.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 척수소뇌실조"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 치아적핵창백핵루이체위축증",
+            "page": 34,
+            "level_reason": "Matched layout rule for level 5 (circled number '③').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 503.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 치아적핵창백핵루이체위축증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 파르병",
+            "page": 34,
+            "level_reason": "Matched layout rule for level 5 (circled number '④').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 665.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "④ 파르병"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑤ 신경페리티노병증",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑤').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 73.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑤ 신경페리티노병증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑥ 양성유전무도증",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑥').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 207.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑥ 양성유전무도증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑦ 1형당전달체결핍증후군",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑦').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 340.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑦ 1형당전달체결핍증후군"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑧ 유사헌팅턴병1, 2",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑧').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 488.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑧ 유사헌팅턴병1, 2"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 보통염샘체열성 혹은 X-연관유전",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 4 (numbering '(2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 635.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 보통염샘체열성 혹은 X-연관유전"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 윌슨병",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 5 (circled number '①').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 651.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 윌슨병"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 무세룰로플라스민혈증",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 5 (circled number '②').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 73.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 무세룰로플라스민혈증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 판토텐산키나아제연관신경변성증",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 5 (circled number '③').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 192.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 판토텐산키나아제연관신경변성증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 가시적혈구무도증",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 5 (circled number '④').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 310.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "④ 가시적혈구무도증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑤ 맥레오드증후군",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑤').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 503.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑤ 맥레오드증후군"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4) 후천무도증",
+            "page": 35,
+            "level_reason": "Matched layout rule for level 3 (numbering '4)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 15,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 664.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "4) 후천무도증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 혈관무도증",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 4 (numbering '(1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 325.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 혈관무도증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 감염무도증",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 4 (numbering '(2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 487.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 감염무도증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 자가면역무도증",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 4 (numbering '(3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 325.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 자가면역무도증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 신생물딸림항체관련무도증",
+            "page": 36,
+            "level_reason": "Matched layout rule for level 4 (numbering '(4)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 591.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 신생물딸림항체관련무도증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 내분비/대사무도증",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 4 (numbering '(5)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 43.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(5) 내분비/대사무도증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(6) 혈액종양무도증",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 4 (numbering '(6)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 325.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(6) 혈액종양무도증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(7) 탈수초무도증",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 4 (numbering '(7)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 473.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(7) 탈수초무도증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(8) 영양결핍과 연관된 무도증",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 4 (numbering '(8)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 606.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(8) 영양결핍과 연관된 무도증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(9) 저산소뇌병증관련무도증",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 4 (numbering '(9)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 695.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(9) 저산소뇌병증관련무도증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(10) 약물/독성관련무도증",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 4 (numbering '(10)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 117.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(10) 약물/독성관련무도증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(11) 기타무도증",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 4 (numbering '(11)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 236.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(11) 기타무도증"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "7 근간대경련 강석윤",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 2 (numbering '7' and bold font).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 12.8,
+                "r": 1.35,
+                "x": 318.0,
+                "y": 384.0,
+                "b": 1,
+                "i": 0,
+                "f": "f7",
+                "source_text": "7 근간대경련 강석윤"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1) 근간대경련의 분류",
+            "page": 37,
+            "level_reason": "Matched layout rule for level 3 (numbering '1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 604.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "1) 근간대경련의 분류"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 원인에 따른 분류",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 4 (numbering '(1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 458.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 원인에 따른 분류"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 생리적근간대경련physiologic myoclonus",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 5 (circled number '①').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 8.7,
+                "r": 0.91,
+                "x": 50.0,
+                "y": 471.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "① 생리적근간대경련physiologic myoclonus: 건강한 사람에게 종종 발"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 본태근간대경련essential myoclonus",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 5 (circled number '②').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 516.0,
+                "b": 0,
+                "i": 0,
+                "f": "f8",
+                "source_text": "② 본태근간대경련essential myoclonus: 근간대경련이 주증상이면서"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 뇌전증근간대경련epileptic myoclonus",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 5 (circled number '③').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 7.8,
+                "r": 0.82,
+                "x": 50.0,
+                "y": 575.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "③ 뇌전증근간대경련epileptic myoclonus: 청소년근간대뇌전증juvenile"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 증상성근간대경련symptomatic myoclonus",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 5 (circled number '④').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 7.8,
+                "r": 0.82,
+                "x": 50.0,
+                "y": 619.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "④ 증상성근간대경련symptomatic myoclonus: 가장 흔한 형태로 내과"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑤ 심인성 혹은 기능성psychogenic, functional",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑤').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 7.8,
+                "r": 0.82,
+                "x": 315.0,
+                "y": 383.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "⑤ 심인성 혹은 기능성psychogenic, functional: 저절로 발생하기도 하"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 신경생리적특징에 따른 분류",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 4 (numbering '(2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 502.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 신경생리적특징에 따른 분류"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 피질근간대경련cortical myoclonus",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 5 (circled number '①').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 516.0,
+                "b": 0,
+                "i": 0,
+                "f": "f8",
+                "source_text": "① 피질근간대경련cortical myoclonus: 가장 흔한 형태이다. 안면, 팔"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 피질-피질하근간대경련cortical-subcortical myoclonus",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 5 (circled number '②').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 7.8,
+                "r": 0.82,
+                "x": 315.0,
+                "y": 605.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "② 피질-피질하근간대경련cortical-subcortical myoclonus: 청소년근간"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 피질하비분절근간대경련subcortical nonsegmental myoclonus",
+            "page": 38,
+            "level_reason": "Matched layout rule for level 5 (circled number '③').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 7.8,
+                "r": 0.82,
+                "x": 315.0,
+                "y": 693.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "③ 피질하비분절근간대경련subcortical nonsegmental myoclonus: 임상"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 분절근간대경련segmental myoclonus",
+            "page": 39,
+            "level_reason": "Matched layout rule for level 5 (circled number '④').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 501.0,
+                "b": 0,
+                "i": 0,
+                "f": "f8",
+                "source_text": "④ 분절근간대경련segmental myoclonus: 신체일부에서만 국한되어"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑤ 말초근간대경련peripheral myoclonus",
+            "page": 39,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑤').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 7.8,
+                "r": 0.82,
+                "x": 50.0,
+                "y": 590.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "⑤ 말초근간대경련peripheral myoclonus: 신경, 신경총plexus, 신경뿌"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2) 근간대경련의 진단",
+            "page": 39,
+            "level_reason": "Matched layout rule for level 3 (numbering '2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 693.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "2) 근간대경련의 진단"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3) 근간대경련의 치료",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 3 (numbering '3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 264.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "3) 근간대경련의 치료"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "8 실조질환",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 2 (numbering '8' and bold font).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 12.8,
+                "r": 1.35,
+                "x": 53.0,
+                "y": 429.0,
+                "b": 1,
+                "i": 0,
+                "f": "f7",
+                "source_text": "8 실조질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1) 소뇌실조의 임상양상",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 3 (numbering '1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 604.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "1) 소뇌실조의 임상양상"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 운동제어능력의 저하와 측정이상",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 4 (numbering '(1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 621.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 운동제어능력의 저하와 측정이상"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 상반운동반복수행장애",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 4 (numbering '(2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 103.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 상반운동반복수행장애"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 보행 및 균형장애",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 4 (numbering '(3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 191.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 보행 및 균형장애"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 소뇌성조음장애",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 4 (numbering '(4)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 310.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 소뇌성조음장애"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 소뇌떨림",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 4 (numbering '(5)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 428.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(5) 소뇌떨림"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(6) 비정상안구운동",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 4 (numbering '(6)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 517.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(6) 비정상안구운동"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(7) 어지럼",
+            "page": 40,
+            "level_reason": "Matched layout rule for level 4 (numbering '(7)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 14,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 665.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(7) 어지럼"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2) 소뇌실조 질환의 분류",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 3 (numbering '2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 42.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "2) 소뇌실조 질환의 분류"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 급성산발실조",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 4 (numbering '(1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 295.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 급성산발실조"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 뇌혈관질환",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 5 (circled number '①').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 310.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 뇌혈관질환"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 약물",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 5 (circled number '②').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 429.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 약물"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 독성물질",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 5 (circled number '③').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 577.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 독성물질"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 감염 및 감염후소뇌염",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 5 (circled number '④').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 680.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "④ 감염 및 감염후소뇌염"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑤ 밀러피셔증후군",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑤').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 133.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑤ 밀러피셔증후군"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 아급성산발실조",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 4 (numbering '(2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 221.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 아급성산발실조"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 자가면역질환–신생물딸림증후군",
+            "page": 41,
+            "level_reason": "Matched layout rule for level 5 (circled number '①').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 236.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 자가면역질환–신생물딸림증후군"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 자가면역질환–비신생물딸림증후군",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 5 (circled number '②').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 103.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 자가면역질환–비신생물딸림증후군"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 내분비장애",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 5 (circled number '③').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 325.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 내분비장애"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 비타민결핍",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 5 (circled number '④').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 384.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "④ 비타민결핍"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑤ 비특이감염질환",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑤').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 503.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑤ 비특이감염질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 만성산발실조",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 4 (numbering '(3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 635.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 만성산발실조"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 비정형파킨슨증",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 5 (circled number '①').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 651.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 비정형파킨슨증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 산발성인발병실조",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 5 (circled number '②').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 44.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 산발성인발병실조"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 뇌종양",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 5 (circled number '③').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 207.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 뇌종양"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 알코올중독",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 5 (circled number '④').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 340.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "④ 알코올중독"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑤ 기타 질환",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑤').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 473.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑤ 기타 질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 보통염색체우성유전실조",
+            "page": 42,
+            "level_reason": "Matched layout rule for level 4 (numbering '(4)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 13,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 561.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 보통염색체우성유전실조"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 척수소뇌실조",
+            "page": 43,
+            "level_reason": "Matched layout rule for level 5 (circled number '①').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 44.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 척수소뇌실조"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 치아적색창백핵시상밑부위축",
+            "page": 43,
+            "level_reason": "Matched layout rule for level 5 (circled number '②').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 88.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 치아적색창백핵시상밑부위축"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 간헐실조",
+            "page": 43,
+            "level_reason": "Matched layout rule for level 5 (circled number '③').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 192.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 간헐실조"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 보통염색체열성유전실조",
+            "page": 44,
+            "level_reason": "Matched layout rule for level 4 (numbering '(5)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 117.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(5) 보통염색체열성유전실조"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 프리이드라이히실조",
+            "page": 44,
+            "level_reason": "Matched layout rule for level 5 (circled number '①').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 236.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 프리이드라이히실조"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 모세혈관확장실조",
+            "page": 44,
+            "level_reason": "Matched layout rule for level 5 (circled number '②').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 443.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 모세혈관확장실조"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 눈돌림실행증동반실조",
+            "page": 44,
+            "level_reason": "Matched layout rule for level 5 (circled number '③').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 636.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 눈돌림실행증동반실조"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 유전비타민E결핍",
+            "page": 44,
+            "level_reason": "Matched layout rule for level 5 (circled number '④').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 192.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "④ 유전비타민E결핍"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑤ 뇌힘줄황색종증",
+            "page": 44,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑤').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 384.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑤ 뇌힘줄황색종증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑥ 무베타지질단백혈증",
+            "page": 44,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑥').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 621.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑥ 무베타지질단백혈증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑦ A utosomal recessive spastic ataxia of Charlevoix-Saguenay (ARSACS)",
+            "page": 45,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑦' and multi-line heading).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 103.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑦ A utosomal recessive spastic ataxia of"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑧ 니만-피크병C형",
+            "page": 45,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑧').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 236.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑧ 니만-피크병C형"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(6) 실조유발사립체질환",
+            "page": 45,
+            "level_reason": "Matched layout rule for level 4 (numbering '(6)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 443.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(6) 실조유발사립체질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(7) 성염색체연관소뇌실조",
+            "page": 45,
+            "level_reason": "Matched layout rule for level 4 (numbering '(7)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 635.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(7) 성염색체연관소뇌실조"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3) 실조질환의 진단",
+            "page": 45,
+            "level_reason": "Matched layout rule for level 3 (numbering '3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 11,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 146.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "3) 실조질환의 진단"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4) 소뇌실조의 치료",
+            "page": 46,
+            "level_reason": "Matched layout rule for level 3 (numbering '4)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 545.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "4) 소뇌실조의 치료"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "9 기타 이상운동질환",
+            "page": 47,
+            "level_reason": "Matched layout rule for level 2 (numbering '9' and bold font).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 12.8,
+                "r": 1.35,
+                "x": 53.0,
+                "y": 281.0,
+                "b": 1,
+                "i": 0,
+                "f": "f7",
+                "source_text": "9 기타 이상운동질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1) 틱장애 및 뚜렛증후군",
+            "page": 47,
+            "level_reason": "Matched layout rule for level 3 (numbering '1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 323.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "1) 틱장애 및 뚜렛증후군"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2) 전신질환관련 이상운동증",
+            "page": 47,
+            "level_reason": "Matched layout rule for level 3 (numbering '2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 353.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "2) 전신질환관련 이상운동증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 간경화(만성후천간렌즈핵변성)",
+            "page": 47,
+            "level_reason": "Matched layout rule for level 4 (numbering '(1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 458.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 간경화(만성후천간렌즈핵변성)"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 신부전",
+            "page": 48,
+            "level_reason": "Matched layout rule for level 4 (numbering '(2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 310.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 신부전"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 갑상샘 및 부갑상샘 기능이상",
+            "page": 48,
+            "level_reason": "Matched layout rule for level 4 (numbering '(3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 43.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 갑상샘 및 부갑상샘 기능이상"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 갑상샘항진",
+            "page": 48,
+            "level_reason": "Matched layout rule for level 5 (circled number '①').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 59.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 갑상샘항진"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 그 외 갑상샘 및 부갑상샘 질환",
+            "page": 48,
+            "level_reason": "Matched layout rule for level 5 (circled number '②').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 236.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 그 외 갑상샘 및 부갑상샘 질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 당뇨병",
+            "page": 48,
+            "level_reason": "Matched layout rule for level 4 (numbering '(4)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 339.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 당뇨병"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 비케토산고혈당",
+            "page": 48,
+            "level_reason": "Matched layout rule for level 5 (circled number '①').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 355.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 비케토산고혈당"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 저혈당",
+            "page": 48,
+            "level_reason": "Matched layout rule for level 5 (circled number '②').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 577.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 저혈당"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 일산화탄소중독",
+            "page": 48,
+            "level_reason": "Matched layout rule for level 4 (numbering '(5)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 635.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(5) 일산화탄소중독"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3) 무기질관련이상운동질환",
+            "page": 49,
+            "level_reason": "Matched layout rule for level 3 (numbering '3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 471.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "3) 무기질관련이상운동질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 윌슨병",
+            "page": 49,
+            "level_reason": "Matched layout rule for level 4 (numbering '(1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 650.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 윌슨병"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 원인과 병태생리",
+            "page": 49,
+            "level_reason": "Matched layout rule for level 5 (circled number '①').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 665.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 원인과 병태생리"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 윌슨병의 임상증상: 신경계증상",
+            "page": 49,
+            "level_reason": "Matched layout rule for level 5 (circled number '②').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 310.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 윌슨병의 임상증상: 신경계증상"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 윌슨병의 임상증상: 비신경계증상",
+            "page": 50,
+            "level_reason": "Matched layout rule for level 5 (circled number '③').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 384.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 윌슨병의 임상증상: 비신경계증상"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 윌슨병의 진단",
+            "page": 50,
+            "level_reason": "Matched layout rule for level 5 (circled number '④').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 473.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "④ 윌슨병의 진단"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "⑤ 윌슨병의 치료",
+            "page": 51,
+            "level_reason": "Matched layout rule for level 5 (circled number '⑤').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 133.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "⑤ 윌슨병의 치료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 철축적신경변성증",
+            "page": 52,
+            "level_reason": "Matched layout rule for level 4 (numbering '(2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 191.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 철축적신경변성증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 정의와 원인",
+            "page": 52,
+            "level_reason": "Matched layout rule for level 5 (circled number '①').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 207.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 정의와 원인"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 임상증상",
+            "page": 52,
+            "level_reason": "Matched layout rule for level 5 (circled number '②').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 503.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 임상증상"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 진단",
+            "page": 52,
+            "level_reason": "Matched layout rule for level 5 (circled number '③').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 325.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 진단"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 치료",
+            "page": 52,
+            "level_reason": "Matched layout rule for level 5 (circled number '④').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 710.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "④ 치료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 과망간혈증-근긴장이상증증후군",
+            "page": 53,
+            "level_reason": "Matched layout rule for level 4 (numbering '(3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 413.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 과망간혈증-근긴장이상증증후군"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 특발기저핵석회화병",
+            "page": 53,
+            "level_reason": "Matched layout rule for level 4 (numbering '(4)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 650.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 특발기저핵석회화병"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4) 자가면역질환 관련 이상운동증",
+            "page": 54,
+            "level_reason": "Matched layout rule for level 3 (numbering '4)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 604.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "4) 자가면역질환 관련 이상운동증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 신경세포항체 연관 이상운동증",
+            "page": 54,
+            "level_reason": "Matched layout rule for level 4 (numbering '(1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 310.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 신경세포항체 연관 이상운동증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 강직증후군",
+            "page": 56,
+            "level_reason": "Matched layout rule for level 4 (numbering '(2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 325.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 강직증후군"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 소뇌실조",
+            "page": 56,
+            "level_reason": "Matched layout rule for level 4 (numbering '(3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 354.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 소뇌실조"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 눈간대경련-근간대경련증후군",
+            "page": 56,
+            "level_reason": "Matched layout rule for level 4 (numbering '(4)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 709.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 눈간대경련-근간대경련증후군"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 하시모토뇌병증",
+            "page": 57,
+            "level_reason": "Matched layout rule for level 4 (numbering '(5)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 339.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(5) 하시모토뇌병증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(6) 전신자가면역질환에서의 이상운동증",
+            "page": 57,
+            "level_reason": "Matched layout rule for level 4 (numbering '(6)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 591.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(6) 전신자가면역질환에서의 이상운동증"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "5) 감염 관련 이상운동증",
+            "page": 57,
+            "level_reason": "Matched layout rule for level 3 (numbering '5)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 101.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "5) 감염 관련 이상운동증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 바이러스감염 연관 이상운동증",
+            "page": 57,
+            "level_reason": "Matched layout rule for level 4 (numbering '(1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 117.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 바이러스감염 연관 이상운동증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 세균감염 연관 이상운동증",
+            "page": 57,
+            "level_reason": "Matched layout rule for level 4 (numbering '(2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 621.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 세균감염 연관 이상운동증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 곰팡이 및 기생충감염 연관 이상운동증",
+            "page": 58,
+            "level_reason": "Matched layout rule for level 4 (numbering '(3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 236.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 곰팡이 및 기생충감염 연관 이상운동증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 프리온병 연관 이상운동증",
+            "page": 58,
+            "level_reason": "Matched layout rule for level 4 (numbering '(4)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 502.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 프리온병 연관 이상운동증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 감염딸림이상운동증",
+            "page": 58,
+            "level_reason": "Matched layout rule for level 4 (numbering '(5)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 709.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(5) 감염딸림이상운동증"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "6) 돌발이상운동증",
+            "page": 59,
+            "level_reason": "Matched layout rule for level 3 (numbering '6)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 234.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "6) 돌발이상운동증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 돌발이상운동증의 분류",
+            "page": 59,
+            "level_reason": "Matched layout rule for level 4 (numbering '(1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 43.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 돌발이상운동증의 분류"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 돌발운동유발이상운동",
+            "page": 59,
+            "level_reason": "Matched layout rule for level 4 (numbering '(2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 191.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 돌발운동유발이상운동"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 돌발비운동유발이상운동",
+            "page": 60,
+            "level_reason": "Matched layout rule for level 4 (numbering '(3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 443.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 돌발비운동유발이상운동"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 돌발지속운동유발이상운동",
+            "page": 60,
+            "level_reason": "Matched layout rule for level 4 (numbering '(4)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 354.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 돌발지속운동유발이상운동"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 간헐실조",
+            "page": 60,
+            "level_reason": "Matched layout rule for level 4 (numbering '(5)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 621.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(5) 간헐실조"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "7) 약물 관련 이상운동증",
+            "page": 61,
+            "level_reason": "Matched layout rule for level 3 (numbering '7)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 175.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "7) 약물 관련 이상운동증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 급성약물유발이상운동증",
+            "page": 61,
+            "level_reason": "Matched layout rule for level 4 (numbering '(1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 339.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 급성약물유발이상운동증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 아급성약물유발이상운동증",
+            "page": 61,
+            "level_reason": "Matched layout rule for level 4 (numbering '(2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 561.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 아급성약물유발이상운동증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 지연약물유발이상운동증",
+            "page": 62,
+            "level_reason": "Matched layout rule for level 4 (numbering '(3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 162.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 지연약물유발이상운동증"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "8) 기능성이상운동질환",
+            "page": 62,
+            "level_reason": "Matched layout rule for level 3 (numbering '8)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 42.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "8) 기능성이상운동질환"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 역학",
+            "page": 62,
+            "level_reason": "Matched layout rule for level 4 (numbering '(1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 310.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 역학"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 유발요인",
+            "page": 62,
+            "level_reason": "Matched layout rule for level 4 (numbering '(2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 473.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 유발요인"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 병태생리",
+            "page": 62,
+            "level_reason": "Matched layout rule for level 4 (numbering '(3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 606.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 병태생리"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 임상양상",
+            "page": 63,
+            "level_reason": "Matched layout rule for level 4 (numbering '(4)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 280.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 임상양상"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 진단",
+            "page": 63,
+            "level_reason": "Matched layout rule for level 4 (numbering '(5)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 206.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(5) 진단"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(6) 치료",
+            "page": 63,
+            "level_reason": "Matched layout rule for level 4 (numbering '(6)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 428.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(6) 치료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(7) 예후",
+            "page": 63,
+            "level_reason": "Matched layout rule for level 4 (numbering '(7)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 665.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(7) 예후"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "10 보행장애",
+            "page": 64,
+            "level_reason": "Matched layout rule for level 2 (numbering '10' and bold font).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 12.8,
+                "r": 1.35,
+                "x": 50.0,
+                "y": 162.0,
+                "b": 1,
+                "i": 0,
+                "f": "f7",
+                "source_text": "10 보행장애"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1) 보행 신경계",
+            "page": 64,
+            "level_reason": "Matched layout rule for level 3 (numbering '1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 338.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "1) 보행 신경계"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2) 정상보행주기",
+            "page": 64,
+            "level_reason": "Matched layout rule for level 3 (numbering '2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 708.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "2) 정상보행주기"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3) 임상적 보행분석",
+            "page": 64,
+            "level_reason": "Matched layout rule for level 3 (numbering '3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 338.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "3) 임상적 보행분석"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "4) 보행장애의 분류",
+            "page": 64,
+            "level_reason": "Matched layout rule for level 3 (numbering '4)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 575.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "4) 보행장애의 분류"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "5) 대표적인 보행장애의 양상",
+            "page": 65,
+            "level_reason": "Matched layout rule for level 3 (numbering '5)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 382.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "5) 대표적인 보행장애의 양상"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 파킨슨보행",
+            "page": 65,
+            "level_reason": "Matched layout rule for level 4 (numbering '(1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 399.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 파킨슨보행"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 동결보행",
+            "page": 65,
+            "level_reason": "Matched layout rule for level 4 (numbering '(2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 561.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 동결보행"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 소뇌실조보행",
+            "page": 65,
+            "level_reason": "Matched layout rule for level 4 (numbering '(3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 413.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 소뇌실조보행"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 감각실조보행",
+            "page": 65,
+            "level_reason": "Matched layout rule for level 4 (numbering '(4)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 635.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 감각실조보행"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 근긴장이상증보행",
+            "page": 66,
+            "level_reason": "Matched layout rule for level 4 (numbering '(5)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 117.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(5) 근긴장이상증보행"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(6) 경직다리보행",
+            "page": 66,
+            "level_reason": "Matched layout rule for level 4 (numbering '(6)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 251.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(6) 경직다리보행"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(7) 전두엽보행장애",
+            "page": 66,
+            "level_reason": "Matched layout rule for level 4 (numbering '(7)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 547.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(7) 전두엽보행장애"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(8) 근신경장애 환자의 보행",
+            "page": 66,
+            "level_reason": "Matched layout rule for level 4 (numbering '(8)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 43.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(8) 근신경장애 환자의 보행"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(9) 조심보행",
+            "page": 66,
+            "level_reason": "Matched layout rule for level 4 (numbering '(9)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 265.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(9) 조심보행"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "11 보툴리눔독소 주사치료",
+            "page": 66,
+            "level_reason": "Matched layout rule for level 2 (numbering '11' and bold font).",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 10,
+                "s": 12.8,
+                "r": 1.35,
+                "x": 315.0,
+                "y": 518.0,
+                "b": 1,
+                "i": 0,
+                "f": "f7",
+                "source_text": "11 보툴리눔독소 주사치료"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1) 보툴리눔독소의 작용기전",
+            "page": 66,
+            "level_reason": "Matched layout rule for level 3 (numbering '1)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 12,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 649.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "1) 보툴리눔독소의 작용기전"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 보 툴리눔독소 수용체 결합 및 세포내이입",
+            "page": 67,
+            "level_reason": "Matched layout rule for level 4 (S=9.5, f=f8) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 49.0,
+                "y": 147.0,
+                "b": 0,
+                "i": 0,
+                "f": "f8",
+                "source_text": "(1) 보 툴리눔독소 수용체 결합 및 세포내이입: 보툴리눔독소는 횡문"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 엔도솜 막의 전좌 membrane translocation 및 이황화결합의 환원",
+            "page": 67,
+            "level_reason": "Matched layout rule for level 4 (S=7.8, f=f9) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 7.8,
+                "r": 0.82,
+                "x": 49.0,
+                "y": 249.0,
+                "b": 0,
+                "i": 0,
+                "f": "f9",
+                "source_text": "(2) 엔도솜 막의 전좌 membrane translocation 및 이황화결합의 환원"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 세 포질로 내보내어진 L-사슬은 Zn-의존단백질분해효소로 작",
+            "page": 67,
+            "level_reason": "Matched layout rule for level 4 (S=9.5, f=f8) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 49.0,
+                "y": 280.0,
+                "b": 0,
+                "i": 0,
+                "f": "f8",
+                "source_text": "(3) 세 포질로 내보내어진 L-사슬은 Zn-의존단백질분해효소로 작"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2) 보툴리눔독소의 종류와 특징",
+            "page": 67,
+            "level_reason": "Matched layout rule for level 3 (numbering '2)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 49.0,
+                "y": 382.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "2) 보툴리눔독소의 종류와 특징"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "3) 이상운동질환에서 보툴리눔독소 주사치료",
+            "page": 67,
+            "level_reason": "Matched layout rule for level 3 (numbering '3)').",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 49.0,
+                "y": 456.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "3) 이상운동질환에서 보툴리눔독소 주사치료"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 경부근긴장이상증",
+            "page": 67,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, f=f5) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 9,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 314.0,
+                "y": 310.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 경부근긴장이상증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 눈꺼풀연축",
+            "page": 69,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, f=f5) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 458.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 눈꺼풀연축"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 반안면연축",
+            "page": 69,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, f=f5) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 132.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 반안면연축"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(4) 입턱근긴장이상증",
+            "page": 69,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, f=f5) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 8,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 621.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(4) 입턱근긴장이상증"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(5) 연축발성장애",
+            "page": 70,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, f=f5) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 49.0,
+                "y": 517.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(5) 연축발성장애"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(6) 쓰기경련, 작업특이근긴장이상증, 기타 상지 또는 하지 말단",
+            "page": 70,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, f=f5) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 49.0,
+                "y": 695.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(6) 쓰기경련, 작업특이근긴장이상증, 기타 상지 또는 하지 말단"
+            }
+        },
+        {
+            "level": 2,
+            "chapter": "12 이상운동질환에서 수술치료",
+            "page": 70,
+            "level_reason": "Matched layout rule for level 2 (S=12.8, B=1, f=f7) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 12.8,
+                "r": 1.35,
+                "x": 314.0,
+                "y": 606.0,
+                "b": 1,
+                "i": 0,
+                "f": "f7",
+                "source_text": "12 이상운동질환에서 수술치료"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "1) 정위기능수술",
+            "page": 71,
+            "level_reason": "Matched layout rule for level 3 (S=10.7, f=f5) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 50.0,
+                "y": 42.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "1) 정위기능수술"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 이상운동질환에서 정위기능수술의 역사",
+            "page": 71,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, f=f5) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 58.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 이상운동질환에서 정위기능수술의 역사"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 이상운동질환에서 정위기능수술의 종류",
+            "page": 71,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, f=f5) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 310.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 이상운동질환에서 정위기능수술의 종류"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(3) 대상 질환과 목표 구조물",
+            "page": 72,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, f=f5) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 50.0,
+                "y": 177.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(3) 대상 질환과 목표 구조물"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "① 파킨슨병",
+            "page": 72,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, B=1, f=f3) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 4,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 44.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "① 파킨슨병"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "② 떨림",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, B=1, f=f3) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 1,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 399.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "② 떨림"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "③ 근긴장이상증",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, B=1, f=f3) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 2,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 50.0,
+                "y": 680.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "③ 근긴장이상증"
+            }
+        },
+        {
+            "level": 5,
+            "chapter": "④ 기타 이상운동질환",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 5 (S=9.5, B=1, f=f3) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 5,
+                "s": 9.5,
+                "r": 1.0,
+                "x": 315.0,
+                "y": 221.0,
+                "b": 1,
+                "i": 0,
+                "f": "f3",
+                "source_text": "④ 기타 이상운동질환"
+            }
+        },
+        {
+            "level": 3,
+            "chapter": "2) 미세혈관감압술",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 3 (S=10.7, f=f5) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 6,
+                "s": 10.7,
+                "r": 1.13,
+                "x": 315.0,
+                "y": 338.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "2) 미세혈관감압술"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(1) 미세혈관감압술의 효과 및 부작용",
+            "page": 73,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, f=f5) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 7,
+                "s": 10.0,
+                "r": 1.05,
+                "x": 315.0,
+                "y": 517.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(1) 미세혈관감압술의 효과 및 부작용"
+            }
+        },
+        {
+            "level": 4,
+            "chapter": "(2) 미세혈관감압술의 대상 선정",
+            "page": 74,
+            "level_reason": "Matched layout rule for level 4 (S=10.0, f=f5) and numbering.",
+            "metadata": {
+                "matched_parsed_layout": true,
+                "source_order": 3,
+                "s": 10.0,
+                "r": 1.18,
+                "x": 50.0,
+                "y": 73.0,
+                "b": 0,
+                "i": 0,
+                "f": "f5",
+                "source_text": "(2) 미세혈관감압술의 대상 선정"
+            }
+        }
+    ],
+    "_meta": {
+        "source_pdf": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/2. 교과서-신경학 4판-17장 파킨슨병.pdf",
+        "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/2._-_4_-17_headings_parsed.txt",
+        "source_layout": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/2._-_4_-17_0723_131739_layout.json",
+        "parsed_created": false,
+        "provider_layout": "openai",
+        "openai_layout_model": "gpt-5.5",
+        "provider_toc": "gemma_vllm",
+        "gemma_model": "google/gemma-4-31B-it",
+        "generated_at": "2026-07-23T14:18:23+09:00",
+        "generation_started_at": "2026-07-23T14:14:32+09:00",
+        "generation_completed_at": "2026-07-23T14:18:23+09:00",
+        "elapsed_seconds": 231.313,
+        "elapsed": "3m 51.3s",
+        "api_usage": {
+            "layout_generation": {
+                "provider": "openai",
+                "model": "gpt-5.5",
+                "usage": {
+                    "prompt_tokens": 37601,
+                    "completion_tokens": 4778,
+                    "total_tokens": 42379,
+                    "prompt_tokens_details": {
+                        "cached_tokens": 0,
+                        "audio_tokens": 0
+                    },
+                    "completion_tokens_details": {
+                        "reasoning_tokens": 3584,
+                        "audio_tokens": 0,
+                        "accepted_prediction_tokens": 0,
+                        "rejected_prediction_tokens": 0
+                    }
+                },
+                "prompt_tokens": 37601,
+                "completion_tokens": 4778,
+                "total_tokens": 42379
+            },
+            "toc_generation": {
+                "provider": "gemma_vllm",
+                "model": "google/gemma-4-31B-it",
+                "prompt_tokens": 424198,
+                "completion_tokens": 22614,
+                "total_tokens": 446812,
+                "chunks": [
+                    {
+                        "provider": "gemma_vllm",
+                        "model": "google/gemma-4-31B-it",
+                        "usage": {
+                            "prompt_tokens": 178162,
+                            "total_tokens": 186752,
+                            "completion_tokens": 8590,
+                            "prompt_tokens_details": null
+                        },
+                        "prompt_tokens": 178162,
+                        "completion_tokens": 8590,
+                        "total_tokens": 186752,
+                        "chunk_index": 1,
+                        "chunk_total": 3,
+                        "target_start_page": 1,
+                        "target_end_page": 33,
+                        "context_start_page": 1,
+                        "context_end_page": 35,
+                        "chunk_mode": "tokens",
+                        "estimated_input_text_tokens": 16315,
+                        "estimated_full_context_tokens": 118197
+                    },
+                    {
+                        "provider": "gemma_vllm",
+                        "model": "google/gemma-4-31B-it",
+                        "usage": {
+                            "prompt_tokens": 179756,
+                            "total_tokens": 191648,
+                            "completion_tokens": 11892,
+                            "prompt_tokens_details": null
+                        },
+                        "prompt_tokens": 179756,
+                        "completion_tokens": 11892,
+                        "total_tokens": 191648,
+                        "chunk_index": 2,
+                        "chunk_total": 3,
+                        "target_start_page": 34,
+                        "target_end_page": 66,
+                        "context_start_page": 32,
+                        "context_end_page": 68,
+                        "chunk_mode": "tokens",
+                        "estimated_input_text_tokens": 14312,
+                        "estimated_full_context_tokens": 117921
+                    },
+                    {
+                        "provider": "gemma_vllm",
+                        "model": "google/gemma-4-31B-it",
+                        "usage": {
+                            "prompt_tokens": 66280,
+                            "total_tokens": 68412,
+                            "completion_tokens": 2132,
+                            "prompt_tokens_details": null
+                        },
+                        "prompt_tokens": 66280,
+                        "completion_tokens": 2132,
+                        "total_tokens": 68412,
+                        "chunk_index": 3,
+                        "chunk_total": 3,
+                        "target_start_page": 67,
+                        "target_end_page": 76,
+                        "context_start_page": 65,
+                        "context_end_page": 76,
+                        "chunk_mode": "tokens",
+                        "estimated_input_text_tokens": 10627,
+                        "estimated_full_context_tokens": 32518
+                    }
+                ]
+            }
+        }
+    }
+}

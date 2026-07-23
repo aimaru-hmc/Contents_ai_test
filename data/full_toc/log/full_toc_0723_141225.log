@@ -1,0 +1,10 @@
+[2026-07-23T14:12:25+09:00] INFO: log: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/log/full_toc_0723_141225.log
+[2026-07-23T14:12:25+09:00] INFO: PDF files: 1
+[2026-07-23T14:12:25+09:00] INFO: processing: 2. 교과서-신경학 4판-17장 파킨슨병.pdf | stage=gemma
+[2026-07-23T14:12:25+09:00] INFO: Existing parsed text found, skipping PDF parsing: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/2._-_4_-17_headings_parsed.txt
+[2026-07-23T14:12:25+09:00] INFO: Using layout JSON: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/2._-_4_-17_0723_131739_layout.json
+[2026-07-23T14:12:25+09:00] INFO: Using full parsed body context for Gemma: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/2._-_4_-17_parsed.txt
+[2026-07-23T14:12:25+09:00] ERROR: Failed: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/2. 교과서-신경학 4판-17장 파킨슨병.pdf / name 'target_context_tokens' is not defined
+[2026-07-23T14:12:25+09:00] INFO: Created full TOC files: 0
+[2026-07-23T14:12:25+09:00] ERROR: Failed files: 1
+[2026-07-23T14:12:25+09:00] ERROR: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/2. 교과서-신경학 4판-17장 파킨슨병.pdf: name 'target_context_tokens' is not defined
