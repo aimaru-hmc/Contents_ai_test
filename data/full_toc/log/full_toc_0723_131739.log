@@ -1,0 +1,16 @@
+[2026-07-23T13:17:39+09:00] INFO: log: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/log/full_toc_0723_131739.log
+[2026-07-23T13:17:39+09:00] INFO: PDF files: 1
+[2026-07-23T13:17:39+09:00] INFO: processing: 2. 교과서-신경학 4판-17장 파킨슨병.pdf | stage=all
+[2026-07-23T13:17:39+09:00] INFO: PDF parsing started: 2. 교과서-신경학 4판-17장 파킨슨병.pdf
+[2026-07-23T13:17:53+09:00] INFO: Parsed text saved: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/2._-_4_-17_headings_parsed.txt
+[2026-07-23T13:17:53+09:00] INFO: OpenAI layout generation started: gpt-5.5
+[2026-07-23T13:19:00+09:00] INFO: OpenAI layout generation completed: rules=6, tokens=42379
+[2026-07-23T13:19:00+09:00] INFO: layout saved: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/2._-_4_-17_0723_131739_layout.json | elapsed=1m 21.0s
+[2026-07-23T13:19:00+09:00] INFO: Using layout JSON: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/2._-_4_-17_0723_131739_layout.json
+[2026-07-23T13:19:00+09:00] INFO: gemma chunks: 1 | mode=tokens | token_limit=161519 | pages_per_chunk=80 | overlap=2
+[2026-07-23T13:19:00+09:00] INFO: gemma chunk 1/1: target pages 1-76 | est_tokens=36823
+[2026-07-23T13:19:00+09:00] INFO: Gemma full JSON generation started: google/gemma-4-31B-it
+[2026-07-23T13:21:16+09:00] ERROR: Failed: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/2. 교과서-신경학 4판-17장 파킨슨병.pdf / Gemma output reached the 16384-token limit before JSON completion.
+[2026-07-23T13:21:16+09:00] INFO: Created full TOC files: 0
+[2026-07-23T13:21:16+09:00] ERROR: Failed files: 1
+[2026-07-23T13:21:16+09:00] ERROR: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/2. 교과서-신경학 4판-17장 파킨슨병.pdf: Gemma output reached the 16384-token limit before JSON completion.

@@ -1,0 +1,265 @@
+{
+    "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/2. 교과서-신경학 4판-17장 파킨슨병.pdf",
+    "source_chunk": "full_pdf",
+    "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/2._-_4_-17_headings_parsed.txt",
+    "matching_priority": [
+        "S/R/B/I/F",
+        "numbering",
+        "X",
+        "Y",
+        "examples"
+    ],
+    "rules": [
+        {
+            "level": 1,
+            "s": 33.0,
+            "r": 3.67,
+            "b": 1,
+            "i": 0,
+            "f": "f3",
+            "x_min": 140.0,
+            "x_max": 330.0,
+            "y_min": 90.0,
+            "y_max": 115.0,
+            "start_shapes": [
+                "chapter-title-large-line"
+            ],
+            "reference_count": 2,
+            "examples": [
+                "파킨슨병 및 이",
+                "이상운동질환"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 12.8,
+            "r": 1.35,
+            "b": 1,
+            "i": 0,
+            "f": "f7",
+            "x_min": 49.0,
+            "x_max": 318.0,
+            "y_min": 42.0,
+            "y_max": 665.0,
+            "start_shapes": [
+                "# "
+            ],
+            "reference_count": 12,
+            "examples": [
+                "1 이상운동질환 관련 해부학 신정환, 최성민",
+                "3 파킨슨증",
+                "12 이상운동질환에서 수술치료"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 10.7,
+            "r": 1.13,
+            "b": 0,
+            "i": 0,
+            "f": "f5",
+            "x_min": 49.0,
+            "x_max": 315.0,
+            "y_min": 42.0,
+            "y_max": 710.0,
+            "start_shapes": [
+                "#) "
+            ],
+            "reference_count": 50,
+            "examples": [
+                "1) 기저핵의 구조와 기능",
+                "4) 임상양상에 따른 떨림증후군의 분류(제1축)",
+                "8) 기능성이상운동질환"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 10.0,
+            "r": 1.05,
+            "b": 0,
+            "i": 0,
+            "f": "f5",
+            "x_min": 49.0,
+            "x_max": 315.0,
+            "y_min": 43.0,
+            "y_max": 710.0,
+            "start_shapes": [
+                "(#) "
+            ],
+            "reference_count": 100,
+            "examples": [
+                "(1) 기저핵의 정의와 명칭",
+                "(4) 임상양상",
+                "(10) 기능성떨림증후군"
+            ]
+        },
+        {
+            "level": 5,
+            "s": 9.5,
+            "r": 1.0,
+            "b": 1,
+            "i": 0,
+            "f": "f3",
+            "x_min": 49.0,
+            "x_max": 315.0,
+            "y_min": 43.0,
+            "y_max": 710.0,
+            "start_shapes": [
+                "①",
+                "②",
+                "③",
+                "④",
+                "⑤",
+                "⑥",
+                "⑦",
+                "⑧"
+            ],
+            "reference_count": 115,
+            "examples": [
+                "① 줄무늬체",
+                "② 양전자방출컴퓨터단층촬영과 단일광자방출컴퓨터단층촬영",
+                "④ 전기안진검사/비디오안구운동검사"
+            ]
+        },
+        {
+            "level": 5,
+            "s": 9.5,
+            "r": 1.0,
+            "b": 1,
+            "i": 0,
+            "f": "f3",
+            "x_min": 58.0,
+            "x_max": 65.0,
+            "y_min": 100.0,
+            "y_max": 125.0,
+            "start_shapes": [
+                "continuation of previous circled-number heading"
+            ],
+            "reference_count": 1,
+            "examples": [
+                "Charlevoix-Saguenay (ARSACS)"
+            ]
+        }
+    ],
+    "contextual_heading_candidates": [
+        {
+            "level": 5,
+            "chapter": "⑦ A utosomal recessive spastic ataxia of Charlevoix-Saguenay (ARSACS)",
+            "page": 45,
+            "source_order": 3,
+            "evidence": [
+                "multi-line heading",
+                "first line starts with circled-number heading marker",
+                "second line has same bold font and is indented as continuation",
+                "under parent heading (5) 보통염색체열성유전실조"
+            ]
+        },
+        {
+            "level": 5,
+            "chapter": "① 생리적근간대경련physiologic myoclonus: 건강한 사람에게 종종 발",
+            "page": 38,
+            "source_order": 5,
+            "evidence": [
+                "body-like typography but circled-number sequence",
+                "under parent heading (1) 원인에 따른 분류",
+                "run-in label before colon followed by explanatory text",
+                "neighboring ①-⑤ sequence"
+            ]
+        },
+        {
+            "level": 5,
+            "chapter": "② 본태근간대경련essential myoclonus: 근간대경련이 주증상이면서",
+            "page": 38,
+            "source_order": 6,
+            "evidence": [
+                "body-like typography but circled-number sequence",
+                "under parent heading (1) 원인에 따른 분류",
+                "run-in label before colon followed by explanatory text",
+                "neighboring ①-⑤ sequence"
+            ]
+        },
+        {
+            "level": 5,
+            "chapter": "① 피질근간대경련cortical myoclonus: 가장 흔한 형태이다. 안면, 팔",
+            "page": 38,
+            "source_order": 11,
+            "evidence": [
+                "body-like typography but circled-number sequence",
+                "under parent heading (2) 신경생리적특징에 따른 분류",
+                "run-in label before colon followed by explanatory text",
+                "neighboring ①-⑤ sequence continues across pages"
+            ]
+        },
+        {
+            "level": 5,
+            "chapter": "⑤ 말초근간대경련peripheral myoclonus: 신경, 신경총plexus, 신경뿌",
+            "page": 39,
+            "source_order": 2,
+            "evidence": [
+                "body-like typography but circled-number sequence",
+                "under parent heading (2) 신경생리적특징에 따른 분류",
+                "run-in label before colon followed by explanatory text",
+                "continues neighboring circled-number sequence from previous page"
+            ]
+        }
+    ],
+    "unmatched_reference_titles": [],
+    "_api_usage": {
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "usage": {
+            "prompt_tokens": 37601,
+            "completion_tokens": 4778,
+            "total_tokens": 42379,
+            "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+                "reasoning_tokens": 3584,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+            }
+        },
+        "prompt_tokens": 37601,
+        "completion_tokens": 4778,
+        "total_tokens": 42379
+    },
+    "_meta": {
+        "source_pdf": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/2. 교과서-신경학 4판-17장 파킨슨병.pdf",
+        "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/2._-_4_-17_headings_parsed.txt",
+        "parsed_created": true,
+        "provider_layout": "openai",
+        "openai_layout_model": "gpt-5.5",
+        "generated_at": "2026-07-23T13:19:00+09:00",
+        "generation_started_at": "2026-07-23T13:17:39+09:00",
+        "generation_completed_at": "2026-07-23T13:19:00+09:00",
+        "elapsed_seconds": 80.961,
+        "elapsed": "1m 21.0s",
+        "api_usage": {
+            "layout_generation": {
+                "provider": "openai",
+                "model": "gpt-5.5",
+                "usage": {
+                    "prompt_tokens": 37601,
+                    "completion_tokens": 4778,
+                    "total_tokens": 42379,
+                    "prompt_tokens_details": {
+                        "cached_tokens": 0,
+                        "audio_tokens": 0
+                    },
+                    "completion_tokens_details": {
+                        "reasoning_tokens": 3584,
+                        "audio_tokens": 0,
+                        "accepted_prediction_tokens": 0,
+                        "rejected_prediction_tokens": 0
+                    }
+                },
+                "prompt_tokens": 37601,
+                "completion_tokens": 4778,
+                "total_tokens": 42379
+            }
+        }
+    }
+}

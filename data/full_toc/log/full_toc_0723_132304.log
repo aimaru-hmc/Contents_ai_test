@@ -1,0 +1,12 @@
+[2026-07-23T13:23:04+09:00] INFO: log: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/log/full_toc_0723_132304.log
+[2026-07-23T13:23:04+09:00] INFO: PDF files: 1
+[2026-07-23T13:23:04+09:00] INFO: processing: 2. 교과서-신경학 4판-17장 파킨슨병.pdf | stage=gemma
+[2026-07-23T13:23:04+09:00] INFO: Existing parsed text found, skipping PDF parsing: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/2._-_4_-17_headings_parsed.txt
+[2026-07-23T13:23:04+09:00] INFO: Using layout JSON: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/2._-_4_-17_0723_131739_layout.json
+[2026-07-23T13:23:04+09:00] INFO: gemma chunks: 1 | mode=tokens | token_limit=145135 | pages_per_chunk=80 | overlap=2
+[2026-07-23T13:23:04+09:00] INFO: gemma chunk 1/1: target pages 1-76 | est_tokens=36823
+[2026-07-23T13:23:04+09:00] INFO: Gemma full JSON generation started: google/gemma-4-31B-it
+[2026-07-23T13:26:01+09:00] INFO: Gemma full JSON generation completed: google/gemma-4-31B-it
+[2026-07-23T13:26:01+09:00] INFO: toc saved: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/full_jason/2._-_4_-17_0723_132304_full_foc.json | chapters=304 | tokens(openai=42379, gemma=72268) | elapsed=2m 56.8s
+[2026-07-23T13:26:01+09:00] INFO: Created full TOC files: 1
+[2026-07-23T13:26:01+09:00] INFO: created: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/full_jason/2._-_4_-17_0723_132304_full_foc.json
