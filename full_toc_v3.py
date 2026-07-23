@@ -621,6 +621,25 @@ def page_range_text(parsed_text: str, start_page: int | None, end_page: int | No
     return "\n".join(selected)
 
 
+def page_token_counts(parsed_text: str) -> dict[int, int]:
+    counts: dict[int, int] = {}
+    current_page: int | None = None
+    current_lines: list[str] = []
+    for raw in parsed_text.splitlines():
+        page_match = PAGE_RE.match(raw.strip())
+        if page_match:
+            if current_page is not None:
+                counts[current_page] = estimate_text_tokens("\n".join(current_lines))
+            current_page = int(page_match.group(1))
+            current_lines = [raw]
+            continue
+        if current_page is not None:
+            current_lines.append(raw)
+    if current_page is not None:
+        counts[current_page] = estimate_text_tokens("\n".join(current_lines))
+    return counts
+
+
 def parsed_page_blocks(parsed_text: str) -> list[tuple[int, list[str]]]:
     blocks: list[tuple[int, list[str]]] = []
     current_page: int | None = None
@@ -708,11 +727,19 @@ def sum_range(values: list[int], start: int, end: int) -> int:
     return sum(values[max(0, start):max(0, end)])
 
 
-def build_token_limit_chunks(blocks: list[tuple[int, list[str]]], token_limit: int, overlap_pages: int) -> list[dict[str, Any]]:
+def build_token_limit_chunks(
+    blocks: list[tuple[int, list[str]]],
+    token_limit: int,
+    overlap_pages: int,
+    context_token_by_page: dict[int, int] | None = None,
+) -> list[dict[str, Any]]:
     token_limit = max(1, int(token_limit))
     overlap_pages = max(0, int(overlap_pages))
+    context_token_by_page = context_token_by_page or {}
     page_texts = ["\n".join(lines) for _, lines in blocks]
     page_tokens = [estimate_text_tokens(text) for text in page_texts]
+    extra_page_tokens = [int(context_token_by_page.get(page, 0)) for page, _ in blocks]
+    combined_page_tokens = [page_tokens[index] + extra_page_tokens[index] for index in range(len(page_tokens))]
     chunks: list[dict[str, Any]] = []
     start = 0
     while start < len(blocks):
@@ -721,7 +748,7 @@ def build_token_limit_chunks(blocks: list[tuple[int, list[str]]], token_limit: i
         while end <= len(blocks):
             context_start = max(0, start - overlap_pages)
             context_end = min(len(blocks), end + overlap_pages)
-            context_tokens = sum_range(page_tokens, context_start, context_end)
+            context_tokens = sum_range(combined_page_tokens, context_start, context_end)
             if context_tokens > token_limit and end > start + 1:
                 break
             best_end = end
@@ -731,7 +758,7 @@ def build_token_limit_chunks(blocks: list[tuple[int, list[str]]], token_limit: i
         end = best_end
         context_start, context_end, chunk_text = page_chunk_text(blocks, start, end, overlap_pages)
         target_tokens = sum_range(page_tokens, start, end)
-        context_tokens = sum_range(page_tokens, context_start, context_end)
+        context_tokens = sum_range(combined_page_tokens, context_start, context_end)
         if context_tokens > token_limit:
             log_error(
                 f"Single Gemma chunk exceeds token target: pages {blocks[start][0]}-{blocks[end - 1][0]} "
@@ -747,6 +774,7 @@ def build_token_limit_chunks(blocks: list[tuple[int, list[str]]], token_limit: i
             "context_end_page": blocks[context_end - 1][0],
             "estimated_tokens": estimate_text_tokens(chunk_text),
             "target_estimated_tokens": target_tokens,
+            "target_full_context_estimated_tokens": target_context_tokens,
             "context_estimated_tokens": context_tokens,
             "text": chunk_text,
         })
@@ -761,6 +789,7 @@ def build_gemma_chunks(
     chunk_pages: int,
     token_limit: int,
     overlap_pages: int,
+    context_token_by_page: dict[int, int] | None = None,
 ) -> list[dict[str, Any]]:
     blocks = parsed_page_blocks(parsed_text)
     if not blocks:
@@ -778,7 +807,7 @@ def build_gemma_chunks(
 
     if clean_text(chunk_mode).lower() == "pages":
         return build_page_count_chunks(blocks, chunk_pages=chunk_pages, overlap_pages=overlap_pages)
-    return build_token_limit_chunks(blocks, token_limit=token_limit, overlap_pages=overlap_pages)
+    return build_token_limit_chunks(blocks, token_limit=token_limit, overlap_pages=overlap_pages, context_token_by_page=context_token_by_page)
 
 
 def resolve_gemma_chunk_token_limit(
@@ -1756,6 +1785,7 @@ def run_gemma_stage(
             log_detail(f"Using full parsed body context for Gemma: {full_parsed_path}")
         else:
             log_error(f"Full parsed body context not found, continuing without it: {full_parsed_path}")
+    full_context_token_by_page = page_token_counts(full_context_text) if full_context_text else {}
     chunk_token_limit = resolve_gemma_chunk_token_limit(layout_json=layout_json, title=title, args=args)
     chunks = build_gemma_chunks(
         parsed_text=parsed_text,
@@ -1763,6 +1793,7 @@ def run_gemma_stage(
         chunk_pages=args.gemma_chunk_pages,
         token_limit=chunk_token_limit,
         overlap_pages=args.gemma_chunk_overlap_pages,
+        context_token_by_page=full_context_token_by_page,
     )
     log_info(
         f"gemma chunks: {len(chunks)} | mode={args.gemma_chunk_mode} | token_limit={chunk_token_limit} | pages_per_chunk={args.gemma_chunk_pages} | overlap={args.gemma_chunk_overlap_pages}"
@@ -1806,6 +1837,7 @@ def run_gemma_stage(
         chunk_api_usage["context_end_page"] = chunk["context_end_page"]
         chunk_api_usage["chunk_mode"] = chunk.get("mode")
         chunk_api_usage["estimated_input_text_tokens"] = chunk.get("estimated_tokens", 0)
+        chunk_api_usage["estimated_full_context_tokens"] = chunk.get("target_full_context_estimated_tokens", 0)
         chunk_usages.append(chunk_api_usage)
         all_chapters.extend(chunk_toc.get("chapters", []))
 
