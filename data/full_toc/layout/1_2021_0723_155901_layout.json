@@ -1,0 +1,422 @@
+{
+    "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/부교재1/1권-한글/1편(2021).pdf",
+    "source_chunk": "full_pdf",
+    "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/1_2021_headings_parsed.txt",
+    "matching_priority": [
+        "S/R/B/I/F",
+        "numbering",
+        "X",
+        "Y",
+        "examples"
+    ],
+    "rules": [
+        {
+            "level": 1,
+            "s": 31.0,
+            "r": 3.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 80.0,
+            "x_max": 317.0,
+            "y_min": 120.0,
+            "y_max": 175.0,
+            "start_shapes": [
+                "chapter-opener title fragment",
+                "near preceding chapter number and 제 장",
+                "merge same-y or stacked fragments"
+            ],
+            "reference_count": 12,
+            "examples": [
+                "건강과 질병의 정",
+                "정의 및 결정요인",
+                "예방의학과 공중보",
+                "활용",
+                "보건학의 개념과",
+                "미래"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 18.0,
+            "r": 1.9,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 77.0,
+            "x_max": 317.0,
+            "y_min": 115.0,
+            "y_max": 570.0,
+            "start_shapes": [
+                "#. ",
+                "same-y continuation fragment"
+            ],
+            "reference_count": 14,
+            "examples": [
+                "1. 건강상태와 질병상태의 개",
+                "념",
+                "2. 건강과 질병의",
+                "의 결정요인 및 건강모형",
+                "1. 예방의학과 공중보건학의",
+                "3. 예방의학과 공중보건학의 미래"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 12.5,
+            "r": 1.32,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 73.0,
+            "x_max": 320.0,
+            "y_min": 90.0,
+            "y_max": 760.0,
+            "start_shapes": [
+                "#.# ",
+                "same-y continuation fragment"
+            ],
+            "reference_count": 34,
+            "examples": [
+                "1.1 건강 개념의 변천",
+                "1.2 질병상태의 개념과",
+                "분류",
+                "2.3 건강모형",
+                "2.4 예방의학과 공중보건윤리",
+                "1.7 21세기",
+                "3.2 한국의 예방의학과 공중보건학의 미래"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 12.0,
+            "r": 1.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 60.0,
+            "x_max": 322.0,
+            "y_min": 80.0,
+            "y_max": 790.0,
+            "start_shapes": [
+                "#) ",
+                "contains #) after left-fragment corruption",
+                "same-y continuation fragment"
+            ],
+            "reference_count": 55,
+            "examples": [
+                "1) 신체(身體)개념의 건강",
+                "2) 심신(心身)개념의 건강",
+                "1) 질병상태의 분류와 질병",
+                "이름",
+                "3) 건강정책분석을 위한 역",
+                "4) 웰니스 모형(wellness model)",
+                "2) 공중보건 활동과 관련된 윤리 문제"
+            ]
+        },
+        {
+            "level": 5,
+            "s": 10.0,
+            "r": 1.05,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 75.0,
+            "x_max": 183.0,
+            "y_min": 80.0,
+            "y_max": 770.0,
+            "start_shapes": [
+                "(#) ",
+                "same-y continuation fragment"
+            ],
+            "reference_count": 28,
+            "examples": [
+                "(1) 생명의 기계론적 관점",
+                "(2) 생물학적 일탈로서의 질병",
+                "(4) 과학적 중립성과 전문가",
+                "(1) 공중보건 활동의 특징",
+                "(2) 공중보건영역에서 생명의",
+                "(1) 감염병 관리에 관련된 윤리 문제",
+                "(3) 건강증진과 윤리 문제"
+            ]
+        },
+        {
+            "level": 6,
+            "s": 9.5,
+            "r": 1.0,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 75.0,
+            "x_max": 183.0,
+            "y_min": 80.0,
+            "y_max": 780.0,
+            "start_shapes": [
+                "① ",
+                "② ",
+                "③ ",
+                "④ ",
+                "⑤ ",
+                "⑥ ",
+                "⑦ ",
+                "⑧ ",
+                "⑨ ",
+                "⑩ ",
+                "⑪ ",
+                "only if under a level 5 parent and followed by explanatory body text"
+            ],
+            "reference_count": 15,
+            "examples": [
+                "① 공공선의 제공",
+                "② 해악의 회피와 예방, 제거",
+                "⑤ 공공의 참여 보장",
+                "⑩ 정보의 정직하고 충실한 공개",
+                "① 감염병 감시",
+                "② 예방접종",
+                "③ 사회적 거리두기를 위한 격리",
+                "④ 감염병 정보의 공개"
+            ]
+        }
+    ],
+    "contextual_heading_candidates": [
+        {
+            "level": 6,
+            "chapter": "① 공공선의 제공",
+            "page": 27,
+            "source_order": 2704,
+            "evidence": [
+                "short standalone line",
+                "under parent heading (1) 공중보건 활동의 특징",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "② 해악의 회피와 예방, 제거",
+            "page": 28,
+            "source_order": 2802,
+            "evidence": [
+                "short standalone line",
+                "continues circled sequence under parent heading",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "③ 해악 대비 혜택 비율의 극대",
+            "page": 28,
+            "source_order": 2803,
+            "evidence": [
+                "short standalone line",
+                "continues circled sequence under parent heading",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "④ 편익과 부담의 공정한 분배",
+            "page": 28,
+            "source_order": 2804,
+            "evidence": [
+                "short standalone line",
+                "continues circled sequence under parent heading",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "⑤ 공공의 참여 보장",
+            "page": 28,
+            "source_order": 2805,
+            "evidence": [
+                "short standalone line",
+                "continues circled sequence under parent heading",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "⑥ 자율적 선택과 행위의 존중",
+            "page": 28,
+            "source_order": 2806,
+            "evidence": [
+                "short standalone line",
+                "continues circled sequence under parent heading",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "⑦ 자유의 보장",
+            "page": 28,
+            "source_order": 2807,
+            "evidence": [
+                "short standalone line",
+                "continues circled sequence under parent heading",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "⑧ 사생활의 비밀 보호",
+            "page": 28,
+            "source_order": 2808,
+            "evidence": [
+                "short standalone line",
+                "continues circled sequence under parent heading",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "⑨ 약속과 책임의 준수",
+            "page": 28,
+            "source_order": 2809,
+            "evidence": [
+                "short standalone line",
+                "continues circled sequence under parent heading",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "⑩ 정보의 정직하고 충실한 공개",
+            "page": 28,
+            "source_order": 2810,
+            "evidence": [
+                "short standalone line",
+                "continues circled sequence under parent heading",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "⑪ 신뢰의 구축과 유지",
+            "page": 28,
+            "source_order": 2811,
+            "evidence": [
+                "short standalone line",
+                "continues circled sequence under parent heading",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "① 감염병 감시",
+            "page": 29,
+            "source_order": 2904,
+            "evidence": [
+                "short standalone line",
+                "under parent heading (1) 감염병 관리에 관련된 윤리 문제",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "② 예방접종",
+            "page": 30,
+            "source_order": 3001,
+            "evidence": [
+                "short standalone line",
+                "continues circled sequence under infection ethics parent",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "③ 사회적 거리두기를 위한 격리",
+            "page": 30,
+            "source_order": 3002,
+            "evidence": [
+                "short standalone line",
+                "continues circled sequence under infection ethics parent",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 6,
+            "chapter": "④ 감염병 정보의 공개",
+            "page": 30,
+            "source_order": 3003,
+            "evidence": [
+                "short standalone line",
+                "continues circled sequence under infection ethics parent",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        }
+    ],
+    "unmatched_reference_titles": [],
+    "_api_usage": {
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "usage": {
+            "prompt_tokens": 17055,
+            "completion_tokens": 3916,
+            "total_tokens": 20971,
+            "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+                "reasoning_tokens": 2048,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+            }
+        },
+        "prompt_tokens": 17055,
+        "completion_tokens": 3916,
+        "total_tokens": 20971
+    },
+    "_meta": {
+        "source_pdf": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/부교재1/1권-한글/1편(2021).pdf",
+        "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/1_2021_headings_parsed.txt",
+        "parsed_created": true,
+        "provider_layout": "openai",
+        "openai_layout_model": "gpt-5.5",
+        "generated_at": "2026-07-23T16:00:07+09:00",
+        "generation_started_at": "2026-07-23T15:59:01+09:00",
+        "generation_completed_at": "2026-07-23T16:00:07+09:00",
+        "elapsed_seconds": 66.4,
+        "elapsed": "1m 6.4s",
+        "api_usage": {
+            "layout_generation": {
+                "provider": "openai",
+                "model": "gpt-5.5",
+                "usage": {
+                    "prompt_tokens": 17055,
+                    "completion_tokens": 3916,
+                    "total_tokens": 20971,
+                    "prompt_tokens_details": {
+                        "cached_tokens": 0,
+                        "audio_tokens": 0
+                    },
+                    "completion_tokens_details": {
+                        "reasoning_tokens": 2048,
+                        "audio_tokens": 0,
+                        "accepted_prediction_tokens": 0,
+                        "rejected_prediction_tokens": 0
+                    }
+                },
+                "prompt_tokens": 17055,
+                "completion_tokens": 3916,
+                "total_tokens": 20971
+            }
+        }
+    }
+}
