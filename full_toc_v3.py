@@ -77,6 +77,18 @@ LINE_RE = re.compile(
     r"y=(?P<y>-?[\d.]+) b=(?P<b>[01]) i=(?P<i>[01]) "
     r"f=(?P<f>[^] ]+)(?: c=(?P<c>[LR]))?\]\s*(?P<t>.*)$"
 )
+HEADING_PATTERNS = (
+    re.compile(r"^CHAPTER(?:\s+\d+)?$", re.IGNORECASE),
+    re.compile(r"^SECTION(?:\s+\d+)?$", re.IGNORECASE),
+    re.compile(r"^\d{1,3}\s+[가-힣A-Za-z]"),
+    re.compile(r"^\d{1,3}\.\s*[가-힣A-Za-z]"),
+    re.compile(r"^\d{1,3}\)\s*[가-힣A-Za-z]"),
+    re.compile(r"^\(\d{1,3}\)\s*[가-힣A-Za-z]"),
+    re.compile(r"^[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳]\s*[가-힣A-Za-z]"),
+    re.compile(r"^[가-힣]\.\s*[가-힣A-Za-z]"),
+    re.compile(r"^[A-Z]\.\s+[A-Za-z가-힣]"),
+)
+AUTHOR_LINE_RE = re.compile(r"^[가-힣]{2,4}(?:,\s*[가-힣]{2,4})+(?:\s*\(.+\))?$")
 RETRYABLE_ERROR_MARKERS = (
     "429", "RESOURCE_EXHAUSTED", "RATE LIMIT", "500", "INTERNAL", "502", "503",
     "UNAVAILABLE", "HIGH DEMAND", "OVERLOADED", "TRY AGAIN LATER", "504",
@@ -272,7 +284,58 @@ def page_has_two_columns(page: Any, split_x: float, min_chars_per_side: int = 80
     return left >= min_chars_per_side and right >= min_chars_per_side and left / total >= 0.25 and right / total >= 0.25
 
 
-def extract_region_lines(page: Any, bbox: tuple[float, float, float, float] | None, body_size: float, font_ids: dict[str, str], column: str | None) -> list[str]:
+def is_heading_like(
+    text: str,
+    *,
+    size: float,
+    ratio: float,
+    bold: int,
+    body_size: float,
+    max_heading_chars: int,
+    drop_author_lines: bool,
+) -> bool:
+    text = clean_text(text)
+    if not text:
+        return False
+    if drop_author_lines and AUTHOR_LINE_RE.match(text):
+        return False
+    if any(pattern.match(text) for pattern in HEADING_PATTERNS):
+        return len(text) <= max_heading_chars
+    if len(text) > max_heading_chars:
+        return False
+    if ratio >= 1.25:
+        return True
+    if bold and ratio >= 0.95 and len(text) <= 80:
+        return True
+    if body_size and size >= body_size + 2.0 and len(text) <= 120:
+        return True
+    return False
+
+
+def should_keep_formatted_line(formatted: str, *, max_heading_chars: int, drop_author_lines: bool) -> bool:
+    match = LINE_RE.match(formatted.strip())
+    if not match:
+        return False
+    values = match.groupdict()
+    try:
+        size = float(values["s"])
+        ratio = float(values["r"])
+        bold = int(values["b"])
+    except (TypeError, ValueError):
+        return False
+    body_size = size / ratio if ratio else size
+    return is_heading_like(
+        values.get("t", ""),
+        size=size,
+        ratio=ratio,
+        bold=bold,
+        body_size=body_size,
+        max_heading_chars=max_heading_chars,
+        drop_author_lines=drop_author_lines,
+    )
+
+
+def extract_region_lines(page: Any, bbox: tuple[float, float, float, float] | None, body_size: float, font_ids: dict[str, str], column: str | None, *, parse_mode: str = "full", max_heading_chars: int = 140, drop_author_lines: bool = True) -> list[str]:
     region = page.crop(bbox) if bbox else page
     try:
         raw_lines = region.extract_text_lines(layout=False, return_chars=True)
@@ -283,7 +346,7 @@ def extract_region_lines(page: Any, bbox: tuple[float, float, float, float] | No
         if not isinstance(line, dict):
             continue
         formatted = format_layout_line(line=line, body_size=body_size, font_ids=font_ids, column=column)
-        if formatted:
+        if formatted and (parse_mode != "headings" or should_keep_formatted_line(formatted, max_heading_chars=max_heading_chars, drop_author_lines=drop_author_lines)):
             formatted_lines.append(formatted)
     return formatted_lines
 
@@ -294,6 +357,9 @@ def extract_pdf_layout_pages(
     column_mode: str = "auto",
     column_split_x: float = 0.0,
     column_gap: float = 8.0,
+    parse_mode: str = "full",
+    max_heading_chars: int = 140,
+    drop_author_lines: bool = True,
 ) -> tuple[list[tuple[int, str]], dict[str, Any]]:
     try:
         import pdfplumber
@@ -305,6 +371,7 @@ def extract_pdf_layout_pages(
     plain_chars = 0
     two_column_pages = 0
     column_mode = clean_text(column_mode).lower() or "auto"
+    parse_mode = clean_text(parse_mode).lower() or "full"
     with pdfplumber.open(pdf_path) as pdf:
         for page_index, page in enumerate(pdf.pages, start=1):
             body_size = page_body_font_size(page)
@@ -323,10 +390,10 @@ def extract_pdf_layout_pages(
                 gap = max(0.0, float(column_gap))
                 left_bbox = (0.0, 0.0, max(0.0, split_x - gap / 2.0), height)
                 right_bbox = (min(width, split_x + gap / 2.0), 0.0, width, height)
-                formatted_lines.extend(extract_region_lines(page, left_bbox, body_size, font_ids, "L"))
-                formatted_lines.extend(extract_region_lines(page, right_bbox, body_size, font_ids, "R"))
+                formatted_lines.extend(extract_region_lines(page, left_bbox, body_size, font_ids, "L", parse_mode=parse_mode, max_heading_chars=max_heading_chars, drop_author_lines=drop_author_lines))
+                formatted_lines.extend(extract_region_lines(page, right_bbox, body_size, font_ids, "R", parse_mode=parse_mode, max_heading_chars=max_heading_chars, drop_author_lines=drop_author_lines))
             else:
-                formatted_lines.extend(extract_region_lines(page, None, body_size, font_ids, None))
+                formatted_lines.extend(extract_region_lines(page, None, body_size, font_ids, None, parse_mode=parse_mode, max_heading_chars=max_heading_chars, drop_author_lines=drop_author_lines))
 
             if formatted_lines:
                 for formatted in formatted_lines:
@@ -344,6 +411,9 @@ def extract_pdf_layout_pages(
         raise RuntimeError("No extractable text was found in the PDF. Scanned PDFs require OCR.")
     return pages, {
         "extraction_mode": "layout_columns",
+        "parse_mode": parse_mode,
+        "max_heading_chars": max_heading_chars,
+        "drop_author_lines": drop_author_lines,
         "column_mode": column_mode,
         "column_split_x": column_split_x,
         "column_gap": column_gap,
@@ -1135,13 +1205,14 @@ def iter_input_pdfs(input_dir: Path, input_files: list[Path] | None) -> list[Pat
     return pdfs
 
 
-def parsed_path_for_pdf(pdf_path: Path, parsed_dir: Path) -> Path:
-    return parsed_dir / f"{safe_filename_part(pdf_path.stem)}_parsed.txt"
+def parsed_path_for_pdf(pdf_path: Path, parsed_dir: Path, parse_mode: str = "full") -> Path:
+    suffix = "headings_parsed" if clean_text(parse_mode).lower() == "headings" else "parsed"
+    return parsed_dir / f"{safe_filename_part(pdf_path.stem)}_{suffix}.txt"
 
 
 def parse_pdf_if_needed(pdf_path: Path, parsed_dir: Path, args: argparse.Namespace, force_parse: bool = False) -> tuple[Path, str, bool]:
     parsed_dir.mkdir(parents=True, exist_ok=True)
-    parsed_path = parsed_path_for_pdf(pdf_path, parsed_dir)
+    parsed_path = parsed_path_for_pdf(pdf_path, parsed_dir, args.parse_mode)
     if parsed_path.is_file() and not force_parse:
         return parsed_path, parsed_path.read_text(encoding="utf-8"), False
 
@@ -1151,6 +1222,9 @@ def parse_pdf_if_needed(pdf_path: Path, parsed_dir: Path, args: argparse.Namespa
         column_mode=args.pdf_column_mode,
         column_split_x=args.pdf_column_split_x,
         column_gap=args.pdf_column_gap,
+        parse_mode=args.parse_mode,
+        max_heading_chars=args.max_heading_chars,
+        drop_author_lines=args.drop_author_lines,
     )
     parsed_text = parsed_pdf_text_for_file(
         pdf_path=pdf_path,
@@ -1756,6 +1830,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--pdf-column-mode", choices=("auto", "none", "two"), default="auto", help="PDF 파싱 시 컬럼 분리 방식. auto=페이지별 자동 감지, two=항상 2단, none=기존 방식")
     parser.add_argument("--pdf-column-split-x", type=float, default=0.0, help="2단 컬럼을 나눌 x 좌표. 0이면 페이지 중앙")
     parser.add_argument("--pdf-column-gap", type=float, default=8.0, help="컬럼 분리선 주변에서 제외할 gutter 폭")
+    parser.add_argument("--parse-mode", choices=("full", "headings"), default="full", help="PDF parsed txt 저장 방식. headings=본문 라인을 제거하고 제목 후보만 저장")
+    parser.add_argument("--max-heading-chars", type=int, default=140, help="--parse-mode headings에서 이 길이를 넘는 라인은 본문으로 제거")
+    parser.add_argument("--drop-author-lines", action=argparse.BooleanOptionalAction, default=True, help="--parse-mode headings에서 저자명만 있는 라인을 제거")
     parser.add_argument("--title", help="TOC title. 기본값은 PDF 파일명 stem입니다.")
     parser.add_argument("--prompt", default="Create the complete table of contents JSON for the whole document from the layout text.")
     parser.add_argument("--max-depth", type=int, default=7)
