@@ -548,6 +548,10 @@ def build_page_count_chunks(blocks: list[tuple[int, list[str]]], chunk_pages: in
     return finalize_chunks(chunks)
 
 
+def sum_range(values: list[int], start: int, end: int) -> int:
+    return sum(values[max(0, start):max(0, end)])
+
+
 def build_token_limit_chunks(blocks: list[tuple[int, list[str]]], token_limit: int, overlap_pages: int) -> list[dict[str, Any]]:
     token_limit = max(1, int(token_limit))
     overlap_pages = max(0, int(overlap_pages))
@@ -556,19 +560,27 @@ def build_token_limit_chunks(blocks: list[tuple[int, list[str]]], token_limit: i
     chunks: list[dict[str, Any]] = []
     start = 0
     while start < len(blocks):
-        end = start
-        current_tokens = 0
-        while end < len(blocks):
-            next_tokens = page_tokens[end]
-            if end > start and current_tokens + next_tokens > token_limit:
+        end = start + 1
+        best_end = end
+        while end <= len(blocks):
+            context_start = max(0, start - overlap_pages)
+            context_end = min(len(blocks), end + overlap_pages)
+            context_tokens = sum_range(page_tokens, context_start, context_end)
+            if context_tokens > token_limit and end > start + 1:
                 break
-            current_tokens += next_tokens
-            end += 1
-            if current_tokens >= token_limit:
+            best_end = end
+            if context_tokens >= token_limit:
                 break
-        if end == start:
             end += 1
+        end = best_end
         context_start, context_end, chunk_text = page_chunk_text(blocks, start, end, overlap_pages)
+        target_tokens = sum_range(page_tokens, start, end)
+        context_tokens = sum_range(page_tokens, context_start, context_end)
+        if context_tokens > token_limit:
+            log_error(
+                f"Single Gemma chunk exceeds token target: pages {blocks[start][0]}-{blocks[end - 1][0]} "
+                f"estimated={context_tokens}, limit={token_limit}. Continuing with smallest possible chunk."
+            )
         chunks.append({
             "index": 0,
             "total": 0,
@@ -578,7 +590,8 @@ def build_token_limit_chunks(blocks: list[tuple[int, list[str]]], token_limit: i
             "context_start_page": blocks[context_start][0],
             "context_end_page": blocks[context_end - 1][0],
             "estimated_tokens": estimate_text_tokens(chunk_text),
-            "target_estimated_tokens": current_tokens,
+            "target_estimated_tokens": target_tokens,
+            "context_estimated_tokens": context_tokens,
             "text": chunk_text,
         })
         start = end
