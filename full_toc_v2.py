@@ -1717,7 +1717,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--gemma-chunk-mode", choices=("tokens", "pages"), default="tokens", help="Gemma TOC 청크 방식. 기본값은 tokens")
     parser.add_argument("--gemma-max-context-tokens", type=int, default=262144, help="vLLM 서버 --max-model-len 값")
     parser.add_argument("--gemma-chunk-token-limit", type=int, default=0, help="청크별 parsed text 목표 토큰 수. 0이면 context 한도 기준 최대값 자동 계산")
-    parser.add_argument("--gemma-chunk-safety-tokens", type=int, default=8192, help="토큰 청크 자동 계산 시 남겨둘 안전 여유 토큰")
+    parser.add_argument("--gemma-chunk-safety-tokens", type=int, default=32768, help="토큰 청크 자동 계산 시 남겨둘 안전 여유 토큰")
     parser.add_argument("--gemma-chunk-pages", type=int, default=80, help="--gemma-chunk-mode pages일 때 한 번에 처리할 target 페이지 수")
     parser.add_argument("--gemma-chunk-overlap-pages", type=int, default=2, help="청크 경계 문맥용 overlap 페이지 수")
     parser.add_argument("--temperature", type=float, default=DEFAULT_TEMPERATURE)
