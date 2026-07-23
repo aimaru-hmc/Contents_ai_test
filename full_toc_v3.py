@@ -535,11 +535,27 @@ def compact_layout_json(layout: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def build_prompt(layout_json: dict[str, Any], parsed_text: str, title: str, max_depth: int, user_prompt: str) -> str:
+def build_prompt(
+    layout_json: dict[str, Any],
+    parsed_text: str,
+    title: str,
+    max_depth: int,
+    user_prompt: str,
+    full_context_text: str = "",
+) -> str:
     layout_text = json.dumps(compact_layout_json(layout_json), ensure_ascii=False, indent=2)
+    context_section = ""
+    if clean_text(full_context_text):
+        context_section = f"""
+
+[Full Parsed PDF Body Context]
+Use this full parsed body text only to decide whether candidate lines are real headings or body/list sentences.
+Do not copy source_order from this section. The source_order must come from [Parsed PDF Layout Text].
+{full_context_text}
+"""
     return f"""
 You are Gemma 31B. Create the full table-of-contents JSON from the parsed PDF layout text.
-The layout JSON was generated from the full parsed PDF by OpenAI and provides heading-level rules.
+The layout JSON was generated from the parsed PDF by OpenAI and provides heading-level rules.
 
 [Task]
 {user_prompt.strip()}
@@ -553,6 +569,8 @@ The layout JSON was generated from the full parsed PDF by OpenAI and provides he
 [Rules]
 - First apply all exclusion rules. Only then use the Layout JSON rules to classify the remaining headings.
 - Exclusion rules have higher priority than every layout, style, position, and numbering rule.
+- Treat [Parsed PDF Layout Text] as the candidate heading list. Return headings only from this section.
+- Use [Full Parsed PDF Body Context], when present, only as context to reject body/list sentences and confirm hierarchy.
 - Treat the Layout JSON rules as strong examples, not as an exhaustive whitelist of heading styles or levels.
 - For styles represented in Layout JSON, match headings by S/R/B/I/F first, then start_shapes, X/Y position, and numbering.
 - Before returning JSON, audit the current parsed lines against every Layout JSON rule and include every valid matching heading.
@@ -561,12 +579,13 @@ The layout JSON was generated from the full parsed PDF by OpenAI and provides he
 - For body-like typography, use context: parent heading, line brevity, standalone placement, following explanatory paragraphs, and neighboring heading sequence.
 - Never reject a heading only because its S/R/B/I/F style or target level is absent from Layout JSON.
 - For an unseen style, infer heading candidacy and level from numbering hierarchy, indentation and position, typographic contrast, neighboring headings, and parent-child sequence.
-- Use only text that appears in the parsed layout text. Do not invent, rewrite, or summarize titles.
+- Use only text that appears in [Parsed PDF Layout Text]. Do not invent, rewrite, summarize, or trim titles.
 - Preserve original numbering and title text exactly.
-- Exclude covers, prefaces, existing TOC listing rows, indexes, page numbers, repeated headers/footers, captions, and body sentences.
+- Exclude covers, prefaces, existing TOC listing rows, indexes, page numbers, repeated headers/footers, captions, body sentences, and inline list items.
+- Exclude numbered/circled list items when the full body context shows the line continues as explanatory prose rather than a standalone heading.
 - Existing TOC/Contents pages may help you understand structure, but do not output listing rows unless the same title appears as a real body heading.
 - Preserve PDF page order and source order within each page.
-- Every parsed layout line has a page-local source_order. Copy the exact source_order of the selected heading line.
+- Every parsed layout line has a page-local source_order. Copy the exact source_order of the selected heading line from [Parsed PDF Layout Text].
 - Use integer levels from 1 to {max_depth}; lower numbers are higher-level headings.
 - Include level_reason for every chapter, explaining the layout or numbering evidence briefly.
 
@@ -581,8 +600,25 @@ Output exactly one valid JSON object. Do not output Markdown, code fences, comme
 }}
 
 [Parsed PDF Layout Text]
-{parsed_text}
+{parsed_text}{context_section}
 """.strip()
+
+
+def page_range_text(parsed_text: str, start_page: int | None, end_page: int | None, overlap_pages: int = 0) -> str:
+    if start_page is None or end_page is None:
+        return parsed_text
+    start = max(1, int(start_page) - max(0, int(overlap_pages)))
+    end = int(end_page) + max(0, int(overlap_pages))
+    selected: list[str] = []
+    keep = False
+    for raw in parsed_text.splitlines():
+        page_match = PAGE_RE.match(raw.strip())
+        if page_match:
+            page = int(page_match.group(1))
+            keep = start <= page <= end
+        if keep:
+            selected.append(raw)
+    return "\n".join(selected)
 
 
 def parsed_page_blocks(parsed_text: str) -> list[tuple[int, list[str]]]:
@@ -767,6 +803,7 @@ def resolve_gemma_chunk_token_limit(
             "context_start_page": 1,
             "context_end_page": 1,
         }),
+        full_context_text="",
     )
     overhead_tokens = estimate_text_tokens(overhead_prompt)
     max_context = max(1, int(args.gemma_max_context_tokens))
@@ -1213,10 +1250,31 @@ def parsed_path_for_pdf(pdf_path: Path, parsed_dir: Path, parse_mode: str = "ful
 def parse_pdf_if_needed(pdf_path: Path, parsed_dir: Path, args: argparse.Namespace, force_parse: bool = False) -> tuple[Path, str, bool]:
     parsed_dir.mkdir(parents=True, exist_ok=True)
     parsed_path = parsed_path_for_pdf(pdf_path, parsed_dir, args.parse_mode)
+    full_parsed_path = parsed_path_for_pdf(pdf_path, parsed_dir, "full")
     if parsed_path.is_file() and not force_parse:
         return parsed_path, parsed_path.read_text(encoding="utf-8"), False
 
-    log_detail(f"PDF parsing started: {pdf_path.name}")
+    if clean_text(args.parse_mode).lower() == "headings" and (force_parse or not full_parsed_path.is_file()):
+        log_detail(f"Full PDF parsing started for preserved parsed text: {pdf_path.name}")
+        full_pages, full_metadata = extract_pdf_layout_pages(
+            pdf_path,
+            column_mode=args.pdf_column_mode,
+            column_split_x=args.pdf_column_split_x,
+            column_gap=args.pdf_column_gap,
+            parse_mode="full",
+            max_heading_chars=args.max_heading_chars,
+            drop_author_lines=args.drop_author_lines,
+        )
+        full_parsed_text = parsed_pdf_text_for_file(
+            pdf_path=pdf_path,
+            pages=full_pages,
+            extraction_metadata=full_metadata,
+            source_pdf_path=pdf_path,
+        )
+        full_parsed_path.write_text(full_parsed_text, encoding="utf-8")
+        log_detail(f"Full parsed text preserved: {full_parsed_path}")
+
+    log_detail(f"PDF parsing started: {pdf_path.name} | parse_mode={args.parse_mode}")
     pages, metadata = extract_pdf_layout_pages(
         pdf_path,
         column_mode=args.pdf_column_mode,
@@ -1690,6 +1748,14 @@ def run_gemma_stage(
 
     title = clean_text(args.title) or pdf_path.stem
     parsed_lines = parse_layout(parsed_text)
+    full_context_text = ""
+    if clean_text(args.parse_mode).lower() == "headings" and args.gemma_include_full_context:
+        full_parsed_path = parsed_path_for_pdf(pdf_path, args.parsed_dir.resolve(), "full")
+        if full_parsed_path.is_file():
+            full_context_text = full_parsed_path.read_text(encoding="utf-8")
+            log_detail(f"Using full parsed body context for Gemma: {full_parsed_path}")
+        else:
+            log_error(f"Full parsed body context not found, continuing without it: {full_parsed_path}")
     chunk_token_limit = resolve_gemma_chunk_token_limit(layout_json=layout_json, title=title, args=args)
     chunks = build_gemma_chunks(
         parsed_text=parsed_text,
@@ -1707,12 +1773,19 @@ def run_gemma_stage(
     chunk_usages: list[dict[str, Any]] = []
     used_models: list[str] = []
     for chunk in chunks:
+        chunk_full_context = page_range_text(
+            full_context_text,
+            chunk.get("target_start_page"),
+            chunk.get("target_end_page"),
+            overlap_pages=args.gemma_chunk_overlap_pages,
+        ) if full_context_text else ""
         chunk_prompt = build_prompt(
             layout_json=layout_json,
             parsed_text=annotate_source_orders(str(chunk["text"])),
             title=title,
             max_depth=args.max_depth,
             user_prompt=build_chunk_user_prompt(args.prompt, chunk),
+            full_context_text=annotate_source_orders(chunk_full_context) if chunk_full_context else "",
         )
         log_info(
             f"gemma chunk {chunk['index']}/{chunk['total']}: target pages {chunk['target_start_page']}-{chunk['target_end_page']} | est_tokens={chunk.get('estimated_tokens', 0)}"
@@ -1833,6 +1906,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--parse-mode", choices=("full", "headings"), default="full", help="PDF parsed txt 저장 방식. headings=본문 라인을 제거하고 제목 후보만 저장")
     parser.add_argument("--max-heading-chars", type=int, default=140, help="--parse-mode headings에서 이 길이를 넘는 라인은 본문으로 제거")
     parser.add_argument("--drop-author-lines", action=argparse.BooleanOptionalAction, default=True, help="--parse-mode headings에서 저자명만 있는 라인을 제거")
+    parser.add_argument("--gemma-include-full-context", action=argparse.BooleanOptionalAction, default=True, help="--parse-mode headings에서 Gemma에 전체 본문 parsed를 문맥으로 함께 전달")
     parser.add_argument("--title", help="TOC title. 기본값은 PDF 파일명 stem입니다.")
     parser.add_argument("--prompt", default="Create the complete table of contents JSON for the whole document from the layout text.")
     parser.add_argument("--max-depth", type=int, default=7)
