@@ -51,7 +51,7 @@ DEFAULT_INPUT_DIR = ROOT / "data/input"
 DEFAULT_DATA_DIR = ROOT / "data/full_toc"
 DEFAULT_PARSED_DIR = DEFAULT_DATA_DIR / "parsed"
 DEFAULT_LAYOUT_DIR = DEFAULT_DATA_DIR / "layout"
-DEFAULT_FULL_JSON_DIR = DEFAULT_DATA_DIR / "full_jason"
+DEFAULT_FULL_JSON_DIR = DEFAULT_DATA_DIR / "full_json"
 DEFAULT_LOG_DIR = DEFAULT_DATA_DIR / "log"
 DEFAULT_OPENAI_LAYOUT_MODEL = os.getenv("OPENAI_LAYOUT_MODEL", os.getenv("OPENAI_MODEL", "gpt-5.5"))
 DEFAULT_OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
@@ -551,26 +551,11 @@ def compact_layout_json(layout: dict[str, Any]) -> dict[str, Any]:
             "reference_count": rule.get("reference_count"),
             "examples": rule.get("examples", [])[:5],
         })
-    candidates = layout.get("contextual_heading_candidates")
-    if not isinstance(candidates, list):
-        candidates = []
-    compact_candidates: list[dict[str, Any]] = []
-    for candidate in candidates:
-        if not isinstance(candidate, dict):
-            continue
-        compact_candidates.append({
-            "level": candidate.get("level"),
-            "chapter": candidate.get("chapter"),
-            "page": candidate.get("page"),
-            "source_order": candidate.get("source_order"),
-            "evidence": candidate.get("evidence", []),
-        })
     return {
         "source_reference": layout.get("source_reference"),
         "source_chunk": layout.get("source_chunk"),
         "matching_priority": layout.get("matching_priority", []),
         "rules": compact_rules,
-        "contextual_heading_candidates": compact_candidates,
         "unmatched_reference_titles": layout.get("unmatched_reference_titles", []),
     }
 
@@ -614,7 +599,6 @@ The layout JSON was generated from the parsed PDF by OpenAI and provides heading
 - Treat the Layout JSON rules as strong examples, not as an exhaustive whitelist of heading styles or levels.
 - For styles represented in Layout JSON, match headings by S/R/B/I/F first, then start_shapes, X/Y position, and numbering.
 - Before returning JSON, audit the current parsed lines against every Layout JSON rule and include every valid matching heading.
-- Treat Layout JSON contextual_heading_candidates as strong heading candidates, not final truth. Include them when surrounding parsed text supports a subsection role.
 - Do not reject a short standalone candidate solely because its font size, ratio, or font matches body text.
 - For body-like typography, use context: parent heading, line brevity, standalone placement, following explanatory paragraphs, and neighboring heading sequence.
 - Never reject a heading only because its S/R/B/I/F style or target level is absent from Layout JSON.
@@ -1575,9 +1559,8 @@ Create a compact Layout JSON for table-of-contents extraction from the parsed PD
 - The output will be passed to Gemma to produce the final full TOC JSON.
 - Include only rules that help identify real body headings.
 - Use surrounding context, not only typography. Some true subheadings may share the same font size/style as body text.
-- Preserve short standalone lines that introduce the following paragraph or subsection as contextual heading candidates, even if their typography matches body text.
-- A contextual candidate is stronger when it appears under a parent heading, is followed by explanatory body paragraphs, is shorter than surrounding body lines, and fits the neighboring heading sequence.
-- Do not discard a candidate solely because its font size, ratio, or font matches body text.
+- Do not create or store separate heading candidate lists. Output only reusable layout rules.
+- Do not discard a reusable heading rule solely because its font size, ratio, or font matches body text.
 - Exclude covers, prefaces, existing TOC listing rows, repeated headers/footers, page numbers, captions, references, problem sets, and body sentences.
 - Use integer levels from 1 to {max_depth}; lower numbers are higher-level headings.
 - Keep examples as exact source text from parsed lines.
@@ -1603,20 +1586,6 @@ Output exactly one valid JSON object with this shape:
       "start_shapes": ["A", "#."],
       "reference_count": 3,
       "examples": ["Exact heading text"]
-    }}
-  ],
-  "contextual_heading_candidates": [
-    {{
-      "level": 6,
-      "chapter": "Exact candidate text",
-      "page": 1,
-      "source_order": 12,
-      "evidence": [
-        "short standalone line",
-        "under a parent heading",
-        "followed by explanatory body paragraph",
-        "body-like typography but subsection role"
-      ]
     }}
   ],
   "unmatched_reference_titles": []
@@ -1657,37 +1626,6 @@ def normalize_layout_json(layout: dict[str, Any], parsed_path: Path, pdf_path: P
         }
         normalized_rules.append(row)
 
-    raw_candidates = layout.get("contextual_heading_candidates")
-    if not isinstance(raw_candidates, list):
-        raw_candidates = []
-    normalized_candidates: list[dict[str, Any]] = []
-    for candidate in raw_candidates:
-        if not isinstance(candidate, dict):
-            continue
-        chapter = clean_text(candidate.get("chapter"))
-        if not chapter:
-            continue
-        try:
-            level = int(candidate.get("level"))
-        except (TypeError, ValueError):
-            continue
-        try:
-            page = int(candidate.get("page"))
-        except (TypeError, ValueError):
-            page = None
-        try:
-            source_order = int(candidate.get("source_order"))
-        except (TypeError, ValueError):
-            source_order = None
-        row: dict[str, Any] = {"level": level, "chapter": chapter}
-        if page is not None and page > 0:
-            row["page"] = page
-        if source_order is not None and source_order > 0:
-            row["source_order"] = source_order
-        evidence = candidate.get("evidence")
-        row["evidence"] = evidence if isinstance(evidence, list) else []
-        normalized_candidates.append(row)
-
     return {
         "source_reference": str(pdf_path),
         "source_chunk": "full_pdf",
@@ -1696,7 +1634,6 @@ def normalize_layout_json(layout: dict[str, Any], parsed_path: Path, pdf_path: P
         if isinstance(layout.get("matching_priority"), list)
         else ["S/R/B/I/F", "numbering", "X", "Y", "examples"],
         "rules": normalized_rules,
-        "contextual_heading_candidates": normalized_candidates,
         "unmatched_reference_titles": layout.get("unmatched_reference_titles")
         if isinstance(layout.get("unmatched_reference_titles"), list)
         else [],
@@ -2095,7 +2032,7 @@ def main() -> None:
     if args.layout_dir == DEFAULT_LAYOUT_DIR:
         args.layout_dir = args.data_dir / "layout"
     if args.full_json_dir == DEFAULT_FULL_JSON_DIR:
-        args.full_json_dir = args.data_dir / "full_jason"
+        args.full_json_dir = args.data_dir / "full_json"
     if args.log_dir == DEFAULT_LOG_DIR:
         args.log_dir = args.data_dir / "log"
     args.data_dir.mkdir(parents=True, exist_ok=True)

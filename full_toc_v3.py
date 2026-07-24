@@ -51,7 +51,7 @@ DEFAULT_INPUT_DIR = ROOT / "data/input"
 DEFAULT_DATA_DIR = ROOT / "data/full_toc"
 DEFAULT_PARSED_DIR = DEFAULT_DATA_DIR / "parsed"
 DEFAULT_LAYOUT_DIR = DEFAULT_DATA_DIR / "layout"
-DEFAULT_FULL_JSON_DIR = DEFAULT_DATA_DIR / "full_jason"
+DEFAULT_FULL_JSON_DIR = DEFAULT_DATA_DIR / "full_json"
 DEFAULT_LOG_DIR = DEFAULT_DATA_DIR / "log"
 DEFAULT_OPENAI_LAYOUT_MODEL = os.getenv("OPENAI_LAYOUT_MODEL", os.getenv("OPENAI_MODEL", "gpt-5.5"))
 DEFAULT_OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
@@ -2080,7 +2080,7 @@ def main() -> None:
     if args.layout_dir == DEFAULT_LAYOUT_DIR:
         args.layout_dir = args.data_dir / "layout"
     if args.full_json_dir == DEFAULT_FULL_JSON_DIR:
-        args.full_json_dir = args.data_dir / "full_jason"
+        args.full_json_dir = args.data_dir / "full_json"
     if args.log_dir == DEFAULT_LOG_DIR:
         args.log_dir = args.data_dir / "log"
     args.data_dir.mkdir(parents=True, exist_ok=True)
