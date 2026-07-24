@@ -1,0 +1,283 @@
+{
+    "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/부교재1/1권-한글/1편(2021).pdf",
+    "source_chunk": "full_pdf",
+    "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/1_2021_headings_parsed.txt",
+    "matching_priority": [
+        "numbering",
+        "S/R/B/I/F",
+        "X",
+        "Y",
+        "examples"
+    ],
+    "rules": [
+        {
+            "level": 1,
+            "s": 45.0,
+            "r": 3.75,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 300.0,
+            "x_max": 315.0,
+            "y_min": 280.0,
+            "y_max": 300.0,
+            "start_shapes": [
+                "part-title text after large part number and 제 편"
+            ],
+            "reference_count": 1,
+            "examples": [
+                "건강과 질병"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 31.0,
+            "r": 3.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 75.0,
+            "x_max": 330.0,
+            "y_min": 115.0,
+            "y_max": 180.0,
+            "start_shapes": [
+                "chapter-title fragment near chapter number and 제 장"
+            ],
+            "reference_count": 3,
+            "examples": [
+                "건강과 질병의 정",
+                "정의 및 결정요인",
+                "예방의학과 공중보"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 18.0,
+            "r": 1.9,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 70.0,
+            "x_max": 190.0,
+            "y_min": 100.0,
+            "y_max": 760.0,
+            "start_shapes": [
+                "#."
+            ],
+            "reference_count": 7,
+            "examples": [
+                "1. 건강상태와 질병상태의 개",
+                "2. 건강과 질병의",
+                "3. 예방의학과 공중보건학의 미래"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 12.5,
+            "r": 1.32,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 70.0,
+            "x_max": 185.0,
+            "y_min": 80.0,
+            "y_max": 790.0,
+            "start_shapes": [
+                "#.#"
+            ],
+            "reference_count": 31,
+            "examples": [
+                "1.1 건강 개념의 변천",
+                "2.3 건강모형",
+                "3.2 한국의 예방의학과 공중보건학의 미래"
+            ]
+        },
+        {
+            "level": 5,
+            "s": 12.0,
+            "r": 1.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 60.0,
+            "x_max": 180.0,
+            "y_min": 80.0,
+            "y_max": 790.0,
+            "start_shapes": [
+                "#)"
+            ],
+            "reference_count": 50,
+            "examples": [
+                "1) 신체(身體)개념의 건강",
+                "2) 역학적 분류기준",
+                "4) 웰니스 모형(wellness model)"
+            ]
+        },
+        {
+            "level": 6,
+            "s": 10.0,
+            "r": 1.05,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 70.0,
+            "x_max": 190.0,
+            "y_min": 80.0,
+            "y_max": 790.0,
+            "start_shapes": [
+                "(#)"
+            ],
+            "reference_count": 24,
+            "examples": [
+                "(1) 생명의 기계론적 관점",
+                "(2) 공중보건영역에서 생명의",
+                "(3) 윤리원칙의 적용"
+            ]
+        }
+    ],
+    "contextual_heading_candidates": [
+        {
+            "level": 5,
+            "chapter": "건강정책 분석을 위한 역 3) 건강정책분석을 위한 역",
+            "page": 16,
+            "source_order": 1,
+            "evidence": [
+                "under parent heading 2.3 건강모형",
+                "appears between 2) 역학적 모형 and 4) 웰니스 모형",
+                "same typography as level-5 numbered headings but corrupted by leading caption text",
+                "followed by explanatory lower headings (1)-(4)"
+            ]
+        },
+        {
+            "level": 7,
+            "chapter": "① 공공선의 제공",
+            "page": 27,
+            "source_order": 4,
+            "evidence": [
+                "short standalone line",
+                "under parent heading (1) 공중보건 활동의 특징",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 7,
+            "chapter": "② 해악의 회피와 예방, 제거",
+            "page": 28,
+            "source_order": 2,
+            "evidence": [
+                "short standalone line",
+                "continues circled-number sequence under parent heading",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 7,
+            "chapter": "① 감염병 감시",
+            "page": 29,
+            "source_order": 3,
+            "evidence": [
+                "short standalone line",
+                "under parent heading (1) 감염병 관리에 관련된 윤리 문제",
+                "followed by explanatory body paragraph",
+                "body-like typography but subsection role"
+            ]
+        },
+        {
+            "level": 7,
+            "chapter": "② 예방접종",
+            "page": 30,
+            "source_order": 1,
+            "evidence": [
+                "short standalone line",
+                "under parent heading (1) 감염병 관리에 관련된 윤리 문제",
+                "fits neighboring circled-number sequence",
+                "followed by explanatory body paragraph"
+            ]
+        },
+        {
+            "level": 7,
+            "chapter": "③ 사회적 거리두기를 위한 격리",
+            "page": 30,
+            "source_order": 2,
+            "evidence": [
+                "short standalone line",
+                "under parent heading (1) 감염병 관리에 관련된 윤리 문제",
+                "fits neighboring circled-number sequence",
+                "followed by explanatory body paragraph"
+            ]
+        },
+        {
+            "level": 7,
+            "chapter": "④ 감염병 정보의 공개",
+            "page": 30,
+            "source_order": 3,
+            "evidence": [
+                "short standalone line",
+                "under parent heading (1) 감염병 관리에 관련된 윤리 문제",
+                "fits neighboring circled-number sequence",
+                "followed by explanatory body paragraph"
+            ]
+        }
+    ],
+    "unmatched_reference_titles": [],
+    "_api_usage": {
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "usage": {
+            "prompt_tokens": 17055,
+            "completion_tokens": 4762,
+            "total_tokens": 21817,
+            "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+                "reasoning_tokens": 3583,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+            }
+        },
+        "prompt_tokens": 17055,
+        "completion_tokens": 4762,
+        "total_tokens": 21817
+    },
+    "_meta": {
+        "source_pdf": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/부교재1/1권-한글/1편(2021).pdf",
+        "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/1_2021_headings_parsed.txt",
+        "parsed_created": false,
+        "provider_layout": "openai",
+        "openai_layout_model": "gpt-5.5",
+        "generated_at": "2026-07-24T14:51:41+09:00",
+        "generation_started_at": "2026-07-24T14:50:44+09:00",
+        "generation_completed_at": "2026-07-24T14:51:41+09:00",
+        "elapsed_seconds": 57.461,
+        "elapsed": "57.5s",
+        "api_usage": {
+            "layout_generation": {
+                "provider": "openai",
+                "model": "gpt-5.5",
+                "usage": {
+                    "prompt_tokens": 17055,
+                    "completion_tokens": 4762,
+                    "total_tokens": 21817,
+                    "prompt_tokens_details": {
+                        "cached_tokens": 0,
+                        "audio_tokens": 0
+                    },
+                    "completion_tokens_details": {
+                        "reasoning_tokens": 3583,
+                        "audio_tokens": 0,
+                        "accepted_prediction_tokens": 0,
+                        "rejected_prediction_tokens": 0
+                    }
+                },
+                "prompt_tokens": 17055,
+                "completion_tokens": 4762,
+                "total_tokens": 21817
+            }
+        }
+    }
+}
