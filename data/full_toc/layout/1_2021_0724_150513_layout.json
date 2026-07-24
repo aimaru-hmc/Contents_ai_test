@@ -1,0 +1,183 @@
+{
+    "source_reference": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/부교재1/1권-한글/1편(2021).pdf",
+    "source_chunk": "full_pdf",
+    "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/1_2021_headings_parsed.txt",
+    "matching_priority": [
+        "S/R/B/I/F",
+        "numbering",
+        "X",
+        "Y",
+        "examples"
+    ],
+    "rules": [
+        {
+            "level": 1,
+            "s": 31.0,
+            "r": 3.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 80.0,
+            "x_max": 320.0,
+            "y_min": 120.0,
+            "y_max": 180.0,
+            "start_shapes": [
+                "chapter_title_after_large_digit_and_제 장",
+                "Korean_title_fragment"
+            ],
+            "reference_count": 3,
+            "examples": [
+                "건강과 질병의 정",
+                "예방의학과 공중보",
+                "미래"
+            ]
+        },
+        {
+            "level": 2,
+            "s": 18.0,
+            "r": 1.9,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 70.0,
+            "x_max": 320.0,
+            "y_min": 110.0,
+            "y_max": 570.0,
+            "start_shapes": [
+                "#. ",
+                "continuation_same_y_same_size"
+            ],
+            "reference_count": 8,
+            "examples": [
+                "1. 건강상태와 질병상태의 개",
+                "2. 건강과 질병의",
+                "3. 예방의학과 공중보건학의 미래"
+            ]
+        },
+        {
+            "level": 3,
+            "s": 12.5,
+            "r": 1.32,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 70.0,
+            "x_max": 320.0,
+            "y_min": 80.0,
+            "y_max": 760.0,
+            "start_shapes": [
+                "#.# ",
+                "continuation_same_y_same_size"
+            ],
+            "reference_count": 32,
+            "examples": [
+                "1.1 건강 개념의 변천",
+                "2.3 건강모형",
+                "3.2 한국의 예방의학과 공중보건학의 미래"
+            ]
+        },
+        {
+            "level": 4,
+            "s": 12.0,
+            "r": 1.27,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 60.0,
+            "x_max": 325.0,
+            "y_min": 80.0,
+            "y_max": 790.0,
+            "start_shapes": [
+                "#) ",
+                "continuation_same_y_same_size"
+            ],
+            "reference_count": 61,
+            "examples": [
+                "1) 신체(身體)개념의 건강",
+                "2) 역학적 분류기준",
+                "4) 웰니스 모형(wellness model)"
+            ]
+        },
+        {
+            "level": 5,
+            "s": 10.0,
+            "r": 1.05,
+            "b": 0,
+            "i": 0,
+            "f": "f1",
+            "x_min": 70.0,
+            "x_max": 185.0,
+            "y_min": 80.0,
+            "y_max": 770.0,
+            "start_shapes": [
+                "(#) ",
+                "continuation_same_y_same_size"
+            ],
+            "reference_count": 24,
+            "examples": [
+                "(1) 생명의 기계론적 관점",
+                "(2) 공중보건영역에서 생명의",
+                "(4) 존 스노의 콜레라 전파양"
+            ]
+        }
+    ],
+    "unmatched_reference_titles": [],
+    "_api_usage": {
+        "provider": "openai",
+        "model": "gpt-5.5",
+        "usage": {
+            "prompt_tokens": 16930,
+            "completion_tokens": 1888,
+            "total_tokens": 18818,
+            "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+                "reasoning_tokens": 1024,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+            }
+        },
+        "prompt_tokens": 16930,
+        "completion_tokens": 1888,
+        "total_tokens": 18818
+    },
+    "_meta": {
+        "source_pdf": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/input/부교재1/1권-한글/1편(2021).pdf",
+        "source_parsed": "/raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/1_2021_headings_parsed.txt",
+        "parsed_created": false,
+        "provider_layout": "openai",
+        "openai_layout_model": "gpt-5.5",
+        "generated_at": "2026-07-24T15:05:37+09:00",
+        "generation_started_at": "2026-07-24T15:05:13+09:00",
+        "generation_completed_at": "2026-07-24T15:05:37+09:00",
+        "elapsed_seconds": 24.06,
+        "elapsed": "24.1s",
+        "api_usage": {
+            "layout_generation": {
+                "provider": "openai",
+                "model": "gpt-5.5",
+                "usage": {
+                    "prompt_tokens": 16930,
+                    "completion_tokens": 1888,
+                    "total_tokens": 18818,
+                    "prompt_tokens_details": {
+                        "cached_tokens": 0,
+                        "audio_tokens": 0
+                    },
+                    "completion_tokens_details": {
+                        "reasoning_tokens": 1024,
+                        "audio_tokens": 0,
+                        "accepted_prediction_tokens": 0,
+                        "rejected_prediction_tokens": 0
+                    }
+                },
+                "prompt_tokens": 16930,
+                "completion_tokens": 1888,
+                "total_tokens": 18818
+            }
+        }
+    }
+}

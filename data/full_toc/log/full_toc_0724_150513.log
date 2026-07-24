@@ -1,0 +1,16 @@
+[2026-07-24T15:05:13+09:00] INFO: log: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/log/full_toc_0724_150513.log
+[2026-07-24T15:05:13+09:00] INFO: PDF files: 1
+[2026-07-24T15:05:13+09:00] INFO: processing: 1편(2021).pdf | stage=all
+[2026-07-24T15:05:13+09:00] INFO: Existing parsed text found, skipping PDF parsing: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/1_2021_headings_parsed.txt
+[2026-07-24T15:05:13+09:00] INFO: OpenAI layout generation started: gpt-5.5
+[2026-07-24T15:05:37+09:00] INFO: OpenAI layout generation completed: rules=5, tokens=18818
+[2026-07-24T15:05:37+09:00] INFO: layout saved: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/1_2021_0724_150513_layout.json | elapsed=24.1s
+[2026-07-24T15:05:37+09:00] INFO: Using layout JSON: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/layout/1_2021_0724_150513_layout.json
+[2026-07-24T15:05:37+09:00] INFO: Using full parsed body context for Gemma: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/parsed/1_2021_parsed.txt
+[2026-07-24T15:05:37+09:00] INFO: gemma chunks: 1 | mode=tokens | token_limit=162110 | pages_per_chunk=80 | overlap=2
+[2026-07-24T15:05:37+09:00] INFO: gemma chunk 1/1: target pages 1-51 | est_tokens=16286
+[2026-07-24T15:05:37+09:00] INFO: Gemma full JSON generation started: google/gemma-4-31B-it
+[2026-07-24T15:06:43+09:00] INFO: Gemma full JSON generation completed: google/gemma-4-31B-it
+[2026-07-24T15:06:43+09:00] INFO: toc saved: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/full_json/1_2021_0724_150513_full_foc.json | chapters=111 | tokens(openai=18818, gemma=43160) | elapsed=1m 30.3s
+[2026-07-24T15:06:43+09:00] INFO: Created full TOC files: 1
+[2026-07-24T15:06:43+09:00] INFO: created: /raid/workspace/medlearnx_workspace/Contents_ai_test/Contents_ai_test/data/full_toc/full_json/1_2021_0724_150513_full_foc.json
